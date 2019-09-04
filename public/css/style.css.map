@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAIC,KACC,eAAgB,CAChB,UAAW","file":"style.css","sourcesContent":["/*\n * YOUR STYLES HERE\n */\n\n body {\n \tfont-size: 12rem;\n \tcolor: blue;\n }\n\n"]}

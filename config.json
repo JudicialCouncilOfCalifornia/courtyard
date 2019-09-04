@@ -1,0 +1,24 @@
+{
+  "css": {
+    "src": [
+      "source/_patterns/*.scss",
+      "source/_patterns/**/*.scss",
+      "source/css/*.scss"
+    ],
+    "public_folder": "public/css"
+  },
+  "js": {
+    "src": [
+      "source/js/*.js",
+      "source/js/**/*.js"
+    ],
+    "public_folder": "public/js"
+  },
+  "pattern_lab": {
+    "src": [
+      "source/_patterns/**/*.twig",
+      "source/_meta/*.twig",
+      "source/_patterns/**/*.json"
+    ]
+  }
+}
