@@ -1,4 +1,15 @@
+// Required
+// -------------------------------------
+@import '../../../node_modules/uswds/src/stylesheets/packages/required';
 
-body {
-	color: plaid;
-}
+// Variables
+// @import 'core/system-tokens';
+
+// Global
+// -------------------------------------
+@import '../../../node_modules/uswds/src/stylesheets/packages/global';
+
+// Base
+// -------------------------------------
+@import '../../../node_modules/uswds/src/stylesheets/base/body';
+@import '../../../node_modules/uswds/src/stylesheets/base/accessibility';

@@ -14,6 +14,9 @@
 // -------------------------------------
 @import '../../node_modules/uswds/src/stylesheets/packages/required';
 
+// Variables
+// @import 'core/system-tokens';
+
 // Global
 // -------------------------------------
 @import '../../node_modules/uswds/src/stylesheets/packages/global';
@@ -65,8 +68,7 @@
 @import '../../node_modules/uswds/src/stylesheets/utilities/palettes/all';
 @import '../../node_modules/uswds/src/stylesheets/utilities/rules/all';
 @import '../../node_modules/uswds/src/stylesheets/utilities/rules/package';
-@include render-utilities-in($utilities-package);
-
+@import '../../node_modules/uswds/src/stylesheets/core/mixins/_utility-builder.scss';
 // -------------------------------------
 // ...or import all USWDS modules
 
@@ -83,8 +85,3 @@
 @import "../_patterns/03-organisms/**/*.scss";
 @import "../_patterns/04-templates/**/*.scss";
 @import "../_patterns/05-pages/**/*.scss";
-
-body {
-	color: turqoise;
-}
-

@@ -75,7 +75,7 @@ gulp.task('pl:css', () => {
             outputStyle: 'compressed',
             errLogToConsole: true,
             includePaths: [
-                  config.css.project_scss,
+                  config.css.project_scss
                   // "${uswds}/scss",
                   // "${uswds}/scss/packages",
                 ]
