@@ -1,5 +1,6 @@
 {
   "css": {
+    "project_scss": "source/css",
     "src": [
       "source/_patterns/*.scss",
       "source/_patterns/**/*.scss",

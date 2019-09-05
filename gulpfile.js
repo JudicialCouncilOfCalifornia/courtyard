@@ -15,8 +15,15 @@ let sourcemaps = require('gulp-sourcemaps');
 let concat = require('gulp-concat');
 let babel = require('gulp-babel');
 let shell = require('gulp-shell');
+let mqpacker = require('css-mqpacker');
+let postcss = require('gulp-postcss');
+let rename = require('gulp-rename');
+let replace = require('gulp-replace');
 
-let importOnce = require('node-sass-import-once');
+// let importOnce = require('node-sass-import-once');
+
+var pkg  = require('./node_modules/uswds/package.json');
+var uswds = require('./node_modules/uswds-gulp/config/uswds');
 
 // Error Handler
 // -------------------------------------------------------------- //
@@ -36,9 +43,20 @@ let errorHandler = (error) => {
     this.emit('end');
 };
 
+// USWDS CSS.
+// -------------------------------------------------------------- //
+gulp.task('copy-uswds-setup', () => {
+  return gulp.src(`${uswds}/scss/theme/**/**`)
+  .pipe(gulp.dest(config.css.project_scss));
+});
+
 // Pattern Lab CSS.
 // -------------------------------------------------------------- //
 gulp.task('pl:css', () => {
+    var plugins = [
+    // Pack media queries
+    mqpacker({ sort: true })
+    ];
     return gulp.src(config.css.src)
         .pipe(glob())
         .pipe(plumber({
@@ -52,14 +70,23 @@ gulp.task('pl:css', () => {
                 this.emit('end');
             }
         }))
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init({ largeFile: true }))
         .pipe(sass({
             outputStyle: 'compressed',
             errLogToConsole: true,
-            includePaths: config.css.includePaths,
-            importer: importOnce
+            includePaths: [
+                  config.css.project_scss,
+                  "${uswds}/scss",
+                  "${uswds}/scss/packages",
+                ]
+            // importer: importOnce
         }))
+        .pipe(replace(
+          /\buswds @version\b/g,
+          'based on uswds v' + pkg.version
+        ))
         .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
+        .pipe(postcss(plugins))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.css.public_folder));
 });
@@ -80,6 +107,13 @@ gulp.task('pl:js', () => {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public/js'))
 });
+
+// Init.
+// ------------------------------------------------------------------- //
+gulp.task('init', gulp.series(
+  'copy-uswds-setup',
+  'pl:css',
+));
 
 // Watch task.
 // ------------------------------------------------------------------- //
