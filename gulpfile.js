@@ -76,8 +76,8 @@ gulp.task('pl:css', () => {
             errLogToConsole: true,
             includePaths: [
                   config.css.project_scss,
-                  "${uswds}/scss",
-                  "${uswds}/scss/packages",
+                  // "${uswds}/scss",
+                  // "${uswds}/scss/packages",
                 ]
             // importer: importOnce
         }))
