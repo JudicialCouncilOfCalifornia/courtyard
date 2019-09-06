@@ -1,12 +1,15 @@
 {
   "css": {
+    "styleguide_scss": "source/styleguide/css",
     "project_scss": "source/css",
+    "public_folder": "public/css",
+    "styleguide_public_folder": "public/styleguide/css",
     "src": [
       "source/_patterns/*.scss",
       "source/_patterns/**/*.scss",
       "source/css/*.scss"
     ],
-    "public_folder": "public/css"
+    "styleguide_src": "source/styleguide/css/*.css"
   },
   "js": {
     "src": [

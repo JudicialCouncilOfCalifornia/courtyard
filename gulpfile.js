@@ -46,9 +46,17 @@ let errorHandler = (error) => {
 // USWDS CSS.
 // -------------------------------------------------------------- //
 gulp.task('copy-uswds-setup', () => {
-  return gulp.src(`${uswds}/scss/theme/**/**`)
+  return gulp.src('${uswds}/scss/theme/**/**')
   .pipe(gulp.dest(config.css.project_scss));
 });
+
+// Styleguide CSS.
+// -------------------------------------------------------------- //
+gulp.task('copy-pl-styles', () => {
+  return gulp.src(config.css.styleguide_src)
+  .pipe(gulp.dest(config.css.styleguide_public_folder));
+});
+
 
 // Pattern Lab CSS.
 // -------------------------------------------------------------- //
@@ -122,6 +130,7 @@ gulp.task('watch', () => {
     gulp.watch(config.css.src, gulp.series('pl:css'));
     gulp.watch(config.js.src, gulp.series('pl:js'));
     gulp.watch(config.pattern_lab.src, gulp.series('generate:pl'));
+    gulp.watch(config.css.styleguide_src, gulp.series('copy-pl-styles'));
 });
 
 

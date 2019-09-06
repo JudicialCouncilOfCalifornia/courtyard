@@ -637,8 +637,10 @@ $circle-manual-values: ();
 
 // .color
 
-$color-palettes: ();
-$color-manual-values: ();
+$color-palettes: ('palette-color-default');
+$color-manual-values: (
+  'paper': '#333333',
+);
 
 // .cursor
 

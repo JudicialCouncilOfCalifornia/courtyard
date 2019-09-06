@@ -1,4 +1,19 @@
 <ul class="sg-colors">
+  {% for colorset in colorset %}
+    <li>
+      <span class="sg-swatch" style="background: {{ colorset.color }};"></span>
+      <span class="sg-label">{{ colorset.color }}<br/>${{ colorset.label }}</span>
+    </li>
+  {% endfor %}
+
+  {#{% for colorset in colorset %}#}
+  {#${{ colorset.label }}: {{ colorset.color }};<br>#}
+  {#{% endfor %}#}
+
+</ul>
+
+{# 
+<ul class="sg-colors">
 	<li>
 		<span class="sg-swatch" style="background: #ff0000;"></span>
 		<span class="sg-label">#ff0000</span>
@@ -35,4 +50,4 @@
 		<span class="sg-swatch" style="background: #000000;"></span>
 		<span class="sg-label">#000000</span>
 	</li>
-</ul>
+</ul> #}
