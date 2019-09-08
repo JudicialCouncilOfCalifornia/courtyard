@@ -35,7 +35,7 @@
 	},
 	"description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
 	"url": "http://lorizzle.nl/",
-	"colorset": [
+	"theme_color": [
 	    {
 	      "label": "base-lightest",
 	      "color": "#f0f0f0"
@@ -155,6 +155,100 @@
 	    {
 	      "label": "accent-warm-darker",
 	      "color": "#775540"
+	    }
+   	],
+	"state_color": [
+	    {
+	      "label": "info-lighter",
+	      "color": "#e7f6f8"
+	    },
+	    {
+	      "label": "info-light",
+	      "color": "#9ddfeb"
+	    },
+	    {
+	      "label": "info",
+	      "color": "#00bde3"
+	    },
+	    {
+	      "label": "info-dark",
+	      "color": "#009ec1"
+	    },
+	    {
+	      "label": "info-darker",
+	      "color": "#2e6276"
+	    },
+	    {
+	      "label": "error-lighter",
+	      "color": "#f4e3db"
+	    },
+	    {
+	      "label": "error-light",
+	      "color": "#f39268"
+	    },
+	    {
+	      "label": "error",
+	      "color": "#d63e04"
+	    },
+	    {
+	      "label": "error-dark",
+	      "color": "#b51d09"
+	    },
+	    {
+	      "label": "error-darker",
+	      "color": "#6f3331"
+	    },
+	    {
+	      "label": "warning-lighter",
+	      "color": "#faf3d1"
+	    },
+	    {
+	      "label": "warning-light",
+	      "color": "#fee685"
+	    },
+	    {
+	      "label": "warning",
+	      "color": "#ffbe2e"
+	    },
+	    {
+	      "label": "warning-dark",
+	      "color": "#e5a000"
+	    },
+	    {
+	      "label": "warning-darker",
+	      "color": "#936f38"
+	    },
+	    {
+	      "label": "success-lighter",
+	      "color": "#f2938c"
+	    },
+	    {
+	      "label": "success-light",
+	      "color": "#70e17b"
+	    },
+	    {
+	      "label": "success",
+	      "color": "#00a91c"
+	    },
+	    {
+	      "label": "success-dark",
+	      "color": "#4d8055"
+	    },
+	    {
+	      "label": "success-darkerr",
+	      "color": "#446443"
+	    },
+	    {
+	      "label": "disabled-light",
+	      "color": "#e6e6e6"
+	    },
+	    {
+	      "label": "disabled",
+	      "color": "#c9c9c9"
+	    },
+	    {
+	      "label": "disabled-dark",
+	      "color": "#adadad"
 	    }
    ],
 	"name": {

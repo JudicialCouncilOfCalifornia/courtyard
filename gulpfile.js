@@ -133,7 +133,7 @@ gulp.task('pl:js', () => {
 // Init.
 // ------------------------------------------------------------------- //
 gulp.task('init', gulp.series(
-  'copy-uswds-setup',
+  // 'copy-uswds-setup',
   'copy-uswds-fonts',
   'copy-uswds-js',
   'pl:css',

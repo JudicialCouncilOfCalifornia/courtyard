@@ -1,0 +1,8 @@
+<ul class="sg-colors">
+  {% for state_color in state_color %}
+    <li>
+      <span class="sg-swatch" style="background: {{ state_color.color }};"></span>
+      <span class="sg-label">{{ state_color.color }}<br/>{{ state_color.label }}</span>
+    </li>
+  {% endfor %}
+</ul>

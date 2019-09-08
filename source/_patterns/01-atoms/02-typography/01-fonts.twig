@@ -1,8 +1,8 @@
 {% for face in typefaces %}
   <section id="{{ face.id }}" class="usa-grid spaced">
     <h2 class="usa-heading-alt {{ face.id }}">{{ face.name }}</h2>
-    <h4 class="{{ face.id }}"><span><em>SASS include:</em> @include {{ face.id }}</span></h4>
-    <h5><span><em>class</em> .{{ face.id }}</span></h5>
+    <h4 class="{{ face.id }}"><span><em>font family mixin:</em> @include u-font-family({{ face.id }})</span></h4>
+    <h5><span><em>Utility class</em> .{{ face.id }}</span></h5>
 
     <div class="usa-grid-full">
       <div class="usa-width-one-half {{ face.id }}">
