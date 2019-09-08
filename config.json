@@ -11,12 +11,15 @@
     ],
     "styleguide_src": "source/styleguide/css/*.css"
   },
+  "fonts": {
+    "public_fonts": "public/fonts"
+  },
   "js": {
     "src": [
       "source/js/*.js",
       "source/js/**/*.js"
     ],
-    "public_folder": "public/js"
+    "public_js": "public/js"
   },
   "pattern_lab": {
     "src": [

@@ -69,6 +69,8 @@
 @import '../../node_modules/uswds/src/stylesheets/utilities/rules/all';
 @import '../../node_modules/uswds/src/stylesheets/utilities/rules/package';
 @import '../../node_modules/uswds/src/stylesheets/core/mixins/_utility-builder.scss';
+@include render-utilities-in($utilities-package);
+
 // -------------------------------------
 // ...or import all USWDS modules
 

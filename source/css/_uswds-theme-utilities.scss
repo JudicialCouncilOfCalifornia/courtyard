@@ -17,7 +17,11 @@ https://v2.designsystem.digital.gov/utilities
 ----------------------------------------
 */
 
-$utilities-use-important:     false;
+body {
+  color: turqoise;
+}
+
+$utilities-use-important:     true;
 $output-all-utilities:        true;
 
 /*
@@ -637,10 +641,8 @@ $circle-manual-values: ();
 
 // .color
 
-$color-palettes: ('palette-color-default');
-$color-manual-values: (
-  'paper': '#333333',
-);
+$color-palettes: ();
+$color-manual-values: ();
 
 // .cursor
 

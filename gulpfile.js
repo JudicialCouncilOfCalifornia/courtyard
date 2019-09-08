@@ -46,8 +46,22 @@ let errorHandler = (error) => {
 // USWDS CSS.
 // -------------------------------------------------------------- //
 gulp.task('copy-uswds-setup', () => {
-  return gulp.src('${uswds}/scss/theme/**/**')
+  return gulp.src(`${uswds}/scss/theme/**/**`)
   .pipe(gulp.dest(config.css.project_scss));
+});
+
+// USWDS FONTS.
+// -------------------------------------------------------------- //
+gulp.task('copy-uswds-fonts', () => {
+  return gulp.src(`${uswds}/fonts/**/*`)
+  .pipe(gulp.dest(config.fonts.public_fonts));
+});
+
+// USWDS JS.
+// -------------------------------------------------------------- //
+gulp.task('copy-uswds-js', () => {
+  return gulp.src(`${uswds}/js/**/**`)
+  .pipe(gulp.dest(config.js.public_js));
 });
 
 // Styleguide CSS.
@@ -80,7 +94,7 @@ gulp.task('pl:css', () => {
         }))
         .pipe(sourcemaps.init({ largeFile: true }))
         .pipe(sass({
-            outputStyle: 'compressed',
+            outputStyle: 'expanded',
             errLogToConsole: true,
             includePaths: [
                   config.css.project_scss
@@ -120,6 +134,8 @@ gulp.task('pl:js', () => {
 // ------------------------------------------------------------------- //
 gulp.task('init', gulp.series(
   'copy-uswds-setup',
+  'copy-uswds-fonts',
+  'copy-uswds-js',
   'pl:css',
 ));
 
