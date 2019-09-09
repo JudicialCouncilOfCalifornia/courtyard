@@ -3,5 +3,6 @@
 	"excerpt": "Nullam at semper mauris, at rhoncus purus.",
 	"content": "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu rhoncus.</p>",
 	"bg_modifier": "bg-base-lightest",
-	"modifier": "has-background-color"
+	"modifier": "has-background-color",
+	"column_modifier": "has-two-columns"
 }

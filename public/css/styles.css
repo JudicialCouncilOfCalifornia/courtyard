@@ -20868,6 +20868,16 @@ body {
   left: -999em;
 }
 
+.jcc-header-group__title {
+  font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.95148rem;
+}
+
+.jcc-header-group__lead {
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.13125rem;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -22775,6 +22785,10 @@ body {
   position: relative;
 }
 
+.jcc-hero--has-background-image {
+  color: white ;
+}
+
 .jcc-hero__media {
   position: absolute;
   top: 0;
@@ -22804,6 +22818,16 @@ body {
   padding-bottom: 3rem ;
   padding-top: 3rem ;
   position: relative;
+}
+
+.jcc-hero__title {
+  font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 2.43935rem;
+}
+
+.jcc-hero__lead {
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.46397rem;
 }
 
 /*
@@ -24724,6 +24748,18 @@ body {
   max-width: 87.5rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
+}
+
+.jcc-text-section__content {
+  line-height: 1.40884 ;
+}
+
+.jcc-text-section__content--has-one-column {
+  max-width: 88ex ;
+}
+
+.jcc-text-section__content--has-two-columns .jcc-text-section__column {
+  width: 100% ;
 }
 
 @media all and (min-width: 30em) {
@@ -33608,6 +33644,25 @@ body {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-text-section__content--has-two-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-text-section__content--has-two-columns > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-text-section__content--has-two-columns .jcc-text-section__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 50% ;
+  }
 }
 
 @media all and (min-width: 30em) and (min-width: 64em) {
@@ -33752,6 +33807,14 @@ body {
   .usa-nav-container {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-text-section__content--has-two-columns {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-text-section__content--has-two-columns > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
   }
 }
 

@@ -21,14 +21,25 @@
 
 }
 
-.jcc-text-section__title {
-
+.jcc-text-section__content {
+	@include u-line-height('body', 4);
 }
 
-.jcc-text-section__excerpt {
-
+.jcc-text-section__content--has-one-column {
+	@include u-measure('6');
 }
 
-.jcc-text-section__body {
+.jcc-text-section__content--has-two-columns {
+	@include at-media('desktop') {
+		@include grid-row;
+		@include grid-gap;
+	}
 
+	.jcc-text-section__column {
+		@include u-width(full);
+
+	  	@include at-media(desktop) {
+	    	@include grid-col(6);
+	  	}
+	}
 }

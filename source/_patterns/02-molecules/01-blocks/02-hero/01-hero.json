@@ -3,6 +3,6 @@
 	"alt": "Avatar",
 	"headline": "Lorem ipsum",
 	"excerpt": "Nullam at semper mauris, at rhoncus purus.",
-	"hero_modifier": " ",
+	"hero_modifier": "has-background-image",
 	"hero_media_modifier": " "
 }

@@ -4,8 +4,15 @@
 			<h2 class="jcc-header-group__title">{{ headline }}</h2>
 			<p class="jcc-header-group__lead">{{ excerpt }}</p>
 		</header>
-		<div class="jcc-text-section__content">
-			{{ content }}
+		<div class="jcc-text-section__content jcc-text-section__content--{{ column_modifier }}">
+			<div class="jcc-text-section__column">
+				{{ content|raw }}
+			</div>
+			<div class="jcc-text-section__column">
+				{{ content|raw }}
+			</div>
 		</div>
 	</div>
 </div>
+
+

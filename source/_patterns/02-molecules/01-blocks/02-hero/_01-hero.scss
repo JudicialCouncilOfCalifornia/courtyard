@@ -5,7 +5,7 @@
 }
 
 .jcc-hero--has-background-image {
-
+	@include u-text('white');
 }
 
 .jcc-hero__media {
@@ -23,9 +23,9 @@
 }
 
 .jcc-hero__title {
-
+	@include u-font('heading', '2xl');
 }
 
 .jcc-hero__lead {
-
+	@include u-font('body', 'lg');
 }
