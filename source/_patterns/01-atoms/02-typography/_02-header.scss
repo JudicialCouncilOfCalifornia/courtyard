@@ -1,0 +1,8 @@
+@import "../../00-protons/00-global";
+
+h1,
+h2,
+h3 {
+	@include u-font-family('serif');
+}
+

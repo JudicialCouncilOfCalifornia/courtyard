@@ -1,0 +1,12 @@
+<div class="jcc-hero jcc-hero--{{ hero_modifier }}">
+	{% if src is not empty %}
+	<div class="jcc-hero__media">
+		<img src="{{ src }}" alt="{{ alt }}" class="{{ hero_media_modifier }}" />
+	</div>
+	{% endif %}
+	
+	<div class="jcc-hero__content">
+		<h2 class="jcc-hero__title">{{ headline }}</h2>
+		<p class="jcc-hero__lead">{{ excerpt }}</p>
+	</div>
+</div>

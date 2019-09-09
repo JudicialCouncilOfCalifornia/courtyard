@@ -1,0 +1,31 @@
+@import "../../../00-protons/00-global";
+
+.jcc-hero {
+	position: relative;
+}
+
+.jcc-hero--has-background-image {
+
+}
+
+.jcc-hero__media {
+	@include cover-image();
+}
+
+.jcc-hero__content {
+	@include grid-container('widescreen');
+	@include u-padding-y(6);
+	position: relative;
+
+	@include at-media('desktop') {
+    	
+  	}
+}
+
+.jcc-hero__title {
+
+}
+
+.jcc-hero__lead {
+
+}
