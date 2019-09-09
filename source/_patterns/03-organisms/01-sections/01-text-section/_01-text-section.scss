@@ -1,6 +1,7 @@
 @import "../../../00-protons/00-global";
 
 .jcc-text-section {
+	@include u-padding-top(1);
 	@include u-padding-bottom(6);
 }
 
