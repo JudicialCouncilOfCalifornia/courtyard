@@ -1,0 +1,10 @@
+<ul class="jcc-card-list">
+	{% for card in cards %}
+	<li class="jcc-card-list__iten">
+		<div class="jcc-card__body">
+			<h2 class="jcc-card__title">{{ card.title }}</h2>
+			<p class="jcc-card__excerpt">{{ card.excerpt }}</p>
+		</div>
+	</li>
+	{% endfor %}
+</ul>

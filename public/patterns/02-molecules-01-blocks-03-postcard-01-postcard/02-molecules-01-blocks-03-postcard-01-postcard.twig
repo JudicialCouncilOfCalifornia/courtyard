@@ -1,14 +1,14 @@
-<div class="jcc-postcard jcc-card--{{ card_modifier }}">
+<div class="jcc-postcard jcc-postcard--{{ background_variant }} jcc-postcard--{{ image_align_variant }}">
 	<div class="jcc-postcard__container">
 		<div class="jcc-postcard__row">
 			<div class="jcc-postcard__media">
-				<img src="{{ src }}" alt="{{ alt }}" class="{{ card_media_modifier }}" />
+				<img src="{{ image }}" alt="{{ alt }}" />
 			</div>
 
 			<div class="jcc-postcard__content">
 				<header class="jcc-header-group">
-					<h2 class="jcc-header-group__title">{{ headline }}</h2>
-					<p class="jcc-header-group__lead">{{ excerpt }}</p>
+					<h2 class="jcc-header-group__title">{{ title }}</h2>
+					<p class="jcc-header-group__lead">{{ lead }}</p>
 				</header>
 			</div>
 		</div>

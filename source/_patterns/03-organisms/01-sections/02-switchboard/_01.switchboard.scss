@@ -23,6 +23,12 @@
 	}
 }
 
+.jcc-switchboard__tiles--secondary {
+	.jcc-tile {
+		@include u-border(1px, 'secondary');
+	}
+}
+
 .jcc-switchboard__tile {
 	margin-bottom: 1rem;
 

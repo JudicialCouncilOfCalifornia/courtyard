@@ -1,8 +1,7 @@
 {
-	"src": "http://placeimg.com/300/300",
+	"image": "http://placeimg.com/300/300",
 	"alt": "Avatar",
-	"headline": "Lorem ipsum",
+	"title": "Lorem ipsum",
 	"excerpt": "Nullam at semper mauris, at rhoncus purus.",
-	"card_modifier": " ",
-	"card_media_modifier": " "
+	"card_modifier": ""
 }

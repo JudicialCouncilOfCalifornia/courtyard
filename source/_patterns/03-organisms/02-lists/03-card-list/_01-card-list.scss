@@ -1,0 +1,20 @@
+@import "../../../00-protons/00-global";
+
+.jcc-card-list {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+
+	@include at-media('desktop') {
+		@include grid-row;
+		@include grid-gap;
+	}
+}
+
+.jcc-card-list__iten {
+	@include u-width(full);
+
+	@include at-media(desktop) {
+		@include grid-col(6);
+	}
+}

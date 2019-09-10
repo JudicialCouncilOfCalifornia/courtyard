@@ -1,0 +1,32 @@
+{
+	"brow": "Next Steps",
+	"title": "What can we help you with today?",
+	"switchboard_tiles": [
+		{
+			"brow": "Wage Garnishment",
+			"title_link": "<a href='#'>Someone took money from my paycheck</a>"
+		},
+		{
+			"brow": "Lien Against Property",
+			"title_link": "<a href='#'>I was told I can’t sell my property</a>"
+		},
+		{
+			"brow": "Bank Levy",
+			"title_link": "<a href='#'>Someone tried to take money from my bank account </a>"
+		}
+	],
+	"switchboard_tiles2": [
+		{
+			"brow": "General Information",
+			"title_link": "<a href='#'>I want to find out more about Debt Collection</a>"
+		},
+		{
+			"brow": "Negotiating a Settlement",
+			"title_link": "<a href='#'>I want to talk with someone and work something out</a>"
+		},
+		{
+			"brow": "Pay in Installments",
+			"title_link": "<a href='#'>I don’t have all the money but can pay over time</a>"
+		}
+	]
+}
