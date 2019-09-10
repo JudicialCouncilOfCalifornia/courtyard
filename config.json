@@ -12,6 +12,7 @@
     "styleguide_src": "source/styleguide/css/*.css"
   },
   "fonts": {
+    "source_fonts": "source/fonts/**/**",
     "public_fonts": "public/fonts"
   },
   "js": {

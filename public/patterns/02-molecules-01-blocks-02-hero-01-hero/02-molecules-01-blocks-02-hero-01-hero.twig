@@ -1,12 +1,19 @@
 <div class="jcc-hero jcc-hero--{{ hero_modifier }}">
-	{% if src is not empty %}
-	<div class="jcc-hero__media">
-		<img src="{{ src }}" alt="{{ alt }}" class="{{ hero_media_modifier }}" />
-	</div>
-	{% endif %}
-	
-	<div class="jcc-hero__content">
-		<h2 class="jcc-hero__title">{{ headline }}</h2>
-		<p class="jcc-hero__lead">{{ excerpt }}</p>
+	<div class="jcc-hero__container">
+		{% if src is not empty %}
+		<div class="jcc-hero__media">
+			<img src="{{ src }}" alt="{{ alt }}" class="{{ hero_media_modifier }}" />
+		</div>
+		{% endif %}
+
+		<div class="jcc-hero__content jcc-hero__content--{{ column_modifier }}">
+			<div class="jcc-hero__column">
+				<h2 class="jcc-hero__title">{{ headline }}</h2>
+				<p class="jcc-hero__lead">{{ excerpt }}</p>
+			</div>
+			<div class="jcc-hero__column">
+				{{ column2_content|raw }}
+			</div>
+		</div>
 	</div>
 </div>

@@ -53,7 +53,7 @@ gulp.task('copy-uswds-setup', () => {
 // USWDS FONTS.
 // -------------------------------------------------------------- //
 gulp.task('copy-uswds-fonts', () => {
-  return gulp.src(`${uswds}/fonts/**/*`)
+  return gulp.src([`${uswds}/fonts/**/*`, config.fonts.source_fonts])
   .pipe(gulp.dest(config.fonts.public_fonts));
 });
 

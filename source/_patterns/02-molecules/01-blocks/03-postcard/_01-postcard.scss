@@ -1,0 +1,48 @@
+@import "../../../00-protons/00-global";
+
+.jcc-postcard {
+	@include u-padding-top(1);
+	@include u-padding-bottom(6);
+}
+
+.jcc-postcard--has-background-image {
+	@include u-padding-top(6);
+}
+
+.jcc-postcard__container {
+	@include grid-container('widescreen');
+
+	@include at-media('desktop') {
+    	
+  	}
+}
+
+.jcc-postcard__header {
+
+}
+
+.jcc-postcard__content {
+	@include u-line-height('body', 4);
+}
+
+.jcc-postcard__row {
+	@include at-media('desktop') {
+		@include grid-row;
+		@include grid-gap;
+	}
+
+	.jcc-postcard__media{
+		@include at-media(desktop) {
+			@include u-order('last');
+		}
+	}
+}
+
+.jcc-postcard__media,
+.jcc-postcard__content {
+	@include u-width(full);
+
+  	@include at-media(desktop) {
+    	@include grid-col(6);
+  	}
+}

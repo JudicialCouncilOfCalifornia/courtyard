@@ -121,14 +121,27 @@ names to something more descriptive.
 ----------------------------------------
 */
 
+$font-stack-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-stack-georgia: 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$font-stack-helvetica: 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+$font-stack-monospace: 'Bitstream Vera Sans Mono', 'Consolas', 'Courier', monospace;
+
 $theme-typeface-tokens: (
-  example-serif-token: (
-    display-name: 'Example Serif Display Name',
+  'lora': (
+    display-name: 'Lora',
     cap-height: 364px,
+    stack: $font-stack-georgia,
+    src: (
+      dir: 'lora'
+    ),
   ),
-  example-sans-token: (
-    display-name: 'Example Sans Display Name',
+  'lato': (
+    display-name: 'Lato',
     cap-height: 364px,
+    stack: $font-stack-helvetica,
+    src: (
+      dir: 'lato'
+    ),
   ),
 );
 
@@ -167,10 +180,10 @@ $theme-font-type-lang:  false;
 $theme-font-type-mono:  'public-sans';
 
 // sans-serif
-$theme-font-type-sans:  'source-sans-pro';
+$theme-font-type-sans:  'lato';
 
 // serif
-$theme-font-type-serif: 'merriweather';
+$theme-font-type-serif: 'lora';
 
 /*
 ----------------------------------------
