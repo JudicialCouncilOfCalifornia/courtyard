@@ -13,8 +13,8 @@
 	@include grid-container('widescreen');
 
 	@include at-media('desktop') {
-    	
-  	}
+
+	}
 }
 
 .jcc-text-section__header {
@@ -38,8 +38,8 @@
 	.jcc-text-section__column {
 		@include u-width(full);
 
-	  	@include at-media(desktop) {
-	    	@include grid-col(6);
-	  	}
+		@include at-media(desktop) {
+			@include grid-col(6);
+		}
 	}
 }
