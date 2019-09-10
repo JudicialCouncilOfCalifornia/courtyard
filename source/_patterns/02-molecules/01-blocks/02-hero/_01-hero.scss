@@ -16,8 +16,8 @@
 	@include grid-container('widescreen');
 
 	@include at-media('desktop') {
-    	
-  	}
+		
+	}
 }
 
 .jcc-hero__content {
@@ -26,8 +26,8 @@
 	position: relative;
 
 	@include at-media('desktop') {
-    	
-  	}
+
+	}
 }
 
 .jcc-hero__title {
@@ -52,8 +52,8 @@
 	.jcc-hero__column {
 		@include u-width(full);
 
-	  	@include at-media(desktop) {
-	    	@include grid-col(6);
-	  	}
+		@include at-media(desktop) {
+			@include grid-col(6);
+		}
 	}
 }

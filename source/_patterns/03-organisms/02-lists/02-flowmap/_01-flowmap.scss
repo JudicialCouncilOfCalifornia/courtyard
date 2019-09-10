@@ -1,0 +1,42 @@
+@import "../../../00-protons/00-global";
+
+.jcc-flowmap {
+	list-style: none;
+	padding-left: 0;
+  margin-left: 0;
+
+	@include at-media('desktop') {
+		@include grid-row;
+		// @include grid-gap;
+	}
+}
+
+.jcc-flowmap__step {
+	@include u-width(full);
+
+	@include at-media(desktop) {
+		@include grid-col(3);
+
+		> * {
+			padding-right: 2rem;
+		}
+	}
+
+	// remove line from last timeline item
+	&:last-of-type {
+    	.jcc-flowmap__title {
+      		&:after {
+        		width: 0;
+      		}
+    	}
+  	}
+}
+
+.jcc-flowmap__title {
+	position: relative;
+
+	@include at-media(desktop) {
+		@include timeline-line();
+    @include timeline-dot();
+	}
+}
