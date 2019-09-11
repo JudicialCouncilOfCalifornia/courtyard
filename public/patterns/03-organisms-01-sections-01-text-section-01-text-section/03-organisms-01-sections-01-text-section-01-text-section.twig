@@ -4,12 +4,12 @@
 			<h2 class="jcc-header-group__title">{{ title }}</h2>
 			<p class="jcc-header-group__lead">{{ lead }}</p>
 		</header>
-		<div class="jcc-text-section__content jcc-text-section__content--{{ column_modifier }}">
-			<div class="jcc-text-section__column">
-				{{ column_content|raw }}
+		<div class="jcc-text-section__content jcc-text-section__content--{{ column_variant }}">
+			<div class="jcc-text-section__column-left">
+				{{ column_content_left|raw }}
 			</div>
-			<div class="jcc-text-section__column">
-				{{ column_content2|raw }}
+			<div class="jcc-text-section__column-right">
+				{{ column_content_right|raw }}
 			</div>
 		</div>
 	</div>

@@ -6,10 +6,14 @@
 
 .jcc-hero--has-background-image {
 	@include u-text('white');
+
+	.jcc-hero__media {
+		@include cover-image();
+	}
 }
 
-.jcc-hero__media {
-	@include cover-image();
+.jcc-hero--has-background-color {
+	@include u-bg('primary-lighter');
 }
 
 .jcc-hero__container {
@@ -49,7 +53,8 @@
 		@include grid-gap;
 	}
 
-	.jcc-hero__column {
+	.jcc-hero__column-left,
+	.jcc-hero__column-right {
 		@include u-width(full);
 
 		@include at-media(desktop) {
