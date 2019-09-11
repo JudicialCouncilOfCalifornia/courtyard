@@ -18,3 +18,9 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 ## To update Pattern Lab
 
     composer update
+
+## Contributing
+
+### Code Style
+
+We use the automatic code formatter Prettier. If you're not using an IDE that integrates with it, you should run `npx prettier --write [filepath]` on all added or changed files before you submit a pull request.
