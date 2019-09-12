@@ -1,65 +1,26 @@
-[![Build Status](https://travis-ci.org/pattern-lab/edition-php-drupal-standard.svg?branch=master)](https://travis-ci.org/pattern-lab/edition-php-drupal-standard)
+# JCC Design System
 
-# Pattern Lab Twig Standard Edition for Drupal 
+Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/pattern-lab/edition-php-drupal-standard).
 
-The Standard Edition for Drupal gives developers and designers a clean and stable base from which to develop a Drupal compatible pattern library.
-
-## Prerequistes 
+## Prerequisites
 
 - [`composer`](https://getcomposer.org)
 
-## First Time Install
+## Getting Started
 
-1. Run `composer create-project pattern-lab/edition-drupal-standard FOLDERNAME` (Assuming you wanted it in a directory called `FOLDERNAME`).
-1. Select a starterkit from menu. If asked about replacing files, do it.
-1. Commit new files generated.
+1. `git clone https://github.com/Exygy/courtyard.git` to create the project directory.
+1. `cd courtyard` to go to the directory.
+1. `composer install` to install Pattern Lab.
+1. `npm install` to install Gulp-related packages and the USWDS packages.
+1. For your first-time install, run `npm run init` to perform some one-time setup actions.
+1. `npm run start` to serve the pattern library at `http://localhost:8080`.
 
-## Using It
+## To update Pattern Lab
 
-After installing and committing, others cloning the repo need to run `composer install` to install dependencies.
+    composer update
 
-## Helpful Commands
+## Contributing
 
-These are some helpful commands you can use on the command line for working with Pattern Lab.
+### Code Style
 
-### One line start
-
-This will compile PL and watch for changes while running the local server:
-
-    composer start --timeout=0
-
-### Generate Pattern Lab
-
-To generate the front-end for Pattern Lab type:
-
-    php core/console --generate
-
-### Start a server to view Pattern Lab
-
-You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a separate window type:
-
-    php core/console --server
-
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
-
-### Install a StarterKit
-
-To install a near-empty StarterKit as a starting point for your project type:
-
-    php core/console --starterkit --init
-
-To install a specific StarterKit from GitHub type:
-
-    php core/console --starterkit --install <starterkit-vendor/starterkit-name>
-
-### Updating Pattern Lab
-
-	composer update
-
-## Other Documentation
-
-These are crucial pieces that contains documentation that is good to understand:
-
-- [`pattern-lab/patternengine-twig`](https://github.com/pattern-lab/patternengine-php-twig)
-- [`aleksip/plugin-data-transform`](https://github.com/aleksip/plugin-data-transform)
-- [Twig templating language](http://twig.sensiolabs.org/documentation)
+We use the automatic code formatter Prettier. If you're not using an IDE that integrates with it, you should run `npx prettier --write [filepath]` on all added or changed files before you submit a pull request.
