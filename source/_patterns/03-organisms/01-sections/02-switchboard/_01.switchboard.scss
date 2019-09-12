@@ -2,21 +2,18 @@
 
 .jcc-switchboard {
 	text-align: center;
+
+	.jcc-header-group {
+		@include u-padding-bottom(4);
+	}
 }
 
 .jcc-switchboard__container {
 	@include grid-container('widescreen');
-
-	@include at-media('desktop') {
-
-	}
 }
 
 .jcc-switchboard__tiles {
-	list-style: none;
-	padding-left: 0;
-	margin-left: 0;
-
+	@include add-list-reset;
 	@include at-media('desktop') {
 		@include grid-row;
 		@include grid-gap;
@@ -50,12 +47,14 @@
 		text-decoration: none;
 
 		&::after {
-    	content: '';
-    	position: absolute;
-    	left: 0;
-    	top: 0;
-    	right: 0;
-    	bottom: 0;
-    }
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
 	}
 }
+
+

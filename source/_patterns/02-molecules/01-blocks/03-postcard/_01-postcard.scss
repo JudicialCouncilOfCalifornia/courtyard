@@ -46,10 +46,6 @@
 
 .jcc-postcard__container {
 	@include grid-container('widescreen');
-
-	@include at-media('desktop') {
-    	
-  }
 }
 
 .jcc-postcard__tag {

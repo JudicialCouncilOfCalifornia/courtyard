@@ -1,0 +1,31 @@
+@import "../../../00-protons/00-global";
+
+.jcc-steps-section {
+	@include u-padding-top(1);
+	@include u-padding-bottom(6);
+
+	.jcc-header-group {
+		@include u-padding-bottom(6);
+	}
+}
+
+.jcc-steps-section--has-background-color {
+	@include u-padding-top(6);
+	@include u-bg('base-lightest');
+}
+
+.jcc-steps-section__container {
+	@include grid-container('widescreen');
+}
+
+.jcc-steps {
+	@include unstyled-list();
+}
+
+.jcc-steps__step {
+	@include custom-counter();
+	@include custom-counter-line();
+	@include u-measure('5');
+	@include u-line-height('body', 4);
+	padding-left: 3.5rem;
+}

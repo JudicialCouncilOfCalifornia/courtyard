@@ -1,0 +1,57 @@
+@import "../../../00-protons/00-global";
+
+.jcc-flowmap-section {
+	@include u-padding-top(1);
+	@include u-padding-bottom(6);
+
+	.jcc-header-group {
+		@include u-padding-bottom(6);
+	}
+}
+
+.jcc-flowmap-section--has-background-color {
+	@include u-padding-top(6);
+	@include u-bg('base-lightest');
+}
+
+.jcc-flowmap-section__container {
+	@include grid-container('widescreen');
+}
+
+.jcc-flowmap {
+	@include unstyled-list();
+	@include at-media('desktop') {
+		@include grid-row;
+		// @include grid-gap;
+	}
+}
+
+.jcc-flowmap__step {
+	@include u-width(full);
+
+	@include at-media(desktop) {
+		@include grid-col(3);
+
+		> * {
+			padding-right: 2rem;
+		}
+	}
+
+	// remove line from last timeline item
+	&:last-of-type {
+			.jcc-flowmap__title {
+					&:after {
+						width: 0;
+					}
+			}
+		}
+}
+
+.jcc-flowmap__title {
+	position: relative;
+
+	@include at-media(desktop) {
+		@include timeline-line();
+		@include timeline-dot();
+	}
+}

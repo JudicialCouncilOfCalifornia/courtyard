@@ -1,9 +1,6 @@
 <div class="jcc-text-section jcc-text-section--{{ background_variant }}">
 	<div class="jcc-text-section__container">
-		<header class="jcc-header-group">
-			<h2 class="jcc-header-group__title">{{ title }}</h2>
-			<p class="jcc-header-group__lead">{{ lead }}</p>
-		</header>
+		{% include 'molecules-header-group' %}
 		<div class="jcc-text-section__content jcc-text-section__content--{{ column_variant }}">
 			<div class="jcc-text-section__column-left">
 				{{ column_content_left|raw }}
@@ -14,5 +11,3 @@
 		</div>
 	</div>
 </div>
-
-

@@ -251,6 +251,11 @@
 	      "color": "#adadad"
 	    }
    ],
+	"headergroup": {
+		"brow": "",
+		"title": "Lorem ipsum",
+		"lead": "Nullam at semper mauris, at rhoncus purus."
+	},
 	"name": {
 		"first": "Junius",
 		"firsti": "J",
