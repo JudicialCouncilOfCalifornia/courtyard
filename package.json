@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "repository": "https://github.com/Exygy/courtyard.git",
   "scripts": {
-    "init": "gulp init",
-    "start": "php core/console --server",
-    "watch": "gulp"
+    "gulp": "gulp",
+    "start": "php core/console --server"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

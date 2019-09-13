@@ -41,12 +41,6 @@ const errorHandler = error => {
   this.emit("end");
 };
 
-// USWDS CSS.
-// -------------------------------------------------------------- //
-gulp.task("copy-uswds-setup", () => {
-  return gulp.src(`${uswds}/scss/theme/**/**`).pipe(gulp.dest(config.css.project_scss));
-});
-
 // USWDS FONTS.
 // -------------------------------------------------------------- //
 gulp.task("copy-uswds-fonts", () => {
@@ -128,21 +122,8 @@ gulp.task("pl:js", () => {
     .pipe(gulp.dest("./public/js"));
 });
 
-// Init.
-// ------------------------------------------------------------------- //
-gulp.task(
-  "init",
-  gulp.series(
-    // 'copy-uswds-setup',
-    "copy-uswds-fonts",
-    "copy-uswds-js",
-    "pl:css"
-  )
-);
-
 // Watch task.
 // ------------------------------------------------------------------- //
-
 gulp.task("watch", () => {
   gulp.watch(config.css.src, gulp.series("pl:css"));
   gulp.watch(config.js.src, gulp.series("pl:js"));
@@ -154,8 +135,11 @@ gulp.task("watch", () => {
 // -------------------------------------------------------------------- //
 gulp.task("pl:php", shell.task("php core/console --generate"));
 
-// generate Pattern library.
-gulp.task("generate:pl", gulp.series("pl:php", "pl:css", "pl:js"));
+// Generate Pattern library.
+gulp.task(
+  "generate:pl",
+  gulp.series("pl:php", "copy-uswds-fonts", "copy-uswds-js", "pl:css", "pl:js")
+);
 
 // Static Server + Watch.
 // ------------------------------------------------------------------- //
