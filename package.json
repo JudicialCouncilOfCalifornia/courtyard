@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "repository": "https://github.com/Exygy/courtyard.git",
   "scripts": {
-    "gulp": "gulp",
-    "start": "php core/console --server"
+    "build": "gulp generatePl",
+    "start": "gulp"
   },
   "devDependencies": {
     "husky": "^3.0.5",
