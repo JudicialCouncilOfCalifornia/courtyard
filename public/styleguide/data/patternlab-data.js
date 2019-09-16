@@ -1,5 +1,5 @@
 var config = {
-  cacheBuster: 1568648816,
+  cacheBuster: 1568648851,
   defaultPattern: "all",
   defaultShowPatternInfo: false,
   patternExtension: "twig",
