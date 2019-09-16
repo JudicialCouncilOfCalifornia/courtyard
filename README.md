@@ -12,7 +12,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 1. `cd courtyard` to go to the directory.
 1. `composer install` to install Pattern Lab.
 1. `npm install` to install Gulp-related packages and the USWDS packages.
-1. For your first-time install, run `npm run init` to perform some one-time setup actions.
+1. `npm run gulp` to run Gulp tasks to generate the pattern library and watch for changes.
 1. `npm run start` to serve the pattern library at `http://localhost:8080`.
 
 ## To update Pattern Lab

@@ -14,11 +14,11 @@ const glob = require("gulp-sass-glob");
 const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
-const shell = require("gulp-shell");
 const mqpacker = require("css-mqpacker");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace");
+const { exec } = require("child_process");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -41,35 +41,27 @@ const errorHandler = error => {
   this.emit("end");
 };
 
-// USWDS CSS.
-// -------------------------------------------------------------- //
-gulp.task("copy-uswds-setup", () => {
-  return gulp.src(`${uswds}/scss/theme/**/**`).pipe(gulp.dest(config.css.project_scss));
-});
-
 // USWDS FONTS.
 // -------------------------------------------------------------- //
-gulp.task("copy-uswds-fonts", () => {
-  return gulp
-    .src([`${uswds}/fonts/**/*`, config.fonts.source_fonts])
-    .pipe(gulp.dest(config.fonts.public_fonts));
-});
+const copyUswdsFonts = () => {
+  return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
+};
 
 // USWDS JS.
 // -------------------------------------------------------------- //
-gulp.task("copy-uswds-js", () => {
+const copyUswdsJs = () => {
   return gulp.src(`${uswds}/js/**/**`).pipe(gulp.dest(config.js.public_js));
-});
+};
 
 // Styleguide CSS.
 // -------------------------------------------------------------- //
-gulp.task("copy-pl-styles", () => {
+const copyPlStyles = () => {
   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
-});
+};
 
 // Pattern Lab CSS.
 // -------------------------------------------------------------- //
-gulp.task("pl:css", () => {
+const plCss = () => {
   const plugins = [
     // Pack media queries
     mqpacker({ sort: true })
@@ -107,8 +99,9 @@ gulp.task("pl:css", () => {
     .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder));
-});
+    .pipe(gulp.dest(config.css.public_folder))
+    .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
+};
 
 // Component JS.
 // -------------------------------------------------------------------- //
@@ -116,7 +109,7 @@ gulp.task("pl:css", () => {
 // _patterns folder, if new patterns need to be added the config.json array
 // needs to be edited to watch for more folders.
 
-gulp.task("pl:js", () => {
+const plJs = () => {
   return gulp
     .src(config.js.src)
     .pipe(sourcemaps.init())
@@ -127,51 +120,38 @@ gulp.task("pl:js", () => {
     )
     .pipe(concat("components.js"))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./public/js"));
-});
-
-// Init.
-// ------------------------------------------------------------------- //
-gulp.task(
-  "init",
-  gulp.series(
-    // 'copy-uswds-setup',
-    "copy-uswds-fonts",
-    "copy-uswds-js",
-    "pl:css"
-  )
-);
+    .pipe(gulp.dest("./public/js"))
+    .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
+};
 
 // Watch task.
 // ------------------------------------------------------------------- //
+const watch = cb => {
+  gulp.watch(config.css.src, plCss);
+  gulp.watch(config.js.src, plJs);
+  gulp.watch(config.pattern_lab.src, generatePl);
+  gulp.watch(config.css.styleguide_src, copyPlStyles);
+};
 
-gulp.task("watch", () => {
-  gulp.watch(config.css.src, gulp.series("pl:css"));
-  gulp.watch(config.js.src, gulp.series("pl:js"));
-  gulp.watch(config.pattern_lab.src, gulp.series("generate:pl"));
-  gulp.watch(config.css.styleguide_src, gulp.series("copy-pl-styles"));
-});
+const serve = cb => {
+  browserSync.init({
+    server: "public",
+    callbacks: {
+      ready: (err, bs) => {
+        cb();
+      }
+    }
+  });
+};
 
 // Generate pl with PHP.
 // -------------------------------------------------------------------- //
-gulp.task("pl:php", shell.task("php core/console --generate"));
+const plPhp = () => {
+  return exec("php core/console --generate");
+};
 
-// generate Pattern library.
-gulp.task("generate:pl", gulp.series("pl:php", "pl:css", "pl:js"));
+// Generate Pattern library.
+const generatePl = gulp.series(plPhp, copyUswdsFonts, copyUswdsJs, plCss, plJs);
 
-// Static Server + Watch.
-// ------------------------------------------------------------------- //
-
-gulp.task(
-  "serve",
-  gulp.series("watch", "generate:pl", () => {
-    browserSync.init({
-      serveStatic: ["./public"]
-    });
-  })
-);
-
-// Default Task
-// --------------------------------------------------------------------- //
-
-gulp.task("default", gulp.series("serve"));
+exports.watch = watch;
+exports.default = gulp.series(generatePl, serve, watch);
