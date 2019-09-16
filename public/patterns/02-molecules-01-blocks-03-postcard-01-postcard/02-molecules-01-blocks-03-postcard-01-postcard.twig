@@ -3,14 +3,20 @@
 		<div class="jcc-postcard__row">
 			<div class="jcc-postcard__media">
 				<img src="{{ image }}" alt="{{ alt }}" />
+				{% if tag is not empty %}
 				<span class="jcc-postcard__tag">{{ tag }}</span>
+				{% endif %}
 			</div>
 
 			<div class="jcc-postcard__content">
 				<header class="jcc-header-group">
 					<h2 class="jcc-header-group__title">{{ title }}</h2>
+					{% if lead is not empty %}
 					<p class="jcc-header-group__lead">{{ lead }}</p>
+					{% endif %}
+					{% if body is not empty %}
 					<p class="jcc-header-group__body">{{ body }}</p>
+					{% endif %}
 				</header>
 			</div>
 		</div>

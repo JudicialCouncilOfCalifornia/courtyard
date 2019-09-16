@@ -1,20 +1,20 @@
 {
-	"title": "Lorem ipsum",
-	"lead": "Nullam at semper mauris, at rhoncus purus.",
-	"flowmap": [
-		{
-			"title": "Create a settlement strategy",
-			"excerpt": "<p>Before you enter into a negotiation, you should create a strategy as to how you will enter into negotiations.</p>",
-			"read_more_link": "<a href='#''>Strategy Details</a>"
-		},
-		{
-			"title": "Decide how to negotiate",
-			"excerpt": "<p>Decide how you wish to negotiate. Common choices are verbally, usually by phone, or in writing.</p>",
-			"read_more_link": "<a href='#''>Negotiation Details</a>"
-		},
-		{
-			"title": "Reach an agreement",
-			"excerpt": "<p>Always confirm the terms of an agreement in writing. Often a settlement will be put into a written settlement agreement. If the debt collector prepares the settlement agreement, read it very carefully, and be sure that you understand and agree to any terms in the settlement before you sign. You are allowed to consult an attorney before signing any settlement agreement.</p>"
-		}
-	]
+  "title": "Lorem ipsum",
+  "lead": "Nullam at semper mauris, at rhoncus purus.",
+  "flowmap": [
+    {
+      "title": "Create a settlement strategy",
+      "excerpt": "<p>Before you enter into a negotiation, you should create a strategy as to how you will enter into negotiations.</p>",
+      "read_more_link": "<a href='#'>Strategy Details</a>"
+    },
+    {
+      "title": "Decide how to negotiate",
+      "excerpt": "<p>Decide how you wish to negotiate. Common choices are verbally, usually by phone, or in writing.</p>",
+      "read_more_link": "<a href='#'>Negotiation Details</a>"
+    },
+    {
+      "title": "Reach an agreement",
+      "excerpt": "<p>Always confirm the terms of an agreement in writing. Often a settlement will be put into a written settlement agreement. If the debt collector prepares the settlement agreement, read it very carefully, and be sure that you understand and agree to any terms in the settlement before you sign. You are allowed to consult an attorney before signing any settlement agreement.</p>"
+    }
+  ]
 }
