@@ -22,7 +22,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 ## Deployment
 
-You can view a public deployment of the pattern library at https://confident-allen-d061ed.netlify.com/.
+You can view a public deployment of the pattern library at https://confident-allen-d061ed.netlify.com/. This is hosted on an Exygy Netlify account. The Netlify deployment autodeploys the master branch from this repo.
 
 ## Contributing
 
