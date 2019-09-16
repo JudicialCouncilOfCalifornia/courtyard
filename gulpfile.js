@@ -41,26 +41,23 @@ const errorHandler = error => {
   this.emit("end");
 };
 
-// USWDS FONTS.
-// -------------------------------------------------------------- //
+// Use the Pattern Lab PHP command to generate the pattern library
+const plPhp = () => {
+  return exec("php core/console --generate");
+};
+
 const copyUswdsFonts = () => {
   return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
 };
 
-// USWDS JS.
-// -------------------------------------------------------------- //
 const copyUswdsJs = () => {
   return gulp.src(`${uswds}/js/**/**`).pipe(gulp.dest(config.js.public_js));
 };
 
-// Styleguide CSS.
-// -------------------------------------------------------------- //
 const copyPlStyles = () => {
   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
 };
 
-// Pattern Lab CSS.
-// -------------------------------------------------------------- //
 const plCss = () => {
   const plugins = [
     // Pack media queries
@@ -124,8 +121,6 @@ const plJs = () => {
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
 
-// Watch task.
-// ------------------------------------------------------------------- //
 const watch = cb => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
@@ -144,14 +139,9 @@ const serve = cb => {
   });
 };
 
-// Generate pl with PHP.
-// -------------------------------------------------------------------- //
-const plPhp = () => {
-  return exec("php core/console --generate");
-};
-
-// Generate Pattern library.
 const generatePl = gulp.series(plPhp, copyUswdsFonts, copyUswdsJs, plCss, plJs);
 
+exports.generatePl = generatePl;
 exports.watch = watch;
+exports.serve = serve;
 exports.default = gulp.series(generatePl, serve, watch);
