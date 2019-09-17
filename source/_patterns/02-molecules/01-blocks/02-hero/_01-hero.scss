@@ -1,64 +1,61 @@
 @import "../../../00-protons/00-global";
 
 .jcc-hero {
-	position: relative;
+  position: relative;
 }
 
 .jcc-hero--has-background-image {
-	@include u-text('white');
+  @include u-text("white");
 
-	.jcc-hero__media {
-		@include cover-image();
-	}
+  .jcc-hero__media {
+    @include cover-image();
+  }
 }
 
 .jcc-hero--has-background-color {
-	@include u-bg('primary-lighter');
+  @include u-bg("primary-lighter");
 }
 
 .jcc-hero__container {
-	@include grid-container('widescreen');
+  @include grid-container("widescreen");
 
-	@include at-media('desktop') {
-		
-	}
+  @include at-media("desktop") {
+  }
 }
 
 .jcc-hero__content {
-	@include u-padding-y(6);
-	@include u-line-height('body', 4);
-	position: relative;
+  @include u-padding-y(6);
+  @include u-line-height("body", 4);
+  position: relative;
 
-	@include at-media('desktop') {
-
-	}
+  @include at-media("desktop") {
+  }
 }
 
 .jcc-hero__title {
-	@include u-font('heading', '2xl');
+  @include u-font("heading", "2xl");
 }
 
 .jcc-hero__lead {
-	@include u-font('body', 'lg');
+  @include u-font("body", "lg");
 }
 
-
 .jcc-hero__content--has-one-column {
-	@include u-measure('6');
+  @include u-measure("6");
 }
 
 .jcc-hero__content--has-two-columns {
-	@include at-media('desktop') {
-		@include grid-row;
-		@include grid-gap;
-	}
+  @include at-media("desktop") {
+    @include grid-row;
+    @include grid-gap;
+  }
 
-	.jcc-hero__column-left,
-	.jcc-hero__column-right {
-		@include u-width(full);
+  .jcc-hero__column-left,
+  .jcc-hero__column-right {
+    @include u-width(full);
 
-		@include at-media(desktop) {
-			@include grid-col(6);
-		}
-	}
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
 }

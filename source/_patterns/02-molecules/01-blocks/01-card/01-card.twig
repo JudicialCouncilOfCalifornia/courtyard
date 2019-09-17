@@ -1,12 +1,12 @@
 <div class="jcc-card jcc-card--{{ card_modifier }}">
-	{% if image is not empty %}
-	<div class="jcc-card__media">
-		<img src="{{ image }}" alt="{{ alt }}" />
-	</div>
-	{% endif %}
+  {% if image is not empty %}
+  <div class="jcc-card__media">
+    <img src="{{ image }}" alt="{{ alt }}" />
+  </div>
+  {% endif %}
 
-	<div class="jcc-card__body">
-		<h2 class="jcc-card__title">{{ title }}</h2>
-		<p class="jcc-card__excerpt">{{ excerpt }}</p>
-	</div>
+  <div class="jcc-card__body">
+    <h2 class="jcc-card__title">{{ title }}</h2>
+    <p class="jcc-card__excerpt">{{ excerpt }}</p>
+  </div>
 </div>

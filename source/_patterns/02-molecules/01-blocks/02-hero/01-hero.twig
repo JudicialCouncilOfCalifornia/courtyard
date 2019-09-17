@@ -1,19 +1,19 @@
 <div class="jcc-hero jcc-hero--{{ background_variant }}">
-	<div class="jcc-hero__container">
-		{% if image is not empty %}
-		<div class="jcc-hero__media">
-			<img src="{{ image }}" alt="{{ alt }}" />
-		</div>
-		{% endif %}
+  <div class="jcc-hero__container">
+    {% if image is not empty %}
+    <div class="jcc-hero__media">
+      <img src="{{ image }}" alt="{{ alt }}" />
+    </div>
+    {% endif %}
 
-		<div class="jcc-hero__content jcc-hero__content--{{ column_variant }}">
-			<div class="jcc-hero__column-left">
-				<h2 class="jcc-hero__title">{{ title }}</h2>
-				<p class="jcc-hero__lead">{{ lead }}</p>
-			</div>
-			<div class="jcc-hero__column-right">
-				{{ column_content_right|raw }}
-			</div>
-		</div>
-	</div>
+    <div class="jcc-hero__content jcc-hero__content--{{ column_variant }}">
+      <div class="jcc-hero__column-left">
+        <h2 class="jcc-hero__title">{{ title }}</h2>
+        <p class="jcc-hero__lead">{{ lead }}</p>
+      </div>
+      <div class="jcc-hero__column-right">
+        {{ column_content_right|raw }}
+      </div>
+    </div>
+  </div>
 </div>

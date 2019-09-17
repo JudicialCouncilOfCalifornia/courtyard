@@ -1,7 +1,7 @@
 {
-	"image": "http://placeimg.com/300/300/arch",
-	"alt": "Avatar",
-	"title": "Lorem ipsum",
-	"excerpt": "Nullam at semper mauris, at rhoncus purus.",
-	"card_modifier": ""
+  "image": "http://placeimg.com/300/300/arch",
+  "alt": "Avatar",
+  "title": "Lorem ipsum",
+  "excerpt": "Nullam at semper mauris, at rhoncus purus.",
+  "card_modifier": ""
 }
