@@ -3,13 +3,9 @@
     {% include 'molecules-header-group' %}
     <ul class="jcc-steps">
       {% for step in steps %}
-      <li class="jcc-steps__step">
-        <h3 class="jcc-step__title">{{ step.title }}</h3>
-        <p class="jcc-step__excerpt">{{ step.excerpt }}</p>
-        {% if step.read_more_link is not empty %}
-        <a href="#" class="jcc-step__toggle">{{ step.read_more_link }}</a>
-        {% endif %}
-      </li>
+
+      {% include "molecules-step" %}
+        
       {% endfor %}
     </ul>
   </div>
