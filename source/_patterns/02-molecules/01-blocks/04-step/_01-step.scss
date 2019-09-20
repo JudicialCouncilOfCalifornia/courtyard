@@ -2,4 +2,10 @@
 
 .jcc-step {
   @include step();
+  // CODEREVIEW
+  // These are redundant with the @mixin unstyled-list(), 
+  // but is requeried if we want this Molecule to behave consistently 
+  // when used as a standalone component.
+  margin-bottom: 0;
+  list-style: none;
 }
