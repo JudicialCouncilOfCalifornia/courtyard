@@ -1,3 +1,15 @@
+// Section vertical rhythm and centered block
+
+@mixin section-wrapper {
+  @include u-padding-top(1);
+  @include u-padding-bottom(6);
+}
+
+@mixin section-container {
+  @include grid-container("widescreen");
+}
+
+
 // Cover image with bleed
 @mixin cover-image {
   position: absolute;
