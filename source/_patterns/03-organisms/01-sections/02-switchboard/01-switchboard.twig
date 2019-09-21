@@ -6,24 +6,32 @@
     } %}
     <div class="jcc-switchboard__content">
       <ul class="jcc-switchboard__tiles">
+        
         {% for tile in switchboard_tiles %}
         <li class="jcc-switchboard__tile">
-          <div class="jcc-tile">
-            <p class="jcc-tile__brow">{{ tile.brow }}</p>
-            <h3 class="jcc-tile__title">{{ tile.title_link|raw }}</h3>
-          </div>
+          
+          {% include "molecules-tile" with {
+            brow: tile.brow,
+            title_link: tile.title_link
+          } %}
+
         </li>
         {% endfor %}
+        
       </ul>
       <ul class="jcc-switchboard__tiles jcc-switchboard__tiles--secondary">
+        
         {% for tile in switchboard_tiles2 %}
         <li class="jcc-switchboard__tile">
-          <div class="jcc-tile">
-            <p class="jcc-tile__brow">{{ tile.brow }}</p>
-            <h3 class="jcc-tile__title">{{ tile.title_link|raw }}</h3>
-          </div>
+          
+          {% include "molecules-tile" with {
+            brow: tile.brow,
+            title_link: tile.title_link
+          } %}
+
         </li>
         {% endfor %}
+
       </ul>
     </div>
   </div>
