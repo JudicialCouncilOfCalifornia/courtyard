@@ -1,8 +1,7 @@
 @import "../../../00-protons/01-global";
 
 .jcc-steps-section {
-  @include u-padding-top(1);
-  @include u-padding-bottom(6);
+  @include section-wrapper;
 
   .jcc-header-group {
     @include u-padding-bottom(6);
@@ -15,7 +14,7 @@
 }
 
 .jcc-steps-section__container {
-  @include grid-container('widescreen');
+  @include section-container;
 }
 
 .jcc-steps {
