@@ -1,6 +1,7 @@
 @import "../../../00-protons/01-global";
 
 .jcc-switchboard {
+  @include section-wrapper;
   text-align: center;
 
   .jcc-header-group {
@@ -9,7 +10,7 @@
 }
 
 .jcc-switchboard__container {
-  @include grid-container("widescreen");
+  @include section-container;
 }
 
 .jcc-switchboard__tiles {
