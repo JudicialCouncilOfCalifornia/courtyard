@@ -1,8 +1,7 @@
 @import "../../../00-protons/01-global";
 
 .jcc-text-section {
-  @include u-padding-top(1);
-  @include u-padding-bottom(6);
+  @include section-wrapper;
 }
 
 .jcc-text-section--has-background-color {
@@ -11,7 +10,7 @@
 }
 
 .jcc-text-section__container {
-  @include grid-container("widescreen");
+  @include section-container;
 }
 
 .jcc-text-section__header {
