@@ -1,11 +1,11 @@
 @import "../../../00-protons/01-global";
 
 .jcc-step {
-  @include step();
-  // CODEREVIEW
-  // These are redundant with the @mixin unstyled-list(), 
-  // but is requeried if we want this Molecule to behave consistently 
-  // when used as a standalone component.
+  @include custom-counter();
+  @include custom-counter-line();
+  @include u-measure('5');
+  @include u-line-height('body', 4);
+  padding-left: 3.5rem;
   margin-bottom: 0;
   list-style: none;
 }
