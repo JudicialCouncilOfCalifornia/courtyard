@@ -1,14 +1,3 @@
-
-// Step
-@mixin step {
-  @include custom-counter();
-  @include custom-counter-line();
-  @include u-measure('5');
-  @include u-line-height('body', 4);
-  padding-left: 3.5rem;
-}
-
-
 // Cover image with bleed
 @mixin cover-image {
   position: absolute;
