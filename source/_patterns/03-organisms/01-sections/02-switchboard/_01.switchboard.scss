@@ -33,26 +33,3 @@
     @include grid-col(4);
   }
 }
-
-.jcc-tile {
-  @include u-radius("lg");
-  @include u-border(1px, "primary-vivid");
-  @include u-padding-x(3);
-  position: relative;
-  text-align: left;
-}
-
-.jcc-tile__title {
-  a {
-    text-decoration: none;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-    }
-  }
-}
