@@ -4,7 +4,11 @@
     <ul class="jcc-steps">
       {% for step in steps %}
 
-      {% include "molecules-step" %}
+      {% include "molecules-step" with {
+        title: step.title,
+        excerpt: step.excerpt,
+        read_more_link: step.read_more_link
+      } %}
         
       {% endfor %}
     </ul>
