@@ -25,6 +25,10 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 You can view a public deployment of the pattern library at https://confident-allen-d061ed.netlify.com/. This is hosted on an Exygy Netlify account. The Netlify deployment autodeploys the master branch from this repo. Each time a commit is pushed to the master branch, Netlify will run the `npm run build` command to build the pattern library, and it will then deploy that new build from the `public` directory.
 
+Netlify will also create a preview deployment for each PR created in this repo. To view the preview deployment for a PR, go to the PR and scroll down to the bottom to the checks section. In that section, there is a list item for the deploy preview. Click the "Details" link in that list item to view the deploy preview (see below image).
+
+<img src="./netlify-pr-deploy.png?raw=true" height="300" >
+
 ## Contributing
 
 ### Code Style
