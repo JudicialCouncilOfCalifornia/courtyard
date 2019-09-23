@@ -4,23 +4,23 @@
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
   "img": {
     "avatar": {
-      "src": "http://placeimg.com/100/100/people",
+      "src": "https://placeimg.com/100/100/people",
       "alt": "Avatar"
     },
     "square": {
-      "src": "http://placeimg.com/300/300/nature",
+      "src": "https://placeimg.com/300/300/nature",
       "alt": "Square"
     },
     "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "https://placeimg.com/400/300/tech",
       "alt": "Rectangle"
     },
     "landscape-4x3": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "https://placeimg.com/400/300/tech",
       "alt": "4x3 Image"
     },
     "landscape-16x9": {
-      "src": "http://placeimg.com/640/360/tech",
+      "src": "https://placeimg.com/640/360/tech",
       "alt": "16x9 Image"
     }
   },
