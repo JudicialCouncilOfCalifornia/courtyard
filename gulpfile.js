@@ -1,8 +1,7 @@
-const gulp = require("gulp");
-// Initialize browser sync.
-const browserSync = require("browser-sync").create();
+// Based on https://github.com/SFDigitalServices/sfgov-pattern-lab/blob/master/gulpfile.babel.js
 
-// Read the default configuration.
+const gulp = require("gulp");
+const browserSync = require("browser-sync").create();
 const config = require("./config.json");
 
 // Include plugins.
@@ -139,9 +138,7 @@ const serve = cb => {
   });
 };
 
-const generatePl = gulp.series(plPhp, copyUswdsFonts, copyUswdsJs, plCss, plJs);
+const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsJs, plCss, plJs);
 
-exports.generatePl = generatePl;
-exports.watch = watch;
-exports.serve = serve;
-exports.default = gulp.series(generatePl, serve, watch);
+exports.build = build;
+exports.default = gulp.series(build, serve, watch);

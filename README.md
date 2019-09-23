@@ -4,7 +4,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 ## Prerequisites
 
-- [`composer`](https://getcomposer.org)
+- [`composer`](https://getcomposer.org) installed globally
 - Node v12.x.x
 
 ## Getting Started
@@ -14,7 +14,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 1. `composer install` to install Pattern Lab.
    - Answer `Y` to `update the config option styleguideKitPath (/[path to your repo]/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default?`
 1. `npm install`
-1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library at `http://localhost:3001`.
+1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
 
 ## To update Pattern Lab
 
@@ -22,7 +22,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 ## Deployment
 
-You can view a public deployment of the pattern library at https://confident-allen-d061ed.netlify.com/. This is hosted on an Exygy Netlify account. The Netlify deployment autodeploys the master branch from this repo.
+You can view a public deployment of the pattern library at https://confident-allen-d061ed.netlify.com/. This is hosted on an Exygy Netlify account. The Netlify deployment autodeploys the master branch from this repo. Each time a commit is pushed to the master branch, Netlify will run the `npm run build` command to build the pattern library, and it will then deploy that new build from the `public` directory.
 
 ## Contributing
 
