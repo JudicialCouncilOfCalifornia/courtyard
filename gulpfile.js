@@ -123,7 +123,7 @@ const plJs = () => {
 const watch = cb => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, generatePl);
+  gulp.watch(config.pattern_lab.src, build);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
