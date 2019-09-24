@@ -18,11 +18,18 @@
     @include grid-row;
     @include grid-gap;
   }
+
+  .jcc-tile {
+    @include u-border(1px, "primary");
+    @include u-bg('primary-lighter');
+  }
 }
 
 .jcc-switchboard__tiles--secondary {
+
   .jcc-tile {
     @include u-border(1px, "secondary");
+    @include u-bg('secondary-lighter');
   }
 }
 

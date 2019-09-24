@@ -1,4 +1,4 @@
-<div class="jcc-switchboard jcc-switchboard--{{ background_variant }} ">
+<div class="jcc-switchboard {% if background_variant is not empty %}jcc-switchboard--has-background-color{% endif %} ">
   <div class="jcc-switchboard__container">
     {% include 'molecules-header-group' with {
         brow: headergroup.brow,
