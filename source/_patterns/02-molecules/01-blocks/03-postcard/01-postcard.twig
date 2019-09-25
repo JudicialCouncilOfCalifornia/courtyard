@@ -9,15 +9,10 @@
       </div>
 
       <div class="jcc-postcard__content">
-        <header class="jcc-header-group">
-          <h2 class="jcc-header-group__title">{{ title }}</h2>
-          {% if lead is not empty %}
-          <p class="jcc-header-group__lead">{{ lead }}</p>
-          {% endif %}
-          {% if body is not empty %}
-          <p class="jcc-header-group__body">{{ body }}</p>
-          {% endif %}
-        </header>
+        {% include 'molecules-header-group' with {
+          brow: headergroup.brow,
+          title: headergroup.title
+        } %}
       </div>
     </div>
   </div>

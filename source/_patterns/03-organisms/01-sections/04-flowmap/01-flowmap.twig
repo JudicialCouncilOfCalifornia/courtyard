@@ -1,16 +1,23 @@
 <div class="jcc-flowmap-section jcc-flowmap-section--{{ background_variant }}">
-  <div class="jcc-flowmap-section__container">
-    {% include 'molecules-header-group' %}
+  <div class="jcc-flowmap-section__container">   
+
+    {% include 'molecules-header-group' with {
+      brow: headergroup.brow,
+      title: headergroup.title
+    } %}
+    
     <ul class="jcc-flowmap">
+    
       {% for step in flowmap %}
-      <li class="jcc-flowmap__step">
-        <h3 class="jcc-flowmap__title">{{ step.title }}</h3>
-        <div class="jcc-flowmap__excerpt">{{ step.excerpt|raw }}</div>
-        {% if step.read_more_link is not empty %}
-        <div class="jcc-flowmap__trigger">{{ step.read_more_link|raw }}</div>
-        {% endif %}
-      </li>
+      
+      {% include "molecules-flowmapstep" with {
+        title: step.title,
+        excerpt: step.excerpt,
+        read_more_link: step.read_more_link
+      } %}
+    
       {% endfor %}
     </ul>
+
   </div>
 </div>

@@ -1,6 +1,7 @@
 @import "../../../00-protons/01-global";
 
 .jcc-switchboard {
+  @include section-wrapper;
   text-align: center;
 
   .jcc-header-group {
@@ -9,7 +10,7 @@
 }
 
 .jcc-switchboard__container {
-  @include grid-container("widescreen");
+  @include section-container;
 }
 
 .jcc-switchboard__tiles {
@@ -31,28 +32,5 @@
 
   @include at-media(desktop) {
     @include grid-col(4);
-  }
-}
-
-.jcc-tile {
-  @include u-radius("lg");
-  @include u-border(1px, "primary-vivid");
-  @include u-padding-x(3);
-  position: relative;
-  text-align: left;
-}
-
-.jcc-tile__title {
-  a {
-    text-decoration: none;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-    }
   }
 }
