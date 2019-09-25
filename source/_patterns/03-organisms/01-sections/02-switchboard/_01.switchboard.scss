@@ -2,10 +2,15 @@
 
 .jcc-switchboard {
   text-align: center;
+  @include u-padding(3);
 
   .jcc-header-group {
     @include u-padding-bottom(4);
   }
+}
+
+.jcc-switchboard--has-background-color {
+  @include u-bg('primary-lighter');
 }
 
 .jcc-switchboard__container {
