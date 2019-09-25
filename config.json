@@ -4,11 +4,7 @@
     "project_scss": "source/css",
     "public_folder": "public/css",
     "styleguide_public_folder": "public/styleguide/css",
-    "src": [
-      "source/_patterns/*.scss",
-      "source/_patterns/**/*.scss",
-      "source/css/*.scss"
-    ],
+    "src": ["source/_patterns/*.scss", "source/_patterns/**/*.scss", "source/css/*.scss"],
     "styleguide_src": "source/styleguide/css/*.css"
   },
   "fonts": {
@@ -16,17 +12,15 @@
     "public_fonts": "public/fonts"
   },
   "js": {
-    "src": [
-      "source/js/*.js",
-      "source/js/**/*.js"
-    ],
+    "src": ["source/js/*.js", "source/js/**/*.js"],
     "public_js": "public/js"
   },
   "pattern_lab": {
     "src": [
       "source/_patterns/**/*.twig",
       "source/_meta/*.twig",
-      "source/_patterns/**/*.json"
+      "source/_patterns/**/*.json",
+      "source/_patterns/**/*.yml"
     ]
   }
 }
