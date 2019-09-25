@@ -1,8 +1,7 @@
 @import "../../../00-protons/01-global";
 
 .jcc-flowmap-section {
-  @include u-padding-top(1);
-  @include u-padding-bottom(6);
+  @include section-wrapper;
 
   .jcc-header-group {
     @include u-padding-bottom(6);
@@ -15,7 +14,7 @@
 }
 
 .jcc-flowmap-section__container {
-  @include grid-container("widescreen");
+  @include section-container;
 }
 
 .jcc-flowmap {
@@ -26,32 +25,4 @@
   }
 }
 
-.jcc-flowmap__step {
-  @include u-width(full);
 
-  @include at-media(desktop) {
-    @include grid-col(3);
-
-    > * {
-      padding-right: 2rem;
-    }
-  }
-
-  // remove line from last timeline item
-  &:last-of-type {
-    .jcc-flowmap__title {
-      &:after {
-        width: 0;
-      }
-    }
-  }
-}
-
-.jcc-flowmap__title {
-  position: relative;
-
-  @include at-media(desktop) {
-    @include timeline-line();
-    @include timeline-dot();
-  }
-}
