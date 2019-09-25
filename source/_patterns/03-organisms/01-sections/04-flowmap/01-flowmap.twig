@@ -1,7 +1,10 @@
 <div class="jcc-flowmap-section jcc-flowmap-section--{{ background_variant }}">
-  <div class="jcc-flowmap-section__container">
-    
-    {% include 'molecules-header-group' %}
+  <div class="jcc-flowmap-section__container">   
+
+    {% include 'molecules-header-group' with {
+      brow: headergroup.brow,
+      title: headergroup.title
+    } %}
     
     <ul class="jcc-flowmap">
     
