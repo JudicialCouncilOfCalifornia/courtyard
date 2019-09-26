@@ -5,18 +5,19 @@ const browserSync = require("browser-sync").create();
 const config = require("./config.json");
 
 // Include plugins.
-const sass = require("gulp-sass");
-const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");
 const autoprefix = require("gulp-autoprefixer");
-const glob = require("gulp-sass-glob");
-const sourcemaps = require("gulp-sourcemaps");
-const concat = require("gulp-concat");
 const babel = require("gulp-babel");
+const cleanCSS = require("gulp-clean-css");
+const concat = require("gulp-concat");
+const glob = require("gulp-sass-glob");
 const mqpacker = require("css-mqpacker");
+const notify = require("gulp-notify");
+const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace");
+const sass = require("gulp-sass");
+const sourcemaps = require("gulp-sourcemaps");
 const { exec } = require("child_process");
 
 const pkg = require("./node_modules/uswds/package.json");
@@ -47,10 +48,6 @@ const plPhp = () => {
 
 const copyUswdsFonts = () => {
   return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
-};
-
-const copyUswdsJs = () => {
-  return gulp.src(`${uswds}/js/**/**`).pipe(gulp.dest(config.js.public_js));
 };
 
 const copyPlStyles = () => {
@@ -96,6 +93,10 @@ const plCss = () => {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder))
+    .pipe(rename("styles.min.css"))
+    .pipe(cleanCSS({ compatibility: "ie9" }))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(config.css.public_folder))
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
 };
 
@@ -106,17 +107,20 @@ const plCss = () => {
 // needs to be edited to watch for more folders.
 
 const plJs = () => {
+  const jsSrc = config.js.src;
+  jsSrc.unshift(`${uswds}/js/uswds.js`);
+
   return gulp
-    .src(config.js.src)
+    .src(jsSrc)
     .pipe(sourcemaps.init())
     .pipe(
       babel({
         presets: ["@babel/preset-env"]
       })
     )
-    .pipe(concat("components.js"))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./public/js"))
+    .pipe(concat("scripts.js"))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(config.js.dest))
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
 
@@ -138,7 +142,7 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsJs, plCss, plJs);
+const build = gulp.series(plPhp, copyUswdsFonts, plCss, plJs);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);
