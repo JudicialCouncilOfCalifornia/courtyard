@@ -4,6 +4,7 @@
     "title": "What can we help you with today?"
   },
   "background_variant": "jcc-switchboard--has-background-color",
+  "tiles_variant": "jcc-switchboard__tiles--secondary",
   "switchboard_tiles": [
     {
       "brow": "Wage Garnishment",
