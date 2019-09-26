@@ -20,3 +20,7 @@
     }
   }
 }
+
+.jcc-tile.is-secondary {
+  @include u-bg('secondary-lighter');
+}
