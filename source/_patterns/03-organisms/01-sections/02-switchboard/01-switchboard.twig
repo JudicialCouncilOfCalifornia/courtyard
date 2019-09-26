@@ -1,5 +1,5 @@
-<div class="jcc-switchboard jcc-switchboard--{{ background_variant }} ">
-  
+<div class="jcc-switchboard {{ background_variant }}">
+
   <div class="jcc-switchboard__container">
     
     {% include 'molecules-header-group' with {
@@ -22,7 +22,8 @@
         {% endfor %}
         
       </ul>
-      <ul class="jcc-switchboard__tiles jcc-switchboard__tiles--secondary">
+
+      <ul class="jcc-switchboard__tiles {{ tiles_variant }}">
         
         {% for tile in switchboard_tiles2 %}
         <li class="jcc-switchboard__tile">

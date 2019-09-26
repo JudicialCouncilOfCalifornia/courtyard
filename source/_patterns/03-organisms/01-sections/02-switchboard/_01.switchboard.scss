@@ -3,10 +3,15 @@
 .jcc-switchboard {
   @include section-wrapper;
   text-align: center;
+  @include u-padding(3);
 
   .jcc-header-group {
     @include u-padding-bottom(4);
   }
+}
+
+.jcc-switchboard--has-background-color {
+  @include u-bg('primary-lighter');
 }
 
 .jcc-switchboard__container {
@@ -19,11 +24,18 @@
     @include grid-row;
     @include grid-gap;
   }
+
+  .jcc-tile {
+    @include u-border(1px, "primary");
+    @include u-bg('primary-lighter');
+  }
 }
 
 .jcc-switchboard__tiles--secondary {
+
   .jcc-tile {
     @include u-border(1px, "secondary");
+    @include u-bg('secondary-lighter');
   }
 }
 
