@@ -13383,6 +13383,12 @@ h3 {
   position: relative;
 }
 
+/* Example CSS from http://edenspiekermann.github.io/a11y-toggle/ */
+[aria-hidden="true"],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}
+
 .jcc-breadcrumbs {
   list-style: none;
   padding-left: 0;
