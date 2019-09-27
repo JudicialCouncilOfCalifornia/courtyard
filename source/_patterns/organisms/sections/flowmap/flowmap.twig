@@ -2,7 +2,7 @@
 
   <div class="jcc-flowmap-section__container">   
 
-    {% include 'molecules-header-group' with {
+    {% include '@molecules/text/header-group/header-group.twig' with {
       brow: headergroup.brow,
       title: headergroup.title
     } %}
@@ -11,7 +11,7 @@
     
       {% for step in flowmap %}
       
-      {% include "molecules-flowmapstep" with {
+      {% include '@molecules/blocks/flowmap-step/flowmap-step.twig' with {
         title: step.title,
         excerpt: step.excerpt,
         read_more_link: step.read_more_link

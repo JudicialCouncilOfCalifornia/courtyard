@@ -2,7 +2,7 @@
 
   <div class="jcc-switchboard__container">
     
-    {% include 'molecules-header-group' with {
+    {% include '@molecules/text/header-group/header-group.twig' with {
         brow: headergroup.brow,
         title: headergroup.title
     } %}
@@ -13,7 +13,7 @@
         {% for tile in switchboard_tiles %}
         <li class="jcc-switchboard__tile">
           
-          {% include "molecules-tile" with {
+          {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
             title_link: tile.title_link
           } %}
@@ -28,7 +28,7 @@
         {% for tile in switchboard_tiles2 %}
         <li class="jcc-switchboard__tile">
           
-          {% include "molecules-tile" with {
+          {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
             title_link: tile.title_link
           } %}
