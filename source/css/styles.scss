@@ -1,11 +1,11 @@
 // -------------------------------------
 // Import individual theme settings
 
-@import "../_patterns/00-protons/00-uswds-theme-general";
-@import "../_patterns/00-protons/00-uswds-theme-typography";
-@import "../_patterns/00-protons/00-uswds-theme-spacing";
-@import "../_patterns/00-protons/00-uswds-theme-color";
-@import "../_patterns/00-protons/00-uswds-theme-utilities";
+@import "../_patterns/protons/uswds-theme-general";
+@import "../_patterns/protons/uswds-theme-typography";
+@import "../_patterns/protons/uswds-theme-spacing";
+@import "../_patterns/protons/uswds-theme-color";
+@import "../_patterns/protons/uswds-theme-utilities";
 
 // -------------------------------------
 // Import individual USWDS modules...
@@ -81,9 +81,9 @@
 
 // Styles inside patterns.
 // -------------------------------------
-@import "../_patterns/00-protons/01-global";
-@import "../_patterns/01-atoms/**/*.scss";
-@import "../_patterns/02-molecules/**/*.scss";
-@import "../_patterns/03-organisms/**/*.scss";
-@import "../_patterns/04-templates/**/*.scss";
-@import "../_patterns/05-pages/**/*.scss";
+@import "../_patterns/protons/global";
+@import "../_patterns/atoms/**/*.scss";
+@import "../_patterns/molecules/**/*.scss";
+@import "../_patterns/organisms/**/*.scss";
+@import "../_patterns/templates/**/*.scss";
+@import "../_patterns/pages/**/*.scss";

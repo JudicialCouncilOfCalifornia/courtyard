@@ -1,0 +1,11 @@
+@import "../../../protons/global";
+
+.jcc-breadcrumbs {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.jcc-breadcrumb__item {
+  display: inline;
+}

@@ -1,0 +1,11 @@
+@import "../../../protons/global";
+
+.jcc-step {
+  @include custom-counter();
+  @include custom-counter-line();
+  @include u-measure('5');
+  @include u-line-height('body', 4);
+  padding-left: 3.5rem;
+  margin-bottom: 0;
+  list-style: none;
+}
