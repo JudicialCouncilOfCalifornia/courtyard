@@ -1,0 +1,22 @@
+@import "../../../protons/global";
+
+.jcc-steps-section {
+  @include section-wrapper;
+
+  .jcc-header-group {
+    @include u-padding-bottom(6);
+  }
+}
+
+.jcc-steps-section--has-background-color {
+  @include u-padding-top(6);
+  @include u-bg('base-lightest');
+}
+
+.jcc-steps-section__container {
+  @include section-container;
+}
+
+.jcc-steps {
+  @include unstyled-list();
+}

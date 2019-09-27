@@ -1,6 +1,5 @@
 {
   "css": {
-    "styleguide_scss": "source/styleguide/css",
     "project_scss": "source/css",
     "public_folder": "public/css",
     "styleguide_public_folder": "public/styleguide/css",
@@ -13,7 +12,7 @@
   },
   "js": {
     "src": ["source/js/*.js", "source/js/**/*.js"],
-    "public_js": "public/js"
+    "dest": "public/js"
   },
   "pattern_lab": {
     "src": [

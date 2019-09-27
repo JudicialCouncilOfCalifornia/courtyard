@@ -1,0 +1,63 @@
+@import "../../../protons/global";
+
+.jcc-text-section {
+  @include section-wrapper;
+}
+
+.jcc-text-section--has-background-color {
+  @include u-padding-top(6);
+  @include u-bg("base-lightest");
+}
+
+.jcc-text-section__container {
+  @include section-container;
+}
+
+.jcc-text-section__header {
+}
+
+.jcc-text-section__content {
+  @include u-line-height("body", 4);
+}
+
+.jcc-text-section__content--has-one-column {
+  @include u-measure("6");
+}
+
+.jcc-text-section__content--has-two-columns-half,
+.jcc-text-section__content--has-two-columns-threequarter {
+  @include at-media("desktop") {
+    @include grid-row;
+    @include grid-gap;
+  }
+}
+
+.jcc-text-section__content--has-two-columns-half {
+  .jcc-text-section__column-left,
+  .jcc-text-section__column-right {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-text-section__content--has-two-columns-threequarter {
+  .jcc-text-section__column-left,
+  .jcc-text-section__column-right {
+    @include u-width(full);
+  }
+
+  .jcc-text-section__column-left {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+  }
+
+  .jcc-text-section__column-right {
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}
