@@ -1,0 +1,12 @@
+@import "../../protons/global";
+
+.jcc-header-group {
+}
+
+.jcc-header-group__title {
+  @include u-font("heading", "xl");
+}
+
+.jcc-header-group__lead {
+  @include u-font("body", "md");
+}
