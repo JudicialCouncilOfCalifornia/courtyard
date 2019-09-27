@@ -9,7 +9,6 @@
     <ul class="jcc-steps">
       {% for step in steps %}
 
-      {% include "molecules-step" with {
       {% include '@molecules/blocks/step/step.twig' with {
         title: step.title,
         excerpt: step.excerpt,
