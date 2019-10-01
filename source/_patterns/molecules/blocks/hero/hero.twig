@@ -1,11 +1,6 @@
-{% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
-
 <div class="jcc-hero jcc-hero--{{ background_variant }}">
   <div class="jcc-hero__container">
-    {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-        url: breadcrumbs.url,
-        name: breadcrumbs.name
-    } %}
+    {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
 
     {% if image is not empty %}
     <div class="jcc-hero__media">
