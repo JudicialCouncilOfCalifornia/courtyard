@@ -1,0 +1,5 @@
+/* Example CSS from http://edenspiekermann.github.io/a11y-toggle/ */
+[aria-hidden="true"],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}

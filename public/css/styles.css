@@ -13383,12 +13383,10 @@ h3 {
   background-color: #f3e1e4 ;
 }
 
-.jcc-breadcrumbs-section__container {
-  margin-left: auto ;
-  margin-right: auto ;
-  max-width: 87.5rem ;
-  padding-left: 1rem ;
-  padding-right: 1rem ;
+/* Example CSS from http://edenspiekermann.github.io/a11y-toggle/ */
+[aria-hidden="true"],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
 }
 
 .jcc-breadcrumbs {
@@ -22540,10 +22538,6 @@ h3 {
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 50% ;
-  }
-  .jcc-breadcrumbs-section__container {
-    padding-left: 2rem ;
-    padding-right: 2rem ;
   }
   .jcc-card-list {
     display: -webkit-box;
