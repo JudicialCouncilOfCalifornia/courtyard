@@ -1,5 +1,10 @@
 <div class="jcc-hero jcc-hero--{{ background_variant }}">
   <div class="jcc-hero__container">
+    {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
+        url: breadcrumbs.url,
+        label: breadcrumbs.label
+    } %}
+
     {% if image is not empty %}
     <div class="jcc-hero__media">
       <img src="{{ image }}" alt="{{ alt }}" />

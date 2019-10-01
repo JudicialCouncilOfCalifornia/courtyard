@@ -1,10 +1,13 @@
+{% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
+
+{% if url %}
 <nav>
   <ul class="jcc-breadcrumbs">
+    {% for crumb in crumbs %}
     <li class="jcc-breadcrumb__item">
-      <a href="#">Home Link</a>
+      <a href="{{ url }}"{{ url_attributes }}>{{ label }}</a>
     </li>
-    <li class="jcc-breadcrumb__item">
-      <a href="#">Nested Link</a>
-    </li>
+    {% endfor %}
   </ul>
 </nav>
+{% endif %}
