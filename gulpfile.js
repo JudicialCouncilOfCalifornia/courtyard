@@ -18,10 +18,15 @@ const rename = require("gulp-rename");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
+const webpack = require("webpack-stream");
+const compiler = require("webpack");
+const uglify = require("gulp-uglify");
 const { exec } = require("child_process");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
+const jsSrc = config.js.src;
+jsSrc.unshift(`${uswds}/js/uswds.js`);
 
 // Error Handler
 // -------------------------------------------------------------- //
@@ -107,19 +112,26 @@ const plCss = () => {
 // needs to be edited to watch for more folders.
 
 const plJs = () => {
-  const jsSrc = config.js.src;
-  jsSrc.unshift(`${uswds}/js/uswds.js`);
-
   return gulp
     .src(jsSrc)
-    .pipe(sourcemaps.init())
+    .pipe(
+      webpack(
+        {
+          output: {
+            filename: "scripts.js"
+          }
+        },
+        compiler
+      )
+    )
     .pipe(
       babel({
         presets: ["@babel/preset-env"]
       })
     )
-    .pipe(concat("scripts.js"))
-    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(config.js.dest))
+    .pipe(uglify())
+    .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest(config.js.dest))
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };

@@ -1,2446 +1,1513 @@
 "use strict";
 
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-(function () {
-  function r(e, n, t) {
-    function o(i, f) {
-      if (!n[i]) {
-        if (!e[i]) {
-          var c = "function" == typeof require && require;
-          if (!f && c) return c(i, !0);
-          if (u) return u(i, !0);
-          var a = new Error("Cannot find module '" + i + "'");
-          throw a.code = "MODULE_NOT_FOUND", a;
-        }
+!function (t) {
+  var e = {};
 
-        var p = n[i] = {
-          exports: {}
-        };
-        e[i][0].call(p.exports, function (r) {
-          var n = e[i][1][r];
-          return o(n || r);
-        }, p, p.exports, r, e, n, t);
-      }
-
-      return n[i].exports;
-    }
-
-    for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) {
-      o(t[i]);
-    }
-
-    return o;
+  function n(r) {
+    if (e[r]) return e[r].exports;
+    var o = e[r] = {
+      i: r,
+      l: !1,
+      exports: {}
+    };
+    return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports;
   }
 
-  return r;
-})()({
-  1: [function (require, module, exports) {
-    "use strict";
-    /*
-     * classList.js: Cross-browser full element.classList implementation.
-     * 1.1.20170427
-     *
-     * By Eli Grey, http://eligrey.com
-     * License: Dedicated to the public domain.
-     *   See https://github.com/eligrey/classList.js/blob/master/LICENSE.md
-     */
-
-    /*global self, document, DOMException */
-
-    /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
-
-    if ("document" in window.self) {
-      // Full polyfill for browsers with no classList support
-      // Including IE < Edge missing SVGElement.classList
-      if (!("classList" in document.createElement("_")) || document.createElementNS && !("classList" in document.createElementNS("http://www.w3.org/2000/svg", "g"))) {
-        (function (view) {
-          "use strict";
-
-          if (!('Element' in view)) return;
-
-          var classListProp = "classList",
-              protoProp = "prototype",
-              elemCtrProto = view.Element[protoProp],
-              objCtr = Object,
-              strTrim = String[protoProp].trim || function () {
-            return this.replace(/^\s+|\s+$/g, "");
-          },
-              arrIndexOf = Array[protoProp].indexOf || function (item) {
-            var i = 0,
-                len = this.length;
-
-            for (; i < len; i++) {
-              if (i in this && this[i] === item) {
-                return i;
-              }
-            }
-
-            return -1;
-          } // Vendors: please allow content code to instantiate DOMExceptions
-          ,
-              DOMEx = function DOMEx(type, message) {
-            this.name = type;
-            this.code = DOMException[type];
-            this.message = message;
-          },
-              checkTokenAndGetIndex = function checkTokenAndGetIndex(classList, token) {
-            if (token === "") {
-              throw new DOMEx("SYNTAX_ERR", "An invalid or illegal string was specified");
-            }
-
-            if (/\s/.test(token)) {
-              throw new DOMEx("INVALID_CHARACTER_ERR", "String contains an invalid character");
-            }
-
-            return arrIndexOf.call(classList, token);
-          },
-              ClassList = function ClassList(elem) {
-            var trimmedClasses = strTrim.call(elem.getAttribute("class") || ""),
-                classes = trimmedClasses ? trimmedClasses.split(/\s+/) : [],
-                i = 0,
-                len = classes.length;
-
-            for (; i < len; i++) {
-              this.push(classes[i]);
-            }
-
-            this._updateClassName = function () {
-              elem.setAttribute("class", this.toString());
-            };
-          },
-              classListProto = ClassList[protoProp] = [],
-              classListGetter = function classListGetter() {
-            return new ClassList(this);
-          }; // Most DOMException implementations don't allow calling DOMException's toString()
-          // on non-DOMExceptions. Error's toString() is sufficient here.
-
-
-          DOMEx[protoProp] = Error[protoProp];
-
-          classListProto.item = function (i) {
-            return this[i] || null;
-          };
-
-          classListProto.contains = function (token) {
-            token += "";
-            return checkTokenAndGetIndex(this, token) !== -1;
-          };
-
-          classListProto.add = function () {
-            var tokens = arguments,
-                i = 0,
-                l = tokens.length,
-                token,
-                updated = false;
-
-            do {
-              token = tokens[i] + "";
-
-              if (checkTokenAndGetIndex(this, token) === -1) {
-                this.push(token);
-                updated = true;
-              }
-            } while (++i < l);
-
-            if (updated) {
-              this._updateClassName();
-            }
-          };
-
-          classListProto.remove = function () {
-            var tokens = arguments,
-                i = 0,
-                l = tokens.length,
-                token,
-                updated = false,
-                index;
-
-            do {
-              token = tokens[i] + "";
-              index = checkTokenAndGetIndex(this, token);
-
-              while (index !== -1) {
-                this.splice(index, 1);
-                updated = true;
-                index = checkTokenAndGetIndex(this, token);
-              }
-            } while (++i < l);
-
-            if (updated) {
-              this._updateClassName();
-            }
-          };
-
-          classListProto.toggle = function (token, force) {
-            token += "";
-            var result = this.contains(token),
-                method = result ? force !== true && "remove" : force !== false && "add";
-
-            if (method) {
-              this[method](token);
-            }
-
-            if (force === true || force === false) {
-              return force;
-            } else {
-              return !result;
-            }
-          };
-
-          classListProto.toString = function () {
-            return this.join(" ");
-          };
-
-          if (objCtr.defineProperty) {
-            var classListPropDesc = {
-              get: classListGetter,
-              enumerable: true,
-              configurable: true
-            };
-
-            try {
-              objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-            } catch (ex) {
-              // IE 8 doesn't support enumerable:true
-              // adding undefined to fight this issue https://github.com/eligrey/classList.js/issues/36
-              // modernie IE8-MSW7 machine has IE8 8.0.6001.18702 and is affected
-              if (ex.number === undefined || ex.number === -0x7FF5EC54) {
-                classListPropDesc.enumerable = false;
-                objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-              }
-            }
-          } else if (objCtr[protoProp].__defineGetter__) {
-            elemCtrProto.__defineGetter__(classListProp, classListGetter);
+  n.m = t, n.c = e, n.d = function (t, e, r) {
+    n.o(t, e) || Object.defineProperty(t, e, {
+      enumerable: !0,
+      get: r
+    });
+  }, n.r = function (t) {
+    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {
+      value: "Module"
+    }), Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+  }, n.t = function (t, e) {
+    if (1 & e && (t = n(t)), 8 & e) return t;
+    if (4 & e && "object" == _typeof(t) && t && t.__esModule) return t;
+    var r = Object.create(null);
+    if (n.r(r), Object.defineProperty(r, "default", {
+      enumerable: !0,
+      value: t
+    }), 2 & e && "string" != typeof t) for (var o in t) {
+      n.d(r, o, function (e) {
+        return t[e];
+      }.bind(null, o));
+    }
+    return r;
+  }, n.n = function (t) {
+    var e = t && t.__esModule ? function () {
+      return t["default"];
+    } : function () {
+      return t;
+    };
+    return n.d(e, "a", e), e;
+  }, n.o = function (t, e) {
+    return Object.prototype.hasOwnProperty.call(t, e);
+  }, n.p = "", n(n.s = 0);
+}([function (t, e, n) {
+  n(1), t.exports = n(4);
+}, function (t, e, n) {
+  (function (t) {
+    var e, r, o;
+    !function t(n, r, o) {
+      function i(a, c) {
+        if (!r[a]) {
+          if (!n[a]) {
+            if (!c && "function" == typeof e && e) return e(a, !0);
+            if (u) return u(a, !0);
+            var s = new Error("Cannot find module '" + a + "'");
+            throw s.code = "MODULE_NOT_FOUND", s;
           }
-        })(window.self);
-      } // There is full or partial native classList support, so just check if we need
-      // to normalize the add/remove and toggle APIs.
 
+          var f = r[a] = {
+            exports: {}
+          };
+          n[a][0].call(f.exports, function (t) {
+            return i(n[a][1][t] || t);
+          }, f, f.exports, t, n, r, o);
+        }
 
-      (function () {
+        return r[a].exports;
+      }
+
+      for (var u = "function" == typeof e && e, a = 0; a < o.length; a++) {
+        i(o[a]);
+      }
+
+      return i;
+    }({
+      1: [function (t, e, n) {
+        "use strict";
+        /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
+
+        "document" in window.self && ("classList" in document.createElement("_") && (!document.createElementNS || "classList" in document.createElementNS("http://www.w3.org/2000/svg", "g")) || function (t) {
+          if ("Element" in t) {
+            var e = t.Element.prototype,
+                n = Object,
+                r = String.prototype.trim || function () {
+              return this.replace(/^\s+|\s+$/g, "");
+            },
+                o = Array.prototype.indexOf || function (t) {
+              for (var e = 0, n = this.length; e < n; e++) {
+                if (e in this && this[e] === t) return e;
+              }
+
+              return -1;
+            },
+                i = function i(t, e) {
+              this.name = t, this.code = DOMException[t], this.message = e;
+            },
+                u = function u(t, e) {
+              if ("" === e) throw new i("SYNTAX_ERR", "An invalid or illegal string was specified");
+              if (/\s/.test(e)) throw new i("INVALID_CHARACTER_ERR", "String contains an invalid character");
+              return o.call(t, e);
+            },
+                a = function a(t) {
+              for (var e = r.call(t.getAttribute("class") || ""), n = e ? e.split(/\s+/) : [], o = 0, i = n.length; o < i; o++) {
+                this.push(n[o]);
+              }
+
+              this._updateClassName = function () {
+                t.setAttribute("class", this.toString());
+              };
+            },
+                c = a.prototype = [],
+                s = function s() {
+              return new a(this);
+            };
+
+            if (i.prototype = Error.prototype, c.item = function (t) {
+              return this[t] || null;
+            }, c.contains = function (t) {
+              return -1 !== u(this, t += "");
+            }, c.add = function () {
+              var t,
+                  e = arguments,
+                  n = 0,
+                  r = e.length,
+                  o = !1;
+
+              do {
+                t = e[n] + "", -1 === u(this, t) && (this.push(t), o = !0);
+              } while (++n < r);
+
+              o && this._updateClassName();
+            }, c.remove = function () {
+              var t,
+                  e,
+                  n = arguments,
+                  r = 0,
+                  o = n.length,
+                  i = !1;
+
+              do {
+                for (t = n[r] + "", e = u(this, t); -1 !== e;) {
+                  this.splice(e, 1), i = !0, e = u(this, t);
+                }
+              } while (++r < o);
+
+              i && this._updateClassName();
+            }, c.toggle = function (t, e) {
+              t += "";
+              var n = this.contains(t),
+                  r = n ? !0 !== e && "remove" : !1 !== e && "add";
+              return r && this[r](t), !0 === e || !1 === e ? e : !n;
+            }, c.toString = function () {
+              return this.join(" ");
+            }, n.defineProperty) {
+              var f = {
+                get: s,
+                enumerable: !0,
+                configurable: !0
+              };
+
+              try {
+                n.defineProperty(e, "classList", f);
+              } catch (t) {
+                void 0 !== t.number && -2146823252 !== t.number || (f.enumerable = !1, n.defineProperty(e, "classList", f));
+              }
+            } else n.prototype.__defineGetter__ && e.__defineGetter__("classList", s);
+          }
+        }(window.self), function () {
+          var t = document.createElement("_");
+
+          if (t.classList.add("c1", "c2"), !t.classList.contains("c2")) {
+            var e = function e(t) {
+              var e = DOMTokenList.prototype[t];
+
+              DOMTokenList.prototype[t] = function (t) {
+                var n,
+                    r = arguments.length;
+
+                for (n = 0; n < r; n++) {
+                  t = arguments[n], e.call(this, t);
+                }
+              };
+            };
+
+            e("add"), e("remove");
+          }
+
+          if (t.classList.toggle("c3", !1), t.classList.contains("c3")) {
+            var n = DOMTokenList.prototype.toggle;
+
+            DOMTokenList.prototype.toggle = function (t, e) {
+              return 1 in arguments && !this.contains(t) == !e ? e : n.call(this, t);
+            };
+          }
+
+          t = null;
+        }());
+      }, {}],
+      2: [function (t, e, i) {
         "use strict";
 
-        var testElement = document.createElement("_");
-        testElement.classList.add("c1", "c2"); // Polyfill for IE 10/11 and Firefox <26, where classList.add and
-        // classList.remove exist but support only one argument at a time.
-
-        if (!testElement.classList.contains("c2")) {
-          var createMethod = function createMethod(method) {
-            var original = DOMTokenList.prototype[method];
-
-            DOMTokenList.prototype[method] = function (token) {
-              var i,
-                  len = arguments.length;
-
-              for (i = 0; i < len; i++) {
-                token = arguments[i];
-                original.call(this, token);
-              }
-            };
-          };
-
-          createMethod('add');
-          createMethod('remove');
-        }
-
-        testElement.classList.toggle("c3", false); // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
-        // support the second argument.
-
-        if (testElement.classList.contains("c3")) {
-          var _toggle = DOMTokenList.prototype.toggle;
-
-          DOMTokenList.prototype.toggle = function (token, force) {
-            if (1 in arguments && !this.contains(token) === !force) {
-              return force;
-            } else {
-              return _toggle.call(this, token);
-            }
-          };
-        }
-
-        testElement = null;
-      })();
-    }
-  }, {}],
-  2: [function (require, module, exports) {
-    'use strict';
-
-    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-      return _typeof2(obj);
-    } : function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-    /*!
-      * domready (c) Dustin Diaz 2014 - License MIT
-      */
-
-
-    !function (name, definition) {
-      if (typeof module != 'undefined') module.exports = definition();else if (typeof define == 'function' && _typeof(define.amd) == 'object') define(definition);else this[name] = definition();
-    }('domready', function () {
-      var fns = [],
-          _listener,
-          doc = document,
-          hack = doc.documentElement.doScroll,
-          domContentLoaded = 'DOMContentLoaded',
-          loaded = (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState);
-
-      if (!loaded) doc.addEventListener(domContentLoaded, _listener = function listener() {
-        doc.removeEventListener(domContentLoaded, _listener);
-        loaded = 1;
-
-        while (_listener = fns.shift()) {
-          _listener();
-        }
-      });
-      return function (fn) {
-        loaded ? setTimeout(fn, 0) : fns.push(fn);
-      };
-    });
-  }, {}],
-  3: [function (require, module, exports) {
-    'use strict'; // <3 Modernizr
-    // https://raw.githubusercontent.com/Modernizr/Modernizr/master/feature-detects/dom/dataset.js
-
-    function useNative() {
-      var elem = document.createElement('div');
-      elem.setAttribute('data-a-b', 'c');
-      return Boolean(elem.dataset && elem.dataset.aB === 'c');
-    }
-
-    function nativeDataset(element) {
-      return element.dataset;
-    }
-
-    module.exports = useNative() ? nativeDataset : function (element) {
-      var map = {};
-      var attributes = element.attributes;
-
-      function getter() {
-        return this.value;
-      }
-
-      function setter(name, value) {
-        if (typeof value === 'undefined') {
-          this.removeAttribute(name);
-        } else {
-          this.setAttribute(name, value);
-        }
-      }
-
-      for (var i = 0, j = attributes.length; i < j; i++) {
-        var attribute = attributes[i];
-
-        if (attribute) {
-          var name = attribute.name;
-
-          if (name.indexOf('data-') === 0) {
-            var prop = name.slice(5).replace(/-./g, function (u) {
-              return u.charAt(1).toUpperCase();
-            });
-            var value = attribute.value;
-            Object.defineProperty(map, prop, {
-              enumerable: true,
-              get: getter.bind({
-                value: value || ''
-              }),
-              set: setter.bind(element, name)
-            });
-          }
-        }
-      }
-
-      return map;
-    };
-  }, {}],
-  4: [function (require, module, exports) {
-    'use strict'; // element-closest | CC0-1.0 | github.com/jonathantneal/closest
-
-    (function (ElementProto) {
-      if (typeof ElementProto.matches !== 'function') {
-        ElementProto.matches = ElementProto.msMatchesSelector || ElementProto.mozMatchesSelector || ElementProto.webkitMatchesSelector || function matches(selector) {
-          var element = this;
-          var elements = (element.document || element.ownerDocument).querySelectorAll(selector);
-          var index = 0;
-
-          while (elements[index] && elements[index] !== element) {
-            ++index;
-          }
-
-          return Boolean(elements[index]);
+        var u = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+          return _typeof(t);
+        } : function (t) {
+          return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
         };
-      }
+        /*!
+          * domready (c) Dustin Diaz 2014 - License MIT
+          */
 
-      if (typeof ElementProto.closest !== 'function') {
-        ElementProto.closest = function closest(selector) {
-          var element = this;
+        !function (t, a) {
+          void 0 !== e ? e.exports = a() : "object" == u(n(3)) ? void 0 === (o = "function" == typeof (r = a) ? r.call(i, n, i, e) : r) || (e.exports = o) : this.domready = a();
+        }(0, function () {
+          var _t,
+              e = [],
+              n = document,
+              r = n.documentElement.doScroll,
+              o = (r ? /^loaded|^c/ : /^loaded|^i|^c/).test(n.readyState);
 
-          while (element && element.nodeType === 1) {
-            if (element.matches(selector)) {
-              return element;
+          return o || n.addEventListener("DOMContentLoaded", _t = function t() {
+            for (n.removeEventListener("DOMContentLoaded", _t), o = 1; _t = e.shift();) {
+              _t();
             }
+          }), function (t) {
+            o ? setTimeout(t, 0) : e.push(t);
+          };
+        });
+      }, {}],
+      3: [function (t, e, n) {
+        "use strict";
 
-            element = element.parentNode;
+        var r;
+        e.exports = ((r = document.createElement("div")).setAttribute("data-a-b", "c"), Boolean(r.dataset && "c" === r.dataset.aB) ? function (t) {
+          return t.dataset;
+        } : function (t) {
+          var e = {},
+              n = t.attributes;
+
+          function r() {
+            return this.value;
+          }
+
+          function o(t, e) {
+            void 0 === e ? this.removeAttribute(t) : this.setAttribute(t, e);
+          }
+
+          for (var i = 0, u = n.length; i < u; i++) {
+            var a = n[i];
+
+            if (a) {
+              var c = a.name;
+
+              if (0 === c.indexOf("data-")) {
+                var s = c.slice(5).replace(/-./g, function (t) {
+                  return t.charAt(1).toUpperCase();
+                }),
+                    f = a.value;
+                Object.defineProperty(e, s, {
+                  enumerable: !0,
+                  get: r.bind({
+                    value: f || ""
+                  }),
+                  set: o.bind(t, c)
+                });
+              }
+            }
+          }
+
+          return e;
+        });
+      }, {}],
+      4: [function (t, e, n) {
+        "use strict";
+
+        var r;
+        "function" != typeof (r = window.Element.prototype).matches && (r.matches = r.msMatchesSelector || r.mozMatchesSelector || r.webkitMatchesSelector || function (t) {
+          for (var e = (this.document || this.ownerDocument).querySelectorAll(t), n = 0; e[n] && e[n] !== this;) {
+            ++n;
+          }
+
+          return Boolean(e[n]);
+        }), "function" != typeof r.closest && (r.closest = function (t) {
+          for (var e = this; e && 1 === e.nodeType;) {
+            if (e.matches(t)) return e;
+            e = e.parentNode;
           }
 
           return null;
-        };
-      }
-    })(window.Element.prototype);
-  }, {}],
-  5: [function (require, module, exports) {
-    'use strict';
-    /* global define, KeyboardEvent, module */
+        });
+      }, {}],
+      5: [function (t, e, i) {
+        "use strict";
 
-    (function () {
-      var keyboardeventKeyPolyfill = {
-        polyfill: polyfill,
-        keys: {
-          3: 'Cancel',
-          6: 'Help',
-          8: 'Backspace',
-          9: 'Tab',
-          12: 'Clear',
-          13: 'Enter',
-          16: 'Shift',
-          17: 'Control',
-          18: 'Alt',
-          19: 'Pause',
-          20: 'CapsLock',
-          27: 'Escape',
-          28: 'Convert',
-          29: 'NonConvert',
-          30: 'Accept',
-          31: 'ModeChange',
-          32: ' ',
-          33: 'PageUp',
-          34: 'PageDown',
-          35: 'End',
-          36: 'Home',
-          37: 'ArrowLeft',
-          38: 'ArrowUp',
-          39: 'ArrowRight',
-          40: 'ArrowDown',
-          41: 'Select',
-          42: 'Print',
-          43: 'Execute',
-          44: 'PrintScreen',
-          45: 'Insert',
-          46: 'Delete',
-          48: ['0', ')'],
-          49: ['1', '!'],
-          50: ['2', '@'],
-          51: ['3', '#'],
-          52: ['4', '$'],
-          53: ['5', '%'],
-          54: ['6', '^'],
-          55: ['7', '&'],
-          56: ['8', '*'],
-          57: ['9', '('],
-          91: 'OS',
-          93: 'ContextMenu',
-          144: 'NumLock',
-          145: 'ScrollLock',
-          181: 'VolumeMute',
-          182: 'VolumeDown',
-          183: 'VolumeUp',
-          186: [';', ':'],
-          187: ['=', '+'],
-          188: [',', '<'],
-          189: ['-', '_'],
-          190: ['.', '>'],
-          191: ['/', '?'],
-          192: ['`', '~'],
-          219: ['[', '{'],
-          220: ['\\', '|'],
-          221: [']', '}'],
-          222: ["'", '"'],
-          224: 'Meta',
-          225: 'AltGraph',
-          246: 'Attn',
-          247: 'CrSel',
-          248: 'ExSel',
-          249: 'EraseEof',
-          250: 'Play',
-          251: 'ZoomOut'
-        }
-      }; // Function keys (F1-24).
+        !function () {
+          var t,
+              u = {
+            polyfill: function polyfill() {
+              if (!("KeyboardEvent" in window) || "key" in KeyboardEvent.prototype) return !1;
+              var t = {
+                get: function get(t) {
+                  var e = u.keys[this.which || this.keyCode];
+                  return Array.isArray(e) && (e = e[+this.shiftKey]), e;
+                }
+              };
+              return Object.defineProperty(KeyboardEvent.prototype, "key", t), t;
+            },
+            keys: {
+              3: "Cancel",
+              6: "Help",
+              8: "Backspace",
+              9: "Tab",
+              12: "Clear",
+              13: "Enter",
+              16: "Shift",
+              17: "Control",
+              18: "Alt",
+              19: "Pause",
+              20: "CapsLock",
+              27: "Escape",
+              28: "Convert",
+              29: "NonConvert",
+              30: "Accept",
+              31: "ModeChange",
+              32: " ",
+              33: "PageUp",
+              34: "PageDown",
+              35: "End",
+              36: "Home",
+              37: "ArrowLeft",
+              38: "ArrowUp",
+              39: "ArrowRight",
+              40: "ArrowDown",
+              41: "Select",
+              42: "Print",
+              43: "Execute",
+              44: "PrintScreen",
+              45: "Insert",
+              46: "Delete",
+              48: ["0", ")"],
+              49: ["1", "!"],
+              50: ["2", "@"],
+              51: ["3", "#"],
+              52: ["4", "$"],
+              53: ["5", "%"],
+              54: ["6", "^"],
+              55: ["7", "&"],
+              56: ["8", "*"],
+              57: ["9", "("],
+              91: "OS",
+              93: "ContextMenu",
+              144: "NumLock",
+              145: "ScrollLock",
+              181: "VolumeMute",
+              182: "VolumeDown",
+              183: "VolumeUp",
+              186: [";", ":"],
+              187: ["=", "+"],
+              188: [",", "<"],
+              189: ["-", "_"],
+              190: [".", ">"],
+              191: ["/", "?"],
+              192: ["`", "~"],
+              219: ["[", "{"],
+              220: ["\\", "|"],
+              221: ["]", "}"],
+              222: ["'", '"'],
+              224: "Meta",
+              225: "AltGraph",
+              246: "Attn",
+              247: "CrSel",
+              248: "ExSel",
+              249: "EraseEof",
+              250: "Play",
+              251: "ZoomOut"
+            }
+          };
 
-      var i;
+          for (t = 1; t < 25; t++) {
+            u.keys[111 + t] = "F" + t;
+          }
 
-      for (i = 1; i < 25; i++) {
-        keyboardeventKeyPolyfill.keys[111 + i] = 'F' + i;
-      } // Printable ASCII characters.
+          var a = "";
 
+          for (t = 65; t < 91; t++) {
+            a = String.fromCharCode(t), u.keys[t] = [a.toLowerCase(), a.toUpperCase()];
+          }
 
-      var letter = '';
+          void 0 === (o = "function" == typeof (r = u) ? r.call(i, n, i, e) : r) || (e.exports = o);
+        }();
+      }, {}],
+      6: [function (e, n, r) {
+        (function (t) {
+          "use strict";
 
-      for (i = 65; i < 91; i++) {
-        letter = String.fromCharCode(i);
-        keyboardeventKeyPolyfill.keys[i] = [letter.toLowerCase(), letter.toUpperCase()];
-      }
+          var e = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+            return _typeof(t);
+          } : function (t) {
+            return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
+          },
+              r = "Expected a function",
+              o = NaN,
+              i = "[object Symbol]",
+              u = /^\s+|\s+$/g,
+              a = /^[-+]0x[0-9a-f]+$/i,
+              c = /^0b[01]+$/i,
+              s = /^0o[0-7]+$/i,
+              f = parseInt,
+              l = "object" == (void 0 === t ? "undefined" : e(t)) && t && t.Object === Object && t,
+              d = "object" == ("undefined" == typeof self ? "undefined" : e(self)) && self && self.Object === Object && self,
+              p = l || d || Function("return this")(),
+              v = Object.prototype.toString,
+              b = Math.max,
+              h = Math.min,
+              y = function y() {
+            return p.Date.now();
+          };
 
-      function polyfill() {
-        if (!('KeyboardEvent' in window) || 'key' in KeyboardEvent.prototype) {
-          return false;
-        } // Polyfill `key` on `KeyboardEvent`.
+          function g(t) {
+            var n = void 0 === t ? "undefined" : e(t);
+            return !!t && ("object" == n || "function" == n);
+          }
 
+          function m(t) {
+            return "symbol" == (void 0 === t ? "undefined" : e(t)) || function (t) {
+              return !!t && "object" == (void 0 === t ? "undefined" : e(t));
+            }(t) && v.call(t) == i;
+          }
 
-        var proto = {
-          get: function get(x) {
-            var key = keyboardeventKeyPolyfill.keys[this.which || this.keyCode];
+          function w(t) {
+            if ("number" == typeof t) return t;
+            if (m(t)) return o;
 
-            if (Array.isArray(key)) {
-              key = key[+this.shiftKey];
+            if (g(t)) {
+              var e = "function" == typeof t.valueOf ? t.valueOf() : t;
+              t = g(e) ? e + "" : e;
             }
 
-            return key;
-          }
-        };
-        Object.defineProperty(KeyboardEvent.prototype, 'key', proto);
-        return proto;
-      }
-
-      if (typeof define === 'function' && define.amd) {
-        define('keyboardevent-key-polyfill', keyboardeventKeyPolyfill);
-      } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-        module.exports = keyboardeventKeyPolyfill;
-      } else if (window) {
-        window.keyboardeventKeyPolyfill = keyboardeventKeyPolyfill;
-      }
-    })();
-  }, {}],
-  6: [function (require, module, exports) {
-    (function (global) {
-      'use strict';
-
-      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-        return _typeof2(obj);
-      } : function (obj) {
-        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-      };
-      /**
-       * lodash (Custom Build) <https://lodash.com/>
-       * Build: `lodash modularize exports="npm" -o ./`
-       * Copyright jQuery Foundation and other contributors <https://jquery.org/>
-       * Released under MIT license <https://lodash.com/license>
-       * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-       * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-       */
-
-      /** Used as the `TypeError` message for "Functions" methods. */
-
-
-      var FUNC_ERROR_TEXT = 'Expected a function';
-      /** Used as references for various `Number` constants. */
-
-      var NAN = 0 / 0;
-      /** `Object#toString` result references. */
-
-      var symbolTag = '[object Symbol]';
-      /** Used to match leading and trailing whitespace. */
-
-      var reTrim = /^\s+|\s+$/g;
-      /** Used to detect bad signed hexadecimal string values. */
-
-      var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-      /** Used to detect binary string values. */
-
-      var reIsBinary = /^0b[01]+$/i;
-      /** Used to detect octal string values. */
-
-      var reIsOctal = /^0o[0-7]+$/i;
-      /** Built-in method references without a dependency on `root`. */
-
-      var freeParseInt = parseInt;
-      /** Detect free variable `global` from Node.js. */
-
-      var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
-      /** Detect free variable `self`. */
-
-      var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
-      /** Used as a reference to the global object. */
-
-      var root = freeGlobal || freeSelf || Function('return this')();
-      /** Used for built-in method references. */
-
-      var objectProto = Object.prototype;
-      /**
-       * Used to resolve the
-       * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-       * of values.
-       */
-
-      var objectToString = objectProto.toString;
-      /* Built-in method references for those with the same name as other `lodash` methods. */
-
-      var nativeMax = Math.max,
-          nativeMin = Math.min;
-      /**
-       * Gets the timestamp of the number of milliseconds that have elapsed since
-       * the Unix epoch (1 January 1970 00:00:00 UTC).
-       *
-       * @static
-       * @memberOf _
-       * @since 2.4.0
-       * @category Date
-       * @returns {number} Returns the timestamp.
-       * @example
-       *
-       * _.defer(function(stamp) {
-       *   console.log(_.now() - stamp);
-       * }, _.now());
-       * // => Logs the number of milliseconds it took for the deferred invocation.
-       */
-
-      var now = function now() {
-        return root.Date.now();
-      };
-      /**
-       * Creates a debounced function that delays invoking `func` until after `wait`
-       * milliseconds have elapsed since the last time the debounced function was
-       * invoked. The debounced function comes with a `cancel` method to cancel
-       * delayed `func` invocations and a `flush` method to immediately invoke them.
-       * Provide `options` to indicate whether `func` should be invoked on the
-       * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
-       * with the last arguments provided to the debounced function. Subsequent
-       * calls to the debounced function return the result of the last `func`
-       * invocation.
-       *
-       * **Note:** If `leading` and `trailing` options are `true`, `func` is
-       * invoked on the trailing edge of the timeout only if the debounced function
-       * is invoked more than once during the `wait` timeout.
-       *
-       * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
-       * until to the next tick, similar to `setTimeout` with a timeout of `0`.
-       *
-       * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
-       * for details over the differences between `_.debounce` and `_.throttle`.
-       *
-       * @static
-       * @memberOf _
-       * @since 0.1.0
-       * @category Function
-       * @param {Function} func The function to debounce.
-       * @param {number} [wait=0] The number of milliseconds to delay.
-       * @param {Object} [options={}] The options object.
-       * @param {boolean} [options.leading=false]
-       *  Specify invoking on the leading edge of the timeout.
-       * @param {number} [options.maxWait]
-       *  The maximum time `func` is allowed to be delayed before it's invoked.
-       * @param {boolean} [options.trailing=true]
-       *  Specify invoking on the trailing edge of the timeout.
-       * @returns {Function} Returns the new debounced function.
-       * @example
-       *
-       * // Avoid costly calculations while the window size is in flux.
-       * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
-       *
-       * // Invoke `sendMail` when clicked, debouncing subsequent calls.
-       * jQuery(element).on('click', _.debounce(sendMail, 300, {
-       *   'leading': true,
-       *   'trailing': false
-       * }));
-       *
-       * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
-       * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
-       * var source = new EventSource('/stream');
-       * jQuery(source).on('message', debounced);
-       *
-       * // Cancel the trailing debounced invocation.
-       * jQuery(window).on('popstate', debounced.cancel);
-       */
-
-
-      function debounce(func, wait, options) {
-        var lastArgs,
-            lastThis,
-            maxWait,
-            result,
-            timerId,
-            lastCallTime,
-            lastInvokeTime = 0,
-            leading = false,
-            maxing = false,
-            trailing = true;
-
-        if (typeof func != 'function') {
-          throw new TypeError(FUNC_ERROR_TEXT);
-        }
-
-        wait = toNumber(wait) || 0;
-
-        if (isObject(options)) {
-          leading = !!options.leading;
-          maxing = 'maxWait' in options;
-          maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-          trailing = 'trailing' in options ? !!options.trailing : trailing;
-        }
-
-        function invokeFunc(time) {
-          var args = lastArgs,
-              thisArg = lastThis;
-          lastArgs = lastThis = undefined;
-          lastInvokeTime = time;
-          result = func.apply(thisArg, args);
-          return result;
-        }
-
-        function leadingEdge(time) {
-          // Reset any `maxWait` timer.
-          lastInvokeTime = time; // Start the timer for the trailing edge.
-
-          timerId = setTimeout(timerExpired, wait); // Invoke the leading edge.
-
-          return leading ? invokeFunc(time) : result;
-        }
-
-        function remainingWait(time) {
-          var timeSinceLastCall = time - lastCallTime,
-              timeSinceLastInvoke = time - lastInvokeTime,
-              result = wait - timeSinceLastCall;
-          return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
-        }
-
-        function shouldInvoke(time) {
-          var timeSinceLastCall = time - lastCallTime,
-              timeSinceLastInvoke = time - lastInvokeTime; // Either this is the first call, activity has stopped and we're at the
-          // trailing edge, the system time has gone backwards and we're treating
-          // it as the trailing edge, or we've hit the `maxWait` limit.
-
-          return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
-        }
-
-        function timerExpired() {
-          var time = now();
-
-          if (shouldInvoke(time)) {
-            return trailingEdge(time);
-          } // Restart the timer.
-
-
-          timerId = setTimeout(timerExpired, remainingWait(time));
-        }
-
-        function trailingEdge(time) {
-          timerId = undefined; // Only invoke if we have `lastArgs` which means `func` has been
-          // debounced at least once.
-
-          if (trailing && lastArgs) {
-            return invokeFunc(time);
+            if ("string" != typeof t) return 0 === t ? t : +t;
+            t = t.replace(u, "");
+            var n = c.test(t);
+            return n || s.test(t) ? f(t.slice(2), n ? 2 : 8) : a.test(t) ? o : +t;
           }
 
-          lastArgs = lastThis = undefined;
-          return result;
-        }
+          n.exports = function (t, e, n) {
+            var o,
+                i,
+                u,
+                a,
+                c,
+                s,
+                f = 0,
+                l = !1,
+                d = !1,
+                p = !0;
+            if ("function" != typeof t) throw new TypeError(r);
 
-        function cancel() {
-          if (timerId !== undefined) {
-            clearTimeout(timerId);
-          }
-
-          lastInvokeTime = 0;
-          lastArgs = lastCallTime = lastThis = timerId = undefined;
-        }
-
-        function flush() {
-          return timerId === undefined ? result : trailingEdge(now());
-        }
-
-        function debounced() {
-          var time = now(),
-              isInvoking = shouldInvoke(time);
-          lastArgs = arguments;
-          lastThis = this;
-          lastCallTime = time;
-
-          if (isInvoking) {
-            if (timerId === undefined) {
-              return leadingEdge(lastCallTime);
+            function v(e) {
+              var n = o,
+                  r = i;
+              return o = i = void 0, f = e, a = t.apply(r, n);
             }
 
-            if (maxing) {
-              // Handle invocations in a tight loop.
-              timerId = setTimeout(timerExpired, wait);
-              return invokeFunc(lastCallTime);
+            function m(t) {
+              var n = t - s;
+              return void 0 === s || n >= e || n < 0 || d && t - f >= u;
             }
-          }
 
-          if (timerId === undefined) {
-            timerId = setTimeout(timerExpired, wait);
-          }
-
-          return result;
-        }
-
-        debounced.cancel = cancel;
-        debounced.flush = flush;
-        return debounced;
-      }
-      /**
-       * Checks if `value` is the
-       * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
-       * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
-       *
-       * @static
-       * @memberOf _
-       * @since 0.1.0
-       * @category Lang
-       * @param {*} value The value to check.
-       * @returns {boolean} Returns `true` if `value` is an object, else `false`.
-       * @example
-       *
-       * _.isObject({});
-       * // => true
-       *
-       * _.isObject([1, 2, 3]);
-       * // => true
-       *
-       * _.isObject(_.noop);
-       * // => true
-       *
-       * _.isObject(null);
-       * // => false
-       */
-
-
-      function isObject(value) {
-        var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
-        return !!value && (type == 'object' || type == 'function');
-      }
-      /**
-       * Checks if `value` is object-like. A value is object-like if it's not `null`
-       * and has a `typeof` result of "object".
-       *
-       * @static
-       * @memberOf _
-       * @since 4.0.0
-       * @category Lang
-       * @param {*} value The value to check.
-       * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-       * @example
-       *
-       * _.isObjectLike({});
-       * // => true
-       *
-       * _.isObjectLike([1, 2, 3]);
-       * // => true
-       *
-       * _.isObjectLike(_.noop);
-       * // => false
-       *
-       * _.isObjectLike(null);
-       * // => false
-       */
-
-
-      function isObjectLike(value) {
-        return !!value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
-      }
-      /**
-       * Checks if `value` is classified as a `Symbol` primitive or object.
-       *
-       * @static
-       * @memberOf _
-       * @since 4.0.0
-       * @category Lang
-       * @param {*} value The value to check.
-       * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-       * @example
-       *
-       * _.isSymbol(Symbol.iterator);
-       * // => true
-       *
-       * _.isSymbol('abc');
-       * // => false
-       */
-
-
-      function isSymbol(value) {
-        return (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'symbol' || isObjectLike(value) && objectToString.call(value) == symbolTag;
-      }
-      /**
-       * Converts `value` to a number.
-       *
-       * @static
-       * @memberOf _
-       * @since 4.0.0
-       * @category Lang
-       * @param {*} value The value to process.
-       * @returns {number} Returns the number.
-       * @example
-       *
-       * _.toNumber(3.2);
-       * // => 3.2
-       *
-       * _.toNumber(Number.MIN_VALUE);
-       * // => 5e-324
-       *
-       * _.toNumber(Infinity);
-       * // => Infinity
-       *
-       * _.toNumber('3.2');
-       * // => 3.2
-       */
-
-
-      function toNumber(value) {
-        if (typeof value == 'number') {
-          return value;
-        }
-
-        if (isSymbol(value)) {
-          return NAN;
-        }
-
-        if (isObject(value)) {
-          var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-          value = isObject(other) ? other + '' : other;
-        }
-
-        if (typeof value != 'string') {
-          return value === 0 ? value : +value;
-        }
-
-        value = value.replace(reTrim, '');
-        var isBinary = reIsBinary.test(value);
-        return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
-      }
-
-      module.exports = debounce;
-    }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
-  }, {}],
-  7: [function (require, module, exports) {
-    /*
-    object-assign
-    (c) Sindre Sorhus
-    @license MIT
-    */
-    'use strict';
-    /* eslint-disable no-unused-vars */
-
-    var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-    var hasOwnProperty = Object.prototype.hasOwnProperty;
-    var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-    function toObject(val) {
-      if (val === null || val === undefined) {
-        throw new TypeError('Object.assign cannot be called with null or undefined');
-      }
-
-      return Object(val);
-    }
-
-    function shouldUseNative() {
-      try {
-        if (!Object.assign) {
-          return false;
-        } // Detect buggy property enumeration order in older V8 versions.
-        // https://bugs.chromium.org/p/v8/issues/detail?id=4118
-
-
-        var test1 = new String('abc'); // eslint-disable-line no-new-wrappers
-
-        test1[5] = 'de';
-
-        if (Object.getOwnPropertyNames(test1)[0] === '5') {
-          return false;
-        } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-
-
-        var test2 = {};
-
-        for (var i = 0; i < 10; i++) {
-          test2['_' + String.fromCharCode(i)] = i;
-        }
-
-        var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-          return test2[n];
-        });
-
-        if (order2.join('') !== '0123456789') {
-          return false;
-        } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
-
-
-        var test3 = {};
-        'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-          test3[letter] = letter;
-        });
-
-        if (Object.keys(Object.assign({}, test3)).join('') !== 'abcdefghijklmnopqrst') {
-          return false;
-        }
-
-        return true;
-      } catch (err) {
-        // We don't expect any of the above to throw, but better to be safe.
-        return false;
-      }
-    }
-
-    module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-      var from;
-      var to = toObject(target);
-      var symbols;
-
-      for (var s = 1; s < arguments.length; s++) {
-        from = Object(arguments[s]);
-
-        for (var key in from) {
-          if (hasOwnProperty.call(from, key)) {
-            to[key] = from[key];
-          }
-        }
-
-        if (getOwnPropertySymbols) {
-          symbols = getOwnPropertySymbols(from);
-
-          for (var i = 0; i < symbols.length; i++) {
-            if (propIsEnumerable.call(from, symbols[i])) {
-              to[symbols[i]] = from[symbols[i]];
+            function x() {
+              var t = y();
+              if (m(t)) return E(t);
+              c = setTimeout(x, function (t) {
+                var n = e - (t - s);
+                return d ? h(n, u - (t - f)) : n;
+              }(t));
             }
-          }
-        }
-      }
 
-      return to;
-    };
-  }, {}],
-  8: [function (require, module, exports) {
-    'use strict';
+            function E(t) {
+              return c = void 0, p && o ? v(t) : (o = i = void 0, a);
+            }
 
-    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-      return _typeof2(obj);
-    } : function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
+            function A() {
+              var t = y(),
+                  n = m(t);
 
-    var assign = require('object-assign');
+              if (o = arguments, i = this, s = t, n) {
+                if (void 0 === c) return function (t) {
+                  return f = t, c = setTimeout(x, e), l ? v(t) : a;
+                }(s);
+                if (d) return c = setTimeout(x, e), v(s);
+              }
 
-    var delegate = require('../delegate');
+              return void 0 === c && (c = setTimeout(x, e)), a;
+            }
 
-    var delegateAll = require('../delegateAll');
+            return e = w(e) || 0, g(n) && (l = !!n.leading, u = (d = "maxWait" in n) ? b(w(n.maxWait) || 0, e) : u, p = "trailing" in n ? !!n.trailing : p), A.cancel = function () {
+              void 0 !== c && clearTimeout(c), f = 0, o = s = i = c = void 0;
+            }, A.flush = function () {
+              return void 0 === c ? a : E(y());
+            }, A;
+          };
+        }).call(this, void 0 !== t ? t : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
+      }, {}],
+      7: [function (t, e, n) {
+        /*
+        object-assign
+        (c) Sindre Sorhus
+        @license MIT
+        */
+        "use strict";
 
-    var DELEGATE_PATTERN = /^(.+):delegate\((.+)\)$/;
-    var SPACE = ' ';
+        var r = Object.getOwnPropertySymbols,
+            o = Object.prototype.hasOwnProperty,
+            i = Object.prototype.propertyIsEnumerable;
 
-    var getListeners = function getListeners(type, handler) {
-      var match = type.match(DELEGATE_PATTERN);
-      var selector;
-
-      if (match) {
-        type = match[1];
-        selector = match[2];
-      }
-
-      var options;
-
-      if ((typeof handler === 'undefined' ? 'undefined' : _typeof(handler)) === 'object') {
-        options = {
-          capture: popKey(handler, 'capture'),
-          passive: popKey(handler, 'passive')
-        };
-      }
-
-      var listener = {
-        selector: selector,
-        delegate: (typeof handler === 'undefined' ? 'undefined' : _typeof(handler)) === 'object' ? delegateAll(handler) : selector ? delegate(selector, handler) : handler,
-        options: options
-      };
-
-      if (type.indexOf(SPACE) > -1) {
-        return type.split(SPACE).map(function (_type) {
-          return assign({
-            type: _type
-          }, listener);
-        });
-      } else {
-        listener.type = type;
-        return [listener];
-      }
-    };
-
-    var popKey = function popKey(obj, key) {
-      var value = obj[key];
-      delete obj[key];
-      return value;
-    };
-
-    module.exports = function behavior(events, props) {
-      var listeners = Object.keys(events).reduce(function (memo, type) {
-        var listeners = getListeners(type, events[type]);
-        return memo.concat(listeners);
-      }, []);
-      return assign({
-        add: function addBehavior(element) {
-          listeners.forEach(function (listener) {
-            element.addEventListener(listener.type, listener.delegate, listener.options);
-          });
-        },
-        remove: function removeBehavior(element) {
-          listeners.forEach(function (listener) {
-            element.removeEventListener(listener.type, listener.delegate, listener.options);
-          });
-        }
-      }, props);
-    };
-  }, {
-    "../delegate": 10,
-    "../delegateAll": 11,
-    "object-assign": 7
-  }],
-  9: [function (require, module, exports) {
-    "use strict";
-
-    module.exports = function compose(functions) {
-      return function (e) {
-        return functions.some(function (fn) {
-          return fn.call(this, e) === false;
-        }, this);
-      };
-    };
-  }, {}],
-  10: [function (require, module, exports) {
-    'use strict'; // polyfill Element.prototype.closest
-
-    require('element-closest');
-
-    module.exports = function delegate(selector, fn) {
-      return function delegation(event) {
-        var target = event.target.closest(selector);
-
-        if (target) {
-          return fn.call(target, event);
-        }
-      };
-    };
-  }, {
-    "element-closest": 4
-  }],
-  11: [function (require, module, exports) {
-    'use strict';
-
-    var delegate = require('../delegate');
-
-    var compose = require('../compose');
-
-    var SPLAT = '*';
-
-    module.exports = function delegateAll(selectors) {
-      var keys = Object.keys(selectors); // XXX optimization: if there is only one handler and it applies to
-      // all elements (the "*" CSS selector), then just return that
-      // handler
-
-      if (keys.length === 1 && keys[0] === SPLAT) {
-        return selectors[SPLAT];
-      }
-
-      var delegates = keys.reduce(function (memo, selector) {
-        memo.push(delegate(selector, selectors[selector]));
-        return memo;
-      }, []);
-      return compose(delegates);
-    };
-  }, {
-    "../compose": 9,
-    "../delegate": 10
-  }],
-  12: [function (require, module, exports) {
-    "use strict";
-
-    module.exports = function ignore(element, fn) {
-      return function ignorance(e) {
-        if (element !== e.target && !element.contains(e.target)) {
-          return fn.call(this, e);
-        }
-      };
-    };
-  }, {}],
-  13: [function (require, module, exports) {
-    'use strict';
-
-    module.exports = {
-      behavior: require('./behavior'),
-      delegate: require('./delegate'),
-      delegateAll: require('./delegateAll'),
-      ignore: require('./ignore'),
-      keymap: require('./keymap')
-    };
-  }, {
-    "./behavior": 8,
-    "./delegate": 10,
-    "./delegateAll": 11,
-    "./ignore": 12,
-    "./keymap": 14
-  }],
-  14: [function (require, module, exports) {
-    'use strict';
-
-    require('keyboardevent-key-polyfill'); // these are the only relevant modifiers supported on all platforms,
-    // according to MDN:
-    // <https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState>
-
-
-    var MODIFIERS = {
-      'Alt': 'altKey',
-      'Control': 'ctrlKey',
-      'Ctrl': 'ctrlKey',
-      'Shift': 'shiftKey'
-    };
-    var MODIFIER_SEPARATOR = '+';
-
-    var getEventKey = function getEventKey(event, hasModifiers) {
-      var key = event.key;
-
-      if (hasModifiers) {
-        for (var modifier in MODIFIERS) {
-          if (event[MODIFIERS[modifier]] === true) {
-            key = [modifier, key].join(MODIFIER_SEPARATOR);
-          }
-        }
-      }
-
-      return key;
-    };
-
-    module.exports = function keymap(keys) {
-      var hasModifiers = Object.keys(keys).some(function (key) {
-        return key.indexOf(MODIFIER_SEPARATOR) > -1;
-      });
-      return function (event) {
-        var key = getEventKey(event, hasModifiers);
-        return [key, key.toLowerCase()].reduce(function (result, _key) {
-          if (_key in keys) {
-            result = keys[key].call(this, event);
-          }
-
-          return result;
-        }, undefined);
-      };
-    };
-
-    module.exports.MODIFIERS = MODIFIERS;
-  }, {
-    "keyboardevent-key-polyfill": 5
-  }],
-  15: [function (require, module, exports) {
-    "use strict";
-
-    module.exports = function once(listener, options) {
-      var wrapped = function wrappedOnce(e) {
-        e.currentTarget.removeEventListener(e.type, wrapped, options);
-        return listener.call(this, e);
-      };
-
-      return wrapped;
-    };
-  }, {}],
-  16: [function (require, module, exports) {
-    'use strict';
-
-    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-      return _typeof2(obj);
-    } : function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-
-    var RE_TRIM = /(^\s+)|(\s+$)/g;
-    var RE_SPLIT = /\s+/;
-    var trim = String.prototype.trim ? function (str) {
-      return str.trim();
-    } : function (str) {
-      return str.replace(RE_TRIM, '');
-    };
-
-    var queryById = function queryById(id) {
-      return this.querySelector('[id="' + id.replace(/"/g, '\\"') + '"]');
-    };
-
-    module.exports = function resolveIds(ids, doc) {
-      if (typeof ids !== 'string') {
-        throw new Error('Expected a string but got ' + (typeof ids === 'undefined' ? 'undefined' : _typeof(ids)));
-      }
-
-      if (!doc) {
-        doc = window.document;
-      }
-
-      var getElementById = doc.getElementById ? doc.getElementById.bind(doc) : queryById.bind(doc);
-      ids = trim(ids).split(RE_SPLIT); // XXX we can short-circuit here because trimming and splitting a
-      // string of just whitespace produces an array containing a single,
-      // empty string
-
-      if (ids.length === 1 && ids[0] === '') {
-        return [];
-      }
-
-      return ids.map(function (id) {
-        var el = getElementById(id);
-
-        if (!el) {
-          throw new Error('no element with id: "' + id + '"');
+        function u(t) {
+          if (null == t) throw new TypeError("Object.assign cannot be called with null or undefined");
+          return Object(t);
         }
 
-        return el;
-      });
-    };
-  }, {}],
-  17: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var select = require('../utils/select');
-
-    var behavior = require('../utils/behavior');
-
-    var toggle = require('../utils/toggle');
-
-    var isElementInViewport = require('../utils/is-in-viewport');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var ACCORDION = '.' + PREFIX + '-accordion, .' + PREFIX + '-accordion--bordered';
-    var BUTTON = '.' + PREFIX + '-accordion__button[aria-controls]';
-    var EXPANDED = 'aria-expanded';
-    var MULTISELECTABLE = 'aria-multiselectable';
-    /**
-     * Get an Array of button elements belonging directly to the given
-     * accordion element.
-     * @param {HTMLElement} accordion
-     * @return {array<HTMLButtonElement>}
-     */
-
-    var getAccordionButtons = function getAccordionButtons(accordion) {
-      var buttons = select(BUTTON, accordion);
-      return buttons.filter(function (button) {
-        return button.closest(ACCORDION) === accordion;
-      });
-    };
-    /**
-     * Toggle a button's "pressed" state, optionally providing a target
-     * state.
-     *
-     * @param {HTMLButtonElement} button
-     * @param {boolean?} expanded If no state is provided, the current
-     * state will be toggled (from false to true, and vice-versa).
-     * @return {boolean} the resulting state
-     */
-
-
-    var toggleButton = function toggleButton(button, expanded) {
-      var accordion = button.closest(ACCORDION);
-      var safeExpanded = expanded;
-
-      if (!accordion) {
-        throw new Error(BUTTON + ' is missing outer ' + ACCORDION);
-      }
-
-      safeExpanded = toggle(button, expanded); // XXX multiselectable is opt-in, to preserve legacy behavior
-
-      var multiselectable = accordion.getAttribute(MULTISELECTABLE) === 'true';
-
-      if (safeExpanded && !multiselectable) {
-        getAccordionButtons(accordion).forEach(function (other) {
-          if (other !== button) {
-            toggle(other, false);
-          }
-        });
-      }
-    };
-    /**
-     * @param {HTMLButtonElement} button
-     * @return {boolean} true
-     */
-
-
-    var showButton = function showButton(button) {
-      return toggleButton(button, true);
-    };
-    /**
-     * @param {HTMLButtonElement} button
-     * @return {boolean} false
-     */
-
-
-    var hideButton = function hideButton(button) {
-      return toggleButton(button, false);
-    };
-
-    var accordion = behavior(_defineProperty({}, CLICK, _defineProperty({}, BUTTON, function (event) {
-      event.preventDefault();
-      toggleButton(this);
-
-      if (this.getAttribute(EXPANDED) === 'true') {
-        // We were just expanded, but if another accordion was also just
-        // collapsed, we may no longer be in the viewport. This ensures
-        // that we are still visible, so the user isn't confused.
-        if (!isElementInViewport(this)) this.scrollIntoView();
-      }
-    })), {
-      init: function init(root) {
-        select(BUTTON, root).forEach(function (button) {
-          var expanded = button.getAttribute(EXPANDED) === 'true';
-          toggleButton(button, expanded);
-        });
-      },
-      ACCORDION: ACCORDION,
-      BUTTON: BUTTON,
-      show: showButton,
-      hide: hideButton,
-      toggle: toggleButton,
-      getButtons: getAccordionButtons
-    });
-    module.exports = accordion;
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32,
-    "../utils/is-in-viewport": 34,
-    "../utils/select": 35,
-    "../utils/toggle": 38
-  }],
-  18: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var behavior = require('../utils/behavior');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var HEADER = '.' + PREFIX + '-banner__header';
-    var EXPANDED_CLASS = PREFIX + '-banner__header--expanded';
-
-    var toggleBanner = function toggleEl(event) {
-      event.preventDefault();
-      this.closest(HEADER).classList.toggle(EXPANDED_CLASS);
-    };
-
-    module.exports = behavior(_defineProperty({}, CLICK, _defineProperty({}, HEADER + ' [aria-controls]', toggleBanner)));
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32
-  }],
-  19: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var debounce = require('lodash.debounce');
-
-    var behavior = require('../utils/behavior');
-
-    var select = require('../utils/select');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var HIDDEN = 'hidden';
-    var SCOPE = '.' + PREFIX + '-footer--big';
-    var NAV = SCOPE + ' nav';
-    var BUTTON = NAV + ' .' + PREFIX + '-footer__primary-link';
-    var COLLAPSIBLE = '.' + PREFIX + '-footer__primary-content--collapsible';
-    var HIDE_MAX_WIDTH = 480;
-    var DEBOUNCE_RATE = 180;
-
-    function showPanel() {
-      if (window.innerWidth < HIDE_MAX_WIDTH) {
-        var collapseEl = this.closest(COLLAPSIBLE);
-        collapseEl.classList.toggle(HIDDEN); // NB: this *should* always succeed because the button
-        // selector is scoped to ".{prefix}-footer-big nav"
-
-        var collapsibleEls = select(COLLAPSIBLE, collapseEl.closest(NAV));
-        collapsibleEls.forEach(function (el) {
-          if (el !== collapseEl) {
-            el.classList.add(HIDDEN);
-          }
-        });
-      }
-    }
-
-    var lastInnerWidth = void 0;
-    var resize = debounce(function () {
-      if (lastInnerWidth === window.innerWidth) return;
-      lastInnerWidth = window.innerWidth;
-      var hidden = window.innerWidth < HIDE_MAX_WIDTH;
-      select(COLLAPSIBLE).forEach(function (list) {
-        return list.classList.toggle(HIDDEN, hidden);
-      });
-    }, DEBOUNCE_RATE);
-    module.exports = behavior(_defineProperty({}, CLICK, _defineProperty({}, BUTTON, showPanel)), {
-      // export for use elsewhere
-      HIDE_MAX_WIDTH: HIDE_MAX_WIDTH,
-      DEBOUNCE_RATE: DEBOUNCE_RATE,
-      init: function init() {
-        resize();
-        window.addEventListener('resize', resize);
-      },
-      teardown: function teardown() {
-        window.removeEventListener('resize', resize);
-      }
-    });
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32,
-    "../utils/select": 35,
-    "lodash.debounce": 6
-  }],
-  20: [function (require, module, exports) {
-    'use strict';
-
-    var accordion = require('./accordion');
-
-    var banner = require('./banner');
-
-    var footer = require('./footer');
-
-    var navigation = require('./navigation');
-
-    var password = require('./password');
-
-    var search = require('./search');
-
-    var skipnav = require('./skipnav');
-
-    var validator = require('./validator');
-
-    module.exports = {
-      accordion: accordion,
-      banner: banner,
-      footer: footer,
-      navigation: navigation,
-      password: password,
-      search: search,
-      skipnav: skipnav,
-      validator: validator
-    };
-  }, {
-    "./accordion": 17,
-    "./banner": 18,
-    "./footer": 19,
-    "./navigation": 21,
-    "./password": 22,
-    "./search": 23,
-    "./skipnav": 24,
-    "./validator": 25
-  }],
-  21: [function (require, module, exports) {
-    'use strict';
-
-    var _CLICK;
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var behavior = require('../utils/behavior');
-
-    var select = require('../utils/select');
-
-    var toggle = require('../utils/toggle');
-
-    var FocusTrap = require('../utils/focus-trap');
-
-    var accordion = require('./accordion');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var BODY = 'body';
-    var NAV = '.' + PREFIX + '-nav';
-    var NAV_LINKS = NAV + ' a';
-    var NAV_CONTROL = 'button.' + PREFIX + '-nav__link';
-    var OPENERS = '.' + PREFIX + '-menu-btn';
-    var CLOSE_BUTTON = '.' + PREFIX + '-nav__close';
-    var OVERLAY = '.' + PREFIX + '-overlay';
-    var CLOSERS = CLOSE_BUTTON + ', .' + PREFIX + '-overlay';
-    var TOGGLES = [NAV, OVERLAY].join(', ');
-    var ACTIVE_CLASS = 'usa-js-mobile-nav--active';
-    var VISIBLE_CLASS = 'is-visible';
-    var navigation = void 0;
-    var navActive = void 0;
-
-    var isActive = function isActive() {
-      return document.body.classList.contains(ACTIVE_CLASS);
-    };
-
-    var toggleNav = function toggleNav(active) {
-      var _document = document,
-          body = _document.body;
-      var safeActive = typeof active === 'boolean' ? active : !isActive();
-      body.classList.toggle(ACTIVE_CLASS, safeActive);
-      select(TOGGLES).forEach(function (el) {
-        return el.classList.toggle(VISIBLE_CLASS, safeActive);
-      });
-      navigation.focusTrap.update(safeActive);
-      var closeButton = body.querySelector(CLOSE_BUTTON);
-      var menuButton = body.querySelector(OPENERS);
-
-      if (safeActive && closeButton) {
-        // The mobile nav was just activated, so focus on the close button,
-        // which is just before all the nav elements in the tab order.
-        closeButton.focus();
-      } else if (!safeActive && document.activeElement === closeButton && menuButton) {
-        // The mobile nav was just deactivated, and focus was on the close
-        // button, which is no longer visible. We don't want the focus to
-        // disappear into the void, so focus on the menu button if it's
-        // visible (this may have been what the user was just focused on,
-        // if they triggered the mobile nav by mistake).
-        menuButton.focus();
-      }
-
-      return safeActive;
-    };
-
-    var resize = function resize() {
-      var closer = document.body.querySelector(CLOSE_BUTTON);
-
-      if (isActive() && closer && closer.getBoundingClientRect().width === 0) {
-        // When the mobile nav is active, and the close box isn't visible,
-        // we know the user's viewport has been resized to be larger.
-        // Let's make the page state consistent by deactivating the mobile nav.
-        navigation.toggleNav.call(closer, false);
-      }
-    };
-
-    var onMenuClose = function onMenuClose() {
-      return navigation.toggleNav.call(navigation, false);
-    };
-
-    var hideActiveNavDropdown = function hideActiveNavDropdown() {
-      toggle(navActive, false);
-      navActive = null;
-    };
-
-    navigation = behavior(_defineProperty({}, CLICK, (_CLICK = {}, _defineProperty(_CLICK, NAV_CONTROL, function () {
-      // If another nav is open, close it
-      if (navActive && navActive !== this) {
-        hideActiveNavDropdown();
-      } // store a reference to the last clicked nav link element, so we
-      // can hide the dropdown if another element on the page is clicked
-
-
-      if (navActive) {
-        hideActiveNavDropdown();
-      } else {
-        navActive = this;
-        toggle(navActive, true);
-      } // Do this so the event handler on the body doesn't fire
-
-
-      return false;
-    }), _defineProperty(_CLICK, BODY, function () {
-      if (navActive) {
-        hideActiveNavDropdown();
-      }
-    }), _defineProperty(_CLICK, OPENERS, toggleNav), _defineProperty(_CLICK, CLOSERS, toggleNav), _defineProperty(_CLICK, NAV_LINKS, function () {
-      // A navigation link has been clicked! We want to collapse any
-      // hierarchical navigation UI it's a part of, so that the user
-      // can focus on whatever they've just selected.
-      // Some navigation links are inside accordions; when they're
-      // clicked, we want to collapse those accordions.
-      var acc = this.closest(accordion.ACCORDION);
-
-      if (acc) {
-        accordion.getButtons(acc).forEach(function (btn) {
-          return accordion.hide(btn);
-        });
-      } // If the mobile navigation menu is active, we want to hide it.
-
-
-      if (isActive()) {
-        navigation.toggleNav.call(navigation, false);
-      }
-    }), _CLICK)), {
-      init: function init(root) {
-        var trapContainer = root.querySelector(NAV);
-
-        if (trapContainer) {
-          navigation.focusTrap = FocusTrap(trapContainer, {
-            Escape: onMenuClose
-          });
-        }
-
-        resize();
-        window.addEventListener('resize', resize, false);
-      },
-      teardown: function teardown() {
-        window.removeEventListener('resize', resize, false);
-        navActive = false;
-      },
-      focusTrap: null,
-      toggleNav: toggleNav
-    });
-    module.exports = navigation;
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32,
-    "../utils/focus-trap": 33,
-    "../utils/select": 35,
-    "../utils/toggle": 38,
-    "./accordion": 17
-  }],
-  22: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var behavior = require('../utils/behavior');
-
-    var toggleFormInput = require('../utils/toggle-form-input');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var LINK = '.' + PREFIX + '-show-password, .' + PREFIX + '-show-multipassword';
-
-    function toggle(event) {
-      event.preventDefault();
-      toggleFormInput(this);
-    }
-
-    module.exports = behavior(_defineProperty({}, CLICK, _defineProperty({}, LINK, toggle)));
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32,
-    "../utils/toggle-form-input": 37
-  }],
-  23: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var ignore = require('receptor/ignore');
-
-    var behavior = require('../utils/behavior');
-
-    var select = require('../utils/select');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var BUTTON = '.js-search-button';
-    var FORM = '.js-search-form';
-    var INPUT = '[type=search]';
-    var CONTEXT = 'header'; // XXX
-
-    var lastButton = void 0;
-
-    var getForm = function getForm(button) {
-      var context = button.closest(CONTEXT);
-      return context ? context.querySelector(FORM) : document.querySelector(FORM);
-    };
-
-    var toggleSearch = function toggleSearch(button, active) {
-      var form = getForm(button);
-
-      if (!form) {
-        throw new Error('No ' + FORM + ' found for search toggle in ' + CONTEXT + '!');
-      }
-      /* eslint-disable no-param-reassign */
-
-
-      button.hidden = active;
-      form.hidden = !active;
-      /* eslint-enable */
-
-      if (!active) {
-        return;
-      }
-
-      var input = form.querySelector(INPUT);
-
-      if (input) {
-        input.focus();
-      } // when the user clicks _outside_ of the form w/ignore(): hide the
-      // search, then remove the listener
-
-
-      var listener = ignore(form, function () {
-        if (lastButton) {
-          hideSearch.call(lastButton); // eslint-disable-line no-use-before-define
-        }
-
-        document.body.removeEventListener(CLICK, listener);
-      }); // Normally we would just run this code without a timeout, but
-      // IE11 and Edge will actually call the listener *immediately* because
-      // they are currently handling this exact type of event, so we'll
-      // make sure the browser is done handling the current click event,
-      // if any, before we attach the listener.
-
-      setTimeout(function () {
-        document.body.addEventListener(CLICK, listener);
-      }, 0);
-    };
-
-    function showSearch() {
-      toggleSearch(this, true);
-      lastButton = this;
-    }
-
-    function hideSearch() {
-      toggleSearch(this, false);
-      lastButton = undefined;
-    }
-
-    var search = behavior(_defineProperty({}, CLICK, _defineProperty({}, BUTTON, showSearch)), {
-      init: function init(target) {
-        select(BUTTON, target).forEach(function (button) {
-          toggleSearch(button, false);
-        });
-      },
-      teardown: function teardown() {
-        // forget the last button clicked
-        lastButton = undefined;
-      }
-    });
-    module.exports = search;
-  }, {
-    "../events": 27,
-    "../utils/behavior": 32,
-    "../utils/select": 35,
-    "receptor/ignore": 12
-  }],
-  24: [function (require, module, exports) {
-    'use strict';
-
-    function _defineProperty(obj, key, value) {
-      if (key in obj) {
-        Object.defineProperty(obj, key, {
-          value: value,
-          enumerable: true,
-          configurable: true,
-          writable: true
-        });
-      } else {
-        obj[key] = value;
-      }
-
-      return obj;
-    }
-
-    var once = require('receptor/once');
-
-    var behavior = require('../utils/behavior');
-
-    var _require = require('../events'),
-        CLICK = _require.CLICK;
-
-    var _require2 = require('../config'),
-        PREFIX = _require2.prefix;
-
-    var LINK = '.' + PREFIX + '-skipnav[href^="#"], .' + PREFIX + '-footer__return-to-top [href^="#"]';
-    var MAINCONTENT = 'main-content';
-
-    function setTabindex() {
-      // NB: we know because of the selector we're delegating to below that the
-      // href already begins with '#'
-      var id = this.getAttribute('href');
-      var target = document.getElementById(id === '#' ? MAINCONTENT : id.slice(1));
-
-      if (target) {
-        target.style.outline = '0';
-        target.setAttribute('tabindex', 0);
-        target.focus();
-        target.addEventListener('blur', once(function () {
-          target.setAttribute('tabindex', -1);
-        }));
-      } else {// throw an error?
-      }
-    }
-
-    module.exports = behavior(_defineProperty({}, CLICK, _defineProperty({}, LINK, setTabindex)));
-  }, {
-    "../config": 26,
-    "../events": 27,
-    "../utils/behavior": 32,
-    "receptor/once": 15
-  }],
-  25: [function (require, module, exports) {
-    'use strict';
-
-    var behavior = require('../utils/behavior');
-
-    var validate = require('../utils/validate-input');
-
-    function change() {
-      validate(this);
-    }
-
-    var validator = behavior({
-      'keyup change': {
-        'input[data-validation-element]': change
-      }
-    });
-    module.exports = validator;
-  }, {
-    "../utils/behavior": 32,
-    "../utils/validate-input": 39
-  }],
-  26: [function (require, module, exports) {
-    'use strict';
-
-    module.exports = {
-      prefix: 'usa'
-    };
-  }, {}],
-  27: [function (require, module, exports) {
-    'use strict';
-
-    module.exports = {
-      // This used to be conditionally dependent on whether the
-      // browser supported touch events; if it did, `CLICK` was set to
-      // `touchstart`.  However, this had downsides:
-      //
-      // * It pre-empted mobile browsers' default behavior of detecting
-      //   whether a touch turned into a scroll, thereby preventing
-      //   users from using some of our components as scroll surfaces.
-      //
-      // * Some devices, such as the Microsoft Surface Pro, support *both*
-      //   touch and clicks. This meant the conditional effectively dropped
-      //   support for the user's mouse, frustrating users who preferred
-      //   it on those systems.
-      CLICK: 'click'
-    };
-  }, {}],
-  28: [function (require, module, exports) {
-    'use strict';
-
-    var elproto = window.HTMLElement.prototype;
-    var HIDDEN = 'hidden';
-
-    if (!(HIDDEN in elproto)) {
-      Object.defineProperty(elproto, HIDDEN, {
-        get: function get() {
-          return this.hasAttribute(HIDDEN);
-        },
-        set: function set(value) {
-          if (value) {
-            this.setAttribute(HIDDEN, '');
-          } else {
-            this.removeAttribute(HIDDEN);
-          }
-        }
-      });
-    }
-  }, {}],
-  29: [function (require, module, exports) {
-    'use strict'; // polyfills HTMLElement.prototype.classList and DOMTokenList
-
-    require('classlist-polyfill'); // polyfills HTMLElement.prototype.hidden
-
-
-    require('./element-hidden');
-  }, {
-    "./element-hidden": 28,
-    "classlist-polyfill": 1
-  }],
-  30: [function (require, module, exports) {
-    'use strict';
-
-    var domready = require('domready');
-    /**
-     * The 'polyfills' define key ECMAScript 5 methods that may be missing from
-     * older browsers, so must be loaded first.
-     */
-
-
-    require('./polyfills');
-
-    var uswds = require('./config');
-
-    var components = require('./components');
-
-    uswds.components = components;
-    domready(function () {
-      var target = document.body;
-      Object.keys(components).forEach(function (key) {
-        var behavior = components[key];
-        behavior.on(target);
-      });
-    });
-    module.exports = uswds;
-  }, {
-    "./components": 20,
-    "./config": 26,
-    "./polyfills": 29,
-    "domready": 2
-  }],
-  31: [function (require, module, exports) {
-    "use strict";
-
-    module.exports = function () {
-      var htmlDocument = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
-      return htmlDocument.activeElement;
-    };
-  }, {}],
-  32: [function (require, module, exports) {
-    'use strict';
-
-    var assign = require('object-assign');
-
-    var Behavior = require('receptor/behavior');
-    /**
-     * @name sequence
-     * @param {...Function} seq an array of functions
-     * @return { closure } callHooks
-     */
-    // We use a named function here because we want it to inherit its lexical scope
-    // from the behavior props object, not from the module
-
-
-    var sequence = function sequence() {
-      for (var _len = arguments.length, seq = Array(_len), _key = 0; _key < _len; _key++) {
-        seq[_key] = arguments[_key];
-      }
-
-      return function callHooks() {
-        var _this = this;
-
-        var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
-        seq.forEach(function (method) {
-          if (typeof _this[method] === 'function') {
-            _this[method].call(_this, target);
-          }
-        });
-      };
-    };
-    /**
-     * @name behavior
-     * @param {object} events
-     * @param {object?} props
-     * @return {receptor.behavior}
-     */
-
-
-    module.exports = function (events, props) {
-      return Behavior(events, assign({
-        on: sequence('init', 'add'),
-        off: sequence('teardown', 'remove')
-      }, props));
-    };
-  }, {
-    "object-assign": 7,
-    "receptor/behavior": 8
-  }],
-  33: [function (require, module, exports) {
-    'use strict';
-
-    var assign = require('object-assign');
-
-    var _require = require('receptor'),
-        keymap = _require.keymap;
-
-    var behavior = require('./behavior');
-
-    var select = require('./select');
-
-    var activeElement = require('./active-element');
-
-    var FOCUSABLE = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
-
-    var tabHandler = function tabHandler(context) {
-      var focusableElements = select(FOCUSABLE, context);
-      var firstTabStop = focusableElements[0];
-      var lastTabStop = focusableElements[focusableElements.length - 1]; // Special rules for when the user is tabbing forward from the last focusable element,
-      // or when tabbing backwards from the first focusable element
-
-      function tabAhead(event) {
-        if (activeElement() === lastTabStop) {
-          event.preventDefault();
-          firstTabStop.focus();
-        }
-      }
-
-      function tabBack(event) {
-        if (activeElement() === firstTabStop) {
-          event.preventDefault();
-          lastTabStop.focus();
-        }
-      }
-
-      return {
-        firstTabStop: firstTabStop,
-        lastTabStop: lastTabStop,
-        tabAhead: tabAhead,
-        tabBack: tabBack
-      };
-    };
-
-    module.exports = function (context) {
-      var additionalKeyBindings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var tabEventHandler = tabHandler(context); //  TODO: In the future, loop over additional keybindings and pass an array
-      // of functions, if necessary, to the map keys. Then people implementing
-      // the focus trap could pass callbacks to fire when tabbing
-
-      var keyMappings = keymap(assign({
-        Tab: tabEventHandler.tabAhead,
-        'Shift+Tab': tabEventHandler.tabBack
-      }, additionalKeyBindings));
-      var focusTrap = behavior({
-        keydown: keyMappings
-      }, {
-        init: function init() {
-          // TODO: is this desireable behavior? Should the trap always do this by default or should
-          // the component getting decorated handle this?
-          tabEventHandler.firstTabStop.focus();
-        },
-        update: function update(isActive) {
-          if (isActive) {
-            this.on();
-          } else {
-            this.off();
-          }
-        }
-      });
-      return focusTrap;
-    };
-  }, {
-    "./active-element": 31,
-    "./behavior": 32,
-    "./select": 35,
-    "object-assign": 7,
-    "receptor": 13
-  }],
-  34: [function (require, module, exports) {
-    "use strict"; // https://stackoverflow.com/a/7557433
-
-    function isElementInViewport(el) {
-      var win = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : window;
-      var docEl = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : document.documentElement;
-      var rect = el.getBoundingClientRect();
-      return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (win.innerHeight || docEl.clientHeight) && rect.right <= (win.innerWidth || docEl.clientWidth);
-    }
-
-    module.exports = isElementInViewport;
-  }, {}],
-  35: [function (require, module, exports) {
-    'use strict';
-
-    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
-      return _typeof2(obj);
-    } : function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-    /**
-     * @name isElement
-     * @desc returns whether or not the given argument is a DOM element.
-     * @param {any} value
-     * @return {boolean}
-     */
-
-
-    var isElement = function isElement(value) {
-      return value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && value.nodeType === 1;
-    };
-    /**
-     * @name select
-     * @desc selects elements from the DOM by class selector or ID selector.
-     * @param {string} selector - The selector to traverse the DOM with.
-     * @param {Document|HTMLElement?} context - The context to traverse the DOM
-     *   in. If not provided, it defaults to the document.
-     * @return {HTMLElement[]} - An array of DOM nodes or an empty array.
-     */
-
-
-    module.exports = function (selector, context) {
-      if (typeof selector !== 'string') {
-        return [];
-      }
-
-      if (!context || !isElement(context)) {
-        context = window.document; // eslint-disable-line no-param-reassign
-      }
-
-      var selection = context.querySelectorAll(selector);
-      return Array.prototype.slice.call(selection);
-    };
-  }, {}],
-  36: [function (require, module, exports) {
-    'use strict';
-    /**
-     * Flips given INPUT elements between masked (hiding the field value) and unmasked
-     * @param {Array.HTMLElement} fields - An array of INPUT elements
-     * @param {Boolean} mask - Whether the mask should be applied, hiding the field value
-     */
-
-    module.exports = function (field, mask) {
-      field.setAttribute('autocapitalize', 'off');
-      field.setAttribute('autocorrect', 'off');
-      field.setAttribute('type', mask ? 'password' : 'text');
-    };
-  }, {}],
-  37: [function (require, module, exports) {
-    'use strict';
-
-    var resolveIdRefs = require('resolve-id-refs');
-
-    var toggleFieldMask = require('./toggle-field-mask');
-
-    var CONTROLS = 'aria-controls';
-    var PRESSED = 'aria-pressed';
-    var SHOW_ATTR = 'data-show-text';
-    var HIDE_ATTR = 'data-hide-text';
-    /**
-     * Replace the word "Show" (or "show") with "Hide" (or "hide") in a string.
-     * @param {string} showText
-     * @return {strong} hideText
-     */
-
-    var getHideText = function getHideText(showText) {
-      return showText.replace(/\bShow\b/i, function (show) {
-        return (show[0] === 'S' ? 'H' : 'h') + 'ide';
-      });
-    };
-    /**
-     * Component that decorates an HTML element with the ability to toggle the
-     * masked state of an input field (like a password) when clicked.
-     * The ids of the fields to be masked will be pulled directly from the button's
-     * `aria-controls` attribute.
-     *
-     * @param  {HTMLElement} el    Parent element containing the fields to be masked
-     * @return {boolean}
-     */
-
-
-    module.exports = function (el) {
-      // this is the *target* state:
-      // * if the element has the attr and it's !== "true", pressed is true
-      // * otherwise, pressed is false
-      var pressed = el.hasAttribute(PRESSED) && el.getAttribute(PRESSED) !== 'true';
-      var fields = resolveIdRefs(el.getAttribute(CONTROLS));
-      fields.forEach(function (field) {
-        return toggleFieldMask(field, pressed);
-      });
-
-      if (!el.hasAttribute(SHOW_ATTR)) {
-        el.setAttribute(SHOW_ATTR, el.textContent);
-      }
-
-      var showText = el.getAttribute(SHOW_ATTR);
-      var hideText = el.getAttribute(HIDE_ATTR) || getHideText(showText);
-      el.textContent = pressed ? showText : hideText; // eslint-disable-line no-param-reassign
-
-      el.setAttribute(PRESSED, pressed);
-      return pressed;
-    };
-  }, {
-    "./toggle-field-mask": 36,
-    "resolve-id-refs": 16
-  }],
-  38: [function (require, module, exports) {
-    'use strict';
-
-    var EXPANDED = 'aria-expanded';
-    var CONTROLS = 'aria-controls';
-    var HIDDEN = 'hidden';
-
-    module.exports = function (button, expanded) {
-      var safeExpanded = expanded;
-
-      if (typeof safeExpanded !== 'boolean') {
-        safeExpanded = button.getAttribute(EXPANDED) === 'false';
-      }
-
-      button.setAttribute(EXPANDED, safeExpanded);
-      var id = button.getAttribute(CONTROLS);
-      var controls = document.getElementById(id);
-
-      if (!controls) {
-        throw new Error('No toggle target found with id: "' + id + '"');
-      }
-
-      if (safeExpanded) {
-        controls.removeAttribute(HIDDEN);
-      } else {
-        controls.setAttribute(HIDDEN, '');
-      }
-
-      return safeExpanded;
-    };
-  }, {}],
-  39: [function (require, module, exports) {
-    'use strict';
-
-    var _slicedToArray = function () {
-      function sliceIterator(arr, i) {
-        var _arr = [];
-        var _n = true;
-        var _d = false;
-        var _e = undefined;
-
-        try {
-          for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-            _arr.push(_s.value);
-
-            if (i && _arr.length === i) break;
-          }
-        } catch (err) {
-          _d = true;
-          _e = err;
-        } finally {
+        e.exports = function () {
           try {
-            if (!_n && _i["return"]) _i["return"]();
-          } finally {
-            if (_d) throw _e;
+            if (!Object.assign) return !1;
+            var t = new String("abc");
+            if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
+
+            for (var e = {}, n = 0; n < 10; n++) {
+              e["_" + String.fromCharCode(n)] = n;
+            }
+
+            if ("0123456789" !== Object.getOwnPropertyNames(e).map(function (t) {
+              return e[t];
+            }).join("")) return !1;
+            var r = {};
+            return "abcdefghijklmnopqrst".split("").forEach(function (t) {
+              r[t] = t;
+            }), "abcdefghijklmnopqrst" === Object.keys(Object.assign({}, r)).join("");
+          } catch (t) {
+            return !1;
           }
+        }() ? Object.assign : function (t, e) {
+          for (var n, a, c = u(t), s = 1; s < arguments.length; s++) {
+            for (var f in n = Object(arguments[s])) {
+              o.call(n, f) && (c[f] = n[f]);
+            }
+
+            if (r) {
+              a = r(n);
+
+              for (var l = 0; l < a.length; l++) {
+                i.call(n, a[l]) && (c[a[l]] = n[a[l]]);
+              }
+            }
+          }
+
+          return c;
+        };
+      }, {}],
+      8: [function (t, e, n) {
+        "use strict";
+
+        var r = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+          return _typeof(t);
+        } : function (t) {
+          return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
+        },
+            o = t("object-assign"),
+            i = t("../delegate"),
+            u = t("../delegateAll"),
+            a = /^(.+):delegate\((.+)\)$/,
+            c = function c(t, e) {
+          var n = t[e];
+          return delete t[e], n;
+        };
+
+        e.exports = function (t, e) {
+          var n = Object.keys(t).reduce(function (e, n) {
+            var s = function (t, e) {
+              var n,
+                  s,
+                  f = t.match(a);
+              f && (t = f[1], n = f[2]), "object" === (void 0 === e ? "undefined" : r(e)) && (s = {
+                capture: c(e, "capture"),
+                passive: c(e, "passive")
+              });
+              var l = {
+                selector: n,
+                delegate: "object" === (void 0 === e ? "undefined" : r(e)) ? u(e) : n ? i(n, e) : e,
+                options: s
+              };
+              return t.indexOf(" ") > -1 ? t.split(" ").map(function (t) {
+                return o({
+                  type: t
+                }, l);
+              }) : (l.type = t, [l]);
+            }(n, t[n]);
+
+            return e.concat(s);
+          }, []);
+          return o({
+            add: function add(t) {
+              n.forEach(function (e) {
+                t.addEventListener(e.type, e.delegate, e.options);
+              });
+            },
+            remove: function remove(t) {
+              n.forEach(function (e) {
+                t.removeEventListener(e.type, e.delegate, e.options);
+              });
+            }
+          }, e);
+        };
+      }, {
+        "../delegate": 10,
+        "../delegateAll": 11,
+        "object-assign": 7
+      }],
+      9: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t) {
+          return function (e) {
+            return t.some(function (t) {
+              return !1 === t.call(this, e);
+            }, this);
+          };
+        };
+      }, {}],
+      10: [function (t, e, n) {
+        "use strict";
+
+        t("element-closest"), e.exports = function (t, e) {
+          return function (n) {
+            var r = n.target.closest(t);
+            if (r) return e.call(r, n);
+          };
+        };
+      }, {
+        "element-closest": 4
+      }],
+      11: [function (t, e, n) {
+        "use strict";
+
+        var r = t("../delegate"),
+            o = t("../compose");
+
+        e.exports = function (t) {
+          var e = Object.keys(t);
+          if (1 === e.length && "*" === e[0]) return t["*"];
+          var n = e.reduce(function (e, n) {
+            return e.push(r(n, t[n])), e;
+          }, []);
+          return o(n);
+        };
+      }, {
+        "../compose": 9,
+        "../delegate": 10
+      }],
+      12: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t, e) {
+          return function (n) {
+            if (t !== n.target && !t.contains(n.target)) return e.call(this, n);
+          };
+        };
+      }, {}],
+      13: [function (t, e, n) {
+        "use strict";
+
+        e.exports = {
+          behavior: t("./behavior"),
+          delegate: t("./delegate"),
+          delegateAll: t("./delegateAll"),
+          ignore: t("./ignore"),
+          keymap: t("./keymap")
+        };
+      }, {
+        "./behavior": 8,
+        "./delegate": 10,
+        "./delegateAll": 11,
+        "./ignore": 12,
+        "./keymap": 14
+      }],
+      14: [function (t, e, n) {
+        "use strict";
+
+        t("keyboardevent-key-polyfill");
+        var r = {
+          Alt: "altKey",
+          Control: "ctrlKey",
+          Ctrl: "ctrlKey",
+          Shift: "shiftKey"
+        };
+        e.exports = function (t) {
+          var e = Object.keys(t).some(function (t) {
+            return t.indexOf("+") > -1;
+          });
+          return function (n) {
+            var o = function (t, e) {
+              var n = t.key;
+              if (e) for (var o in r) {
+                !0 === t[r[o]] && (n = [o, n].join("+"));
+              }
+              return n;
+            }(n, e);
+
+            return [o, o.toLowerCase()].reduce(function (e, r) {
+              return r in t && (e = t[o].call(this, n)), e;
+            }, void 0);
+          };
+        }, e.exports.MODIFIERS = r;
+      }, {
+        "keyboardevent-key-polyfill": 5
+      }],
+      15: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t, e) {
+          var n = function n(r) {
+            return r.currentTarget.removeEventListener(r.type, n, e), t.call(this, r);
+          };
+
+          return n;
+        };
+      }, {}],
+      16: [function (t, e, n) {
+        "use strict";
+
+        var r = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+          return _typeof(t);
+        } : function (t) {
+          return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
+        },
+            o = /(^\s+)|(\s+$)/g,
+            i = /\s+/,
+            u = String.prototype.trim ? function (t) {
+          return t.trim();
+        } : function (t) {
+          return t.replace(o, "");
+        },
+            a = function a(t) {
+          return this.querySelector('[id="' + t.replace(/"/g, '\\"') + '"]');
+        };
+
+        e.exports = function (t, e) {
+          if ("string" != typeof t) throw new Error("Expected a string but got " + (void 0 === t ? "undefined" : r(t)));
+          e || (e = window.document);
+          var n = e.getElementById ? e.getElementById.bind(e) : a.bind(e);
+          return 1 === (t = u(t).split(i)).length && "" === t[0] ? [] : t.map(function (t) {
+            var e = n(t);
+            if (!e) throw new Error('no element with id: "' + t + '"');
+            return e;
+          });
+        };
+      }, {}],
+      17: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
         }
 
-        return _arr;
-      }
+        var o = t("../utils/select"),
+            i = t("../utils/behavior"),
+            u = t("../utils/toggle"),
+            a = t("../utils/is-in-viewport"),
+            c = t("../events").CLICK,
+            s = t("../config").prefix,
+            f = "." + s + "-accordion, ." + s + "-accordion--bordered",
+            l = "." + s + "-accordion__button[aria-controls]",
+            d = function d(t) {
+          return o(l, t).filter(function (e) {
+            return e.closest(f) === t;
+          });
+        },
+            p = function p(t, e) {
+          var n,
+              r = t.closest(f);
+          if (!r) throw new Error(l + " is missing outer " + f);
+          n = u(t, e);
+          var o = "true" === r.getAttribute("aria-multiselectable");
+          n && !o && d(r).forEach(function (e) {
+            e !== t && u(e, !1);
+          });
+        },
+            v = i(r({}, c, r({}, l, function (t) {
+          t.preventDefault(), p(this), "true" === this.getAttribute("aria-expanded") && (a(this) || this.scrollIntoView());
+        })), {
+          init: function init(t) {
+            o(l, t).forEach(function (t) {
+              var e = "true" === t.getAttribute("aria-expanded");
+              p(t, e);
+            });
+          },
+          ACCORDION: f,
+          BUTTON: l,
+          show: function show(t) {
+            return p(t, !0);
+          },
+          hide: function hide(t) {
+            return p(t, !1);
+          },
+          toggle: p,
+          getButtons: d
+        });
 
-      return function (arr, i) {
-        if (Array.isArray(arr)) {
-          return arr;
-        } else if (Symbol.iterator in Object(arr)) {
-          return sliceIterator(arr, i);
-        } else {
+        e.exports = v;
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32,
+        "../utils/is-in-viewport": 34,
+        "../utils/select": 35,
+        "../utils/toggle": 38
+      }],
+      18: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var o = t("../utils/behavior"),
+            i = t("../events").CLICK,
+            u = t("../config").prefix,
+            a = "." + u + "-banner__header",
+            c = u + "-banner__header--expanded";
+        e.exports = o(r({}, i, r({}, a + " [aria-controls]", function (t) {
+          t.preventDefault(), this.closest(a).classList.toggle(c);
+        })));
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32
+      }],
+      19: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var o = t("lodash.debounce"),
+            i = t("../utils/behavior"),
+            u = t("../utils/select"),
+            a = t("../events").CLICK,
+            c = t("../config").prefix,
+            s = "hidden",
+            f = "." + c + "-footer--big" + " nav",
+            l = f + " ." + c + "-footer__primary-link",
+            d = "." + c + "-footer__primary-content--collapsible",
+            p = 480;
+        var v = void 0,
+            b = o(function () {
+          if (v !== window.innerWidth) {
+            v = window.innerWidth;
+            var t = window.innerWidth < p;
+            u(d).forEach(function (e) {
+              return e.classList.toggle(s, t);
+            });
+          }
+        }, 180);
+        e.exports = i(r({}, a, r({}, l, function () {
+          if (window.innerWidth < p) {
+            var t = this.closest(d);
+            t.classList.toggle(s), u(d, t.closest(f)).forEach(function (e) {
+              e !== t && e.classList.add(s);
+            });
+          }
+        })), {
+          HIDE_MAX_WIDTH: p,
+          DEBOUNCE_RATE: 180,
+          init: function init() {
+            b(), window.addEventListener("resize", b);
+          },
+          teardown: function teardown() {
+            window.removeEventListener("resize", b);
+          }
+        });
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32,
+        "../utils/select": 35,
+        "lodash.debounce": 6
+      }],
+      20: [function (t, e, n) {
+        "use strict";
+
+        var r = t("./accordion"),
+            o = t("./banner"),
+            i = t("./footer"),
+            u = t("./navigation"),
+            a = t("./password"),
+            c = t("./search"),
+            s = t("./skipnav"),
+            f = t("./validator");
+        e.exports = {
+          accordion: r,
+          banner: o,
+          footer: i,
+          navigation: u,
+          password: a,
+          search: c,
+          skipnav: s,
+          validator: f
+        };
+      }, {
+        "./accordion": 17,
+        "./banner": 18,
+        "./footer": 19,
+        "./navigation": 21,
+        "./password": 22,
+        "./search": 23,
+        "./skipnav": 24,
+        "./validator": 25
+      }],
+      21: [function (t, e, n) {
+        "use strict";
+
+        var r;
+
+        function o(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var i = t("../utils/behavior"),
+            u = t("../utils/select"),
+            a = t("../utils/toggle"),
+            c = t("../utils/focus-trap"),
+            s = t("./accordion"),
+            f = t("../events").CLICK,
+            l = t("../config").prefix,
+            d = "." + l + "-nav",
+            p = d + " a",
+            v = "button." + l + "-nav__link",
+            b = "." + l + "-menu-btn",
+            h = "." + l + "-nav__close",
+            y = h + ", ." + l + "-overlay",
+            g = [d, "." + l + "-overlay"].join(", "),
+            m = void 0,
+            w = void 0,
+            x = function x() {
+          return document.body.classList.contains("usa-js-mobile-nav--active");
+        },
+            E = function E(t) {
+          var e = document.body,
+              n = "boolean" == typeof t ? t : !x();
+          e.classList.toggle("usa-js-mobile-nav--active", n), u(g).forEach(function (t) {
+            return t.classList.toggle("is-visible", n);
+          }), m.focusTrap.update(n);
+          var r = e.querySelector(h),
+              o = e.querySelector(b);
+          return n && r ? r.focus() : !n && document.activeElement === r && o && o.focus(), n;
+        },
+            A = function A() {
+          var t = document.body.querySelector(h);
+          x() && t && 0 === t.getBoundingClientRect().width && m.toggleNav.call(t, !1);
+        },
+            S = function S() {
+          return m.toggleNav.call(m, !1);
+        },
+            j = function j() {
+          a(w, !1), w = null;
+        };
+
+        m = i(o({}, f, (o(r = {}, v, function () {
+          return w && w !== this && j(), w ? j() : a(w = this, !0), !1;
+        }), o(r, "body", function () {
+          w && j();
+        }), o(r, b, E), o(r, y, E), o(r, p, function () {
+          var t = this.closest(s.ACCORDION);
+          t && s.getButtons(t).forEach(function (t) {
+            return s.hide(t);
+          }), x() && m.toggleNav.call(m, !1);
+        }), r)), {
+          init: function init(t) {
+            var e = t.querySelector(d);
+            e && (m.focusTrap = c(e, {
+              Escape: S
+            })), A(), window.addEventListener("resize", A, !1);
+          },
+          teardown: function teardown() {
+            window.removeEventListener("resize", A, !1), w = !1;
+          },
+          focusTrap: null,
+          toggleNav: E
+        }), e.exports = m;
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32,
+        "../utils/focus-trap": 33,
+        "../utils/select": 35,
+        "../utils/toggle": 38,
+        "./accordion": 17
+      }],
+      22: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var o = t("../utils/behavior"),
+            i = t("../utils/toggle-form-input"),
+            u = t("../events").CLICK,
+            a = t("../config").prefix,
+            c = "." + a + "-show-password, ." + a + "-show-multipassword";
+        e.exports = o(r({}, u, r({}, c, function (t) {
+          t.preventDefault(), i(this);
+        })));
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32,
+        "../utils/toggle-form-input": 37
+      }],
+      23: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var o = t("receptor/ignore"),
+            i = t("../utils/behavior"),
+            u = t("../utils/select"),
+            a = t("../events").CLICK,
+            c = ".js-search-form",
+            s = void 0,
+            f = function f(t, e) {
+          var n = function (t) {
+            var e = t.closest("header");
+            return e ? e.querySelector(c) : document.querySelector(c);
+          }(t);
+
+          if (!n) throw new Error("No " + c + " found for search toggle in header!");
+
+          if (t.hidden = e, n.hidden = !e, e) {
+            var r = n.querySelector("[type=search]");
+            r && r.focus();
+            var i = o(n, function () {
+              s && l.call(s), document.body.removeEventListener(a, i);
+            });
+            setTimeout(function () {
+              document.body.addEventListener(a, i);
+            }, 0);
+          }
+        };
+
+        function l() {
+          f(this, !1), s = void 0;
+        }
+
+        var d = i(r({}, a, r({}, ".js-search-button", function () {
+          f(this, !0), s = this;
+        })), {
+          init: function init(t) {
+            u(".js-search-button", t).forEach(function (t) {
+              f(t, !1);
+            });
+          },
+          teardown: function teardown() {
+            s = void 0;
+          }
+        });
+        e.exports = d;
+      }, {
+        "../events": 27,
+        "../utils/behavior": 32,
+        "../utils/select": 35,
+        "receptor/ignore": 12
+      }],
+      24: [function (t, e, n) {
+        "use strict";
+
+        function r(t, e, n) {
+          return e in t ? Object.defineProperty(t, e, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+          }) : t[e] = n, t;
+        }
+
+        var o = t("receptor/once"),
+            i = t("../utils/behavior"),
+            u = t("../events").CLICK,
+            a = t("../config").prefix,
+            c = "." + a + '-skipnav[href^="#"], .' + a + '-footer__return-to-top [href^="#"]',
+            s = "main-content";
+        e.exports = i(r({}, u, r({}, c, function () {
+          var t = this.getAttribute("href"),
+              e = document.getElementById("#" === t ? s : t.slice(1));
+          e && (e.style.outline = "0", e.setAttribute("tabindex", 0), e.focus(), e.addEventListener("blur", o(function () {
+            e.setAttribute("tabindex", -1);
+          })));
+        })));
+      }, {
+        "../config": 26,
+        "../events": 27,
+        "../utils/behavior": 32,
+        "receptor/once": 15
+      }],
+      25: [function (t, e, n) {
+        "use strict";
+
+        var r = t("../utils/behavior"),
+            o = t("../utils/validate-input");
+        var i = r({
+          "keyup change": {
+            "input[data-validation-element]": function inputDataValidationElement() {
+              o(this);
+            }
+          }
+        });
+        e.exports = i;
+      }, {
+        "../utils/behavior": 32,
+        "../utils/validate-input": 39
+      }],
+      26: [function (t, e, n) {
+        "use strict";
+
+        e.exports = {
+          prefix: "usa"
+        };
+      }, {}],
+      27: [function (t, e, n) {
+        "use strict";
+
+        e.exports = {
+          CLICK: "click"
+        };
+      }, {}],
+      28: [function (t, e, n) {
+        "use strict";
+
+        var r = window.HTMLElement.prototype;
+        "hidden" in r || Object.defineProperty(r, "hidden", {
+          get: function get() {
+            return this.hasAttribute("hidden");
+          },
+          set: function set(t) {
+            t ? this.setAttribute("hidden", "") : this.removeAttribute("hidden");
+          }
+        });
+      }, {}],
+      29: [function (t, e, n) {
+        "use strict";
+
+        t("classlist-polyfill"), t("./element-hidden");
+      }, {
+        "./element-hidden": 28,
+        "classlist-polyfill": 1
+      }],
+      30: [function (t, e, n) {
+        "use strict";
+
+        var r = t("domready");
+        t("./polyfills");
+        var o = t("./config"),
+            i = t("./components");
+        o.components = i, r(function () {
+          var t = document.body;
+          Object.keys(i).forEach(function (e) {
+            i[e].on(t);
+          });
+        }), e.exports = o;
+      }, {
+        "./components": 20,
+        "./config": 26,
+        "./polyfills": 29,
+        domready: 2
+      }],
+      31: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function () {
+          var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document;
+          return t.activeElement;
+        };
+      }, {}],
+      32: [function (t, e, n) {
+        "use strict";
+
+        var r = t("object-assign"),
+            o = t("receptor/behavior"),
+            i = function i() {
+          for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) {
+            e[n] = arguments[n];
+          }
+
+          return function () {
+            var t = this,
+                n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document.body;
+            e.forEach(function (e) {
+              "function" == typeof t[e] && t[e].call(t, n);
+            });
+          };
+        };
+
+        e.exports = function (t, e) {
+          return o(t, r({
+            on: i("init", "add"),
+            off: i("teardown", "remove")
+          }, e));
+        };
+      }, {
+        "object-assign": 7,
+        "receptor/behavior": 8
+      }],
+      33: [function (t, e, n) {
+        "use strict";
+
+        var r = t("object-assign"),
+            o = t("receptor").keymap,
+            i = t("./behavior"),
+            u = t("./select"),
+            a = t("./active-element"),
+            c = function c(t) {
+          var e = u('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]', t),
+              n = e[0],
+              r = e[e.length - 1];
+          return {
+            firstTabStop: n,
+            lastTabStop: r,
+            tabAhead: function tabAhead(t) {
+              a() === r && (t.preventDefault(), n.focus());
+            },
+            tabBack: function tabBack(t) {
+              a() === n && (t.preventDefault(), r.focus());
+            }
+          };
+        };
+
+        e.exports = function (t) {
+          var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+              n = c(t),
+              u = o(r({
+            Tab: n.tabAhead,
+            "Shift+Tab": n.tabBack
+          }, e)),
+              a = i({
+            keydown: u
+          }, {
+            init: function init() {
+              n.firstTabStop.focus();
+            },
+            update: function update(t) {
+              t ? this.on() : this.off();
+            }
+          });
+          return a;
+        };
+      }, {
+        "./active-element": 31,
+        "./behavior": 32,
+        "./select": 35,
+        "object-assign": 7,
+        receptor: 13
+      }],
+      34: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t) {
+          var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : window,
+              n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document.documentElement,
+              r = t.getBoundingClientRect();
+          return r.top >= 0 && r.left >= 0 && r.bottom <= (e.innerHeight || n.clientHeight) && r.right <= (e.innerWidth || n.clientWidth);
+        };
+      }, {}],
+      35: [function (t, e, n) {
+        "use strict";
+
+        var r = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+          return _typeof(t);
+        } : function (t) {
+          return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
+        };
+
+        e.exports = function (t, e) {
+          if ("string" != typeof t) return [];
+          var n;
+          e && (n = e) && "object" === (void 0 === n ? "undefined" : r(n)) && 1 === n.nodeType || (e = window.document);
+          var o = e.querySelectorAll(t);
+          return Array.prototype.slice.call(o);
+        };
+      }, {}],
+      36: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t, e) {
+          t.setAttribute("autocapitalize", "off"), t.setAttribute("autocorrect", "off"), t.setAttribute("type", e ? "password" : "text");
+        };
+      }, {}],
+      37: [function (t, e, n) {
+        "use strict";
+
+        var r = t("resolve-id-refs"),
+            o = t("./toggle-field-mask");
+
+        e.exports = function (t) {
+          var e = t.hasAttribute("aria-pressed") && "true" !== t.getAttribute("aria-pressed");
+          r(t.getAttribute("aria-controls")).forEach(function (t) {
+            return o(t, e);
+          }), t.hasAttribute("data-show-text") || t.setAttribute("data-show-text", t.textContent);
+
+          var n = t.getAttribute("data-show-text"),
+              i = t.getAttribute("data-hide-text") || function (t) {
+            return t.replace(/\bShow\b/i, function (t) {
+              return ("S" === t[0] ? "H" : "h") + "ide";
+            });
+          }(n);
+
+          return t.textContent = e ? n : i, t.setAttribute("aria-pressed", e), e;
+        };
+      }, {
+        "./toggle-field-mask": 36,
+        "resolve-id-refs": 16
+      }],
+      38: [function (t, e, n) {
+        "use strict";
+
+        e.exports = function (t, e) {
+          var n = e;
+          "boolean" != typeof n && (n = "false" === t.getAttribute("aria-expanded")), t.setAttribute("aria-expanded", n);
+          var r = t.getAttribute("aria-controls"),
+              o = document.getElementById(r);
+          if (!o) throw new Error('No toggle target found with id: "' + r + '"');
+          return n ? o.removeAttribute("hidden") : o.setAttribute("hidden", ""), n;
+        };
+      }, {}],
+      39: [function (t, e, n) {
+        "use strict";
+
+        var r = function r(t, e) {
+          if (Array.isArray(t)) return t;
+          if (Symbol.iterator in Object(t)) return function (t, e) {
+            var n = [],
+                r = !0,
+                o = !1,
+                i = void 0;
+
+            try {
+              for (var u, a = t[Symbol.iterator](); !(r = (u = a.next()).done) && (n.push(u.value), !e || n.length !== e); r = !0) {
+                ;
+              }
+            } catch (t) {
+              o = !0, i = t;
+            } finally {
+              try {
+                !r && a["return"] && a["return"]();
+              } finally {
+                if (o) throw i;
+              }
+            }
+
+            return n;
+          }(t, e);
           throw new TypeError("Invalid attempt to destructure non-iterable instance");
-        }
-      };
-    }();
+        },
+            o = t("elem-dataset"),
+            i = t("../config").prefix,
+            u = i + "-checklist__item--checked";
 
-    var dataset = require('elem-dataset');
+        e.exports = function (t) {
+          var e = o(t),
+              n = e.validationElement,
+              i = "#" === n.charAt(0) ? document.querySelector(n) : document.getElementById(n);
+          if (!i) throw new Error('No validation element found with id: "' + n + '"');
+          Object.entries(e).forEach(function (e) {
+            var n = r(e, 2),
+                o = n[0],
+                a = n[1];
 
-    var _require = require('../config'),
-        PREFIX = _require.prefix;
+            if (o.startsWith("validate")) {
+              var c = o.substr("validate".length).toLowerCase(),
+                  s = new RegExp(a),
+                  f = '[data-validator="' + c + '"]',
+                  l = i.querySelector(f);
+              if (!l) throw new Error('No validator checkbox found for: "' + c + '"');
+              var d = s.test(t.value);
+              l.classList.toggle(u, d), l.setAttribute("aria-checked", d);
+            }
+          });
+        };
+      }, {
+        "../config": 26,
+        "elem-dataset": 3
+      }]
+    }, {}, [30]);
+  }).call(this, n(2));
+}, function (t, e) {
+  var n;
 
-    var CHECKED = 'aria-checked';
-    var CHECKED_CLASS = PREFIX + '-checklist__item--checked';
+  n = function () {
+    return this;
+  }();
 
-    module.exports = function validate(el) {
-      var data = dataset(el);
-      var id = data.validationElement;
-      var checkList = id.charAt(0) === '#' ? document.querySelector(id) : document.getElementById(id);
+  try {
+    n = n || new Function("return this")();
+  } catch (t) {
+    "object" == (typeof window === "undefined" ? "undefined" : _typeof(window)) && (n = window);
+  }
 
-      if (!checkList) {
-        throw new Error('No validation element found with id: "' + id + '"');
+  t.exports = n;
+}, function (t, e) {
+  (function (e) {
+    t.exports = e;
+  }).call(this, {});
+}, function (t, e, n) {
+  n(5);
+}, function (t, e) {
+  !function () {
+    "use strict";
+
+    var t = 0,
+        e = {},
+        n = {};
+
+    function r(t, e) {
+      return Array.prototype.slice.call((e || document).querySelectorAll(t));
+    }
+
+    function o(t) {
+      if (t.closest) return t.closest("[data-a11y-toggle]");
+
+      for (; t;) {
+        if (1 === t.nodeType && t.hasAttribute("data-a11y-toggle")) return t;
+        t = t.parentNode;
       }
 
-      Object.entries(data).forEach(function (_ref) {
-        var _ref2 = _slicedToArray(_ref, 2),
-            key = _ref2[0],
-            value = _ref2[1];
+      return null;
+    }
 
-        if (key.startsWith('validate')) {
-          var validatorName = key.substr('validate'.length).toLowerCase();
-          var validatorPattern = new RegExp(value);
-          var validatorSelector = '[data-validator="' + validatorName + '"]';
-          var validatorCheckbox = checkList.querySelector(validatorSelector);
+    function i(t) {
+      var r = t && n[t.getAttribute("aria-controls")];
+      if (!r) return !1;
+      var o = e["#" + r.id],
+          i = "false" === r.getAttribute("aria-hidden");
+      r.setAttribute("aria-hidden", i), o.forEach(function (t) {
+        t.setAttribute("aria-expanded", !i);
+      });
+    }
 
-          if (!validatorCheckbox) {
-            throw new Error('No validator checkbox found for: "' + validatorName + '"');
-          }
-
-          var checked = validatorPattern.test(el.value);
-          validatorCheckbox.classList.toggle(CHECKED_CLASS, checked);
-          validatorCheckbox.setAttribute(CHECKED, checked);
-        }
+    var u = function u(o) {
+      e = r("[data-a11y-toggle]", o).reduce(function (t, e) {
+        var n = "#" + e.getAttribute("data-a11y-toggle");
+        return t[n] = t[n] || [], t[n].push(e), t;
+      }, e);
+      var i = Object.keys(e);
+      i.length && r(i).forEach(function (r) {
+        var o = e["#" + r.id],
+            i = r.hasAttribute("data-a11y-toggle-open"),
+            u = [];
+        o.forEach(function (e) {
+          e.id || e.setAttribute("id", "a11y-toggle-" + t++), e.setAttribute("aria-controls", r.id), e.setAttribute("aria-expanded", i), u.push(e.id);
+        }), r.setAttribute("aria-hidden", !i), r.hasAttribute("aria-labelledby") || r.setAttribute("aria-labelledby", u.join(" ")), n[r.id] = r;
       });
     };
-  }, {
-    "../config": 26,
-    "elem-dataset": 3
-  }]
-}, {}, [30]);
-//# sourceMappingURL=scripts.js.map
+
+    document.addEventListener("DOMContentLoaded", function () {
+      u();
+    }), document.addEventListener("click", function (t) {
+      i(o(t.target));
+    }), document.addEventListener("keyup", function (t) {
+      if (13 === t.which || 32 === t.which) {
+        var e = o(t.target);
+        e && "button" === e.getAttribute("role") && i(e);
+      }
+    }), window && (window.a11yToggle = u);
+  }();
+}]);

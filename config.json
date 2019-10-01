@@ -11,7 +11,7 @@
     "public_fonts": "public/fonts"
   },
   "js": {
-    "src": ["source/js/*.js", "source/js/**/*.js"],
+    "src": ["source/js/*.js", "source/js/**/*.js", "source/_patterns/**/*.js"],
     "dest": "public/js"
   },
   "pattern_lab": {
