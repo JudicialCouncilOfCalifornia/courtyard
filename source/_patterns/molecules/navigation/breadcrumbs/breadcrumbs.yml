@@ -1,5 +1,5 @@
 breadcrumbs:
   - url: "#"
-    label: "Home"
+    name: "Home"
   - url: "#"
-    label: "Wage Garnishment"
+    name: "Wage Garnishment"
