@@ -1,6 +1,6 @@
-require('a11y-dialog')
+// require('a11y-dialog');
 
-var dialog = new window.A11yDialog(dialogEl, mainEl);
+// // var dialog = new window.A11yDialog(dialogEl, mainEl);
 
 // // Get the dialog element (with the accessor method you want)
 // const el = document.getElementById('my-accessible-dialog');
