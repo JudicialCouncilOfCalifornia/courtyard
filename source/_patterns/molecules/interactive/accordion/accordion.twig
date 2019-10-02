@@ -1,0 +1,16 @@
+<div class="usa-accordion">  
+  {% for accordion_item in accordion %}
+  {% set accordion_heading_attributes = accordion_heading_attributes ? accordion_heading_attributes : create_attribute() %}
+  {% set accordion_content_attributes = accordion_content_attributes ? accordion_content_attributes : create_attribute() %}
+
+  <!-- Use the accurate heading level to maintain the document outline -->
+  <h2 class="usa-accordion__heading">
+    <button class="usa-accordion__button"{{ accordion_heading_attributes }}>
+      {{ accordion_item.title }}
+    </button>
+  </h2>
+  <div class="usa-accordion__content usa-prose"{{ accordion_content_attributes }}>
+    {{ accordion_item.body }}
+  </div>
+  {% endfor %}
+</div>
