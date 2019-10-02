@@ -5,11 +5,11 @@
 
   <!-- Use the accurate heading level to maintain the document outline -->
   <h2 class="usa-accordion__heading">
-    <button class="usa-accordion__button"{{ accordion_heading_attributes }}>
+    <button class="usa-accordion__button"{{ accordion_item.accordion_heading_attributes }}>
       {{ accordion_item.title }}
     </button>
   </h2>
-  <div class="usa-accordion__content usa-prose"{{ accordion_content_attributes }}>
+  <div class="usa-accordion__content usa-prose"{{ accordion_item.accordion_content_attributes }}>
     {{ accordion_item.body }}
   </div>
   {% endfor %}
