@@ -1,42 +1,35 @@
 <div class="jcc-switchboard {{ background_variant }}">
-
   <div class="jcc-switchboard__container">
-    
     {% include '@molecules/text/header-group/header-group.twig' with {
         brow: headergroup.brow,
         title: headergroup.title
     } %}
 
     <div class="jcc-switchboard__content">
+      {% if switchboard_tiles %}
       <ul class="jcc-switchboard__tiles">
-        
         {% for tile in switchboard_tiles %}
         <li class="jcc-switchboard__tile">
-          
           {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
             title_link: tile.title_link
           } %}
-
         </li>
         {% endfor %}
-        
       </ul>
-
+      {% endif %}
+      {% if switchboard_tiles2 %}
       <ul class="jcc-switchboard__tiles {{ tiles_variant }}">
-        
         {% for tile in switchboard_tiles2 %}
         <li class="jcc-switchboard__tile">
-          
           {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
             title_link: tile.title_link
           } %}
-
         </li>
         {% endfor %}
-
       </ul>
+      {% endif %}
     </div>
   </div>
 </div>
