@@ -1,14 +1,14 @@
 {% include '@molecules/blocks/hero/hero.twig' %}
 {% include '@molecules/blocks/postcard/postcard.twig' with {
-  content: featured.postcard
+  image: featured.postcard.image,
+  alt: featured.postcard.alt,
+  title: featured.postcard.title,
+  lead: featured.postcard.lead,
+  background_variant: featured.postcard.background_variant,
+  header_align_variant: featured.postcard.header_align_variant,
+  tag: featured.tag.image
 } %}
-{% include '@molecules/blocks/postcard/postcard.twig' with {
-	image: "https://placeimg.com/800/400/arch",
-  alt: "Avatar",
-  title: "Lorem Repo",
-  lead: "Some new thing.",
-  background_variant: "",
-  header_align_variant: "has-header-right",
-  tag: "Page 2"
+{% include '@organisms/sections/switchboard/switchboard.twig' with {
+	headergroup: local.headergroup,
+	switchboard_tiles: local.switchboard_tiles
 } %}
-{% include '@molecules/blocks/postcard/postcard.twig' %}
