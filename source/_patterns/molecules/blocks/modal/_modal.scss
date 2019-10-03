@@ -1,0 +1,138 @@
+@import "../../../protons/global";
+
+.jcc-full-modal__dialog { display: block; } // Temporary Style until JS is working
+
+// Disables non-native backdrop
+.jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop { display: none; }
+
+
+.jcc-full-modal__backdrop,
+.jcc-full-modal__dialog::backdrop {
+  // Structural Attributes
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  // Visual Attributes
+  background-color: rgba(black, .1);
+}
+
+.jcc-full-modal__dialog {
+  // Structural Attributes
+  max-height: 90%;
+  margin: 5% auto;
+  width: 80%;
+  @include u-padding-top(6);
+
+  // Visual Attributes
+  border: 0;
+  box-shadow: 8px 8px 32px rgba(black, .2);
+}
+
+.jcc-full-modal__body { 
+  @include grid-container;
+}
+
+.jcc-full-modal__row { 
+  @include grid-row;
+}
+
+.jcc-full-modal__column {
+  @include grid-col;
+  @include u-width(full);
+
+  @include at-media(desktop) {
+    @include grid-col(6);
+  }
+}
+
+.jcc-full-modal__column:only-of-type {
+  @include at-media(desktop) {
+    @include grid-col(12);
+  }
+}
+
+.jcc-full-modal__title,
+.jcc-full-modal__lead {
+  @include u-width(full);
+}
+
+
+.jcc-full-modal--has-two-columns-threequarter {
+  @include at-media(desktop) {
+    .jcc-full-modal__column:first-of-type {
+      @include grid-col(8);
+    }
+
+    .jcc-full-modal__column:last-of-type {
+      @include grid-col(4);   
+    }
+  }
+}
+
+.jcc-full-modal--has-background-color {
+  .jcc-full-modal__dialog {
+    @include u-bg('primary-lighter');
+  }  
+}
+
+
+// .example-content-main {
+//   @include u-width(full);
+
+//   @include at-media(tablet) {
+//     @include grid-col(6);
+//   }
+
+//   @include at-media(desktop) {
+//     @include grid-col(8);
+//   }
+// }
+
+
+
+// ================================================================================
+// Styles for after JS is working
+// ================================================================================
+// .jcc-full-modal__backdrop { display: none; }
+// .jcc-full-modal__dialog[open] { display: block; }
+
+// ================================================================================
+// Original Comments from the A11yDialog Plugin
+// We will need to revist this to make sure the dialog is fully compliant
+// ================================================================================
+// /**
+//  * When the native `<dialog>` element is supported, the overlay is implied and
+//  * can be styled with `::backdrop`, which means the DOM one should be removed.
+//  *
+//  * The `data-a11y-dialog-native` attribute is set by the script when the
+//  * `<dialog>` element is properly supported.
+//  *
+//  * Feel free to replace `:first-child` with the overlay selector you prefer.
+//  */
+// [data-a11y-dialog-native] > :first-child {
+//   display: none;
+// }
+
+// *
+//  * When the `<dialog>` element is not supported, its default display is `inline`
+//  * which can cause layout issues. This makes sure the dialog is correctly
+//  * displayed when open.
+ 
+// dialog[open] {
+//   display: block;
+// }
+
+// /**
+//  * When the native `<dialog>` element is not supported, the script toggles the
+//  * `aria-hidden` attribute on the container. If `aria-hidden` is set to `true`,
+//  * the container should be hidden entirely.
+//  *
+//  * Feel free to replace `.dialog-container` with the container selector you
+//  * prefer.
+//  */
+// .dialog-container[aria-hidden='true'] {
+//   display: none;
+// }
