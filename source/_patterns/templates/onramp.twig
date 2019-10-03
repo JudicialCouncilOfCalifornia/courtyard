@@ -1,6 +1,14 @@
 {% include '@molecules/blocks/hero/hero.twig' %}
 {% include '@molecules/blocks/postcard/postcard.twig' with {
-  content: featured 
+  content: featured.postcard
 } %}
-{% include '@molecules/blocks/postcard/postcard.twig' %}
+{% include '@molecules/blocks/postcard/postcard.twig' with {
+	image: "https://placeimg.com/800/400/arch",
+  alt: "Avatar",
+  title: "Lorem Repo",
+  lead: "Some new thing.",
+  background_variant: "",
+  header_align_variant: "has-header-right",
+  tag: "Page 2"
+} %}
 {% include '@molecules/blocks/postcard/postcard.twig' %}
