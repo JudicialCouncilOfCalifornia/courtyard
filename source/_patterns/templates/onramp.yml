@@ -1,0 +1,20 @@
+featured:
+  postcard:
+    image: "https://placeimg.com/800/400/arch"
+    alt: "Avatar"
+    title: "Lorem Repo"
+    lead: "Some new thing."
+    background_variant: ""
+    header_align_variant: "has-header-right"
+    tag: "Page 2"
+local:
+  headergroup:
+    brow: "Test"
+    title: "What can we help you with today?"
+  switchboard_tiles:
+    - brow: "Test"
+      title_link: "<a href='#'>Someone took money from my paycheck</a>"
+    - brow: "Lien Against Property"
+      title_link: "<a href='#'>I was told I can’t sell my property</a>"
+    - brow: "Bank Levy"
+      title_link: "<a href='#'>Someone tried to take money from my bank account </a>"
