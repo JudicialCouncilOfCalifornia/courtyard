@@ -1,6 +1,6 @@
 {% include '@molecules/blocks/hero/hero.twig' %}
-{% if featured %}
-	{% include '@molecules/blocks/postcard/postcard.twig' %}
-{% endif %}
+{% include '@molecules/blocks/postcard/postcard.twig' with {
+  content: featured 
+} %}
 {% include '@molecules/blocks/postcard/postcard.twig' %}
 {% include '@molecules/blocks/postcard/postcard.twig' %}
