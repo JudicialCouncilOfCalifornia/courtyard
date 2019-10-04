@@ -40,11 +40,21 @@
   webkit-appearance: none;
 }
 
-.jcc-full-modal__body { 
+.jcc-full-modal__content { 
   @include grid-container;
 }
 
-.jcc-full-modal__row { 
+.jcc-full-modal__header,
+.jcc-full-modal__footer {
+  @include grid-row;
+}
+
+.jcc-full-modal__body,
+.jcc-full-modal__footer {
+  @include u-padding-top(6);
+}
+
+.jcc-full-modal__body { 
   @include grid-row;
   @include grid-gap;
 }
@@ -55,7 +65,6 @@
 
   @include at-media(desktop) {
     @include grid-col(6);
-
   }
 }
 

@@ -6,13 +6,13 @@
   <dialog open class="jcc-full-modal__dialog" id="jcc-dialog-window" aria-labelledby="dialog-title" >
     <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">X</button>
         
-    <section class="jcc-full-modal__body">
-      <div class="jcc-full-modal__row">
+    <div class="jcc-full-modal__content">
+      <header class="jcc-full-modal__header">
         <h1 class="jcc-full-modal__title" id="dialog-title">{{ title }}</h1>
         <h2 class="jcc-full-modal__lead">{{lead}}</h2>
-      </div>
+      </header>
 
-      <div class="jcc-full-modal__row">
+      <section class="jcc-full-modal__body">
         <div class="jcc-full-modal__column">
           {{ column_content_left }}
         </div>
@@ -23,10 +23,10 @@
           </div>  
         {% endif %}
 
-      </div>
-    </section>
-
-
+      </section>
+      <footer class="jcc-full-modal__footer">
+        <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">Done</button>
+      </footer>
   </dialog>
 </div>
 
