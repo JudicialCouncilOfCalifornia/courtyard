@@ -14,5 +14,5 @@ column_content_right: >
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quae ad incidunt, eligendi iste eaque ex pariatur quisquam magni quis quos necessitatibus, autem alias repudiandae impedit veritatis aliquid numquam facere.
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quae ad incidunt, eligendi iste eaque ex pariatur quisquam magni quis quos necessitatibus, autem alias repudiandae impedit veritatis aliquid numquam facere.
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quae ad incidunt, eligendi iste eaque ex pariatur quisquam magni quis quos necessitatibus, autem alias repudiandae impedit veritatis aliquid numquam facere.
-background_variant:  # jcc-full-modal--has-background-color
-column_variant: #jcc-full-modal--has-two-columns-threequarter
+background_variant:  # has-background-color
+column_variant: # has-two-columns-threequarter

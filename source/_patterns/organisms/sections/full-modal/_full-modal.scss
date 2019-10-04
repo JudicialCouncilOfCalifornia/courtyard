@@ -23,12 +23,21 @@
   // Structural Attributes
   max-height: 90%;
   margin: 5% auto;
-  width: 80%;
-  @include u-padding-top(6);
+  width: 90%;
+  max-width: 70rem;
+  position: relative;
+  @include u-padding(6);
 
   // Visual Attributes
   border: 0;
   box-shadow: 8px 8px 32px rgba(black, .2);
+}
+
+.jcc-full-modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  webkit-appearance: none;
 }
 
 .jcc-full-modal__body { 
@@ -37,6 +46,7 @@
 
 .jcc-full-modal__row { 
   @include grid-row;
+  @include grid-gap;
 }
 
 .jcc-full-modal__column {
@@ -45,6 +55,7 @@
 
   @include at-media(desktop) {
     @include grid-col(6);
+
   }
 }
 

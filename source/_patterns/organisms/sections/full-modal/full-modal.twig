@@ -1,10 +1,10 @@
 <!-- <button id="open-modal">Open Dialog Window</button> <!-- This element is for the Pattern Lab Only -->
 
-<div id="modal" class="jcc-full-modal {{ background_variant }} {{ column_variant }}" >
+<div id="modal" class="jcc-full-modal jcc-full-modal--{{ background_variant }} jcc-full-modal--{{ column_variant }}" >
   <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide></div>
 
   <dialog open class="jcc-full-modal__dialog" id="jcc-dialog-window" aria-labelledby="dialog-title" >
-    <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">X</button>
+    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">X</button>
         
     <section class="jcc-full-modal__body">
       <div class="jcc-full-modal__row">
