@@ -1,4 +1,4 @@
-<div class="jcc-hero jcc-hero--{{ background_variant }}">
+<div class="jcc-hero jcc-hero--{{ background_variant }} jcc-hero--{{ column_variant }}">
   <div class="jcc-hero__container">
     {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
 
@@ -8,7 +8,7 @@
     </div>
     {% endif %}
 
-    <div class="jcc-hero__content jcc-hero__content--{{ column_variant }}">
+    <div class="jcc-hero__content">
       <div class="jcc-hero__column-left">
         <h2 class="jcc-hero__title">{{ title }}</h2>
         {% if lead %}
