@@ -14,4 +14,4 @@ column_content_right: "<p>Morbi at auctor turpis. Morbi pellentesque dui quis co
   sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
   rhoncus.</p>"
 background_variant: "has-background-color"
-column_variant: "has-two-columns-half"
+column_variant: "has-two-columns-half" #has-two-columns-half has-two-columns-threequarter

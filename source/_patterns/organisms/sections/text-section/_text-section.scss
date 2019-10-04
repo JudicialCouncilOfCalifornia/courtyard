@@ -20,19 +20,21 @@
   @include u-line-height("body", 4);
 }
 
-.jcc-text-section__content--has-one-column {
+.jcc-text-section--has-one-column {
   @include u-measure("6");
 }
 
-.jcc-text-section__content--has-two-columns-half,
-.jcc-text-section__content--has-two-columns-threequarter {
-  @include at-media("desktop") {
-    @include grid-row;
-    @include grid-gap;
+.jcc-text-section--has-two-columns-half,
+.jcc-text-section--has-two-columns-threequarter {
+  .jcc-text-section__content {
+    @include at-media("desktop") {
+      @include grid-row;
+      @include grid-gap;
+    }  
   }
 }
 
-.jcc-text-section__content--has-two-columns-half {
+.jcc-text-section--has-two-columns-half {
   .jcc-text-section__column-left,
   .jcc-text-section__column-right {
     @include u-width(full);
@@ -43,7 +45,7 @@
   }
 }
 
-.jcc-text-section__content--has-two-columns-threequarter {
+.jcc-text-section--has-two-columns-threequarter {
   .jcc-text-section__column-left,
   .jcc-text-section__column-right {
     @include u-width(full);
