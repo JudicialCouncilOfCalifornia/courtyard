@@ -10,3 +10,4 @@ steps:
 - title: "Wait to see if the claim of exemption is opposed"
   excerpt: "The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned."
   read_more_link: "read more"
+background_variant: # has-background-color
