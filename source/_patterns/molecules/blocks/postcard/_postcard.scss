@@ -19,6 +19,7 @@
 }
 
 .jcc-postcard--has-background-color {
+  @include u-bg("primary-lighter");
 }
 
 .jcc-postcard__media {
