@@ -2,7 +2,7 @@
   <div class="jcc-hero__container">
     {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
 
-    {% if image is not empty %}
+    {% if image %}
     <div class="jcc-hero__media">
       <img src="{{ image }}" alt="{{ alt }}" />
     </div>
@@ -11,11 +11,15 @@
     <div class="jcc-hero__content jcc-hero__content--{{ column_variant }}">
       <div class="jcc-hero__column-left">
         <h2 class="jcc-hero__title">{{ title }}</h2>
+        {% if lead %}
         <p class="jcc-hero__lead">{{ lead }}</p>
+        {% endif %}
       </div>
+      {% if column_content_right %}
       <div class="jcc-hero__column-right">
         {{ column_content_right }}
       </div>
+      {% endif %}
     </div>
   </div>
 </div>

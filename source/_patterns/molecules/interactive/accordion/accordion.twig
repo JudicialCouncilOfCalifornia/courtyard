@@ -1,0 +1,24 @@
+{% set tag = tag|default('h2') %}
+{% set classes = [
+  'usa-accordion',
+  'usa-accordion--bordered'
+  ]|merge(classes|default([]))
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% for item in accordion %}
+    {% set expanded = loop.first ? 'true' : 'false' %}
+    {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
+
+    {# Use `tag` to pass the accurate heading level to maintain the document outline #}
+    <{{ tag }}{{ item.title_attributes.addClass('usa-accordion__heading')}}>
+      <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
+        {{- item.title -}}
+      </button>
+    </{{ tag }}>
+
+    <div{{ item.content_attributes.addClass('usa-accordion__content','usa-prose') }} id="{{ id }}">
+      {{- item.body -}}
+    </div>
+  {% endfor %}
+</div>

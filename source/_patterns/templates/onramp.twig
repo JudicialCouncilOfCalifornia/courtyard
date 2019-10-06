@@ -1,0 +1,14 @@
+{% include '@molecules/blocks/hero/hero.twig' %}
+{% include '@molecules/blocks/postcard/postcard.twig' with {
+  image: featured.postcard.image,
+  alt: featured.postcard.alt,
+  title: featured.postcard.title,
+  lead: featured.postcard.lead,
+  background_variant: featured.postcard.background_variant,
+  header_align_variant: featured.postcard.header_align_variant,
+  tag: featured.tag.image
+} %}
+{% include '@organisms/sections/switchboard/switchboard.twig' with {
+	headergroup: local.headergroup,
+	switchboard_tiles: local.switchboard_tiles
+} %}
