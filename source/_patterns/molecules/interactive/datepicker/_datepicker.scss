@@ -1,0 +1,52 @@
+@import "../../../protons/global";
+
+.jcc-datepicker {
+  @include u-padding-y(3);
+  @include u-padding-x(6);
+  @include u-border(1px, "primary-vivid");
+
+  @include at-media("desktop") {
+    @include u-measure(2);
+  }
+}
+
+.jcc-datepicker__content {
+  position: relative;
+}
+
+.jcc-datepicker__form {
+  
+}
+
+.jcc-datepicker__label {
+  display: block;
+  @include u-padding-top(1);
+  @include u-padding-bottom(1);
+}
+
+.jcc-datepicker__input {
+  display: block;
+  @include u-width(full);
+  @include u-padding(1);
+}
+
+.jcc-datepicker__icon {
+  // Temp styles
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 4px 8px;
+  @include u-color(primary-light);
+}
+
+.jcc-datepicker__adjacent-dates {
+  @include u-padding-top(1);
+}
+
+.jcc-datepicker__date {
+  @include u-font("body", "lg");
+}
