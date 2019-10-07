@@ -1,6 +1,6 @@
 @import "../../../protons/global";
 
-.jcc-datepicker {
+.jcc-datefinder {
   @include u-padding-y(3);
   @include u-padding-x(6);
   @include u-border(1px, "primary-vivid");
@@ -10,27 +10,27 @@
   }
 }
 
-.jcc-datepicker__content {
+.jcc-datefinder__content {
   position: relative;
 }
 
-.jcc-datepicker__form {
+.jcc-datefinder__form {
   
 }
 
-.jcc-datepicker__label {
+.jcc-datefinder__label {
   display: block;
   @include u-padding-top(1);
   @include u-padding-bottom(1);
 }
 
-.jcc-datepicker__input {
+.jcc-datefinder__input {
   display: block;
   @include u-width(full);
   @include u-padding(1);
 }
 
-.jcc-datepicker__icon {
+.jcc-datefinder__icon {
   // Temp styles
   pointer-events: none;
   position: absolute;
@@ -43,10 +43,10 @@
   @include u-color(primary-light);
 }
 
-.jcc-datepicker__adjacent-dates {
+.jcc-datefinder__adjacent-dates {
   @include u-padding-top(1);
 }
 
-.jcc-datepicker__date {
+.jcc-datefinder__date {
   @include u-font("body", "lg");
 }
