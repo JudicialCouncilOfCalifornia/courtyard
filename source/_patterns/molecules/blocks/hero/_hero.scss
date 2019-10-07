@@ -2,6 +2,10 @@
 
 .jcc-hero {
   position: relative;
+
+  .jcc-breadcrumbs-nav {
+    @include u-display("flex");
+  }
 }
 
 .jcc-hero--has-background-image {

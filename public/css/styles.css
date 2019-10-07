@@ -13187,6 +13187,12 @@ h3 {
   position: relative;
 }
 
+.jcc-hero .jcc-breadcrumbs-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+}
+
 .jcc-hero--has-background-image {
   color: white ;
 }

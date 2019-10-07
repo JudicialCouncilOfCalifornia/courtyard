@@ -291,5 +291,20 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+  "attributes": {
+    "Attribute()": {
+      "class": []
+    }
+  },
+  "content_attributes": {
+    "Attribute()": {
+      "class": []
+    }
+  },
+  "title_attributes": {
+    "Attribute()": {
+      "class": []
+    }
+  }
 }
