@@ -10,6 +10,9 @@
     "source_fonts": "source/fonts/**/**",
     "public_fonts": "public/fonts"
   },
+  "images": {
+    "public_images": "public/img"
+  },
   "js": {
     "src": ["source/js/*.js", "source/js/**/*.js", "source/_patterns/**/*.js"],
     "dest": "public/js"
