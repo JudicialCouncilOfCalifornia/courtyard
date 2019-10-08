@@ -48,7 +48,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 21);
+  }, n.p = "", n(n.s = 23);
 }([function (e, t, n) {
   "use strict";
 
@@ -64,7 +64,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = n(45);
+  var o = n(46);
 
   function i(e, t, n, o) {
     var i = e(o, n),
@@ -168,11 +168,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = n(30),
+  var o = n(31),
       i = n(3),
-      r = n(31),
-      a = n(32),
-      s = n(33),
+      r = n(32),
+      a = n(33),
+      s = n(34),
       u = n(10);
 
   function l(e, t, n) {
@@ -244,9 +244,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
 
-  var o = n(34),
-      i = n(35),
-      r = n(36),
+  var o = n(35),
+      i = n(36),
+      r = n(37),
       a = function a() {
     this.callbacks = new i["default"](), this.classNames = new r["default"](), this.behavior = new o["default"](), Object.seal(this);
   };
@@ -355,7 +355,98 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   t["default"] = o;
 }, function (e, t, n) {
-  n(22), n(24), n(78), e.exports = n(80);
+  "use strict";
+
+  Object.defineProperty(t, "__esModule", {
+    value: !0
+  }), n(27), n(28);
+  var o = n(29);
+  t["default"] = o["default"];
+}, function (e, t, n) {
+  (function (n) {
+    var o;
+    !function (n) {
+      "use strict";
+
+      var i,
+          r = ['a[href]:not([tabindex^="-"]):not([inert])', 'area[href]:not([tabindex^="-"]):not([inert])', "input:not([disabled]):not([inert])", "select:not([disabled]):not([inert])", "textarea:not([disabled]):not([inert])", "button:not([disabled]):not([inert])", 'iframe:not([tabindex^="-"]):not([inert])', 'audio:not([tabindex^="-"]):not([inert])', 'video:not([tabindex^="-"]):not([inert])', '[contenteditable]:not([tabindex^="-"]):not([inert])', '[tabindex]:not([tabindex^="-"]):not([inert])'];
+
+      function a(e, t) {
+        this._show = this.show.bind(this), this._hide = this.hide.bind(this), this._maintainFocus = this._maintainFocus.bind(this), this._bindKeypress = this._bindKeypress.bind(this), this.container = e, this.dialog = e.querySelector('dialog, [role="dialog"], [role="alertdialog"]'), this.role = this.dialog.getAttribute("role") || "dialog", this.useDialog = "show" in document.createElement("dialog") && "DIALOG" === this.dialog.nodeName, this._listeners = {}, this.create(t);
+      }
+
+      function s(e) {
+        return Array.prototype.slice.call(e);
+      }
+
+      function u(e, t) {
+        return s((t || document).querySelectorAll(e));
+      }
+
+      function l(e) {
+        var t = c(e),
+            n = e.querySelector("[autofocus]") || t[0];
+        n && n.focus();
+      }
+
+      function c(e) {
+        return u(r.join(","), e).filter(function (e) {
+          return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
+        });
+      }
+
+      a.prototype.create = function (e) {
+        var t, n;
+        return this._targets = this._targets || function (e) {
+          if (NodeList.prototype.isPrototypeOf(e)) return s(e);
+          if (Element.prototype.isPrototypeOf(e)) return [e];
+          if ("string" == typeof e) return u(e);
+        }(e) || (t = this.container, (n = s(t.parentNode.childNodes).filter(function (e) {
+          return 1 === e.nodeType;
+        })).splice(n.indexOf(t), 1), n), this.shown = this.dialog.hasAttribute("open"), this.dialog.setAttribute("role", this.role), this.useDialog ? this.container.setAttribute("data-a11y-dialog-native", "") : this.shown ? this.container.removeAttribute("aria-hidden") : this.container.setAttribute("aria-hidden", !0), this._openers = u('[data-a11y-dialog-show="' + this.container.id + '"]'), this._openers.forEach(function (e) {
+          e.addEventListener("click", this._show);
+        }.bind(this)), this._closers = u("[data-a11y-dialog-hide]", this.container).concat(u('[data-a11y-dialog-hide="' + this.container.id + '"]')), this._closers.forEach(function (e) {
+          e.addEventListener("click", this._hide);
+        }.bind(this)), this._fire("create"), this;
+      }, a.prototype.show = function (e) {
+        return this.shown ? this : (this.shown = !0, i = document.activeElement, this.useDialog ? this.dialog.showModal(e instanceof Event ? void 0 : e) : (this.dialog.setAttribute("open", ""), this.container.removeAttribute("aria-hidden"), this._targets.forEach(function (e) {
+          e.setAttribute("aria-hidden", "true");
+        })), l(this.dialog), document.body.addEventListener("focus", this._maintainFocus, !0), document.addEventListener("keydown", this._bindKeypress), this._fire("show", e), this);
+      }, a.prototype.hide = function (e) {
+        return this.shown ? (this.shown = !1, this.useDialog ? this.dialog.close(e instanceof Event ? void 0 : e) : (this.dialog.removeAttribute("open"), this.container.setAttribute("aria-hidden", "true"), this._targets.forEach(function (e) {
+          e.removeAttribute("aria-hidden");
+        })), i && i.focus(), document.body.removeEventListener("focus", this._maintainFocus, !0), document.removeEventListener("keydown", this._bindKeypress), this._fire("hide", e), this) : this;
+      }, a.prototype.destroy = function () {
+        return this.hide(), this._openers.forEach(function (e) {
+          e.removeEventListener("click", this._show);
+        }.bind(this)), this._closers.forEach(function (e) {
+          e.removeEventListener("click", this._hide);
+        }.bind(this)), this._fire("destroy"), this._listeners = {}, this;
+      }, a.prototype.on = function (e, t) {
+        return void 0 === this._listeners[e] && (this._listeners[e] = []), this._listeners[e].push(t), this;
+      }, a.prototype.off = function (e, t) {
+        var n = this._listeners[e].indexOf(t);
+
+        return n > -1 && this._listeners[e].splice(n, 1), this;
+      }, a.prototype._fire = function (e, t) {
+        (this._listeners[e] || []).forEach(function (e) {
+          e(this.container, t);
+        }.bind(this));
+      }, a.prototype._bindKeypress = function (e) {
+        this.shown && 27 === e.which && "alertdialog" !== this.role && (e.preventDefault(), this.hide()), this.shown && 9 === e.which && function (e, t) {
+          var n = c(e),
+              o = n.indexOf(document.activeElement);
+          t.shiftKey && 0 === o ? (n[n.length - 1].focus(), t.preventDefault()) : t.shiftKey || o !== n.length - 1 || (n[0].focus(), t.preventDefault());
+        }(this.dialog, e);
+      }, a.prototype._maintainFocus = function (e) {
+        this.shown && !this.container.contains(e.target) && l(this.dialog);
+      }, void 0 !== e.exports ? e.exports = a : void 0 === (o = function () {
+        return a;
+      }.apply(t, [])) || (e.exports = o);
+    }(void 0 !== n || window);
+  }).call(this, n(7));
+}, function (e, t, n) {
+  n(24), n(26), n(79), e.exports = n(80);
 }, function (e, t, n) {
   (function (e) {
     var t, o, i;
@@ -522,7 +613,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           */
 
         !function (e, s) {
-          void 0 !== t ? t.exports = s() : "object" == a(n(23)) ? void 0 === (i = "function" == typeof (o = s) ? o.call(r, n, r, t) : o) || (t.exports = i) : this.domready = s();
+          void 0 !== t ? t.exports = s() : "object" == a(n(25)) ? void 0 === (i = "function" == typeof (o = s) ? o.call(r, n, r, t) : o) || (t.exports = i) : this.domready = s();
         }(0, function () {
           var _e,
               t = [],
@@ -1740,15 +1831,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     e.exports = t;
   }).call(this, {});
 }, function (e, t, n) {
-  n(25), easydropdown.all();
-}, function (e, t, n) {
   "use strict";
 
-  Object.defineProperty(t, "__esModule", {
-    value: !0
-  }), n(26), n(27);
-  var o = n(28);
-  t["default"] = o["default"];
+  n.r(t);
+  var o = n(21);
+  n.n(o).a.all();
 }, function (e, t) {
   !function () {
     if ("undefined" != typeof window) try {
@@ -1790,8 +1877,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
   var o = n(8),
-      i = n(29),
-      r = n(77);
+      i = n(30),
+      r = n(78);
 
   function a(e, t) {
     void 0 === t && (t = {});
@@ -1830,17 +1917,17 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   var o = n(0),
       i = n(11),
-      r = n(37),
-      a = n(54),
+      r = n(38),
+      a = n(55),
       s = n(1),
-      u = n(67),
-      l = n(68),
-      c = n(69),
-      d = n(70),
-      f = n(71),
-      p = n(73),
+      u = n(68),
+      l = n(69),
+      c = n(70),
+      d = n(71),
+      f = n(72),
+      p = n(74),
       h = n(8),
-      v = n(76),
+      v = n(77),
       b = function () {
     function e(e, t) {
       this.config = o["default"](new i["default"](), t, !0), this.state = p["default"].mapFromSelect(e, this.config), this.renderer = new a["default"](this.config.classNames), this.dom = this.renderer.render(this.state, e), this.timers = new v["default"](), this.actions = f["default"].proxyActions(this.state, {
@@ -2053,9 +2140,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = n(38),
-      i = n(39),
-      r = n(40);
+  var o = n(39),
+      i = n(40),
+      r = n(41);
 
   function a(e, t) {
     var n = new i["default"](t);
@@ -2118,16 +2205,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = n(41),
-      i = n(42),
-      r = n(43),
-      a = n(44),
-      s = n(46),
-      u = n(47),
-      l = n(48),
-      c = n(49),
-      d = n(50),
-      f = n(53),
+  var o = n(42),
+      i = n(43),
+      r = n(44),
+      a = n(45),
+      s = n(47),
+      u = n(48),
+      l = n(49),
+      c = n(50),
+      d = n(51),
+      f = n(54),
       p = n(14),
       h = n(14);
 
@@ -2350,8 +2437,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var o = n(1),
       i = n(6),
       r = n(13),
-      a = n(51),
-      s = n(52);
+      a = n(52),
+      s = n(53);
 
   t["default"] = function (e, t) {
     var n = e.keyCode,
@@ -2459,11 +2546,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
 
-  var o = n(55),
-      i = n(62),
-      r = n(63),
-      a = n(64),
-      s = n(66),
+  var o = n(56),
+      i = n(63),
+      r = n(64),
+      a = n(65),
+      s = n(67),
       u = function () {
     function e(e) {
       this.dom = new r["default"](), this.classNames = e;
@@ -2516,8 +2603,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
   var o = n(2),
-      i = n(56),
-      r = n(59);
+      i = n(57),
+      r = n(60);
 
   t["default"] = function (e, t) {
     return '\n        <div\n            class="' + o["default"]([t.root, [e.isDisabled, t.rootDisabled], [e.isInvalid, t.rootInvalid], [e.isOpen, t.rootOpen], [e.isFocused, t.rootFocused], [e.hasValue, t.rootHasValue], [e.isOpenAbove, t.rootOpenAbove], [e.isOpenBelow, t.rootOpenBelow], [e.isUseNativeMode, t.rootNative]]) + '"\n            role="widget combobox"\n            aria-haspopup="listbox"\n            ' + (e.isOpen ? 'aria-expanded="true"' : "") + "\n            " + (e.isRequired ? 'aria-required="true"' : "") + "\n            " + (e.isDisabled ? 'aria-disabled="true"' : "") + "\n            " + (e.isInvalid ? 'aria-invalid="true"' : "") + "\n        >\n            " + r["default"](e, t) + "\n            " + (e.isUseNativeMode ? "" : i["default"](e, t)) + "\n        </div>\n    ";
@@ -2529,7 +2616,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
   var o = n(2),
-      i = n(57);
+      i = n(58);
 
   t["default"] = function (e, t) {
     var n = o["default"]([t.body, [e.isAtTop, t.bodyAtTop], [e.isAtBottom, t.bodyAtBottom], [e.isScrollable, t.bodyScrollable]]),
@@ -2545,7 +2632,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     value: !0
   });
   var o = n(2),
-      i = n(58);
+      i = n(59);
 
   t["default"] = function (e, t, n) {
     return '\n        <div class="' + o["default"]([n.group, [e.isDisabled, n.groupDisabled], [e.hasLabel, n.groupHasLabel]]) + '" data-ref="group" role="group">\n            ' + (e.hasLabel ? '<div class="' + n.groupLabel + '" data-ref="item">' + e.label + "</div>" : "") + "\n            " + e.options.map(function (e) {
@@ -2570,8 +2657,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   Object.defineProperty(t, "__esModule", {
     value: !0
   });
-  var o = n(60),
-      i = n(61);
+  var o = n(61),
+      i = n(62);
 
   t["default"] = function (e, t) {
     return '\n    <div class="' + t.head + '" data-ref="head">\n        ' + i["default"](e, t) + "\n        " + o["default"](e, t) + '\n        <select class="' + t.select + '" data-ref="select"></select>\n    </div>\n';
@@ -2638,7 +2725,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var o = n(0),
       i = n(15),
       r = n(16),
-      a = n(65);
+      a = n(66);
 
   function s(e, t) {
     for (var n = Math.max(e.attributes.length, t.attributes.length), o = {}, a = [], s = 0; s < n; s++) {
@@ -2816,7 +2903,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   });
 
   var o = n(0),
-      i = n(72),
+      i = n(73),
       r = function () {
     function e() {}
 
@@ -2948,10 +3035,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   });
 
   var o = n(0),
-      i = n(74),
+      i = n(75),
       r = n(19),
       a = n(20),
-      s = n(75),
+      s = n(76),
       u = function () {
     function e() {}
 
@@ -3202,92 +3289,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   t["default"] = o;
 }, function (e, t, n) {
-  n(79);
-  var o = document.getElementById("my-accessible-dialog");
-  new A11yDialog(o);
-}, function (e, t, n) {
-  (function (n) {
-    var o;
-    !function (n) {
-      "use strict";
+  "use strict";
 
-      var i,
-          r = ['a[href]:not([tabindex^="-"]):not([inert])', 'area[href]:not([tabindex^="-"]):not([inert])', "input:not([disabled]):not([inert])", "select:not([disabled]):not([inert])", "textarea:not([disabled]):not([inert])", "button:not([disabled]):not([inert])", 'iframe:not([tabindex^="-"]):not([inert])', 'audio:not([tabindex^="-"]):not([inert])', 'video:not([tabindex^="-"]):not([inert])', '[contenteditable]:not([tabindex^="-"]):not([inert])', '[tabindex]:not([tabindex^="-"]):not([inert])'];
-
-      function a(e, t) {
-        this._show = this.show.bind(this), this._hide = this.hide.bind(this), this._maintainFocus = this._maintainFocus.bind(this), this._bindKeypress = this._bindKeypress.bind(this), this.container = e, this.dialog = e.querySelector('dialog, [role="dialog"], [role="alertdialog"]'), this.role = this.dialog.getAttribute("role") || "dialog", this.useDialog = "show" in document.createElement("dialog") && "DIALOG" === this.dialog.nodeName, this._listeners = {}, this.create(t);
-      }
-
-      function s(e) {
-        return Array.prototype.slice.call(e);
-      }
-
-      function u(e, t) {
-        return s((t || document).querySelectorAll(e));
-      }
-
-      function l(e) {
-        var t = c(e),
-            n = e.querySelector("[autofocus]") || t[0];
-        n && n.focus();
-      }
-
-      function c(e) {
-        return u(r.join(","), e).filter(function (e) {
-          return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
-        });
-      }
-
-      a.prototype.create = function (e) {
-        var t, n;
-        return this._targets = this._targets || function (e) {
-          if (NodeList.prototype.isPrototypeOf(e)) return s(e);
-          if (Element.prototype.isPrototypeOf(e)) return [e];
-          if ("string" == typeof e) return u(e);
-        }(e) || (t = this.container, (n = s(t.parentNode.childNodes).filter(function (e) {
-          return 1 === e.nodeType;
-        })).splice(n.indexOf(t), 1), n), this.shown = this.dialog.hasAttribute("open"), this.dialog.setAttribute("role", this.role), this.useDialog ? this.container.setAttribute("data-a11y-dialog-native", "") : this.shown ? this.container.removeAttribute("aria-hidden") : this.container.setAttribute("aria-hidden", !0), this._openers = u('[data-a11y-dialog-show="' + this.container.id + '"]'), this._openers.forEach(function (e) {
-          e.addEventListener("click", this._show);
-        }.bind(this)), this._closers = u("[data-a11y-dialog-hide]", this.container).concat(u('[data-a11y-dialog-hide="' + this.container.id + '"]')), this._closers.forEach(function (e) {
-          e.addEventListener("click", this._hide);
-        }.bind(this)), this._fire("create"), this;
-      }, a.prototype.show = function (e) {
-        return this.shown ? this : (this.shown = !0, i = document.activeElement, this.useDialog ? this.dialog.showModal(e instanceof Event ? void 0 : e) : (this.dialog.setAttribute("open", ""), this.container.removeAttribute("aria-hidden"), this._targets.forEach(function (e) {
-          e.setAttribute("aria-hidden", "true");
-        })), l(this.dialog), document.body.addEventListener("focus", this._maintainFocus, !0), document.addEventListener("keydown", this._bindKeypress), this._fire("show", e), this);
-      }, a.prototype.hide = function (e) {
-        return this.shown ? (this.shown = !1, this.useDialog ? this.dialog.close(e instanceof Event ? void 0 : e) : (this.dialog.removeAttribute("open"), this.container.setAttribute("aria-hidden", "true"), this._targets.forEach(function (e) {
-          e.removeAttribute("aria-hidden");
-        })), i && i.focus(), document.body.removeEventListener("focus", this._maintainFocus, !0), document.removeEventListener("keydown", this._bindKeypress), this._fire("hide", e), this) : this;
-      }, a.prototype.destroy = function () {
-        return this.hide(), this._openers.forEach(function (e) {
-          e.removeEventListener("click", this._show);
-        }.bind(this)), this._closers.forEach(function (e) {
-          e.removeEventListener("click", this._hide);
-        }.bind(this)), this._fire("destroy"), this._listeners = {}, this;
-      }, a.prototype.on = function (e, t) {
-        return void 0 === this._listeners[e] && (this._listeners[e] = []), this._listeners[e].push(t), this;
-      }, a.prototype.off = function (e, t) {
-        var n = this._listeners[e].indexOf(t);
-
-        return n > -1 && this._listeners[e].splice(n, 1), this;
-      }, a.prototype._fire = function (e, t) {
-        (this._listeners[e] || []).forEach(function (e) {
-          e(this.container, t);
-        }.bind(this));
-      }, a.prototype._bindKeypress = function (e) {
-        this.shown && 27 === e.which && "alertdialog" !== this.role && (e.preventDefault(), this.hide()), this.shown && 9 === e.which && function (e, t) {
-          var n = c(e),
-              o = n.indexOf(document.activeElement);
-          t.shiftKey && 0 === o ? (n[n.length - 1].focus(), t.preventDefault()) : t.shiftKey || o !== n.length - 1 || (n[0].focus(), t.preventDefault());
-        }(this.dialog, e);
-      }, a.prototype._maintainFocus = function (e) {
-        this.shown && !this.container.contains(e.target) && l(this.dialog);
-      }, void 0 !== e.exports ? e.exports = a : void 0 === (o = function () {
-        return a;
-      }.apply(t, [])) || (e.exports = o);
-    }(void 0 !== n || window);
-  }).call(this, n(7));
+  n.r(t);
+  var o = n(22),
+      i = n.n(o);
+  var r = document.getElementById("my-accessible-dialog");
+  new i.a(r);
 }, function (e, t, n) {
   n(81);
 }, function (e, t) {

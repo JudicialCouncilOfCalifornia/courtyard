@@ -1,3 +1,3 @@
-require('easydropdown');
+import easydropdown from "easydropdown";
 
 easydropdown.all();
