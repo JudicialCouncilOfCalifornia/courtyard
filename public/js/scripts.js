@@ -50,7 +50,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return Object.prototype.hasOwnProperty.call(t, e);
   }, n.p = "", n(n.s = 0);
 }([function (t, e, n) {
-  n(1), t.exports = n(4);
+  n(1), n(4), t.exports = n(6);
 }, function (t, e, n) {
   (function (t) {
     var e, r, o;
@@ -64,12 +64,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             throw s.code = "MODULE_NOT_FOUND", s;
           }
 
-          var f = r[a] = {
+          var l = r[a] = {
             exports: {}
           };
-          n[a][0].call(f.exports, function (t) {
+          n[a][0].call(l.exports, function (t) {
             return i(n[a][1][t] || t);
-          }, f, f.exports, t, n, r, o);
+          }, l, l.exports, t, n, r, o);
         }
 
         return r[a].exports;
@@ -160,16 +160,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }, c.toString = function () {
               return this.join(" ");
             }, n.defineProperty) {
-              var f = {
+              var l = {
                 get: s,
                 enumerable: !0,
                 configurable: !0
               };
 
               try {
-                n.defineProperty(e, "classList", f);
+                n.defineProperty(e, "classList", l);
               } catch (t) {
-                void 0 !== t.number && -2146823252 !== t.number || (f.enumerable = !1, n.defineProperty(e, "classList", f));
+                void 0 !== t.number && -2146823252 !== t.number || (l.enumerable = !1, n.defineProperty(e, "classList", l));
               }
             } else n.prototype.__defineGetter__ && e.__defineGetter__("classList", s);
           }
@@ -262,11 +262,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 var s = c.slice(5).replace(/-./g, function (t) {
                   return t.charAt(1).toUpperCase();
                 }),
-                    f = a.value;
+                    l = a.value;
                 Object.defineProperty(e, s, {
                   enumerable: !0,
                   get: r.bind({
-                    value: f || ""
+                    value: l || ""
                   }),
                   set: o.bind(t, c)
                 });
@@ -412,15 +412,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               a = /^[-+]0x[0-9a-f]+$/i,
               c = /^0b[01]+$/i,
               s = /^0o[0-7]+$/i,
-              f = parseInt,
-              l = "object" == (void 0 === t ? "undefined" : e(t)) && t && t.Object === Object && t,
+              l = parseInt,
+              f = "object" == (void 0 === t ? "undefined" : e(t)) && t && t.Object === Object && t,
               d = "object" == ("undefined" == typeof self ? "undefined" : e(self)) && self && self.Object === Object && self,
-              p = l || d || Function("return this")(),
-              v = Object.prototype.toString,
-              b = Math.max,
-              h = Math.min,
+              v = f || d || Function("return this")(),
+              p = Object.prototype.toString,
+              h = Math.max,
+              b = Math.min,
               y = function y() {
-            return p.Date.now();
+            return v.Date.now();
           };
 
           function g(t) {
@@ -431,7 +431,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           function m(t) {
             return "symbol" == (void 0 === t ? "undefined" : e(t)) || function (t) {
               return !!t && "object" == (void 0 === t ? "undefined" : e(t));
-            }(t) && v.call(t) == i;
+            }(t) && p.call(t) == i;
           }
 
           function w(t) {
@@ -446,7 +446,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             if ("string" != typeof t) return 0 === t ? t : +t;
             t = t.replace(u, "");
             var n = c.test(t);
-            return n || s.test(t) ? f(t.slice(2), n ? 2 : 8) : a.test(t) ? o : +t;
+            return n || s.test(t) ? l(t.slice(2), n ? 2 : 8) : a.test(t) ? o : +t;
           }
 
           n.exports = function (t, e, n) {
@@ -456,34 +456,34 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 a,
                 c,
                 s,
-                f = 0,
-                l = !1,
+                l = 0,
+                f = !1,
                 d = !1,
-                p = !0;
+                v = !0;
             if ("function" != typeof t) throw new TypeError(r);
 
-            function v(e) {
+            function p(e) {
               var n = o,
                   r = i;
-              return o = i = void 0, f = e, a = t.apply(r, n);
+              return o = i = void 0, l = e, a = t.apply(r, n);
             }
 
             function m(t) {
               var n = t - s;
-              return void 0 === s || n >= e || n < 0 || d && t - f >= u;
+              return void 0 === s || n >= e || n < 0 || d && t - l >= u;
             }
 
-            function x() {
+            function E() {
               var t = y();
-              if (m(t)) return E(t);
-              c = setTimeout(x, function (t) {
+              if (m(t)) return x(t);
+              c = setTimeout(E, function (t) {
                 var n = e - (t - s);
-                return d ? h(n, u - (t - f)) : n;
+                return d ? b(n, u - (t - l)) : n;
               }(t));
             }
 
-            function E(t) {
-              return c = void 0, p && o ? v(t) : (o = i = void 0, a);
+            function x(t) {
+              return c = void 0, v && o ? p(t) : (o = i = void 0, a);
             }
 
             function A() {
@@ -492,18 +492,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
               if (o = arguments, i = this, s = t, n) {
                 if (void 0 === c) return function (t) {
-                  return f = t, c = setTimeout(x, e), l ? v(t) : a;
+                  return l = t, c = setTimeout(E, e), f ? p(t) : a;
                 }(s);
-                if (d) return c = setTimeout(x, e), v(s);
+                if (d) return c = setTimeout(E, e), p(s);
               }
 
-              return void 0 === c && (c = setTimeout(x, e)), a;
+              return void 0 === c && (c = setTimeout(E, e)), a;
             }
 
-            return e = w(e) || 0, g(n) && (l = !!n.leading, u = (d = "maxWait" in n) ? b(w(n.maxWait) || 0, e) : u, p = "trailing" in n ? !!n.trailing : p), A.cancel = function () {
-              void 0 !== c && clearTimeout(c), f = 0, o = s = i = c = void 0;
+            return e = w(e) || 0, g(n) && (f = !!n.leading, u = (d = "maxWait" in n) ? h(w(n.maxWait) || 0, e) : u, v = "trailing" in n ? !!n.trailing : v), A.cancel = function () {
+              void 0 !== c && clearTimeout(c), l = 0, o = s = i = c = void 0;
             }, A.flush = function () {
-              return void 0 === c ? a : E(y());
+              return void 0 === c ? a : x(y());
             }, A;
           };
         }).call(this, void 0 !== t ? t : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
@@ -547,15 +547,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         }() ? Object.assign : function (t, e) {
           for (var n, a, c = u(t), s = 1; s < arguments.length; s++) {
-            for (var f in n = Object(arguments[s])) {
-              o.call(n, f) && (c[f] = n[f]);
+            for (var l in n = Object(arguments[s])) {
+              o.call(n, l) && (c[l] = n[l]);
             }
 
             if (r) {
               a = r(n);
 
-              for (var l = 0; l < a.length; l++) {
-                i.call(n, a[l]) && (c[a[l]] = n[a[l]]);
+              for (var f = 0; f < a.length; f++) {
+                i.call(n, a[f]) && (c[a[f]] = n[a[f]]);
               }
             }
           }
@@ -585,12 +585,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             var s = function (t, e) {
               var n,
                   s,
-                  f = t.match(a);
-              f && (t = f[1], n = f[2]), "object" === (void 0 === e ? "undefined" : r(e)) && (s = {
+                  l = t.match(a);
+              l && (t = l[1], n = l[2]), "object" === (void 0 === e ? "undefined" : r(e)) && (s = {
                 capture: c(e, "capture"),
                 passive: c(e, "passive")
               });
-              var l = {
+              var f = {
                 selector: n,
                 delegate: "object" === (void 0 === e ? "undefined" : r(e)) ? u(e) : n ? i(n, e) : e,
                 options: s
@@ -598,8 +598,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               return t.indexOf(" ") > -1 ? t.split(" ").map(function (t) {
                 return o({
                   type: t
-                }, l);
-              }) : (l.type = t, [l]);
+                }, f);
+              }) : (f.type = t, [f]);
             }(n, t[n]);
 
             return e.concat(s);
@@ -779,45 +779,45 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = t("../utils/is-in-viewport"),
             c = t("../events").CLICK,
             s = t("../config").prefix,
-            f = "." + s + "-accordion, ." + s + "-accordion--bordered",
-            l = "." + s + "-accordion__button[aria-controls]",
+            l = "." + s + "-accordion, ." + s + "-accordion--bordered",
+            f = "." + s + "-accordion__button[aria-controls]",
             d = function d(t) {
-          return o(l, t).filter(function (e) {
-            return e.closest(f) === t;
+          return o(f, t).filter(function (e) {
+            return e.closest(l) === t;
           });
         },
-            p = function p(t, e) {
+            v = function v(t, e) {
           var n,
-              r = t.closest(f);
-          if (!r) throw new Error(l + " is missing outer " + f);
+              r = t.closest(l);
+          if (!r) throw new Error(f + " is missing outer " + l);
           n = u(t, e);
           var o = "true" === r.getAttribute("aria-multiselectable");
           n && !o && d(r).forEach(function (e) {
             e !== t && u(e, !1);
           });
         },
-            v = i(r({}, c, r({}, l, function (t) {
-          t.preventDefault(), p(this), "true" === this.getAttribute("aria-expanded") && (a(this) || this.scrollIntoView());
+            p = i(r({}, c, r({}, f, function (t) {
+          t.preventDefault(), v(this), "true" === this.getAttribute("aria-expanded") && (a(this) || this.scrollIntoView());
         })), {
           init: function init(t) {
-            o(l, t).forEach(function (t) {
+            o(f, t).forEach(function (t) {
               var e = "true" === t.getAttribute("aria-expanded");
-              p(t, e);
+              v(t, e);
             });
           },
-          ACCORDION: f,
-          BUTTON: l,
+          ACCORDION: l,
+          BUTTON: f,
           show: function show(t) {
-            return p(t, !0);
+            return v(t, !0);
           },
           hide: function hide(t) {
-            return p(t, !1);
+            return v(t, !1);
           },
-          toggle: p,
+          toggle: v,
           getButtons: d
         });
 
-        e.exports = v;
+        e.exports = p;
       }, {
         "../config": 26,
         "../events": 27,
@@ -869,35 +869,35 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = t("../events").CLICK,
             c = t("../config").prefix,
             s = "hidden",
-            f = "." + c + "-footer--big" + " nav",
-            l = f + " ." + c + "-footer__primary-link",
+            l = "." + c + "-footer--big" + " nav",
+            f = l + " ." + c + "-footer__primary-link",
             d = "." + c + "-footer__primary-content--collapsible",
-            p = 480;
-        var v = void 0,
-            b = o(function () {
-          if (v !== window.innerWidth) {
-            v = window.innerWidth;
-            var t = window.innerWidth < p;
+            v = 480;
+        var p = void 0,
+            h = o(function () {
+          if (p !== window.innerWidth) {
+            p = window.innerWidth;
+            var t = window.innerWidth < v;
             u(d).forEach(function (e) {
               return e.classList.toggle(s, t);
             });
           }
         }, 180);
-        e.exports = i(r({}, a, r({}, l, function () {
-          if (window.innerWidth < p) {
+        e.exports = i(r({}, a, r({}, f, function () {
+          if (window.innerWidth < v) {
             var t = this.closest(d);
-            t.classList.toggle(s), u(d, t.closest(f)).forEach(function (e) {
+            t.classList.toggle(s), u(d, t.closest(l)).forEach(function (e) {
               e !== t && e.classList.add(s);
             });
           }
         })), {
-          HIDE_MAX_WIDTH: p,
+          HIDE_MAX_WIDTH: v,
           DEBOUNCE_RATE: 180,
           init: function init() {
-            b(), window.addEventListener("resize", b);
+            h(), window.addEventListener("resize", h);
           },
           teardown: function teardown() {
-            window.removeEventListener("resize", b);
+            window.removeEventListener("resize", h);
           }
         });
       }, {
@@ -917,7 +917,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = t("./password"),
             c = t("./search"),
             s = t("./skipnav"),
-            f = t("./validator");
+            l = t("./validator");
         e.exports = {
           accordion: r,
           banner: o,
@@ -926,7 +926,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           password: a,
           search: c,
           skipnav: s,
-          validator: f
+          validator: l
         };
       }, {
         "./accordion": 17,
@@ -957,50 +957,50 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = t("../utils/toggle"),
             c = t("../utils/focus-trap"),
             s = t("./accordion"),
-            f = t("../events").CLICK,
-            l = t("../config").prefix,
-            d = "." + l + "-nav",
-            p = d + " a",
-            v = "button." + l + "-nav__link",
-            b = "." + l + "-menu-btn",
-            h = "." + l + "-nav__close",
-            y = h + ", ." + l + "-overlay",
-            g = [d, "." + l + "-overlay"].join(", "),
+            l = t("../events").CLICK,
+            f = t("../config").prefix,
+            d = "." + f + "-nav",
+            v = d + " a",
+            p = "button." + f + "-nav__link",
+            h = "." + f + "-menu-btn",
+            b = "." + f + "-nav__close",
+            y = b + ", ." + f + "-overlay",
+            g = [d, "." + f + "-overlay"].join(", "),
             m = void 0,
             w = void 0,
-            x = function x() {
+            E = function E() {
           return document.body.classList.contains("usa-js-mobile-nav--active");
         },
-            E = function E(t) {
+            x = function x(t) {
           var e = document.body,
-              n = "boolean" == typeof t ? t : !x();
+              n = "boolean" == typeof t ? t : !E();
           e.classList.toggle("usa-js-mobile-nav--active", n), u(g).forEach(function (t) {
             return t.classList.toggle("is-visible", n);
           }), m.focusTrap.update(n);
-          var r = e.querySelector(h),
-              o = e.querySelector(b);
+          var r = e.querySelector(b),
+              o = e.querySelector(h);
           return n && r ? r.focus() : !n && document.activeElement === r && o && o.focus(), n;
         },
             A = function A() {
-          var t = document.body.querySelector(h);
-          x() && t && 0 === t.getBoundingClientRect().width && m.toggleNav.call(t, !1);
+          var t = document.body.querySelector(b);
+          E() && t && 0 === t.getBoundingClientRect().width && m.toggleNav.call(t, !1);
         },
             S = function S() {
           return m.toggleNav.call(m, !1);
         },
-            j = function j() {
+            O = function O() {
           a(w, !1), w = null;
         };
 
-        m = i(o({}, f, (o(r = {}, v, function () {
-          return w && w !== this && j(), w ? j() : a(w = this, !0), !1;
+        m = i(o({}, l, (o(r = {}, p, function () {
+          return w && w !== this && O(), w ? O() : a(w = this, !0), !1;
         }), o(r, "body", function () {
-          w && j();
-        }), o(r, b, E), o(r, y, E), o(r, p, function () {
+          w && O();
+        }), o(r, h, x), o(r, y, x), o(r, v, function () {
           var t = this.closest(s.ACCORDION);
           t && s.getButtons(t).forEach(function (t) {
             return s.hide(t);
-          }), x() && m.toggleNav.call(m, !1);
+          }), E() && m.toggleNav.call(m, !1);
         }), r)), {
           init: function init(t) {
             var e = t.querySelector(d);
@@ -1012,7 +1012,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             window.removeEventListener("resize", A, !1), w = !1;
           },
           focusTrap: null,
-          toggleNav: E
+          toggleNav: x
         }), e.exports = m;
       }, {
         "../config": 26,
@@ -1067,7 +1067,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             a = t("../events").CLICK,
             c = ".js-search-form",
             s = void 0,
-            f = function f(t, e) {
+            l = function l(t, e) {
           var n = function (t) {
             var e = t.closest("header");
             return e ? e.querySelector(c) : document.querySelector(c);
@@ -1079,7 +1079,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             var r = n.querySelector("[type=search]");
             r && r.focus();
             var i = o(n, function () {
-              s && l.call(s), document.body.removeEventListener(a, i);
+              s && f.call(s), document.body.removeEventListener(a, i);
             });
             setTimeout(function () {
               document.body.addEventListener(a, i);
@@ -1087,16 +1087,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           }
         };
 
-        function l() {
-          f(this, !1), s = void 0;
+        function f() {
+          l(this, !1), s = void 0;
         }
 
         var d = i(r({}, a, r({}, ".js-search-button", function () {
-          f(this, !0), s = this;
+          l(this, !0), s = this;
         })), {
           init: function init(t) {
             u(".js-search-button", t).forEach(function (t) {
-              f(t, !1);
+              l(t, !1);
             });
           },
           teardown: function teardown() {
@@ -1416,11 +1416,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             if (o.startsWith("validate")) {
               var c = o.substr("validate".length).toLowerCase(),
                   s = new RegExp(a),
-                  f = '[data-validator="' + c + '"]',
-                  l = i.querySelector(f);
-              if (!l) throw new Error('No validator checkbox found for: "' + c + '"');
+                  l = '[data-validator="' + c + '"]',
+                  f = i.querySelector(l);
+              if (!f) throw new Error('No validator checkbox found for: "' + c + '"');
               var d = s.test(t.value);
-              l.classList.toggle(u, d), l.setAttribute("aria-checked", d);
+              f.classList.toggle(u, d), f.setAttribute("aria-checked", d);
             }
           });
         };
@@ -1509,5 +1509,113 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         e && "button" === e.getAttribute("role") && i(e);
       }
     }), window && (window.a11yToggle = u);
+  }();
+}, function (t, e, n) {
+  n(7);
+}, function (t, e) {
+  /*!
+   * @copyright Copyright (c) 2017 IcoMoon.io
+   * @license   Licensed under MIT license
+   *            See https://github.com/Keyamoon/svgxuse
+   * @version   1.2.6
+   */
+  !function () {
+    "use strict";
+
+    if ("undefined" != typeof window && window.addEventListener) {
+      var t,
+          e,
+          _n,
+          r = Object.create(null),
+          o = function o() {
+        clearTimeout(e), e = setTimeout(t, 100);
+      },
+          i = function i() {},
+          u = function u() {
+        var t;
+        window.addEventListener("resize", o, !1), window.addEventListener("orientationchange", o, !1), window.MutationObserver ? ((t = new MutationObserver(o)).observe(document.documentElement, {
+          childList: !0,
+          subtree: !0,
+          attributes: !0
+        }), i = function i() {
+          try {
+            t.disconnect(), window.removeEventListener("resize", o, !1), window.removeEventListener("orientationchange", o, !1);
+          } catch (t) {}
+        }) : (document.documentElement.addEventListener("DOMSubtreeModified", o, !1), i = function i() {
+          document.documentElement.removeEventListener("DOMSubtreeModified", o, !1), window.removeEventListener("resize", o, !1), window.removeEventListener("orientationchange", o, !1);
+        });
+      },
+          a = function a(t) {
+        function e(t) {
+          var e;
+          return void 0 !== t.protocol ? e = t : (e = document.createElement("a")).href = t, e.protocol.replace(/:/g, "") + e.host;
+        }
+
+        var n, r, o;
+        return window.XMLHttpRequest && (n = new XMLHttpRequest(), r = e(location), o = e(t), n = void 0 === n.withCredentials && "" !== o && o !== r ? XDomainRequest || void 0 : XMLHttpRequest), n;
+      },
+          c = "http://www.w3.org/1999/xlink";
+
+      t = function t() {
+        var t,
+            e,
+            n,
+            o,
+            s,
+            l,
+            f,
+            d,
+            v,
+            p,
+            h = 0;
+
+        function b() {
+          0 === (h -= 1) && (i(), u());
+        }
+
+        function y(t) {
+          return function () {
+            !0 !== r[t.base] && (t.useEl.setAttributeNS(c, "xlink:href", "#" + t.hash), t.useEl.hasAttribute("href") && t.useEl.setAttribute("href", "#" + t.hash));
+          };
+        }
+
+        function g(t) {
+          return function () {
+            var e,
+                n = document.body,
+                r = document.createElement("x");
+            t.onload = null, r.innerHTML = t.responseText, (e = r.getElementsByTagName("svg")[0]) && (e.setAttribute("aria-hidden", "true"), e.style.position = "absolute", e.style.width = 0, e.style.height = 0, e.style.overflow = "hidden", n.insertBefore(e, n.firstChild)), b();
+          };
+        }
+
+        function m(t) {
+          return function () {
+            t.onerror = null, t.ontimeout = null, b();
+          };
+        }
+
+        for (i(), v = document.getElementsByTagName("use"), s = 0; s < v.length; s += 1) {
+          try {
+            e = v[s].getBoundingClientRect();
+          } catch (t) {
+            e = !1;
+          }
+
+          t = (d = (o = v[s].getAttribute("href") || v[s].getAttributeNS(c, "href") || v[s].getAttribute("xlink:href")) && o.split ? o.split("#") : ["", ""])[0], n = d[1], l = e && 0 === e.left && 0 === e.right && 0 === e.top && 0 === e.bottom, e && 0 === e.width && 0 === e.height && !l ? (v[s].hasAttribute("href") && v[s].setAttributeNS(c, "xlink:href", o), t.length && (!0 !== (p = r[t]) && setTimeout(y({
+            useEl: v[s],
+            base: t,
+            hash: n
+          }), 0), void 0 === p && void 0 !== (f = a(t)) && (p = new f(), r[t] = p, p.onload = g(p), p.onerror = m(p), p.ontimeout = m(p), p.open("GET", t), p.send(), h += 1))) : l ? t.length && r[t] && setTimeout(y({
+            useEl: v[s],
+            base: t,
+            hash: n
+          }), 0) : void 0 === r[t] ? r[t] = !0 : r[t].onload && (r[t].abort(), delete r[t].onload, r[t] = !0);
+        }
+
+        v = "", h += 1, b();
+      }, _n = function n() {
+        window.removeEventListener("load", _n, !1), e = setTimeout(t, 0);
+      }, "complete" !== document.readyState ? window.addEventListener("load", _n, !1) : _n();
+    }
   }();
 }]);

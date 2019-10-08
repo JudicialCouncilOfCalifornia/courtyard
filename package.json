@@ -37,7 +37,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "a11y-toggle": "^2.1.0"
+    "a11y-toggle": "^2.1.0",
+    "svgxuse": "^1.2.6"
   },
   "prettier": {
     "printWidth": 100,
