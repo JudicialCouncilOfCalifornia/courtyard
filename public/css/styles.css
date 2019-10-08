@@ -13171,6 +13171,28 @@ h3 {
   font-weight: normal ;
 }
 
+.jcc-filelist {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+  border-width: 1px;
+  border-color: #0050d8 ;
+  border-style: solid;
+}
+
+.jcc-filelist__list {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.jcc-filelist__item {
+  padding-bottom: 0.5rem ;
+  padding-top: 0.5rem ;
+}
+
 .jcc-flowmap-step {
   width: 100% ;
 }
@@ -13429,6 +13451,53 @@ dialog[open] {
 
 .jcc-tile.is-secondary {
   background-color: #f3e1e4 ;
+}
+
+.jcc-datefinder {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+  border-width: 1px;
+  border-color: #0050d8 ;
+  border-style: solid;
+}
+
+.jcc-datefinder__content {
+  position: relative;
+}
+
+.jcc-datefinder__label {
+  display: block;
+  padding-top: 0.5rem ;
+  padding-bottom: 0.5rem ;
+}
+
+.jcc-datefinder__input {
+  display: block;
+  width: 100% ;
+  padding: 0.5rem ;
+}
+
+.jcc-datefinder__icon {
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #73b3e7 ;
+}
+
+.jcc-datefinder__adjacent-dates {
+  padding-top: 0.5rem ;
+}
+
+.jcc-datefinder__date {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.36745rem;
 }
 
 .jcc-breadcrumbs {
@@ -22480,6 +22549,9 @@ dialog[open] {
   .desktop\:padding-left-0 {
     padding-left: 0 !important;
   }
+  .jcc-filelist {
+    max-width: 60ex ;
+  }
   .jcc-flowmap-step {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
@@ -22580,6 +22652,9 @@ dialog[open] {
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 50% ;
+  }
+  .jcc-datefinder {
+    max-width: 60ex ;
   }
   .jcc-card-list {
     display: -webkit-box;

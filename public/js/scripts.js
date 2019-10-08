@@ -192,8 +192,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }
     } else d = Object.getOwnPropertyNames(t);
 
-    for (var p = 0, h = d; p < h.length; p++) {
-      var v = h[p],
+    for (var h = 0, p = d; h < p.length; h++) {
+      var v = p[h],
           b = Object.getOwnPropertyDescriptor(t, v);
       if (("function" != typeof b.get || b.set || a.includeReadOnly) && (b.enumerable || a.includeNonEmurable)) if (!a.deep || "object" != _typeof(t[v]) || c && t[v] instanceof window.Node || c && t[v] === window.document.body || c && t[v] === window.document.documentElement || null === t[v] || Array.isArray(t[v]) && a.useReferenceIfArray || !e[v] && a.useReferenceIfTargetUnset) try {
         e[v] = t[v];
@@ -446,7 +446,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }(void 0 !== n || window);
   }).call(this, n(7));
 }, function (e, t, n) {
-  n(24), n(26), n(79), e.exports = n(80);
+  n(24), n(26), n(79), n(80), n(81), e.exports = n(83);
 }, function (e, t, n) {
   (function (e) {
     var t, o, i;
@@ -811,12 +811,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
               c = parseInt,
               d = "object" == (void 0 === e ? "undefined" : t(e)) && e && e.Object === Object && e,
               f = "object" == ("undefined" == typeof self ? "undefined" : t(self)) && self && self.Object === Object && self,
-              p = d || f || Function("return this")(),
-              h = Object.prototype.toString,
+              h = d || f || Function("return this")(),
+              p = Object.prototype.toString,
               v = Math.max,
               b = Math.min,
               y = function y() {
-            return p.Date.now();
+            return h.Date.now();
           };
 
           function g(e) {
@@ -827,7 +827,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           function m(e) {
             return "symbol" == (void 0 === e ? "undefined" : t(e)) || function (e) {
               return !!e && "object" == (void 0 === e ? "undefined" : t(e));
-            }(e) && h.call(e) == r;
+            }(e) && p.call(e) == r;
           }
 
           function O(e) {
@@ -855,10 +855,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
                 c = 0,
                 d = !1,
                 f = !1,
-                p = !0;
+                h = !0;
             if ("function" != typeof e) throw new TypeError(o);
 
-            function h(t) {
+            function p(t) {
               var n = i,
                   o = r;
               return i = r = void 0, c = t, s = e.apply(o, n);
@@ -879,7 +879,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             }
 
             function E(e) {
-              return u = void 0, p && i ? h(e) : (i = r = void 0, s);
+              return u = void 0, h && i ? p(e) : (i = r = void 0, s);
             }
 
             function _() {
@@ -888,15 +888,15 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
               if (i = arguments, r = this, l = e, n) {
                 if (void 0 === u) return function (e) {
-                  return c = e, u = setTimeout(w, t), d ? h(e) : s;
+                  return c = e, u = setTimeout(w, t), d ? p(e) : s;
                 }(l);
-                if (f) return u = setTimeout(w, t), h(l);
+                if (f) return u = setTimeout(w, t), p(l);
               }
 
               return void 0 === u && (u = setTimeout(w, t)), s;
             }
 
-            return t = O(t) || 0, g(n) && (d = !!n.leading, a = (f = "maxWait" in n) ? v(O(n.maxWait) || 0, t) : a, p = "trailing" in n ? !!n.trailing : p), _.cancel = function () {
+            return t = O(t) || 0, g(n) && (d = !!n.leading, a = (f = "maxWait" in n) ? v(O(n.maxWait) || 0, t) : a, h = "trailing" in n ? !!n.trailing : h), _.cancel = function () {
               void 0 !== u && clearTimeout(u), c = 0, i = l = r = u = void 0;
             }, _.flush = function () {
               return void 0 === u ? s : E(y());
@@ -1182,7 +1182,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             return t.closest(c) === e;
           });
         },
-            p = function p(e, t) {
+            h = function h(e, t) {
           var n,
               o = e.closest(c);
           if (!o) throw new Error(d + " is missing outer " + c);
@@ -1192,28 +1192,28 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             t !== e && a(t, !1);
           });
         },
-            h = r(o({}, u, o({}, d, function (e) {
-          e.preventDefault(), p(this), "true" === this.getAttribute("aria-expanded") && (s(this) || this.scrollIntoView());
+            p = r(o({}, u, o({}, d, function (e) {
+          e.preventDefault(), h(this), "true" === this.getAttribute("aria-expanded") && (s(this) || this.scrollIntoView());
         })), {
           init: function init(e) {
             i(d, e).forEach(function (e) {
               var t = "true" === e.getAttribute("aria-expanded");
-              p(e, t);
+              h(e, t);
             });
           },
           ACCORDION: c,
           BUTTON: d,
           show: function show(e) {
-            return p(e, !0);
+            return h(e, !0);
           },
           hide: function hide(e) {
-            return p(e, !1);
+            return h(e, !1);
           },
-          toggle: p,
+          toggle: h,
           getButtons: f
         });
 
-        t.exports = h;
+        t.exports = p;
       }, {
         "../config": 26,
         "../events": 27,
@@ -1268,26 +1268,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             c = "." + u + "-footer--big" + " nav",
             d = c + " ." + u + "-footer__primary-link",
             f = "." + u + "-footer__primary-content--collapsible",
-            p = 480;
-        var h = void 0,
+            h = 480;
+        var p = void 0,
             v = i(function () {
-          if (h !== window.innerWidth) {
-            h = window.innerWidth;
-            var e = window.innerWidth < p;
+          if (p !== window.innerWidth) {
+            p = window.innerWidth;
+            var e = window.innerWidth < h;
             a(f).forEach(function (t) {
               return t.classList.toggle(l, e);
             });
           }
         }, 180);
         t.exports = r(o({}, s, o({}, d, function () {
-          if (window.innerWidth < p) {
+          if (window.innerWidth < h) {
             var e = this.closest(f);
             e.classList.toggle(l), a(f, e.closest(c)).forEach(function (t) {
               t !== e && t.classList.add(l);
             });
           }
         })), {
-          HIDE_MAX_WIDTH: p,
+          HIDE_MAX_WIDTH: h,
           DEBOUNCE_RATE: 180,
           init: function init() {
             v(), window.addEventListener("resize", v);
@@ -1356,8 +1356,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
             c = e("../events").CLICK,
             d = e("../config").prefix,
             f = "." + d + "-nav",
-            p = f + " a",
-            h = "button." + d + "-nav__link",
+            h = f + " a",
+            p = "button." + d + "-nav__link",
             v = "." + d + "-menu-btn",
             b = "." + d + "-nav__close",
             y = b + ", ." + d + "-overlay",
@@ -1388,11 +1388,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           s(O, !1), O = null;
         };
 
-        m = r(i({}, c, (i(o = {}, h, function () {
+        m = r(i({}, c, (i(o = {}, p, function () {
           return O && O !== this && P(), O ? P() : s(O = this, !0), !1;
         }), i(o, "body", function () {
           O && P();
-        }), i(o, v, E), i(o, y, E), i(o, p, function () {
+        }), i(o, v, E), i(o, y, E), i(o, h, function () {
           var e = this.closest(l.ACCORDION);
           e && l.getButtons(e).forEach(function (e) {
             return l.hide(e);
@@ -1925,13 +1925,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       c = n(70),
       d = n(71),
       f = n(72),
-      p = n(74),
-      h = n(8),
+      h = n(74),
+      p = n(8),
       v = n(77),
       b = function () {
     function e(e, t) {
-      this.config = o["default"](new i["default"](), t, !0), this.state = p["default"].mapFromSelect(e, this.config), this.renderer = new a["default"](this.config.classNames), this.dom = this.renderer.render(this.state, e), this.timers = new v["default"](), this.actions = f["default"].proxyActions(this.state, {
-        closeOthers: c["default"].bind(null, this, h["default"]),
+      this.config = o["default"](new i["default"](), t, !0), this.state = h["default"].mapFromSelect(e, this.config), this.renderer = new a["default"](this.config.classNames), this.dom = this.renderer.render(this.state, e), this.timers = new v["default"](), this.actions = f["default"].proxyActions(this.state, {
+        closeOthers: c["default"].bind(null, this, p["default"]),
         scrollToView: d["default"].bind(null, this.dom, this.timers)
       }, this.handleStateUpdate.bind(this)), this.eventBindings = r["default"]({
         actions: this.actions,
@@ -1963,13 +1963,13 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, e.prototype.close = function () {
       this.actions.close();
     }, e.prototype.refresh = function () {
-      this.state = o["default"](this.state, p["default"].mapFromSelect(this.dom.select, this.config)), this.renderer.update(this.state), this.dom.group.length = this.dom.option.length = this.dom.item.length = 0, a["default"].queryDomRefs(this.dom, ["group", "option", "item"]);
+      this.state = o["default"](this.state, h["default"].mapFromSelect(this.dom.select, this.config)), this.renderer.update(this.state), this.dom.group.length = this.dom.option.length = this.dom.item.length = 0, a["default"].queryDomRefs(this.dom, ["group", "option", "item"]);
     }, e.prototype.destroy = function () {
       this.timers.clear(), this.eventBindings.forEach(function (e) {
         return e.unbind();
       }), this.renderer.destroy();
-      var e = h["default"].indexOf(this);
-      h["default"].splice(e, 1);
+      var e = p["default"].indexOf(this);
+      p["default"].splice(e, 1);
     }, e.prototype.handleStateUpdate = function (e, t) {
       var n,
           o = this.config.callbacks;
@@ -2215,8 +2215,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       c = n(50),
       d = n(51),
       f = n(54),
-      p = n(14),
-      h = n(14);
+      h = n(14),
+      p = n(14);
 
   t["default"] = function (e) {
     return [{
@@ -2262,11 +2262,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }, {
       target: document.documentElement,
       type: "click",
-      handler: p["default"]
+      handler: h["default"]
     }, {
       target: window,
       type: "resize",
-      handler: h["default"],
+      handler: p["default"],
       throttle: 100
     }];
   };
@@ -2740,12 +2740,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
     for (var d = void 0; d = c[s]; s++) {
       var f = o[d],
-          p = {
+          h = {
         type: null,
         name: d,
         value: null
       };
-      f[0] !== f[1] && (void 0 === f[0] ? (p.type = i["default"].ADD, p.value = f[1]) : void 0 === f[1] ? (p.type = i["default"].REMOVE, p.value = "") : (p.type = i["default"].EDIT, p.value = f[1]), a.push(p));
+      f[0] !== f[1] && (void 0 === f[0] ? (h.type = i["default"].ADD, h.value = f[1]) : void 0 === f[1] ? (h.type = i["default"].REMOVE, h.value = "") : (h.type = i["default"].EDIT, h.value = f[1]), a.push(h));
     }
 
     return {
@@ -3288,7 +3288,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   };
 
   t["default"] = o;
-}, function (e, t, n) {
+}, function (e, t) {}, function (e, t, n) {
   "use strict";
 
   n.r(t);
@@ -3297,7 +3297,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   var r = document.getElementById("my-accessible-dialog");
   new i.a(r);
 }, function (e, t, n) {
-  n(81);
+  n(82);
 }, function (e, t) {
   !function () {
     "use strict";
@@ -3357,5 +3357,113 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         t && "button" === t.getAttribute("role") && r(t);
       }
     }), window && (window.a11yToggle = a);
+  }();
+}, function (e, t, n) {
+  n(84);
+}, function (e, t) {
+  /*!
+   * @copyright Copyright (c) 2017 IcoMoon.io
+   * @license   Licensed under MIT license
+   *            See https://github.com/Keyamoon/svgxuse
+   * @version   1.2.6
+   */
+  !function () {
+    "use strict";
+
+    if ("undefined" != typeof window && window.addEventListener) {
+      var e,
+          t,
+          _n,
+          o = Object.create(null),
+          i = function i() {
+        clearTimeout(t), t = setTimeout(e, 100);
+      },
+          r = function r() {},
+          a = function a() {
+        var e;
+        window.addEventListener("resize", i, !1), window.addEventListener("orientationchange", i, !1), window.MutationObserver ? ((e = new MutationObserver(i)).observe(document.documentElement, {
+          childList: !0,
+          subtree: !0,
+          attributes: !0
+        }), r = function r() {
+          try {
+            e.disconnect(), window.removeEventListener("resize", i, !1), window.removeEventListener("orientationchange", i, !1);
+          } catch (e) {}
+        }) : (document.documentElement.addEventListener("DOMSubtreeModified", i, !1), r = function r() {
+          document.documentElement.removeEventListener("DOMSubtreeModified", i, !1), window.removeEventListener("resize", i, !1), window.removeEventListener("orientationchange", i, !1);
+        });
+      },
+          s = function s(e) {
+        function t(e) {
+          var t;
+          return void 0 !== e.protocol ? t = e : (t = document.createElement("a")).href = e, t.protocol.replace(/:/g, "") + t.host;
+        }
+
+        var n, o, i;
+        return window.XMLHttpRequest && (n = new XMLHttpRequest(), o = t(location), i = t(e), n = void 0 === n.withCredentials && "" !== i && i !== o ? XDomainRequest || void 0 : XMLHttpRequest), n;
+      },
+          u = "http://www.w3.org/1999/xlink";
+
+      e = function e() {
+        var e,
+            t,
+            n,
+            i,
+            l,
+            c,
+            d,
+            f,
+            h,
+            p,
+            v = 0;
+
+        function b() {
+          0 === (v -= 1) && (r(), a());
+        }
+
+        function y(e) {
+          return function () {
+            !0 !== o[e.base] && (e.useEl.setAttributeNS(u, "xlink:href", "#" + e.hash), e.useEl.hasAttribute("href") && e.useEl.setAttribute("href", "#" + e.hash));
+          };
+        }
+
+        function g(e) {
+          return function () {
+            var t,
+                n = document.body,
+                o = document.createElement("x");
+            e.onload = null, o.innerHTML = e.responseText, (t = o.getElementsByTagName("svg")[0]) && (t.setAttribute("aria-hidden", "true"), t.style.position = "absolute", t.style.width = 0, t.style.height = 0, t.style.overflow = "hidden", n.insertBefore(t, n.firstChild)), b();
+          };
+        }
+
+        function m(e) {
+          return function () {
+            e.onerror = null, e.ontimeout = null, b();
+          };
+        }
+
+        for (r(), h = document.getElementsByTagName("use"), l = 0; l < h.length; l += 1) {
+          try {
+            t = h[l].getBoundingClientRect();
+          } catch (e) {
+            t = !1;
+          }
+
+          e = (f = (i = h[l].getAttribute("href") || h[l].getAttributeNS(u, "href") || h[l].getAttribute("xlink:href")) && i.split ? i.split("#") : ["", ""])[0], n = f[1], c = t && 0 === t.left && 0 === t.right && 0 === t.top && 0 === t.bottom, t && 0 === t.width && 0 === t.height && !c ? (h[l].hasAttribute("href") && h[l].setAttributeNS(u, "xlink:href", i), e.length && (!0 !== (p = o[e]) && setTimeout(y({
+            useEl: h[l],
+            base: e,
+            hash: n
+          }), 0), void 0 === p && void 0 !== (d = s(e)) && (p = new d(), o[e] = p, p.onload = g(p), p.onerror = m(p), p.ontimeout = m(p), p.open("GET", e), p.send(), v += 1))) : c ? e.length && o[e] && setTimeout(y({
+            useEl: h[l],
+            base: e,
+            hash: n
+          }), 0) : void 0 === o[e] ? o[e] = !0 : o[e].onload && (o[e].abort(), delete o[e].onload, o[e] = !0);
+        }
+
+        h = "", v += 1, b();
+      }, _n = function n() {
+        window.removeEventListener("load", _n, !1), t = setTimeout(e, 0);
+      }, "complete" !== document.readyState ? window.addEventListener("load", _n, !1) : _n();
+    }
   }();
 }]);
