@@ -9,10 +9,13 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "a11y-dialog": "^5.2.0",
+    "a11y-toggle": "^2.1.0",
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "easydropdown": "^4.1.1",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
