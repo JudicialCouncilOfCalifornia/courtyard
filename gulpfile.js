@@ -55,6 +55,10 @@ const copyUswdsFonts = () => {
   return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
 };
 
+const copyUswdsImages = () => {
+  return gulp.src(`${uswds}/img/**/*`).pipe(gulp.dest(config.images.public_images));
+};
+
 const copyPlStyles = () => {
   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
 };
@@ -154,7 +158,7 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, plCss, plJs);
+const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, plCss, plJs);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);
