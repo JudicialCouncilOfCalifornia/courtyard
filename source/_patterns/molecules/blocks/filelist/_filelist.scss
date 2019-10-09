@@ -1,0 +1,25 @@
+@import "../../../protons/global";
+
+.jcc-filelist {
+  @include u-padding-y(3);
+  @include u-padding-x(6);
+  @include u-border(1px, "primary-vivid");
+
+  @include at-media("desktop") {
+    @include u-measure(2);
+  }
+}
+
+.jcc-filelist__title {
+}
+
+.jcc-filelist__list {
+  @include add-list-reset;
+}
+
+.jcc-filelist__item {
+  @include u-padding-y(1);
+}
+
+.jcc-filelist__icon {
+}

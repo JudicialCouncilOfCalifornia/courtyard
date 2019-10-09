@@ -1,0 +1,20 @@
+<div class="jcc-datefinder">
+  <h2 class="jcc-datefinder__title">{{ title }}</h2>
+  <div class="jcc-datefinder__content">
+    <form action="#" class="jcc-datefinder__form">
+      <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
+      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
+      <input id="filing_date" type="date" class="jcc-datefinder__input" placeholder="{{filing_date }}">
+    </form>
+    <div class="jcc-datefinder__adjacent-dates">
+      <p class="jcc-datefinder__label">{{ serve_date_label }}</p>
+      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
+      <p class="jcc-datefinder__date">{{ serve_date }}</p>
+    </div>
+    <div class="jcc-datefinder__adjacent-dates">
+      <p class="jcc-datefinder__label">{{ respond_date_label }}</p>
+      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
+      <p class="jcc-datefinder__date">{{ respond_date }}</p>
+    </div>
+  </div>
+</div>

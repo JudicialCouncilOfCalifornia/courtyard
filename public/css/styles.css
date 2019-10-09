@@ -13171,6 +13171,28 @@ h3 {
   font-weight: normal ;
 }
 
+.jcc-filelist {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+  border-width: 1px;
+  border-color: #0050d8 ;
+  border-style: solid;
+}
+
+.jcc-filelist__list {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.jcc-filelist__item {
+  padding-bottom: 0.5rem ;
+  padding-top: 0.5rem ;
+}
+
 .jcc-flowmap-step {
   width: 100% ;
 }
@@ -13255,6 +13277,40 @@ h3 {
   width: 100% ;
 }
 
+/**
+ * When the native `<dialog>` element is supported, the overlay is implied and
+ * can be styled with `::backdrop`, which means the DOM one should be removed.
+ *
+ * The `data-a11y-dialog-native` attribute is set by the script when the
+ * `<dialog>` element is properly supported.
+ *
+ * Feel free to replace `:first-child` with the overlay selector you prefer.
+ */
+[data-a11y-dialog-native] > :first-child {
+  display: none;
+}
+
+/**
+ * When the `<dialog>` element is not supported, its default display is `inline`
+ * which can cause layout issues. This makes sure the dialog is correctly
+ * displayed when open.
+ */
+dialog[open] {
+  display: block;
+}
+
+/**
+ * When the native `<dialog>` element is not supported, the script toggles the
+ * `aria-hidden` attribute on the container. If `aria-hidden` is set to `true`,
+ * the container should be hidden entirely.
+ *
+ * Feel free to replace `.dialog-container` with the container selector you
+ * prefer.
+ */
+.dialog-container[aria-hidden='true'] {
+  display: none;
+}
+
 .jcc-postcard {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
@@ -13314,6 +13370,14 @@ h3 {
 .jcc-postcard__content {
   width: 100% ;
   position: relative;
+}
+
+.jcc-read-more {
+  padding: 3.5rem;
+}
+
+.jcc-read-more__content[aria-hidden="true"] {
+  display: none;
 }
 
 .jcc-step {
@@ -13389,10 +13453,51 @@ h3 {
   background-color: #f3e1e4 ;
 }
 
-/* Example CSS from http://edenspiekermann.github.io/a11y-toggle/ */
-[aria-hidden="true"],
-[data-a11y-toggle]:not([aria-controls]) {
-  display: none;
+.jcc-datefinder {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+  border-width: 1px;
+  border-color: #0050d8 ;
+  border-style: solid;
+}
+
+.jcc-datefinder__content {
+  position: relative;
+}
+
+.jcc-datefinder__label {
+  display: block;
+  padding-top: 0.5rem ;
+  padding-bottom: 0.5rem ;
+}
+
+.jcc-datefinder__input {
+  display: block;
+  width: 100% ;
+  padding: 0.5rem ;
+}
+
+.jcc-datefinder__icon {
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #73b3e7 ;
+}
+
+.jcc-datefinder__adjacent-dates {
+  padding-top: 0.5rem ;
+}
+
+.jcc-datefinder__date {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.36745rem;
 }
 
 .jcc-breadcrumbs {
@@ -22444,6 +22549,9 @@ h3 {
   .desktop\:padding-left-0 {
     padding-left: 0 !important;
   }
+  .jcc-filelist {
+    max-width: 60ex ;
+  }
   .jcc-flowmap-step {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
@@ -22544,6 +22652,9 @@ h3 {
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 50% ;
+  }
+  .jcc-datefinder {
+    max-width: 60ex ;
   }
   .jcc-card-list {
     display: -webkit-box;
