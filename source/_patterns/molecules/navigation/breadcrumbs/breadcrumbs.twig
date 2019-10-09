@@ -3,7 +3,13 @@
     {% for breadcrumb in breadcrumbs %}
     {% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
     <li class="jcc-breadcrumb__item">
-      <a href="{{ breadcrumb.url }}"{{ url_attributes }}>{{ breadcrumb.name }}</a>
+      
+      {% if breadcrumb.url %}
+      <a href="{{ breadcrumb.url }}"{% if breadcrumb.url_attributes %}{{ url_attributes }}{% endif %}>{{ breadcrumb.name }}</a>
+      {% else %}
+      <span>{{ breadcrumb.name }}</span>
+      {% endif %}
+
     </li>
     {% endfor %}
   </ul>
