@@ -1,15 +1,15 @@
 <!-- <button id="open-modal">Open Dialog Window</button> <!-- This element is for the Pattern Lab Only -->
 
-<div id="modal" class="jcc-full-modal jcc-full-modal--{{ background_variant }} jcc-full-modal--{{ column_variant }}" >
+<div id="modal" class="jcc-full-modal{% if background_variant %} jcc-full-modal--{{ background_variant }}{% endif %}{% if column_variant %} jcc-full-modal--{{ column_variant }}{% endif %}" >
   <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide></div>
 
-  <dialog open class="jcc-full-modal__dialog" id="jcc-dialog-window" aria-labelledby="dialog-title" >
+  <dialog open class="jcc-full-modal__dialog" id="jcc-dialog-window" aria-labelledby="dialog-title" title="{{ title }}">
     <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">X</button>
         
     <div class="jcc-full-modal__content">
       <header class="jcc-full-modal__header">
         <h1 class="jcc-full-modal__title" id="dialog-title">{{ title }}</h1>
-        <h2 class="jcc-full-modal__lead">{{lead}}</h2>
+        <h2 class="jcc-full-modal__lead">{{ lead }}</h2>
       </header>
 
       <section class="jcc-full-modal__body">
