@@ -7,11 +7,13 @@
 		
 		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?{{ cacheBuster }}" media="all" />
 		<link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
-		
+	
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		{{ patternLabHead | raw }}
 		<!-- End Pattern Lab -->
 		
 	</head>
 	<body class="{{ bodyClass }}">
-	
+	<div style="width:0;height:0;position:absolute;overflow:hidden;">
+  	{% include "../../images/icomoon/symbol-defs.svg" %}
+  </div>
