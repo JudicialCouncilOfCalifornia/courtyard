@@ -65,3 +65,6 @@ a {
   font-size: 90%;
   line-height: 1;
 }
+
+.sg-pattern-example .jcc-full-modal__backdrop,
+.sg-pattern-example .jcc-full-modal__dialog::backdrop { display: none; }

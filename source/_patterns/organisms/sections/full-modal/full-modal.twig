@@ -1,0 +1,87 @@
+<button id="open-modal">Open Dialog Window</button> <!-- This element is for the Pattern Lab Only -->
+
+<div id="jcc-full-modal" class="jcc-full-modal{% if background_variant %} jcc-full-modal--{{ background_variant }}{% endif %}{% if column_variant %} jcc-full-modal--{{ column_variant }}{% endif %}" >
+  
+  <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide></div>
+
+  <dialog open class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="dialog-title" title="{{ title }}">
+    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">X</button>
+        
+    <div class="jcc-full-modal__content">
+      <header class="jcc-full-modal__header">
+        <h1 class="jcc-full-modal__title" id="dialog-title">{{ title }}</h1>
+        <h2 class="jcc-full-modal__lead">{{ lead }}</h2>
+      </header>
+
+      <section class="jcc-full-modal__body">
+        <div class="jcc-full-modal__column">
+          {{ column_content_left }}
+        </div>
+        
+        {% if column_content_right %}
+          <div class="jcc-full-modal__column">
+            {{ column_content_right }}
+          </div>  
+        {% endif %}
+
+      </section>
+      <footer class="jcc-full-modal__footer">
+        <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">Done</button>
+      </footer>
+  </dialog>
+</div>
+
+{# <!--
+  Main container related notes:
+  - It can have a different id than `main`, however you will have to pass it as a second argument to the A11yDialog instance. See further down.
+-->
+<!-- <div id="main">
+  
+    Here lives the main content of the page.
+  
+</div> -->
+
+<!--
+  Dialog container related notes:
+  - It is not the actual dialog window, just the container with which the script interacts.
+  - It can have a different id than `my-accessible-dialog`, but it needs an `id`
+  anyway.
+-->
+<div class="jcc-full-modal">
+  <!--
+    Overlay related notes:
+    - It has to have the `tabindex="-1"` attribute.
+    - It doesn’t have to have the `data-a11y-dialog-hide` attribute, however this is recommended. It hides the dialog when clicking outside of it.
+  -->
+  <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide></div>
+
+  <!--
+    Dialog window content related notes:
+    - It is the actual visual dialog element.
+    - It may have the `alertdialog` role to make it behave like a “modal”. See the “Usage as a modal” section of the docs.
+    - It doesn’t have to be a `<dialog>` element, it can be a `<div>` element with the `dialog` or `alertdialog` role (e.g. `<div role="dialog">`).
+    - It doesn’t have to have the `aria-labelledby` attribute however this is recommended. It should match the `id` of the dialog title.
+  -->
+  <dialog aria-labelledby="dialog-title">
+    <!--
+      Closing button related notes:
+      - It does have to have the `type="button"` attribute.
+      - It does have to have the `data-a11y-dialog-hide` attribute.
+      - It does have to have an aria-label attribute if you use an icon as content.
+    -->
+    <button type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
+      &times;
+    </button>
+
+    <!--
+      Dialog title related notes:
+      - It should have a different content than `Dialog Title`.
+      - It can have a different id than `dialog-title`.
+    -->
+    <h1 id="dialog-title">Dialog Title</h1>
+
+    <!--
+      Here lives the main content of the dialog.
+    -->
+  </dialog>
+</div> #}
