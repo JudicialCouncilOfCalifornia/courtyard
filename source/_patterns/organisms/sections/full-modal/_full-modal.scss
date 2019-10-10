@@ -3,10 +3,11 @@
 // Disables non-native backdrop
 .jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop { display: none; }
 
+// Shows the dialog window. This attr is added by the A11yDialog script.
 .jcc-full-modal__dialog[open] { display: block; }
 
+// Hides the dialog window. This attr is added by the A11yDialog script.
 .jcc-full-modal [aria-hidden='true'] { display: none; }
-
 
 .jcc-full-modal__backdrop,
 .jcc-full-modal__dialog::backdrop {
@@ -17,9 +18,8 @@
   left: 0;
   right: 0;
 
-
   // Visual Attributes
-  background-color: rgba(red, .2);
+  background-color: rgba(black, .2);
 }
 
 .jcc-full-modal__dialog {
