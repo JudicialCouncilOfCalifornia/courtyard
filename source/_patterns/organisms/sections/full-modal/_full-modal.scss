@@ -3,10 +3,11 @@
 // Disables non-native backdrop
 .jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop { display: none; }
 
+// Shows the dialog window. This attr is added by the A11yDialog script.
 .jcc-full-modal__dialog[open] { display: block; }
 
+// Hides the dialog window. This attr is added by the A11yDialog script.
 .jcc-full-modal [aria-hidden='true'] { display: none; }
-
 
 .jcc-full-modal__backdrop,
 .jcc-full-modal__dialog::backdrop {
@@ -17,9 +18,8 @@
   left: 0;
   right: 0;
 
-
   // Visual Attributes
-  background-color: rgba(red, .2);
+  background-color: rgba(black, .2);
 }
 
 .jcc-full-modal__dialog {
@@ -99,62 +99,3 @@
     @include u-bg('primary-lighter');
   }  
 }
-
-
-// .example-content-main {
-//   @include u-width(full);
-
-//   @include at-media(tablet) {
-//     @include grid-col(6);
-//   }
-
-//   @include at-media(desktop) {
-//     @include grid-col(8);
-//   }
-// }
-
-
-
-// ================================================================================
-// Styles for after JS is working
-// ================================================================================
-// .jcc-full-modal__backdrop { display: none; }
-// .jcc-full-modal__dialog[open] { display: block; }
-
-// ================================================================================
-// Original Comments from the A11yDialog Plugin
-// We will need to revist this to make sure the dialog is fully compliant
-// ================================================================================
-// /**
-//  * When the native `<dialog>` element is supported, the overlay is implied and
-//  * can be styled with `::backdrop`, which means the DOM one should be removed.
-//  *
-//  * The `data-a11y-dialog-native` attribute is set by the script when the
-//  * `<dialog>` element is properly supported.
-//  *
-//  * Feel free to replace `:first-child` with the overlay selector you prefer.
-//  */
-// [data-a11y-dialog-native] > :first-child {
-//   display: none;
-// }
-
-// *
-//  * When the `<dialog>` element is not supported, its default display is `inline`
-//  * which can cause layout issues. This makes sure the dialog is correctly
-//  * displayed when open.
- 
-// dialog[open] {
-//   display: block;
-// }
-
-// /**
-//  * When the native `<dialog>` element is not supported, the script toggles the
-//  * `aria-hidden` attribute on the container. If `aria-hidden` is set to `true`,
-//  * the container should be hidden entirely.
-//  *
-//  * Feel free to replace `.dialog-container` with the container selector you
-//  * prefer.
-//  */
-// .dialog-container[aria-hidden='true'] {
-//   display: none;
-// }
