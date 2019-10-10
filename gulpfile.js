@@ -121,6 +121,13 @@ const plJs = () => {
     .pipe(
       webpack(
         {
+          plugins: [
+            new compiler.ProvidePlugin({
+              $: "jquery",
+              jQuery: "jquery",
+              "window.jQuery": "jquery"
+            })
+          ],
           output: {
             filename: "scripts.js"
           }

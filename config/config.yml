@@ -33,8 +33,7 @@ twigDebug: true
 twigAutoescape: false
 twigDefaultDateFormat: ""
 twigDefaultIntervalFormat: ""
-twigExtensions: 
-  - '\Ajgl\Twig\Extension\BreakpointExtension'
+twigExtensions: '\Ajgl\Twig\Extension\BreakpointExtension'
 twigMacroExt: macro.twig
 twigFilterExt: filter.php
 twigFunctionExt: function.php
