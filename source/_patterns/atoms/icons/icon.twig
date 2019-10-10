@@ -1,5 +1,9 @@
 {% if icon %}
-  <svg class="icon icon-{{ icon }}">
-    <use xlink:href="{{ icon_file }}#i-{{ icon }}"></use>
-  </svg>
+  {% spaceless %}
+    <svg class="icon icon-{{ icon }}" role="img"
+      {%- if title %} title="{{ title }}"{% endif -%}
+      {%- if decorative %} aria-hidden="true"{% endif -%}>
+      <use xlink:href="{{ icon_file }}#i-{{ icon }}"></use>
+    </svg>
+  {% endspaceless %}
 {% endif %}
