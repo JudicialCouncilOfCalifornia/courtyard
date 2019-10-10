@@ -1,3 +1,3 @@
 import easydropdown from "easydropdown";
 
-easydropdown.all();
+const edd = easydropdown.all();
