@@ -1,9 +1,11 @@
 @import "../../../protons/global";
 
-.jcc-full-modal__dialog { display: block; } // Temporary Style until JS is working
-
 // Disables non-native backdrop
 .jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop { display: none; }
+
+.jcc-full-modal__dialog[open] { display: block; }
+
+.jcc-full-modal [aria-hidden='true'] { display: none; }
 
 
 .jcc-full-modal__backdrop,
@@ -14,6 +16,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+
 
   // Visual Attributes
   background-color: rgba(red, .2);
@@ -78,7 +81,6 @@
 .jcc-full-modal__lead {
   @include u-width(full);
 }
-
 
 .jcc-full-modal--has-two-columns-threequarter {
   @include at-media(desktop) {
