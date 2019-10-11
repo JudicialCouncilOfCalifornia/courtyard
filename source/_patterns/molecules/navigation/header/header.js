@@ -2,5 +2,7 @@
 require("slicknav/jquery.slicknav");
 
 $(function() {
-  $("#slick-menu").slicknav();
+  $("#slick-menu").slicknav({
+    prependTo: "#menu_header"
+  });
 });
