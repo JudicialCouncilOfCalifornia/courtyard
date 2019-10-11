@@ -24,12 +24,17 @@
 
 .jcc-full-modal__dialog {
   // Structural Attributes
-  max-height: 90%;
+  min-height: 80%;
   margin: 5% auto;
   width: 90%;
   max-width: 70rem;
   position: relative;
-  @include u-padding(6);
+  @include u-padding(2);
+  box-sizing: border-box;
+
+  @include at-media(desktop) {
+    @include u-padding(6);
+  }
 
   // Visual Attributes
   border: 0;
@@ -38,9 +43,14 @@
 
 .jcc-full-modal__close-button {
   position: absolute;
-  top: 32px;
-  right: 32px;
   webkit-appearance: none;
+  top: 0;
+  right: 0;
+
+  @include at-media(desktop) {
+    top: 32px;
+    right: 32px;
+  }
 }
 
 .jcc-full-modal__content { 
@@ -65,6 +75,7 @@
 .jcc-full-modal__column {
   @include grid-col;
   @include u-width(full);
+  @include grid-col(12);
 
   @include at-media(desktop) {
     @include grid-col(6);
