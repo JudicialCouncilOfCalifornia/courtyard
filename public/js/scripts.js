@@ -7397,7 +7397,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 }, function (e, t, n) {
   (function (e) {
     n(87), e(function () {
-      e("#menu").slicknav();
+      e("#slick-menu").slicknav();
     });
   }).call(this, n(21));
 }, function (e, t, n) {

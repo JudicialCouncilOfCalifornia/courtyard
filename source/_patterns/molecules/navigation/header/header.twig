@@ -1,10 +1,9 @@
-<ul id="menu" class="slicknav_menu">
-  {% for item in menu_items %}
-    <li>
-      <a href="{{ item.url }}">{{ item.name }}</a>
-    </li>
-    {% endfor %}
-</ul>
-
-
-    
+<div class="slicknav_menu slicknav_menu--desktop">
+	<ul id="slick-menu" class="slicknav_nav">
+	  {% for item in menu_items %}
+	    <li>
+	      <a href="{{ item.url }}">{{ item.name }}</a>
+	    </li>
+	    {% endfor %}
+	</ul>
+</div>

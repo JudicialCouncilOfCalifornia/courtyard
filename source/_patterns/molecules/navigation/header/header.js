@@ -2,5 +2,5 @@
 require("slicknav/jquery.slicknav");
 
 $(function() {
-  $("#menu").slicknav();
+  $("#slick-menu").slicknav();
 });
