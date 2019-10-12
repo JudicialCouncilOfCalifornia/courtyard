@@ -1,17 +1,7 @@
-<div class="jcc-dropdown">
+<div class="jcc-dropdown{% if size_variant %} jcc-dropdown--{{size_variant}}{% endif %}" title="{{ title }}">
   <select>
     {% for option in options %}
     <option value="{{ option.value }}">{{ option.label }}</option>
     {% endfor %}
   </select>   
-</div>
-
-<div class="jcc-styleguide-spacer"></div> <!-- only for Pattern Lab -->
-
-<div class="jcc-dropdown jcc-dropdown--jumbo">
-	<select>
-	  {% for option in options %}
-	  <option value="{{ option.value }}">{{ option.label }}</option>
-	  {% endfor %}
-	</select>
 </div>
