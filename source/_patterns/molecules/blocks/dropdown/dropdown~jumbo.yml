@@ -1,5 +1,5 @@
 title: Dropdown Component Title Information
-size_variant: #is-jumbo
+size_variant: is-jumbo
 options:
 - label: Select # First option of the list is the default value
   value: ""     # and has a no value.
