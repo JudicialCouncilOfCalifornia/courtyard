@@ -4,7 +4,13 @@
     <form action="#" class="jcc-datefinder__form">
       <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
       <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
-      <input id="filing_date" type="date" class="jcc-datefinder__input" placeholder="{{filing_date }}">
+      {% include '@atoms/forms/date-input.twig' with  {
+        title: date.title,
+        hint: date.hint,
+        month_label: date.month_label,
+        day_label: date.day_label,
+        year_label: date.year_label
+      } %}
     </form>
     <div class="jcc-datefinder__adjacent-dates">
       <p class="jcc-datefinder__label">{{ serve_date_label }}</p>

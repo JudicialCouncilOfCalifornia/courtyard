@@ -1,0 +1,27 @@
+<form class="usa-form">
+  <fieldset class="usa-fieldset">
+    {% if title %}
+    <legend class="usa-legend">{{ title }}</legend>
+    {% endif %}
+    {% if hint %}
+    <span class="usa-hint" id="dobHint">{{ hint }}</span>
+    {% endif %}
+    {% if error %}
+    <span class="usa-error-message" id="input-error-message" role="alert">Helpful error message</span>
+    {% endif %}
+    <div class="usa-memorable-date">
+      <div class="usa-form-group usa-form-group--month">
+        <label class="usa-label" for="date_of_birth_1">{{ month_label }}</label>
+        <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_1" name="date_of_birth_1" type="number" min="1" max="12" value="">
+      </div>
+      <div class="usa-form-group usa-form-group--day">
+        <label class="usa-label" for="date_of_birth_2">{{ day_label }}</label>
+        <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_2" name="date_of_birth_2" type="number" min="1" max="31" value="">
+      </div>
+      <div class="usa-form-group usa-form-group--year">
+        <label class="usa-label" for="date_of_birth_3">{{ year_label }}</label>
+        <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_3" name="date_of_birth_3" type="number" min="1900" max="2019" value="">
+      </div>
+    </div>
+  </fieldset>
+</form>

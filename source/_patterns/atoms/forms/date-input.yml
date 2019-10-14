@@ -1,0 +1,6 @@
+title: Filing Date
+hint: 'For example: 04 28 1986'
+month_label: Month
+day_label: Day
+year_label: Year
+error: false
