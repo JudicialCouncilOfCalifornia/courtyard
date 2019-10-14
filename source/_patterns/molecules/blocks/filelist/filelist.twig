@@ -3,10 +3,16 @@
   <ul class="jcc-filelist__list">
     {% for file in files %}
       <li class="jcc-filelist__item">
-        <span class="jcc-filelist__icon" title="Download File"><svg class="icon i-folder"><use xlink:href="#i-folder"></use></svg>
+        <span class="jcc-filelist__icon">
+          {% include '@atoms/icons/icon.twig' with  {
+            icon: icon.icon,
+            title: icon.title,
+            icon_file: icon.icon_file,
+            decorative: icon.decorative
+          } %}
+        </span>
         <a download href="{{file.url}}" title="{{file.name}}">{{file.name}}</a>
       </li>
     {% endfor %}
   </ul>
-
 </div>
