@@ -3,15 +3,17 @@ headergroup:
   title: "How can we help you today?"
 title: "Lorem ipsum"
 lead: "Nullam at semper mauris, at rhoncus purus."
-column_content_left: "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
+column_content_left:
+  "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
   consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula
   risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
   sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
   rhoncus.</p>"
-column_content_right: "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
+column_content_right:
+  "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
   consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula
   risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
   sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
   rhoncus.</p>"
 background_variant: "has-background-color"
-column_variant: "has-two-columns-half"
+column_variant: "has-two-columns-half" #has-two-columns-half has-two-columns-threequarter

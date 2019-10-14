@@ -13281,8 +13281,8 @@ h3 {
   max-width: 88ex ;
 }
 
-.jcc-hero__content--has-two-columns .jcc-hero__column-left,
-.jcc-hero__content--has-two-columns .jcc-hero__column-right {
+.jcc-hero--has-two-columns .jcc-hero__column-left,
+.jcc-hero--has-two-columns .jcc-hero__column-right {
   width: 100% ;
 }
 
@@ -13353,6 +13353,10 @@ dialog[open] {
 
 .jcc-postcard--has-background-image .jcc-postcard__content {
   background-color: white ;
+}
+
+.jcc-postcard--has-background-color {
+  background-color: #d9e8f6 ;
 }
 
 .jcc-postcard__container {
@@ -13670,17 +13674,17 @@ dialog[open] {
   line-height: 1.50829 ;
 }
 
-.jcc-text-section__content--has-one-column {
+.jcc-text-section--has-one-column {
   max-width: 88ex ;
 }
 
-.jcc-text-section__content--has-two-columns-half .jcc-text-section__column-left,
-.jcc-text-section__content--has-two-columns-half .jcc-text-section__column-right {
+.jcc-text-section--has-two-columns-half .jcc-text-section__column-left,
+.jcc-text-section--has-two-columns-half .jcc-text-section__column-right {
   width: 100% ;
 }
 
-.jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-left,
-.jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-right {
+.jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-left,
+.jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-right {
   width: 100% ;
 }
 
@@ -22603,7 +22607,7 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero__content--has-two-columns {
+  .jcc-hero--has-two-columns .jcc-hero__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -22612,12 +22616,12 @@ dialog[open] {
     margin-left: -0.5rem ;
     margin-right: -0.5rem ;
   }
-  .jcc-hero__content--has-two-columns > * {
+  .jcc-hero--has-two-columns .jcc-hero__content > * {
     padding-left: 0.5rem ;
     padding-right: 0.5rem ;
   }
-  .jcc-hero__content--has-two-columns .jcc-hero__column-left,
-  .jcc-hero__content--has-two-columns .jcc-hero__column-right {
+  .jcc-hero--has-two-columns .jcc-hero__column-left,
+  .jcc-hero--has-two-columns .jcc-hero__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
@@ -22726,8 +22730,8 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-text-section__content--has-two-columns-half,
-  .jcc-text-section__content--has-two-columns-threequarter {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -22736,25 +22740,25 @@ dialog[open] {
     margin-left: -0.5rem ;
     margin-right: -0.5rem ;
   }
-  .jcc-text-section__content--has-two-columns-half > *,
-  .jcc-text-section__content--has-two-columns-threequarter > * {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content > *,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 0.5rem ;
     padding-right: 0.5rem ;
   }
-  .jcc-text-section__content--has-two-columns-half .jcc-text-section__column-left,
-  .jcc-text-section__content--has-two-columns-half .jcc-text-section__column-right {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__column-left,
+  .jcc-text-section--has-two-columns-half .jcc-text-section__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-left {
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-left {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 66.66667% ;
   }
-  .jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-right {
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
@@ -22905,11 +22909,11 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero__content--has-two-columns {
+  .jcc-hero--has-two-columns .jcc-hero__content {
     margin-left: -1rem ;
     margin-right: -1rem ;
   }
-  .jcc-hero__content--has-two-columns > * {
+  .jcc-hero--has-two-columns .jcc-hero__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
@@ -22937,13 +22941,13 @@ dialog[open] {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
-  .jcc-text-section__content--has-two-columns-half,
-  .jcc-text-section__content--has-two-columns-threequarter {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {
     margin-left: -1rem ;
     margin-right: -1rem ;
   }
-  .jcc-text-section__content--has-two-columns-half > *,
-  .jcc-text-section__content--has-two-columns-threequarter > * {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content > *,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }

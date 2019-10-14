@@ -48,10 +48,12 @@
   @include u-measure("6");
 }
 
-.jcc-hero__content--has-two-columns {
-  @include at-media("desktop") {
-    @include grid-row;
-    @include grid-gap;
+.jcc-hero--has-two-columns {
+  .jcc-hero__content {
+    @include at-media("desktop") {
+      @include grid-row;
+      @include grid-gap;
+    }
   }
 
   .jcc-hero__column-left,

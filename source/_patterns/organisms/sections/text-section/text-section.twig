@@ -1,10 +1,10 @@
-<div class="jcc-text-section jcc-text-section--{{ background_variant }}">
+<div class="jcc-text-section{% if background_variant %} jcc-text-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-text-section--{{ column_variant }}{% endif %}">
   <div class="jcc-text-section__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
         brow: headergroup.brow,
         title: headergroup.title
     } %}
-    <div class="jcc-text-section__content jcc-text-section__content--{{ column_variant }}">
+    <div class="jcc-text-section__content">
       <div class="jcc-text-section__column-left">
         {{ column_content_left }}
       </div>
