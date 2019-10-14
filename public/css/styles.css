@@ -13193,6 +13193,15 @@ h3 {
   padding-top: 0.5rem ;
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 .jcc-flowmap-step {
   width: 100% ;
 }
@@ -13272,43 +13281,9 @@ h3 {
   max-width: 88ex ;
 }
 
-.jcc-hero__content--has-two-columns .jcc-hero__column-left,
-.jcc-hero__content--has-two-columns .jcc-hero__column-right {
+.jcc-hero--has-two-columns .jcc-hero__column-left,
+.jcc-hero--has-two-columns .jcc-hero__column-right {
   width: 100% ;
-}
-
-/**
- * When the native `<dialog>` element is supported, the overlay is implied and
- * can be styled with `::backdrop`, which means the DOM one should be removed.
- *
- * The `data-a11y-dialog-native` attribute is set by the script when the
- * `<dialog>` element is properly supported.
- *
- * Feel free to replace `:first-child` with the overlay selector you prefer.
- */
-[data-a11y-dialog-native] > :first-child {
-  display: none;
-}
-
-/**
- * When the `<dialog>` element is not supported, its default display is `inline`
- * which can cause layout issues. This makes sure the dialog is correctly
- * displayed when open.
- */
-dialog[open] {
-  display: block;
-}
-
-/**
- * When the native `<dialog>` element is not supported, the script toggles the
- * `aria-hidden` attribute on the container. If `aria-hidden` is set to `true`,
- * the container should be hidden entirely.
- *
- * Feel free to replace `.dialog-container` with the container selector you
- * prefer.
- */
-.dialog-container[aria-hidden='true'] {
-  display: none;
 }
 
 .jcc-postcard {
@@ -13344,6 +13319,10 @@ dialog[open] {
 
 .jcc-postcard--has-background-image .jcc-postcard__content {
   background-color: white ;
+}
+
+.jcc-postcard--has-background-color {
+  background-color: #d9e8f6 ;
 }
 
 .jcc-postcard__container {
@@ -13558,6 +13537,117 @@ dialog[open] {
   margin-bottom: 0;
 }
 
+.jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop {
+  display: none;
+}
+
+.jcc-full-modal__dialog[open] {
+  display: block;
+}
+
+.jcc-full-modal [aria-hidden='true'] {
+  display: none;
+}
+
+.jcc-full-modal__backdrop,
+.jcc-full-modal__dialog::-webkit-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.jcc-full-modal__backdrop,
+.jcc-full-modal__dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.jcc-full-modal__dialog {
+  min-height: 80%;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 70rem;
+  position: relative;
+  padding: 1rem ;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  -webkit-box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.jcc-full-modal__close-button {
+  position: absolute;
+  webkit-appearance: none;
+  top: 0;
+  right: 0;
+}
+
+.jcc-full-modal__content {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 64rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
+.jcc-full-modal__header,
+.jcc-full-modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -ms-flex-wrap: wrap ;
+      flex-wrap: wrap ;
+}
+
+.jcc-full-modal__body,
+.jcc-full-modal__footer {
+  padding-top: 3rem ;
+}
+
+.jcc-full-modal__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -ms-flex-wrap: wrap ;
+      flex-wrap: wrap ;
+  margin-left: -0.5rem ;
+  margin-right: -0.5rem ;
+}
+
+.jcc-full-modal__body > * {
+  padding-left: 0.5rem ;
+  padding-right: 0.5rem ;
+}
+
+.jcc-full-modal__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0 ;
+  width: auto ;
+  width: 100% ;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 100% ;
+}
+
+.jcc-full-modal__title,
+.jcc-full-modal__lead {
+  width: 100% ;
+}
+
+.jcc-full-modal--has-background-color .jcc-full-modal__dialog {
+  background-color: #d9e8f6 ;
+}
+
 .jcc-steps-section {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
@@ -13661,17 +13751,17 @@ dialog[open] {
   line-height: 1.50829 ;
 }
 
-.jcc-text-section__content--has-one-column {
+.jcc-text-section--has-one-column {
   max-width: 88ex ;
 }
 
-.jcc-text-section__content--has-two-columns-half .jcc-text-section__column-left,
-.jcc-text-section__content--has-two-columns-half .jcc-text-section__column-right {
+.jcc-text-section--has-two-columns-half .jcc-text-section__column-left,
+.jcc-text-section--has-two-columns-half .jcc-text-section__column-right {
   width: 100% ;
 }
 
-.jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-left,
-.jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-right {
+.jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-left,
+.jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-right {
   width: 100% ;
 }
 
@@ -22594,7 +22684,7 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero__content--has-two-columns {
+  .jcc-hero--has-two-columns .jcc-hero__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -22603,12 +22693,12 @@ dialog[open] {
     margin-left: -0.5rem ;
     margin-right: -0.5rem ;
   }
-  .jcc-hero__content--has-two-columns > * {
+  .jcc-hero--has-two-columns .jcc-hero__content > * {
     padding-left: 0.5rem ;
     padding-right: 0.5rem ;
   }
-  .jcc-hero__content--has-two-columns .jcc-hero__column-left,
-  .jcc-hero__content--has-two-columns .jcc-hero__column-right {
+  .jcc-hero--has-two-columns .jcc-hero__column-left,
+  .jcc-hero--has-two-columns .jcc-hero__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
@@ -22686,6 +22776,49 @@ dialog[open] {
     -ms-flex-wrap: wrap ;
         flex-wrap: wrap ;
   }
+  .jcc-full-modal__dialog {
+    padding: 3rem ;
+  }
+  .jcc-full-modal__close-button {
+    top: 32px;
+    right: 32px;
+  }
+  .jcc-full-modal__content {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+  }
+  .jcc-full-modal__body {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-full-modal__body > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-full-modal__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 50% ;
+  }
+  .jcc-full-modal__column:only-of-type {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 100% ;
+  }
+  .jcc-full-modal--has-two-columns-threequarter .jcc-full-modal__column:first-of-type {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 66.66667% ;
+  }
+  .jcc-full-modal--has-two-columns-threequarter .jcc-full-modal__column:last-of-type {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
+  }
   .jcc-steps-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -22717,8 +22850,8 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-text-section__content--has-two-columns-half,
-  .jcc-text-section__content--has-two-columns-threequarter {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -22727,25 +22860,25 @@ dialog[open] {
     margin-left: -0.5rem ;
     margin-right: -0.5rem ;
   }
-  .jcc-text-section__content--has-two-columns-half > *,
-  .jcc-text-section__content--has-two-columns-threequarter > * {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content > *,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 0.5rem ;
     padding-right: 0.5rem ;
   }
-  .jcc-text-section__content--has-two-columns-half .jcc-text-section__column-left,
-  .jcc-text-section__content--has-two-columns-half .jcc-text-section__column-right {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__column-left,
+  .jcc-text-section--has-two-columns-half .jcc-text-section__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-left {
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-left {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 66.66667% ;
   }
-  .jcc-text-section__content--has-two-columns-threequarter .jcc-text-section__column-right {
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__column-right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
@@ -22896,11 +23029,11 @@ dialog[open] {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero__content--has-two-columns {
+  .jcc-hero--has-two-columns .jcc-hero__content {
     margin-left: -1rem ;
     margin-right: -1rem ;
   }
-  .jcc-hero__content--has-two-columns > * {
+  .jcc-hero--has-two-columns .jcc-hero__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
@@ -22928,13 +23061,13 @@ dialog[open] {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
-  .jcc-text-section__content--has-two-columns-half,
-  .jcc-text-section__content--has-two-columns-threequarter {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {
     margin-left: -1rem ;
     margin-right: -1rem ;
   }
-  .jcc-text-section__content--has-two-columns-half > *,
-  .jcc-text-section__content--has-two-columns-threequarter > * {
+  .jcc-text-section--has-two-columns-half .jcc-text-section__content > *,
+  .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }

@@ -35,13 +35,12 @@
     "path": "^0.12.7",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
+    "svgxuse": "^1.2.6",
     "uswds-gulp": "github:uswds/uswds-gulp",
     "uswds": "^2.1.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {
-    "svgxuse": "^1.2.6"
-  },
+  "dependencies": {},
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2

@@ -446,7 +446,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }(void 0 !== n || window);
   }).call(this, n(7));
 }, function (e, t, n) {
-  n(24), n(26), n(79), n(80), n(81), e.exports = n(83);
+  n(24), n(26), n(79), n(80), n(82), e.exports = n(84);
 }, function (e, t, n) {
   (function (e) {
     var t, o, i;
@@ -3289,15 +3289,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   t["default"] = o;
 }, function (e, t) {}, function (e, t, n) {
-  "use strict";
-
-  n.r(t);
-  var o = n(22),
-      i = n.n(o);
-  var r = document.getElementById("my-accessible-dialog");
-  new i.a(r);
-}, function (e, t, n) {
-  n(82);
+  n(81);
 }, function (e, t) {
   !function () {
     "use strict";
@@ -3359,7 +3351,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }), window && (window.a11yToggle = a);
   }();
 }, function (e, t, n) {
-  n(84);
+  "use strict";
+
+  n.r(t);
+  n(83);
 }, function (e, t) {
   /*!
    * @copyright Copyright (c) 2017 IcoMoon.io
@@ -3466,4 +3461,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       }, "complete" !== document.readyState ? window.addEventListener("load", _n, !1) : _n();
     }
   }();
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t);
+  var o = n(22),
+      i = n.n(o);
+  var r = document.getElementById("jcc-full-modal");
+  new i.a(r);
 }]);

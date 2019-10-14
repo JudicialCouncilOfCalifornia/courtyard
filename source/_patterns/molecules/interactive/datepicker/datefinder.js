@@ -1,1 +1,1 @@
-require("svgxuse");
+import "svgxuse";
