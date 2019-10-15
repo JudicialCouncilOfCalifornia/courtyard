@@ -4,12 +4,14 @@
   @include u-radius("lg");
   @include u-border(1px, "primary-vivid");
   @include u-padding-x(3);
+  @include u-text("base-darkest");
   position: relative;
   text-align: left;
 }
 
 .jcc-tile__title {
   a {
+    @include u-text("primary");
     text-decoration: none;
 
     &::after {
@@ -24,5 +26,5 @@
 }
 
 .jcc-tile.is-secondary {
-  @include u-bg('secondary-lighter');
+  @include u-bg("base-lightest");
 }

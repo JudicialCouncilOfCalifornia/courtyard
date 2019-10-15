@@ -17,7 +17,7 @@
 }
 
 .jcc-hero--has-background-color {
-  @include u-bg("primary-lighter");
+  @include u-bg("gray-2");
 }
 
 .jcc-hero__container {
@@ -30,16 +30,17 @@
 .jcc-hero__content {
   @include u-padding-top(10);
   @include u-padding-bottom(6);
-  @include u-line-height("body", 4);
+  @include u-line-height("body", 6);
+  @include u-font("body", 6);
   @include u-position("relative");
 }
 
 .jcc-hero__title {
-  @include u-font("heading", "2xl");
+  @include u-font("heading", 16);
 }
 
 .jcc-hero__lead {
-  @include u-font("body", "lg");
+  @include u-font("body", 10);
 }
 
 .jcc-hero__content--has-one-column {

@@ -1,11 +1,15 @@
 @import "../../../protons/global";
 
 .jcc-breadcrumbs {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
+  @include add-list-reset;
 }
 
 .jcc-breadcrumb__item {
+  @include u-font-size("body", 8);
+  @include u-padding-right(1);
   display: inline;
+
+  a {
+    @include u-text("cyan-40v");
+  }
 }
