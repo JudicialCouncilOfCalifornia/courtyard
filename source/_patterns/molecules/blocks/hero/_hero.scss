@@ -2,6 +2,7 @@
 
 .jcc-hero {
   @include u-position("relative");
+  @include u-margin-bottom(6);
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");
@@ -37,6 +38,7 @@
 
 .jcc-hero__title {
   @include u-font("heading", 16);
+  @include u-line-height("heading", 2);
 }
 
 .jcc-hero__lead {

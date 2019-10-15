@@ -5,6 +5,7 @@
   @include u-border(1px, "primary-vivid");
   @include u-padding-x(3);
   @include u-text("base-darkest");
+  @include u-shadow(2);
   position: relative;
   text-align: left;
 }

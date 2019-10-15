@@ -3,6 +3,8 @@
 .jcc-header {
   @include u-bg("blue-80v");
   @include u-position("relative");
+  @include u-border-bottom("gold-30v");
+  @include u-border-bottom("05");
   z-index: 10;
 }
 

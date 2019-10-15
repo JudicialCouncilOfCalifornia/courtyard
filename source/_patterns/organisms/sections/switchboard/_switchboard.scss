@@ -2,8 +2,10 @@
 
 .jcc-switchboard {
   @include section-wrapper;
-  text-align: left;
   @include u-padding-y(8);
+  @include u-border-top("gold-30v");
+  @include u-border-top(1);
+  text-align: left;
 
   .jcc-header-group {
     @include u-padding-bottom(4);
@@ -11,7 +13,7 @@
 }
 
 .jcc-switchboard--has-background-color {
-  @include u-bg("blue-50v");
+  @include u-bg("blue-60v");
   @include u-text("white");
 }
 

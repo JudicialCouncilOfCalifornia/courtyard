@@ -13221,6 +13221,7 @@ h3 {
 
 .jcc-hero {
   position: relative ;
+  margin-bottom: 3rem ;
 }
 
 .jcc-hero .jcc-breadcrumbs-nav {
@@ -13277,6 +13278,7 @@ h3 {
 .jcc-hero__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 3.48077rem;
+  line-height: 1.20663 ;
 }
 
 .jcc-hero__lead {
@@ -13411,6 +13413,8 @@ h3 {
   padding-left: 1.5rem ;
   padding-right: 1.5rem ;
   color: #1b1b1b ;
+  -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
   position: relative;
   text-align: left;
 }
@@ -13922,6 +13926,10 @@ h3 {
 .jcc-header {
   background-color: #112f4e ;
   position: relative ;
+  border-bottom-color: #e5a000 ;
+  border-bottom-style: solid;
+  border-bottom-width: 0.25rem;
+  border-bottom-style: solid;
   z-index: 10;
 }
 
@@ -14124,9 +14132,13 @@ h3 {
 .jcc-switchboard {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
-  text-align: left;
   padding-bottom: 4rem ;
   padding-top: 4rem ;
+  border-top-color: #e5a000 ;
+  border-top-style: solid;
+  border-top-width: 0.5rem;
+  border-top-style: solid;
+  text-align: left;
 }
 
 .jcc-switchboard .jcc-header-group {
@@ -14134,7 +14146,7 @@ h3 {
 }
 
 .jcc-switchboard--has-background-color {
-  background-color: #0076d6 ;
+  background-color: #005ea2 ;
   color: white ;
 }
 
