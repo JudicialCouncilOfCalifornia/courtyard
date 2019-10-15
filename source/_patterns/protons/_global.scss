@@ -9,7 +9,6 @@
   @include grid-container("widescreen");
 }
 
-
 // Cover image with bleed
 @mixin cover-image {
   position: absolute;
@@ -50,7 +49,7 @@ $aspect-width: 16;
     left: -7px;
     padding: 0.625rem;
     background-color: color("primary");
-    border: 3px solid color("white");
+    border: 3px solid color("gold-30v");
     border-radius: 50%;
     color: color("white");
     content: counter(step-counter);
@@ -68,9 +67,9 @@ $aspect-width: 16;
     display: block;
     width: 0;
     height: 100%;
-    border: 1px solid color("base-lightest");
+    border: 1px solid color("gold-30v");
     position: absolute;
-    top: 0;
+    top: 2.5rem;
     left: 1rem;
     z-index: -1;
   }

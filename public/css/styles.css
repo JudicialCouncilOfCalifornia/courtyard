@@ -13331,7 +13331,8 @@ h3 {
 }
 
 .jcc-postcard--has-background-color {
-  background-color: #d9e8f6 ;
+  background-color: #f0f0f0 ;
+  padding-top: 3rem ;
 }
 
 .jcc-postcard__container {
@@ -13378,7 +13379,7 @@ h3 {
   left: -7px;
   padding: 0.625rem;
   background-color: #005ea2;
-  border: 3px solid white;
+  border: 3px solid #e5a000;
   border-radius: 50%;
   color: white;
   content: counter(step-counter);
@@ -13394,9 +13395,9 @@ h3 {
   display: block;
   width: 0;
   height: 100%;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #e5a000;
   position: absolute;
-  top: 0;
+  top: 2.5rem;
   left: 1rem;
   z-index: -1;
 }

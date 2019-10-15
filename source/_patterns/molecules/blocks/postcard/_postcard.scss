@@ -19,7 +19,8 @@
 }
 
 .jcc-postcard--has-background-color {
-  @include u-bg("primary-lighter");
+  @include u-bg("base-lightest");
+  @include u-padding-top(6);
 }
 
 .jcc-postcard__media {
