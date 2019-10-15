@@ -1,7 +1,7 @@
 @import "../../../protons/global";
 
 .jcc-hero {
-  position: relative;
+  @include u-position("relative");
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");
@@ -28,12 +28,10 @@
 }
 
 .jcc-hero__content {
-  @include u-padding-y(6);
+  @include u-padding-top(10);
+  @include u-padding-bottom(6);
   @include u-line-height("body", 4);
-  position: relative;
-
-  @include at-media("desktop") {
-  }
+  @include u-position("relative");
 }
 
 .jcc-hero__title {
@@ -49,7 +47,7 @@
 }
 
 .jcc-hero--has-two-columns {
-  .jcc-hero__content {
+  .jcc-hero__columns {
     @include at-media("desktop") {
       @include grid-row;
       @include grid-gap;

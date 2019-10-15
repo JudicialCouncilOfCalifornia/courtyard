@@ -1,7 +1,5 @@
 <div class="jcc-hero{% if background_variant %} jcc-hero--{{ background_variant }}{% endif %}{% if column_variant %} jcc-hero--{{ column_variant }}{% endif %}">
   <div class="jcc-hero__container">
-    {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
-
     {% if image %}
     <div class="jcc-hero__media">
       <img src="{{ image }}" alt="{{ alt }}" />
@@ -9,17 +7,20 @@
     {% endif %}
 
     <div class="jcc-hero__content">
-      <div class="jcc-hero__column-left">
-        <h2 class="jcc-hero__title">{{ title }}</h2>
-        {% if lead %}
-        <p class="jcc-hero__lead">{{ lead }}</p>
+      {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
+      <div class="jcc-hero__columns">
+        <div class="jcc-hero__column-left">
+          <h2 class="jcc-hero__title">{{ title }}</h2>
+          {% if lead %}
+          <p class="jcc-hero__lead">{{ lead }}</p>
+          {% endif %}
+        </div>
+        {% if column_content_right %}
+        <div class="jcc-hero__column-right">
+          {{ column_content_right }}
+        </div>
         {% endif %}
       </div>
-      {% if column_content_right %}
-      <div class="jcc-hero__column-right">
-        {{ column_content_right }}
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>

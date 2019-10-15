@@ -1,3 +1,5 @@
 public/
 config/
 *.yml
+*.svg
+images/

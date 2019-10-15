@@ -3,7 +3,6 @@
   <div class="jcc-datefinder__content">
     <form action="#" class="jcc-datefinder__form">
       <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
-      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
       {% include '@atoms/forms/date-input.twig' with  {
         title: date.title,
         hint: date.hint,
@@ -14,12 +13,26 @@
     </form>
     <div class="jcc-datefinder__adjacent-dates">
       <p class="jcc-datefinder__label">{{ serve_date_label }}</p>
-      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
+      <span class="jcc-datefinder__icon">
+        {% include '@atoms/icons/icon.twig' with  {
+            icon: send_icon.icon,
+            title: send_icon.title,
+            icon_file: send_icon.icon_file,
+            decorative: send_icon.decorative
+          } %}
+      </span>
       <p class="jcc-datefinder__date">{{ serve_date }}</p>
     </div>
     <div class="jcc-datefinder__adjacent-dates">
       <p class="jcc-datefinder__label">{{ respond_date_label }}</p>
-      <span class="jcc-datefinder__icon" title="Calendar">[&nbsp;&nbsp;&nbsp;]</span>
+      <span class="jcc-datefinder__icon">
+        {% include '@atoms/icons/icon.twig' with  {
+            icon: reply_icon.icon,
+            title: reply_icon.title,
+            icon_file: reply_icon.icon_file,
+            decorative: reply_icon.decorative
+          } %}
+      </span>
       <p class="jcc-datefinder__date">{{ respond_date }}</p>
     </div>
   </div>

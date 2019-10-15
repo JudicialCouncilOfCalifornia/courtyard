@@ -13154,6 +13154,11 @@ through all possible variants
   background-color: turqoise;
 }
 
+.jcc-logo {
+  height: 100px;
+  width: 100px;
+}
+
 .jcc-header-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.98901rem;
@@ -13215,7 +13220,7 @@ h3 {
 }
 
 .jcc-hero {
-  position: relative;
+  position: relative ;
 }
 
 .jcc-hero .jcc-breadcrumbs-nav {
@@ -13261,10 +13266,10 @@ h3 {
 }
 
 .jcc-hero__content {
+  padding-top: 5rem ;
   padding-bottom: 3rem ;
-  padding-top: 3rem ;
   line-height: 1.50829 ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-hero__title {
@@ -13880,6 +13885,20 @@ h3 {
 
 .slicknav_menu.slicknav_menu--desktop {
   display: none;
+}
+
+.slicknav_menu {
+  background-color: #112f4e ;
+}
+
+.jcc-header {
+  background-color: #112f4e ;
+  position: relative ;
+  z-index: 10;
+}
+
+.jcc-header__logo .jcc-logo {
+  position: absolute ;
 }
 
 .jcc-card-list {
@@ -23077,7 +23096,7 @@ h3 {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero--has-two-columns .jcc-hero__content {
+  .jcc-hero--has-two-columns .jcc-hero__columns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -23086,7 +23105,7 @@ h3 {
     margin-left: -0.5rem ;
     margin-right: -0.5rem ;
   }
-  .jcc-hero--has-two-columns .jcc-hero__content > * {
+  .jcc-hero--has-two-columns .jcc-hero__columns > * {
     padding-left: 0.5rem ;
     padding-right: 0.5rem ;
   }
@@ -23144,6 +23163,54 @@ h3 {
   }
   .slicknav_menu.slicknav_menu--desktop {
     display: block;
+  }
+  .slicknav_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .jcc-header__container {
+    margin-left: auto ;
+    margin-right: auto ;
+    max-width: 87.5rem ;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    padding-top: 1rem ;
+    padding-bottom: 1rem ;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between ;
+  }
+  .jcc-header__container::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .jcc-header_menu--desktop {
+    position: relative ;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end ;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0 ;
+  }
+  .jcc-header_menu--desktop.slicknav_menu.slicknav_menu--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+  }
+  .jcc-header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+    position: relative ;
   }
   .jcc-card-list {
     display: -webkit-box;
@@ -23428,11 +23495,11 @@ h3 {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero--has-two-columns .jcc-hero__content {
+  .jcc-hero--has-two-columns .jcc-hero__columns {
     margin-left: -1rem ;
     margin-right: -1rem ;
   }
-  .jcc-hero--has-two-columns .jcc-hero__content > * {
+  .jcc-hero--has-two-columns .jcc-hero__columns > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
@@ -23443,6 +23510,10 @@ h3 {
   .jcc-postcard__row > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
+  }
+  .jcc-header__container {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
   }
   .jcc-card-list {
     margin-left: -1rem ;

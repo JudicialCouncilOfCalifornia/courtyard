@@ -1,0 +1,13 @@
+<header class="jcc-header">
+  <div class="jcc-header__container">
+    <div class="jcc-header__logo">
+      {% include '@atoms/icons/logo.twig' with  {
+        icon: logo.icon,
+        title: logo.title,
+        icon_file: logo.icon_file,
+        decorative: logo.decorative
+      } %}
+    </div>
+    {% include '@molecules/navigation/header-nav/header-nav.twig' %}
+  </div>
+</header>
