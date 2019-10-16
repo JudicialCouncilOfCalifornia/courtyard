@@ -1,0 +1,52 @@
+@import "../../../protons/global";
+
+.jcc-cards-section {
+  @include section-wrapper;
+  @include u-padding-y(8);
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
+}
+
+.jcc-cards__container {
+  @include section-container;
+}
+
+.jcc-cards {
+  @include unstyled-list();
+  @include at-media("desktop") {
+    @include grid-row;
+    @include grid-gap;
+  }
+}
+
+.jcc-cards-section--has-two-columns,
+.jcc-cards-section--has-three-columns {
+  .jcc-cards {
+    @include at-media("desktop") {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+}
+
+.jcc-cards-section--has-two-columns {
+  .jcc-cards__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-cards-section--has-three-columns {
+  .jcc-cards__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}

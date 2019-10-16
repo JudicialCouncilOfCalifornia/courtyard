@@ -1,6 +1,6 @@
 @import "../../../protons/global";
 
-.jcc-flowmap-section {
+.jcc-timeline-section {
   @include section-wrapper;
 
   .jcc-header-group {
@@ -8,21 +8,19 @@
   }
 }
 
-.jcc-flowmap-section--has-background-color {
+.jcc-timeline-section--has-background-color {
   @include u-padding-top(6);
   @include u-bg("base-lightest");
 }
 
-.jcc-flowmap-section__container {
+.jcc-timeline-section__container {
   @include section-container;
 }
 
-.jcc-flowmap {
+.jcc-timeline {
   @include unstyled-list();
   @include at-media("desktop") {
     @include grid-row;
     // @include grid-gap;
   }
 }
-
-

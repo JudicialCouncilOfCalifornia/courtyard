@@ -1,6 +1,6 @@
 @import "../../../protons/global";
 
-.jcc-flowmap-step {
+.jcc-timeline-item {
   @include u-width(full);
 
   @include at-media(desktop) {
@@ -13,7 +13,7 @@
 
   // remove line from last timeline item
   &:last-of-type {
-    .jcc-flowmap-step__title {
+    .jcc-timeline-item__title {
       &:after {
         width: 0;
       }
@@ -21,7 +21,7 @@
   }
 }
 
-.jcc-flowmap-step__title {
+.jcc-timeline-item__title {
   position: relative;
 
   @include at-media(desktop) {

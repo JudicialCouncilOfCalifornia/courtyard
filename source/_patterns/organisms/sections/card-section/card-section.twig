@@ -1,0 +1,22 @@
+<div class="jcc-cards-section{% if background_variant %} jcc-cards-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-cards-section--{{ column_variant }}{% endif %}">
+  <div class="jcc-cards__container">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      brow: headergroup.brow,
+      title: headergroup.title
+    } %}  
+
+    <ul class="jcc-cards">
+      
+      {% for card in cards %}
+      <li class="jcc-cards__item">
+        {% include '@molecules/blocks/card/card.twig' with {
+          title: card.title,
+          excerpt: card.excerpt,
+          card_variant: card.card_variant
+        } %}
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</div>

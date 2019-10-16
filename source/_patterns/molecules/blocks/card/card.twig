@@ -1,4 +1,4 @@
-<div class="jcc-card jcc-card--{{ card_modifier }}">
+<div class="jcc-card jcc-card--{{ card_variant }}">
   {% if image %}
   <div class="jcc-card__media">
     <img src="{{ image }}" alt="{{ alt }}" />
@@ -7,7 +7,7 @@
 
   <div class="jcc-card__body">
     <h2 class="jcc-card__title">{{ title }}</h2>
-    {% if image %}
+    {% if excerpt %}
     <p class="jcc-card__excerpt">{{ excerpt }}</p>
     {% endif %}
   </div>
