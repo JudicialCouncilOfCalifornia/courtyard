@@ -13381,9 +13381,10 @@ a:visited {
 .jcc-step {
   counter-increment: step-counter;
   position: relative;
-  max-width: 72ex ;
+  max-width: 88ex ;
   line-height: 1.50829 ;
   padding-left: 6rem;
+  padding-bottom: 4rem;
   margin-bottom: 0;
   list-style: none;
 }

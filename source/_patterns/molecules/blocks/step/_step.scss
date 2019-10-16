@@ -3,9 +3,10 @@
 .jcc-step {
   @include custom-counter();
   @include custom-counter-line();
-  @include u-measure("5");
+  @include u-measure("6");
   @include u-line-height("body", 4);
   padding-left: 6rem;
+  padding-bottom: 4rem;
   margin-bottom: 0;
   list-style: none;
 }
