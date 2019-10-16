@@ -5,4 +5,6 @@ header_align_variant: "has-header-left"
 tag: "Page 2"
 headergroup:
   title: "Lorem ipsum"
-  lead: "Nullam at semper mauris, at rhoncus purus."
+  lead: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
+  body: ""
+  tag: "h2"
