@@ -42,22 +42,22 @@ $aspect-width: 16;
   position: relative;
 
   &::before {
+    @include u-font("heading", 14);
     position: absolute;
     top: -7px;
     right: 0;
     bottom: 0;
     left: -7px;
     padding: 0.625rem;
-    background-color: color("primary");
+    background-color: color("white");
     border: 3px solid color("gold-30v");
     border-radius: 50%;
-    color: color("white");
+    color: color("primary");
     content: counter(step-counter);
-    font-size: 1.125rem;
-    height: 3rem;
-    line-height: 1.125;
+    height: 4.6875rem;
+    line-height: 1.25;
     text-align: center;
-    width: 3rem;
+    width: 4.6875rem;
   }
 }
 
@@ -70,7 +70,7 @@ $aspect-width: 16;
     border: 1px solid color("gold-30v");
     position: absolute;
     top: 2.5rem;
-    left: 1rem;
+    left: 1.875rem;
     z-index: -1;
   }
 
@@ -161,5 +161,38 @@ $aspect-width: 16;
 @mixin print-hidden() {
   @include grid-media($media-print) {
     display: none !important;
+  }
+}
+
+// Type
+@mixin responsive-h-mega() {
+  @include u-font("heading", 14);
+
+  @include at-media(desktop) {
+    @include u-font("heading", 16);
+  }
+}
+
+@mixin responsive-h1() {
+  @include u-font("heading", 13);
+
+  @include at-media(desktop) {
+    @include u-font("heading", 15);
+  }
+}
+
+@mixin responsive-h2() {
+  @include u-font("heading", 12);
+
+  @include at-media(desktop) {
+    @include u-font("heading", 14);
+  }
+}
+
+@mixin responsive-h3() {
+  @include u-font("heading", 11);
+
+  @include at-media(desktop) {
+    @include u-font("heading", 14);
   }
 }

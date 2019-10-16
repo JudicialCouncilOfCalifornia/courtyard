@@ -1,15 +1,23 @@
 @import "../../../protons/global";
 
 .jcc-header-group__title {
-  @include u-font("heading", 14);
+  @include responsive-h2();
 }
 
 .jcc-header-group__brow {
-  @include u-font("body", 6);
+  @include u-font("body", 4);
   @include u-text("uppercase");
   @include u-text("ls-3");
+
+  @include at-media("desktop") {
+    @include u-font("body", 6);
+  }
 }
 
 .jcc-header-group__lead {
-  @include u-font("body", 9);
+  @include u-font("body", 8);
+
+  @include at-media("desktop") {
+    @include u-font("body", 9);
+  }
 }

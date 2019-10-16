@@ -37,7 +37,7 @@
 }
 
 .jcc-hero__title {
-  @include u-font("heading", 16);
+  @include responsive-h-mega();
   @include u-line-height("heading", 2);
 }
 
@@ -49,20 +49,42 @@
   @include u-measure("6");
 }
 
-.jcc-hero--has-two-columns {
+.jcc-hero--has-two-columns-half,
+.jcc-hero--has-two-columns-threequarter {
   .jcc-hero__columns {
     @include at-media("desktop") {
       @include grid-row;
       @include grid-gap;
     }
   }
+}
 
+.jcc-hero--has-two-columns-half {
   .jcc-hero__column-left,
   .jcc-hero__column-right {
     @include u-width(full);
 
     @include at-media(desktop) {
       @include grid-col(6);
+    }
+  }
+}
+
+.jcc-hero--has-two-columns-threequarter {
+  .jcc-hero__column-left,
+  .jcc-hero__column-right {
+    @include u-width(full);
+  }
+
+  .jcc-hero__column-left {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+  }
+
+  .jcc-hero__column-right {
+    @include at-media(desktop) {
+      @include grid-col(4);
     }
   }
 }

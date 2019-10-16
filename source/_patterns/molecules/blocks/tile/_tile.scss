@@ -12,7 +12,7 @@
 
 .jcc-tile__title {
   a {
-    @include u-text("primary");
+    @include u-text("blue-70v");
     text-decoration: none;
 
     &::after {

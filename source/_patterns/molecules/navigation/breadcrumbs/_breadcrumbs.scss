@@ -11,5 +11,11 @@
 
   a {
     @include u-text("cyan-40v");
+
+    &:after {
+      display: inline-block;
+      content: "/";
+      margin-left: 0.6275rem;
+    }
   }
 }

@@ -3,9 +3,15 @@
 .jcc-step {
   @include custom-counter();
   @include custom-counter-line();
-  @include u-measure('5');
-  @include u-line-height('body', 4);
-  padding-left: 3.5rem;
+  @include u-measure("5");
+  @include u-line-height("body", 4);
+  padding-left: 6rem;
   margin-bottom: 0;
   list-style: none;
+}
+
+.jcc-step__title {
+  @include u-font("body", 10);
+  @include u-text("bold");
+  @include u-text("blue-70v");
 }

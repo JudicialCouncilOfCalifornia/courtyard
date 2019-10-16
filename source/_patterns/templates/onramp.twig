@@ -1,13 +1,33 @@
 {% include '@organisms/global/header/header.twig' %}
-{% include '@molecules/blocks/hero/hero.twig' %}
+{% include '@molecules/blocks/hero/hero.twig' with {
+  title: top.hero.title,
+  lead: top.hero.lead,
+  column_variant: top.hero.column_variant,
+  breadcrumbs: [{ url: top.breadcrumbs.url, label: top.breadcrumbs.label }]
+} %}
 {% include '@molecules/blocks/postcard/postcard.twig' with {
   image: featured.postcard.image,
   alt: featured.postcard.alt,
-  title: featured.postcard.title,
-  lead: featured.postcard.lead,
   background_variant: featured.postcard.background_variant,
   header_align_variant: featured.postcard.header_align_variant,
-  tag: featured.tag.image
+  tag: featured.tag.image,
+  headergroup: featured.headergroup
+} %}
+{% include '@molecules/blocks/postcard/postcard.twig' with {
+  image: featured2.postcard.image,
+  alt: featured2.postcard.alt,
+  background_variant: featured2.postcard.background_variant,
+  header_align_variant: featured2.postcard.header_align_variant,
+  tag: featured2.tag.image,
+  headergroup: featured2.headergroup
+} %}
+{% include '@molecules/blocks/postcard/postcard.twig' with {
+  image: featured3.postcard.image,
+  alt: featured3.postcard.alt,
+  background_variant: featured3.postcard.background_variant,
+  header_align_variant: featured3.postcard.header_align_variant,
+  tag: featured3.tag.image,
+  headergroup: featured3.headergroup
 } %}
 {% include '@organisms/sections/switchboard/switchboard.twig' with {
 	headergroup: local.headergroup,

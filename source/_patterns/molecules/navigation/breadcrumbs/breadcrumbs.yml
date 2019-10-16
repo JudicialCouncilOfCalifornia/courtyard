@@ -1,7 +1,6 @@
 breadcrumbs:
   - url: "#"
-    name: "Home"
+    label: "Home"
     url_attributes: ""
-  - url: "#"
-    name: "Wage Garnishment"
+  - label: "Wage Garnishment"
     url_attributes: ""

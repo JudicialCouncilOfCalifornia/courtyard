@@ -1,7 +1,8 @@
 image: "https://placeimg.com/800/400/arch"
 alt: "Avatar"
-title: "Lorem ipsum"
-lead: "Nullam at semper mauris, at rhoncus purus."
 background_variant: "has-background-color" # has-background-color has-background-image
 header_align_variant: "has-header-left"
 tag: "Page 2"
+headergroup:
+  title: "Lorem ipsum"
+  lead: "Nullam at semper mauris, at rhoncus purus."
