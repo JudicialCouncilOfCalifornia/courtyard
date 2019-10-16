@@ -1,7 +1,9 @@
 @import "../../protons/global";
 
 a {
-  @include u-text("blue-cool-40v") &: hover {
+  @include u-text("blue-cool-40v");
+
+  &:hover {
     @include u-text("cyan-40v");
   }
 
