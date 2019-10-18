@@ -1,11 +1,23 @@
 @import "../../../protons/global";
 
+.jcc-header-group {
+  > :first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .jcc-header-group__title {
   @include responsive-h2();
 }
 
 h3.jcc-header-group__title {
-  @include u-font-family("sans");
+  @include responsive-h3($responsive-font-family: "body");
 }
 
 .jcc-header-group__brow {

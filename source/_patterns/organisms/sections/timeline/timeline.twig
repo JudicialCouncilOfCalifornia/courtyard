@@ -1,4 +1,4 @@
-<div class="jcc-timeline-section jcc-flowmap-section--{{ background_variant }}">
+<div class="jcc-timeline-section jcc-timeline-section--{{ background_variant }}">
   <div class="jcc-timeline-section__container">  
     
     {% include '@molecules/text/header-group/header-group.twig' with {
@@ -6,9 +6,9 @@
       title: headergroup.title
     } %}   
     
-    <ul class="jcc-timeline">
+    <ul class="jcc-timeline" aria-label="timeline" tabindex="0">
       
-      {% for item in flowmap %}
+      {% for item in timeline %}
       {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
         title: item.title,
         excerpt: item.excerpt,
@@ -17,5 +17,8 @@
       {% endfor %}
       
     </ul>
+
+    <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span></button>
+    <button class="jcc-timeline__scroller--right is-active"><span class="jcc-timeline__label">Scroll Right</span></button>
   </div>
 </div>

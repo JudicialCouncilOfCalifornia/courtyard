@@ -1,7 +1,7 @@
 headergroup:
   brow: "Next Steps"
   title: "What can we help you with today?"
-background_variant: "has-background-color"
+background_variant: "has-background-color--dark" #has-background-color--light
 tiles_variant: "secondary"
 switchboard_tiles:
   - brow: "Wage Garnishment"

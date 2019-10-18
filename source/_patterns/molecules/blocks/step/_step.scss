@@ -1,18 +1,23 @@
 @import "../../../protons/global";
 
 .jcc-step {
+  @include t-intro();
   @include custom-counter();
   @include custom-counter-line();
   @include u-measure("6");
   @include u-line-height("body", 4);
-  padding-left: 6rem;
   padding-bottom: 4rem;
   margin-bottom: 0;
   list-style: none;
+
+  @include at-media(desktop) {
+    padding-left: 6rem;
+  }
 }
 
 .jcc-step__title {
-  @include u-font("body", 10);
+  @include h4();
+  @include u-font-family("sans");
   @include u-text("bold");
   @include u-text("blue-70v");
 }
