@@ -5,15 +5,27 @@ background_variant: "has-background-color"
 tiles_variant: "secondary"
 switchboard_tiles:
   - brow: "Wage Garnishment"
-    title_link: '<a href="#">Someone took money from my paycheck</a>'
+    title: 'Someone took money from my paycheck'
+    url: '#'
+    url_attributes: ''
   - brow: "Lien Against Property"
-    title_link: '<a href="#">I was told I can’t sell my property</a>'
+    title_link: 'I was told I can’t sell my property'
+    url: '#'
+    url_attributes: ''
   - brow: "Bank Levy"
-    title_link: '<a href="#">Someone tried to take money from my bank account </a>'
+    title: 'Someone tried to take money from my bank account '
+    url: '#'
+    url_attributes: ''
 switchboard_tiles2:
   - brow: "General Information"
-    title_link: '<a href="#">I want to find out more about Debt Collection</a>'
+    title: 'I want to find out more about Debt Collection'
+    url: '#'
+    url_attributes: ''
   - brow: "Negotiating a Settlement"
-    title_link: '<a href="#">I want to talk with someone and work something out</a>'
+    title: 'I want to talk with someone and work something out'
+    url: '#'
+    url_attributes: ''
   - brow: "Pay in Installments"
-    title_link: '<a href="#">I don’t have all the money but can pay over time</a>'
+    title: 'I don’t have all the money but can pay over time'
+    url: '#'
+    url_attributes: ''

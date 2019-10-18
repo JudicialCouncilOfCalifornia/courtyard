@@ -1,4 +1,5 @@
+{% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
 <div class="jcc-tile">
   <p class="jcc-tile__brow">{{ brow }}</p>
-  <h3 class="jcc-tile__title">{{ title_link }}</h3>
+  <h3 class="jcc-tile__title"><a href="{{ url }}"{% if url_attributes %}{{ url_attributes }}{% endif %}>{{ title }}</a></h3>
 </div>

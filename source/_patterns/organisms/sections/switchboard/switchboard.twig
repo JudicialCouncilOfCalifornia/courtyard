@@ -13,7 +13,9 @@
         <li class="jcc-switchboard__tile">
           {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
-            title_link: tile.title_link
+            title: tile.title,
+            url: tile.url,
+            url_attributes: tile.url_attributes
           } %}
         </li>
         {% endfor %}
@@ -26,7 +28,9 @@
         <li class="jcc-switchboard__tile">
           {% include '@molecules/blocks/tile/tile.twig' with {
             brow: tile.brow,
-            title_link: tile.title_link
+            title: tile.title,
+            url: tile.url,
+            url_attributes: tile.url_attributes
           } %}
         </li>
         {% endfor %}
