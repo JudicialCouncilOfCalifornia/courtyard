@@ -5,7 +5,7 @@
 }
 
 .jcc-breadcrumb__item {
-  @include u-font-size("body", 8);
+  @include responsive-lead();
   @include u-padding-right(1);
   display: inline;
 

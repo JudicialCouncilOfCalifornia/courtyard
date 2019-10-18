@@ -9,21 +9,16 @@ h3.jcc-header-group__title {
 }
 
 .jcc-header-group__brow {
-  @include u-font("body", 4);
+  @include t-copy();
   @include u-text("uppercase");
   @include u-text("ls-3");
-
-  @include at-media("desktop") {
-    @include u-font("body", 6);
-  }
 }
 
 .jcc-header-group__lead {
-  @include u-font("body", 8);
+  @include responsive-lead();
   @include u-line-height("body", 3);
 
   @include at-media("desktop") {
-    @include u-font("body", 9);
     max-width: 75%;
   }
 }

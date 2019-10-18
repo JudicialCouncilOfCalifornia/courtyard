@@ -9,7 +9,7 @@ switchboard_tiles:
     url: '#'
     url_attributes: ''
   - brow: "Lien Against Property"
-    title_link: 'I was told I can’t sell my property'
+    title: 'I was told I can’t sell my property'
     url: '#'
     url_attributes: ''
   - brow: "Bank Levy"
