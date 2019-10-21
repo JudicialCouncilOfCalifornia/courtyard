@@ -17994,7 +17994,7 @@ Values
 }
 
 .jcc-postcard--has-background-color {
-  background-color: #f0f0f0 ;
+  background-color: #f9f9f9 ;
   padding-top: 3rem ;
   margin-bottom: 3rem ;
 }
@@ -22145,6 +22145,7 @@ Values
   color: #1b1b1b ;
   text-transform: uppercase ;
   letter-spacing: 0.15em ;
+  color: #a9aeb1 ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.87019rem;
   margin-left: 1rem ;
@@ -23705,6 +23706,8 @@ Values
   border-bottom-width: 0.25rem;
   border-bottom-style: solid;
   z-index: 10;
+  -webkit-box-shadow: 0px 16px 0px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 16px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
 .jcc-header__logo .jcc-logo {
@@ -25922,7 +25925,7 @@ Values
 }
 
 .jcc-switchboard--has-background-color--light {
-  background-color: #f0f0f0 ;
+  background-color: #f9f9f9 ;
 }
 
 .jcc-switchboard--has-background-color--dark {
@@ -26491,9 +26494,34 @@ Values
   padding-bottom: 3rem ;
 }
 
-.jcc-text-section--has-background-color {
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--dark {
   padding-top: 3rem ;
-  background-color: #f0f0f0 ;
+}
+
+.jcc-text-section--has-background-color--light {
+  background-color: #f9f9f9 ;
+}
+
+.jcc-text-section--has-background-color--dark {
+  background-color: #005ea2 ;
+  color: white ;
+}
+
+.jcc-text-section--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-text-section--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-text-section--has-background-color--dark > a:active, .jcc-text-section--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-text-section--has-background-color--dark > a:visited {
+  color: #ffe396 ;
 }
 
 .jcc-text-section__container {
@@ -27041,7 +27069,7 @@ Values
 }
 
 .jcc-timeline-section--has-background-color--light {
-  background-color: #f0f0f0 ;
+  background-color: #f9f9f9 ;
 }
 
 .jcc-timeline-section--has-background-color--dark {

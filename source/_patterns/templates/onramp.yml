@@ -5,9 +5,30 @@ top:
     title: "Form FL-210/FL-200"
     lead: "What do these papers mean?"
     body: "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus.</p>"
-    column_content_right: ""
-    background_variant: "has-background-color"
+    background_variant: "has-background-color--dark"
+    column_content_right: '
+      <div class="jcc-jump-nav"><nav>
+        <h2 class="jcc-jump-nav__title">Lorem ipsum</h2>
+        <ul class="usa-sidenav">
+          <li class="usa-sidenav__item">
+            <a href="#">Home</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="#">Page 1</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="#">Page 2</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="#">Page 3</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="#">Page 4</a>
+          </li>
+        </ul>
+      </nav></div>'
     column_variant: "has-two-columns-threequarter"
+    title_variant: "font-family-body"
   breadcrumbs:
     - url: ""
       label: "Legal Parentage"

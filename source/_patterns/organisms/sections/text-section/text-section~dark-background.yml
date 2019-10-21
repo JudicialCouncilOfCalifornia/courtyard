@@ -13,5 +13,5 @@ column_content_right:
   risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
   sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
   rhoncus.</p>"
-background_variant: "has-background-color--light" #has-background-color
+background_variant: "has-background-color--dark" #has-background-color--light has-background-color--dark
 column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter

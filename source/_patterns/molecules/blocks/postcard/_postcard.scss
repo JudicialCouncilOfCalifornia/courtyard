@@ -23,7 +23,7 @@
 }
 
 .jcc-postcard--has-background-color {
-  @include u-bg("base-lightest");
+  @include u-bg("gray-2");
   @include u-padding-top(6);
   @include u-margin-bottom(6);
 }

@@ -4,9 +4,17 @@
   @include section-wrapper;
 }
 
-.jcc-text-section--has-background-color {
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--dark {
   @include u-padding-top(6);
-  @include u-bg("base-lightest");
+}
+
+.jcc-text-section--has-background-color--light {
+  @include u-bg("gray-2");
+}
+
+.jcc-text-section--has-background-color--dark {
+  @include dark-background();
 }
 
 .jcc-text-section__container {

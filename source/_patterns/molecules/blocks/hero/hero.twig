@@ -10,7 +10,7 @@
       {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">
-          <h2 class="jcc-hero__title">{{ title }}</h2>
+          <h2 class="jcc-hero__title {{ title_variant }}">{{ title }}</h2>
           {% if lead %}
           <p class="jcc-hero__lead">{{ lead }}</p>
           {% endif %}
