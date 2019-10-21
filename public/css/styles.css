@@ -26990,6 +26990,22 @@ Values
   color: #ffe396 ;
 }
 
+.jcc-timeline-section--has-background-color--dark .jcc-timeline-item__trigger {
+  color: #e5a000 ;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline-item__trigger:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline-item__trigger:active, .jcc-timeline-section--has-background-color--dark .jcc-timeline-item__trigger:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline-item__trigger:visited {
+  color: #ffe396 ;
+}
+
 .jcc-timeline-section__container {
   margin-left: auto ;
   margin-right: auto ;

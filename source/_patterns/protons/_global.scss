@@ -258,3 +258,20 @@ $aspect-width: 16;
     }
   }
 }
+
+@mixin dark-background-link() {
+  @include u-text("gold-30v");
+
+  &:hover {
+    @include u-text("gold-20v");
+  }
+
+  &:active,
+  &:focus {
+    @include u-text("gold-20v");
+  }
+
+  &:visited {
+    @include u-text("gold-10v");
+  }
+}

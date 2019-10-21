@@ -27,6 +27,10 @@
       @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
     }
   }
+
+  .jcc-timeline-item__trigger {
+    @include dark-background-link();
+  }
 }
 
 .jcc-timeline-section__container {
