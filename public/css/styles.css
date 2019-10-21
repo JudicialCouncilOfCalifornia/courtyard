@@ -17331,7 +17331,6 @@ Values
 */
 .jcc-hero {
   position: relative ;
-  margin-bottom: 3rem ;
 }
 
 .jcc-hero .jcc-breadcrumbs-nav {
@@ -17364,8 +17363,50 @@ Values
   width: 100%;
 }
 
-.jcc-hero--has-background-color {
+.jcc-hero--has-background-color--light,
+.jcc-hero--has-background-color--dark {
+  margin-bottom: 3rem ;
+}
+
+.jcc-hero--has-background-color--light {
   background-color: #f9f9f9 ;
+}
+
+.jcc-hero--has-background-color--dark {
+  background-color: #005ea2 ;
+  color: white ;
+}
+
+.jcc-hero--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-hero--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-hero--has-background-color--dark > a:active, .jcc-hero--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-hero--has-background-color--dark > a:visited {
+  color: #ffe396 ;
+}
+
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item a {
+  color: #e5a000 ;
+}
+
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:active, .jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:visited {
+  color: #ffe396 ;
 }
 
 .jcc-hero__container {
@@ -22075,6 +22116,40 @@ Settings
 Values
 ----------------------------------------
 */
+.jcc-jump-nav {
+  background-color: white ;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a9aeb1 ;
+  border-style: solid;
+  border-radius: 0.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+}
+
+.jcc-jump-nav .usa-sidenav {
+  border-bottom-width: 0;
+  border-bottom-style: solid;
+}
+
+.jcc-jump-nav .usa-sidenav__item:last-of-type {
+  border-bottom-width: 0;
+  border-bottom-style: solid;
+}
+
+.jcc-jump-nav .usa-sidenav__item:last-of-type a {
+  border-radius: 0.5rem ;
+}
+
+.jcc-jump-nav__title {
+  color: #1b1b1b ;
+  text-transform: uppercase ;
+  letter-spacing: 0.15em ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.87019rem;
+  margin-left: 1rem ;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -36065,7 +36140,7 @@ Values
     display: block;
     width: 100%;
     height: 1px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #005ea2;
     z-index: 1;
   }
   .jcc-timeline-item__title:before {
@@ -36075,7 +36150,7 @@ Values
     bottom: auto;
     left: 0;
     background-color: #005ea2;
-    border: 2px solid white;
+    border: 2px solid #005ea2;
     border-radius: 50%;
     content: "";
     height: 1.75rem;

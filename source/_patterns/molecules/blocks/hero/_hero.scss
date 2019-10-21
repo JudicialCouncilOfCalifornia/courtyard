@@ -2,7 +2,6 @@
 
 .jcc-hero {
   @include u-position("relative");
-  @include u-margin-bottom(6);
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");
@@ -17,8 +16,21 @@
   }
 }
 
-.jcc-hero--has-background-color {
+.jcc-hero--has-background-color--light,
+.jcc-hero--has-background-color--dark {
+  @include u-margin-bottom(6);
+}
+
+.jcc-hero--has-background-color--light {
   @include u-bg("gray-2");
+}
+
+.jcc-hero--has-background-color--dark {
+  @include dark-background();
+
+  .jcc-breadcrumb__item a {
+    @include dark-background-link();
+  }
 }
 
 .jcc-hero__container {
