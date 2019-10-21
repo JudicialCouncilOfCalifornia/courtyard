@@ -1,3 +1,9 @@
+@import "../_patterns/protons/uswds-theme-general";
+@import "../_patterns/protons/uswds-theme-typography";
+@import "../_patterns/protons/uswds-theme-spacing";
+@import "../_patterns/protons/uswds-theme-color";
+@import "../_patterns/protons/uswds-theme-utilities";
+
 // Section vertical rhythm and centered block
 
 @mixin section-wrapper {
@@ -204,11 +210,11 @@ $aspect-width: 16;
 }
 
 @mixin h4() {
-  @include u-font("heading", 10); // 24
+  @include u-font("body", 10); // 24
 }
 
 @mixin h5() {
-  @include u-font("heading", 9); // 22
+  @include u-font("body", 9); // 22
 }
 
 @mixin responsive-lead() {
@@ -232,7 +238,7 @@ $aspect-width: 16;
 }
 
 @mixin dark-background() {
-  @include u-bg("blue-60v");
+  @include u-bg("primary");
   @include u-text("white");
 
   > a {

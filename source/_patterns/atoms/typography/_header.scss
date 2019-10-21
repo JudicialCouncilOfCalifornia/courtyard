@@ -6,3 +6,43 @@ h3 {
   @include u-font-family("serif");
   @include u-text("normal");
 }
+
+.h-responsive-mega {
+  @include responsive-h-mega();
+}
+
+.h-responsive-h1 {
+  @include responsive-h1();
+}
+
+.h-responsive-h2 {
+  @include responsive-h2();
+}
+
+.h-responsive-h3 {
+  @include responsive-h3();
+}
+
+.h4 {
+  @include h4();
+}
+
+.h5 {
+  @include h5();
+}
+
+.t-responsive-lead {
+  @include responsive-lead();
+}
+
+.t-intro {
+  @include t-intro();
+}
+
+.t-copy {
+  @include t-copy();
+}
+
+.t-small {
+  @include t-small();
+}
