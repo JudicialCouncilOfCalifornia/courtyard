@@ -2247,6 +2247,86 @@ th {
   src: url(../fonts/public-sans/PublicSans-BoldItalic.woff2) format("woff2"), url(../fonts/public-sans/PublicSans-BoldItalic.woff) format("woff"), url(../fonts/public-sans/PublicSans-BoldItalic.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-light.woff2) format("woff2"), url(../fonts/lato/lato-light.woff) format("woff"), url(../fonts/lato/lato-light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-regular.woff2) format("woff2"), url(../fonts/lato/lato-regular.woff) format("woff"), url(../fonts/lato/lato-regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-bold.woff2) format("woff2"), url(../fonts/lato/lato-bold.woff) format("woff"), url(../fonts/lato/lato-bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-lightItalic.woff2) format("woff2"), url(../fonts/lato/lato-lightItalic.woff) format("woff"), url(../fonts/lato/lato-lightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-regularItalic.woff2) format("woff2"), url(../fonts/lato/lato-regularItalic.woff) format("woff"), url(../fonts/lato/lato-regularItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/lato/lato-boldItalic.woff2) format("woff2"), url(../fonts/lato/lato-boldItalic.woff) format("woff"), url(../fonts/lato/lato-boldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/lora/lora-regular.woff2) format("woff2"), url(../fonts/lora/lora-regular.woff) format("woff"), url(../fonts/lora/lora-regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/lora/lora-bold.woff2) format("woff2"), url(../fonts/lora/lora-bold.woff) format("woff"), url(../fonts/lora/lora-bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/lora/lora-regularItalic.woff2) format("woff2"), url(../fonts/lora/lora-regularItalic.woff) format("woff"), url(../fonts/lora/lora-regularItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/lora/lora-boldItalic.woff2) format("woff2"), url(../fonts/lora/lora-boldItalic.woff) format("woff"), url(../fonts/lora/lora-boldItalic.ttf) format("truetype");
+}
+
 /* stylelint-enable */
 input:not([disabled]):focus,
 select:not([disabled]):focus,
@@ -3479,7 +3559,7 @@ img {
   margin-top: 0 ;
   clear: both;
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
   margin-bottom: 0;
@@ -3494,8 +3574,8 @@ img {
 }
 
 .usa-intro {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.49176rem;
   line-height: 1.75967 ;
   font-weight: 400;
   max-width: 88ex;
@@ -3669,42 +3749,42 @@ img {
 
 .usa-prose > h1 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 2.48626rem;
+  font-size: 2.98352rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
 .usa-prose > h2 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.98901rem;
+  font-size: 2.48626rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
 .usa-prose > h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
 .usa-prose > h4 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 0.99451rem;
+  font-size: 1.49176rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
 .usa-prose > h5 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 0.93235rem;
+  font-size: 1.36745rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
 .usa-prose > h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.80804rem;
+  font-size: 1.24313rem;
   line-height: 1.20663 ;
   font-weight: normal;
   letter-spacing: 0.025em;
@@ -4447,7 +4527,7 @@ img {
 
 .usa-sign-up__heading {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
   margin: 0;
@@ -4474,7 +4554,7 @@ img {
 
 .usa-footer__logo-heading {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
   margin-bottom: 0.5rem ;
@@ -4488,7 +4568,7 @@ img {
 
 .usa-footer__contact-heading {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
   margin-top: 0;
@@ -4565,7 +4645,7 @@ img {
 
 .usa-footer--big .usa-footer__primary-link {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 0.99451rem;
+  font-size: 1.49176rem;
   line-height: 1.20663 ;
   font-weight: bold;
   background-image: url("../img/arrow-down.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
@@ -4677,7 +4757,7 @@ img {
   margin-top: 0 ;
   clear: both;
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.36745rem;
+  font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
@@ -4843,7 +4923,7 @@ img {
   margin-top: 0 ;
   clear: both;
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.98901rem;
+  font-size: 2.48626rem;
   line-height: 1.20663 ;
   font-weight: bold;
   color: #00bde3;
@@ -27271,7 +27351,7 @@ Values
     margin-top: 0 ;
     clear: both;
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 2.48626rem;
+    font-size: 2.98352rem;
     line-height: 1.20663 ;
     font-weight: bold;
   }
@@ -30116,7 +30196,7 @@ Values
     margin-top: 0 ;
     clear: both;
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 2.98352rem;
+    font-size: 3.48077rem;
     line-height: 1.20663 ;
     font-weight: bold;
   }
