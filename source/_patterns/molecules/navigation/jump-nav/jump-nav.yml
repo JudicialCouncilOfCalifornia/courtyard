@@ -1,5 +1,5 @@
 title: "Lorem ipsum"
-scroll_nav:
+jump_nav:
   - url: "#"
     name: "Home"
     url_attributes: ""

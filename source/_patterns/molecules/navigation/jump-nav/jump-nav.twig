@@ -1,11 +1,12 @@
 {% set tag = tag|default('h2') %}
 
+{% if jump_nav|length > 0 %}
 <div class="jcc-jump-nav">
   <nav>
     <{{ tag }} class="jcc-jump-nav__title">{{ title }}</{{ tag }}>
     <ul class="usa-sidenav">
-      {% for item in scroll_nav %}
-      {% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
+      {% for item in jump_nav %}
+      {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
       <li class="usa-sidenav__item">
         <a href="{{ item.url }}"{{ item.url_attributes }}>{{ item.name }}</a>
       </li>
@@ -13,3 +14,4 @@
     </ul>
   </nav>
 </div>
+{% endif %}
