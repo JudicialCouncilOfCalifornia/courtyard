@@ -1,8 +1,10 @@
 <div class="jcc-card jcc-card--{{ card_variant }}">
-  {% if image %}
-  <div class="jcc-card__media">
-    <img src="{{ image }}" alt="{{ alt }}" />
-  </div>
+  {% if img %}
+    <div class="jcc-card__media">
+      {% include '@atoms/image/image.twig' with {
+        image: { src: img, alt: 'Alt text' }
+      } %}
+    </div>
   {% endif %}
 
   <div class="jcc-card__body">
