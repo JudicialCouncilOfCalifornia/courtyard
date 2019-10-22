@@ -1,12 +1,7 @@
 <div class="jcc-hero{% if background_variant %} jcc-hero--{{ background_variant }}{% endif %}{% if column_variant %} jcc-hero--{{ column_variant }}{% endif %}">
   <div class="jcc-hero__container">
-    {% if img %}
-    <div class="jcc-hero__media">
-      <img src="{{ image }}" alt="{{ alt }}" />
-    </div>
-    {% endif %}
 
-    {% if image %}
+    {% if img %}
       <div class="jcc-hero__media">
         {% include '@atoms/image/image.twig' with {
           image: { src: img, alt: 'Alt text' }

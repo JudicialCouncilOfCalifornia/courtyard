@@ -8,8 +8,4 @@ menu_items:
   - name: Link Three
     url: "#"
     url_attributes: ""
-logo:
-  icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "logo-group"
-  title: "Judicial Council of California"
-  decorative: true
+img: "../../images/jcc-logo.svg"

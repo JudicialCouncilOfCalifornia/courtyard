@@ -1,9 +1,7 @@
-{% if icon %}
-  {% spaceless %}
-    <svg class="jcc-logo icon-{{ icon }}" role="img"
-      {%- if title %} title="{{ title }}"{% endif -%}
-      {%- if decorative %} aria-hidden="true"{% endif -%}>
-      <use xlink:href="{{ icon_file }}#i-{{ icon }}"></use>
-    </svg>
-  {% endspaceless %}
+ {% if img %}
+  <div class="jcc-logo">
+    {% include '@atoms/image/image.twig' with {
+      image: { src: img, alt: 'Alt text' }
+    } %}
+  </div>
 {% endif %}
