@@ -16298,6 +16298,24 @@ Settings
 Values
 ----------------------------------------
 */
+.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.36745rem;
+}
+
+.jcc-card--has-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jcc-card--has-icon .jcc-card__media {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+  min-width: 4rem;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
