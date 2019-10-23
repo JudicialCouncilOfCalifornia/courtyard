@@ -48,7 +48,7 @@ const errorHandler = error => {
 
 // Use the Pattern Lab PHP command to generate the pattern library
 const plPhp = () => {
-  return exec("php core/console --generate");
+  return exec("php core/console --generate configPath='config/config.yml'");
 };
 
 const copyUswdsFonts = () => {
