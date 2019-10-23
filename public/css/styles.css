@@ -19634,6 +19634,22 @@ Values
   line-height: 1.50829 ;
 }
 
+.jcc-accordion__heading-container .usa-accordion__heading {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
+.jcc-accordion__content-container .usa-accordion__content {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -36134,6 +36150,14 @@ Values
     text-align: center;
     width: 1.75rem;
     z-index: 2;
+  }
+  .jcc-accordion__heading-container .usa-accordion__heading {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+  }
+  .jcc-accordion__content-container .usa-accordion__content {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
   }
   .jcc-datefinder {
     max-width: 60ex ;

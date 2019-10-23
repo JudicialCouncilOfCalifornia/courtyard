@@ -4,21 +4,28 @@
   'usa-accordion--bordered'
   ]|merge(classes|default([]))
 %}
-
+{% if full %}
+<div{{ attributes.addClass(classes, 'usa-accordion--full') }}>
+{% else %}
 <div{{ attributes.addClass(classes) }}>
+{% endif %}
   {% for item in accordion %}
     {% set expanded = loop.first ? 'true' : 'false' %}
     {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
 
+    {% if full %}<div class="jcc-accordion__heading-container">{% endif %}
     {# Use `tag` to pass the accurate heading level to maintain the document outline #}
     <{{ tag }}{{ item.title_attributes.addClass('usa-accordion__heading')}}>
       <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
         {{- item.title -}}
       </button>
     </{{ tag }}>
+    {% if full %}</div>{% endif %}
 
+    {% if full %}<div class="jcc-accordion__content-container">{% endif %}
     <div{{ item.content_attributes.addClass('usa-accordion__content','usa-prose') }} id="{{ id }}">
       {{- item.body -}}
     </div>
+    {% if full %}</div>{% endif %}
   {% endfor %}
 </div>

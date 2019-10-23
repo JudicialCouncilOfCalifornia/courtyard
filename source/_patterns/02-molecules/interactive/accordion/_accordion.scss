@@ -1,0 +1,11 @@
+.jcc-accordion__heading-container {
+  .usa-accordion__heading {
+    @include section-container;
+  }
+}
+
+.jcc-accordion__content-container {
+  .usa-accordion__content {
+    @include section-container;
+  }
+}
