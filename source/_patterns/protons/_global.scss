@@ -177,19 +177,19 @@ $aspect-width: 16;
 }
 
 // Type
-@mixin responsive-h-mega() {
-  @include u-font("heading", 14); // 40
+@mixin responsive-h-mega($responsive-font-family: "heading") {
+  @include u-font($responsive-font-family, 14); // 40
 
   @include at-media(desktop) {
-    @include u-font("heading", 16); // 56
+    @include u-font($responsive-font-family, 16); // 56
   }
 }
 
-@mixin responsive-h1() {
-  @include u-font("heading", 13); // 36
+@mixin responsive-h1($responsive-font-family: "heading") {
+  @include u-font($responsive-font-family, 13); // 36
 
   @include at-media(desktop) {
-    @include u-font("heading", 15); // 48
+    @include u-font($responsive-font-family, 15); // 48
   }
 }
 
@@ -209,19 +209,19 @@ $aspect-width: 16;
   }
 }
 
-@mixin h4() {
-  @include u-font("body", 10); // 24
+@mixin h4($h-font-family: "body") {
+  @include u-font($h-font-family, 10); // 24
 }
 
-@mixin h5() {
-  @include u-font("body", 9); // 22
+@mixin h5($h-font-family: "body") {
+  @include u-font($h-font-family, 9); // 22
 }
 
-@mixin responsive-lead() {
-  @include u-font("body", 9); // 22
+@mixin responsive-lead($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 9); // 22
 
   @include at-media(desktop) {
-    @include u-font("body", 10); // 24
+    @include u-font($responsive-font-family, 10); // 24
   }
 }
 

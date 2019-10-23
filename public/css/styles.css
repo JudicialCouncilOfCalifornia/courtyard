@@ -2370,12 +2370,6 @@ html {
   font-size: 100%;
 }
 
-body {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
-  line-height: 1.62895 ;
-}
-
 cite,
 var,
 address,
@@ -15231,31 +15225,37 @@ h3 {
   font-size: 2.48626rem;
 }
 
+h1,
 .h-responsive-h1 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.23764rem;
 }
 
+h2,
 .h-responsive-h2 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.98901rem;
 }
 
+h3,
 .h-responsive-h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.74038rem;
 }
 
+h4,
 .h4 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.49176rem;
 }
 
+h5,
 .h5 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
 }
 
+h6,
 .t-responsive-lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
@@ -16298,6 +16298,11 @@ Settings
 Values
 ----------------------------------------
 */
+.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.36745rem;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -19089,6 +19094,11 @@ Values
           box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
   position: relative;
   text-align: left;
+}
+
+.jcc-tile__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.36745rem;
 }
 
 .jcc-tile__title a {
@@ -36029,18 +36039,22 @@ Values
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 3.48077rem;
   }
+  h1,
   .h-responsive-h1 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.98352rem;
   }
+  h2,
   .h-responsive-h2 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.48626rem;
   }
+  h3,
   .h-responsive-h3 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.23764rem;
   }
+  h6,
   .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49176rem;
