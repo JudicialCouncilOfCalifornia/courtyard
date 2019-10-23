@@ -1,4 +1,4 @@
-img: "https://placeimg.com/300/300/arch"
+img: "../../images/court.svg"
 title: "Lorem ipsum"
 excerpt: "Nullam at semper mauris, at rhoncus purus."
-card_variant: "has-background"
+card_variant: "has-icon" #has-image

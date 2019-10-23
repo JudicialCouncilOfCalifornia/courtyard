@@ -1,19 +1,29 @@
+title: Side nav
 sidenav:
-- links:
-  - text: "Parent link"
-  - text: "Current page"
+  - url: "#"
+    name: "Home"
+    url_attributes: ""
+  - url: "#"
+    name: "Page 1"
+    url_attributes: ""
     current: true
-    links:
-    - text: "Child link"
-    - text: "Child link"
-      current: true
-      links:
-      - text: "Grandchild link"
-      - text: "Grandchild link"
-      - text: "Grandchild link"
-        current: true
-      - text: "Grandchild link"
-    - text: "Child link"
-    - text: "Child link"
-    - text: "Child link"
-  - text: "Parent link"
+    sidenav_child:
+      - url: "#"
+        name: "Child"
+        url_attributes: ""
+        sidenav_grandchild:
+          - url: "#"
+            name: "Grandchild"
+            url_attributes: ""
+  - url: "#"
+    name: "Page 2"
+    url_attributes: ""
+  - url: "#"
+    name: "Page 3"
+    url_attributes: ""
+  - url: "#"
+    name: "Page 4"
+    url_attributes: ""
+  - url: "#"
+    name: "Page 5"
+    url_attributes: ""

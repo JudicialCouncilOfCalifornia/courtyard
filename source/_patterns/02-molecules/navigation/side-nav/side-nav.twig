@@ -1,64 +1,41 @@
-{# {% for nav_list(links, subclass) %}
-  {% for item in links %}
-  <li class="usa-sidenav__item">
-    <a href="{{ item.href }}"{% if item.current %} class="usa-current"{% endif %}>{{ item.text }}</a>
-    {% if item.links %}
-    <ul class="{{ subclass }}">
-      {{ nav_list(item.links, subclass) }}
-    </ul>
-    {%- endif %}
-  </li>
-  {% endfor %}
-{% endfor %}
+{% set tag = tag|default('h2') %}
 
-<nav>
-  <ul class="usa-sidenav">
-    {{ nav_list(sidenav.links, 'usa-sidenav__sublist') }}
-  </ul>
-</nav> #}
+{% if sidenav|length > 0 %}
+<div class="jcc-sidenav">
+  <nav>
+    <{{ tag }} class="jcc-sidenav__title">{{ title }}</{{ tag }}>
+    <ul class="usa-sidenav">
+      {% for item in sidenav %}
+      {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
+      <li class="usa-sidenav__item">
+        <a href="{{ item.url }}"{{ item.url_attributes }}>{{ item.name }}</a>
+        
+        {% if item.sidenav_child|length > 0 %}
+        <ul class="usa-sidenav__sublist">  
+        {% for childitem in item.sidenav_child %}
+        {% set url_attributes = childitem.url_attributes ? childitem.url_attributes : create_attribute() %}
+          <li class="usa-sidenav__item">
+            <a href="{{ subitem.url }}"{{ childitem.url_attributes }}>{{ childitem.name }}</a>
 
+            {% if childitem.sidenav_grandchild|length > 0 %}
+            <ul class="usa-sidenav__sublist">  
+            {% for grandchilditem in childitem.sidenav_grandchild %}
+            {% set url_attributes = grandchilditem.url_attributes ? grandchilditem.url_attributes : create_attribute() %}
+              <li class="usa-sidenav__item">
+                <a href="{{ subitem.url }}"{{ grandchilditem.url_attributes }}>{{ grandchilditem.name }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
 
-<nav>
-  <ul class="usa-sidenav">
-    <li class="usa-sidenav__item">
-      <a href="">Parent link</a>
-    </li>
-    <li class="usa-sidenav__item">
-      <a href="" class="usa-current">Current page</a>
-      <ul class="usa-sidenav__sublist">
-        <li class="usa-sidenav__item">
-          <a href="">Child link</a>
-        </li>
-        <li class="usa-sidenav__item">
-          <a href="" class="usa-current">Child link</a>
-        <ul class="usa-sidenav__sublist">
-          <li class="usa-sidenav__item">
-            <a href="">Grandchild link</a>
           </li>
-          <li class="usa-sidenav__item">
-            <a href="">Grandchild link</a>
-          </li>
-          <li class="usa-sidenav__item">
-            <a href="" class="usa-current">Grandchild link</a>
-          </li>
-          <li class="usa-sidenav__item">
-            <a href="">Grandchild link</a>
-          </li>
+        {% endfor %}
         </ul>
+        {% endif %}
+
       </li>
-      <li class="usa-sidenav__item">
-        <a href="">Child link</a>
-      </li>
-      <li class="usa-sidenav__item">
-        <a href="">Child link</a>
-      </li>
-      <li class="usa-sidenav__item">
-        <a href="">Child link</a>
-      </li>
+      {% endfor %}
     </ul>
-    </li>
-    <li class="usa-sidenav__item">
-      <a href="">Parent link</a>
-    </li>
-  </ul>
-</nav>
+  </nav>
+</div>
+{% endif %}
