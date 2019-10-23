@@ -1,0 +1,18 @@
+@import "../../00-protons/global";
+
+a {
+  @include u-text("blue-cool-40v");
+
+  &:hover {
+    @include u-text("cyan-40v");
+  }
+
+  &:active,
+  &:focus {
+    @include u-text("blue-cool-30v");
+  }
+
+  &:visited {
+    @include u-text("blue-cool-60v");
+  }
+}
