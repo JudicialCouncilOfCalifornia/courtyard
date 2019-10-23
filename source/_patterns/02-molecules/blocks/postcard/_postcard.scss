@@ -1,0 +1,84 @@
+@import "../../../00-protons/global";
+
+.jcc-postcard {
+  @include u-padding-top(1);
+  @include u-padding-bottom(6);
+}
+
+.jcc-postcard--has-background-image {
+  @include u-padding-y(6);
+  position: relative;
+
+  .jcc-postcard__media {
+    @include cover-image();
+  }
+
+  .jcc-postcard__content {
+    @include u-bg("white");
+  }
+
+  .jcc-header-group {
+    @include u-padding(6);
+  }
+}
+
+.jcc-postcard--has-background-color {
+  @include u-bg("gray-2");
+  @include u-padding-top(6);
+  @include u-margin-bottom(6);
+}
+
+.jcc-postcard__media {
+  @include at-media(desktop) {
+    @include u-order("last");
+  }
+}
+
+.jcc-postcard--has-header-left {
+  .jcc-postcard__media {
+    @include at-media(desktop) {
+      @include u-order("last");
+    }
+  }
+}
+
+.jcc-postcard--has-header-right {
+  .jcc-postcard__media {
+    @include at-media(desktop) {
+      @include u-order("first");
+    }
+  }
+}
+
+.jcc-postcard__container {
+  @include grid-container("widescreen");
+}
+
+.jcc-postcard__tag {
+  @extend .usa-tag;
+  @include u-pin-bottom;
+  right: 2rem;
+  bottom: 1rem;
+}
+
+.jcc-postcard__content {
+  @include u-line-height("body", 4);
+  position: relative;
+}
+
+.jcc-postcard__row {
+  @include at-media("desktop") {
+    @include grid-row;
+    @include grid-gap;
+  }
+}
+
+.jcc-postcard__media,
+.jcc-postcard__content {
+  @include u-width(full);
+  position: relative;
+
+  @include at-media(desktop) {
+    @include grid-col(6);
+  }
+}

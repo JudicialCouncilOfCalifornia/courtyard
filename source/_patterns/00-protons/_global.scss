@@ -1,0 +1,277 @@
+@import "../_patterns/00-protons/uswds-theme-general";
+@import "../_patterns/00-protons/uswds-theme-typography";
+@import "../_patterns/00-protons/uswds-theme-spacing";
+@import "../_patterns/00-protons/uswds-theme-color";
+@import "../_patterns/00-protons/uswds-theme-utilities";
+
+// Section vertical rhythm and centered block
+
+@mixin section-wrapper {
+  @include u-padding-top(1);
+  @include u-padding-bottom(6);
+}
+
+@mixin section-container {
+  @include grid-container("widescreen");
+}
+
+// Cover image with bleed
+@mixin cover-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img,
+  picture {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// Responsive embed container
+$aspect-height: 9;
+$aspect-width: 16;
+
+@mixin embed-container($height, $width) {
+  padding-bottom: percentage($height/$width);
+}
+
+// Custom ordered list elements
+@mixin custom-counter() {
+  counter-increment: step-counter;
+  position: relative;
+
+  &::before {
+    @include u-font("heading", 14);
+    padding: 0.625rem;
+    background-color: color("white");
+    border: 3px solid color("gold-30v");
+    border-radius: 50%;
+    color: color("primary");
+    content: counter(step-counter);
+    height: 4.6875rem;
+    line-height: 1.25;
+    text-align: center;
+    width: 4.6875rem;
+    display: block;
+
+    @include at-media(desktop) {
+      position: absolute;
+      top: -7px;
+      right: 0;
+      bottom: 0;
+      left: -7px;
+    }
+  }
+}
+
+@mixin custom-counter-line() {
+  &:after {
+    @include at-media(desktop) {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      border: 1px solid color("gold-30v");
+      position: absolute;
+      top: 2.5rem;
+      left: 1.875rem;
+      z-index: -1;
+    }
+  }
+
+  &:last-of-type {
+    &:after {
+      height: 0;
+    }
+  }
+}
+
+// Timeline elements
+@mixin timeline-dot($timeline-dot-bg: "primary", $timeline-dot-border: "primary") {
+  &:before {
+    position: absolute;
+    top: -3.25rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: color($timeline-dot-bg);
+    border: 2px solid color($timeline-dot-border);
+    border-radius: 50%;
+    content: "";
+    height: 1.75rem;
+    line-height: 1;
+    text-align: center;
+    width: 1.75rem;
+    z-index: 2;
+  }
+}
+
+@mixin timeline-line($timeline-line-border: "primary") {
+  &:after {
+    position: absolute;
+    top: -2.5rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px solid color($timeline-line-border);
+    z-index: 1;
+  }
+}
+
+// Unstyled list helper
+@mixin unstyled-list() {
+  @include u-margin-y(0);
+  list-style-type: none;
+  padding-left: 0;
+
+  > li {
+    margin-bottom: 0;
+  }
+}
+
+@mixin first-last-spacing() {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Aria hidden helper
+@mixin accessibly-hidden() {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+// Screen reader only helper
+@mixin sr-only() {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Print
+@mixin print-hidden() {
+  @include grid-media($media-print) {
+    display: none !important;
+  }
+}
+
+// Type
+@mixin responsive-h-mega() {
+  @include u-font("heading", 14); // 40
+
+  @include at-media(desktop) {
+    @include u-font("heading", 16); // 56
+  }
+}
+
+@mixin responsive-h1() {
+  @include u-font("heading", 13); // 36
+
+  @include at-media(desktop) {
+    @include u-font("heading", 15); // 48
+  }
+}
+
+@mixin responsive-h2($responsive-font-family: "heading") {
+  @include u-font($responsive-font-family, 12); // 32
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 14); // 40
+  }
+}
+
+@mixin responsive-h3($responsive-font-family: "heading") {
+  @include u-font($responsive-font-family, 11); // 28
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 13); // 36
+  }
+}
+
+@mixin h4() {
+  @include u-font("body", 10); // 24
+}
+
+@mixin h5() {
+  @include u-font("body", 9); // 22
+}
+
+@mixin responsive-lead() {
+  @include u-font("body", 9); // 22
+
+  @include at-media(desktop) {
+    @include u-font("body", 10); // 24
+  }
+}
+
+@mixin t-intro() {
+  @include u-font("body", 7); // 18
+}
+
+@mixin t-copy() {
+  @include u-font("body", 5); // 16
+}
+
+@mixin t-small() {
+  @include u-font("body", 4); // 16
+}
+
+@mixin dark-background() {
+  @include u-bg("primary");
+  @include u-text("white");
+
+  > a {
+    @include u-text("gold-30v");
+
+    &:hover {
+      @include u-text("gold-20v");
+    }
+
+    &:active,
+    &:focus {
+      @include u-text("gold-20v");
+    }
+
+    &:visited {
+      @include u-text("gold-10v");
+    }
+  }
+}
+
+@mixin dark-background-link() {
+  @include u-text("gold-30v");
+
+  &:hover {
+    @include u-text("gold-20v");
+  }
+
+  &:active,
+  &:focus {
+    @include u-text("gold-20v");
+  }
+
+  &:visited {
+    @include u-text("gold-10v");
+  }
+}

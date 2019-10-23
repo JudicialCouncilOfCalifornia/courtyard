@@ -24817,64 +24817,6 @@ Values
   right: 0;
 }
 
-.jcc-full-modal__content {
-  margin-left: auto ;
-  margin-right: auto ;
-  max-width: 64rem ;
-  padding-left: 1rem ;
-  padding-right: 1rem ;
-}
-
-.jcc-full-modal__header,
-.jcc-full-modal__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex ;
-  -ms-flex-wrap: wrap ;
-      flex-wrap: wrap ;
-}
-
-.jcc-full-modal__body,
-.jcc-full-modal__footer {
-  padding-top: 3rem ;
-}
-
-.jcc-full-modal__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex ;
-  -ms-flex-wrap: wrap ;
-      flex-wrap: wrap ;
-  margin-left: -0.5rem ;
-  margin-right: -0.5rem ;
-}
-
-.jcc-full-modal__body > * {
-  padding-left: 0.5rem ;
-  padding-right: 0.5rem ;
-}
-
-.jcc-full-modal__column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0 ;
-  width: auto ;
-  width: 100% ;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
-  width: 100% ;
-}
-
-.jcc-full-modal__title,
-.jcc-full-modal__lead {
-  width: 100% ;
-}
-
-.jcc-full-modal--has-background-color .jcc-full-modal__dialog {
-  background-color: #d9e8f6 ;
-}
-
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -36319,42 +36261,6 @@ Values
   .jcc-full-modal__close-button {
     top: 32px;
     right: 32px;
-  }
-  .jcc-full-modal__content {
-    padding-left: 2rem ;
-    padding-right: 2rem ;
-  }
-  .jcc-full-modal__body {
-    margin-left: -1rem ;
-    margin-right: -1rem ;
-  }
-  .jcc-full-modal__body > * {
-    padding-left: 1rem ;
-    padding-right: 1rem ;
-  }
-  .jcc-full-modal__column {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 50% ;
-  }
-  .jcc-full-modal__column:only-of-type {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 100% ;
-  }
-  .jcc-full-modal--has-two-columns-threequarter .jcc-full-modal__column:first-of-type {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 66.66667% ;
-  }
-  .jcc-full-modal--has-two-columns-threequarter .jcc-full-modal__column:last-of-type {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 33.33333% ;
   }
   .jcc-steps-section__container {
     padding-left: 2rem ;

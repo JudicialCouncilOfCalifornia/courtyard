@@ -1,0 +1,76 @@
+@import "../../../00-protons/global";
+
+.jcc-timeline-section {
+  @include section-wrapper;
+  position: relative;
+
+  .jcc-header-group {
+    @include u-padding-bottom(6);
+  }
+}
+
+.jcc-timeline-section--has-background-color--light,
+.jcc-timeline-section--has-background-color--dark {
+  @include u-padding-top(6);
+}
+
+.jcc-timeline-section--has-background-color--light {
+  @include u-bg("gray-2");
+}
+
+.jcc-timeline-section--has-background-color--dark {
+  @include dark-background();
+
+  .jcc-timeline-item__title {
+    @include at-media(desktop) {
+      @include timeline-line($timeline-line-border: "gold-20v");
+      @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
+    }
+  }
+
+  .jcc-timeline-item__trigger {
+    @include dark-background-link();
+  }
+}
+
+.jcc-timeline-section__container {
+  @include section-container;
+}
+
+.jcc-timeline {
+  @include unstyled-list();
+
+  @include at-media("desktop") {
+    @include grid-row;
+    padding-top: 3rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+}
+
+.jcc-timeline__label {
+  @include sr-only();
+}
+
+.jcc-timeline__scroller--left,
+.jcc-timeline__scroller--right {
+  @include u-bg("gold-30v");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 10;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.jcc-timeline__scroller--left {
+  left: 0;
+}
+
+.jcc-timeline__scroller--right {
+  right: 0;
+}
