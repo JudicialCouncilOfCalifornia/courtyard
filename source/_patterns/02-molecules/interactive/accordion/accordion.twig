@@ -18,7 +18,7 @@
     </{{ tag }}>
 
     <div{{ item.content_attributes.addClass('usa-accordion__content','usa-prose') }} id="{{ id }}">
-      {{- item.body -}}
+      {{- item.body|raw -}}
     </div>
   {% endfor %}
 </div>
