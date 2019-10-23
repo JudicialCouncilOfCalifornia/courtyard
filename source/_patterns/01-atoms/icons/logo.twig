@@ -1,0 +1,7 @@
+ {% if img %}
+  <div class="jcc-logo">
+    {% include '@atoms/image/image.twig' with {
+      image: { src: img, alt: 'Alt text' }
+    } %}
+  </div>
+{% endif %}

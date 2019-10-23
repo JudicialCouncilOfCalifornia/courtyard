@@ -1,0 +1,26 @@
+<div class="jcc-postcard{% if background_variant  %} jcc-postcard--{{ background_variant }}{% endif %}{% if header_align_variant  %} jcc-postcard--{{ header_align_variant }}{% endif %}">
+  <div class="jcc-postcard__container">
+    <div class="jcc-postcard__row">
+      {% if img %}
+      <div class="jcc-postcard__media">
+        {% include '@atoms/image/image.twig' with {
+          image: { src: img, alt: 'Alt text' }
+        } %}
+        {% if tag  %}
+        <span class="jcc-postcard__tag">{{ tag }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <div class="jcc-postcard__content">
+        {% include '@molecules/text/header-group/header-group.twig' with {
+          brow: headergroup.brow,
+          title: headergroup.title,
+          lead: headergroup.lead,
+          body: headergroup.body,
+          tag: headergroup.tag
+        } %}
+      </div>
+    </div>
+  </div>
+</div>

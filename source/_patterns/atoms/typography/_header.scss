@@ -1,8 +1,0 @@
-@import "../../protons/global";
-
-h1,
-h2,
-h3 {
-  @include u-font-family("serif");
-  @include u-text("normal");
-}

@@ -1,0 +1,32 @@
+<div class="jcc-hero{% if background_variant %} jcc-hero--{{ background_variant }}{% endif %}{% if column_variant %} jcc-hero--{{ column_variant }}{% endif %}">
+  <div class="jcc-hero__container">
+
+    {% if img %}
+      <div class="jcc-hero__media">
+        {% include '@atoms/image/image.twig' with {
+          image: { src: img, alt: 'Alt text' }
+        } %}
+      </div>
+    {% endif %}
+
+    <div class="jcc-hero__content">
+      {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
+      <div class="jcc-hero__columns">
+        <div class="jcc-hero__column-left">
+          <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
+          {% if lead %}
+          <div class="jcc-hero__lead">{{ lead }}</div>
+          {% endif %}
+          {% if body %}
+          <div class="jcc-hero__body">{{ body }}</div>
+          {% endif %}
+        </div>
+        {% if column_content_right %}
+        <div class="jcc-hero__column-right">
+          {{ column_content_right }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

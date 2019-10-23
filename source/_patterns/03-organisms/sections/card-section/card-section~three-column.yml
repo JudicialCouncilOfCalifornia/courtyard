@@ -1,0 +1,9 @@
+background_variant: ""
+column_variant: "has-three-columns" #has-one-colummn has-three-columns
+cards:
+  - title: "Prepare the claim of exemption"
+    excerpt: "Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)"
+  - title: "File the claim of exemption with the sheriff"
+    excerpt: "File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail"
+  - title: "Some file the claim of exemption with the sheriff"
+    excerpt: "File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail"
