@@ -1,6 +1,19 @@
+.usa-accordion--full {
+}
+
 .jcc-accordion__heading-container {
+  @include u-bg("gray-2");
+  @include u-border-bottom("gray-5");
+  @include u-border-bottom("1px");
+
   .usa-accordion__heading {
     @include section-container;
+  }
+
+  .usa-accordion__button {
+    @include u-padding-y(5);
+    @include h4();
+    background-color: transparent;
   }
 }
 

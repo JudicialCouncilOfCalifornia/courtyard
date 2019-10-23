@@ -19634,12 +19634,28 @@ Values
   line-height: 1.50829 ;
 }
 
+.jcc-accordion__heading-container {
+  background-color: #f9f9f9 ;
+  border-bottom-color: #f0f0f0 ;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
 .jcc-accordion__heading-container .usa-accordion__heading {
   margin-left: auto ;
   margin-right: auto ;
   max-width: 87.5rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
+}
+
+.jcc-accordion__heading-container .usa-accordion__button {
+  padding-bottom: 2.5rem ;
+  padding-top: 2.5rem ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.49176rem;
+  background-color: transparent;
 }
 
 .jcc-accordion__content-container .usa-accordion__content {
