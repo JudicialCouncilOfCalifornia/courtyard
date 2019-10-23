@@ -1,7 +1,7 @@
 [role="tablist"] {
   padding: 0;
+  margin: 0;
 }
-
 [role="tablist"] li,
 [role="tablist"] a {
   display: inline-block;
@@ -14,6 +14,7 @@
 
 [role="tablist"] [aria-selected] {
   border: 2px solid;
+  border-color: #222;
   background: #fff;
   border-bottom: 0;
   position: relative;

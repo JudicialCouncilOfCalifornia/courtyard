@@ -14212,9 +14212,11 @@ h3.jcc-header-group__title {
 
 [role="tablist"] {
   padding: 0;
+  margin: 0;
 }
 
-[role="tablist"] li, [role="tablist"] a {
+[role="tablist"] li,
+[role="tablist"] a {
   display: inline-block;
 }
 
@@ -14225,6 +14227,7 @@ h3.jcc-header-group__title {
 
 [role="tablist"] [aria-selected] {
   border: 2px solid;
+  border-color: #222;
   background: #fff;
   border-bottom: 0;
   position: relative;
@@ -24028,7 +24031,8 @@ h3.jcc-header-group__title {
 }
 
 @media (max-width: 550px) {
-  [role="tablist"] li, [role="tablist"] a {
+  [role="tablist"] li,
+  [role="tablist"] a {
     display: block;
     position: static;
   }
@@ -24042,7 +24046,7 @@ h3.jcc-header-group__title {
     position: static;
   }
   [role="tablist"] [aria-selected]::after {
-    content: '\0020⬅';
+    content: "\0020⬅";
   }
   [role="tabpanel"] {
     border-top: 0;

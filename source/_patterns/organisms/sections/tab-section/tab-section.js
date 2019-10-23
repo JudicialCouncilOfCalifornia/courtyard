@@ -33,8 +33,9 @@
     tab.parentNode.setAttribute("role", "presentation");
 
     // Handle clicking of tabs for mouse users
-    tab.addEventListener("click", e => {
+    $(tab).on("click", e => {
       e.preventDefault();
+      e.stopImmediatePropagation();
       let currentTab = tablist.querySelector("[aria-selected]");
       if (e.currentTarget !== currentTab) {
         switchTab(currentTab, e.currentTarget);
