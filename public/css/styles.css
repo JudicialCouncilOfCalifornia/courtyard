@@ -18555,33 +18555,10 @@ Values
 .jcc-step {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.11882rem;
-  counter-increment: step-counter;
-  position: relative;
   max-width: 88ex ;
   line-height: 1.50829 ;
   padding-bottom: 4rem;
   margin-bottom: 0;
-  list-style: none;
-}
-
-.jcc-step::before {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 2.48626rem;
-  padding: 0.625rem;
-  background-color: white;
-  border: 3px solid #e5a000;
-  border-radius: 50%;
-  color: #005ea2;
-  content: counter(step-counter);
-  height: 4.6875rem;
-  line-height: 1.25;
-  text-align: center;
-  width: 4.6875rem;
-  display: block;
-}
-
-.jcc-step:last-of-type:after {
-  height: 0;
 }
 
 .jcc-step__title {
@@ -19635,15 +19612,6 @@ Settings
 Values
 ----------------------------------------
 */
-.jcc-timeline-item {
-  width: 100% ;
-  padding-bottom: 2rem ;
-}
-
-.jcc-timeline-item:last-of-type .jcc-timeline-item__title:after {
-  width: 0;
-}
-
 .jcc-timeline-item__title {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
@@ -25376,6 +25344,32 @@ Values
   margin-bottom: 0;
 }
 
+.jcc-steps li {
+  counter-increment: step-counter;
+  position: relative;
+  list-style: none;
+}
+
+.jcc-steps li::before {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 2.48626rem;
+  padding: 0.625rem;
+  background-color: white;
+  border: 3px solid #e5a000;
+  border-radius: 50%;
+  color: #005ea2;
+  content: counter(step-counter);
+  height: 4.6875rem;
+  line-height: 1.25;
+  text-align: center;
+  width: 4.6875rem;
+  display: block;
+}
+
+.jcc-steps li:last-of-type:after {
+  height: 0;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -27097,6 +27091,15 @@ Values
 
 .jcc-timeline > li {
   margin-bottom: 0;
+}
+
+.jcc-timeline li {
+  width: 100% ;
+  padding-bottom: 2rem ;
+}
+
+.jcc-timeline li:last-of-type .jcc-timeline-item__title:after {
+  width: 0;
 }
 
 .jcc-timeline__label {
@@ -36102,37 +36105,6 @@ Values
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-step::before {
-    position: absolute;
-    top: -7px;
-    right: 0;
-    bottom: 0;
-    left: -7px;
-  }
-  .jcc-step:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-    border: 1px solid #e5a000;
-    position: absolute;
-    top: 2.5rem;
-    left: 1.875rem;
-    z-index: -1;
-  }
-  .jcc-step {
-    padding-left: 6rem;
-  }
-  .jcc-timeline-item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 25% ;
-    padding-bottom: 4.5rem ;
-  }
-  .jcc-timeline-item > * {
-    padding-right: 2rem;
-  }
   .jcc-timeline-item__title:after {
     position: absolute;
     top: -2.5rem;
@@ -36141,7 +36113,7 @@ Values
     left: auto;
     content: "";
     display: block;
-    width: 100%;
+    width: 115%;
     height: 1px;
     border: 1px solid #005ea2;
     z-index: 1;
@@ -36293,6 +36265,27 @@ Values
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-steps li::before {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    bottom: 0;
+    left: -7px;
+  }
+  .jcc-steps li:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid #e5a000;
+    position: absolute;
+    top: 2.5rem;
+    left: 1.875rem;
+    z-index: -1;
+  }
+  .jcc-steps li {
+    padding-left: 6rem;
+  }
   .jcc-switchboard__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -36362,7 +36355,7 @@ Values
     left: auto;
     content: "";
     display: block;
-    width: 100%;
+    width: 115%;
     height: 1px;
     border: 1px solid #ffbe2e;
     z-index: 1;
@@ -36397,6 +36390,16 @@ Values
     overflow-x: auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+    padding-bottom: 4.5rem ;
+  }
+  .jcc-timeline li > * {
+    padding-right: 2rem;
   }
 }
 
