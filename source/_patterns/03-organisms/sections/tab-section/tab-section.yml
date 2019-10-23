@@ -1,0 +1,6 @@
+tabs:
+  - title: One
+  - title: Two
+tab_panels:
+  - content: Sample One
+  - content: Sample Two

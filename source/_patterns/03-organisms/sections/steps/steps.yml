@@ -1,5 +1,6 @@
-title: "Lorem ipsum"
-lead: "Nullam at semper mauris, at rhoncus purus."
+headergroup:
+  title: "Lorem ipsum"
+  lead: "Nullam at semper mauris, at rhoncus purus."
 steps:
   - title: Prepare the claim of exemption
     excerpt: "Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)"

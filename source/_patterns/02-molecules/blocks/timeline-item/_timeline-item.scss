@@ -1,26 +1,6 @@
 @import "../../../00-protons/global";
 
 .jcc-timeline-item {
-  @include u-width(full);
-  @include u-padding-bottom(4);
-
-  @include at-media(desktop) {
-    @include grid-col(3);
-    @include u-padding-bottom(9);
-
-    > * {
-      padding-right: 2rem;
-    }
-  }
-
-  // remove line from last timeline item
-  &:last-of-type {
-    .jcc-timeline-item__title {
-      &:after {
-        width: 0;
-      }
-    }
-  }
 }
 
 .jcc-timeline-item__title {

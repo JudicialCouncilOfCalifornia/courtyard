@@ -1,0 +1,14 @@
+<div class="jcc-section-tabs tabbed">
+  <ul>
+    {% for tab in tabs %}
+    <li>
+      <a href="#section{{ loop.index }}">{{ tab.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% for tab_panel in tab_panels %}
+  <section id="section{{ loop.index }}">
+    {{ tab_panel.content }}
+  </section>
+  {% endfor %}
+</div>

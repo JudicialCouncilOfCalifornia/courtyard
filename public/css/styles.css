@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -2368,12 +2369,6 @@ html {
           font-kerning: normal;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 100%;
-}
-
-body {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
-  line-height: 1.62895 ;
 }
 
 cite,
@@ -15231,31 +15226,37 @@ h3 {
   font-size: 2.48626rem;
 }
 
+h1,
 .h-responsive-h1 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.23764rem;
 }
 
+h2,
 .h-responsive-h2 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.98901rem;
 }
 
+h3,
 .h-responsive-h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.74038rem;
 }
 
+h4,
 .h4 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.49176rem;
 }
 
+h5,
 .h5 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
 }
 
+h6,
 .t-responsive-lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
@@ -16298,6 +16299,24 @@ Settings
 Values
 ----------------------------------------
 */
+.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.36745rem;
+}
+
+.jcc-card--has-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jcc-card--has-icon .jcc-card__media {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+  min-width: 4rem;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -18537,33 +18556,10 @@ Values
 .jcc-step {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.11882rem;
-  counter-increment: step-counter;
-  position: relative;
   max-width: 88ex ;
   line-height: 1.50829 ;
   padding-bottom: 4rem;
   margin-bottom: 0;
-  list-style: none;
-}
-
-.jcc-step::before {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 2.48626rem;
-  padding: 0.625rem;
-  background-color: white;
-  border: 3px solid #e5a000;
-  border-radius: 50%;
-  color: #005ea2;
-  content: counter(step-counter);
-  height: 4.6875rem;
-  line-height: 1.25;
-  text-align: center;
-  width: 4.6875rem;
-  display: block;
-}
-
-.jcc-step:last-of-type:after {
-  height: 0;
 }
 
 .jcc-step__title {
@@ -19091,6 +19087,11 @@ Values
   text-align: left;
 }
 
+.jcc-tile__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.36745rem;
+}
+
 .jcc-tile__title a {
   color: #0b4778 ;
   text-decoration: none;
@@ -19612,15 +19613,6 @@ Settings
 Values
 ----------------------------------------
 */
-.jcc-timeline-item {
-  width: 100% ;
-  padding-bottom: 2rem ;
-}
-
-.jcc-timeline-item:last-of-type .jcc-timeline-item__title:after {
-  width: 0;
-}
-
 .jcc-timeline-item__title {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
@@ -25385,6 +25377,32 @@ Values
   margin-bottom: 0;
 }
 
+.jcc-steps li {
+  counter-increment: step-counter;
+  position: relative;
+  list-style: none;
+}
+
+.jcc-steps li::before {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 2.48626rem;
+  padding: 0.625rem;
+  background-color: white;
+  border: 3px solid #e5a000;
+  border-radius: 50%;
+  color: #005ea2;
+  content: counter(step-counter);
+  height: 4.6875rem;
+  line-height: 1.25;
+  text-align: center;
+  width: 4.6875rem;
+  display: block;
+}
+
+.jcc-steps li:last-of-type:after {
+  height: 0;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -25964,6 +25982,46 @@ Values
 
 .jcc-switchboard__tile {
   margin-bottom: 1rem;
+}
+
+[role="tablist"] {
+  padding: 0;
+  margin: 0;
+}
+
+[role="tablist"] li,
+[role="tablist"] a {
+  display: inline-block;
+}
+
+[role="tablist"] a {
+  text-decoration: none;
+  padding: 0.5rem 1em;
+  border: 2px solid;
+  border-color: transparent;
+  border-bottom-width: 0;
+  top: 2px;
+  position: relative;
+}
+
+[role="tablist"] [aria-selected] {
+  border-color: #222;
+  background: #fff;
+}
+
+[role="tabpanel"] {
+  border: 2px solid;
+  padding: 1.5rem;
+}
+
+[role="tabpanel"] * + * {
+  margin-top: 0.75rem;
+}
+
+*:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 0 4px lightBlue;
+          box-shadow: inset 0 0 0 4px lightBlue;
 }
 
 /*
@@ -27106,6 +27164,15 @@ Values
 
 .jcc-timeline > li {
   margin-bottom: 0;
+}
+
+.jcc-timeline li {
+  width: 100% ;
+  padding-bottom: 2rem ;
+}
+
+.jcc-timeline li:last-of-type .jcc-timeline-item__title:after {
+  width: 0;
 }
 
 .jcc-timeline__label {
@@ -36003,18 +36070,22 @@ Values
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 3.48077rem;
   }
+  h1,
   .h-responsive-h1 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.98352rem;
   }
+  h2,
   .h-responsive-h2 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.48626rem;
   }
+  h3,
   .h-responsive-h3 {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.23764rem;
   }
+  h6,
   .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49176rem;
@@ -36107,37 +36178,6 @@ Values
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-step::before {
-    position: absolute;
-    top: -7px;
-    right: 0;
-    bottom: 0;
-    left: -7px;
-  }
-  .jcc-step:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-    border: 1px solid #e5a000;
-    position: absolute;
-    top: 2.5rem;
-    left: 1.875rem;
-    z-index: -1;
-  }
-  .jcc-step {
-    padding-left: 6rem;
-  }
-  .jcc-timeline-item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 25% ;
-    padding-bottom: 4.5rem ;
-  }
-  .jcc-timeline-item > * {
-    padding-right: 2rem;
-  }
   .jcc-timeline-item__title:after {
     position: absolute;
     top: -2.5rem;
@@ -36146,7 +36186,7 @@ Values
     left: auto;
     content: "";
     display: block;
-    width: 100%;
+    width: 115%;
     height: 1px;
     border: 1px solid #005ea2;
     z-index: 1;
@@ -36306,6 +36346,27 @@ Values
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-steps li::before {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    bottom: 0;
+    left: -7px;
+  }
+  .jcc-steps li:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid #e5a000;
+    position: absolute;
+    top: 2.5rem;
+    left: 1.875rem;
+    z-index: -1;
+  }
+  .jcc-steps li {
+    padding-left: 6rem;
+  }
   .jcc-switchboard__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -36375,7 +36436,7 @@ Values
     left: auto;
     content: "";
     display: block;
-    width: 100%;
+    width: 115%;
     height: 1px;
     border: 1px solid #ffbe2e;
     z-index: 1;
@@ -36410,6 +36471,16 @@ Values
     overflow-x: auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+    padding-bottom: 4.5rem ;
+  }
+  .jcc-timeline li > * {
+    padding-right: 2rem;
   }
 }
 
@@ -36783,6 +36854,29 @@ Values
   .usa-nav__submenu .usa-nav__submenu .usa-nav__submenu a {
     content: 'foobar';
     padding-left: 4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  [role="tablist"] li,
+  [role="tablist"] a {
+    display: block;
+    position: static;
+  }
+  [role="tablist"] a {
+    border: 2px solid #222 !important;
+  }
+  [role="tablist"] li + li a {
+    border-top: 0 !important;
+  }
+  [role="tablist"] [aria-selected] {
+    position: static;
+  }
+  [role="tablist"] [aria-selected]::after {
+    content: "\0020⬅";
+  }
+  [role="tabpanel"] {
+    border-top: 0;
   }
 }
 

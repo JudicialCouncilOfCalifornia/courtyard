@@ -1,1 +1,17 @@
 @import "../../../00-protons/global";
+
+.jcc-card__title {
+  @include h5($h-font-family: "heading");
+}
+
+.jcc-card--has-icon {
+  display: flex;
+
+  .jcc-card__media {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+
+    min-width: 4rem;
+  }
+}

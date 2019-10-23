@@ -11,6 +11,8 @@
 }
 
 .jcc-tile__title {
+  @include h5($h-font-family: "heading");
+
   a {
     @include u-text("blue-70v");
     text-decoration: none;

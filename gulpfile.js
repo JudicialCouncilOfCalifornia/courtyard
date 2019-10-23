@@ -17,6 +17,7 @@ const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass");
+const through = require("through2");
 const sourcemaps = require("gulp-sourcemaps");
 const webpack = require("webpack-stream");
 const compiler = require("webpack");
@@ -121,6 +122,8 @@ const plJs = () => {
     .pipe(
       webpack(
         {
+          devtool: "eval-source-map",
+          mode: "development",
           plugins: [
             new compiler.ProvidePlugin({
               $: "jquery",
@@ -140,9 +143,12 @@ const plJs = () => {
         presets: ["@babel/preset-env"]
       })
     )
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(gulp.dest(config.js.dest))
     .pipe(uglify())
+    .pipe(sourcemaps.write("./"))
     .pipe(rename("scripts.min.js"))
+    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.js.dest))
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
