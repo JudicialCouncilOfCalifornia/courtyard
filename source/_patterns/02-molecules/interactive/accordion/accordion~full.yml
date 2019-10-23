@@ -2,7 +2,22 @@ full: true
 classes: ['usa-accordion']
 accordion:
   - title: "First Amendment"
-    body: "<p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>"
+    body: '<div class="jcc-postcard jcc-postcard--has-header-left">
+            <div class="jcc-postcard__container">
+              <div class="jcc-postcard__row">
+                <div class="jcc-postcard__media">
+                  <img src="https://placeimg.com/800/400/arch" alt="Alt text" />
+                  <span class="jcc-postcard__tag">Page 2</span>
+                </div>
+              <div class="jcc-postcard__content">
+                <header class="jcc-header-group">
+                  <h2 class="jcc-header-group__title">Lorem ipsum</h2>
+                  <div class="jcc-header-group__lead"><p>Nullam at semper mauris, at rhoncus purus.</p></div>
+                </header>
+                </div>
+              </div>
+            </div>
+          </div>'
     title_attributes:
       Attribute():
         class: []

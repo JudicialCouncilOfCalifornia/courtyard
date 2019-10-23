@@ -69,6 +69,13 @@
       }
     }
   }
+
+  .jcc-timeline-item__title {
+    @include at-media(desktop) {
+      @include timeline-line();
+      @include timeline-dot();
+    }
+  }
 }
 
 .jcc-timeline__label {

@@ -4,6 +4,7 @@
   ]|merge(classes|default([]))
 %}
 
+{% if accordion|length > 0 %}
 {% if full %}
 <div{{ attributes.addClass(classes, 'usa-accordion--full') }}>
 {% else %}
@@ -29,3 +30,4 @@
     {% if full %}</div>{% endif %}
   {% endfor %}
 </div>
+{% endif %}

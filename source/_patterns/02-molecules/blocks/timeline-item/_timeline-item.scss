@@ -7,11 +7,6 @@
   @include h5();
   @include u-font-family("sans");
   position: relative;
-
-  @include at-media(desktop) {
-    @include timeline-line();
-    @include timeline-dot();
-  }
 }
 
 .jcc-timeline-item__excerpt {

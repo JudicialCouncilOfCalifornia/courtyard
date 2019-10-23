@@ -16830,6 +16830,11 @@ Values
   border-style: solid;
 }
 
+.jcc-filelist__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49176rem;
+}
+
 .jcc-filelist__list {
   margin-bottom: 0;
   margin-top: 0;
@@ -19645,8 +19650,9 @@ Values
 .jcc-accordion__heading-container .usa-accordion__button {
   padding-bottom: 2.5rem ;
   padding-top: 2.5rem ;
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49176rem;
+  font-weight: normal ;
   background-color: transparent;
 }
 
@@ -20169,6 +20175,11 @@ Values
   border-width: 1px;
   border-color: #0050d8 ;
   border-style: solid;
+}
+
+.jcc-datefinder__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49176rem;
 }
 
 .jcc-datefinder__content {
@@ -36178,35 +36189,6 @@ Values
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-timeline-item__title:after {
-    position: absolute;
-    top: -2.5rem;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    content: "";
-    display: block;
-    width: 115%;
-    height: 1px;
-    border: 1px solid #005ea2;
-    z-index: 1;
-  }
-  .jcc-timeline-item__title:before {
-    position: absolute;
-    top: -3.25rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    background-color: #005ea2;
-    border: 2px solid #005ea2;
-    border-radius: 50%;
-    content: "";
-    height: 1.75rem;
-    line-height: 1;
-    text-align: center;
-    width: 1.75rem;
-    z-index: 2;
-  }
   .jcc-accordion__heading-container .usa-accordion__heading {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -36481,6 +36463,35 @@ Values
   }
   .jcc-timeline li > * {
     padding-right: 2rem;
+  }
+  .jcc-timeline .jcc-timeline-item__title:after {
+    position: absolute;
+    top: -2.5rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: 115%;
+    height: 1px;
+    border: 1px solid #005ea2;
+    z-index: 1;
+  }
+  .jcc-timeline .jcc-timeline-item__title:before {
+    position: absolute;
+    top: -3.25rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #005ea2;
+    border: 2px solid #005ea2;
+    border-radius: 50%;
+    content: "";
+    height: 1.75rem;
+    line-height: 1;
+    text-align: center;
+    width: 1.75rem;
+    z-index: 2;
   }
 }
 

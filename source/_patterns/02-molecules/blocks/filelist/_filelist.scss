@@ -11,6 +11,7 @@
 }
 
 .jcc-filelist__title {
+  @include h4($h-font-family: "heading");
 }
 
 .jcc-filelist__list {
