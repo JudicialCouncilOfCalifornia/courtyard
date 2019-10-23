@@ -2,8 +2,18 @@
   <h3 class="jcc-timeline-item__title">{{ title }}</h3>
   <div class="jcc-timeline-item__excerpt">{{ excerpt }}</div>
 
-  {% if read_more_link %}
-  <a href="{{ url }}" class="jcc-timeline-item__trigger"{% if url_attributes %}{{ url_attributes }}{% endif %}>{{ read_more_link }}</a>
+  {% if read_more.url %}
+  <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger"{% if url_attributes %}{{ url_attributes }}{% endif %} title="{{ read_more.label }}" target="_blank">{{ read_more.label }}</a>
   {% endif %}
-  
+
+  {% if read_more.id %}
+  <button id="{{ read_more.id }}" data-a11y-dialog-show="{{ read_more.id }}">{{ read_more.label }}</button>
+  {% endif %}  
 </li>
+  
+{% if read_more.id %}
+  {% include '@organisms/sections/full-modal/full-modal.twig' with {
+    standalone_component: false,
+    modal_id: read_more.id
+  } %}
+{% endif %}
