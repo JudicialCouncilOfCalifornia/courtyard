@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 }
+
 [role="tablist"] li,
 [role="tablist"] a {
   display: inline-block;
@@ -10,15 +11,16 @@
 [role="tablist"] a {
   text-decoration: none;
   padding: 0.5rem 1em;
+  border: 2px solid;
+  border-color: transparent;
+  border-bottom-width: 0;
+  top: 2px;
+  position: relative;
 }
 
 [role="tablist"] [aria-selected] {
-  border: 2px solid;
   border-color: #222;
   background: #fff;
-  border-bottom: 0;
-  position: relative;
-  top: 2px;
 }
 
 [role="tabpanel"] {
