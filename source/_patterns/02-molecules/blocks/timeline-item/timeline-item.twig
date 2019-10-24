@@ -7,13 +7,8 @@
   {% endif %}
 
   {% if read_more.id %}
-  <button id="{{ read_more.id }}" data-a11y-dialog-show="{{ read_more.id }}">{{ read_more.label }}</button>
-  {% endif %}  
-</li>
-  
-{% if read_more.id %}
   {% include '@organisms/sections/full-modal/full-modal.twig' with {
-    standalone_component: false,
     modal_id: read_more.id
   } %}
-{% endif %}
+  {% endif %}  
+</li>
