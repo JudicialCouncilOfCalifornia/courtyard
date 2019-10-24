@@ -282,22 +282,22 @@ $theme-font-sans-custom-src: (
   roman: (
     100: false,
     200: false,
-    300: "lato-light",
-    400: "lato-regular",
-    500: false,
-    600: false,
-    700: "lato-bold",
+    300: "Lato-Light",
+    400: "Lato-Regular",
+    500: "Lato-Medium",
+    600: "Lato-SemiBold",
+    700: "Lato-Bold",
     800: false,
     900: false
   ),
   italic: (
     100: false,
     200: false,
-    300: "lato-lightItalic",
-    400: "lato-regularItalic",
+    300: false,
+    400: "Lato-Italic",
     500: false,
     600: false,
-    700: "lato-boldItalic",
+    700: false,
     800: false,
     900: false
   )
@@ -308,10 +308,10 @@ $theme-font-serif-custom-src: (
     100: false,
     200: false,
     300: false,
-    400: "lora-regular",
+    400: "Lora-Regular",
     500: false,
     600: false,
-    700: "lora-bold",
+    700: "Lora-Bold",
     800: false,
     900: false
   ),
@@ -319,10 +319,10 @@ $theme-font-serif-custom-src: (
     100: false,
     200: false,
     300: false,
-    400: "lora-regularItalic",
+    400: "Lora-Italic",
     500: false,
     600: false,
-    700: "lora-boldItalic",
+    700: "Lora-BoldItalic",
     800: false,
     900: false
   )
