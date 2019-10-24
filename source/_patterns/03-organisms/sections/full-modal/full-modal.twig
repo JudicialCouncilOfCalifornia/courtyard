@@ -1,23 +1,16 @@
-{% if standalone_component %}
-<button data-a11y-dialog-show="{{ modal_id }}">Open Dialog Window</button>
-<!-- This element is for the Pattern Lab Only -->
-{% endif %}
+
+<button class="jcc-full-modal__trigger{% if parent_component_class %} {{ parent_component_class }}{% endif %}" data-a11y-dialog-show="{{ modal_id }}">Open Dialog Window</button>
+
 
 <div id="{{ modal_id }}" class="jcc-full-modal{% if background_variant %} jcc-full-modal--{{ background_variant }}{% endif %}{% if column_variant %} jcc-full-modal--{{ column_variant }}{% endif %}" >
   
   <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-full-modal"></div>
 
-  <dialog class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="dialog-title" title="{{ headergroup.title }}">
-    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide="jcc-full-modal" aria-label="Close this dialog window">X</button>
+  <dialog class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="{{ headergroup.title }}" title="{{ headergroup.title }}">
+    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">X</button>
         
     <div class="jcc-full-modal__content">
-      {% include '@organisms/sections/text-section/text-section.twig' with {
-        headergroup: textsection.headergroup,
-        column_content_left: textsection.column_content_left,
-        column_content_right: textsection.column_content_right,
-        background_variant: textsection.background_variant,
-        column_variant: textsection.column_variant
-      } %}
+      {{ modal_content }}
     </div>
       <footer class="jcc-full-modal__footer">
         <button type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">Done</button>
