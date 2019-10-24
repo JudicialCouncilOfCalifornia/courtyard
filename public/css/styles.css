@@ -2253,7 +2253,7 @@ th {
   font-style: normal;
   font-weight: 300;
   font-display: fallback;
-  src: url(../fonts/lato/lato-light.woff2) format("woff2"), url(../fonts/lato/lato-light.woff) format("woff"), url(../fonts/lato/lato-light.ttf) format("truetype");
+  src: url(../fonts/lato/Lato-Light.woff2) format("woff2"), url(../fonts/lato/Lato-Light.woff) format("woff"), url(../fonts/lato/Lato-Light.ttf) format("truetype");
 }
 
 @font-face {
@@ -2261,7 +2261,7 @@ th {
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url(../fonts/lato/lato-regular.woff2) format("woff2"), url(../fonts/lato/lato-regular.woff) format("woff"), url(../fonts/lato/lato-regular.ttf) format("truetype");
+  src: url(../fonts/lato/Lato-Regular.woff2) format("woff2"), url(../fonts/lato/Lato-Regular.woff) format("woff"), url(../fonts/lato/Lato-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -2269,15 +2269,7 @@ th {
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url(../fonts/lato/lato-bold.woff2) format("woff2"), url(../fonts/lato/lato-bold.woff) format("woff"), url(../fonts/lato/lato-bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: Lato;
-  font-style: italic;
-  font-weight: 300;
-  font-display: fallback;
-  src: url(../fonts/lato/lato-lightItalic.woff2) format("woff2"), url(../fonts/lato/lato-lightItalic.woff) format("woff"), url(../fonts/lato/lato-lightItalic.ttf) format("truetype");
+  src: url(../fonts/lato/Lato-Bold.woff2) format("woff2"), url(../fonts/lato/Lato-Bold.woff) format("woff"), url(../fonts/lato/Lato-Bold.ttf) format("truetype");
 }
 
 @font-face {
@@ -2285,15 +2277,7 @@ th {
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url(../fonts/lato/lato-regularItalic.woff2) format("woff2"), url(../fonts/lato/lato-regularItalic.woff) format("woff"), url(../fonts/lato/lato-regularItalic.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: Lato;
-  font-style: italic;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(../fonts/lato/lato-boldItalic.woff2) format("woff2"), url(../fonts/lato/lato-boldItalic.woff) format("woff"), url(../fonts/lato/lato-boldItalic.ttf) format("truetype");
+  src: url(../fonts/lato/Lato-Italic.woff2) format("woff2"), url(../fonts/lato/Lato-Italic.woff) format("woff"), url(../fonts/lato/Lato-Italic.ttf) format("truetype");
 }
 
 @font-face {
@@ -2301,7 +2285,7 @@ th {
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url(../fonts/lora/lora-regular.woff2) format("woff2"), url(../fonts/lora/lora-regular.woff) format("woff"), url(../fonts/lora/lora-regular.ttf) format("truetype");
+  src: url(../fonts/lora/Lora-Regular.woff2) format("woff2"), url(../fonts/lora/Lora-Regular.woff) format("woff"), url(../fonts/lora/Lora-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -2309,7 +2293,7 @@ th {
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url(../fonts/lora/lora-bold.woff2) format("woff2"), url(../fonts/lora/lora-bold.woff) format("woff"), url(../fonts/lora/lora-bold.ttf) format("truetype");
+  src: url(../fonts/lora/Lora-Bold.woff2) format("woff2"), url(../fonts/lora/Lora-Bold.woff) format("woff"), url(../fonts/lora/Lora-Bold.ttf) format("truetype");
 }
 
 @font-face {
@@ -2317,7 +2301,7 @@ th {
   font-style: italic;
   font-weight: 400;
   font-display: fallback;
-  src: url(../fonts/lora/lora-regularItalic.woff2) format("woff2"), url(../fonts/lora/lora-regularItalic.woff) format("woff"), url(../fonts/lora/lora-regularItalic.ttf) format("truetype");
+  src: url(../fonts/lora/Lora-Italic.woff2) format("woff2"), url(../fonts/lora/Lora-Italic.woff) format("woff"), url(../fonts/lora/Lora-Italic.ttf) format("truetype");
 }
 
 @font-face {
@@ -2325,7 +2309,7 @@ th {
   font-style: italic;
   font-weight: 700;
   font-display: fallback;
-  src: url(../fonts/lora/lora-boldItalic.woff2) format("woff2"), url(../fonts/lora/lora-boldItalic.woff) format("woff"), url(../fonts/lora/lora-boldItalic.ttf) format("truetype");
+  src: url(../fonts/lora/Lora-BoldItalic.woff2) format("woff2"), url(../fonts/lora/Lora-BoldItalic.woff) format("woff"), url(../fonts/lora/Lora-BoldItalic.ttf) format("truetype");
 }
 
 /* stylelint-enable */
