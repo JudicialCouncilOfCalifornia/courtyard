@@ -3,14 +3,12 @@
   <div class="jcc-timeline-item__excerpt">{{ excerpt }}</div>
 
   {% if read_more.url %}
-  <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger"{% if url_attributes %}{{ url_attributes }}{% endif %} title="{{ read_more.label }}" target="_blank">{{ read_more.label }}</a>
-  
+    <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger"{% if url_attributes %}{{ url_attributes }}{% endif %} title="{{ read_more.label }}" target="_blank">{{ read_more.label }}</a>
   {% elseif read_more.id %}
-  {% include '@organisms/sections/full-modal/full-modal.twig' with {
-    modal_id: read_more.id,
-    button_label: read_more.label
-  } %}
-
+    {% include '@organisms/sections/full-modal/full-modal.twig' with {
+      modal_id: read_more.id,
+      button_label: read_more.label
+    } %}
   {% else %}
   
   {% endif %}  
