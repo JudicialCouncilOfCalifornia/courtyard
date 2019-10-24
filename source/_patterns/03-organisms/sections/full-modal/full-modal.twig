@@ -7,8 +7,8 @@
   
   <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-full-modal"></div>
 
-  <dialog class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="dialog-title" title="{{ headergroup.title }}">
-    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide="jcc-full-modal" aria-label="Close this dialog window">X</button>
+  <dialog class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="{{ headergroup.title }}" title="{{ headergroup.title }}">
+    <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">X</button>
         
     <div class="jcc-full-modal__content">
       {% include '@organisms/sections/text-section/text-section.twig' with {
