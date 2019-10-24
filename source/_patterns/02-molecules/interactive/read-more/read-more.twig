@@ -1,8 +1,11 @@
-<div class="jcc-read-more">
-  <button class="jcc-read-more__trigger" data-a11y-toggle="target">{{ read_more_link }}</button>
+{% if id and content %}
+  <div class="jcc-read-more">
+    <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ id }}">
+      {{ title ?? 'Read more'|t }}
+    </button>
 
-  <div id="target" class="jcc-read-more__content">  
-    {{ read_more_content }}
-  </div>  
-
-</div>
+    <div id="{{ id }}" class="jcc-read-more__content">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}
