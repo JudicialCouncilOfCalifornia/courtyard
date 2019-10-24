@@ -4,11 +4,14 @@
 
   {% if read_more.url %}
   <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger"{% if url_attributes %}{{ url_attributes }}{% endif %} title="{{ read_more.label }}" target="_blank">{{ read_more.label }}</a>
-  {% endif %}
-
-  {% if read_more.id %}
+  
+  {% elseif read_more.id %}
   {% include '@organisms/sections/full-modal/full-modal.twig' with {
-    modal_id: read_more.id
+    modal_id: read_more.id,
+    button_label: read_more.label
   } %}
+
+  {% else %}
+  
   {% endif %}  
 </li>
