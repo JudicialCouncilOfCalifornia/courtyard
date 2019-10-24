@@ -21,10 +21,12 @@
 .jcc-timeline-section--has-background-color--dark {
   @include dark-background();
 
-  .jcc-timeline-item__title {
-    @include at-media(desktop) {
-      @include timeline-line($timeline-line-border: "gold-20v");
-      @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
+  .jcc-timeline {
+    .jcc-timeline-item__title {
+      @include at-media(desktop) {
+        @include timeline-line($timeline-line-border: "gold-20v");
+        @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
+      }
     }
   }
 

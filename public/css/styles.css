@@ -20407,7 +20407,11 @@ Values
 }
 
 .jcc-read-more {
-  padding: 3.5rem;
+  padding-top: 1rem;
+}
+
+.jcc-read-more__trigger {
+  margin-bottom: 1rem;
 }
 
 .jcc-read-more__content[aria-hidden="true"] {
@@ -36410,7 +36414,7 @@ Values
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline-item__title:after {
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;
     top: -2.5rem;
     right: auto;
@@ -36423,7 +36427,7 @@ Values
     border: 1px solid #ffbe2e;
     z-index: 1;
   }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline-item__title:before {
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
     position: absolute;
     top: -3.25rem;
     right: auto;

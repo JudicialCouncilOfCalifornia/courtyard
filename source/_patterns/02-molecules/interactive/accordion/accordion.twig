@@ -25,7 +25,7 @@
 
     {% if full %}<div class="jcc-accordion__content-container">{% endif %}
     <div{{ item.content_attributes.addClass('usa-accordion__content','usa-prose') }} id="{{ id }}">
-      {{- item.body -}}
+      {{- item.body|raw -}}
     </div>
     {% if full %}</div>{% endif %}
   {% endfor %}
