@@ -19,13 +19,14 @@
   }
 
   .usa-checkbox__input:checked + .usa-checkbox__label {
-    @include u-bg("cyan-40v");
-    @include u-border("cyan-40v");
+    @extend .bg-jcc-cyan;
+    @extend .border-jcc-cyan;
     @include u-text("white");
 
     &::before {
       @include u-bg("white");
-      box-shadow: 0 0 0 2px color("cyan-40v");
+      box-shadow: 0 0 0 2px $jcc-cyan;
+      background-image: url("../images/collect-dark.svg");
     }
   }
 

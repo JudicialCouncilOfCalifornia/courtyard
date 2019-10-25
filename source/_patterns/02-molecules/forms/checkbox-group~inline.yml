@@ -1,15 +1,15 @@
 legend: Whose name is being changed?
 checkbox_group:
   - label: Self (adult)
-    id: Four
+    id: "90"
     name: Beta
     bordered: true
   - label: Spouse (adult)
-    id: Five
+    id: "91"
     name: Beta
     bordered: true
   - label: One or more minor child
-    id: Six
+    id: "92"
     name: Beta
     bordered: true
 align_variant: inline

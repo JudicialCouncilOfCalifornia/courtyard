@@ -19,7 +19,7 @@
 }
 
 [role="tablist"] [aria-selected] {
-  @include u-bg("cyan-40v");
+  @extend .bg-jcc-cyan;
   @include u-text("white");
 }
 

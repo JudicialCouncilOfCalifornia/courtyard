@@ -12,8 +12,8 @@
   }
 
   .usa-radio__input:checked + .usa-radio__label {
-    @include u-bg("cyan-40v");
-    @include u-border("cyan-40v");
+    @extend .bg-jcc-cyan;
+    @extend .border-jcc-cyan;
     @include u-text("white");
 
     &::before {

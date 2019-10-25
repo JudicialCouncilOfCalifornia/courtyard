@@ -581,6 +581,8 @@ Values
 ----------------------------------------
 */
 
+$jcc-cyan: #0186d0;
+
 // .add-aspect
 
 $add-aspect-palettes: ();
@@ -594,7 +596,9 @@ $align-items-manual-values: ();
 // .background-color
 
 $background-color-palettes: ();
-$background-color-manual-values: ();
+$background-color-manual-values: (
+  "jcc-cyan": $jcc-cyan
+);
 
 // .border
 
@@ -604,7 +608,9 @@ $border-manual-values: ();
 // .border-color
 
 $border-color-palettes: ();
-$border-color-manual-values: ();
+$border-color-manual-values: (
+  "jcc-cyan": $jcc-cyan
+);
 
 // .border-radius
 
