@@ -13679,6 +13679,10 @@ Settings
 Values
 ----------------------------------------
 */
+.usa-button {
+  border-radius: 0 ;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -14185,6 +14189,45 @@ Values
 .primary-test {
   color: #0050d8 ;
   background-color: turqoise;
+}
+
+.usa-checkbox__label {
+  border-width: 2px;
+  border-style: solid;
+  padding-bottom: 0.75rem ;
+  padding-top: 0.75rem ;
+  padding-left: 3rem ;
+  padding-right: 1.5rem ;
+}
+
+.usa-checkbox__label {
+  margin: 0;
+}
+
+.usa-checkbox__label::before {
+  border-radius: 0 ;
+}
+
+.usa-checkbox__input:focus + .usa-checkbox__label::before {
+  outline: none;
+}
+
+.usa-checkbox__input:checked + .usa-checkbox__label {
+  background-color: #009ec1 ;
+  border-color: #009ec1 ;
+  border-style: solid;
+  color: white ;
+}
+
+.usa-checkbox__input:checked + .usa-checkbox__label::before {
+  background-color: white ;
+  -webkit-box-shadow: 0 0 0 2px #009ec1;
+          box-shadow: 0 0 0 2px #009ec1;
+}
+
+.usa-checkbox__input:focus + .usa-checkbox__label {
+  outline: 0.25rem solid #face00;
+  outline-offset: 0;
 }
 
 .jcc-logo {
@@ -19613,6 +19656,26 @@ Values
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99451rem;
   line-height: 1.50829 ;
+}
+
+.jcc-form.usa-form {
+  max-width: none;
+}
+
+.jcc-form .usa-checkbox {
+  margin-bottom: .5rem;
+}
+
+.jcc-form--inline .usa-checkbox {
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.jcc-form-group__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49176rem;
+  font-weight: normal ;
+  margin-bottom: 1rem;
 }
 
 .jcc-accordion__heading-container {
@@ -26015,12 +26078,6 @@ Values
 
 [role="tabpanel"] * + * {
   margin-top: 0.75rem;
-}
-
-*:focus {
-  outline: none;
-  -webkit-box-shadow: inset 0 0 0 4px lightBlue;
-          box-shadow: inset 0 0 0 4px lightBlue;
 }
 
 /*
