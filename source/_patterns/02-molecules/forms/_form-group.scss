@@ -3,13 +3,15 @@
     max-width: none;
   }
 
-  .usa-checkbox {
+  .usa-checkbox,
+  .usa-radio {
     margin-bottom: 0.5rem;
   }
 }
 
 .jcc-form--inline {
-  .usa-checkbox {
+  .usa-checkbox,
+  .usa-radio {
     display: inline-block;
     margin-right: 0.5rem;
   }

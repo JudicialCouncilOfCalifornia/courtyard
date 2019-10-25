@@ -1,15 +1,15 @@
-legend: Whose name is being changed?
-checkbox_group:
+legend: Check all that apply
+radio_group:
   - label: Self (adult)
-    id: Four
-    name: Beta
+    id: "15"
+    name: Delta
     bordered: true
   - label: Spouse (adult)
-    id: Five
-    name: Beta
+    id: "16"
+    name: Delta
     bordered: true
   - label: One or more minor child
-    id: Six
-    name: Beta
+    id: "17"
+    name: Delta
     bordered: true
 align_variant: inline

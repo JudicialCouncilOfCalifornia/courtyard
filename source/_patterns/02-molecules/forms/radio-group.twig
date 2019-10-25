@@ -3,8 +3,8 @@
     <legend class="jcc-form-group__title usa-legend">{{ legend }}</legend>
 
     <div class="jcc-form-group__options">
-    {% for item in checkbox_group %}
-      {% include '@atoms/forms/checkbox.twig' with {
+    {% for item in radio_group %}
+      {% include '@atoms/forms/radio.twig' with {
         label: item.label,
         id: item.id,
         name: item.name,
@@ -15,5 +15,3 @@
 
   </fieldset>
 </form>
-
-

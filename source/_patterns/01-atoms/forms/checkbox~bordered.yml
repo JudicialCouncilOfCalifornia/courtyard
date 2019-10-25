@@ -1,4 +1,4 @@
 label: First
-id: One
+id: Two
 name: Test
-bordered: false
+bordered: true
