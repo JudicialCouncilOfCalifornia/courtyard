@@ -2,7 +2,7 @@
 
 <div id="{{ modal_id }}" class="jcc-full-modal{% if background_variant %} jcc-full-modal--{{ background_variant }}{% endif %}{% if column_variant %} jcc-full-modal--{{ column_variant }}{% endif %}" >
   
-  <div id="backdrop" class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-full-modal"></div>
+  <div class="jcc-full-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-full-modal"></div>
 
   <dialog class="jcc-full-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="{{ headergroup.title }}" title="{{ headergroup.title }}">
     <button class="jcc-full-modal__close-button" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">X</button>
