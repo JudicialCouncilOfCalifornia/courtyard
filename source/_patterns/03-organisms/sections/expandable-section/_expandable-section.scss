@@ -1,0 +1,14 @@
+.jcc-expandable-section {
+
+}
+
+.jcc-expandable-section__header {
+  @include u-bg('base-lightest');
+  @include u-padding-y(5);
+  @include u-padding-x(3);
+}
+
+.jcc-expandable-section__content {
+  margin: 0;
+  
+}

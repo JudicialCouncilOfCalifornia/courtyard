@@ -1,0 +1,20 @@
+<div class="jcc-expandable-section">
+  <div class="jcc-expandable-section__header">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      brow: headergroup.brow,
+      title: headergroup.title,
+      lead: headergroup.lead,
+      tag: headergroup.tag
+    } %}  
+  </div>
+
+  <dl class="jcc-expandable-section__content">
+    {% for item in content %}
+      {% include '@molecules/interactive/expandable-item/expandable-item.twig' with {
+        id: item.id,
+        excerpt: item.excerpt,
+        content: item.content
+      } %}        
+    {% endfor %}
+  </dl>
+</div>

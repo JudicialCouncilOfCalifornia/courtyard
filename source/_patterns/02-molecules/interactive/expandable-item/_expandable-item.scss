@@ -1,0 +1,45 @@
+.jcc-expandable-item {
+  @include u-bg('base-lightest');
+  position: relative;
+  border: 0;
+  @include u-border-bottom(1px);
+  @include u-border('base-light');
+}
+
+.jcc-expandable-item__excerpt {
+  @include u-bg('base-lightest');
+}
+
+.jcc-expandable-item__button {
+  all: inherit;
+  @include u-padding(3);
+  display: block;
+  width: 100%;
+}
+
+.jcc-expandable-item__content {
+  @include u-padding(3);
+  margin-left: 0;
+}
+
+.jcc-expandable-item__content[aria-hidden="true"] {
+  display: none;
+}
+
+// Temp style until we have the icon system in place
+.jcc-expandable-item__button:after {
+  position: absolute;
+  right: 24px;
+  top: 12px;
+  font-size: 2rem;
+  opacity: .3;
+}
+
+.jcc-expandable-item__button[aria-expanded="true"]:after {
+  content: "-";
+}
+
+.jcc-expandable-item__button[aria-expanded="false"]:after {
+  content: "+"; 
+}
+// End of temp styles

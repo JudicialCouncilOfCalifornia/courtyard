@@ -1,0 +1,18 @@
+headergroup:
+  brow: Expandable Section
+  title: "This is the Expandable Section"
+  lead: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorum consequuntur neque, amet, at asperiores quo inventore alias, qui nemo magni quaerat officiis. Odit soluta rem, sapiente consequuntur maxime adipisci!"
+content:
+  - id: 'section-001'
+    excerpt: 'Section 1'
+    content: 'If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.'
+  - id: 'section-002'
+    excerpt: 'Section 2'
+    content: 'If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.'
+  - id: 'section-003'
+    excerpt: 'Section 3'
+    content: 'If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.'
+  - id: 'section-004'
+    excerpt: 'Section 4'
+    content: 'If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.'
+
