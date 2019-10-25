@@ -1,11 +1,23 @@
 .jcc-read-more {
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .jcc-read-more__trigger {
-  margin-bottom: 1rem;
+  
+}
+
+.jcc-read-more__content {
+  margin-top: 1rem;
 }
 
 .jcc-read-more__content[aria-hidden="true"] {
   display: none;
+}
+
+.jcc-read-more--inverted .jcc-read-more__content {
+  order: -1;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
