@@ -9,9 +9,8 @@
   {% elseif read_more.id %}
     {% include '@organisms/sections/full-modal/full-modal.twig' with {
       modal_id: read_more.id,
-      button_label: read_more.label
+      button_label: read_more.label,
       modal_content: read_more.modal_content 
-      
     } %}
   {% else %}
   
