@@ -38,124 +38,84 @@
   "url": "http://lorizzle.nl/",
   "theme_color": [
     {
-      "label": "base-lightest",
-      "color": "#f0f0f0"
-    },
-    {
       "label": "base-lighter",
-      "color": "#dcdee0"
+      "color": "#C9C9C9"
     },
     {
       "label": "base-light",
-      "color": "#a9aeb1"
+      "color": "#C9C9C9"
     },
     {
       "label": "base",
-      "color": "#71767a"
+      "color": "#919191"
     },
     {
       "label": "base-dark",
-      "color": "#565c65"
+      "color": "#5C5C5C"
     },
     {
       "label": "base-darker",
-      "color": "#3d4551"
-    },
-    {
-      "label": "base-darkest",
-      "color": "#1b1b1b"
+      "color": "#454545"
     },
     {
       "label": "ink",
       "color": "#1b1b1b"
     },
     {
-      "label": "primary-lighter",
-      "color": "#d9e8f6"
+      "label": "primary-lighter", // blue-5
+      "color": "#F4F9FF"
     },
     {
-      "label": "primary-light",
-      "color": "#73b3e7"
+      "label": "primary-light", // blue-30v
+      "color": "#58b4ff"
     },
     {
-      "label": "primary",
-      "color": "#005ea2"
+      "label": "primary", // blue-60v
+      "color": "#005EA2"
     },
     {
-      "label": "primary-vivid",
-      "color": "#0050d8"
+      "label": "primary-vivid", // blue-50
+      "color": "#2378C3"
     },
     {
-      "label": "primary-dark",
-      "color": "#1a4480"
+      "label": "primary-dark", // blue-70v
+      "color": "#0B4778"
     },
     {
-      "label": "primary-darker",
-      "color": "#162e51"
+      "label": "primary-darker", // blue-80
+      "color": "#1F303E"
     },
     {
-      "label": "secondary-lighter",
-      "color": "#f8dfe2"
+      "label": "secondary-lighter", // blue-cool-5
+      "color": "#E7F2F5"
     },
     {
-      "label": "secondary-light",
-      "color": "#f2938c"
+      "label": "secondary-light", // cyan-5
+      "color": "#e7f6f8"
     },
     {
-      "label": "secondary",
-      "color": "#d83933"
+      "label": "secondary", // cyan-50
+      "color": "#168092"
     },
     {
-      "label": "secondary-vivid",
-      "color": "#e41d3d"
+      "label": "secondary-dark", // cyan-60
+      "color": "#2a646d"
     },
     {
-      "label": "secondary-dark",
-      "color": "#b51d09"
+      "label": "secondary-darker", // cyan-70
+      "color": "#2c4a4e"
     },
     {
-      "label": "secondary-darker",
-      "color": "#8b1303"
+      "label": "accent-warm-light", // gold-5v
+      "color": "#fef0c8"
     },
     {
-      "label": "accent-cool-lighter",
-      "color": "#e1f3f8"
+      "label": "accent-warm", // gold-20v
+      "color": "#FFBE2E"
     },
     {
-      "label": "accent-cool-light",
-      "color": "#97d4ea"
-    },
-    {
-      "label": "accent-cool",
-      "color": "#00bde3"
-    },
-    {
-      "label": "accent-cool-dark",
-      "color": "#28a0cb"
-    },
-    {
-      "label": "accent-cool-darker",
-      "color": "#07648d"
-    },
-    {
-      "label": "accent-warm-lighter",
-      "color": "#fdb81e"
-    },
-    {
-      "label": "accent-warm-light",
-      "color": "#ffbc78"
-    },
-    {
-      "label": "accent-warm",
-      "color": "#fa9441"
-    },
-    {
-      "label": "accent-warm-dark",
+      "label": "accent-warm-dark", // gold-30v
       "color": "#c05600"
-    },
-    {
-      "label": "accent-warm-darker",
-      "color": "#775540"
     }
   ],
   "state_color": [

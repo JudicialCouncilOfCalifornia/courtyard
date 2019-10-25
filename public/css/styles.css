@@ -6913,11 +6913,11 @@ through all possible variants
 }
 
 .bg-jcc-cyan, .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label, .jcc-radio--bordered .usa-radio__input:checked + .usa-radio__label, [role="tablist"] [aria-selected] {
-  background-color: #0186D0 !important;
+  background-color: #0186d0 !important;
 }
 
 .hover\:bg-jcc-cyan:hover {
-  background-color: #0186D0 !important;
+  background-color: #0186d0 !important;
 }
 
 .border-1px {
@@ -7913,11 +7913,11 @@ through all possible variants
 }
 
 .border-jcc-cyan, .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label, .jcc-radio--bordered .usa-radio__input:checked + .usa-radio__label {
-  border-color: #0186D0 !important;
+  border-color: #0186d0 !important;
 }
 
 .hover\:border-jcc-cyan:hover {
-  border-color: #0186D0 !important;
+  border-color: #0186d0 !important;
 }
 
 .radius-0 {
@@ -13696,6 +13696,18 @@ Values
 */
 .usa-button {
   border-radius: 0 ;
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+  padding-left: 1.5rem ;
+  padding-right: 1.5rem ;
+}
+
+.usa-button--big {
+  padding-bottom: 1.25rem ;
+  padding-top: 1.25rem ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
+  font-size: 1.24313rem;
 }
 
 /*
@@ -14233,8 +14245,8 @@ Values
 
 .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label::before {
   background-color: white ;
-  -webkit-box-shadow: 0 0 0 2px #0186D0;
-          box-shadow: 0 0 0 2px #0186D0;
+  -webkit-box-shadow: 0 0 0 2px #0186d0;
+          box-shadow: 0 0 0 2px #0186d0;
   background-image: url("../images/collect-dark.svg");
 }
 
@@ -28495,10 +28507,10 @@ Values
     border-color: #e1f3f8 !important;
   }
   .mobile-lg\:border-jcc-cyan {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .mobile-lg\:border-jcc-cyan .mobile-lg\:hover\:border-jcc-cyan:hover {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .mobile-lg\:radius-0 {
     border-radius: 0 !important;
@@ -31375,10 +31387,10 @@ Values
     border-color: #e1f3f8 !important;
   }
   .tablet\:border-jcc-cyan {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .tablet\:border-jcc-cyan .tablet\:hover\:border-jcc-cyan:hover {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .tablet\:radius-0 {
     border-radius: 0 !important;
@@ -34517,10 +34529,10 @@ Values
     border-color: #e1f3f8 !important;
   }
   .desktop\:border-jcc-cyan {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .desktop\:border-jcc-cyan .desktop\:hover\:border-jcc-cyan:hover {
-    border-color: #0186D0 !important;
+    border-color: #0186d0 !important;
   }
   .desktop\:radius-0 {
     border-radius: 0 !important;
