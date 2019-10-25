@@ -8,12 +8,14 @@
     
     <ul class="jcc-timeline" aria-label="timeline" tabindex="0">
       {% for item in timeline %}
+      <li>
       {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
         title: item.title,
         excerpt: item.excerpt,
         read_more: item.read_more
       } %}
       {% endfor %}
+      </li>
     </ul>
 
     <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span></button>
