@@ -2,17 +2,15 @@ require("slick-carousel");
 
 $(".slider").slick({
   infinite: false,
-  slidesToShow: 1,
+  slidesToShow: 4,
   nextArrow: $(".jcc-timeline__scroller--right"),
   prevArrow: $(".jcc-timeline__scroller--left"),
-  mobileFirst: true,
   responsive: [
     {
-      breakpoint: 640,
+      breakpoint: 1200,
       settings: {
-        slidesToShow: 1,
-        dots: false,
-        unslick: true
+        slidesToShow: 4,
+        dots: false
       }
     },
     {
@@ -23,9 +21,10 @@ $(".slider").slick({
       }
     },
     {
-      breakpoint: 1200,
+      breakpoint: 640,
       settings: {
-        slidesToShow: 4,
+        unslick,
+        slidesToShow: 1,
         dots: false
       }
     }
