@@ -28,7 +28,6 @@ top:
         </ul>
       </nav></div>'
     column_variant: "has-two-columns-threequarter"
-    title_variant: "font-family-body"
   breadcrumbs:
     - url: ""
       label: "Legal Parentage"
@@ -91,14 +90,53 @@ featured4:
     title: "What is legal parentage all about?"
     lead: ""
     body: "<p>Once a person is established as the parent of a child, they will have all the rights and responsibilities of a parent:</p> <p>Parents are able to request custody and visitation (parenting time) orders from the court</p> <p>Parents are also responsible for paying child support and will have to pay a portion (usually ½) of the uninsured health-care costs for the children as well as a portion of child-care costs that result from the custodial parent getting or having a job or going to school.</p> <p>If there is a court order that a person is the parent of a child, that person MUST financially support the child. It is a crime for a legal parent to fail to support his or her child. The parent also has the right to request custody or visitation rights related to the child.</p>"
-local:
+section2:
   headergroup:
-    brow: "Test"
-    title: "Who can we help you with today?"
-  switchboard_tiles:
-    - brow: "Test"
-      title_link: "<a href='#'>Someone took money from my paycheck</a>"
-    - brow: "Lien Against Property"
-      title_link: "<a href='#'>I was told I can’t sell my property</a>"
-    - brow: "Bank Levy"
-      title_link: "<a href='#'>Someone tried to take money from my bank account </a>"
+    title: "Additional Fields"
+    lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
+  background_variant: has-background-color--light
+  column_content_left: ""
+onramp:
+  full: true
+  accordion:
+    - title: "First Amendment"
+      body: "<p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>"
+      title_attributes:
+        Attribute():
+          class: []
+      content_attributes:
+        Attribute():
+          class: []
+    - title: "Second Amendment"
+      body: "<p>A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.</p> <ul><li>This is a list item</li><li>Another list item</li></ul>"
+      title_attributes:
+        Attribute():
+          class: []
+      content_attributes:
+        Attribute():
+          class: []
+    - title: "Third Amendment"
+      body: "<p>No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.</p>"
+      title_attributes:
+        Attribute():
+          class: []
+      content_attributes:
+        Attribute():
+          class: []
+    - title: "Fourth Amendment"
+      body: "<p>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</p>"
+      title_attributes:
+        Attribute():
+          class: []
+      content_attributes:
+        Attribute():
+          class: []
+    - title: "Fifth Amendment"
+      body: "<p>No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offence to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.</p>"
+      title_attributes:
+        Attribute():
+          class: []
+      content_attributes:
+        Attribute():
+          class: []
+

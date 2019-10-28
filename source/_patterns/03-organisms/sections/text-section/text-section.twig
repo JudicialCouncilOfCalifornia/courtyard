@@ -5,6 +5,7 @@
         title: headergroup.title,
         lead: headergroup.lead
     } %}
+    {% if column_content_left %}
     <div class="jcc-text-section__content">
       <div class="jcc-text-section__column-left">
         {{ column_content_left }}
@@ -13,5 +14,6 @@
         {{ column_content_right }}
       </div>
     </div>
+    {% endif %}
   </div>
 </div>

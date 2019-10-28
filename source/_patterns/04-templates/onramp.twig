@@ -46,3 +46,12 @@
   tag: featured4.tag.image,
   headergroup: featured4.headergroup
 } %}
+{% include '@organisms/sections/text-section/text-section.twig' with {
+  headergroup: section2.headergroup,
+  background_variant: section2.background_variant,
+  column_content_left: section2.column_content_left
+} %}
+{% include '@molecules/interactive/accordion/accordion.twig' with {
+  full: onramp.full,
+  accordion: onramp.accordion
+} %}

@@ -18067,6 +18067,7 @@ Values
 .jcc-postcard--has-background-image {
   padding-bottom: 3rem ;
   padding-top: 3rem ;
+  margin-bottom: 3rem ;
   position: relative;
 }
 
