@@ -8,41 +8,27 @@
   title_variant: top.hero.title_variant,
   breadcrumbs: top.breadcrumbs
 } %}
-{% include '@molecules/blocks/postcard/postcard.twig' with {
-  image: featured.postcard.image,
-  alt: featured.postcard.alt,
-  background_variant: featured.postcard.background_variant,
-  header_align_variant: featured.postcard.header_align_variant,
-  tag: featured.tag.image,
-  headergroup: featured.headergroup
-} %}
-{% include '@molecules/blocks/postcard/postcard.twig' with {
-  image: featured2.postcard.image,
-  alt: featured2.postcard.alt,
-  background_variant: featured2.postcard.background_variant,
-  header_align_variant: featured2.postcard.header_align_variant,
-  tag: featured2.tag.image,
-  headergroup: featured2.headergroup
-} %}
-{% include '@organisms/sections/text-section/text-section.twig' with {
-  column_content_left: section1.column_content_left,
-  column_content_right: section1.column_content_right,
-  column_variant: section1.column_variant,
-  headergroup: section1.headergroup
-} %}
-{% include '@molecules/blocks/postcard/postcard.twig' with {
-  image: featured3.postcard.image,
-  alt: featured3.postcard.alt,
-  background_variant: featured3.postcard.background_variant,
-  header_align_variant: featured3.postcard.header_align_variant,
-  tag: featured3.tag.image,
-  headergroup: featured3.headergroup
-} %}
-{% include '@molecules/blocks/postcard/postcard.twig' with {
-  image: featured4.postcard.image,
-  alt: featured4.postcard.alt,
-  background_variant: featured4.postcard.background_variant,
-  header_align_variant: featured4.postcard.header_align_variant,
-  tag: featured4.tag.image,
-  headergroup: featured4.headergroup
-} %}
+
+{% for entry in entries %}
+  {% if entry.type == 'postcard' %}
+    {% include '@molecules/blocks/postcard/postcard.twig' with {
+      image: entry.postcard.image,
+      alt: entry.postcard.alt,
+      background_variant: entry.postcard.background_variant,
+      header_align_variant: entry.postcard.header_align_variant,
+      tag: entry.tag.image,
+      headergroup: entry.headergroup
+    } %}
+  {% elseif entry.type == 'section' %}
+    {% include '@organisms/sections/text-section/text-section.twig' with {
+      column_content_left: entry.column_content_left,
+      column_content_right: entry.column_content_right,
+      column_variant: entry.column_variant,
+      headergroup: entry.headergroup
+    } %}
+  {% elseif entry.type == 'steps' %}
+    {% include '@organisms/sections/steps/steps.twig' with {
+      headergroup: entry.headergroup
+    } %}
+  {% endif %}
+{% endfor %}

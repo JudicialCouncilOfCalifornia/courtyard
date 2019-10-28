@@ -10,7 +10,9 @@
     {% endif %}
 
     <div class="jcc-hero__content">
-      {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' %}
+      {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
+        breadcrumbs: breadcrumbs
+      } %}
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">
           <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>

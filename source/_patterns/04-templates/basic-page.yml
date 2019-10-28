@@ -9,16 +9,18 @@ top:
     background_variant: "has-background-color--light"
     column_variant: "has-two-columns-threequarter"
   breadcrumbs:
-    - url: ""
+    - url: "#"
       label: "Legal Parentage"
       url_attributes: ''
     - url: ""
       label: "Legal Parentage"
       url_attributes: ''
-section1:
-  headergroup:
-    brow: ""
-    title: "Steps to pay in installments"
-    lead: ""
+entries:
+  -
+    type: "steps"
+    headergroup:
+      brow: ""
+      title: "Steps to pay in installments"
+      lead: ""
 switchboard:
   background_variant: "has-background-color--dark"
