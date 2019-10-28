@@ -23,9 +23,9 @@ $(".slider").slick({
     {
       breakpoint: 640,
       settings: {
-        unslick,
-        slidesToShow: 1,
-        dots: false
+        unslick
+        // slidesToShow: 1,
+        // dots: false
       }
     }
   ]

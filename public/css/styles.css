@@ -27398,11 +27398,13 @@ Values
 .jcc-timeline__scroller--right {
   background-color: #e5a000 ;
   position: absolute;
-  top: 0;
+  top: 2.375rem;
   bottom: 0;
   width: 3rem;
+  height: 3rem;
   z-index: 10;
   display: none;
+  border-radius: 50%;
 }
 
 .jcc-timeline__wrapper {

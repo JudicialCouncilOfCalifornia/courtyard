@@ -89,11 +89,13 @@
 .jcc-timeline__scroller--right {
   @include u-bg("gold-30v");
   position: absolute;
-  top: 0;
+  top: 2.375rem;
   bottom: 0;
   width: 3rem;
+  height: 3rem;
   z-index: 10;
   display: none;
+  border-radius: 50%;
 
   &.is-active {
     @include at-media(tablet-lg) {
