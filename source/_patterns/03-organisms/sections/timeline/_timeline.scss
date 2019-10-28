@@ -1,4 +1,5 @@
 @import "../../../00-protons/global";
+@import "../../../../../node_modules/slick-carousel/slick/slick.scss";
 
 .jcc-timeline-section {
   @include section-wrapper;
@@ -42,7 +43,7 @@
 .jcc-timeline {
   @include unstyled-list();
 
-  @include at-media("desktop") {
+  @include at-media("tablet-lg") {
     @include grid-row;
     padding-top: 3rem;
     overflow-x: auto;
@@ -53,31 +54,31 @@
     @include u-width(full);
     @include u-padding-bottom(4);
 
-    @include at-media(desktop) {
-      @include grid-col(3);
+    @include at-media(tablet-lg) {
+      @include grid-col(4);
       @include u-padding-bottom(9);
 
       > * {
-        padding-right: 2rem;
+        @include u-padding-top(4);
       }
     }
 
-    // remove line from last timeline item
-    &:last-of-type {
-      .jcc-timeline-item__title {
-        &:after {
-          width: 0;
-        }
-      }
+    @include at-media(desktop-lg) {
+      @include grid-col(3);
     }
   }
 
   .jcc-timeline-item__title {
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include timeline-line();
       @include timeline-dot();
     }
   }
+}
+
+// remove line from last timeline item
+.slick-slide:last-of-type .jcc-timeline-item__title:after {
+  width: 0;
 }
 
 .jcc-timeline__label {
@@ -99,10 +100,13 @@
   }
 }
 
+.jcc-timeline__wrapper {
+  position: relative;
+}
+
 .jcc-timeline__scroller--left {
   left: 0;
 }
-
 .jcc-timeline__scroller--right {
   right: 0;
 }

@@ -6,21 +6,21 @@
       title: headergroup.title
     } %}   
     
-    <ul class="jcc-timeline" aria-label="timeline" tabindex="0">
-      
+    <div class="jcc-timeline__wrapper">
+    <ul class="jcc-timeline slider" aria-label="timeline" tabindex="0">
       {% for item in timeline %}
       <li>
       {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
         title: item.title,
         excerpt: item.excerpt,
-        read_more_link: item.read_more_link
+        read_more: item.read_more
       } %}
-      </li>
       {% endfor %}
-      
+      </li>
     </ul>
-
     <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span></button>
     <button class="jcc-timeline__scroller--right is-active"><span class="jcc-timeline__label">Scroll Right</span></button>
+    </div>
+    
   </div>
 </div>
