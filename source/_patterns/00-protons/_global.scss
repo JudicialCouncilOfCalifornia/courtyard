@@ -7,7 +7,7 @@
 // Section vertical rhythm and centered block
 
 @mixin section-wrapper {
-  @include u-padding-top(1);
+  @include u-padding-top(0);
   @include u-padding-bottom(6);
 }
 

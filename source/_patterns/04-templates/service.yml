@@ -1,0 +1,23 @@
+top:
+  hero:
+    image: ""
+    alt: ""
+    title: "Serving your papers"
+    lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
+    body: ''
+    column_content_right: '<div class="jcc-dropdown jcc-dropdown--is-jumbo" title="Dropdown Component Title Information">
+            <label class="jcc-dropdown__Label">What form are you serving?</label>
+            <select>
+                <option value="">Select</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+              </select>
+        </div>'
+    background_variant: "has-background-color--light"
+    column_variant: "has-one-column"
+  breadcrumbs:
+    - url: ""
+      label: "Service"
+      url_attributes: ''

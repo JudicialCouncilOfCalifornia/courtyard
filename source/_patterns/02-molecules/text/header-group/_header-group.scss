@@ -31,7 +31,7 @@ h3.jcc-header-group__title {
   @include u-line-height("body", 3);
 
   @include at-media("desktop") {
-    max-width: 75%;
+    // max-width: 75%;
   }
 }
 

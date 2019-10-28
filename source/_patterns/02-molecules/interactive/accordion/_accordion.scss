@@ -12,6 +12,7 @@
 
   .usa-accordion__button {
     @include u-padding-y(5);
+    @include u-padding-x(0);
     @include h4($h-font-family: "heading");
     @include u-text("normal");
     background-color: transparent;

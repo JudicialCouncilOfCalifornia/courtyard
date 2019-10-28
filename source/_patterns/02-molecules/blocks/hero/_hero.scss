@@ -51,15 +51,25 @@
 .jcc-hero__title {
   @include responsive-h-mega();
   @include u-line-height("heading", 2);
-  @include u-text("blue-80");
 }
 
 .jcc-hero__lead {
   @include responsive-lead();
 }
 
-.jcc-hero__content--has-one-column {
-  @include u-measure("6");
+.jcc-hero--has-one-column {
+  .jcc-hero__lead,
+  .jcc-body,
+  .jcc-hero__column-right {
+    @include at-media("desktop") {
+      @include u-measure("6");
+    }
+  }
+
+  .jcc-hero__column-left,
+  .jcc-hero__column-right {
+    margin-bottom: 2rem;
+  }
 }
 
 .jcc-hero--has-two-columns-half,

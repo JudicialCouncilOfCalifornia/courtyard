@@ -65,6 +65,9 @@
 .jcc-postcard__content {
   @include u-line-height("body", 4);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .jcc-postcard__row {

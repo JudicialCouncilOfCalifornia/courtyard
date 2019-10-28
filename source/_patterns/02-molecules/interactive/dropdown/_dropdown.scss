@@ -179,6 +179,12 @@
   }
 }
 
+.jcc-dropdown__Label {
+  @include h5($h-font-family: "body");
+  @include u-padding-bottom(2);
+  display: block;
+}
+
 // We could delete all of these.
 // Leaving it here for visual design pass.
 
