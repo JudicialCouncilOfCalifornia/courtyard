@@ -1,30 +1,30 @@
 [role="tablist"] {
   padding: 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 [role="tablist"] li,
 [role="tablist"] a {
   display: inline-block;
+  margin-right: 0.25rem;
 }
 
 [role="tablist"] a {
   text-decoration: none;
-  padding: 0.5rem 1em;
+  padding: 0.75rem 2em;
   border: 2px solid;
-  border-color: transparent;
-  border-bottom-width: 0;
-  top: 2px;
+  border-color: #222;
+  border-radius: 10rem;
   position: relative;
 }
 
 [role="tablist"] [aria-selected] {
-  border-color: #222;
-  background: #fff;
+  @extend .bg-jcc-cyan;
+  @include u-text("white");
 }
 
 [role="tabpanel"] {
-  border: 2px solid;
+  @include u-bg("gray-2");
   padding: 1.5rem;
 }
 
@@ -33,8 +33,8 @@
 }
 
 *:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 4px lightBlue;
+  // outline: none;
+  // box-shadow: inset 0 0 0 4px lightBlue;
 }
 
 @media (max-width: 550px) {
@@ -44,12 +44,16 @@
     position: static;
   }
 
+  [role="tablist"] li {
+    margin-bottom: 0.5rem;
+  }
+
   [role="tablist"] a {
     border: 2px solid #222 !important;
   }
 
   [role="tablist"] li + li a {
-    border-top: 0 !important;
+    // border-top: 0 !important;
   }
 
   [role="tablist"] [aria-selected] {
@@ -57,7 +61,7 @@
   }
 
   [role="tablist"] [aria-selected]::after {
-    content: "\0020⬅";
+    // content: "\0020⬅";
   }
 
   [role="tabpanel"] {

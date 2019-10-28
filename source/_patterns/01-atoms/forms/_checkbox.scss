@@ -1,0 +1,37 @@
+.usa-checkbox__label {
+  margin: 0;
+
+  &::before {
+    @include u-radius(0);
+  }
+}
+
+.jcc-checkbox--bordered {
+  .usa-checkbox__label {
+    @include u-border(2px);
+    @include u-padding-y(1.5);
+    @include u-padding-left(6);
+    @include u-padding-right(3);
+  }
+
+  .usa-checkbox__input:focus + .usa-checkbox__label::before {
+    outline: none;
+  }
+
+  .usa-checkbox__input:checked + .usa-checkbox__label {
+    @extend .bg-jcc-cyan;
+    @extend .border-jcc-cyan;
+    @include u-text("white");
+
+    &::before {
+      @include u-bg("white");
+      box-shadow: 0 0 0 2px $jcc-cyan;
+      background-image: url("../images/collect-dark.svg");
+    }
+  }
+
+  .usa-checkbox__input:focus + .usa-checkbox__label {
+    outline: 0.25rem solid color("yellow-20v");
+    outline-offset: 0;
+  }
+}

@@ -38,32 +38,24 @@
   "url": "http://lorizzle.nl/",
   "theme_color": [
     {
-      "label": "base-lightest",
-      "color": "#f0f0f0"
-    },
-    {
       "label": "base-lighter",
-      "color": "#dcdee0"
+      "color": "#C9C9C9"
     },
     {
       "label": "base-light",
-      "color": "#a9aeb1"
+      "color": "#C9C9C9"
     },
     {
       "label": "base",
-      "color": "#71767a"
+      "color": "#919191"
     },
     {
       "label": "base-dark",
-      "color": "#565c65"
+      "color": "#5C5C5C"
     },
     {
       "label": "base-darker",
-      "color": "#3d4551"
-    },
-    {
-      "label": "base-darkest",
-      "color": "#1b1b1b"
+      "color": "#454545"
     },
     {
       "label": "ink",
@@ -71,7 +63,7 @@
     },
     {
       "label": "primary-lighter",
-      "color": "#d9e8f6"
+      "color": "#F4F9FF"
     },
     {
       "label": "primary-light",
@@ -79,83 +71,51 @@
     },
     {
       "label": "primary",
-      "color": "#005ea2"
+      "color": "#005EA2"
     },
     {
       "label": "primary-vivid",
-      "color": "#0050d8"
+      "color": "#2378C3"
     },
     {
       "label": "primary-dark",
-      "color": "#1a4480"
+      "color": "#0B4778"
     },
     {
       "label": "primary-darker",
-      "color": "#162e51"
+      "color": "#1F303E"
     },
     {
       "label": "secondary-lighter",
-      "color": "#f8dfe2"
+      "color": "#E7F2F5"
     },
     {
       "label": "secondary-light",
-      "color": "#f2938c"
+      "color": "#e7f6f8"
     },
     {
       "label": "secondary",
-      "color": "#d83933"
-    },
-    {
-      "label": "secondary-vivid",
-      "color": "#e41d3d"
+      "color": "#168092"
     },
     {
       "label": "secondary-dark",
-      "color": "#b51d09"
+      "color": "#2a646d"
     },
     {
       "label": "secondary-darker",
-      "color": "#8b1303"
-    },
-    {
-      "label": "accent-cool-lighter",
-      "color": "#e1f3f8"
-    },
-    {
-      "label": "accent-cool-light",
-      "color": "#97d4ea"
-    },
-    {
-      "label": "accent-cool",
-      "color": "#00bde3"
-    },
-    {
-      "label": "accent-cool-dark",
-      "color": "#28a0cb"
-    },
-    {
-      "label": "accent-cool-darker",
-      "color": "#07648d"
-    },
-    {
-      "label": "accent-warm-lighter",
-      "color": "#fdb81e"
+      "color": "#2c4a4e"
     },
     {
       "label": "accent-warm-light",
-      "color": "#ffbc78"
+      "color": "#fef0c8"
     },
     {
       "label": "accent-warm",
-      "color": "#fa9441"
+      "color": "#FFBE2E"
     },
     {
       "label": "accent-warm-dark",
-      "color": "#c05600"
-    },
-    {
-      "label": "accent-warm-darker",
-      "color": "#775540"
+      "color": "#E5A000"
     }
   ],
   "state_color": [
@@ -169,11 +129,11 @@
     },
     {
       "label": "info",
-      "color": "#00bde3"
+      "color": "#00BDE3"
     },
     {
       "label": "info-dark",
-      "color": "#009ec1"
+      "color": "#009BC2"
     },
     {
       "label": "info-darker",
@@ -181,15 +141,15 @@
     },
     {
       "label": "error-lighter",
-      "color": "#f4e3db"
+      "color": "#fde0db"
     },
     {
       "label": "error-light",
-      "color": "#f39268"
+      "color": "#FDE0DB"
     },
     {
       "label": "error",
-      "color": "#d63e04"
+      "color": "#FB5A47"
     },
     {
       "label": "error-dark",
@@ -197,7 +157,7 @@
     },
     {
       "label": "error-darker",
-      "color": "#6f3331"
+      "color": "#8b1303"
     },
     {
       "label": "warning-lighter",
@@ -209,19 +169,19 @@
     },
     {
       "label": "warning",
-      "color": "#ffbe2e"
+      "color": "#FACE00"
     },
     {
       "label": "warning-dark",
-      "color": "#e5a000"
+      "color": "#e6c74c"
     },
     {
       "label": "warning-darker",
-      "color": "#936f38"
+      "color": "#a88f48"
     },
     {
       "label": "success-lighter",
-      "color": "#ecf3ec"
+      "color": "#e3f5e1"
     },
     {
       "label": "success-light",
@@ -229,15 +189,15 @@
     },
     {
       "label": "success",
-      "color": "#00a91c"
+      "color": "#00a39"
     },
     {
       "label": "success-dark",
-      "color": "#4d8055"
+      "color": "#00a91c"
     },
     {
       "label": "success-darkerr",
-      "color": "#446443"
+      "color": "#008817"
     },
     {
       "label": "disabled-light",

@@ -1,0 +1,15 @@
+legend: Check all that apply
+radio_group:
+  - label: Self (adult)
+    id: "15"
+    name: Delta
+    bordered: true
+  - label: Spouse (adult)
+    id: "16"
+    name: Delta
+    bordered: true
+  - label: One or more minor child
+    id: "17"
+    name: Delta
+    bordered: true
+align_variant: inline

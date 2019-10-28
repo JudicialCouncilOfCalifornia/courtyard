@@ -1,0 +1,17 @@
+<form class="usa-form jcc-form{% if align_variant %} jcc-form--{{ align_variant }}{% endif %}">
+  <fieldset class="usa-fieldset">
+    <legend class="jcc-form-group__title usa-legend">{{ legend }}</legend>
+
+    <div class="jcc-form-group__options">
+    {% for item in radio_group %}
+      {% include '@atoms/forms/radio.twig' with {
+        label: item.label,
+        id: item.id,
+        name: item.name,
+        bordered: item.bordered
+      } %}
+    {% endfor %}
+    </div>
+
+  </fieldset>
+</form>
