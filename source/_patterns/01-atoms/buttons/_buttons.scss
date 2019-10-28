@@ -9,3 +9,7 @@
   @include u-padding-x(4);
   @include u-font-size("body", 8);
 }
+
+.usa-button--unstyled {
+  @include u-padding(0);
+}

@@ -237,8 +237,8 @@ $aspect-width: 16;
   @include u-font("body", 4); // 16
 }
 
-@mixin dark-background() {
-  @include u-bg("primary");
+@mixin dark-background($dark-background-color: "primary") {
+  @include u-bg($dark-background-color);
   @include u-text("white");
 
   > a {

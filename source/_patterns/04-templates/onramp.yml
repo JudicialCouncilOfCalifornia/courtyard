@@ -4,26 +4,26 @@ top:
     alt: ""
     title: "Form FL-210/FL-200"
     lead: "What do these papers mean?"
-    body: "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus.</p>"
-    background_variant: "has-background-color--dark"
+    body: "<p>If you received this summons and petition, it means someone has gone to court to establish that you or they are the parent of a child.</p>"
+    background_variant: "has-background-color--light"
     column_content_right: '
       <div class="jcc-jump-nav"><nav>
-        <h2 class="jcc-jump-nav__title">Lorem ipsum</h2>
+        <h2 class="jcc-jump-nav__title">Common Questions</h2>
         <ul class="usa-sidenav">
           <li class="usa-sidenav__item">
-            <a href="#">Home</a>
+            <a href="#">Who sent me these papers?</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="#">Page 1</a>
+            <a href="#">What does this petition say?</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="#">Page 2</a>
+            <a href="#">What do I need to do?</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="#">Page 3</a>
+            <a href="#">What is legal parentage all about?</a>
           </li>
           <li class="usa-sidenav__item">
-            <a href="#">Page 4</a>
+            <a href="#">Additional Sections</a>
           </li>
         </ul>
       </nav></div>'
@@ -32,75 +32,80 @@ top:
     - url: ""
       label: "Legal Parentage"
       url_attributes: ''
-    - url: ""
-      label: "Legal Parentage"
-      url_attributes: ''
-featured:
-  postcard:
-    image: "https://placeimg.com/800/400/arch"
-    alt: "Avatar"
+entries:
+  -
+    type: "postcard"
+    postcard:
+      image: "https://placeimg.com/800/400/arch"
+      alt: "Avatar"
+      background_variant: ""
+      header_align_variant: "has-header-left"
+      tag: "Page 2"
+    headergroup:
+      brow: ""
+      title: "Who sent me these papers?"
+      lead: ""
+      body: "<p>The name of the person is at the very top of your summons (form FL-210).</p><p>Throughout these forms, you are called the respondent, and the person who sent the petition is called the petitioner.</p>"
+  -
+    type: "postcard"
+    postcard:
+      image: "https://placeimg.com/800/400/arch"
+      alt: "Avatar"
+      background_variant: "has-background-color"
+      header_align_variant: "has-header-left"
+      tag: "Page 2"
+    headergroup:
+      brow: ""
+      title: "What does this petition say?"
+      lead: ""
+      body: "<p>First look on form FL-200, which should be with the summons, to find the name(s) of the child(ren) this is about.</p>"
+  -
+    type: "section"
+    column_content_right: ""
+    column_content_left: ""
+    column_variant: "has-two-columns-threequarter"
+    headergroup:
+      lead: "<p>On the second page of FL-200, read sections 7, 8, 9, and 10 to see what orders the person is asking the court to make about parentage, custody and visitation.</p>"
+  -
+    type: "postcard"
+    postcard:
+      image: "https://placeimg.com/800/400/arch"
+      alt: "Avatar"
+      background_variant: ""
+      header_align_variant: "has-header-left"
+      tag: "Page 2"
+    headergroup:
+      brow: ""
+      title: "Parentage"
+      lead: ""
+      body: "<p>In section 7 the petitioner has indicated who they believe are the legal parents of the child.</p>"
+      tag: "h3"
+  -
+    type: "card-section"
     background_variant: ""
-    header_align_variant: "has-header-left"
-    tag: "Page 2"
-  headergroup:
-    brow: ""
-    title: "Who sent me these papers?"
-    lead: ""
-    body: "<p>The name of the person is at the very top of your summons (form FL-210).</p><p>Throughout these forms, you are called the respondent, and the person who sent the petition is called the petitioner.</p>"
-featured2:
-  postcard:
-    image: "https://placeimg.com/800/400/arch"
-    alt: "Avatar"
-    background_variant: "has-background-color"
-    header_align_variant: "has-header-left"
-    tag: "Page 2"
-  headergroup:
-    brow: ""
-    title: "What does this petition say?"
-    lead: ""
-    body: "<p>First look on form FL-200, which should be with the summons, to find the name(s) of the child(ren) this is about.</p>"
-section1:
-  column_content_right: ""
-  column_content_left: ""
-  column_variant: "has-two-columns-threequarter"
-  headergroup:
-    lead: "<p>On the second page of FL-200, read sections 7, 8, 9, and 10 to see what orders the person is asking the court to make about parentage, custody and visitation.</p>"
-featured3:
-  postcard:
-    image: "https://placeimg.com/800/400/arch"
-    alt: "Avatar"
-    background_variant: ""
-    header_align_variant: "has-header-left"
-    tag: "Page 2"
-  headergroup:
-    brow: ""
-    title: "Parentage"
-    lead: ""
-    body: "<p>In section 7 the petitioner has indicated who they believe are the legal parents of the child.</p>"
-    tag: "h3"
-featured4:
-  postcard:
-    image: "https://placeimg.com/800/400/arch"
-    alt: "Avatar"
-    background_variant: "has-background-image"
-    header_align_variant: "has-header-left"
-    tag: "Page 2"
-  headergroup:
-    brow: ""
-    title: "What is legal parentage all about?"
-    lead: ""
-    body: "<p>Once a person is established as the parent of a child, they will have all the rights and responsibilities of a parent:</p> <p>Parents are able to request custody and visitation (parenting time) orders from the court</p> <p>Parents are also responsible for paying child support and will have to pay a portion (usually ½) of the uninsured health-care costs for the children as well as a portion of child-care costs that result from the custodial parent getting or having a job or going to school.</p> <p>If there is a court order that a person is the parent of a child, that person MUST financially support the child. It is a crime for a legal parent to fail to support his or her child. The parent also has the right to request custody or visitation rights related to the child.</p>"
-section2:
-  background_variant: ""
-  column_content_left: ""
-  column_content_left: ""
-section3:
-  headergroup:
-    title: "Additional Fields"
-    lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
-  background_variant: has-background-color--light
-  column_content_left: ""
-onramp:
+    column_content_left: ""
+    column_content_left: ""
+  -
+    type: "postcard"
+    postcard:
+      image: "https://placeimg.com/800/400/arch"
+      alt: "Avatar"
+      background_variant: "has-background-image"
+      header_align_variant: "has-header-left"
+      tag: "Page 2"
+    headergroup:
+      brow: ""
+      title: "What is legal parentage all about?"
+      lead: ""
+      body: "<p>Once a person is established as the parent of a child, they will have all the rights and responsibilities of a parent:</p> <p>Parents are able to request custody and visitation (parenting time) orders from the court</p> <p>Parents are also responsible for paying child support and will have to pay a portion (usually ½) of the uninsured health-care costs for the children as well as a portion of child-care costs that result from the custodial parent getting or having a job or going to school.</p> <p>If there is a court order that a person is the parent of a child, that person MUST financially support the child. It is a crime for a legal parent to fail to support his or her child. The parent also has the right to request custody or visitation rights related to the child.</p>"
+  -
+    type: "section"
+    headergroup:
+      title: "Additional Fields"
+      lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
+    background_variant: has-background-color--dark
+    column_content_left: ""
+expandable:
   full: true
   accordion:
     - title: "First Amendment"

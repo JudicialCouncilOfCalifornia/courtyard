@@ -14,7 +14,7 @@
 }
 
 .jcc-text-section--has-background-color--dark {
-  @include dark-background();
+  @include dark-background($dark-background-color: "cyan-50");
 }
 
 .jcc-text-section__container {

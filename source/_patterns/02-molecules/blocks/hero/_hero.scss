@@ -22,7 +22,7 @@
 }
 
 .jcc-hero--has-background-color--light {
-  @include u-bg("gray-2");
+  @include u-bg("blue-5");
 }
 
 .jcc-hero--has-background-color--dark {
@@ -51,6 +51,7 @@
 .jcc-hero__title {
   @include responsive-h-mega();
   @include u-line-height("heading", 2);
+  @include u-text("blue-80");
 }
 
 .jcc-hero__lead {
