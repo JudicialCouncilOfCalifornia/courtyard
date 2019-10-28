@@ -17,4 +17,38 @@
 .jcc-timeline-item__excerpt {
   @include t-copy();
   @include u-line-height("body", 4);
+  @include u-padding-right(4);
+}
+
+@include at-media("desktop") {
+  .jcc-timeline-item__title:before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    @include u-bg('primary');
+    @include u-border(2px);
+    @include u-border-color('primary');
+    @include u-circle('4')
+    line-height: 1;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .jcc-timeline-item__title:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: -2.1rem;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    display: block;
+    height: 1px;
+    @include u-border(1px);
+    @include u-border-color('primary');
+    z-index: 1;
+  }
 }

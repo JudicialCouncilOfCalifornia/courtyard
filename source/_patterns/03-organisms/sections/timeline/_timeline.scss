@@ -36,6 +36,7 @@
 
 .jcc-timeline-section__container {
   @include section-container;
+  
 }
 
 .jcc-timeline {
@@ -57,20 +58,14 @@
       @include u-padding-bottom(9);
 
       > * {
-        padding-right: 2rem;
-      }
-    }
-
-    // remove line from last timeline item
-    &:last-of-type {
-      .jcc-timeline-item__title {
-        &:after {
-          width: 0;
-        }
+        @include u-padding-top(4);
       }
     }
   }
 }
+
+// remove line from last timeline item
+.slick-slide:last-of-type .jcc-timeline-item__title:after { width: 0; }
 
 .jcc-timeline__label {
   @include sr-only();
@@ -91,10 +86,5 @@
   }
 }
 
-.jcc-timeline__scroller--left {
-  left: 0;
-}
-
-.jcc-timeline__scroller--right {
-  right: 0;
-}
+.jcc-timeline__scroller--left { left: 0; }
+.jcc-timeline__scroller--right { right: 0; }
