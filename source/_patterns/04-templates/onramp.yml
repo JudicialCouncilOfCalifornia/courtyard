@@ -91,6 +91,10 @@ featured4:
     lead: ""
     body: "<p>Once a person is established as the parent of a child, they will have all the rights and responsibilities of a parent:</p> <p>Parents are able to request custody and visitation (parenting time) orders from the court</p> <p>Parents are also responsible for paying child support and will have to pay a portion (usually ½) of the uninsured health-care costs for the children as well as a portion of child-care costs that result from the custodial parent getting or having a job or going to school.</p> <p>If there is a court order that a person is the parent of a child, that person MUST financially support the child. It is a crime for a legal parent to fail to support his or her child. The parent also has the right to request custody or visitation rights related to the child.</p>"
 section2:
+  background_variant: ""
+  column_content_left: ""
+  column_content_left: ""
+section3:
   headergroup:
     title: "Additional Fields"
     lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
