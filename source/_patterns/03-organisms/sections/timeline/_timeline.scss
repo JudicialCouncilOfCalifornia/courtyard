@@ -24,7 +24,7 @@
 
   .jcc-timeline {
     .jcc-timeline-item__title {
-      @include at-media(desktop) {
+      @include at-media(desktop-lg) {
         @include timeline-line($timeline-line-border: "gold-20v");
         @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
       }
@@ -43,7 +43,7 @@
 .jcc-timeline {
   @include unstyled-list();
 
-  @include at-media("tablet-lg") {
+  @include at-media("tablet") {
     @include grid-row;
     padding-top: 3rem;
     overflow-x: auto;
@@ -54,7 +54,7 @@
     @include u-width(full);
     @include u-padding-bottom(4);
 
-    @include at-media(tablet-lg) {
+    @include at-media(tablet) {
       @include grid-col(4);
       @include u-padding-bottom(9);
 
@@ -69,7 +69,7 @@
   }
 
   .jcc-timeline-item__title {
-    @include at-media(tablet-lg) {
+    @include at-media(tablet) {
       @include timeline-line();
       @include timeline-dot();
     }
@@ -98,7 +98,7 @@
   border-radius: 50%;
 
   &.is-active {
-    @include at-media(tablet-lg) {
+    @include at-media(tablet) {
       display: block;
     }
   }
