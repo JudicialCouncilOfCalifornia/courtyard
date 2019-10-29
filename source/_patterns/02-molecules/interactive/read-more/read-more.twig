@@ -1,11 +1,19 @@
 {% if id and content %}
-  <div class="jcc-read-more">
+  <div class="jcc-read-more {% if inverted %} jcc-read-more--inverted{% endif %}">   
     <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ id }}">
       {{ title ?? 'Read more'|t }}
+
+      {# Temp Icon #}
+      {# This will be replaced when the icons system is in place #}
+      <svg viewBox="0 0 24 24" class="icon">
+        <path d="M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+      </svg>
+      {# Temp Icon #}
     </button>
 
     <div id="{{ id }}" class="jcc-read-more__content">
       {{ content }}
     </div>
+
   </div>
 {% endif %}
