@@ -21,3 +21,15 @@ top:
     - url: ""
       label: "Service"
       url_attributes: ''
+tabs_content:
+  headergroup:
+    title: "What type of service are you interested in?"
+    brow: ""
+    lead: ""
+    tag: "h4"
+  tabs:
+    - title: 'Personal Service'
+    - title: 'Mail Service'
+  tab_panels:
+    - content: 'Some'
+    - content: 'Sample Two'

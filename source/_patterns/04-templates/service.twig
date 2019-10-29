@@ -9,4 +9,8 @@
   title_variant: top.hero.title_variant,
   breadcrumbs: top.breadcrumbs
 } %}
-{% include '@organisms/sections/tab-section/tab-section.twig' %}
+{% include '@organisms/sections/tab-section/tab-section.twig' with {
+  headergroup: tabs_content.headergroup,
+  tabs: tabs_content.tabs,
+  tabs_panels: tabs_content.tabs_panels
+} %}

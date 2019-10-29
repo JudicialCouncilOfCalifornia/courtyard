@@ -51,6 +51,8 @@
 .jcc-hero__title {
   @include responsive-h-mega();
   @include u-line-height("heading", 2);
+  @include u-text(primary-darker);
+  @include u-margin-y(3);
 }
 
 .jcc-hero__lead {

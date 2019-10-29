@@ -3,6 +3,13 @@
 .jcc-postcard {
   @include u-padding-top(1);
   @include u-padding-bottom(6);
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+  }
+
+  .jcc-header-group__body {
+  }
 }
 
 .jcc-postcard--has-background-image {

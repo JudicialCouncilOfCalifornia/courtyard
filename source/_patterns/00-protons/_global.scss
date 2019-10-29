@@ -241,6 +241,12 @@ $aspect-width: 16;
   @include u-bg($dark-background-color);
   @include u-text("white");
 
+  .jcc-breadcrumb__item,
+  .jcc-hero__title,
+  .jcc-header-group__title {
+    @include u-text("white");
+  }
+
   > a {
     @include u-text("gold-30v");
 

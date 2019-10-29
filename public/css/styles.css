@@ -17486,6 +17486,12 @@ Values
   color: white ;
 }
 
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-hero--has-background-color--dark .jcc-hero__title,
+.jcc-hero--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
 .jcc-hero--has-background-color--dark > a {
   color: #e5a000 ;
 }
@@ -17539,6 +17545,9 @@ Values
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.48626rem;
   line-height: 1.20663 ;
+  color: #112f4e ;
+  margin-bottom: 1.5rem ;
+  margin-top: 1.5rem ;
 }
 
 .jcc-hero__lead {
@@ -18066,6 +18075,10 @@ Values
 .jcc-postcard {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
+}
+
+.jcc-postcard .jcc-header-group__title {
+  color: #0b4778 ;
 }
 
 .jcc-postcard--has-background-image {
@@ -21047,13 +21060,13 @@ Values
   margin-top: 0;
   list-style-type: none;
   padding-left: 0;
+  color: #5c5c5c ;
 }
 
 .jcc-breadcrumb__item {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
   padding-right: 0.5rem ;
-  color: #5c5c5c ;
   display: inline;
 }
 
@@ -26071,6 +26084,12 @@ Values
   border-top-style: solid;
 }
 
+.jcc-switchboard--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-switchboard--has-background-color--dark .jcc-hero__title,
+.jcc-switchboard--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
 .jcc-switchboard--has-background-color--dark > a {
   color: #e5a000 ;
 }
@@ -26692,6 +26711,12 @@ Values
   color: white ;
 }
 
+.jcc-text-section--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-text-section--has-background-color--dark .jcc-hero__title,
+.jcc-text-section--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
 .jcc-text-section--has-background-color--dark > a {
   color: #e5a000 ;
 }
@@ -27258,6 +27283,12 @@ Values
 
 .jcc-timeline-section--has-background-color--dark {
   background-color: #005ea2 ;
+  color: white ;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-timeline-section--has-background-color--dark .jcc-hero__title,
+.jcc-timeline-section--has-background-color--dark .jcc-header-group__title {
   color: white ;
 }
 

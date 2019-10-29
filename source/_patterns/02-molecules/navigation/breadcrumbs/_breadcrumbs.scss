@@ -2,12 +2,12 @@
 
 .jcc-breadcrumbs {
   @include add-list-reset;
+  @include u-text("gray-60");
 }
 
 .jcc-breadcrumb__item {
   @include responsive-lead();
   @include u-padding-right(1);
-  @include u-text("gray-60");
   display: inline;
 
   a {
