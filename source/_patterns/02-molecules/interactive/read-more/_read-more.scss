@@ -1,11 +1,40 @@
 .jcc-read-more {
-  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .jcc-read-more__trigger {
-  margin-bottom: 1rem;
+  @include button-unstyled;
+  text-decoration: none;
+  vertical-align: bottom; // Temporary Styles for icon
+  // This will be replaced when the icons system is in place.
+}
+
+.jcc-read-more__content {
+  @include u-padding-y(3);
 }
 
 .jcc-read-more__content[aria-hidden="true"] {
   display: none;
+}
+
+.jcc-read-more__trigger[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+  margin-bottom: -4px;
+}
+
+.jcc-read-more--inverted .jcc-read-more__content {
+  order: -1;
+}
+
+// Temporary Styles for icon
+// This will be replaced when the icons system is in place.
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin-bottom: -4px;
 }
