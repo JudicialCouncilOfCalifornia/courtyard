@@ -5,11 +5,31 @@
   body: top.hero.body,
   column_variant: top.hero.column_variant,
   column_content_right: top.hero.column_content_right,
-  breadcrumbs: [{ url: top.breadcrumbs.url, label: top.breadcrumbs.label }]
+  breadcrumbs: top.breadcrumbs
 } %}
-{% include '@organisms/sections/steps/steps.twig' with {
-  headergroup: section1.headergroup
-} %}
+{% for entry in entries %}
+  {% if entry.type == 'postcard' %}
+    {% include '@molecules/blocks/postcard/postcard.twig' with {
+      image: entry.postcard.image,
+      alt: entry.postcard.alt,
+      background_variant: entry.postcard.background_variant,
+      header_align_variant: entry.postcard.header_align_variant,
+      tag: entry.tag.image,
+      headergroup: entry.headergroup
+    } %}
+  {% elseif entry.type == 'section' %}
+    {% include '@organisms/sections/text-section/text-section.twig' with {
+      column_content_left: entry.column_content_left,
+      column_content_right: entry.column_content_right,
+      column_variant: entry.column_variant,
+      headergroup: entry.headergroup
+    } %}
+  {% elseif entry.type == 'steps' %}
+    {% include '@organisms/sections/steps/steps.twig' with {
+      headergroup: entry.headergroup
+    } %}
+  {% endif %}
+{% endfor %}
 {% include '@organisms/sections/switchboard/switchboard.twig'  with {
   background_variant: switchboard.background_variant
 } %}
