@@ -1,6 +1,15 @@
+.jcc-section-tabs__container {
+  @include section-container;
+
+  .jcc-header-group__title {
+    @include h4($h-font-family: "heading");
+    @include u-text("normal", "italic");
+  }
+}
+
 [role="tablist"] {
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 [role="tablist"] li,
@@ -10,8 +19,9 @@
 }
 
 [role="tablist"] a {
+  @include u-font("sans", 8);
   text-decoration: none;
-  padding: 0.75rem 2em;
+  padding: 1rem 1.5rem;
   border: 2px solid;
   border-color: #222;
   border-radius: 10rem;

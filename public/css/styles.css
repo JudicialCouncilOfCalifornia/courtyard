@@ -17546,8 +17546,7 @@ Values
   font-size: 1.36745rem;
 }
 
-.jcc-hero--has-one-column .jcc-hero__column-left,
-.jcc-hero--has-one-column .jcc-hero__column-right {
+.jcc-hero--has-one-column .jcc-hero__column-left {
   margin-bottom: 2rem;
 }
 
@@ -20333,6 +20332,14 @@ Values
   font-size: 1.36745rem;
 }
 
+.jcc-dropdown__Label {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49176rem;
+  padding-bottom: 1rem ;
+  font-style: italic ;
+  display: block;
+}
+
 .jcc-dropdown .edd-root,
 .jcc-dropdown .edd-root *,
 .jcc-dropdown .edd-root *::before,
@@ -20358,15 +20365,15 @@ Values
 .jcc-dropdown .edd-head {
   position: relative;
   overflow: hidden;
-  border-width: 1px;
-  border-color: #dcdee0 ;
+  border-width: 2px;
+  border-color: #1f303e ;
   border-style: solid;
   background-color: white ;
 }
 
 .jcc-dropdown .edd-root:not(.edd-root-disabled):not(.edd-root-open) .edd-head:hover {
-  border-width: 1px;
-  border-color: #dcdee0 ;
+  border-width: 2px;
+  border-color: #ffbe2e ;
   border-style: solid;
 }
 
@@ -20508,23 +20515,16 @@ Values
 }
 
 .jcc-dropdown--is-jumbo .edd-group-label {
-  padding: 2rem ;
+  padding: 1.5rem ;
 }
 
 .jcc-dropdown--is-jumbo .edd-option {
-  padding: 2rem ;
+  padding: 1.5rem ;
 }
 
 .jcc-dropdown--is-jumbo .edd-value {
-  padding: 1rem ;
-  margin: 1rem ;
-}
-
-.jcc-dropdown__Label {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.36745rem;
-  padding-bottom: 1rem ;
-  display: block;
+  padding: 0.75rem ;
+  margin: 0.75rem ;
 }
 
 .jcc-read-more {
@@ -26120,9 +26120,24 @@ Values
   margin-bottom: 1rem;
 }
 
+.jcc-section-tabs__container {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
+.jcc-section-tabs__container .jcc-header-group__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49176rem;
+  font-weight: normal ;
+  font-style: italic ;
+}
+
 [role="tablist"] {
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 [role="tablist"] li,
@@ -26132,8 +26147,10 @@ Values
 }
 
 [role="tablist"] a {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.24313rem;
   text-decoration: none;
-  padding: 0.75rem 2em;
+  padding: 1rem 1.5rem;
   border: 2px solid;
   border-color: #222;
   border-radius: 10rem;
@@ -36509,6 +36526,10 @@ Values
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 33.33333% ;
+  }
+  .jcc-section-tabs__container {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
   }
   .jcc-text-section__container {
     padding-left: 2rem ;

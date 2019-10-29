@@ -1,3 +1,10 @@
+.jcc-dropdown__Label {
+  @include h4($h-font-family: "heading");
+  @include u-padding-bottom(2);
+  @include u-text("italic");
+  display: block;
+}
+
 .jcc-dropdown {
   .edd-root,
   .edd-root *,
@@ -23,7 +30,7 @@
   .edd-head {
     position: relative;
     overflow: hidden;
-    @include u-border(1px, "gray-cool-10");
+    @include u-border(2px, "blue-80");
     @include u-bg("white");
   }
 
@@ -34,7 +41,7 @@
   }
 
   .edd-root:not(.edd-root-disabled):not(.edd-root-open) .edd-head:hover {
-    @include u-border(1px, "gray-cool-10");
+    @include u-border(2px, "gold-20v");
   }
 
   .edd-value {
@@ -168,21 +175,15 @@
     @include u-font("sans", "lg");
   }
   .edd-group-label {
-    @include u-padding(4);
+    @include u-padding(3);
   }
   .edd-option {
-    @include u-padding(4);
+    @include u-padding(3);
   }
   .edd-value {
-    @include u-padding(2);
-    @include u-margin(2, 0, 2, 2);
+    @include u-padding(1.5);
+    @include u-margin(1.5, 0, 1.5, 1.5);
   }
-}
-
-.jcc-dropdown__Label {
-  @include h5($h-font-family: "body");
-  @include u-padding-bottom(2);
-  display: block;
 }
 
 // We could delete all of these.

@@ -1,5 +1,14 @@
 {% if tabs|length > 0 %}
 <div class="jcc-section-tabs tabbed">
+  <div class="jcc-section-tabs__container">
+  
+    {% include '@molecules/text/header-group/header-group.twig' with {
+        brow: headergroup.brow,
+        title: headergroup.title,
+        lead: headergroup.lead,
+        tag: headergroup.tag
+      } %}
+  
   <ul>
     {% for tab in tabs %}
     <li>
@@ -7,9 +16,13 @@
     </li>
     {% endfor %}
   </ul>
+  </div>
+  
   {% for tab_panel in tab_panels %}
   <section id="section{{ loop.index }}">
-    {{ tab_panel.content }}
+    <div class="jcc-section-tabs__container">
+      {{ tab_panel.content }}
+    </div>
   </section>
   {% endfor %}
 </div>

@@ -1,6 +1,11 @@
+headergroup:
+  title: "What type of service are you interested in?"
+  brow: ""
+  lead: ""
+  tag: "h4"
 tabs:
-  - title: One
-  - title: Two
+  - title: 'Personal Service'
+  - title: 'Mail Service'
 tab_panels:
-  - content: Sample One
-  - content: Sample Two
+  - content: 'Some'
+  - content: 'Sample Two'
