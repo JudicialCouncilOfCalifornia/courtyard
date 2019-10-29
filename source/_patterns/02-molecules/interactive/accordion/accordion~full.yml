@@ -1,5 +1,4 @@
 full: true
-classes: ['usa-accordion']
 accordion:
   - title: "First Amendment"
     body: '<div class="jcc-postcard jcc-postcard--has-header-left">

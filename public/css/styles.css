@@ -18067,6 +18067,7 @@ Values
 .jcc-postcard--has-background-image {
   padding-bottom: 3rem ;
   padding-top: 3rem ;
+  margin-bottom: 3rem ;
   position: relative;
 }
 
@@ -19704,6 +19705,7 @@ Values
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99451rem;
   line-height: 1.50829 ;
+  padding-right: 2rem ;
 }
 
 .jcc-form.usa-form {
@@ -24436,7 +24438,6 @@ Values
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
   padding-bottom: 4rem ;
-  padding-top: 4rem ;
 }
 
 .jcc-cards-section .jcc-header-group {
@@ -27269,6 +27270,108 @@ Settings
 Values
 ----------------------------------------
 */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 .jcc-timeline-section {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
@@ -27349,7 +27452,7 @@ Values
   padding-bottom: 2rem ;
 }
 
-.jcc-timeline li:last-of-type .jcc-timeline-item__title:after {
+.slick-slide:last-of-type .jcc-timeline-item__title:after {
   width: 0;
 }
 
@@ -27368,16 +27471,17 @@ Values
 .jcc-timeline__scroller--right {
   background-color: #e5a000 ;
   position: absolute;
-  top: 0;
+  top: 2.375rem;
   bottom: 0;
   width: 3rem;
+  height: 3rem;
   z-index: 10;
   display: none;
+  border-radius: 50%;
 }
 
-.jcc-timeline__scroller--left.is-active,
-.jcc-timeline__scroller--right.is-active {
-  display: block;
+.jcc-timeline__wrapper {
+  position: relative;
 }
 
 .jcc-timeline__scroller--left {
@@ -33120,6 +33224,60 @@ Values
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
   }
+  .jcc-timeline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    padding-top: 3rem;
+    overflow-x: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
+    padding-bottom: 4.5rem ;
+  }
+  .jcc-timeline li > * {
+    padding-top: 2rem ;
+  }
+  .jcc-timeline .jcc-timeline-item__title:after {
+    position: absolute;
+    top: -2.5rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px solid #005ea2;
+    z-index: 1;
+  }
+  .jcc-timeline .jcc-timeline-item__title:before {
+    position: absolute;
+    top: -3.25rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #005ea2;
+    border: 2px solid #005ea2;
+    border-radius: 50%;
+    content: "";
+    height: 1.75rem;
+    line-height: 1;
+    text-align: center;
+    width: 1.75rem;
+    z-index: 2;
+  }
+  .jcc-timeline__scroller--left.is-active,
+  .jcc-timeline__scroller--right.is-active {
+    display: block;
+  }
 }
 
 @media all and (max-width: 63.99em) and (min-width: 40em) {
@@ -36374,6 +36532,39 @@ Values
             flex: 0 0 auto ;
     width: 50% ;
   }
+  .jcc-timeline-item__title:before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #005ea2 ;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #005ea2 ;
+    height: 2rem ;
+    border-radius: 99rem ;
+    width: 2rem ;
+    line-height: 1;
+    text-align: center;
+    z-index: 2;
+  }
+  .jcc-timeline-item__title:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: -2.1rem;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    display: block;
+    height: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #005ea2 ;
+    z-index: 1;
+  }
   .jcc-accordion__heading-container .usa-accordion__heading {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -36595,88 +36786,9 @@ Values
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
-    position: absolute;
-    top: -2.5rem;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    content: "";
-    display: block;
-    width: 115%;
-    height: 1px;
-    border: 1px solid #ffbe2e;
-    z-index: 1;
-  }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
-    position: absolute;
-    top: -3.25rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    background-color: #0076d6;
-    border: 2px solid #ffbe2e;
-    border-radius: 50%;
-    content: "";
-    height: 1.75rem;
-    line-height: 1;
-    text-align: center;
-    width: 1.75rem;
-    z-index: 2;
-  }
   .jcc-timeline-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
-  }
-  .jcc-timeline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -ms-flex-wrap: wrap ;
-        flex-wrap: wrap ;
-    padding-top: 3rem;
-    overflow-x: auto;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .jcc-timeline li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 25% ;
-    padding-bottom: 4.5rem ;
-  }
-  .jcc-timeline li > * {
-    padding-right: 2rem;
-  }
-  .jcc-timeline .jcc-timeline-item__title:after {
-    position: absolute;
-    top: -2.5rem;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    content: "";
-    display: block;
-    width: 115%;
-    height: 1px;
-    border: 1px solid #005ea2;
-    z-index: 1;
-  }
-  .jcc-timeline .jcc-timeline-item__title:before {
-    position: absolute;
-    top: -3.25rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    background-color: #005ea2;
-    border: 2px solid #005ea2;
-    border-radius: 50%;
-    content: "";
-    height: 1.75rem;
-    line-height: 1;
-    text-align: center;
-    width: 1.75rem;
-    z-index: 2;
   }
 }
 
@@ -36880,6 +36992,44 @@ Values
   .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
+  }
+}
+
+@media all and (min-width: 75em) {
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
+    position: absolute;
+    top: -2.5rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px solid #ffbe2e;
+    z-index: 1;
+  }
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
+    position: absolute;
+    top: -3.25rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #0076d6;
+    border: 2px solid #ffbe2e;
+    border-radius: 50%;
+    content: "";
+    height: 1.75rem;
+    line-height: 1;
+    text-align: center;
+    width: 1.75rem;
+    z-index: 2;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
   }
 }
 

@@ -1,23 +1,5 @@
 modal_id: jcc-full-modal
-standalone_component: true
+parent_component_class: ""
+button_label: Open Dialog Window
+modal_content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia corporis, sed culpa, nam earum repellat nemo dolor, alias doloribus cupiditate aliquid. Dolores nobis perferendis molestias atque autem placeat quam ipsum."
 
-textsection:
-  headergroup:
-    brow: "Modal Brow"
-    title: "Modal Title"
-    lead: "MODAL LEAD ipsum dolor sit amet, consectetur adipisicing elit."
-   
-  column_content_left:
-    "<p>MODAL CONTENT LEFT. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
-    consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula
-    risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
-    sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
-    rhoncus.</p>"
-  column_content_right:
-    "<p>MODAL CONTENT RIGHT. Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
-    consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula
-    risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
-    sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
-    rhoncus.</p>"
-  background_variant: "" #has-background-color
-  column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter

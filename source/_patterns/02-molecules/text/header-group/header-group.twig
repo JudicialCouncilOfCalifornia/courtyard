@@ -1,10 +1,13 @@
 {% set tag = tag|default('h2') %}
 
+{% if title or lead %}
 <header class="jcc-header-group">
   {% if brow %}
   <p class="jcc-header-group__brow">{{ brow }}</p>
   {% endif %}
+  {% if title %}
   <{{ tag }} class="jcc-header-group__title">{{ title }}</{{ tag }}>
+  {% endif %}
   {% if lead %}
   <div class="jcc-header-group__lead">{{ lead }}</div>
   {% endif %}
@@ -12,3 +15,4 @@
   <div class="jcc-header-group__body">{{ body }}</div>
   {% endif %}
 </header>
+{% endif %}
