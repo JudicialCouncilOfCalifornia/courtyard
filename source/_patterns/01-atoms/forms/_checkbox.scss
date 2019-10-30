@@ -12,6 +12,7 @@
     @include u-padding-y(1.5);
     @include u-padding-left(6);
     @include u-padding-right(3);
+    @include u-bg("white");
   }
 
   .usa-checkbox__input:focus + .usa-checkbox__label::before {

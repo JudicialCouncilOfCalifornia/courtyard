@@ -12,8 +12,10 @@
 .jcc-form--inline {
   .usa-checkbox,
   .usa-radio {
-    display: inline-block;
-    margin-right: 0.5rem;
+    @include at-media("desktop") {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
   }
 }
 

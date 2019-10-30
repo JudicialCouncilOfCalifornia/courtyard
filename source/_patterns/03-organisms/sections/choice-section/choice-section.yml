@@ -13,4 +13,8 @@ checkbox_group:
     name: Alpha
     bordered: true
 align_variant: ''
-sr_only: true
+headergroup:
+  title: "What type of service are you interested in?"
+  brow: ""
+  lead: ""
+  tag: "h4"

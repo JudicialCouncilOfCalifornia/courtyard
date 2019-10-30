@@ -12,12 +12,17 @@
   }
 }
 
+.jcc-postcard__image {
+  position: relative;
+  text-align: right;
+}
+
 .jcc-postcard--has-background-image {
   @include u-padding-y(6);
   @include u-margin-bottom(6);
   position: relative;
 
-  .jcc-postcard__media {
+  .jcc-postcard__image {
     @include cover-image();
   }
 

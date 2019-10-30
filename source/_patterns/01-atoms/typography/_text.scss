@@ -16,3 +16,7 @@ a {
     @include u-text("blue-cool-60v");
   }
 }
+
+.sr-only {
+  @include sr-only();
+}

@@ -2,13 +2,54 @@ top:
   hero:
     image: ""
     alt: ""
-    title: "Serving your papers"
-    lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
-    body: ''
+    title: "Name Change"
+    lead: ""
+    body: '
+      <form class="usa-form jcc-form jcc-form--inline">
+      <fieldset class="usa-fieldset">
+        <legend class="jcc-form-group__title usa-legend sr-only">Whose name is being changed?</legend>
+
+        <div class="jcc-form-group__options">
+              <div class="usa-checkbox jcc-checkbox--bordered">
+      <input class="usa-checkbox__input" id="90" type="checkbox" name="Beta" value="90">
+      <label class="usa-checkbox__label" for="90">Self (adult)</label>
+      </div>
+                <div class="usa-checkbox jcc-checkbox--bordered">
+        <input class="usa-checkbox__input" id="91" type="checkbox" name="Beta" value="91">
+        <label class="usa-checkbox__label" for="91">Spouse (adult)</label>
+      </div>
+                <div class="usa-checkbox jcc-checkbox--bordered">
+        <input class="usa-checkbox__input" id="92" type="checkbox" name="Beta" value="92">
+        <label class="usa-checkbox__label" for="92">One or more minor child</label>
+      </div>
+              </div>
+
+        </fieldset>
+      </form>'
     column_content_right: ''
     background_variant: "has-background-color--light"
     column_variant: "has-one-column"
   breadcrumbs:
     - url: ""
-      label: "Service"
+      label: "Choice"
       url_attributes: ''
+choice_content:
+  headergroup:
+    title: "What type of service are you interested in?"
+    brow: ""
+    lead: ""
+    tag: "h4"
+  checkbox_group:
+    - label: This change of name is being requested to escape domestic violence.
+      id: "80"
+      name: Alpha
+      bordered: true
+    - label: One or more adults is restoring a former name during or following a divorce in California.
+      id: "81"
+      name: Alpha
+      bordered: true
+    - label: One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.
+      id: "82"
+      name: Alpha
+      bordered: true
+  align_variant: ''

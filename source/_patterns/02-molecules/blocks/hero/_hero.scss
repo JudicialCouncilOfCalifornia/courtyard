@@ -73,6 +73,13 @@
   }
 }
 
+.jcc-hero__columns {
+  > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 .jcc-hero--has-two-columns-half,
 .jcc-hero--has-two-columns-threequarter {
   .jcc-hero__columns {
