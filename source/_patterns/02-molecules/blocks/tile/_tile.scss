@@ -1,5 +1,3 @@
-@import "../../../00-protons/global";
-
 .jcc-tile {
   @include u-radius("lg");
   @include u-border(1px, "primary-vivid");
@@ -11,7 +9,7 @@
 }
 
 .jcc-tile__title {
-  @include h5($h-font-family: "heading");
+  @include responsive-h5($h-font-family: "heading");
 
   a {
     @include u-text("blue-70v");

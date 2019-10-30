@@ -1,5 +1,3 @@
-@import "../../../00-protons/global";
-
 .jcc-postcard {
   @include u-padding-top(1);
   @include u-padding-bottom(6);
@@ -22,7 +20,7 @@
   @include u-margin-bottom(6);
   position: relative;
 
-  .jcc-postcard__image {
+  .jcc-postcard__media {
     @include cover-image();
   }
 

@@ -7,7 +7,7 @@
   }
 
   .jcc-header-group__title {
-    @include h4($h-font-family: "heading");
+    @include responsive-h4($h-font-family: "heading");
     @include u-text("normal", "italic");
   }
 }

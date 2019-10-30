@@ -1,5 +1,3 @@
-@import "../../00-protons/global";
-
 h1,
 h2,
 h3 {
@@ -28,12 +26,12 @@ h3,
 
 h4,
 .h4 {
-  @include h4();
+  @include responsive-h4();
 }
 
 h5,
 .h5 {
-  @include h5();
+  @include responsive-h5();
 }
 
 h6,

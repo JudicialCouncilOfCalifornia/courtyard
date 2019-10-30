@@ -145,7 +145,7 @@
     },
     {
       "label": "error-light",
-      "color": "#FDE0DB"
+      "color": "#fdb8ae"
     },
     {
       "label": "error",
@@ -189,7 +189,7 @@
     },
     {
       "label": "success",
-      "color": "#00a39"
+      "color": "#00a398"
     },
     {
       "label": "success-dark",
