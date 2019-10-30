@@ -1,4 +1,6 @@
-img: "https://placeimg.com/800/400/arch"
+img:
+  src: "https://placeimg.com/800/400/arch"
+  alt: "Alt text"
 background_variant: "has-background-image" # has-background-color
 header_align_variant: "has-header-left"
 tag: "Page 2"
