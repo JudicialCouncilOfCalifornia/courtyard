@@ -1,11 +1,7 @@
 // -------------------------------------
 // Import individual theme settings
 
-@import "../_patterns/00-protons/uswds-theme-general";
-@import "../_patterns/00-protons/uswds-theme-typography";
-@import "../_patterns/00-protons/uswds-theme-spacing";
-@import "../_patterns/00-protons/uswds-theme-color";
-@import "../_patterns/00-protons/uswds-theme-utilities";
+@import "../_patterns/00-protons/global";
 
 // -------------------------------------
 // Import individual USWDS modules...
@@ -82,7 +78,6 @@
 
 // Styles inside patterns.
 // -------------------------------------
-@import "../_patterns/00-protons/global";
 @import "../_patterns/01-atoms/**/*.scss";
 @import "../_patterns/02-molecules/**/*.scss";
 @import "../_patterns/03-organisms/**/*.scss";
