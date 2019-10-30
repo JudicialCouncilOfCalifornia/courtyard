@@ -1,6 +1,6 @@
 {% set tag = tag|default('h2') %}
 
-{% if title or lead %}
+{% if brow or title or lead or body %}
 <header class="jcc-header-group">
   {% if brow %}
   <p class="jcc-header-group__brow">{{ brow }}</p>
