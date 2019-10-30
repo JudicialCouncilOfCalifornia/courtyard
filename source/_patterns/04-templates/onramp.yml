@@ -49,7 +49,9 @@ entries:
   -
     type: "postcard"
     postcard:
-      image: "https://placeimg.com/800/400/arch"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Alt text"
       alt: "Avatar"
       background_variant: "has-background-color"
       header_align_variant: "has-header-left"
@@ -69,7 +71,9 @@ entries:
   -
     type: "postcard"
     postcard:
-      image: "https://placeimg.com/800/400/arch"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Alt text"
       alt: "Avatar"
       background_variant: ""
       header_align_variant: "has-header-left"
@@ -88,8 +92,9 @@ entries:
   -
     type: "postcard"
     postcard:
-      image: "https://placeimg.com/800/400/arch"
-      alt: "Avatar"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Avatar"
       background_variant: "has-background-image"
       header_align_variant: "has-header-left"
       tag: "Page 2"
