@@ -59,3 +59,9 @@
 
 .jcc-full-modal__content {
 }
+
+.jcc-full-modal__trigger {
+  @include button-unstyled;
+  @include u-font-size("sans", "md");
+  text-decoration: none;
+}

@@ -283,3 +283,7 @@ $aspect-width: 16;
     @include u-text("gold-10v");
   }
 }
+
+@mixin dark-background-link-button() {
+  @include u-text("gold-30v");
+}

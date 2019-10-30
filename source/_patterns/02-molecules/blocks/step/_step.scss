@@ -4,6 +4,9 @@
   @include u-line-height("body", 4);
   padding-bottom: 4rem;
   margin-bottom: 0;
+
+  .jcc-read-more__content {
+  }
 }
 
 .jcc-step__title {
@@ -11,4 +14,8 @@
   @include u-font-family("sans");
   @include u-text("bold");
   @include u-text("blue-70v");
+}
+
+.jcc-step__excerpt {
+  margin-bottom: 1rem;
 }
