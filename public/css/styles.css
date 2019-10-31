@@ -14795,7 +14795,7 @@ h3.jcc-header-group__title {
 
 [role="tabpanel"] {
   background-color: #f9f9f9 ;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 [role="tabpanel"] * + * {
