@@ -13222,10 +13222,26 @@ through all possible variants
   padding-left: 2rem ;
   padding-right: 2rem ;
   font-size: 1.24313rem;
+  border-radius: 0 ;
 }
 
 .usa-button--unstyled {
   padding: 0 ;
+}
+
+.usa-button--accent-warm {
+  color: #1b1b1b ;
+  background-color: #ffbe2e;
+}
+
+.usa-button--accent-warm:hover, .usa-button--accent-warm.usa-button--hover {
+  color: #1b1b1b ;
+  background-color: #e5a000;
+}
+
+.usa-button--accent-warm:active, .usa-button--accent-warm.usa-button--active {
+  color: white ;
+  background-color: #936f38;
 }
 
 .primary-test {
@@ -13399,10 +13415,28 @@ a:visited {
 }
 
 .jcc-card--has-icon .jcc-card__media {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  position: relative;
   margin-right: 1rem;
-  min-width: 4rem;
+}
+
+.jcc-card--has-icon .jcc-card__media img {
+  z-index: 2;
+  position: relative;
+}
+
+.jcc-card--has-icon .jcc-card__media:before {
+  background-color: #fef0c8 ;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  left: .75rem;
+  top: .75rem;
+  position: absolute;
 }
 
 .jcc-filelist {
@@ -13735,6 +13769,30 @@ a:visited {
   padding-right: 2rem ;
 }
 
+.jcc-timeline-item__media {
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  position: relative;
+}
+
+.jcc-timeline-item__media img {
+  z-index: 2;
+  position: relative;
+}
+
+.jcc-timeline-item__media:before {
+  background-color: #fef0c8 ;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  left: .75rem;
+  top: .75rem;
+  position: absolute;
+}
+
 .jcc-form.usa-form {
   max-width: none;
 }
@@ -13760,7 +13818,7 @@ a:visited {
   font-size: 1.49176rem;
   font-weight: normal ;
   font-style: italic ;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .jcc-accordion__heading-container {
@@ -14992,6 +15050,10 @@ h3.jcc-header-group__title {
   padding-bottom: 3rem ;
 }
 
+.jcc-timeline-section .slick-track {
+  padding-top: 3rem;
+}
+
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
   padding-top: 3rem ;
@@ -15026,6 +15088,30 @@ h3.jcc-header-group__title {
 
 .jcc-timeline-section--has-background-color--dark > a:visited {
   color: #ffe396 ;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  position: relative;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media img {
+  z-index: 2;
+  position: relative;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media:before {
+  background-color: #0b4778 ;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  left: .75rem;
+  top: .75rem;
+  position: absolute;
 }
 
 .jcc-timeline-section--has-background-color--dark .jcc-full-modal__trigger,
@@ -15087,7 +15173,7 @@ h3.jcc-header-group__title {
 .jcc-timeline__scroller--right {
   background-color: #e5a000 ;
   position: absolute;
-  top: 2.375rem;
+  top: 3.125rem;
   bottom: 0;
   width: 3rem;
   height: 3rem;
@@ -20840,9 +20926,17 @@ h3.jcc-header-group__title {
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
   }
+  .jcc-card--has-icon .jcc-card__media {
+    position: absolute;
+    top: 0;
+  }
+  .jcc-timeline-item__media {
+    position: absolute;
+    top: 0;
+  }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;
-    top: -2.5rem;
+    top: -1.5rem;
     right: auto;
     bottom: auto;
     left: auto;
@@ -20855,7 +20949,7 @@ h3.jcc-header-group__title {
   }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
     position: absolute;
-    top: -3.25rem;
+    top: -2.25rem;
     right: auto;
     bottom: auto;
     left: 0;
@@ -20863,11 +20957,15 @@ h3.jcc-header-group__title {
     border: 2px solid #ffbe2e;
     border-radius: 50%;
     content: "";
-    height: 1.75rem;
+    height: 1.5rem;
     line-height: 1;
     text-align: center;
-    width: 1.75rem;
+    width: 1.5rem;
     z-index: 2;
+  }
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
+    position: absolute;
+    top: 0;
   }
   .jcc-timeline {
     display: -webkit-box;
@@ -20875,7 +20973,6 @@ h3.jcc-header-group__title {
     display: flex ;
     -ms-flex-wrap: wrap ;
         flex-wrap: wrap ;
-    padding-top: 3rem;
     overflow-x: auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -20892,7 +20989,7 @@ h3.jcc-header-group__title {
   }
   .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;
-    top: -2.5rem;
+    top: -1.5rem;
     right: auto;
     bottom: auto;
     left: auto;
@@ -20905,7 +21002,7 @@ h3.jcc-header-group__title {
   }
   .jcc-timeline .jcc-timeline-item__title:before {
     position: absolute;
-    top: -3.25rem;
+    top: -2.25rem;
     right: auto;
     bottom: auto;
     left: 0;
@@ -20913,10 +21010,10 @@ h3.jcc-header-group__title {
     border: 2px solid #005ea2;
     border-radius: 50%;
     content: "";
-    height: 1.75rem;
+    height: 1.5rem;
     line-height: 1;
     text-align: center;
-    width: 1.75rem;
+    width: 1.5rem;
     z-index: 2;
   }
   .jcc-timeline__scroller--left.is-active,

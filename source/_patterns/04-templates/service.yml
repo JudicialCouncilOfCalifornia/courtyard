@@ -8,12 +8,11 @@ top:
     column_content_right: '<div class="jcc-dropdown jcc-dropdown--is-jumbo" title="Dropdown Component Title Information">
             <label class="jcc-dropdown__Label">What form are you serving?</label>
             <select>
-                <option value="">Select</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-                <option value="4">Option 4</option>
-              </select>
+                <option value="">Select the form number</option>
+                <option value="1"><strong>FL100</strong> Filing for Divorce</option>
+                <option value="2"><strong>FL120</strong> Filing for Custody</option>
+                <option value="3"><strong>FL124</strong> Filing for Payment Plan</option>
+            </select>
         </div>'
     background_variant: "has-background-color--light"
     column_variant: "has-one-column"

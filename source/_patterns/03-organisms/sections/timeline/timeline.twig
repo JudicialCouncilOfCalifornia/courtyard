@@ -11,6 +11,7 @@
       {% for item in timeline %}
       <li>
       {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
+        img: item.img,
         title: item.title,
         excerpt: item.excerpt,
         read_more: item.read_more

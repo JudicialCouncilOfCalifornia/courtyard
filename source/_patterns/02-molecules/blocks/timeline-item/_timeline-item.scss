@@ -12,3 +12,7 @@
   @include u-line-height("body", 4);
   @include u-padding-right(4);
 }
+
+.jcc-timeline-item__media {
+  @include media-icon();
+}

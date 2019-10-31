@@ -6,9 +6,7 @@
   display: flex;
 
   .jcc-card__media {
-    height: 4rem;
-    width: 4rem;
+    @include media-icon();
     margin-right: 1rem;
-    min-width: 4rem;
   }
 }
