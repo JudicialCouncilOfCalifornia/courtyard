@@ -1,0 +1,11 @@
+.summary-results {
+  .jcc-header-group {
+    margin-bottom: 2rem;
+  }
+
+  .jcc-header-group__title {
+    @include responsive-h4($h-font-family: "heading");
+    @include u-text("normal", "italic");
+    margin-bottom: 0.5rem;
+  }
+}

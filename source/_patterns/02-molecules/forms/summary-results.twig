@@ -1,0 +1,10 @@
+<div class="summary-results">
+  {% for result in results %}
+    {% include '@molecules/text/header-group/header-group.twig' with {
+        brow: result.brow,
+        title: result.title,
+        lead: result.lead,
+        tag: result.tag
+    } %}
+  {% endfor %}
+</div>
