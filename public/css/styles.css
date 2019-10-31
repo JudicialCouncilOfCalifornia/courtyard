@@ -13434,8 +13434,8 @@ a:visited {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  left: .75rem;
-  top: .75rem;
+  left: 0.75rem;
+  top: 0.75rem;
   position: absolute;
 }
 
@@ -13788,8 +13788,8 @@ a:visited {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  left: .75rem;
-  top: .75rem;
+  left: 0.75rem;
+  top: 0.75rem;
   position: absolute;
 }
 
@@ -15109,8 +15109,8 @@ h3.jcc-header-group__title {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  left: .75rem;
-  top: .75rem;
+  left: 0.75rem;
+  top: 0.75rem;
   position: absolute;
 }
 
