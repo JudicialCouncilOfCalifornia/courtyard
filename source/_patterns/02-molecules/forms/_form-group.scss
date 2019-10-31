@@ -12,13 +12,15 @@
 .jcc-form--inline {
   .usa-checkbox,
   .usa-radio {
-    display: inline-block;
-    margin-right: 0.5rem;
+    @include at-media("desktop") {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
   }
 }
 
 .jcc-form-group__title {
-  @include h4($h-font-family: "heading");
+  @include responsive-h4($h-font-family: "heading");
   @include u-text("normal");
   margin-bottom: 1rem;
 }

@@ -5,13 +5,17 @@
 
 .jcc-read-more__trigger {
   @include button-unstyled;
+  @include u-font-size("sans", "md");
   text-decoration: none;
   vertical-align: bottom; // Temporary Styles for icon
   // This will be replaced when the icons system is in place.
 }
 
 .jcc-read-more__content {
-  @include u-padding-y(3);
+  @include u-padding(3);
+  @include u-bg("blue-cool-5");
+  @include u-border-left("05", "cyan-50");
+  @include u-margin-top(2);
 }
 
 .jcc-read-more__content[aria-hidden="true"] {

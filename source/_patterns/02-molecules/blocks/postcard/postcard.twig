@@ -3,10 +3,12 @@
     <div class="jcc-postcard__row">
       {% if img %}
       <div class="jcc-postcard__media">
-        {% include '@atoms/image/image.twig' with { image: img } %}
-        {% if tag  %}
-        <span class="jcc-postcard__tag">{{ tag }}</span>
-        {% endif %}
+        <div class="jcc-postcard__image">
+          {% include '@atoms/image/image.twig' with { image: img } %}
+          {% if tag  %}
+          <span class="jcc-postcard__tag">{{ tag }}</span>
+          {% endif %}
+          </div>.
       </div>
       {% endif %}
 

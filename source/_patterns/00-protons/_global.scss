@@ -3,6 +3,7 @@
 @import "uswds-theme-spacing";
 @import "uswds-theme-color";
 @import "uswds-theme-utilities";
+@import "uswds-theme-components";
 
 // Section vertical rhythm and centered block
 
@@ -24,6 +25,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   img,
   picture {
@@ -209,12 +211,12 @@ $aspect-width: 16;
   }
 }
 
-@mixin h4($h-font-family: "body") {
-  @include u-font($h-font-family, 10); // 24
+@mixin responsive-h4($h-font-family: "body") {
+  @include u-font($h-font-family, 10);
 }
 
-@mixin h5($h-font-family: "body") {
-  @include u-font($h-font-family, 9); // 22
+@mixin responsive-h5($h-font-family: "body") {
+  @include u-font($h-font-family, 9);
 }
 
 @mixin responsive-lead($responsive-font-family: "body") {
@@ -280,4 +282,8 @@ $aspect-width: 16;
   &:visited {
     @include u-text("gold-10v");
   }
+}
+
+@mixin dark-background-link-button() {
+  @include u-text("gold-30v");
 }

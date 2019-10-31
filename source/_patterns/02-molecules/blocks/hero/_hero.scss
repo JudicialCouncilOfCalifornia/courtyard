@@ -1,5 +1,3 @@
-@import "../../../00-protons/global";
-
 .jcc-hero {
   @include u-position("relative");
 
@@ -70,6 +68,13 @@
 
   .jcc-hero__column-left {
     margin-bottom: 2rem;
+  }
+}
+
+.jcc-hero__columns {
+  > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 

@@ -1,5 +1,3 @@
-@import "../../../00-protons/global";
-
 .jcc-filelist {
   @include u-padding-y(3);
   @include u-padding-x(6);
@@ -11,7 +9,7 @@
 }
 
 .jcc-filelist__title {
-  @include h4($h-font-family: "heading");
+  @include responsive-h4($h-font-family: "heading");
 }
 
 .jcc-filelist__list {

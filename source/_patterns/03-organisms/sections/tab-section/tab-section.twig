@@ -1,6 +1,6 @@
 {% if tabs|length > 0 %}
-<div class="jcc-section-tabs tabbed">
-  <div class="jcc-section-tabs__container">
+<div class="jcc-tab-section tabbed">
+  <div class="jcc-tab-section__container">
   
   {% include '@molecules/text/header-group/header-group.twig' with {
       brow: headergroup.brow,
@@ -20,7 +20,7 @@
   
   {% for tab_panel in tab_panels %}
   <section id="section{{ loop.index }}">
-    <div class="jcc-section-tabs__container">
+    <div class="jcc-tab-section__container">
       {{ tab_panel.content }}
     </div>
   </section>

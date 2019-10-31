@@ -1,5 +1,5 @@
 .jcc-dropdown__Label {
-  @include h4($h-font-family: "heading");
+  @include responsive-h4($h-font-family: "heading");
   @include u-padding-bottom(2);
   @include u-text("italic");
   display: block;

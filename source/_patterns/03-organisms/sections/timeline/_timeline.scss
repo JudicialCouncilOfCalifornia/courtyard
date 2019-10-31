@@ -1,4 +1,3 @@
-@import "../../../00-protons/global";
 @import "../../../../../node_modules/slick-carousel/slick/slick.scss";
 
 .jcc-timeline-section {
@@ -24,13 +23,14 @@
 
   .jcc-timeline {
     .jcc-timeline-item__title {
-      @include at-media(desktop-lg) {
+      @include at-media(tablet) {
         @include timeline-line($timeline-line-border: "gold-20v");
         @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
       }
     }
   }
 
+  .jcc-full-modal__trigger,
   .jcc-timeline-item__trigger {
     @include dark-background-link();
   }

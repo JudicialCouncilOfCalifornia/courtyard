@@ -1,6 +1,6 @@
 <form class="usa-form jcc-form{% if align_variant %} jcc-form--{{ align_variant }}{% endif %}">
   <fieldset class="usa-fieldset">
-    <legend class="jcc-form-group__title usa-legend">{{ legend }}</legend>
+    <legend class="jcc-form-group__title usa-legend{% if sr_only %} sr-only{% endif %}">{{ legend }}</legend>
 
     <div class="jcc-form-group__options">
     {% for item in checkbox_group %}

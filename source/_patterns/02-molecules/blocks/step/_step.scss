@@ -1,16 +1,21 @@
-@import "../../../00-protons/global";
-
 .jcc-step {
   @include t-intro();
   @include u-measure("6");
   @include u-line-height("body", 4);
   padding-bottom: 4rem;
   margin-bottom: 0;
+
+  .jcc-read-more__content {
+  }
 }
 
 .jcc-step__title {
-  @include h4();
+  @include responsive-h4();
   @include u-font-family("sans");
   @include u-text("bold");
   @include u-text("blue-70v");
+}
+
+.jcc-step__excerpt {
+  margin-bottom: 1rem;
 }

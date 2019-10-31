@@ -1,0 +1,19 @@
+{% if checkbox_group|length > 0 %}
+<div class="jcc-choice-section">
+  <div class="jcc-choice-section__container">
+  
+    {% include '@molecules/text/header-group/header-group.twig' with {
+        brow: headergroup.brow,
+        title: headergroup.title,
+        lead: headergroup.lead,
+        tag: headergroup.tag,
+        sr_legend: true
+    } %}
+  
+    {% include '@molecules/forms/checkbox-group.twig' with {
+        checkbox_group: checkbox_group
+    } %}
+
+  </div>
+</div>
+{% endif %}

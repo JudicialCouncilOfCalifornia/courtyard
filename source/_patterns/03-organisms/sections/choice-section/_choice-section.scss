@@ -1,0 +1,23 @@
+.jcc-choice-section {
+  @include section-wrapper;
+  @include u-padding-bottom(8);
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
+
+  .jcc-header-group__title {
+    @include responsive-h4($h-font-family: "heading");
+    @include u-text("normal", "italic");
+  }
+}
+
+.jcc-choice-section__container {
+  @include section-container;
+
+  .jcc-form-group__options {
+    @include at-media("desktop") {
+      max-width: 75%;
+    }
+  }
+}

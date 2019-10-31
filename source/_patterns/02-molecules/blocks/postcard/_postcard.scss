@@ -1,5 +1,3 @@
-@import "../../../00-protons/global";
-
 .jcc-postcard {
   @include u-padding-top(1);
   @include u-padding-bottom(6);
@@ -9,6 +7,20 @@
   }
 
   .jcc-header-group__body {
+  }
+}
+
+.jcc-postcard__image {
+  position: relative;
+
+  @include at-media(desktop) {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    display: block;
   }
 }
 
@@ -65,16 +77,23 @@
 .jcc-postcard__tag {
   @extend .usa-tag;
   @include u-pin-bottom;
-  right: 2rem;
-  bottom: 1rem;
+  left: 0rem;
+  bottom: 0rem;
+
+  @include at-media(desktop) {
+    right: 0rem;
+    left: auto;
+  }
 }
 
 .jcc-postcard__content {
   @include u-line-height("body", 4);
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @include at-media(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .jcc-postcard__row {

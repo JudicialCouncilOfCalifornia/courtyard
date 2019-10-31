@@ -1,15 +1,16 @@
-.jcc-section-tabs__container {
+.jcc-tab-section__container {
   @include section-container;
 
   .jcc-header-group__title {
-    @include h4($h-font-family: "heading");
+    @include responsive-h4($h-font-family: "heading");
     @include u-text("normal", "italic");
+    margin-bottom: 2rem;
   }
 }
 
 [role="tablist"] {
   padding: 0;
-  margin: 2rem 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 [role="tablist"] li,

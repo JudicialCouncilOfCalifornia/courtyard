@@ -1,8 +1,6 @@
-// .usa-radio__input:focus + .usa-radio__label::before,
-// .usa-checkbox__input:focus + .usa-checkbox__label::before,
-// input:not([disabled]):focus,
-// select:not([disabled]):focus,
-// textarea:not([disabled]):focus,
-// button:not([disabled]):focus {
-//   outline: 0.25rem solid color('yellow-20v');
-// }
+.usa-select,
+.usa-range,
+.usa-input,
+.usa-textarea {
+  @include u-border(2px);
+}
