@@ -38,8 +38,12 @@
   "url": "http://lorizzle.nl/",
   "theme_color": [
     {
+      "label": "base-lightest",
+      "color": "#f9f9f9"
+    },
+    {
       "label": "base-lighter",
-      "color": "#C9C9C9"
+      "color": "#f3f3f3"
     },
     {
       "label": "base-light",
@@ -58,12 +62,16 @@
       "color": "#454545"
     },
     {
+      "label": "base-darkest",
+      "color": "#1b1b1b"
+    },
+    {
       "label": "ink",
       "color": "#1b1b1b"
     },
     {
       "label": "primary-lighter",
-      "color": "#F4F9FF"
+      "color": "#e1f3f8"
     },
     {
       "label": "primary-light",
@@ -185,11 +193,11 @@
     },
     {
       "label": "success-light",
-      "color": "#70e17b"
+      "color": "#b7f5bd"
     },
     {
       "label": "success",
-      "color": "#00a398"
+      "color": "#21c834"
     },
     {
       "label": "success-dark",

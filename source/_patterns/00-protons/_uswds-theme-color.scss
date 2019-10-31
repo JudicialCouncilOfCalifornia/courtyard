@@ -24,25 +24,25 @@ Theme palette colors
 */
 
 // Base colors
-$theme-color-base-family: "gray-cool";
-$theme-color-base-lightest: "gray-5";
-$theme-color-base-lighter: "gray-cool-10";
-$theme-color-base-light: "gray-cool-30";
-$theme-color-base: "gray-cool-50";
-$theme-color-base-dark: "gray-cool-60";
-$theme-color-base-darker: "gray-cool-70";
+$theme-color-base-family: "gray";
+$theme-color-base-lightest: "gray-2";
+$theme-color-base-lighter: "gray-4";
+$theme-color-base-light: "gray-20";
+$theme-color-base: "gray-40";
+$theme-color-base-dark: "gray-60";
+$theme-color-base-darker: "gray-70";
 $theme-color-base-darkest: "gray-90";
 $theme-color-base-ink: "gray-90";
 
 // Primary colors
-$theme-color-primary-family: "blue";
+$theme-color-primary-family: "blue-vivid";
 $theme-color-primary-lightest: false;
-$theme-color-primary-lighter: "blue-10";
+$theme-color-primary-lighter: "blue-cool-5v";
 $theme-color-primary-light: "blue-30";
 $theme-color-primary: "blue-60v";
-$theme-color-primary-vivid: "blue-warm-60v";
+$theme-color-primary-vivid: "blue-50";
 $theme-color-primary-dark: "blue-70v";
-$theme-color-primary-darker: "blue-80v";
+$theme-color-primary-darker: "blue-80";
 $theme-color-primary-darkest: false;
 
 // Secondary colors
