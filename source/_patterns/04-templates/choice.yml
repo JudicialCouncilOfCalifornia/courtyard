@@ -53,3 +53,7 @@ choice_content:
       name: Alpha
       bordered: true
   align_variant: ''
+button:
+  text: 'Submit'
+  url: "#"
+  style: 'primary'

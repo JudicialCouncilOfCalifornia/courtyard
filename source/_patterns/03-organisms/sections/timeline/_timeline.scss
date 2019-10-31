@@ -7,6 +7,10 @@
   .jcc-header-group {
     @include u-padding-bottom(6);
   }
+
+  .slick-track {
+    padding-top: 3rem;
+  }
 }
 
 .jcc-timeline-section--has-background-color--light,
@@ -28,6 +32,10 @@
         @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
       }
     }
+
+    .jcc-timeline-item__media {
+      @include media-icon($icon-circle-bg: "blue-70v");
+    }
   }
 
   .jcc-full-modal__trigger,
@@ -45,7 +53,7 @@
 
   @include at-media("tablet") {
     @include grid-row;
-    padding-top: 3rem;
+    // padding-top: 3rem;
     overflow-x: auto;
     flex-wrap: nowrap;
   }
@@ -89,7 +97,7 @@
 .jcc-timeline__scroller--right {
   @include u-bg("gold-30v");
   position: absolute;
-  top: 2.375rem;
+  top: 3.125rem;
   bottom: 0;
   width: 3rem;
   height: 3rem;

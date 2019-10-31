@@ -6,12 +6,17 @@
         brow: headergroup.brow,
         title: headergroup.title,
         lead: headergroup.lead,
-        tag: headergroup.tag,
-        sr_legend: true
+        tag: headergroup.tag
     } %}
   
     {% include '@molecules/forms/checkbox-group.twig' with {
         checkbox_group: checkbox_group
+    } %}
+
+    {% include '@atoms/buttons/button.twig' with {
+        text: button.text,
+        url: button.url,
+        style: button.style
     } %}
 
   </div>

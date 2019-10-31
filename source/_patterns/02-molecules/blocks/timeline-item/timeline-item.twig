@@ -1,4 +1,10 @@
-<div class="jcc-timeline-item">
+<div class="jcc-timeline-item{% if img %} jcc-timeline-item--has-icon{% endif %}">
+  {% if img %}
+  <div class="jcc-timeline-item__media">
+    {% include '@atoms/image/image.twig' with { image: img } %}
+  </div>
+  {% endif %}
+
   <h3 class="jcc-timeline-item__title">{{ title }}</h3>
   <div class="jcc-timeline-item__excerpt">{{ excerpt }}</div>
 

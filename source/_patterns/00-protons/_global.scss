@@ -99,7 +99,7 @@ $aspect-width: 16;
 @mixin timeline-dot($timeline-dot-bg: "primary", $timeline-dot-border: "primary") {
   &:before {
     position: absolute;
-    top: -3.25rem;
+    top: -2.25rem;
     right: auto;
     bottom: auto;
     left: 0;
@@ -107,10 +107,10 @@ $aspect-width: 16;
     border: 2px solid color($timeline-dot-border);
     border-radius: 50%;
     content: "";
-    height: 1.75rem;
+    height: 1.5rem;
     line-height: 1;
     text-align: center;
-    width: 1.75rem;
+    width: 1.5rem;
     z-index: 2;
   }
 }
@@ -118,7 +118,7 @@ $aspect-width: 16;
 @mixin timeline-line($timeline-line-border: "primary") {
   &:after {
     position: absolute;
-    top: -2.5rem;
+    top: -1.5rem;
     right: auto;
     bottom: auto;
     left: auto;
@@ -286,4 +286,33 @@ $aspect-width: 16;
 
 @mixin dark-background-link-button() {
   @include u-text("gold-30v");
+}
+
+@mixin media-icon($icon-circle-size: 3rem, $icon-circle-bg: "gold-5v") {
+  height: $icon-circle-size;
+  width: $icon-circle-size;
+  min-width: $icon-circle-size;
+  position: relative;
+
+  @include at-media(tablet) {
+    position: absolute;
+    top: 0;
+  }
+
+  img {
+    z-index: 2;
+    position: relative;
+  }
+
+  &:before {
+    @include u-bg($icon-circle-bg);
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: $icon-circle-size;
+    width: $icon-circle-size;
+    left: 0.75rem;
+    top: 0.75rem;
+    position: absolute;
+  }
 }

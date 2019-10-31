@@ -20,9 +20,7 @@
   
   {% for tab_panel in tab_panels %}
   <section id="section{{ loop.index }}">
-    <div class="jcc-tab-section__container">
-      {{ tab_panel.content }}
-    </div>
+    {{ tab_panel.content }}
   </section>
   {% endfor %}
 </div>
