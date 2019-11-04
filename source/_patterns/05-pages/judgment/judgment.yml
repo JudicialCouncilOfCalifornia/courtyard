@@ -35,13 +35,13 @@ switchboard:
   switchboard_tiles2:
     - brow: "General Information"
       title: 'I want to find out more about Debt Collection'
-      url: '#'
+      url: 'link.pages-judgment-general-information'
       url_attributes: ''
     - brow: "Negotiating a Settlement"
       title: 'I want to talk with someone and work something out'
-      url: '#'
+      url: 'link.pages-judgment-negotiating-a-settlement'
       url_attributes: ''
     - brow: "Pay in Installments"
       title: 'I don’t have all the money but can pay over time'
-      url: '#'
+      url: 'link.pages-judgment-pay-in-installments'
       url_attributes: ''
