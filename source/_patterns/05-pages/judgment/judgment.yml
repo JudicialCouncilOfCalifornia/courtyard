@@ -26,11 +26,11 @@ switchboard:
       url_attributes: ''
     - brow: "Lien Against Property"
       title: 'I was told I can’t sell my property'
-      url: '#'
+      url: 'link.pages-judgment-lien-against-property'
       url_attributes: ''
     - brow: "Bank Levy"
       title: 'Someone tried to take money from my bank account '
-      url: '#'
+      url: 'link.pages-judgment-bank-levy'
       url_attributes: ''
   switchboard_tiles2:
     - brow: "General Information"
