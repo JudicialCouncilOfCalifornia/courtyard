@@ -12,8 +12,7 @@
 {% for entry in entries %}
   {% if entry.type == 'postcard' %}
     {% include '@molecules/blocks/postcard/postcard.twig' with {
-      image: entry.postcard.image,
-      alt: entry.postcard.alt,
+      img: entry.postcard.img,
       background_variant: entry.postcard.background_variant,
       header_align_variant: entry.postcard.header_align_variant,
       tag: entry.tag.image,
