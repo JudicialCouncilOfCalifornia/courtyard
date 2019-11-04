@@ -153,11 +153,23 @@ const plJs = () => {
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
 
+//
+// Copy page-level images into public/img/
+//
+
+const copyPlImages = () => {
+  return gulp
+    .src(config.images.source_images)
+    .pipe(rename({ dirname: "" }))
+    .pipe(gulp.dest(config.images.public_images));
+};
+
 const watch = cb => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
   gulp.watch(config.pattern_lab.src, build);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
+  gulp.watch(config.images.source_images, copyPlImages);
 };
 
 const serve = cb => {
@@ -171,7 +183,7 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, plCss, plJs);
+const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, plCss, plJs, copyPlImages);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);
