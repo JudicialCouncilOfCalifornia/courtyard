@@ -11,7 +11,6 @@
     "public_fonts": "public/fonts"
   },
   "images": {
-    "source_images": "source/_patterns/**/img/*",
     "public_images": "public/img"
   },
   "js": {
