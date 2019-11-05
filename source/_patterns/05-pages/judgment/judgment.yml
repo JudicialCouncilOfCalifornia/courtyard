@@ -8,7 +8,7 @@ top:
     column_content_right: "
       <ul>
        <li>You will not go to jail for having a judgment against you.</li>
-       <li>If you receive a wage garnishment or bank levy, you have only days to take action.</li>
+       <li>If you receive a <a href=\"/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-wage-garnishment.html\">wage garnishment</a> or <a href=\"/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-bank-levy.html\">bank levy</a>, you have only days to take action.</li>
        <li>There are ways you can control the repayment of the judgment.</li>
       </ul>
     "
