@@ -3,4 +3,4 @@ img:
   alt: "Alt text"
 title: "Lorem ipsum"
 excerpt: "Nullam at semper mauris, at rhoncus purus."
-card_variant: "has-icon" #has-image
+card_variant: "has-icon" #has-image (not implemented for MVP)
