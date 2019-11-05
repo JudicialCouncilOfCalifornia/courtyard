@@ -1,0 +1,27 @@
+.jcc-list-group {
+
+}
+
+.jcc-list-group__container {
+
+}
+
+.jcc-list-group__item {
+
+}
+
+.jcc-list-group__item + .jcc-list-group__item {
+  @include u-padding-top(3);
+}
+
+.jcc-list-item {
+  
+}
+
+.jcc-list-item__title {
+
+}
+
+.jcc-list-item__excerpt {
+  @include u-text('base-light');
+}
