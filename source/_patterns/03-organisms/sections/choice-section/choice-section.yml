@@ -18,3 +18,5 @@ headergroup:
   brow: ""
   lead: ""
   tag: "h4"
+button:
+  text: "Save"
