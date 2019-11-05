@@ -4,6 +4,7 @@
 
 .jcc-card--has-icon {
   display: flex;
+  position: relative;
 
   .jcc-card__media {
     @include media-icon();

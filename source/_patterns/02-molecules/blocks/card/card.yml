@@ -2,5 +2,5 @@ img:
   src: "../../images/court.svg"
   alt: "Alt text"
 title: "Lorem ipsum"
-excerpt: "Nullam at semper mauris, at rhoncus purus."
+excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
 card_variant: "has-icon" #has-image (not implemented for MVP)

@@ -1763,7 +1763,7 @@ through all possible variants
 
 .usa-table, .usa-prose > table {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   border-spacing: 0;
   margin: 1.25rem 0;
@@ -2372,6 +2372,12 @@ html {
   font-size: 100%;
 }
 
+body {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.05666rem;
+  line-height: 1.62895 ;
+}
+
 cite,
 var,
 address,
@@ -2392,7 +2398,7 @@ body {
 
 .usa-button {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.00552 ;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2745,7 +2751,7 @@ img {
 .usa-hint, .usa-select, .usa-range, .usa-input,
 .usa-textarea {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.35746 ;
 }
 
@@ -3532,7 +3538,7 @@ img {
   padding-left: 0.5rem ;
   padding-right: 0.5rem ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
 }
 
 .usa-paragraph {
@@ -3723,7 +3729,7 @@ img {
 
 .usa-prose {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
@@ -3803,7 +3809,7 @@ img {
   padding: 0;
   width: 100%;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
@@ -3843,7 +3849,7 @@ img {
 .usa-accordion__heading,
 .usa-prose .usa-accordion__heading {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.00552 ;
   margin: 0;
 }
@@ -3943,7 +3949,7 @@ img {
 
 .usa-alert {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   background-color: #f9f9f9;
   background-position: 1.25rem 1.25rem;
@@ -4128,7 +4134,7 @@ img {
 
 .usa-banner {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   background-color: #f9f9f9;
 }
@@ -4347,7 +4353,7 @@ img {
   list-style-type: none;
   padding-left: 0;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
@@ -4378,7 +4384,7 @@ img {
 
 .usa-footer {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   overflow: hidden;
 }
@@ -4679,7 +4685,7 @@ img {
 
 .usa-form {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.35746 ;
 }
 
@@ -4734,7 +4740,7 @@ img {
 
 .usa-graphic-list {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
@@ -4774,7 +4780,7 @@ img {
 
 .usa-header {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   z-index: 300;
 }
@@ -4905,7 +4911,7 @@ img {
 
 .usa-hero {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   padding-bottom: 2rem ;
   padding-top: 2rem ;
@@ -4989,7 +4995,7 @@ img {
 
 .usa-nav {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.00552 ;
 }
 
@@ -5197,7 +5203,7 @@ img {
 
 .usa-search {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   position: relative;
 }
@@ -5390,7 +5396,7 @@ input[type="search"] {
 
 .usa-skipnav {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99451rem;
+  font-size: 1.05666rem;
   line-height: 1.62895 ;
   background: transparent;
   left: 0;
@@ -13412,6 +13418,7 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .jcc-card--has-icon .jcc-card__media {
