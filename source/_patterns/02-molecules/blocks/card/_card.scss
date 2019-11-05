@@ -10,3 +10,7 @@
     margin-right: 1rem;
   }
 }
+
+.jcc-card__excerpt {
+  @include body-prose();
+}

@@ -49,7 +49,10 @@
 }
 
 .jcc-postcard__media {
+  @include u-margin-bottom(2);
+
   @include at-media(desktop) {
+    @include u-margin-bottom(0);
     @include u-order("last");
   }
 }

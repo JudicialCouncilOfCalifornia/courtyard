@@ -294,11 +294,6 @@ $aspect-width: 16;
   min-width: $icon-circle-size;
   position: relative;
 
-  @include at-media(tablet) {
-    position: absolute;
-    top: 0;
-  }
-
   img {
     z-index: 2;
     position: relative;
@@ -314,5 +309,15 @@ $aspect-width: 16;
     left: 0.75rem;
     top: 0.75rem;
     position: absolute;
+  }
+}
+
+@mixin body-prose() {
+  ul {
+    @include u-line-height("body", 2);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
   }
 }

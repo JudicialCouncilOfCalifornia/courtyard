@@ -32,8 +32,9 @@
     } %}
   {% elseif entry.type == 'card-section' %}
     {% include '@organisms/sections/card-section/card-section.twig' with {
-      background_variant: section2.background_variant,
-      headergroup: section2.headergroup
+      background_variant: entry.background_variant,
+      headergroup: entry.headergroup,
+      cards: entry.cards
     } %}
   {% endif %}
 {% endfor %}

@@ -13439,6 +13439,14 @@ a:visited {
   position: absolute;
 }
 
+.jcc-card__excerpt ul {
+  line-height: 1.20663 ;
+}
+
+.jcc-card__excerpt li {
+  margin-bottom: .5rem;
+}
+
 .jcc-filelist {
   padding-bottom: 1.5rem ;
   padding-top: 1.5rem ;
@@ -13669,6 +13677,10 @@ a:visited {
   background-color: #f9f9f9 ;
   padding-top: 3rem ;
   margin-bottom: 3rem ;
+}
+
+.jcc-postcard__media {
+  margin-bottom: 1rem ;
 }
 
 .jcc-postcard__container {
@@ -20926,14 +20938,6 @@ h3.jcc-header-group__title {
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
   }
-  .jcc-card--has-icon .jcc-card__media {
-    position: absolute;
-    top: 0;
-  }
-  .jcc-timeline-item__media {
-    position: absolute;
-    top: 0;
-  }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;
     top: -1.5rem;
@@ -20963,7 +20967,7 @@ h3.jcc-header-group__title {
     width: 1.5rem;
     z-index: 2;
   }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
+  .jcc-timeline-item__media {
     position: absolute;
     top: 0;
   }
@@ -24250,6 +24254,7 @@ h3.jcc-header-group__title {
             justify-content: flex-end;
   }
   .jcc-postcard__media {
+    margin-bottom: 0 ;
     -webkit-box-ordinal-group: 1000;
         -ms-flex-order: 999 ;
             order: 999 ;

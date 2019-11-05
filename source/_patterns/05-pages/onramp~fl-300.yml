@@ -107,7 +107,7 @@ entries:
       lead: "<p>If You Can Reach an Agreement</p>"
   -
     type: "card-section"
-    column_variant: "has-three-columns" # "has-two-columns" #has-one-colummn
+    column_variant: "has-two-columns" # "has-two-columns" #has-one-colummn
     cards:
       - title: "If You Disagree"
         excerpt: "
@@ -115,8 +115,7 @@ entries:
             <li>Complete, file, and serve Responsive Declaration to Request for Orders (Form Fl-320) to let the Court that know you disagree and why.</li>
             <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
-          </ul>
-        "
+          </ul>"
         card_variant: "has-icon"
       - title: "If You Agree"
         excerpt: "
@@ -124,8 +123,7 @@ entries:
             <li>Complete, file, and serve Responsive Declaration to Request for Orders (Form Fl-320) to let the Court know  you agree and why.</li>
             <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
-          </ul>
-        "
+          </ul>"
         card_variant: "has-icon"
   -
     type: "section"
