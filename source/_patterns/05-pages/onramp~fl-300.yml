@@ -34,7 +34,7 @@ entries:
     type: "postcard"
     postcard:
       img:
-        src: "/img/onramp-fl-300-hearing-date-and-time.png"
+        src: "/images/onramp-fl-300-hearing-date-and-time.png"
         alt: "Hearing date and time"
       background_variant: ""
       header_align_variant: "has-header-left"
@@ -51,7 +51,7 @@ entries:
     type: "postcard"
     postcard:
       img:
-        src: "/img/onramp-fl-300-what-the-other-party-is-asking.png"
+        src: "/images/onramp-fl-300-what-the-other-party-is-asking.png"
         alt: "What the other party is asking the court to decide"
       alt: "Avatar"
       background_variant: "has-background-color"
@@ -70,7 +70,7 @@ entries:
     type: "postcard"
     postcard:
       img:
-        src: "/img/onramp-fl-300-orders-made-before-the-hearing.png"
+        src: "/images/onramp-fl-300-orders-made-before-the-hearing.png"
         alt: "Orders made before the hearing"
       alt: "Avatar"
       background_variant: ""
