@@ -14808,6 +14808,7 @@ h3.jcc-header-group__title {
   border-color: #c9c9c9 ;
   border-style: solid;
   background-color: white ;
+  height: 100% ;
 }
 
 .jcc-switchboard__tiles--secondary .jcc-tile {
