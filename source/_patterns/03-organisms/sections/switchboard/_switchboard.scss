@@ -36,6 +36,7 @@
   .jcc-tile {
     @include u-border(1px, "base-light");
     @include u-bg("white");
+    @include u-height('full');
   }
 }
 
