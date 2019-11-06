@@ -13451,9 +13451,14 @@ a:visited {
   padding-top: 1.5rem ;
   padding-left: 3rem ;
   padding-right: 3rem ;
+  background-color: white ;
   border-width: 1px;
-  border-color: #2378c3 ;
   border-style: solid;
+  border-color: #c9c9c9 ;
+  border-style: solid;
+  border-radius: 0.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
 }
 
 .jcc-filelist__title {
@@ -13864,13 +13869,22 @@ a:visited {
 }
 
 .jcc-datefinder {
-  padding-bottom: 1.5rem ;
-  padding-top: 1.5rem ;
-  padding-left: 3rem ;
-  padding-right: 3rem ;
+  padding-bottom: 0.5rem ;
+  padding-top: 0.5rem ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
+  background-color: white ;
   border-width: 1px;
-  border-color: #2378c3 ;
   border-style: solid;
+  border-color: #c9c9c9 ;
+  border-style: solid;
+  border-radius: 0.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+}
+
+.jcc-datefinder .usa-label {
+  margin-top: 0 ;
 }
 
 .jcc-datefinder__title {
@@ -13884,8 +13898,8 @@ a:visited {
 
 .jcc-datefinder__label {
   display: block;
-  padding-top: 0.5rem ;
-  padding-bottom: 0.5rem ;
+  margin-bottom: 0.5rem ;
+  margin-top: 0.5rem ;
 }
 
 .jcc-datefinder__input {
@@ -13913,6 +13927,13 @@ a:visited {
 .jcc-datefinder__date {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
+  margin-bottom: 0.5rem ;
+  margin-top: 0.5rem ;
+}
+
+.jcc-datefinder__form,
+.jcc-datefinder__adjacent-dates {
+  margin-bottom: 1rem ;
 }
 
 .jcc-dropdown__Label {
