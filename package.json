@@ -42,7 +42,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1",
     "slicknav": "^1.0.8"
   },

@@ -124,6 +124,9 @@ const plJs = () => {
         {
           devtool: "eval-source-map",
           mode: "development",
+          externals: {
+            jquery: "jQuery"
+          },
           plugins: [
             new compiler.ProvidePlugin({
               $: "jquery",
@@ -134,6 +137,18 @@ const plJs = () => {
           output: {
             filename: "scripts.js"
           }
+          // module: {
+          //   rules: [{
+          //           test: require.resolve('jquery'),
+          //           use: [{
+          //               loader: 'expose-loader',
+          //               options: 'jQuery'
+          //           },{
+          //               loader: 'expose-loader',
+          //               options: '$'
+          //           }]
+          //       }]
+          // }
         },
         compiler
       )
