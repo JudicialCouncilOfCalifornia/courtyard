@@ -316,3 +316,11 @@ $aspect-width: 16;
     position: absolute;
   }
 }
+
+@mixin card-border() {
+  @include u-bg("white");
+  @include u-border(1px);
+  @include u-border("base-light");
+  @include u-radius("lg");
+  @include u-shadow(3);
+}
