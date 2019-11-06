@@ -15,7 +15,7 @@
 
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
-  @include u-padding-top(6);
+  @include section-wrapper-bg;
 }
 
 .jcc-timeline-section--has-background-color--light {

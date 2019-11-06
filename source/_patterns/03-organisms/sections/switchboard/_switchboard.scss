@@ -10,6 +10,10 @@
 .jcc-switchboard--has-background-color--light,
 .jcc-switchboard--has-background-color--dark {
   @include u-padding-y(8);
+
+  @media print {
+    @include u-padding-y(4);
+  }
 }
 
 .jcc-switchboard--has-background-color--light {
@@ -36,7 +40,7 @@
   .jcc-tile {
     @include u-border(1px, "base-light");
     @include u-bg("white");
-    @include u-height('full');
+    @include u-height("full");
   }
 }
 
@@ -48,7 +52,7 @@
 }
 
 .jcc-switchboard__tile {
-  margin-bottom: 1rem;
+  @include u-margin-bottom(2);
 
   @include at-media(desktop) {
     @include grid-col(4);

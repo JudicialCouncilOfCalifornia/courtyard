@@ -4,7 +4,7 @@
 
 .jcc-text-section--has-background-color--light,
 .jcc-text-section--has-background-color--dark {
-  @include u-padding-top(6);
+  @include section-wrapper-bg;
 }
 
 .jcc-text-section--has-background-color--light {

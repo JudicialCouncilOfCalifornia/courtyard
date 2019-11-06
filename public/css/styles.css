@@ -14555,6 +14555,42 @@ h3.jcc-header-group__title {
   padding-bottom: 2rem ;
 }
 
+.jcc-cards-section--has-background-color--light,
+.jcc-cards-section--has-background-color--dark {
+  padding-top: 3rem ;
+}
+
+.jcc-cards-section--has-background-color--light {
+  background-color: #f9f9f9 ;
+}
+
+.jcc-cards-section--has-background-color--dark {
+  background-color: #168092 ;
+  color: white ;
+}
+
+.jcc-cards-section--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-cards-section--has-background-color--dark .jcc-hero__title,
+.jcc-cards-section--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-cards-section--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:active, .jcc-cards-section--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:visited {
+  color: #ffe396 ;
+}
+
 .jcc-cards__container {
   margin-left: auto ;
   margin-right: auto ;
@@ -14641,12 +14677,12 @@ h3.jcc-header-group__title {
 }
 
 .jcc-full-modal__dialog {
+  padding: 1rem ;
   min-height: 80%;
   margin: 5% auto;
   width: 90%;
   max-width: 70rem;
   position: relative;
-  padding: 1rem ;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 0;
@@ -14714,8 +14750,12 @@ h3.jcc-header-group__title {
   padding-bottom: 3rem ;
 }
 
-.jcc-steps-section--has-background-color {
+.jcc-switchboard--has-background-color--light,
+.jcc-switchboard--has-background-color--dark {
   padding-top: 3rem ;
+}
+
+.jcc-steps-section--has-background-color--light {
   background-color: #f9f9f9 ;
 }
 
@@ -14847,7 +14887,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard__tile {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem ;
 }
 
 .jcc-tab-section__container {
@@ -24792,6 +24832,197 @@ h3.jcc-header-group__title {
     background-color: white;
     content: url("../img/correct8-alt.svg");
     text-indent: 0;
+  }
+  .h-responsive-mega {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.23764rem;
+  }
+  h1,
+  .h-responsive-h1 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.98901rem;
+  }
+  h2,
+  .h-responsive-h2 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74038rem;
+  }
+  h3,
+  .h-responsive-h3 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49176rem;
+  }
+  h4,
+  .h4 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.36745rem;
+  }
+  h5,
+  .h5 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  h6,
+  .t-responsive-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .t-intro {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .t-copy {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .t-small {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.80804rem;
+  }
+  .jcc-card__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-filelist__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-hero__content {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .jcc-hero__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.23764rem;
+  }
+  .jcc-hero__lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-step {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .jcc-step__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-tile__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-timeline-item__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-timeline-item__excerpt {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .jcc-form-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .summary-results .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-accordion__heading-container .usa-accordion__button {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-datefinder__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-dropdown__Label {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-breadcrumb__item {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74038rem;
+  }
+  h3.jcc-header-group__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49176rem;
+  }
+  .jcc-header-group__brow {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .jcc-header-group__lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-cards-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-cards-section--has-background-color--light,
+  .jcc-cards-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-choice-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-choice-section .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-steps-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-switchboard--has-background-color--light,
+  .jcc-switchboard--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-switchboard {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-switchboard--has-background-color--light,
+  .jcc-switchboard--has-background-color--dark {
+    padding-bottom: 2rem ;
+    padding-top: 2rem ;
+  }
+  .jcc-tab-section__container .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-text-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-text-section--has-background-color--light,
+  .jcc-text-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-timeline-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-timeline-section--has-background-color--light,
+  .jcc-timeline-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  a:link:after {
+    display: block;
+    text-transform: none;
+    font-size: 12px;
+    content: attr(href);
+  }
+  a[href^="http"]:link:after {
+    content: attr(href);
+  }
+  #js-header_menu--mobile {
+    visibility: hidden !important;
+  }
+  .show-for-print {
+    display: block;
+  }
+  .hide-for-print {
+    display: none !important;
   }
 }
 
