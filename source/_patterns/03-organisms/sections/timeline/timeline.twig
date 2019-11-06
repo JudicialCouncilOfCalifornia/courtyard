@@ -19,8 +19,26 @@
       {% endfor %}
       </li>
     </ul>
-    <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span></button>
-    <button class="jcc-timeline__scroller--right is-active"><span class="jcc-timeline__label">Scroll Right</span></button>
+    <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span>
+      <span class="jcc-timeline__scroller-icon">
+        {% include '@atoms/icons/icon.twig' with  {
+            icon: left_icon.icon,
+            title: left_icon.title,
+            icon_file: left_icon.icon_file,
+            decorative: left_icon.decorative
+          } %}
+      </span>
+    </button>
+    <button class="jcc-timeline__scroller--right is-active"><span class="jcc-timeline__label">Scroll Right</span>
+      <span class="jcc-timeline__scroller-icon">
+       {% include '@atoms/icons/icon.twig' with  {
+            icon: right_icon.icon,
+            title: right_icon.title,
+            icon_file: right_icon.icon_file,
+            decorative: right_icon.decorative
+          } %}
+      </span>
+    </button>
     </div>
     
   </div>

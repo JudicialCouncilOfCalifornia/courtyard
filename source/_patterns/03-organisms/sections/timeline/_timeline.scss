@@ -35,6 +35,11 @@
 
     .jcc-timeline-item__media {
       @include media-icon($icon-circle-bg: "blue-70v");
+
+      @include at-media(tablet) {
+        position: absolute;
+        top: 0;
+      }
     }
   }
 
@@ -121,4 +126,10 @@
 }
 .jcc-timeline__scroller--right {
   right: 0;
+}
+
+.jcc-timeline__scroller-icon {
+  svg {
+    fill: color("ink");
+  }
 }
