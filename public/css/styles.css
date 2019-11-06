@@ -15223,6 +15223,10 @@ h3.jcc-header-group__title {
   right: 0;
 }
 
+.jcc-timeline__scroller-icon svg {
+  fill: #1b1b1b;
+}
+
 @media all and (min-width: 30em) {
   .usa-button {
     width: auto;
@@ -20954,10 +20958,6 @@ h3.jcc-header-group__title {
   }
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
-  }
-  .jcc-card--has-icon .jcc-card__media {
-    position: absolute;
-    top: 0;
   }
   .jcc-timeline-item__media {
     position: absolute;
