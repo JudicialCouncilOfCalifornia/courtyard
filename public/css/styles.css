@@ -519,7 +519,22 @@ USWDS style tokens in the documentation:
 https://v2.designsystem.digital.gov/style-tokens
 ----------------------------------------
 */
-html, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
 }
@@ -1742,8 +1757,11 @@ through all possible variants
 ----------------------------------------
 */
 /* stylelint-enable */
-.usa-list, .usa-prose > ul, .jcc-header-group__body > ul, .jcc-text-section__content > ul,
+.usa-list, .usa-prose > ul, .jcc-card__excerpt > ul, .jcc-hero__body > ul, .jcc-hero__column-right > ul, .jcc-header-group__body > ul, .jcc-text-section__content > ul,
 .usa-prose > ol,
+.jcc-card__excerpt > ol,
+.jcc-hero__body > ol,
+.jcc-hero__column-right > ol,
 .jcc-header-group__body > ol,
 .jcc-text-section__content > ol {
   margin-bottom: 1em ;
@@ -1752,29 +1770,38 @@ through all possible variants
   padding-left: 3ch;
 }
 
-.usa-list:last-child, .usa-prose > ul:last-child, .jcc-header-group__body > ul:last-child, .jcc-text-section__content > ul:last-child,
+.usa-list:last-child, .usa-prose > ul:last-child, .jcc-card__excerpt > ul:last-child, .jcc-hero__body > ul:last-child, .jcc-hero__column-right > ul:last-child, .jcc-header-group__body > ul:last-child, .jcc-text-section__content > ul:last-child,
 .usa-prose > ol:last-child,
+.jcc-card__excerpt > ol:last-child,
+.jcc-hero__body > ol:last-child,
+.jcc-hero__column-right > ol:last-child,
 .jcc-header-group__body > ol:last-child,
 .jcc-text-section__content > ol:last-child {
   margin-bottom: 0;
 }
 
-.usa-list li, .usa-prose > ul li, .jcc-header-group__body > ul li, .jcc-text-section__content > ul li,
+.usa-list li, .usa-prose > ul li, .jcc-card__excerpt > ul li, .jcc-hero__body > ul li, .jcc-hero__column-right > ul li, .jcc-header-group__body > ul li, .jcc-text-section__content > ul li,
 .usa-prose > ol li,
+.jcc-card__excerpt > ol li,
+.jcc-hero__body > ol li,
+.jcc-hero__column-right > ol li,
 .jcc-header-group__body > ol li,
 .jcc-text-section__content > ol li {
   margin-bottom: 0.25em;
   max-width: 68ex;
 }
 
-.usa-list li:last-child, .usa-prose > ul li:last-child, .jcc-header-group__body > ul li:last-child, .jcc-text-section__content > ul li:last-child,
+.usa-list li:last-child, .usa-prose > ul li:last-child, .jcc-card__excerpt > ul li:last-child, .jcc-hero__body > ul li:last-child, .jcc-hero__column-right > ul li:last-child, .jcc-header-group__body > ul li:last-child, .jcc-text-section__content > ul li:last-child,
 .usa-prose > ol li:last-child,
+.jcc-card__excerpt > ol li:last-child,
+.jcc-hero__body > ol li:last-child,
+.jcc-hero__column-right > ol li:last-child,
 .jcc-header-group__body > ol li:last-child,
 .jcc-text-section__content > ol li:last-child {
   margin-bottom: 0;
 }
 
-.usa-table, .usa-prose > table, .jcc-header-group__body > table, .jcc-text-section__content > table {
+.usa-table, .usa-prose > table, .jcc-card__excerpt > table, .jcc-hero__body > table, .jcc-hero__column-right > table, .jcc-header-group__body > table, .jcc-text-section__content > table {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.05666rem;
   line-height: 1.62895 ;
@@ -1782,25 +1809,31 @@ through all possible variants
   margin: 1.25rem 0;
 }
 
-.usa-table thead th, .usa-prose > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th {
+.usa-table thead th, .usa-prose > table thead th, .jcc-card__excerpt > table thead th, .jcc-hero__body > table thead th, .jcc-hero__column-right > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th {
   font-weight: 700;
 }
 
-.usa-table thead th, .usa-prose > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th,
+.usa-table thead th, .usa-prose > table thead th, .jcc-card__excerpt > table thead th, .jcc-hero__body > table thead th, .jcc-hero__column-right > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th,
 .usa-table thead td,
 .usa-prose > table thead td,
+.jcc-card__excerpt > table thead td,
+.jcc-hero__body > table thead td,
+.jcc-hero__column-right > table thead td,
 .jcc-header-group__body > table thead td,
 .jcc-text-section__content > table thead td {
   background-color: #f9f9f9;
 }
 
-.usa-table th, .usa-prose > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th {
+.usa-table th, .usa-prose > table th, .jcc-card__excerpt > table th, .jcc-hero__body > table th, .jcc-hero__column-right > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th {
   text-align: left;
 }
 
-.usa-table th, .usa-prose > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th,
+.usa-table th, .usa-prose > table th, .jcc-card__excerpt > table th, .jcc-hero__body > table th, .jcc-hero__column-right > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th,
 .usa-table td,
 .usa-prose > table td,
+.jcc-card__excerpt > table td,
+.jcc-hero__body > table td,
+.jcc-hero__column-right > table td,
 .jcc-header-group__body > table td,
 .jcc-text-section__content > table td {
   border-width: 1px;
@@ -1811,7 +1844,7 @@ through all possible variants
   padding: 0.5rem 1rem;
 }
 
-.usa-table caption, .usa-prose > table caption, .jcc-header-group__body > table caption, .jcc-text-section__content > table caption {
+.usa-table caption, .usa-prose > table caption, .jcc-card__excerpt > table caption, .jcc-hero__body > table caption, .jcc-hero__column-right > table caption, .jcc-header-group__body > table caption, .jcc-text-section__content > table caption {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 0.93235rem;
   font-weight: 700;
@@ -1819,14 +1852,17 @@ through all possible variants
   text-align: left;
 }
 
-.usa-table--borderless thead th, .usa-prose > .usa-table--borderless thead th, .jcc-header-group__body > .usa-table--borderless thead th, .jcc-text-section__content > .usa-table--borderless thead th {
+.usa-table--borderless thead th, .usa-prose > .usa-table--borderless thead th, .jcc-card__excerpt > .usa-table--borderless thead th, .jcc-hero__body > .usa-table--borderless thead th, .jcc-hero__column-right > .usa-table--borderless thead th, .jcc-header-group__body > .usa-table--borderless thead th, .jcc-text-section__content > .usa-table--borderless thead th {
   background-color: transparent;
   border-top: 0;
 }
 
-.usa-table--borderless th, .usa-prose > .usa-table--borderless th, .jcc-header-group__body > .usa-table--borderless th, .jcc-text-section__content > .usa-table--borderless th,
+.usa-table--borderless th, .usa-prose > .usa-table--borderless th, .jcc-card__excerpt > .usa-table--borderless th, .jcc-hero__body > .usa-table--borderless th, .jcc-hero__column-right > .usa-table--borderless th, .jcc-header-group__body > .usa-table--borderless th, .jcc-text-section__content > .usa-table--borderless th,
 .usa-table--borderless td,
 .usa-prose > .usa-table--borderless td,
+.jcc-card__excerpt > .usa-table--borderless td,
+.jcc-hero__body > .usa-table--borderless td,
+.jcc-hero__column-right > .usa-table--borderless td,
 .jcc-header-group__body > .usa-table--borderless td,
 .jcc-text-section__content > .usa-table--borderless td {
   border-left: 0;
@@ -2859,14 +2895,14 @@ img {
   line-height: 1.35746;
 }
 
-.usa-prose .usa-input-list, .jcc-header-group__body .usa-input-list, .jcc-text-section__content .usa-input-list {
+.usa-prose .usa-input-list, .jcc-card__excerpt .usa-input-list, .jcc-hero__body .usa-input-list, .jcc-hero__column-right .usa-input-list, .jcc-header-group__body .usa-input-list, .jcc-text-section__content .usa-input-list {
   margin-bottom: 0;
   margin-top: 0;
   list-style-type: none;
   padding-left: 0;
 }
 
-.usa-prose .usa-input-list li, .jcc-header-group__body .usa-input-list li, .jcc-text-section__content .usa-input-list li {
+.usa-prose .usa-input-list li, .jcc-card__excerpt .usa-input-list li, .jcc-hero__body .usa-input-list li, .jcc-hero__column-right .usa-input-list li, .jcc-header-group__body .usa-input-list li, .jcc-text-section__content .usa-input-list li {
   line-height: 1.35746;
 }
 
@@ -3627,35 +3663,50 @@ img {
   color: white;
 }
 
-.usa-prose > p, .jcc-header-group__body > p, .jcc-text-section__content > p {
+.usa-prose > p, .jcc-card__excerpt > p, .jcc-hero__body > p, .jcc-hero__column-right > p, .jcc-header-group__body > p, .jcc-text-section__content > p {
   line-height: 1.62895;
   margin-bottom: 0;
   margin-top: 0;
   max-width: 68ex;
 }
 
-.usa-prose > * + p, .jcc-header-group__body > * + p, .jcc-text-section__content > * + p {
+.usa-prose > * + p, .jcc-card__excerpt > * + p, .jcc-hero__body > * + p, .jcc-hero__column-right > * + p, .jcc-header-group__body > * + p, .jcc-text-section__content > * + p {
   margin-top: 1em;
 }
 
-.usa-prose > p + *, .jcc-header-group__body > p + *, .jcc-text-section__content > p + * {
+.usa-prose > p + *, .jcc-card__excerpt > p + *, .jcc-hero__body > p + *, .jcc-hero__column-right > p + *, .jcc-header-group__body > p + *, .jcc-text-section__content > p + * {
   margin-top: 1em;
 }
 
-.usa-prose > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1,
+.usa-prose > h1, .jcc-card__excerpt > h1, .jcc-hero__body > h1, .jcc-hero__column-right > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1,
 .usa-prose > h2,
+.jcc-card__excerpt > h2,
+.jcc-hero__body > h2,
+.jcc-hero__column-right > h2,
 .jcc-header-group__body > h2,
 .jcc-text-section__content > h2,
 .usa-prose > h3,
+.jcc-card__excerpt > h3,
+.jcc-hero__body > h3,
+.jcc-hero__column-right > h3,
 .jcc-header-group__body > h3,
 .jcc-text-section__content > h3,
 .usa-prose > h4,
+.jcc-card__excerpt > h4,
+.jcc-hero__body > h4,
+.jcc-hero__column-right > h4,
 .jcc-header-group__body > h4,
 .jcc-text-section__content > h4,
 .usa-prose > h5,
+.jcc-card__excerpt > h5,
+.jcc-hero__body > h5,
+.jcc-hero__column-right > h5,
 .jcc-header-group__body > h5,
 .jcc-text-section__content > h5,
 .usa-prose > h6,
+.jcc-card__excerpt > h6,
+.jcc-hero__body > h6,
+.jcc-hero__column-right > h6,
 .jcc-header-group__body > h6,
 .jcc-text-section__content > h6 {
   margin-bottom: 0 ;
@@ -3663,26 +3714,41 @@ img {
   clear: both;
 }
 
-.usa-prose > * + h1, .jcc-header-group__body > * + h1, .jcc-text-section__content > * + h1,
+.usa-prose > * + h1, .jcc-card__excerpt > * + h1, .jcc-hero__body > * + h1, .jcc-hero__column-right > * + h1, .jcc-header-group__body > * + h1, .jcc-text-section__content > * + h1,
 .usa-prose > * + h2,
+.jcc-card__excerpt > * + h2,
+.jcc-hero__body > * + h2,
+.jcc-hero__column-right > * + h2,
 .jcc-header-group__body > * + h2,
 .jcc-text-section__content > * + h2,
 .usa-prose > * + h3,
+.jcc-card__excerpt > * + h3,
+.jcc-hero__body > * + h3,
+.jcc-hero__column-right > * + h3,
 .jcc-header-group__body > * + h3,
 .jcc-text-section__content > * + h3,
 .usa-prose > * + h4,
+.jcc-card__excerpt > * + h4,
+.jcc-hero__body > * + h4,
+.jcc-hero__column-right > * + h4,
 .jcc-header-group__body > * + h4,
 .jcc-text-section__content > * + h4,
 .usa-prose > * + h5,
+.jcc-card__excerpt > * + h5,
+.jcc-hero__body > * + h5,
+.jcc-hero__column-right > * + h5,
 .jcc-header-group__body > * + h5,
 .jcc-text-section__content > * + h5,
 .usa-prose > * + h6,
+.jcc-card__excerpt > * + h6,
+.jcc-hero__body > * + h6,
+.jcc-hero__column-right > * + h6,
 .jcc-header-group__body > * + h6,
 .jcc-text-section__content > * + h6 {
   margin-top: 1.5em;
 }
 
-.usa-prose > h1 + *, .jcc-header-group__body > h1 + *, .jcc-text-section__content > h1 + *, .usa-prose > h2 + *, .jcc-header-group__body > h2 + *, .jcc-text-section__content > h2 + *, .usa-prose > h3 + *, .jcc-header-group__body > h3 + *, .jcc-text-section__content > h3 + *, .usa-prose > h4 + *, .jcc-header-group__body > h4 + *, .jcc-text-section__content > h4 + *, .usa-prose > h5 + *, .jcc-header-group__body > h5 + *, .jcc-text-section__content > h5 + *, .usa-prose > h6 + *, .jcc-header-group__body > h6 + *, .jcc-text-section__content > h6 + * {
+.usa-prose > h1 + *, .jcc-card__excerpt > h1 + *, .jcc-hero__body > h1 + *, .jcc-hero__column-right > h1 + *, .jcc-header-group__body > h1 + *, .jcc-text-section__content > h1 + *, .usa-prose > h2 + *, .jcc-card__excerpt > h2 + *, .jcc-hero__body > h2 + *, .jcc-hero__column-right > h2 + *, .jcc-header-group__body > h2 + *, .jcc-text-section__content > h2 + *, .usa-prose > h3 + *, .jcc-card__excerpt > h3 + *, .jcc-hero__body > h3 + *, .jcc-hero__column-right > h3 + *, .jcc-header-group__body > h3 + *, .jcc-text-section__content > h3 + *, .usa-prose > h4 + *, .jcc-card__excerpt > h4 + *, .jcc-hero__body > h4 + *, .jcc-hero__column-right > h4 + *, .jcc-header-group__body > h4 + *, .jcc-text-section__content > h4 + *, .usa-prose > h5 + *, .jcc-card__excerpt > h5 + *, .jcc-hero__body > h5 + *, .jcc-hero__column-right > h5 + *, .jcc-header-group__body > h5 + *, .jcc-text-section__content > h5 + *, .usa-prose > h6 + *, .jcc-card__excerpt > h6 + *, .jcc-hero__body > h6 + *, .jcc-hero__column-right > h6 + *, .jcc-header-group__body > h6 + *, .jcc-text-section__content > h6 + * {
   margin-top: 1em;
 }
 
@@ -3754,82 +3820,83 @@ img {
   max-width: unset;
 }
 
-.usa-prose .usa-list--unstyled, .jcc-header-group__body .usa-list--unstyled, .jcc-text-section__content .usa-list--unstyled {
+.usa-prose .usa-list--unstyled, .jcc-card__excerpt .usa-list--unstyled, .jcc-hero__body .usa-list--unstyled, .jcc-hero__column-right .usa-list--unstyled, .jcc-header-group__body .usa-list--unstyled, .jcc-text-section__content .usa-list--unstyled {
   margin-bottom: 0 ;
   margin-top: 0 ;
   list-style-type: none;
   padding-left: 0;
 }
 
-.usa-prose .usa-list--unstyled > li, .jcc-header-group__body .usa-list--unstyled > li, .jcc-text-section__content .usa-list--unstyled > li {
+.usa-prose .usa-list--unstyled > li, .jcc-card__excerpt .usa-list--unstyled > li, .jcc-hero__body .usa-list--unstyled > li, .jcc-hero__column-right .usa-list--unstyled > li, .jcc-header-group__body .usa-list--unstyled > li, .jcc-text-section__content .usa-list--unstyled > li {
   margin-bottom: 0;
   max-width: unset;
 }
 
-.usa-prose, .jcc-header-group__body, .jcc-text-section__content {
+.usa-prose, .jcc-card__excerpt, .jcc-hero__body,
+.jcc-hero__column-right, .jcc-header-group__body, .jcc-text-section__content {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
-.usa-prose > a, .jcc-header-group__body > a, .jcc-text-section__content > a {
+.usa-prose > a, .jcc-card__excerpt > a, .jcc-hero__body > a, .jcc-hero__column-right > a, .jcc-header-group__body > a, .jcc-text-section__content > a {
   color: #28a0cb;
   text-decoration: underline;
 }
 
-.usa-prose > a:hover, .jcc-header-group__body > a:hover, .jcc-text-section__content > a:hover {
+.usa-prose > a:hover, .jcc-card__excerpt > a:hover, .jcc-hero__body > a:hover, .jcc-hero__column-right > a:hover, .jcc-header-group__body > a:hover, .jcc-text-section__content > a:hover {
   color: #009ec1;
 }
 
-.usa-prose > a:active, .jcc-header-group__body > a:active, .jcc-text-section__content > a:active {
+.usa-prose > a:active, .jcc-card__excerpt > a:active, .jcc-hero__body > a:active, .jcc-hero__column-right > a:active, .jcc-header-group__body > a:active, .jcc-text-section__content > a:active {
   color: #59b9de;
 }
 
-.usa-prose > a:focus, .jcc-header-group__body > a:focus, .jcc-text-section__content > a:focus {
+.usa-prose > a:focus, .jcc-card__excerpt > a:focus, .jcc-hero__body > a:focus, .jcc-hero__column-right > a:focus, .jcc-header-group__body > a:focus, .jcc-text-section__content > a:focus {
   outline: 0.25rem solid #face00;
   outline-offset: 0;
 }
 
-.usa-prose > a:visited, .jcc-header-group__body > a:visited, .jcc-text-section__content > a:visited {
+.usa-prose > a:visited, .jcc-card__excerpt > a:visited, .jcc-hero__body > a:visited, .jcc-hero__column-right > a:visited, .jcc-header-group__body > a:visited, .jcc-text-section__content > a:visited {
   color: #07648d;
 }
 
-.usa-prose > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1 {
+.usa-prose > h1, .jcc-card__excerpt > h1, .jcc-hero__body > h1, .jcc-hero__column-right > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.98352rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h2, .jcc-header-group__body > h2, .jcc-text-section__content > h2 {
+.usa-prose > h2, .jcc-card__excerpt > h2, .jcc-hero__body > h2, .jcc-hero__column-right > h2, .jcc-header-group__body > h2, .jcc-text-section__content > h2 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.48626rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h3, .jcc-header-group__body > h3, .jcc-text-section__content > h3 {
+.usa-prose > h3, .jcc-card__excerpt > h3, .jcc-hero__body > h3, .jcc-hero__column-right > h3, .jcc-header-group__body > h3, .jcc-text-section__content > h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h4, .jcc-header-group__body > h4, .jcc-text-section__content > h4 {
+.usa-prose > h4, .jcc-card__excerpt > h4, .jcc-hero__body > h4, .jcc-hero__column-right > h4, .jcc-header-group__body > h4, .jcc-text-section__content > h4 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49176rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h5, .jcc-header-group__body > h5, .jcc-text-section__content > h5 {
+.usa-prose > h5, .jcc-card__excerpt > h5, .jcc-hero__body > h5, .jcc-hero__column-right > h5, .jcc-header-group__body > h5, .jcc-text-section__content > h5 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.36745rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h6, .jcc-header-group__body > h6, .jcc-text-section__content > h6 {
+.usa-prose > h6, .jcc-card__excerpt > h6, .jcc-hero__body > h6, .jcc-hero__column-right > h6, .jcc-header-group__body > h6, .jcc-text-section__content > h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.24313rem;
   line-height: 1.20663 ;
@@ -3887,6 +3954,9 @@ img {
 
 .usa-accordion__heading,
 .usa-prose .usa-accordion__heading,
+.jcc-card__excerpt .usa-accordion__heading,
+.jcc-hero__body .usa-accordion__heading,
+.jcc-hero__column-right .usa-accordion__heading,
 .jcc-header-group__body .usa-accordion__heading,
 .jcc-text-section__content .usa-accordion__heading {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -3897,6 +3967,9 @@ img {
 
 .usa-accordion__heading:not(:first-child),
 .usa-prose .usa-accordion__heading:not(:first-child),
+.jcc-card__excerpt .usa-accordion__heading:not(:first-child),
+.jcc-hero__body .usa-accordion__heading:not(:first-child),
+.jcc-hero__column-right .usa-accordion__heading:not(:first-child),
 .jcc-header-group__body .usa-accordion__heading:not(:first-child),
 .jcc-text-section__content .usa-accordion__heading:not(:first-child) {
   margin-top: 0.5rem;
@@ -13534,7 +13607,6 @@ a:visited {
 
 .jcc-hero {
   position: relative ;
-  margin-bottom: 3rem ;
   background-color: #f9f9f9 ;
 }
 
@@ -13685,7 +13757,7 @@ a:visited {
 }
 
 .jcc-postcard {
-  padding-top: 0.5rem ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
 }
 
@@ -13704,7 +13776,6 @@ a:visited {
 .jcc-postcard--has-background-image {
   padding-bottom: 3rem ;
   padding-top: 3rem ;
-  margin-bottom: 3rem ;
   position: relative;
 }
 
@@ -13737,13 +13808,18 @@ a:visited {
   padding: 3rem ;
 }
 
+.jcc-postcard--has-background-image .jcc-postcard__row > * {
+  padding: 0;
+}
+
 .jcc-postcard--has-background-color--light,
 .jcc-postcard--has-background-color--dark {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
 }
 
 .jcc-postcard--has-background-color--light {
-  background-color: #e7f2f5 ;
+  background-color: #f9f9f9 ;
 }
 
 .jcc-postcard--has-background-color--dark {
@@ -14608,7 +14684,7 @@ a:visited {
 .jcc-header-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.98901rem;
-  margin-bottom: 0.75rem ;
+  margin-bottom: 1.5rem ;
 }
 
 h3.jcc-header-group__title {
@@ -14653,9 +14729,8 @@ h3.jcc-header-group__title {
 }
 
 .jcc-cards-section {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
-  padding-bottom: 4rem ;
 }
 
 .jcc-cards-section .jcc-header-group {
@@ -14665,6 +14740,7 @@ h3.jcc-header-group__title {
 .jcc-cards-section--has-background-color--light,
 .jcc-cards-section--has-background-color--dark {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
 }
 
 .jcc-cards-section--has-background-color--light {
@@ -14725,7 +14801,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-choice-section {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
   padding-bottom: 4rem ;
 }
@@ -14743,6 +14819,7 @@ h3.jcc-header-group__title {
 
 .jcc-choice-section--has-background-color--light {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
   background-color: #e7f2f5 ;
 }
 
@@ -14852,7 +14929,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-steps-section {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
 }
 
@@ -14863,6 +14940,7 @@ h3.jcc-header-group__title {
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--dark {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
 }
 
 .jcc-steps-section--has-background-color--dark {
@@ -14989,7 +15067,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
   padding-bottom: 4rem ;
 }
@@ -15088,6 +15166,7 @@ h3.jcc-header-group__title {
 
 .jcc-tab-section--has-background-color--light {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
   background-color: #e7f2f5 ;
 }
 
@@ -15126,17 +15205,14 @@ h3.jcc-header-group__title {
 }
 
 .jcc-text-section {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
-}
-
-.jcc-text-section .jcc-header-group {
-  padding-bottom: 2rem ;
 }
 
 .jcc-text-section--has-background-color--light,
 .jcc-text-section--has-background-color--dark {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
 }
 
 .jcc-text-section--has-background-color--light {
@@ -15178,6 +15254,7 @@ h3.jcc-header-group__title {
 
 .jcc-text-section__content {
   line-height: 1.50829 ;
+  margin-top: 2rem ;
 }
 
 .jcc-text-section--has-one-column {
@@ -15297,7 +15374,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-timeline-section {
-  padding-top: 0 ;
+  padding-top: 3rem ;
   padding-bottom: 3rem ;
   position: relative;
 }
@@ -15313,6 +15390,7 @@ h3.jcc-header-group__title {
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
   padding-top: 3rem ;
+  padding-bottom: 3rem ;
 }
 
 .jcc-timeline-section--has-background-color--light {
@@ -25091,6 +25169,9 @@ h3.jcc-header-group__title {
   .jcc-list-item p strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.11882rem;
+  }
+  .jcc-postcard {
+    padding-bottom: 1.5rem ;
   }
   .jcc-postcard--has-background-color--light,
   .jcc-postcard--has-background-color--dark {

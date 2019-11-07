@@ -70,7 +70,7 @@ video {
 // Section vertical rhythm and centered block
 
 @mixin section-wrapper {
-  @include u-padding-top(0);
+  @include u-padding-top(6);
   @include u-padding-bottom(6);
 
   @media print {
@@ -80,6 +80,7 @@ video {
 
 @mixin section-wrapper-bg {
   @include u-padding-top(6);
+  @include u-padding-bottom(6);
 
   @media print {
     @include u-padding-top(3);

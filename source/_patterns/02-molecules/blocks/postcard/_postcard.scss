@@ -1,6 +1,5 @@
 .jcc-postcard {
-  @include u-padding-top(1);
-  @include u-padding-bottom(6);
+  @include section-wrapper;
 
   .jcc-header-group__title {
     @include u-text(primary-dark);
@@ -26,7 +25,6 @@
 
 .jcc-postcard--has-background-image {
   @include u-padding-y(6);
-  @include u-margin-bottom(6);
   position: relative;
 
   .jcc-postcard__media {
@@ -40,6 +38,12 @@
   .jcc-header-group {
     @include u-padding(6);
   }
+
+  .jcc-postcard__row {
+    > * {
+      padding: 0;
+    }
+  }
 }
 
 .jcc-postcard--has-background-color--light,
@@ -48,7 +52,7 @@
 }
 
 .jcc-postcard--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg("gray-2");
 }
 
 .jcc-postcard--has-background-color--dark {

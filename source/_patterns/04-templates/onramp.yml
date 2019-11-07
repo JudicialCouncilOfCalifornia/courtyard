@@ -53,7 +53,7 @@ entries:
         src: "https://placeimg.com/800/400/arch"
         alt: "Alt text"
       alt: "Avatar"
-      background_variant: "has-background-color"
+      background_variant: "has-background-color--light"
       header_align_variant: "has-header-left"
       tag: "Page 2"
     headergroup:
