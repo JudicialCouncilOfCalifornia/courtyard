@@ -13624,6 +13624,15 @@ a:visited {
   width: 100% ;
 }
 
+.jcc-list-group__item {
+  padding-bottom: 0.5rem ;
+}
+
+.jcc-list-item p strong {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.36745rem;
+}
+
 .jcc-postcard {
   padding-top: 0.5rem ;
   padding-bottom: 3rem ;
@@ -24415,6 +24424,10 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
+  .jcc-list-item p strong {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49176rem;
+  }
   .jcc-postcard__image {
     text-align: right;
     display: -webkit-box;
@@ -25002,6 +25015,10 @@ h3.jcc-header-group__title {
     font-size: 2.23764rem;
   }
   .jcc-hero__lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-list-item p strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.11882rem;
   }
