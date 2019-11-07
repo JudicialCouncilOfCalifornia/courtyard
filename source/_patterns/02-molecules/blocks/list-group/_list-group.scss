@@ -18,10 +18,10 @@
   
 }
 
-.jcc-list-item__title {
-
+.jcc-list-item p {
+  @include u-text('base-light');
 }
 
-.jcc-list-item__excerpt {
-  @include u-text('base-light');
+.jcc-list-item p strong {
+  @include u-text('base');
 }
