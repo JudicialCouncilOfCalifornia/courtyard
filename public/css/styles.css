@@ -13426,7 +13426,7 @@ a:visited {
   width: 3rem;
   min-width: 3rem;
   position: relative;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .jcc-card--has-icon .jcc-card__media img {
@@ -13489,6 +13489,8 @@ a:visited {
 
 .jcc-hero {
   position: relative ;
+  margin-bottom: 3rem ;
+  background-color: #f9f9f9 ;
 }
 
 .jcc-hero .jcc-breadcrumbs-nav {
@@ -13522,13 +13524,8 @@ a:visited {
   width: 100%;
 }
 
-.jcc-hero--has-background-color--light,
-.jcc-hero--has-background-color--dark {
-  margin-bottom: 3rem ;
-}
-
 .jcc-hero--has-background-color--light {
-  background-color: #eff6fb ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-hero--has-background-color--dark {
@@ -13536,8 +13533,6 @@ a:visited {
   color: white ;
 }
 
-.jcc-hero--has-background-color--dark .jcc-breadcrumb__item,
-.jcc-hero--has-background-color--dark .jcc-hero__title,
 .jcc-hero--has-background-color--dark .jcc-header-group__title {
   color: white ;
 }
@@ -13572,6 +13567,11 @@ a:visited {
 
 .jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:visited {
   color: #ffe396 ;
+}
+
+.jcc-hero--has-background-color--dark .jcc-hero__title,
+.jcc-hero--has-background-color--dark .jcc-breadcrumb__item {
+  color: white ;
 }
 
 .jcc-hero__container {
@@ -13677,10 +13677,38 @@ a:visited {
   padding: 3rem ;
 }
 
-.jcc-postcard--has-background-color {
-  background-color: #f9f9f9 ;
+.jcc-postcard--has-background-color--light,
+.jcc-postcard--has-background-color--dark {
   padding-top: 3rem ;
-  margin-bottom: 3rem ;
+}
+
+.jcc-postcard--has-background-color--light {
+  background-color: #e7f2f5 ;
+}
+
+.jcc-postcard--has-background-color--dark {
+  background-color: #168092 ;
+  color: white ;
+}
+
+.jcc-postcard--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-postcard--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-postcard--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-postcard--has-background-color--dark > a:active, .jcc-postcard--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-postcard--has-background-color--dark > a:visited {
+  color: #ffe396 ;
 }
 
 .jcc-postcard__container {
@@ -14555,6 +14583,40 @@ h3.jcc-header-group__title {
   padding-bottom: 2rem ;
 }
 
+.jcc-cards-section--has-background-color--light,
+.jcc-cards-section--has-background-color--dark {
+  padding-top: 3rem ;
+}
+
+.jcc-cards-section--has-background-color--light {
+  background-color: #e7f2f5 ;
+}
+
+.jcc-cards-section--has-background-color--dark {
+  background-color: #168092 ;
+  color: white ;
+}
+
+.jcc-cards-section--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-cards-section--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:active, .jcc-cards-section--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-cards-section--has-background-color--dark > a:visited {
+  color: #ffe396 ;
+}
+
 .jcc-cards__container {
   margin-left: auto ;
   margin-right: auto ;
@@ -14600,6 +14662,11 @@ h3.jcc-header-group__title {
   font-style: italic ;
 }
 
+.jcc-choice-section--has-background-color--light {
+  padding-top: 3rem ;
+  background-color: #e7f2f5 ;
+}
+
 .jcc-choice-section__container {
   margin-left: auto ;
   margin-right: auto ;
@@ -14641,12 +14708,12 @@ h3.jcc-header-group__title {
 }
 
 .jcc-full-modal__dialog {
+  padding: 1rem ;
   min-height: 80%;
   margin: 5% auto;
   width: 90%;
   max-width: 70rem;
   position: relative;
-  padding: 1rem ;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 0;
@@ -14714,9 +14781,85 @@ h3.jcc-header-group__title {
   padding-bottom: 3rem ;
 }
 
-.jcc-steps-section--has-background-color {
+.jcc-steps-section--has-background-color--light,
+.jcc-steps-section--has-background-color--dark {
   padding-top: 3rem ;
-  background-color: #f9f9f9 ;
+}
+
+.jcc-steps-section--has-background-color--dark {
+  background-color: #005ea2 ;
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:active, .jcc-steps-section--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:visited {
+  color: #ffe396 ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-step__title {
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__trigger {
+  color: #e5a000 ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:active, .jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:visited {
+  color: #ffe396 ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content {
+  background-color: #005ea2 ;
+  color: white ;
+  border-left-color: white ;
+  border-left-style: solid;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content > a {
+  color: #e5a000 ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:active, .jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:visited {
+  color: #ffe396 ;
+}
+
+.jcc-steps-section--has-background-color--light {
+  background-color: #eff6fb ;
 }
 
 .jcc-steps-section__container {
@@ -14759,6 +14902,7 @@ h3.jcc-header-group__title {
   text-align: center;
   width: 4.6875rem;
   display: block;
+  z-index: 2;
 }
 
 .jcc-steps li:last-of-type:after {
@@ -14782,20 +14926,17 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #eff6fb ;
 }
 
 .jcc-switchboard--has-background-color--dark {
   background-color: #005ea2 ;
   color: white ;
   border-top-color: #e5a000 ;
-  border-top-style: solid;
   border-top-width: 0.5rem;
   border-top-style: solid;
 }
 
-.jcc-switchboard--has-background-color--dark .jcc-breadcrumb__item,
-.jcc-switchboard--has-background-color--dark .jcc-hero__title,
 .jcc-switchboard--has-background-color--dark .jcc-header-group__title {
   color: white ;
 }
@@ -14847,7 +14988,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard__tile {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem ;
 }
 
 .jcc-tab-section__container {
@@ -14864,6 +15005,11 @@ h3.jcc-header-group__title {
   font-weight: normal ;
   font-style: italic ;
   margin-bottom: 2rem;
+}
+
+.jcc-tab-section--has-background-color--light {
+  padding-top: 3rem ;
+  background-color: #e7f2f5 ;
 }
 
 [role="tablist"] {
@@ -14911,7 +15057,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-text-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-text-section--has-background-color--dark {
@@ -14919,8 +15065,6 @@ h3.jcc-header-group__title {
   color: white ;
 }
 
-.jcc-text-section--has-background-color--dark .jcc-breadcrumb__item,
-.jcc-text-section--has-background-color--dark .jcc-hero__title,
 .jcc-text-section--has-background-color--dark .jcc-header-group__title {
   color: white ;
 }
@@ -15089,7 +15233,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-timeline-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #eff6fb ;
 }
 
 .jcc-timeline-section--has-background-color--dark {
@@ -15097,8 +15241,6 @@ h3.jcc-header-group__title {
   color: white ;
 }
 
-.jcc-timeline-section--has-background-color--dark .jcc-breadcrumb__item,
-.jcc-timeline-section--has-background-color--dark .jcc-hero__title,
 .jcc-timeline-section--has-background-color--dark .jcc-header-group__title {
   color: white ;
 }
@@ -21045,6 +21187,10 @@ h3.jcc-header-group__title {
     width: 1.5rem;
     z-index: 2;
   }
+  .jcc-timeline .jcc-timeline-item__media {
+    position: absolute;
+    top: 0;
+  }
   .jcc-timeline__scroller--left.is-active,
   .jcc-timeline__scroller--right.is-active {
     display: block;
@@ -24493,7 +24639,7 @@ h3.jcc-header-group__title {
     position: absolute;
     top: 2.5rem;
     left: 1.875rem;
-    z-index: -1;
+    z-index: 1;
   }
   .jcc-steps li {
     padding-left: 6rem;
@@ -24792,6 +24938,207 @@ h3.jcc-header-group__title {
     background-color: white;
     content: url("../img/correct8-alt.svg");
     text-indent: 0;
+  }
+  .h-responsive-mega {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.23764rem;
+  }
+  h1,
+  .h-responsive-h1 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.98901rem;
+  }
+  h2,
+  .h-responsive-h2 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74038rem;
+  }
+  h3,
+  .h-responsive-h3 {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49176rem;
+  }
+  h4,
+  .h4 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.36745rem;
+  }
+  h5,
+  .h5 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  h6,
+  .t-responsive-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .t-intro {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .t-copy {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .t-small {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.80804rem;
+  }
+  .jcc-card__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-filelist__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-hero__content {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .jcc-hero__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.23764rem;
+  }
+  .jcc-hero__lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-postcard--has-background-color--light,
+  .jcc-postcard--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-step {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.99451rem;
+  }
+  .jcc-step__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-tile__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-timeline-item__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-timeline-item__excerpt {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .jcc-form-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .summary-results .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-accordion__heading-container .usa-accordion__button {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-datefinder__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-dropdown__Label {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-breadcrumb__item {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74038rem;
+  }
+  h3.jcc-header-group__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49176rem;
+  }
+  .jcc-header-group__brow {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93235rem;
+  }
+  .jcc-header-group__lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.11882rem;
+  }
+  .jcc-cards-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-cards-section--has-background-color--light,
+  .jcc-cards-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-choice-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-choice-section .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-choice-section--has-background-color--light {
+    padding-top: 1.5rem ;
+  }
+  .jcc-steps-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-steps-section--has-background-color--light,
+  .jcc-steps-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-switchboard {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-switchboard--has-background-color--light,
+  .jcc-switchboard--has-background-color--dark {
+    padding-bottom: 2rem ;
+    padding-top: 2rem ;
+  }
+  .jcc-tab-section__container .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.36745rem;
+  }
+  .jcc-tab-section--has-background-color--light {
+    padding-top: 1.5rem ;
+  }
+  .jcc-text-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-text-section--has-background-color--light,
+  .jcc-text-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  .jcc-timeline-section {
+    padding-bottom: 1.5rem ;
+  }
+  .jcc-timeline-section--has-background-color--light,
+  .jcc-timeline-section--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
+  a:link:after {
+    display: block;
+    text-transform: none;
+    font-size: 12px;
+    content: attr(href);
+  }
+  a[href^="http"]:link:after {
+    content: attr(href);
+  }
+  #js-header_menu--mobile {
+    visibility: hidden !important;
+  }
+  .show-for-print {
+    display: block;
+  }
+  .hide-for-print {
+    display: none !important;
   }
 }
 

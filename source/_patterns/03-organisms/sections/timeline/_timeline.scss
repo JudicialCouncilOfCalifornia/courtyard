@@ -15,11 +15,11 @@
 
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
-  @include u-padding-top(6);
+  @include section-wrapper-bg;
 }
 
 .jcc-timeline-section--has-background-color--light {
-  @include u-bg("gray-2");
+  @include u-bg("blue-5");
 }
 
 .jcc-timeline-section--has-background-color--dark {
@@ -85,6 +85,13 @@
     @include at-media(tablet) {
       @include timeline-line();
       @include timeline-dot();
+    }
+  }
+
+  .jcc-timeline-item__media {
+    @include at-media(tablet) {
+      position: absolute;
+      top: 0;
     }
   }
 }

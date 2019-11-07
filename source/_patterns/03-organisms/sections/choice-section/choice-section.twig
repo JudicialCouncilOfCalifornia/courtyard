@@ -1,5 +1,5 @@
 {% if checkbox_group|length > 0 %}
-<div class="jcc-choice-section">
+<div class="jcc-choice-section{% if background_variant %} jcc-choice-section--{{ background_variant }}{% endif %}">
   <div class="jcc-choice-section__container">
   
     {% include '@molecules/text/header-group/header-group.twig' with {

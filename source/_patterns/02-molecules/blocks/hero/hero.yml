@@ -4,7 +4,7 @@ title_variant: ""
 lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
 body: ""
 column_content_right: ""
-background_variant: "has-background-color--light"
+background_variant: ""
 column_variant: "has-two-columns-half" # has-one-column has-two-columns-half has-two-columns-threequarter
 breadcrumbs:
   - url: "#"

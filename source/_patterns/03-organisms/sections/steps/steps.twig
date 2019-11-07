@@ -1,5 +1,5 @@
 {% if steps|length > 0 %}
-  <div class="jcc-steps-section jcc-steps-section--{{ background_variant }}">
+  <div class="jcc-steps-section{% if background_variant %} jcc-steps-section--{{ background_variant }}{% endif %}">
     <div class="jcc-steps-section__container">
 
       {% include '@molecules/text/header-group/header-group.twig' with {

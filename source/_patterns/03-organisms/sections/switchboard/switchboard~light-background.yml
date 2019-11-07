@@ -1,11 +1,11 @@
 headergroup:
   brow: "Next Steps"
   title: "What can we help you with today?"
-background_variant: "" #has-background-color--dark
+background_variant: "has-background-color--light" #has-background-color--dark
 tiles_variant: "secondary"
 switchboard_tiles:
   - brow: "Wage Garnishment"
-    title: 'Someone took money from my paycheck Someone took money from my paycheck'
+    title: 'Someone took money from my paycheck'
     url: '#'
     url_attributes: ''
   - brow: "Lien Against Property"

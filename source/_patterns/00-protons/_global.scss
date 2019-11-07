@@ -10,6 +10,18 @@
 @mixin section-wrapper {
   @include u-padding-top(0);
   @include u-padding-bottom(6);
+
+  @media print {
+    @include u-padding-bottom(3);
+  }
+}
+
+@mixin section-wrapper-bg {
+  @include u-padding-top(6);
+
+  @media print {
+    @include u-padding-top(3);
+  }
 }
 
 @mixin section-container {
@@ -62,6 +74,7 @@ $aspect-width: 16;
     text-align: center;
     width: 4.6875rem;
     display: block;
+    z-index: 2;
 
     @include at-media(desktop) {
       position: absolute;
@@ -84,7 +97,7 @@ $aspect-width: 16;
       position: absolute;
       top: 2.5rem;
       left: 1.875rem;
-      z-index: -1;
+      z-index: 1;
     }
   }
 
@@ -185,6 +198,10 @@ $aspect-width: 16;
   @include at-media(desktop) {
     @include u-font($responsive-font-family, 16); // 56
   }
+
+  @media print {
+    @include u-font($responsive-font-family, 13); // 36
+  }
 }
 
 @mixin responsive-h1($responsive-font-family: "heading") {
@@ -192,6 +209,10 @@ $aspect-width: 16;
 
   @include at-media(desktop) {
     @include u-font($responsive-font-family, 15); // 48
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 12); // 32
   }
 }
 
@@ -201,6 +222,10 @@ $aspect-width: 16;
   @include at-media(desktop) {
     @include u-font($responsive-font-family, 14); // 40
   }
+
+  @media print {
+    @include u-font($responsive-font-family, 11); // 28
+  }
 }
 
 @mixin responsive-h3($responsive-font-family: "heading") {
@@ -209,14 +234,26 @@ $aspect-width: 16;
   @include at-media(desktop) {
     @include u-font($responsive-font-family, 13); // 36
   }
+
+  @media print {
+    @include u-font($responsive-font-family, 10);
+  }
 }
 
 @mixin responsive-h4($h-font-family: "body") {
   @include u-font($h-font-family, 10);
+
+  @media print {
+    @include u-font($h-font-family, 9);
+  }
 }
 
 @mixin responsive-h5($h-font-family: "body") {
   @include u-font($h-font-family, 9);
+
+  @media print {
+    @include u-font("body", 7); // 18
+  }
 }
 
 @mixin responsive-lead($responsive-font-family: "body") {
@@ -225,26 +262,40 @@ $aspect-width: 16;
   @include at-media(desktop) {
     @include u-font($responsive-font-family, 10); // 24
   }
+
+  @media print {
+    @include u-font("body", 7); // 18
+  }
 }
 
 @mixin t-intro() {
   @include u-font("body", 7); // 18
+
+  @media print {
+    @include u-font("body", 5); // 16
+  }
 }
 
 @mixin t-copy() {
   @include u-font("body", 5); // 16
+
+  @media print {
+    @include u-font("body", 4); // 16
+  }
 }
 
 @mixin t-small() {
   @include u-font("body", 4); // 16
+
+  @media print {
+    @include u-font("body", 2);
+  }
 }
 
 @mixin dark-background($dark-background-color: "primary") {
   @include u-bg($dark-background-color);
   @include u-text("white");
 
-  .jcc-breadcrumb__item,
-  .jcc-hero__title,
   .jcc-header-group__title {
     @include u-text("white");
   }
@@ -265,6 +316,10 @@ $aspect-width: 16;
       @include u-text("gold-10v");
     }
   }
+}
+
+@mixin dark-background-text() {
+  @include u-text("white");
 }
 
 @mixin dark-background-link() {

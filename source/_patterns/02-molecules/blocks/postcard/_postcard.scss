@@ -42,10 +42,17 @@
   }
 }
 
-.jcc-postcard--has-background-color {
-  @include u-bg("gray-2");
-  @include u-padding-top(6);
-  @include u-margin-bottom(6);
+.jcc-postcard--has-background-color--light,
+.jcc-postcard--has-background-color--dark {
+  @include section-wrapper-bg;
+}
+
+.jcc-postcard--has-background-color--light {
+  @include u-bg("blue-cool-5");
+}
+
+.jcc-postcard--has-background-color--dark {
+  @include dark-background($dark-background-color: "cyan-50");
 }
 
 .jcc-postcard__media {
