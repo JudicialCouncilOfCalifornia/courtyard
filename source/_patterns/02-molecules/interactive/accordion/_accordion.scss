@@ -15,6 +15,7 @@
     @include u-padding-x(0);
     @include responsive-h4($h-font-family: "heading");
     @include u-text("normal");
+    @include u-text("italic");
     background-color: transparent;
   }
 }

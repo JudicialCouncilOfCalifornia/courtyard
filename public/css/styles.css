@@ -519,6 +519,11 @@ USWDS style tokens in the documentation:
 https://v2.designsystem.digital.gov/style-tokens
 ----------------------------------------
 */
+html, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
 /*
 * * * * * ==============================
 * * * * * ==============================
@@ -1737,31 +1742,39 @@ through all possible variants
 ----------------------------------------
 */
 /* stylelint-enable */
-.usa-list, .usa-prose > ul,
-.usa-prose > ol {
+.usa-list, .usa-prose > ul, .jcc-header-group__body > ul, .jcc-text-section__content > ul,
+.usa-prose > ol,
+.jcc-header-group__body > ol,
+.jcc-text-section__content > ol {
   margin-bottom: 1em ;
   margin-top: 1em ;
   line-height: 1.62895;
   padding-left: 3ch;
 }
 
-.usa-list:last-child, .usa-prose > ul:last-child,
-.usa-prose > ol:last-child {
+.usa-list:last-child, .usa-prose > ul:last-child, .jcc-header-group__body > ul:last-child, .jcc-text-section__content > ul:last-child,
+.usa-prose > ol:last-child,
+.jcc-header-group__body > ol:last-child,
+.jcc-text-section__content > ol:last-child {
   margin-bottom: 0;
 }
 
-.usa-list li, .usa-prose > ul li,
-.usa-prose > ol li {
+.usa-list li, .usa-prose > ul li, .jcc-header-group__body > ul li, .jcc-text-section__content > ul li,
+.usa-prose > ol li,
+.jcc-header-group__body > ol li,
+.jcc-text-section__content > ol li {
   margin-bottom: 0.25em;
   max-width: 68ex;
 }
 
-.usa-list li:last-child, .usa-prose > ul li:last-child,
-.usa-prose > ol li:last-child {
+.usa-list li:last-child, .usa-prose > ul li:last-child, .jcc-header-group__body > ul li:last-child, .jcc-text-section__content > ul li:last-child,
+.usa-prose > ol li:last-child,
+.jcc-header-group__body > ol li:last-child,
+.jcc-text-section__content > ol li:last-child {
   margin-bottom: 0;
 }
 
-.usa-table, .usa-prose > table {
+.usa-table, .usa-prose > table, .jcc-header-group__body > table, .jcc-text-section__content > table {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.05666rem;
   line-height: 1.62895 ;
@@ -1769,23 +1782,27 @@ through all possible variants
   margin: 1.25rem 0;
 }
 
-.usa-table thead th, .usa-prose > table thead th {
+.usa-table thead th, .usa-prose > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th {
   font-weight: 700;
 }
 
-.usa-table thead th, .usa-prose > table thead th,
+.usa-table thead th, .usa-prose > table thead th, .jcc-header-group__body > table thead th, .jcc-text-section__content > table thead th,
 .usa-table thead td,
-.usa-prose > table thead td {
+.usa-prose > table thead td,
+.jcc-header-group__body > table thead td,
+.jcc-text-section__content > table thead td {
   background-color: #f9f9f9;
 }
 
-.usa-table th, .usa-prose > table th {
+.usa-table th, .usa-prose > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th {
   text-align: left;
 }
 
-.usa-table th, .usa-prose > table th,
+.usa-table th, .usa-prose > table th, .jcc-header-group__body > table th, .jcc-text-section__content > table th,
 .usa-table td,
-.usa-prose > table td {
+.usa-prose > table td,
+.jcc-header-group__body > table td,
+.jcc-text-section__content > table td {
   border-width: 1px;
   border-color: #5c5c5c ;
   border-style: solid;
@@ -1794,7 +1811,7 @@ through all possible variants
   padding: 0.5rem 1rem;
 }
 
-.usa-table caption, .usa-prose > table caption {
+.usa-table caption, .usa-prose > table caption, .jcc-header-group__body > table caption, .jcc-text-section__content > table caption {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 0.93235rem;
   font-weight: 700;
@@ -1802,14 +1819,16 @@ through all possible variants
   text-align: left;
 }
 
-.usa-table--borderless thead th, .usa-prose > .usa-table--borderless thead th {
+.usa-table--borderless thead th, .usa-prose > .usa-table--borderless thead th, .jcc-header-group__body > .usa-table--borderless thead th, .jcc-text-section__content > .usa-table--borderless thead th {
   background-color: transparent;
   border-top: 0;
 }
 
-.usa-table--borderless th, .usa-prose > .usa-table--borderless th,
+.usa-table--borderless th, .usa-prose > .usa-table--borderless th, .jcc-header-group__body > .usa-table--borderless th, .jcc-text-section__content > .usa-table--borderless th,
 .usa-table--borderless td,
-.usa-prose > .usa-table--borderless td {
+.usa-prose > .usa-table--borderless td,
+.jcc-header-group__body > .usa-table--borderless td,
+.jcc-text-section__content > .usa-table--borderless td {
   border-left: 0;
   border-right: 0;
 }
@@ -2840,14 +2859,14 @@ img {
   line-height: 1.35746;
 }
 
-.usa-prose .usa-input-list {
+.usa-prose .usa-input-list, .jcc-header-group__body .usa-input-list, .jcc-text-section__content .usa-input-list {
   margin-bottom: 0;
   margin-top: 0;
   list-style-type: none;
   padding-left: 0;
 }
 
-.usa-prose .usa-input-list li {
+.usa-prose .usa-input-list li, .jcc-header-group__body .usa-input-list li, .jcc-text-section__content .usa-input-list li {
   line-height: 1.35746;
 }
 
@@ -3608,42 +3627,62 @@ img {
   color: white;
 }
 
-.usa-prose > p {
+.usa-prose > p, .jcc-header-group__body > p, .jcc-text-section__content > p {
   line-height: 1.62895;
   margin-bottom: 0;
   margin-top: 0;
   max-width: 68ex;
 }
 
-.usa-prose > * + p {
+.usa-prose > * + p, .jcc-header-group__body > * + p, .jcc-text-section__content > * + p {
   margin-top: 1em;
 }
 
-.usa-prose > p + * {
+.usa-prose > p + *, .jcc-header-group__body > p + *, .jcc-text-section__content > p + * {
   margin-top: 1em;
 }
 
-.usa-prose > h1,
+.usa-prose > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1,
 .usa-prose > h2,
+.jcc-header-group__body > h2,
+.jcc-text-section__content > h2,
 .usa-prose > h3,
+.jcc-header-group__body > h3,
+.jcc-text-section__content > h3,
 .usa-prose > h4,
+.jcc-header-group__body > h4,
+.jcc-text-section__content > h4,
 .usa-prose > h5,
-.usa-prose > h6 {
+.jcc-header-group__body > h5,
+.jcc-text-section__content > h5,
+.usa-prose > h6,
+.jcc-header-group__body > h6,
+.jcc-text-section__content > h6 {
   margin-bottom: 0 ;
   margin-top: 0 ;
   clear: both;
 }
 
-.usa-prose > * + h1,
+.usa-prose > * + h1, .jcc-header-group__body > * + h1, .jcc-text-section__content > * + h1,
 .usa-prose > * + h2,
+.jcc-header-group__body > * + h2,
+.jcc-text-section__content > * + h2,
 .usa-prose > * + h3,
+.jcc-header-group__body > * + h3,
+.jcc-text-section__content > * + h3,
 .usa-prose > * + h4,
+.jcc-header-group__body > * + h4,
+.jcc-text-section__content > * + h4,
 .usa-prose > * + h5,
-.usa-prose > * + h6 {
+.jcc-header-group__body > * + h5,
+.jcc-text-section__content > * + h5,
+.usa-prose > * + h6,
+.jcc-header-group__body > * + h6,
+.jcc-text-section__content > * + h6 {
   margin-top: 1.5em;
 }
 
-.usa-prose > h1 + *, .usa-prose > h2 + *, .usa-prose > h3 + *, .usa-prose > h4 + *, .usa-prose > h5 + *, .usa-prose > h6 + * {
+.usa-prose > h1 + *, .jcc-header-group__body > h1 + *, .jcc-text-section__content > h1 + *, .usa-prose > h2 + *, .jcc-header-group__body > h2 + *, .jcc-text-section__content > h2 + *, .usa-prose > h3 + *, .jcc-header-group__body > h3 + *, .jcc-text-section__content > h3 + *, .usa-prose > h4 + *, .jcc-header-group__body > h4 + *, .jcc-text-section__content > h4 + *, .usa-prose > h5 + *, .jcc-header-group__body > h5 + *, .jcc-text-section__content > h5 + *, .usa-prose > h6 + *, .jcc-header-group__body > h6 + *, .jcc-text-section__content > h6 + * {
   margin-top: 1em;
 }
 
@@ -3715,82 +3754,82 @@ img {
   max-width: unset;
 }
 
-.usa-prose .usa-list--unstyled {
+.usa-prose .usa-list--unstyled, .jcc-header-group__body .usa-list--unstyled, .jcc-text-section__content .usa-list--unstyled {
   margin-bottom: 0 ;
   margin-top: 0 ;
   list-style-type: none;
   padding-left: 0;
 }
 
-.usa-prose .usa-list--unstyled > li {
+.usa-prose .usa-list--unstyled > li, .jcc-header-group__body .usa-list--unstyled > li, .jcc-text-section__content .usa-list--unstyled > li {
   margin-bottom: 0;
   max-width: unset;
 }
 
-.usa-prose {
+.usa-prose, .jcc-header-group__body, .jcc-text-section__content {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.05666rem;
   line-height: 1.62895 ;
 }
 
-.usa-prose > a {
+.usa-prose > a, .jcc-header-group__body > a, .jcc-text-section__content > a {
   color: #28a0cb;
   text-decoration: underline;
 }
 
-.usa-prose > a:hover {
+.usa-prose > a:hover, .jcc-header-group__body > a:hover, .jcc-text-section__content > a:hover {
   color: #009ec1;
 }
 
-.usa-prose > a:active {
+.usa-prose > a:active, .jcc-header-group__body > a:active, .jcc-text-section__content > a:active {
   color: #59b9de;
 }
 
-.usa-prose > a:focus {
+.usa-prose > a:focus, .jcc-header-group__body > a:focus, .jcc-text-section__content > a:focus {
   outline: 0.25rem solid #face00;
   outline-offset: 0;
 }
 
-.usa-prose > a:visited {
+.usa-prose > a:visited, .jcc-header-group__body > a:visited, .jcc-text-section__content > a:visited {
   color: #07648d;
 }
 
-.usa-prose > h1 {
+.usa-prose > h1, .jcc-header-group__body > h1, .jcc-text-section__content > h1 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.98352rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h2 {
+.usa-prose > h2, .jcc-header-group__body > h2, .jcc-text-section__content > h2 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.48626rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h3 {
+.usa-prose > h3, .jcc-header-group__body > h3, .jcc-text-section__content > h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.23764rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h4 {
+.usa-prose > h4, .jcc-header-group__body > h4, .jcc-text-section__content > h4 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49176rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h5 {
+.usa-prose > h5, .jcc-header-group__body > h5, .jcc-text-section__content > h5 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.36745rem;
   line-height: 1.20663 ;
   font-weight: bold;
 }
 
-.usa-prose > h6 {
+.usa-prose > h6, .jcc-header-group__body > h6, .jcc-text-section__content > h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.24313rem;
   line-height: 1.20663 ;
@@ -3847,7 +3886,9 @@ img {
 }
 
 .usa-accordion__heading,
-.usa-prose .usa-accordion__heading {
+.usa-prose .usa-accordion__heading,
+.jcc-header-group__body .usa-accordion__heading,
+.jcc-text-section__content .usa-accordion__heading {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.05666rem;
   line-height: 1.00552 ;
@@ -3855,7 +3896,9 @@ img {
 }
 
 .usa-accordion__heading:not(:first-child),
-.usa-prose .usa-accordion__heading:not(:first-child) {
+.usa-prose .usa-accordion__heading:not(:first-child),
+.jcc-header-group__body .usa-accordion__heading:not(:first-child),
+.jcc-text-section__content .usa-accordion__heading:not(:first-child) {
   margin-top: 0.5rem;
 }
 
@@ -13412,6 +13455,8 @@ a:visited {
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.36745rem;
+  margin-bottom: 0.75rem ;
+  margin-top: 0.75rem ;
 }
 
 .jcc-card--has-icon {
@@ -13603,6 +13648,7 @@ a:visited {
 .jcc-hero__lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
+  margin-bottom: 0.75rem ;
 }
 
 .jcc-hero--has-one-column .jcc-hero__column-left {
@@ -13625,7 +13671,12 @@ a:visited {
 }
 
 .jcc-list-group__item {
-  padding-bottom: 0.5rem ;
+  margin-bottom: 1rem ;
+}
+
+.jcc-list-item p:first-of-type {
+  margin-bottom: 0 ;
+  padding-bottom: 1px;
 }
 
 .jcc-list-item p strong {
@@ -13731,6 +13782,12 @@ a:visited {
 .jcc-postcard__tag {
   position: absolute ;
   bottom: 0;
+  font-size: 1.24313rem;
+  padding-bottom: 0.25rem ;
+  padding-top: 0.25rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+  background-color: #0b4778 ;
   left: 0rem;
   bottom: 0rem;
 }
@@ -13761,6 +13818,8 @@ a:visited {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-weight: bold ;
   color: #0b4778 ;
+  margin-bottom: 0.75rem ;
+  margin-top: 0.75rem ;
 }
 
 .jcc-step__excerpt {
@@ -13772,13 +13831,16 @@ a:visited {
   border-width: 1px;
   border-color: #2378c3 ;
   border-style: solid;
-  padding-left: 1.5rem ;
-  padding-right: 1.5rem ;
+  padding: 1.5rem ;
   color: #1b1b1b ;
   -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
           box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
   position: relative;
   text-align: left;
+}
+
+.jcc-tile__brow {
+  margin-bottom: 0.75rem ;
 }
 
 .jcc-tile__title {
@@ -13808,14 +13870,16 @@ a:visited {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  position: relative;
+  margin-bottom: 0.75rem ;
+  margin-top: 0.75rem ;
+  position: relative ;
 }
 
 .jcc-timeline-item__excerpt {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99451rem;
   line-height: 1.50829 ;
-  padding-right: 2rem ;
+  margin-bottom: 0.75rem ;
 }
 
 .jcc-timeline-item__media {
@@ -13894,6 +13958,7 @@ a:visited {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49176rem;
   font-weight: normal ;
+  font-style: italic ;
   background-color: transparent;
 }
 
@@ -14522,10 +14587,12 @@ a:visited {
   color: #1b1b1b ;
   text-transform: uppercase ;
   letter-spacing: 0.15em ;
-  color: #c9c9c9 ;
+  color: #919191 ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.87019rem;
   margin-left: 1rem ;
+  margin-bottom: 0.5rem ;
+  margin-top: 0.5rem ;
 }
 
 .jcc-header-group > :first-child {
@@ -14541,6 +14608,7 @@ a:visited {
 .jcc-header-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.98901rem;
+  margin-bottom: 0.75rem ;
 }
 
 h3.jcc-header-group__title {
@@ -14553,12 +14621,14 @@ h3.jcc-header-group__title {
   font-size: 0.99451rem;
   text-transform: uppercase ;
   letter-spacing: 0.15em ;
+  margin-bottom: 0.75rem ;
 }
 
 .jcc-header-group__lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.36745rem;
   line-height: 1.35746 ;
+  margin-bottom: 0.75rem ;
 }
 
 .jcc-header-group__body {
@@ -15058,6 +15128,10 @@ h3.jcc-header-group__title {
 .jcc-text-section {
   padding-top: 0 ;
   padding-bottom: 3rem ;
+}
+
+.jcc-text-section .jcc-header-group {
+  padding-bottom: 2rem ;
 }
 
 .jcc-text-section--has-background-color--light,
@@ -21109,10 +21183,6 @@ h3.jcc-header-group__title {
   }
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
-  }
-  .jcc-timeline-item__media {
-    position: absolute;
-    top: 0;
   }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;

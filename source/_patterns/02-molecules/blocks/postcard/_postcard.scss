@@ -84,6 +84,10 @@
 .jcc-postcard__tag {
   @extend .usa-tag;
   @include u-pin-bottom;
+  @include u-font-size("body", 8);
+  @include u-padding-y(0.5);
+  @include u-padding-x(2);
+  @include u-bg("primary-dark");
   left: 0rem;
   bottom: 0rem;
 

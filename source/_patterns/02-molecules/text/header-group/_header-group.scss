@@ -12,6 +12,7 @@
 
 .jcc-header-group__title {
   @include responsive-h2();
+  @include u-margin-bottom(1.5);
 }
 
 h3.jcc-header-group__title {
@@ -22,11 +23,13 @@ h3.jcc-header-group__title {
   @include t-copy();
   @include u-text("uppercase");
   @include u-text("ls-3");
+  @include u-margin-bottom(1.5);
 }
 
 .jcc-header-group__lead {
   @include responsive-lead();
   @include u-line-height("body", 3);
+  @include u-margin-bottom(1.5);
 
   @include at-media("desktop") {
     // max-width: 75%;
@@ -35,4 +38,5 @@ h3.jcc-header-group__title {
 
 .jcc-header-group__body {
   @include u-font("body", 6);
+  @extend .usa-prose;
 }
