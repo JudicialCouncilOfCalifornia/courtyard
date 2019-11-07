@@ -6,13 +6,17 @@
   }
 }
 
-.jcc-switchboard--has-background-color--light,
-.jcc-switchboard--has-background-color--dark {
+.jcc-steps-section--has-background-color--light,
+.jcc-steps-section--has-background-color--dark {
   @include section-wrapper-bg;
 }
 
+.jcc-steps-section--has-background-color--dark {
+  @include dark-background();
+}
+
 .jcc-steps-section--has-background-color--light {
-  @include u-bg("base-lightest");
+  @include u-bg("blue-5");
 }
 
 .jcc-steps-section__container {

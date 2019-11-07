@@ -13426,7 +13426,7 @@ a:visited {
   width: 3rem;
   min-width: 3rem;
   position: relative;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .jcc-card--has-icon .jcc-card__media img {
@@ -13528,7 +13528,7 @@ a:visited {
 }
 
 .jcc-hero--has-background-color--light {
-  background-color: #eff6fb ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-hero--has-background-color--dark {
@@ -13677,10 +13677,40 @@ a:visited {
   padding: 3rem ;
 }
 
-.jcc-postcard--has-background-color {
-  background-color: #f9f9f9 ;
+.jcc-postcard--has-background-color--light,
+.jcc-postcard--has-background-color--dark {
   padding-top: 3rem ;
-  margin-bottom: 3rem ;
+}
+
+.jcc-postcard--has-background-color--light {
+  background-color: #f9f9f9 ;
+}
+
+.jcc-postcard--has-background-color--dark {
+  background-color: #168092 ;
+  color: white ;
+}
+
+.jcc-postcard--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-postcard--has-background-color--dark .jcc-hero__title,
+.jcc-postcard--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-postcard--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-postcard--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-postcard--has-background-color--dark > a:active, .jcc-postcard--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-postcard--has-background-color--dark > a:visited {
+  color: #ffe396 ;
 }
 
 .jcc-postcard__container {
@@ -14561,7 +14591,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-cards-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-cards-section--has-background-color--dark {
@@ -14634,6 +14664,11 @@ h3.jcc-header-group__title {
   font-size: 1.49176rem;
   font-weight: normal ;
   font-style: italic ;
+}
+
+.jcc-choice-section--has-background-color--light {
+  padding-top: 3rem ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-choice-section__container {
@@ -14750,13 +14785,40 @@ h3.jcc-header-group__title {
   padding-bottom: 3rem ;
 }
 
-.jcc-switchboard--has-background-color--light,
-.jcc-switchboard--has-background-color--dark {
+.jcc-steps-section--has-background-color--light,
+.jcc-steps-section--has-background-color--dark {
   padding-top: 3rem ;
 }
 
+.jcc-steps-section--has-background-color--dark {
+  background-color: #005ea2 ;
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark .jcc-breadcrumb__item,
+.jcc-steps-section--has-background-color--dark .jcc-hero__title,
+.jcc-steps-section--has-background-color--dark .jcc-header-group__title {
+  color: white ;
+}
+
+.jcc-steps-section--has-background-color--dark > a {
+  color: #e5a000 ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:hover {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:active, .jcc-steps-section--has-background-color--dark > a:focus {
+  color: #ffbe2e ;
+}
+
+.jcc-steps-section--has-background-color--dark > a:visited {
+  color: #ffe396 ;
+}
+
 .jcc-steps-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #eff6fb ;
 }
 
 .jcc-steps-section__container {
@@ -14822,14 +14884,13 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #eff6fb ;
 }
 
 .jcc-switchboard--has-background-color--dark {
   background-color: #005ea2 ;
   color: white ;
   border-top-color: #e5a000 ;
-  border-top-style: solid;
   border-top-width: 0.5rem;
   border-top-style: solid;
 }
@@ -14951,7 +15012,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-text-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #e7f2f5 ;
 }
 
 .jcc-text-section--has-background-color--dark {
@@ -15129,7 +15190,7 @@ h3.jcc-header-group__title {
 }
 
 .jcc-timeline-section--has-background-color--light {
-  background-color: #f9f9f9 ;
+  background-color: #eff6fb ;
 }
 
 .jcc-timeline-section--has-background-color--dark {
@@ -24899,6 +24960,10 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.11882rem;
   }
+  .jcc-postcard--has-background-color--light,
+  .jcc-postcard--has-background-color--dark {
+    padding-top: 1.5rem ;
+  }
   .jcc-step {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.99451rem;
@@ -24973,11 +25038,14 @@ h3.jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.36745rem;
   }
+  .jcc-choice-section--has-background-color--light {
+    padding-top: 1.5rem ;
+  }
   .jcc-steps-section {
     padding-bottom: 1.5rem ;
   }
-  .jcc-switchboard--has-background-color--light,
-  .jcc-switchboard--has-background-color--dark {
+  .jcc-steps-section--has-background-color--light,
+  .jcc-steps-section--has-background-color--dark {
     padding-top: 1.5rem ;
   }
   .jcc-switchboard {
