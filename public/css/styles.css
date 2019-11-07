@@ -14834,6 +14834,8 @@ h3.jcc-header-group__title {
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content {
   background-color: #005ea2 ;
   color: white ;
+  border-left-color: white ;
+  border-left-style: solid;
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content .jcc-header-group__title {
@@ -21184,6 +21186,10 @@ h3.jcc-header-group__title {
     text-align: center;
     width: 1.5rem;
     z-index: 2;
+  }
+  .jcc-timeline .jcc-timeline-item__media {
+    position: absolute;
+    top: 0;
   }
   .jcc-timeline__scroller--left.is-active,
   .jcc-timeline__scroller--right.is-active {

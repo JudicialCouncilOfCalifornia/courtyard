@@ -24,6 +24,7 @@
 
   .jcc-read-more__content {
     @include dark-background();
+    @include u-border-left("white");
   }
 }
 

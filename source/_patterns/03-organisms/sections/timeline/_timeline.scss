@@ -87,6 +87,13 @@
       @include timeline-dot();
     }
   }
+
+  .jcc-timeline-item__media {
+    @include at-media(tablet) {
+      position: absolute;
+      top: 0;
+    }
+  }
 }
 
 // remove line from last timeline item
