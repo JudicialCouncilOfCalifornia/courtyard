@@ -74,6 +74,7 @@ $aspect-width: 16;
     text-align: center;
     width: 4.6875rem;
     display: block;
+    z-index: 2;
 
     @include at-media(desktop) {
       position: absolute;
@@ -96,7 +97,7 @@ $aspect-width: 16;
       position: absolute;
       top: 2.5rem;
       left: 1.875rem;
-      z-index: -1;
+      z-index: 1;
     }
   }
 
@@ -295,8 +296,6 @@ $aspect-width: 16;
   @include u-bg($dark-background-color);
   @include u-text("white");
 
-  .jcc-breadcrumb__item,
-  .jcc-hero__title,
   .jcc-header-group__title {
     @include u-text("white");
   }
@@ -317,6 +316,10 @@ $aspect-width: 16;
       @include u-text("gold-10v");
     }
   }
+}
+
+@mixin dark-background-text() {
+  @include u-text("white");
 }
 
 @mixin dark-background-link() {

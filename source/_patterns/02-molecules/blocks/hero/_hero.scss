@@ -1,5 +1,7 @@
 .jcc-hero {
   @include u-position("relative");
+  @include u-margin-bottom(6);
+  @include u-bg("gray-2");
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");
@@ -16,7 +18,6 @@
 
 .jcc-hero--has-background-color--light,
 .jcc-hero--has-background-color--dark {
-  @include u-margin-bottom(6);
 }
 
 .jcc-hero--has-background-color--light {
@@ -28,6 +29,11 @@
 
   .jcc-breadcrumb__item a {
     @include dark-background-link();
+  }
+
+  .jcc-hero__title,
+  .jcc-breadcrumb__item {
+    @include dark-background-text();
   }
 }
 

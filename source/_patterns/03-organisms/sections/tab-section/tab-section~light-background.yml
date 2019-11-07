@@ -38,4 +38,4 @@ tab_panels:
       </div>
       </div>
     </div>'
-background_variant: "" #has-background-color
+background_variant: "has-background-color--light"

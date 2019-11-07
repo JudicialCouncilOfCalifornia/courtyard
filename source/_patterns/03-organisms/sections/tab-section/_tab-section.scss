@@ -8,6 +8,11 @@
   }
 }
 
+.jcc-tab-section--has-background-color--light {
+  @include section-wrapper-bg;
+  @include u-bg("blue-cool-5");
+}
+
 [role="tablist"] {
   padding: 0;
   margin: 0 0 2rem 0;
