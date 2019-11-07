@@ -1,0 +1,22 @@
+<div class="jcc-link-list {% if files_list %} jcc-link-list--files{% endif %} {% if box %} jcc-link-list--has-box{% endif %}">
+  {% if title %}<h2 class="jcc-link-list__title">{{ title }}</h2>{% endif %}
+
+  <ul class="jcc-link-list__list">
+    {% for item in items %}
+      <li class="jcc-link-list__item">
+          
+        {% if icon %}
+        <span class="jcc-link-list__icon">
+          {% include '@atoms/icons/icon.twig' with  {
+            icon: icon.icon,
+            title: icon.title,
+            icon_file: icon.icon_file,
+            decorative: icon.decorative
+          } %}
+        </span>
+        {% endif %}
+        {{item.name}} (<a{% if files_list %} download{% endif %} href="{{item.url}}" title="{{item.url_title}}">{{item.url_title}}</a>)
+      </li>
+    {% endfor %}
+  </ul>
+</div>

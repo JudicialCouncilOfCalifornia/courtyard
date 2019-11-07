@@ -1,4 +1,8 @@
-.jcc-filelist {
+.jcc-link-list {
+  @include u-padding-x(0);
+}
+
+.jcc-link-list--has-box {
   @include u-padding-y(3);
   @include u-padding-x(6);
   @include card-border();
@@ -8,19 +12,28 @@
   }
 }
 
-.jcc-filelist__title {
+.jcc-link-list__title {
   @include responsive-h4($h-font-family: "heading");
 }
 
-.jcc-filelist__list {
-  @include add-list-reset;
+.jcc-link-list__list {
+  
 }
 
-.jcc-filelist__item {
+.jcc-link-list__item {
   @include u-padding-y(1);
+  position: relative;
 }
 
-.jcc-filelist__icon {
+.jcc-link-list__icon {
+  position: absolute;
+  left: -24px;
+
+}
+
+.jcc-link-list--files {
+  @include u-padding-left(6);
+  .jcc-link-list__list { @include add-list-reset; }
 }
 
 .icon {
