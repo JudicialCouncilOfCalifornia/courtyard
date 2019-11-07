@@ -1,4 +1,4 @@
-<div class="jcc-cards-section{% if background_variant %} jcc-cards-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-cards-section--{{ column_variant }}{% endif %}">
+<div class="jcc-cards-section{% if background_variant %} jcc-cards-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-cards-section--{{ column_variant }}{% endif %}{% if spacing_variant %} {{ spacing_variant }}{% endif %}">
   <div class="jcc-cards__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
       brow: headergroup.brow,

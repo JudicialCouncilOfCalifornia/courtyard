@@ -41,6 +41,7 @@ entries:
       background_variant: ""
       header_align_variant: "has-header-left"
       tag: "Page 2"
+      spacing_variant: ""
     headergroup:
       brow: ""
       title: "Who sent me these papers?"
@@ -56,6 +57,7 @@ entries:
       background_variant: "has-background-color--light"
       header_align_variant: "has-header-left"
       tag: "Page 2"
+      spacing_variant: ""
     headergroup:
       brow: ""
       title: "What does this petition say?"
@@ -66,6 +68,7 @@ entries:
     column_content_right: ""
     column_content_left: ""
     column_variant: "has-two-columns-threequarter"
+    spacing_variant: ""
     headergroup:
       lead: "<p>On the second page of FL-200, read sections 7, 8, 9, and 10 to see what orders the person is asking the court to make about parentage, custody and visitation.</p>"
   -
@@ -78,6 +81,7 @@ entries:
       background_variant: ""
       header_align_variant: "has-header-left"
       tag: "Page 2"
+      spacing_variant: "padding-top-0"
     headergroup:
       brow: ""
       title: "Parentage"
@@ -89,6 +93,7 @@ entries:
     background_variant: ""
     column_content_left: ""
     column_content_left: ""
+    spacing_variant: "padding-top-0"
   -
     type: "postcard"
     postcard:
@@ -98,6 +103,7 @@ entries:
       background_variant: "has-background-image"
       header_align_variant: "has-header-left"
       tag: "Page 2"
+      spacing_variant: ""
     headergroup:
       brow: ""
       title: "What is legal parentage all about?"
