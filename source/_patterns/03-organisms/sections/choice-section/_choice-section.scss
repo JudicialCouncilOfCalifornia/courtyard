@@ -12,6 +12,11 @@
   }
 }
 
+.jcc-choice-section--has-background-color--light {
+  @include section-wrapper-bg;
+  @include u-bg("blue-cool-5");
+}
+
 .jcc-choice-section__container {
   @include section-container;
 

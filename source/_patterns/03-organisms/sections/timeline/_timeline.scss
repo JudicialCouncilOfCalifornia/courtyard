@@ -15,11 +15,11 @@
 
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
-  @include u-padding-top(6);
+  @include section-wrapper-bg;
 }
 
 .jcc-timeline-section--has-background-color--light {
-  @include u-bg("gray-2");
+  @include u-bg("blue-5");
 }
 
 .jcc-timeline-section--has-background-color--dark {
@@ -35,6 +35,11 @@
 
     .jcc-timeline-item__media {
       @include media-icon($icon-circle-bg: "blue-70v");
+
+      @include at-media(tablet) {
+        position: absolute;
+        top: 0;
+      }
     }
   }
 
@@ -89,6 +94,13 @@
       @include timeline-dot();
     }
   }
+
+  .jcc-timeline-item__media {
+    @include at-media(tablet) {
+      position: absolute;
+      top: 0;
+    }
+  }
 }
 
 // remove line from last timeline item
@@ -128,4 +140,10 @@
 }
 .jcc-timeline__scroller--right {
   right: 0;
+}
+
+.jcc-timeline__scroller-icon {
+  svg {
+    fill: color("ink");
+  }
 }

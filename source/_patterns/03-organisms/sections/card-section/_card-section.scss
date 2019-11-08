@@ -7,6 +7,19 @@
   }
 }
 
+.jcc-cards-section--has-background-color--light,
+.jcc-cards-section--has-background-color--dark {
+  @include section-wrapper-bg;
+}
+
+.jcc-cards-section--has-background-color--light {
+  @include u-bg("blue-cool-5");
+}
+
+.jcc-cards-section--has-background-color--dark {
+  @include dark-background($dark-background-color: "cyan-50");
+}
+
 .jcc-cards__container {
   @include section-container;
 }

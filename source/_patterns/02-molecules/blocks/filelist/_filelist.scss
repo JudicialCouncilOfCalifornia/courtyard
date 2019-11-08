@@ -1,7 +1,7 @@
 .jcc-filelist {
   @include u-padding-y(3);
   @include u-padding-x(6);
-  @include u-border(1px, "primary-vivid");
+  @include card-border();
 
   @include at-media("desktop") {
     @include u-measure(2);

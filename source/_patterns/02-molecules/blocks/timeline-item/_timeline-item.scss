@@ -15,4 +15,9 @@
 
 .jcc-timeline-item__media {
   @include media-icon();
+
+  @include at-media(tablet) {
+    position: absolute;
+    top: 0;
+  }
 }

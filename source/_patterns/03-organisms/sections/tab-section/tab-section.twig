@@ -1,5 +1,5 @@
 {% if tabs|length > 0 %}
-<div class="jcc-tab-section tabbed">
+<div class="jcc-tab-section{% if background_variant %} jcc-tab-section--{{ background_variant }}{% endif %} tabbed">
   <div class="jcc-tab-section__container">
   
   {% include '@molecules/text/header-group/header-group.twig' with {

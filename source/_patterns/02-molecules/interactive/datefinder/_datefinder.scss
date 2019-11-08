@@ -1,10 +1,14 @@
 .jcc-datefinder {
-  @include u-padding-y(3);
-  @include u-padding-x(6);
-  @include u-border(1px, "primary-vivid");
+  @include u-padding-y(1);
+  @include u-padding-x(4);
+  @include card-border();
 
   @include at-media("desktop") {
     @include u-measure(2);
+  }
+
+  .usa-label {
+    @include u-margin-top(0);
   }
 }
 
@@ -21,8 +25,7 @@
 
 .jcc-datefinder__label {
   display: block;
-  @include u-padding-top(1);
-  @include u-padding-bottom(1);
+  @include u-margin-y(1);
 }
 
 .jcc-datefinder__input {
@@ -50,4 +53,10 @@
 
 .jcc-datefinder__date {
   @include u-font("body", "lg");
+  @include u-margin-y(1);
+}
+
+.jcc-datefinder__form,
+.jcc-datefinder__adjacent-dates {
+  @include u-margin-bottom(2);
 }

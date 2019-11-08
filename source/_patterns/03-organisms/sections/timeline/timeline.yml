@@ -44,4 +44,14 @@ timeline:
     img:
       src: "../../images/court.svg"
       alt: "Alt text"
-background_variant: has-background-color--light
+background_variant: ""
+left_icon:
+  icon_file: "../../images/icomoon/symbol-defs.svg"
+  icon: "arrow_back"
+  title: "Left"
+  decorative: true
+right_icon:
+  icon_file: "../../images/icomoon/symbol-defs.svg"
+  icon: "arrow_forward"
+  title: "Right"
+  decorative: true

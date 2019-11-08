@@ -28,12 +28,12 @@
 
 .jcc-full-modal__dialog {
   // Structural Attributes
+  @include u-padding(2);
   min-height: 80%;
   margin: 5% auto;
   width: 90%;
   max-width: 70rem;
   position: relative;
-  @include u-padding(2);
   box-sizing: border-box;
 
   @include at-media(desktop) {

@@ -10,16 +10,19 @@
 .jcc-switchboard--has-background-color--light,
 .jcc-switchboard--has-background-color--dark {
   @include u-padding-y(8);
+
+  @media print {
+    @include u-padding-y(4);
+  }
 }
 
 .jcc-switchboard--has-background-color--light {
-  @include u-bg("gray-2");
+  @include u-bg("blue-5");
 }
 
 .jcc-switchboard--has-background-color--dark {
   @include dark-background();
-  @include u-border-top("gold-30v");
-  @include u-border-top(1);
+  @include u-border-top("gold-30v", 1);
 }
 
 .jcc-switchboard__container {
@@ -36,6 +39,7 @@
   .jcc-tile {
     @include u-border(1px, "base-light");
     @include u-bg("white");
+    @include u-height("full");
   }
 }
 
@@ -47,7 +51,7 @@
 }
 
 .jcc-switchboard__tile {
-  margin-bottom: 1rem;
+  @include u-margin-bottom(2);
 
   @include at-media(desktop) {
     @include grid-col(4);

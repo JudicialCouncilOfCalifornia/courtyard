@@ -1,4 +1,4 @@
-background_variant: ""
+background_variant: "has-background-color--light"
 column_variant: "has-three-columns" #has-one-colummn has-three-columns
 cards:
   - title: "Prepare the claim of exemption"
