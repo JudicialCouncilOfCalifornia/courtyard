@@ -117,6 +117,7 @@ entries:
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
         card_variant: "has-icon"
+        icon: "thumb_down"
       - title: "If You Agree"
         excerpt: "
           <ul>
@@ -125,6 +126,7 @@ entries:
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
         card_variant: "has-icon"
+        icon: "thumb_up"
   -
     type: "section"
     column_content_right: ""

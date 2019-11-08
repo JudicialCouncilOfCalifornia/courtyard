@@ -12,7 +12,8 @@
         {% include '@molecules/blocks/card/card.twig' with {
           title: card.title,
           excerpt: card.excerpt,
-          card_variant: card.card_variant
+          card_variant: card.card_variant,
+          icon: card.icon
         } %}
       </li>
       {% endfor %}

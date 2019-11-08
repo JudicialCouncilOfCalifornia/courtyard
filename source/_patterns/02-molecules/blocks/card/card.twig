@@ -1,7 +1,11 @@
 <div class="jcc-card jcc-card--{{ card_variant }}">
-  {% if img %}
+  {% if card_variant == 'has-image' %}
     <div class="jcc-card__media">
       {% include '@atoms/image/image.twig' with { image: img } %}
+    </div>
+  {% elseif card_variant == 'has-icon' %}
+    <div class="jcc-card__media">
+      {% include '@atoms/icons/icon.twig' with { icon: icon } %}
     </div>
   {% endif %}
 
