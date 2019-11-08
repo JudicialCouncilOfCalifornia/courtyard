@@ -1,6 +1,5 @@
 <div class="jcc-hero{% if background_variant %} jcc-hero--{{ background_variant }}{% endif %}{% if column_variant %} jcc-hero--{{ column_variant }}{% endif %}">
   <div class="jcc-hero__container">
-
     {% if img %}
       <div class="jcc-hero__media">
         {% include '@atoms/image/image.twig' with { image: img } %}
@@ -15,18 +14,62 @@
         <div class="jcc-hero__column-left">
           <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
           {% if lead %}
-          <div class="jcc-hero__lead">{{ lead }}</div>
+            <div class="jcc-hero__lead">{{ lead }}</div>
           {% endif %}
           {% if body %}
-          <div class="jcc-hero__body">{{ body }}</div>
+            <div class="jcc-hero__body">
+              {{ body }}
+              <div class="jcc-hero__results">
+                <div class="jcc-hero__picked-questions"></div>
+                <h3>Details:</h3>
+                <div class="jcc-hero__answers"></div>
+                {% include '@atoms/buttons/button.twig' with {
+                    text: 'Edit Your Details',
+                    style: 'primary',
+                    url: '#'
+                } %}
+              </div>
+              <div class="jcc-hero__questions">
+                {% for question in questions %}
+                  {% include '@atoms/forms/checkbox.twig' with {
+                    label: question.label,
+                    id: question.id,
+                    name: question.name,
+                    bordered: true
+                  } %}
+                {% endfor %}
+              </div>
+            </div>
           {% endif %}
         </div>
         {% if column_content_right %}
-        <div class="jcc-hero__column-right">
-          {{ column_content_right }}
-        </div>
+          <div class="jcc-hero__column-right">
+            {{ column_content_right }}
+          </div>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
+
+<div class="jcc-hero__options">
+  <h3>Check all that apply:</h3>
+  {% for question in questions %}
+    <section class="jcc-hero__options-section" data-checkbox-id="{{question.id}}">
+      {% for option in question.options %}
+        {% include '@atoms/forms/checkbox.twig' with {
+          label: option.label,
+          id: option.id,
+          name: option.name,
+          bordered: true
+        } %}
+      {% endfor %}
+    </section>
+  {% endfor %}
+  {% include '@atoms/buttons/button.twig' with {
+      text: 'Submit',
+      style: 'primary',
+      url: '#'
+  } %}
+</div>
+

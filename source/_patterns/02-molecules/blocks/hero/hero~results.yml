@@ -5,15 +5,33 @@ lead: ""
 body: '<div class="summary-results">
       <header class="jcc-header-group">
             <h4 class="jcc-header-group__title">Whose name is being changed?</h4>
-            <div class="jcc-header-group__lead">Adult</div>
-          </header>
-            
-      <header class="jcc-header-group">
-            <h4 class="jcc-header-group__title">Details</h4>
-            <div class="jcc-header-group__lead">One or more of the persons above are changing their name to conform to their gender identity.</div>
-          </header>
-        </div>
-        <button  class="usa-button usa-button--primary">Edit</button>'
+          </header>'
+questions:
+  - label: "Adult"
+    id: "checkbox-0"
+    name: "checkbox-0"
+    options:
+      - id: "option-0"
+        label: "This change of name is being requested to escape domestic violence"
+      - id: "option-1"
+        label: "One or more adults is restoring a former name during or following a divorce in California."
+  - label: "Adult (spouse)"
+    id: "checkbox-1"
+    name: "checkbox-1"
+    options:
+      - id: "option-2"
+        label: "One or more adults above are incarcerated, on parole, or required to register as a sex offender."
+      - id: "option-3"
+        label: "One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate."
+  - label: "One or more minor child"
+    id: "checkbox-2"
+    name: "checkbox-2"
+    options:
+      - id: "option-4"
+        label: "One or more adults above are incarcerated, on parole, or required to register as a sex offender."
+      - id: "option-5"
+        label: "One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate."
+
 column_content_right: ""
 background_variant: "has-background-color--light"
 column_variant: "has-two-columns-threequarter" # has-one-column has-two-columns-half has-two-columns-threequarter
