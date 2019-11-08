@@ -354,6 +354,12 @@ $aspect-width: 16;
     position: relative;
   }
 
+  svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
   &:before {
     @include u-bg($icon-circle-bg);
     content: "";
