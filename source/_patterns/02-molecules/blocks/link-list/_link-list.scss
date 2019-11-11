@@ -2,20 +2,6 @@
   @include u-padding-x(0);
 }
 
-.jcc-link-list--has-box {
-  @include u-padding-y(3);
-  @include u-padding-x(6);
-  @include card-border();
-
-  @include at-media("desktop") {
-    @include u-measure(2);
-  }
-}
-
-.jcc-link-list__title {
-  @include responsive-h4($h-font-family: "heading");
-}
-
 .jcc-link-list__list {
   
 }
