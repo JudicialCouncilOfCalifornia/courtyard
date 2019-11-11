@@ -1,5 +1,9 @@
 .jcc-text-section {
   @include section-wrapper;
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+  }
 }
 
 .jcc-text-section--has-background-color--light,

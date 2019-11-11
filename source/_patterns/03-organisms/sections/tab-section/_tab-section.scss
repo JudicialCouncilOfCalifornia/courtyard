@@ -1,5 +1,6 @@
 .jcc-tab-section__container {
   @include section-container;
+  @include section-wrapper;
 
   .jcc-header-group__title {
     @include responsive-h4($h-font-family: "heading");
@@ -15,7 +16,7 @@
 
 [role="tablist"] {
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
 
 [role="tablist"] li,

@@ -36,8 +36,9 @@ entries:
   -
     type: "postcard"
     postcard:
-      image: "https://placeimg.com/800/400/arch"
-      alt: "Avatar"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Avatar"
       background_variant: ""
       header_align_variant: "has-header-left"
       tag: "Page 2"
@@ -87,8 +88,14 @@ entries:
   -
     type: "card-section"
     background_variant: ""
-    column_content_left: ""
-    column_content_left: ""
+    column_variant: ""
+    cards:
+      - title: "Prepare the claim of exemption"
+        excerpt: "Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)"
+        card_variant: "has-icon"
+      - title: "File the claim of exemption with the sheriff"
+        excerpt: "File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail"
+        card_variant: "has-icon"
   -
     type: "postcard"
     postcard:

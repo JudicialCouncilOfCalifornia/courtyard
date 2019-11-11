@@ -1,0 +1,11 @@
+<div class="jcc-list-block">
+  <h2 class="jcc-list-block__title">{{ title }}</h2>
+  {% include '@molecules/blocks/link-list/link-list.twig' with {
+    files_list: list.files_list,
+    items: list.items
+  } %}
+
+</div>
+
+
+
