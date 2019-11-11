@@ -5,6 +5,7 @@ headergroup:
   tag: "h4"
 tabs:
   - title: 'One'
+    selected: true
   - title: 'Two'
 tab_panels:
   - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light  jcc-text-section--has-two-columns-threequarter">

@@ -1,0 +1,1 @@
+{"version":3,"sources":["05-pages/service.scss","05-pages/service.css"],"names":[],"mappings":"AAAA;EACE,aAAa;ACCf","file":"service.css","sourcesContent":[".jcc-service__tabs {\n  display: none;\n}",".jcc-service__tabs {\n  display: none;\n}\n"]}

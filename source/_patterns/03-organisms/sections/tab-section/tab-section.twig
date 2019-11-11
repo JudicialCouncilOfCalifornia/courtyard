@@ -12,7 +12,7 @@
   <ul>
     {% for tab in tabs %}
     <li>
-      <a href="#section{{ loop.index }}">{{ tab.title }}</a>
+      <a href="#section{{ loop.index }}" data-selected="{{tab.selected}}">{{ tab.title }}</a>
     </li>
     {% endfor %}
   </ul>
