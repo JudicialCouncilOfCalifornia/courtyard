@@ -17,8 +17,7 @@
       background_variant: entry.postcard.background_variant,
       header_align_variant: entry.postcard.header_align_variant,
       tag: entry.postcard.tag,
-      headergroup: entry.headergroup,
-      spacing_variant: entry.postcard.spacing_variant
+      headergroup: entry.headergroup
     } %}
   {% elseif entry.type == 'section' %}
     {% include '@organisms/sections/text-section/text-section.twig' with {
@@ -26,7 +25,6 @@
       column_content_right: entry.column_content_right,
       column_variant: entry.column_variant,
       background_variant: entry.background_variant,
-      spacing_variant: entry.spacing_variant,
       headergroup: entry.headergroup
     } %}
   {% elseif entry.type == 'steps' %}
@@ -36,8 +34,7 @@
   {% elseif entry.type == 'card-section' %}
     {% include '@organisms/sections/card-section/card-section.twig' with {
       background_variant: entry.background_variant,
-      headergroup: entry.headergroup,
-      spacing_variant: entry.spacing_variant
+      headergroup: entry.headergroup
     } %}
   {% endif %}
 {% endfor %}
