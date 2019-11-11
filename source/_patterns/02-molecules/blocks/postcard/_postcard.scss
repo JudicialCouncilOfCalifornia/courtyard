@@ -48,11 +48,17 @@
 }
 
 .jcc-postcard--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg("base-lightest");
+
+  .jcc-postcard__tag { @include u-bg("primary-vivid"); }
 }
 
 .jcc-postcard--has-background-color--dark {
   @include dark-background($dark-background-color: "cyan-50");
+  background-color: #168092;
+
+  .jcc-postcard__tag { background-color: #168092; }
+  .jcc-header-group__lead { opacity: .8; }
 }
 
 .jcc-postcard__media {
@@ -90,6 +96,9 @@
   @include at-media(desktop) {
     right: 0rem;
     left: auto;
+    font-size: 20px;
+    @include u-padding-y(1);
+    @include u-padding-x(3);
   }
 }
 
@@ -117,5 +126,11 @@
 
   @include at-media(desktop) {
     @include grid-col(6);
+  }
+}
+
+.jcc-postcard__content {
+  @include at-media(desktop) {
+    padding-right: 160px;
   }
 }

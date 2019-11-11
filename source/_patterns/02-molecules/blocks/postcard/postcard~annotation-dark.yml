@@ -1,0 +1,12 @@
+img:
+  src: "../../../images/sample/annotation-screenshot.png"
+  alt: "Alt text"
+background_variant: "has-background-color--dark" # has-background-image
+header_align_variant: "has-header-left"
+tag: "FL-210, Page 2"
+headergroup:
+  brow: ""
+  title: "What do I need to do?"
+  lead: "<p>No matter how you decide to act, you need to follow the restraining orders on page 2 of the FL-210, until the court case is resolved.</p>"
+  body: ""
+  tag: "h2"
