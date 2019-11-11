@@ -103,7 +103,7 @@ entries:
     background_variant: "has-background-color--light" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
-  background_variant: "has-background-color--light"
+  background_variant: "has-background-color--dark"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

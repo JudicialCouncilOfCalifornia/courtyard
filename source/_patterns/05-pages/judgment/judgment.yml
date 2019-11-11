@@ -18,7 +18,7 @@ top:
       label: "Debt Collection"
       url_attributes: ''
 switchboard:
-  background_variant: "has-background-color--light"
+  background_variant: "has-background-color--dark"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

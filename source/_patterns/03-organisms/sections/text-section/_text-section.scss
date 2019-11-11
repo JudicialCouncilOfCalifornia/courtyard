@@ -28,6 +28,11 @@
   @extend .usa-prose;
 }
 
+.jcc-text-section__column-left,
+.jcc-text-section__column-right {
+  @extend .usa-prose;
+}
+
 .jcc-text-section--has-one-column {
   @include u-measure("6");
 }
