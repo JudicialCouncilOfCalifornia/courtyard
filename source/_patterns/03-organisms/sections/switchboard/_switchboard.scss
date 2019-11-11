@@ -5,6 +5,11 @@
   .jcc-header-group {
     @include u-padding-bottom(4);
   }
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
 }
 
 .jcc-switchboard--has-background-color--light,
