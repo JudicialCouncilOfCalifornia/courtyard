@@ -24,3 +24,7 @@ a {
     max-width: none;
   }
 }
+
+.h-dash {
+  @include has-dash();
+}

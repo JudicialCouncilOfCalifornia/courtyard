@@ -3,6 +3,7 @@
 
   .jcc-header-group__title {
     @include u-text(primary-dark);
+    @include has-dash();
   }
 
   .jcc-header-group__body {

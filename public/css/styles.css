@@ -13611,6 +13611,21 @@ a:visited {
   max-width: none;
 }
 
+.h-dash {
+  position: relative;
+  padding-bottom: .5em;
+}
+
+.h-dash:after {
+  background-color: #e5a000;
+  content: '';
+  height: 3px;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
@@ -13870,6 +13885,18 @@ a:visited {
 
 .jcc-postcard .jcc-header-group__title {
   color: #0b4778 ;
+  position: relative;
+  padding-bottom: .5em;
+}
+
+.jcc-postcard .jcc-header-group__title:after {
+  background-color: #e5a000;
+  content: '';
+  height: 3px;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .jcc-postcard__image {
@@ -15332,6 +15359,18 @@ h3.jcc-header-group__title {
 
 .jcc-text-section .jcc-header-group__title {
   color: #0b4778 ;
+  position: relative;
+  padding-bottom: .5em;
+}
+
+.jcc-text-section .jcc-header-group__title:after {
+  background-color: #e5a000;
+  content: '';
+  height: 3px;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .jcc-text-section--has-background-color--light,

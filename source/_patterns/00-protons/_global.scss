@@ -453,3 +453,19 @@ $aspect-width: 16;
   @include u-radius("lg");
   @include u-shadow(3);
 }
+
+// Adds decorative dash to headers
+@mixin has-dash($dash-color: "gold-30v") {
+  position: relative;
+  padding-bottom: 0.5em;
+
+  &:after {
+    background-color: color($dash-color);
+    content: "";
+    height: 3px;
+    width: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
