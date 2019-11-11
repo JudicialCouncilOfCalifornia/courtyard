@@ -13607,6 +13607,10 @@ a:visited {
   left: -999em;
 }
 
+.usa-prose > p, .jcc-card__excerpt > p, .jcc-hero__body > p, .jcc-hero__column-right > p, .jcc-header-group__body > p, .jcc-text-section__content > p, .jcc-text-section__column-left > p, .jcc-text-section__column-right > p {
+  max-width: none;
+}
+
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;

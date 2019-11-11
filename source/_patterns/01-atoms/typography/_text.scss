@@ -18,3 +18,9 @@ a {
 .sr-only {
   @include sr-only();
 }
+
+.usa-prose {
+  > p {
+    max-width: none;
+  }
+}
