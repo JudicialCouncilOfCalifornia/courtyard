@@ -19,5 +19,5 @@
 }
 
 .jcc-list-item p strong {
-  @include responsive-lead();
+  @include t-intro();
 }

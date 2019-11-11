@@ -13835,7 +13835,7 @@ a:visited {
 
 .jcc-list-item p strong {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.37rem;
+  font-size: 1.12rem;
 }
 
 .jcc-postcard {
@@ -24659,10 +24659,6 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
-  .jcc-list-item p strong {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.49rem;
-  }
   .jcc-postcard__image {
     text-align: right;
     display: -webkit-box;
@@ -25255,7 +25251,7 @@ h3.jcc-header-group__title {
   }
   .jcc-list-item p strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 0.99rem;
   }
   .jcc-postcard {
     padding-bottom: 1.5rem ;
