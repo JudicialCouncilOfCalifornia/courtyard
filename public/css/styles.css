@@ -13808,9 +13808,19 @@ a:visited {
   width: 100% ;
 }
 
+.jcc-hero__column-left > :last-child,
+.jcc-hero__column-right > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .jcc-link-list {
   padding-left: 0 ;
   padding-right: 0 ;
+}
+
+.jcc-link-list__list {
+  padding-left: 1.5rem;
 }
 
 .jcc-link-list__item {
@@ -13847,8 +13857,8 @@ a:visited {
 .jcc-list-block {
   padding-bottom: 1.5rem ;
   padding-top: 1.5rem ;
-  padding-left: 3rem ;
-  padding-right: 3rem ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
   background-color: white ;
   border-width: 1px;
   border-style: solid;
@@ -13861,7 +13871,7 @@ a:visited {
 
 .jcc-list-block__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.49rem;
+  font-size: 1.37rem;
 }
 
 .jcc-list-group__item {
@@ -14544,6 +14554,22 @@ a:visited {
   stroke: currentColor;
   fill: currentColor;
   margin-bottom: -4px;
+}
+
+.jcc-read-more--block .jcc-read-more__trigger {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
+  background-color: #e7f2f5 ;
+  border-radius: 0.5rem ;
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.12rem;
+  font-style: italic ;
+}
+
+.jcc-read-more--block .jcc-read-more__content {
+  background-color: white ;
 }
 
 .jcc-breadcrumbs {
@@ -15421,6 +15447,10 @@ h3.jcc-header-group__title {
   left: 0;
 }
 
+.jcc-text-section .jcc-header-group {
+  padding-bottom: 2rem ;
+}
+
 .jcc-text-section--has-background-color--light,
 .jcc-text-section--has-background-color--dark {
   padding-top: 3rem ;
@@ -15466,7 +15496,10 @@ h3.jcc-header-group__title {
 
 .jcc-text-section__content {
   line-height: 1.5 ;
-  margin-top: 2rem ;
+}
+
+.jcc-text-section__column-left {
+  margin-bottom: 2rem ;
 }
 
 .jcc-text-section--has-one-column {
@@ -25077,6 +25110,9 @@ h3.jcc-header-group__title {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-text-section__column-left {
+    margin-bottom: 0 ;
+  }
   .jcc-text-section--has-two-columns-half .jcc-text-section__content,
   .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {
     display: -webkit-box;
@@ -25404,8 +25440,8 @@ h3.jcc-header-group__title {
     font-size: 1.12rem;
   }
   .jcc-list-block__title {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.37rem;
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.12rem;
   }
   .jcc-list-item p strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25457,6 +25493,10 @@ h3.jcc-header-group__title {
   .jcc-dropdown__Label {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.37rem;
+  }
+  .jcc-read-more--block .jcc-read-more__trigger {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 0.99rem;
   }
   .jcc-breadcrumb__item {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;

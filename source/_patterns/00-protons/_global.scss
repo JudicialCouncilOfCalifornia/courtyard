@@ -303,16 +303,16 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h4($h-font-family: "body") {
-  @include u-font($h-font-family, 10);
+@mixin responsive-h4($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 10);
 
   @media print {
-    @include u-font($h-font-family, 9);
+    @include u-font($responsive-font-family, 9);
   }
 }
 
-@mixin responsive-h5($h-font-family: "body") {
-  @include u-font($h-font-family, 9);
+@mixin responsive-h5($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 9);
 
   @media print {
     @include u-font("body", 7); // 18
@@ -331,11 +331,11 @@ $aspect-width: 16;
   }
 }
 
-@mixin t-intro() {
-  @include u-font("body", 7); // 18
+@mixin t-intro($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 7); // 18
 
   @media print {
-    @include u-font("body", 5); // 16
+    @include u-font($responsive-font-family, 5); // 16
   }
 }
 

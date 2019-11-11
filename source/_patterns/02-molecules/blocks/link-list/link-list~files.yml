@@ -10,6 +10,6 @@ items:
     url: "#"
 icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "book"
-  title: "Book"
+  icon: "file"
+  title: "File"
   decorative: false

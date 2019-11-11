@@ -5,6 +5,10 @@
     @include u-text(primary-dark);
     @include has-dash();
   }
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
 }
 
 .jcc-text-section--has-background-color--light,
@@ -29,13 +33,20 @@
 
 .jcc-text-section__content {
   @include u-line-height("body", 4);
-  @include u-margin-top(4);
   @extend .usa-prose;
 }
 
 .jcc-text-section__column-left,
 .jcc-text-section__column-right {
   @extend .usa-prose;
+}
+
+.jcc-text-section__column-left {
+  @include u-margin-bottom(4);
+
+  @include at-media("desktop") {
+    @include u-margin-bottom(0);
+  }
 }
 
 .jcc-text-section--has-one-column {
