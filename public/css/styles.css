@@ -14808,6 +14808,13 @@ h3.jcc-header-group__title {
   text-decoration: underline;
 }
 
+.jcc-modal--full .jcc-modal__dialog {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
 .jcc-steps-section {
   padding-top: 0 ;
   padding-bottom: 3rem ;
