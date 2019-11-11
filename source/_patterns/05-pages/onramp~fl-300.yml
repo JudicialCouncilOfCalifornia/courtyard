@@ -116,8 +116,9 @@ entries:
             <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
-        card_variant: "has-icon"
-        icon: "thumb_down"
+        img:
+          src: "../../images/court.svg"
+          alt: "Alt text"
       - title: "If You Agree"
         excerpt: "
           <ul>
@@ -125,8 +126,9 @@ entries:
             <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
             <li>Attend the hearing.  If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
-        card_variant: "has-icon"
-        icon: "thumb_up"
+        img:
+          src: "../../images/court.svg"
+          alt: "Alt text"
   -
     type: "section"
     column_content_right: ""
