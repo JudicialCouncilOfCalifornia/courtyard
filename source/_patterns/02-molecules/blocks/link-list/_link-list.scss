@@ -3,7 +3,6 @@
 }
 
 .jcc-link-list__list {
-  
 }
 
 .jcc-link-list__item {
@@ -14,12 +13,13 @@
 .jcc-link-list__icon {
   position: absolute;
   left: -24px;
-
 }
 
 .jcc-link-list--files {
   @include u-padding-left(6);
-  .jcc-link-list__list { @include add-list-reset; }
+  .jcc-link-list__list {
+    @include add-list-reset;
+  }
 }
 
 .icon {
