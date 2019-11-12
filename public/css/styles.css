@@ -13914,13 +13914,13 @@ a:visited {
 }
 
 .jcc-postcard__image {
-  border-width: 1px;
-  border-color: #c9c9c9 ;
-  border-style: solid;
   position: relative;
 }
 
 .jcc-postcard__image img {
+  border-width: 1px;
+  border-color: #c9c9c9 ;
+  border-style: solid;
   display: block;
 }
 
@@ -14976,6 +14976,22 @@ h3.jcc-header-group__title {
   color: #ffe396 ;
 }
 
+.jcc-cards-section--has-background-color--dark .jcc-card {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
+  background-color: white ;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c9c9c9 ;
+  border-style: solid;
+  border-radius: 0.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+  color: #1b1b1b ;
+}
+
 .jcc-cards__container {
   margin-left: auto ;
   margin-right: auto ;
@@ -15791,7 +15807,7 @@ h3.jcc-header-group__title {
 .jcc-timeline__scroller--right {
   background-color: #e5a000 ;
   position: absolute;
-  top: 3.125rem;
+  top: 2.875rem;
   bottom: 0;
   width: 3rem;
   height: 3rem;
@@ -15812,7 +15828,16 @@ h3.jcc-header-group__title {
   right: 0;
 }
 
+.jcc-timeline__scroller-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
 .jcc-timeline__scroller-icon svg {
+  display: block;
+  margin: auto;
+  height: 1.75rem;
+  width: 1.75rem;
   fill: #1b1b1b;
 }
 

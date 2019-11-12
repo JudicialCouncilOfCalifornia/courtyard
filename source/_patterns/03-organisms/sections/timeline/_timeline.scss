@@ -121,7 +121,7 @@
 .jcc-timeline__scroller--right {
   @include u-bg("gold-30v");
   position: absolute;
-  top: 3.125rem;
+  top: 2.875rem;
   bottom: 0;
   width: 3rem;
   height: 3rem;
@@ -148,7 +148,14 @@
 }
 
 .jcc-timeline__scroller-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+
   svg {
+    display: block;
+    margin: auto;
+    height: 1.75rem;
+    width: 1.75rem;
     fill: color("ink");
   }
 }
