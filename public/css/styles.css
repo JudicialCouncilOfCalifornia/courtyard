@@ -15816,6 +15816,10 @@ h3.jcc-header-group__title {
   fill: #1b1b1b;
 }
 
+.jcc-service__tabs {
+  display: none;
+}
+
 @media all and (min-width: 30em) {
   .usa-button {
     width: auto;
