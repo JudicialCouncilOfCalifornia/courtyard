@@ -1,5 +1,5 @@
 .jcc-dropdown__Label {
-  @include responsive-h4($h-font-family: "heading");
+  @include responsive-h4($responsive-font-family: "heading");
   @include u-padding-bottom(2);
   @include u-text("italic");
   display: block;
@@ -69,8 +69,8 @@
     position: absolute;
     width: 13px;
     height: 13px;
-    border-right: 1px solid currentColor;
-    border-bottom: 1px solid currentColor;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
     top: -5px;
     right: 0;
     transform: rotate(45deg);

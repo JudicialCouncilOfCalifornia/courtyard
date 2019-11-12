@@ -1,6 +1,6 @@
 .jcc-list-block {
   @include u-padding-y(3);
-  @include u-padding-x(6);
+  @include u-padding-x(4);
   @include card-border();
 
   @include at-media("desktop") {
@@ -9,5 +9,5 @@
 }
 
 .jcc-list-block__title {
-  @include responsive-h4($h-font-family: "heading");
+  @include responsive-h5($responsive-font-family: "heading");
 }

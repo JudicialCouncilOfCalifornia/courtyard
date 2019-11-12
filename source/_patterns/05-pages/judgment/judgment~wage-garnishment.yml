@@ -35,22 +35,25 @@ entries:
     background_variant: "has-background-color--light" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
     right_column_components:
-      filelist:
+      list_block:
         title: Relevant Files
-        files:
-          - name: Claim of Exemption (form WG-006)
-            url: "#"
-          - name: Financial Statement (form WG-007)
-            url: "#"
-        icon:
-          icon_file: "../../images/icomoon/symbol-defs.svg"
-          icon: "book"
-          title: "Book"
-          decorative: false
+        list:
+          items:
+            - name: Claim of Exemption (form WG-006)
+              url: "#"
+            - name: Financial Statement (form WG-007)
+              url: "#"
+          files_list: true
+          icon:
+            icon_file: "../../images/icomoon/symbol-defs.svg"
+            icon: "file"
+            title: "File"
+            decorative: false
       read_more:
         id: "what-is-judgment"
         title: "What is judgment?"
         content: "Lorem ipsum"
+        block_variant: true
   -
     type: "steps"
     headergroup:
@@ -103,7 +106,7 @@ entries:
     background_variant: "has-background-color--light" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
-  background_variant: "has-background-color--light"
+  background_variant: "has-background-color--dark"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

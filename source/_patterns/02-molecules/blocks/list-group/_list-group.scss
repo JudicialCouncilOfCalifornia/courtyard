@@ -5,19 +5,19 @@
 }
 
 .jcc-list-group__item {
-}
-
-.jcc-list-group__item + .jcc-list-group__item {
-  @include u-padding-top(3);
+  @include u-margin-bottom(2);
 }
 
 .jcc-list-item {
 }
 
 .jcc-list-item p {
-  @include u-text("base-light");
+  &:first-of-type {
+    @include u-margin-bottom(0);
+    padding-bottom: 1px;
+  }
 }
 
 .jcc-list-item p strong {
-  @include u-text("base");
+  @include t-intro();
 }

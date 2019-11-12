@@ -8,7 +8,7 @@
 // Section vertical rhythm and centered block
 
 @mixin section-wrapper {
-  @include u-padding-top(0);
+  @include u-padding-top(6);
   @include u-padding-bottom(6);
 
   @media print {
@@ -18,6 +18,7 @@
 
 @mixin section-wrapper-bg {
   @include u-padding-top(6);
+  @include u-padding-bottom(6);
 
   @media print {
     @include u-padding-top(3);
@@ -240,16 +241,16 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h4($h-font-family: "body") {
-  @include u-font($h-font-family, 10);
+@mixin responsive-h4($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 10);
 
   @media print {
-    @include u-font($h-font-family, 9);
+    @include u-font($responsive-font-family, 9);
   }
 }
 
-@mixin responsive-h5($h-font-family: "body") {
-  @include u-font($h-font-family, 9);
+@mixin responsive-h5($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 9);
 
   @media print {
     @include u-font("body", 7); // 18
@@ -268,11 +269,11 @@ $aspect-width: 16;
   }
 }
 
-@mixin t-intro() {
-  @include u-font("body", 7); // 18
+@mixin t-intro($responsive-font-family: "body") {
+  @include u-font($responsive-font-family, 7); // 18
 
   @media print {
-    @include u-font("body", 5); // 16
+    @include u-font($responsive-font-family, 5); // 16
   }
 }
 
@@ -389,4 +390,20 @@ $aspect-width: 16;
   @include u-border("base-light");
   @include u-radius("lg");
   @include u-shadow(3);
+}
+
+// Adds decorative dash to headers
+@mixin has-dash($dash-color: "gold-30v") {
+  position: relative;
+  padding-bottom: 0.5em;
+
+  &:after {
+    background-color: color($dash-color);
+    content: "";
+    height: 3px;
+    width: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }

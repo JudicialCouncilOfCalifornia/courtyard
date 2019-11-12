@@ -4,20 +4,16 @@
 .jcc-timeline-item__title {
   @include responsive-h5();
   @include u-font-family("sans");
-  position: relative;
+  @include u-margin-y(1.5);
+  @include u-position("relative");
 }
 
 .jcc-timeline-item__excerpt {
   @include t-copy();
   @include u-line-height("body", 4);
-  @include u-padding-right(4);
+  @include u-margin-bottom(1.5);
 }
 
 .jcc-timeline-item__media {
   @include media-icon();
-
-  @include at-media(tablet) {
-    position: absolute;
-    top: 0;
-  }
 }
