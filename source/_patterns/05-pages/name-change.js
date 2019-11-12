@@ -34,7 +34,7 @@ $(".jcc-hero__options button").on("click", evt => {
   $(".jcc-hero__answers").html(answers);
   $(".jcc-hero__results").show();
 });
-$(".jcc-hero__results button").on("click", evt => {
+$(".jcc-hero__results button:contains('Edit')").on("click", evt => {
   $(".jcc-hero__results").hide();
   $(".jcc-hero__questions").show();
   $(".jcc-hero__options").show();
