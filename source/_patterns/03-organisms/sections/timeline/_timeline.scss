@@ -54,13 +54,6 @@
   }
 }
 
-.jcc-timeline-item__media {
-  @include at-media(tablet) {
-    position: absolute;
-    top: 0;
-  }
-}
-
 .jcc-timeline-section__container {
   @include section-container;
 }

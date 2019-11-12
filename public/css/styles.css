@@ -14219,8 +14219,8 @@ a:visited {
 }
 
 .jcc-datefinder {
-  padding-bottom: 0.5rem ;
-  padding-top: 0.5rem ;
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
   padding-left: 2rem ;
   padding-right: 2rem ;
   background-color: white ;
@@ -14268,6 +14268,23 @@ a:visited {
   display: inline-block;
   padding: 4px 8px;
   color: #73b3e7 ;
+}
+
+.jcc-datefinder__icon:before {
+  background-color: #fef0c8 ;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  left: 0.75rem;
+  top: 0.75rem;
+  position: absolute;
+}
+
+.jcc-datefinder__icon svg {
+  z-index: 2;
+  position: relative;
 }
 
 .jcc-datefinder__adjacent-dates {
@@ -21607,10 +21624,6 @@ h3.jcc-header-group__title {
     z-index: 2;
   }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
-    position: absolute;
-    top: 0;
-  }
-  .jcc-timeline-item__media {
     position: absolute;
     top: 0;
   }
