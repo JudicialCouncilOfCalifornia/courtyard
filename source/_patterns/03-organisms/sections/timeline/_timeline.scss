@@ -8,6 +8,11 @@
     @include u-padding-bottom(6);
   }
 
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
+
   .slick-track {
     padding-top: 3rem;
   }
@@ -46,6 +51,13 @@
   .jcc-full-modal__trigger,
   .jcc-timeline-item__trigger {
     @include dark-background-link();
+  }
+}
+
+.jcc-timeline-item__media {
+  @include at-media(tablet) {
+    position: absolute;
+    top: 0;
   }
 }
 

@@ -13,8 +13,9 @@
   .usa-accordion__button {
     @include u-padding-y(5);
     @include u-padding-x(0);
-    @include responsive-h4($h-font-family: "heading");
+    @include responsive-h4($responsive-font-family: "heading");
     @include u-text("normal");
+    @include u-text("italic");
     background-color: transparent;
   }
 }

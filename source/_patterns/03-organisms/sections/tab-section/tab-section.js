@@ -13,13 +13,15 @@
       newTab.removeAttribute("tabindex");
       // Set the selected state
       newTab.setAttribute("aria-selected", "true");
-      oldTab.removeAttribute("aria-selected");
-      oldTab.setAttribute("tabindex", "-1");
+      if (oldTab) {
+        oldTab.removeAttribute("aria-selected");
+        oldTab.setAttribute("tabindex", "-1");
+        let oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
+        panels[oldIndex].hidden = true;
+      }
       // Get the indices of the new and old tabs to find the correct
       // tab panels to show and hide
       let index = Array.prototype.indexOf.call(tabs, newTab);
-      let oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
-      panels[oldIndex].hidden = true;
       panels[index].hidden = false;
     };
 
@@ -38,9 +40,7 @@
         e.preventDefault();
         e.stopImmediatePropagation();
         let currentTab = tablist.querySelector("[aria-selected]");
-        if (e.currentTarget !== currentTab) {
-          switchTab(currentTab, e.currentTarget);
-        }
+        switchTab(currentTab, e.currentTarget);
       });
 
       // Handle keydown events for keyboard users
@@ -74,8 +74,10 @@
     });
 
     // Initially activate the first tab and reveal the first tab panel
-    tabs[0].removeAttribute("tabindex");
-    tabs[0].setAttribute("aria-selected", "true");
-    panels[0].hidden = false;
+    if (tabs[0].dataset["selected"]) {
+      tabs[0].removeAttribute("tabindex");
+      tabs[0].setAttribute("aria-selected", "true");
+      panels[0].hidden = false;
+    }
   }
 })();

@@ -1,0 +1,15 @@
+title: Relevant Files
+files_list: true
+box: true
+items:
+  - name: Claim of Exemption (Enforcement of Judgement)
+    url_title: Form EJ-160
+    url: "#"
+  - name: Financial Statement
+    url_title: Form EJ-165
+    url: "#"
+icon:
+  icon_file: "../../images/icomoon/symbol-defs.svg"
+  icon: "file"
+  title: "File"
+  decorative: false

@@ -1,0 +1,33 @@
+.jcc-link-list {
+  @include u-padding-x(0);
+}
+
+.jcc-link-list__list {
+  padding-left: 1.5rem;
+}
+
+.jcc-link-list__item {
+  @include u-padding-y(1);
+  position: relative;
+}
+
+.jcc-link-list__icon {
+  position: absolute;
+  left: -24px;
+}
+
+.jcc-link-list--files {
+  @include u-padding-left(6);
+  .jcc-link-list__list {
+    @include add-list-reset;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

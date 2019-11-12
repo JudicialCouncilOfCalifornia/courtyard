@@ -4,6 +4,11 @@
   .jcc-header-group {
     @include u-padding-bottom(6);
   }
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
 }
 
 .jcc-steps-section--has-background-color--light,

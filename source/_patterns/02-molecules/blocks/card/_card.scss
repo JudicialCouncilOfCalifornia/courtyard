@@ -1,5 +1,6 @@
 .jcc-card__title {
-  @include responsive-h5($h-font-family: "heading");
+  @include responsive-h5($responsive-font-family: "heading");
+  @include u-margin-y(1.5);
 }
 
 .jcc-card--has-icon {
@@ -10,4 +11,8 @@
     @include media-icon();
     margin-right: 2rem;
   }
+}
+
+.jcc-card__excerpt {
+  @extend .usa-prose;
 }

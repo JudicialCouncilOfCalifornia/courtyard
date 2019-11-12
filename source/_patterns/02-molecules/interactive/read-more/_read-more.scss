@@ -42,3 +42,18 @@
   fill: currentColor;
   margin-bottom: -4px;
 }
+
+.jcc-read-more--block {
+  .jcc-read-more__trigger {
+    @include u-padding-y(3);
+    @include u-padding-x(4);
+    @include u-bg("blue-cool-5");
+    @include u-radius("lg");
+    @include t-intro($responsive-font-family: "heading");
+    @include u-text("italic");
+  }
+
+  .jcc-read-more__content {
+    @include u-bg("white");
+  }
+}

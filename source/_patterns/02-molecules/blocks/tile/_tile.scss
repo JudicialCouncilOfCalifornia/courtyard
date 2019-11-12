@@ -1,15 +1,19 @@
 .jcc-tile {
   @include u-radius("lg");
   @include u-border(1px, "primary-vivid");
-  @include u-padding-x(3);
+  @include u-padding(3);
   @include u-text("base-darkest");
   @include u-shadow(2);
   position: relative;
   text-align: left;
 }
 
+.jcc-tile__brow {
+  @include u-margin-bottom(1.5);
+}
+
 .jcc-tile__title {
-  @include responsive-h5($h-font-family: "heading");
+  @include responsive-h5($responsive-font-family: "heading");
 
   a {
     @include u-text("blue-70v");

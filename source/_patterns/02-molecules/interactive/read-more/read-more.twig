@@ -1,5 +1,5 @@
 {% if id and content %}
-  <div class="jcc-read-more {% if inverted %} jcc-read-more--inverted{% endif %}">   
+  <div class="jcc-read-more {% if block_variant %} jcc-read-more--block{% endif %}">   
     <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ id }}">
       {{ title ?? 'Read more'|t }}
 

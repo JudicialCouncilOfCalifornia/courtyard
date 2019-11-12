@@ -24,21 +24,23 @@
     {% if entry.right_column_components %}
       {% set right_column_component_content %}
         {% if entry.right_column_components.read_more %}
-        <div class="margin-4">
+        <div class="margin-bottom-4">
           {% include "@molecules/interactive/read-more/read-more.twig" with {
             id: entry.right_column_components.read_more.id,
             title: entry.right_column_components.read_more.title,
-            content: entry.right_column_components.read_more.content
+            content: entry.right_column_components.read_more.content,
+            block_variant: entry.right_column_components.read_more.block_variant
           } %}
         </div>
         {% endif %}
 
-        {% if entry.right_column_components.filelist %}
-        <div class="margin-4">
-          {% include '@molecules/blocks/filelist/filelist.twig' with {
-            title: entry.right_column_components.filelist.title,
-            icon: entry.right_column_components.filelist.icon,
-            files: entry.right_column_components.filelist.files
+        {% if entry.right_column_components.list_block %}
+        <div class="margin-bottom-4">
+          {% include '@molecules/blocks/list-block/list-block.twig' with {
+            title: entry.right_column_components.list_block.title,
+            items: entry.right_column_components.list_block.list.items,
+            files_list: entry.right_column_components.list_block.list.files_list,
+            icon: entry.right_column_components.list_block.list.icon
           } %}
         </div>
         {% endif %}
