@@ -1,0 +1,57 @@
+name_change:
+  img: ""
+  title: "Name Change"
+  title_variant: ""
+  lead: ""
+  body: '<div class="summary-results">
+        <header class="jcc-header-group">
+              <h4 class="jcc-header-group__title">Whose name is being changed?</h4>
+            </header>
+          <div class="jcc-hero__results">
+              <div class="jcc-hero__picked-questions"></div>
+              <h3>Details:</h3>
+              <div class="jcc-hero__answers"></div>
+          <button class="usa-button usa-button--primary">Edit Your Details</button></div>
+          <div class="jcc-hero__questions">
+            <div class="usa-checkbox jcc-checkbox--bordered">
+              <input class="usa-checkbox__input" id="checkbox-0" type="checkbox" name="checkbox-0" value="checkbox-0">
+              <label class="usa-checkbox__label" for="checkbox-0">Adult</label>
+            </div>
+            <div class="usa-checkbox jcc-checkbox--bordered">
+              <input class="usa-checkbox__input" id="checkbox-1" type="checkbox" name="checkbox-1" value="checkbox-1">
+              <label class="usa-checkbox__label" for="checkbox-1">Adult (spouse)</label>
+            </div>
+            <div class="usa-checkbox jcc-checkbox--bordered">
+              <input class="usa-checkbox__input" id="checkbox-2" type="checkbox" name="checkbox-2" value="checkbox-2">
+              <label class="usa-checkbox__label" for="checkbox-2">One or more minor child</label>
+            </div>
+          </div>'
+  questions:
+    - label: "Adult"
+      id: "checkbox-0"
+      name: "checkbox-0"
+      options:
+        - id: "option-0"
+          label: "This change of name is being requested to escape domestic violence"
+        - id: "option-1"
+          label: "One or more adults is restoring a former name during or following a divorce in California."
+    - label: "Adult (spouse)"
+      id: "checkbox-1"
+      name: "checkbox-1"
+      options:
+        - id: "option-2"
+          label: "One or more adults above are incarcerated, on parole, or required to register as a sex offender."
+        - id: "option-3"
+          label: "One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate."
+    - label: "One or more minor child"
+      id: "checkbox-2"
+      name: "checkbox-2"
+      options:
+        - id: "option-4"
+          label: "One or more adults above are incarcerated, on parole, or required to register as a sex offender."
+        - id: "option-5"
+          label: "One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate."
+
+  column_content_right: ""
+  background_variant: "has-background-color--light"
+  column_variant: "has-two-columns-threequarter"
