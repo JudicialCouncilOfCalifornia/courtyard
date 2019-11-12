@@ -124,6 +124,14 @@
   }
 }
 
+.jcc-hero__column-left {
+  @include u-margin-bottom(3);
+
+  @include at-media(desktop) {
+    @include u-margin-bottom(0);
+  }
+}
+
 .jcc-hero__column-left,
 .jcc-hero__column-right {
   > :last-child {

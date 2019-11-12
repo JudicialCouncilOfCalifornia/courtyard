@@ -104,7 +104,7 @@ entries:
         alt: "Avatar"
       background_variant: "has-background-image"
       header_align_variant: "has-header-left"
-      tag: "Page 2"
+      tag: ""
     headergroup:
       brow: ""
       title: "What is legal parentage all about?"
