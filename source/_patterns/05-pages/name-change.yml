@@ -4,15 +4,22 @@ name_change:
   title_variant: ""
   lead: ""
   body: '<div class="summary-results">
-        <header class="jcc-header-group">
-              <h4 class="jcc-header-group__title">Whose name is being changed?</h4>
-            </header>
+          <header class="jcc-header-group">
+            <h2 class="jcc-header-group__title">Whose name is being changed?</h4>
+            <div class="jcc-hero__results">
+              <div class="jcc-hero__picked-questions jcc-header-group__lead"></div>
+            </div>
+          </header>
           <div class="jcc-hero__results">
-              <div class="jcc-hero__picked-questions"></div>
-              <h3>Details:</h3>
-              <div class="jcc-hero__answers"></div>
-          <button class="usa-button usa-button--primary">Edit Your Details</button></div>
-          <div class="jcc-hero__questions jcc-form--inline">
+            <header class="jcc-header-group">
+              <h2 class="jcc-header-group__title">Details:</h3>
+            <div class="jcc-hero__answers jcc-header-group__lead"></div>
+            </header>
+
+            <button class="usa-button usa-button--primary">Edit Your Details</button>
+            </div>
+
+            <div class="jcc-hero__questions jcc-form--inline">
             <div class="usa-checkbox jcc-checkbox--bordered">
               <input class="usa-checkbox__input" id="checkbox-0" type="checkbox" name="checkbox-0" value="checkbox-0">
               <label class="usa-checkbox__label" for="checkbox-0">Adult</label>
@@ -26,7 +33,7 @@ name_change:
               <label class="usa-checkbox__label" for="checkbox-2">One or more minor child</label>
             </div>
           </div>
-          </div>'
+        </div>'
   questions:
     - label: "Adult"
       id: "checkbox-0"
