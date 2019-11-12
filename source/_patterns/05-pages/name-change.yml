@@ -12,7 +12,7 @@ name_change:
               <h3>Details:</h3>
               <div class="jcc-hero__answers"></div>
           <button class="usa-button usa-button--primary">Edit Your Details</button></div>
-          <div class="jcc-hero__questions">
+          <div class="jcc-hero__questions jcc-form--inline">
             <div class="usa-checkbox jcc-checkbox--bordered">
               <input class="usa-checkbox__input" id="checkbox-0" type="checkbox" name="checkbox-0" value="checkbox-0">
               <label class="usa-checkbox__label" for="checkbox-0">Adult</label>
@@ -25,6 +25,7 @@ name_change:
               <input class="usa-checkbox__input" id="checkbox-2" type="checkbox" name="checkbox-2" value="checkbox-2">
               <label class="usa-checkbox__label" for="checkbox-2">One or more minor child</label>
             </div>
+          </div>
           </div>'
   questions:
     - label: "Adult"

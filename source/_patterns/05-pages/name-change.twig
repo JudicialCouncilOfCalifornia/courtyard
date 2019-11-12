@@ -1,3 +1,4 @@
+{% include '@organisms/global/header/header.twig' %}
 {% include '@molecules/blocks/hero/hero.twig' with {
   title: name_change.title,
   lead: name_change.lead,
@@ -9,23 +10,27 @@
   breadcrumbs: name_change.breadcrumbs
 } %}
 
-<div class="jcc-hero__options">
-  <h3>Check all that apply:</h3>
-  {% for question in name_change.questions %}
-    <section class="jcc-hero__options-section" data-checkbox-id="{{question.id}}">
-      {% for option in question.options %}
-        {% include '@atoms/forms/checkbox.twig' with {
-          label: option.label,
-          id: option.id,
-          name: option.name,
-          bordered: true
-        } %}
+<div class="jcc-choice-section">
+  <div class="jcc-choice-section__container">
+    <div class="jcc-hero__options jcc-form">
+      <h3 class="jcc-header-group__title">Check all that apply:</h3>
+      {% for question in name_change.questions %}
+        <section class="jcc-hero__options-section jcc-form-group__options" data-checkbox-id="{{question.id}}">
+          {% for option in question.options %}
+            {% include '@atoms/forms/checkbox.twig' with {
+              label: option.label,
+              id: option.id,
+              name: option.name,
+              bordered: true
+            } %}
+          {% endfor %}
+        </section>
       {% endfor %}
-    </section>
-  {% endfor %}
-  {% include '@atoms/buttons/button.twig' with {
-      text: 'Submit',
-      style: 'primary',
-      url: '#'
-  } %}
+      {% include '@atoms/buttons/button.twig' with {
+          text: 'Submit',
+          style: 'primary',
+          url: '#'
+      } %}
+    </div>
+  </div>
 </div>
