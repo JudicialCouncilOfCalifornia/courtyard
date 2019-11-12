@@ -13435,6 +13435,12 @@ a:visited {
   position: relative;
 }
 
+.jcc-card--has-icon .jcc-card__media svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .jcc-card--has-icon .jcc-card__media:before {
   background-color: #fef0c8 ;
   content: "";
@@ -13447,45 +13453,12 @@ a:visited {
   position: absolute;
 }
 
-.jcc-filelist {
-  padding-bottom: 1.5rem ;
-  padding-top: 1.5rem ;
-  padding-left: 3rem ;
-  padding-right: 3rem ;
-  background-color: white ;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #c9c9c9 ;
-  border-style: solid;
-  border-radius: 0.5rem ;
-  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
-          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+.jcc-card__excerpt ul {
+  line-height: 1.2 ;
 }
 
-.jcc-filelist__title {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.49rem;
-}
-
-.jcc-filelist__list {
-  margin-bottom: 0;
-  margin-top: 0;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.jcc-filelist__item {
-  padding-bottom: 0.5rem ;
-  padding-top: 0.5rem ;
-}
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+.jcc-card__excerpt li {
+  margin-bottom: 0.5rem;
 }
 
 .jcc-hero {
@@ -13625,6 +13598,62 @@ a:visited {
   width: 100% ;
 }
 
+.jcc-link-list {
+  padding-left: 0 ;
+  padding-right: 0 ;
+}
+
+.jcc-link-list__item {
+  padding-bottom: 0.5rem ;
+  padding-top: 0.5rem ;
+  position: relative;
+}
+
+.jcc-link-list__icon {
+  position: absolute;
+  left: -24px;
+}
+
+.jcc-link-list--files {
+  padding-left: 3rem ;
+}
+
+.jcc-link-list--files .jcc-link-list__list {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.jcc-list-block {
+  padding-bottom: 1.5rem ;
+  padding-top: 1.5rem ;
+  padding-left: 3rem ;
+  padding-right: 3rem ;
+  background-color: white ;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c9c9c9 ;
+  border-style: solid;
+  border-radius: 0.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+}
+
+.jcc-list-block__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49rem;
+}
+
 .jcc-list-group__item + .jcc-list-group__item {
   padding-top: 1.5rem ;
 }
@@ -13722,6 +13751,10 @@ a:visited {
 
 .jcc-postcard--has-background-color--dark > a:visited {
   color: #ffe396 ;
+}
+
+.jcc-postcard__media {
+  margin-bottom: 1rem ;
 }
 
 .jcc-postcard__container {
@@ -13832,6 +13865,12 @@ a:visited {
 .jcc-timeline-item__media img {
   z-index: 2;
   position: relative;
+}
+
+.jcc-timeline-item__media svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .jcc-timeline-item__media:before {
@@ -15283,6 +15322,12 @@ h3.jcc-header-group__title {
 .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media img {
   z-index: 2;
   position: relative;
+}
+
+.jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media:before {
@@ -21154,6 +21199,10 @@ h3.jcc-header-group__title {
     position: absolute;
     top: 0;
   }
+  .jcc-timeline-item__media {
+    position: absolute;
+    top: 0;
+  }
   .jcc-timeline {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -24383,9 +24432,6 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
-  .jcc-filelist {
-    max-width: 60ex ;
-  }
   .jcc-hero__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -24437,6 +24483,9 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
+  .jcc-list-block {
+    max-width: 60ex ;
+  }
   .jcc-postcard__image {
     text-align: right;
     display: -webkit-box;
@@ -24447,6 +24496,7 @@ h3.jcc-header-group__title {
             justify-content: flex-end;
   }
   .jcc-postcard__media {
+    margin-bottom: 0 ;
     -webkit-box-ordinal-group: 1000;
         -ms-flex-order: 999 ;
             order: 999 ;
@@ -25011,10 +25061,6 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
   }
-  .jcc-filelist__title {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.37rem;
-  }
   .jcc-hero__content {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.99rem;
@@ -25026,6 +25072,10 @@ h3.jcc-header-group__title {
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
+  }
+  .jcc-list-block__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.37rem;
   }
   .jcc-postcard--has-background-color--light,
   .jcc-postcard--has-background-color--dark {
