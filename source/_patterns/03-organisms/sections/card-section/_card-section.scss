@@ -34,6 +34,10 @@
     @include grid-row;
     @include grid-gap;
   }
+
+  .jcc-cards__item {
+    @include u-margin-bottom(3);
+  }
 }
 
 .jcc-cards-section--has-two-columns,
