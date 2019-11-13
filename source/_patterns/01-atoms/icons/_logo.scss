@@ -1,4 +1,4 @@
 .jcc-logo {
-  height: 100px;
-  width: 100px;
+  @include u-height(100px);
+  @include u-width(100px);
 }
