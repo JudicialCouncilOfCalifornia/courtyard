@@ -9,7 +9,7 @@
 
   .jcc-card__media {
     @include media-icon();
-    margin-right: 2rem;
+    @include u-margin-right(4);
   }
 }
 
