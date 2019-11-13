@@ -12,36 +12,36 @@
 
 .jcc-postcard__image {
   @include u-border(1px, "base-light");
-  position: relative;
+  @include u-position('relative');
 
   @include at-media(desktop) {
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
+    @include u-text('right');
+    @include u-display('flex');
+    @include u-flex('justify');
   }
 
   img {
-    display: block;
+    @include u-display('block')
   }
 }
 
 .jcc-postcard--has-background-image {
   @include u-padding-y(6);
-  position: relative;
+  @include u-position('relative');
 
   .jcc-postcard__media {
     @include cover-image();
   }
 
   .jcc-postcard__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    @include u-position('absolute');
+    @include u-top(0);
+    @include u-right(0);
+    @include u-bottom(0);
+    @include u-left(0);
+    @include u-width('full');
+    @include u-height('full');
+    @include u-overflow('hidden');
   }
 
   .jcc-postcard__content {
@@ -54,7 +54,7 @@
 
   .jcc-postcard__row {
     > * {
-      padding: 0;
+      @include u-padding(0);
     }
   }
 }
@@ -108,22 +108,23 @@
   @include u-padding-y(0.5);
   @include u-padding-x(2);
   @include u-bg("primary-dark");
-  left: 0rem;
-  bottom: 0rem;
+  @include u-left(0);
+  @include u-bottom(0);
 
   @include at-media(desktop) {
-    right: 0rem;
-    left: auto;
+    @include u-right(0);
+    @include u-left(0);
   }
 }
 
 .jcc-postcard__content {
   @include u-line-height("body", 4);
-  position: relative;
+  @include u-position('relative');
 
   @include at-media(desktop) {
     display: flex;
-    align-items: center;
+    @include u-display('flex');
+    @include u-text('center');
   }
 }
 
@@ -137,7 +138,7 @@
 .jcc-postcard__media,
 .jcc-postcard__content {
   @include u-width(full);
-  position: relative;
+  @include u-position('relative');
 
   @include at-media(desktop) {
     @include grid-col(6);
