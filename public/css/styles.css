@@ -15039,19 +15039,19 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
-.jcc-full-modal[data-a11y-dialog-native] .jcc-full-modal__backdrop {
+.jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
   display: none;
 }
 
-.jcc-full-modal__dialog[open] {
+.jcc-modal__dialog[open] {
   display: block;
 }
 
-.jcc-full-modal [aria-hidden="true"] {
+.jcc-modal [aria-hidden="true"] {
   display: none;
 }
 
-.jcc-full-modal__dialog::-webkit-backdrop {
+.jcc-modal__dialog::-webkit-backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -15060,8 +15060,8 @@ h3.jcc-header-group__title {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.jcc-full-modal__backdrop,
-.jcc-full-modal__dialog::backdrop {
+.jcc-modal__backdrop,
+.jcc-modal__dialog::backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -15070,7 +15070,7 @@ h3.jcc-header-group__title {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.jcc-full-modal__dialog {
+.jcc-modal__dialog {
   padding: 1rem ;
   min-height: 80%;
   margin: 5% auto;
@@ -15084,14 +15084,14 @@ h3.jcc-header-group__title {
           box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.jcc-full-modal__close-button {
+.jcc-modal__close-button {
   position: absolute;
   webkit-appearance: none;
   top: 0;
   right: 0;
 }
 
-.jcc-full-modal__trigger {
+.jcc-modal__trigger {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   color: #28a0cb;
@@ -15109,30 +15109,37 @@ h3.jcc-header-group__title {
   text-decoration: none;
 }
 
-.jcc-full-modal__trigger:hover {
+.jcc-modal__trigger:hover {
   color: #009ec1;
 }
 
-.jcc-full-modal__trigger:active {
+.jcc-modal__trigger:active {
   color: #59b9de;
 }
 
-.jcc-full-modal__trigger:focus {
+.jcc-modal__trigger:focus {
   outline: 0.25rem solid #face00;
   outline-offset: 0;
 }
 
-.jcc-full-modal__trigger:visited {
+.jcc-modal__trigger:visited {
   color: #07648d;
 }
 
-.jcc-full-modal__trigger:hover, .jcc-full-modal__trigger:active {
+.jcc-modal__trigger:hover, .jcc-modal__trigger:active {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
   text-decoration: underline;
+}
+
+.jcc-modal--full .jcc-modal__dialog {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
 }
 
 .jcc-steps-section {
@@ -25073,10 +25080,10 @@ h3.jcc-header-group__title {
   .jcc-choice-section__container .jcc-form-group__options {
     max-width: 75%;
   }
-  .jcc-full-modal__dialog {
+  .jcc-modal__dialog {
     padding: 3rem ;
   }
-  .jcc-full-modal__close-button {
+  .jcc-modal__close-button {
     top: 32px;
     right: 32px;
   }
