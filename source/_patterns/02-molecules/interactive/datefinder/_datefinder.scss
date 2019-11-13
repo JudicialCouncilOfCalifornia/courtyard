@@ -1,5 +1,5 @@
 .jcc-datefinder {
-  @include u-padding-y(1);
+  @include u-padding-y(3);
   @include u-padding-x(4);
   @include card-border();
 
@@ -17,19 +17,19 @@
 }
 
 .jcc-datefinder__content {
-  @include u-position('relative');
+  @include u-position("relative");
 }
 
 .jcc-datefinder__form {
 }
 
 .jcc-datefinder__label {
-  @include u-display('block');
+  @include u-display("block");
   @include u-margin-y(1);
 }
 
 .jcc-datefinder__input {
-  @include u-display('block');
+  @include u-display("block");
   @include u-width(full);
   @include u-padding(1);
 }
@@ -38,14 +38,30 @@
   // Temp styles
   pointer-events: none;
   font-size: 1.5rem;
-  @include u-color('primary-vivid');
-  @include u-text('bold')
-  @include u-position('absolute');
+  @include u-color("primary-vivid");
+  @include u-text("bold") @include u-position("absolute");
   @include u-right(1);
-  @include u-display('inline-block');
-  @include u-padding-y('05');
+  @include u-display("inline-block");
+  @include u-padding-y("05");
   @include u-padding-x(1);
   @include u-color(primary-light);
+
+  &:before {
+    @include u-bg("gold-5v");
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    left: 0.75rem;
+    top: 0.75rem;
+    position: absolute;
+  }
+
+  svg {
+    z-index: 2;
+    position: relative;
+  }
 }
 
 .jcc-datefinder__adjacent-dates {

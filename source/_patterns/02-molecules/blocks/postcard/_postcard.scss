@@ -11,7 +11,6 @@
 }
 
 .jcc-postcard__image {
-  @include u-border(1px, "base-light");
   @include u-position("relative");
 
   @include at-media(desktop) {
@@ -22,6 +21,7 @@
 
   img {
     @include u-display("block");
+    @include u-border(1px, "base-light");
   }
 }
 
@@ -65,7 +65,7 @@
 }
 
 .jcc-postcard--has-background-color--light {
-  @include u-bg("gray-2");
+  @include u-bg("blue-cool-5");
 }
 
 .jcc-postcard--has-background-color--dark {

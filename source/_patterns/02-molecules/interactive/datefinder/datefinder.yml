@@ -13,11 +13,11 @@ date:
   year_label: Year
 send_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "undo2"
-  title: "Undo"
+  icon: "send"
+  title: "Send"
   decorative: true
 reply_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "redo2"
-  title: "Redo"
+  icon: "reply"
+  title: "Reply"
   decorative: true
