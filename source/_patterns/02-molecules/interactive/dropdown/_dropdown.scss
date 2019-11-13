@@ -47,7 +47,7 @@
   .edd-value {
     width: calc(100% - 50px);
     @include u-display('inline-block');
-    vertical-align: middle;
+    @include u-text(middle);
     @include u-padding(1);
     @include u-margin(1, 0, 1, 1);
   }
@@ -85,7 +85,7 @@
   .edd-value,
   .edd-option,
   .edd-group-label {
-    white-space: nowrap;
+    @include u-text('no-wrap');
     text-overflow: ellipsis;
     @include u-overflow('hidden')
   }
@@ -130,16 +130,16 @@
   }
 
   .edd-root-open-above .edd-body {
-    bottom: 100%;
+    @include u-bottom('full');
   }
 
   .edd-root-open-below .edd-body {
-    top: 100%;
+    @include u-top(100%);
   }
 
   .edd-items-list {
-    overflow: auto;
-    max-height: 0;
+    @include u-overflow('auto')
+    @include u-maxh('none');
     -webkit-overflow-scrolling: touch;
   }
 
