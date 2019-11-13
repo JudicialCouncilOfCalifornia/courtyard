@@ -22,7 +22,7 @@
 
   .jcc-form-group__options {
     @include at-media("desktop") {
-      @include u-maxw(75%);
+      max-width: 75%;
     }
   }
 }

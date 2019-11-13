@@ -2,7 +2,7 @@
 
 .jcc-timeline-section {
   @include section-wrapper;
-  @include u-position('relative');
+  @include u-position("relative");
 
   .jcc-header-group {
     @include u-padding-bottom(6);
@@ -14,7 +14,7 @@
   }
 
   .slick-track {
-    @include u-padding-top(3rem);
+    padding-top: 3rem;
   }
 }
 
@@ -42,7 +42,7 @@
       @include media-icon($icon-circle-bg: "blue-70v");
 
       @include at-media(tablet) {
-        @include u-position('absolute');
+        @include u-position("absolute");
         @include u-top(0);
       }
     }
@@ -56,7 +56,7 @@
 
 .jcc-timeline-item__media {
   @include at-media(tablet) {
-    @include u-position('absolute');
+    @include u-position("absolute");
     @include u-top(0);
   }
 }
@@ -71,8 +71,7 @@
   @include at-media("tablet") {
     @include grid-row;
     // padding-top: 3rem;
-    @include u-overflow-x('auto')
-    @include u-flex('no-wrap')
+    @include u-overflow-x("auto") @include u-flex("no-wrap");
   }
 
   li {
@@ -102,7 +101,7 @@
 
   .jcc-timeline-item__media {
     @include at-media(tablet) {
-      @include u-position('absolute');
+      @include u-position("absolute");
       @include u-top(0);
     }
   }
@@ -120,14 +119,14 @@
 .jcc-timeline__scroller--left,
 .jcc-timeline__scroller--right {
   @include u-bg("gold-30v");
-  @include u-position('absolute');
-  @include u-top(3.125rem);
+  @include u-position("absolute");
   @include u-bottom(0);
-  @include u-width(3rem);
-  @include u-height(3rem);
-  z-index: 10;
   @include u-display(none);
+  top: 3.125rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
+  z-index: 10;
 
   &.is-active {
     @include at-media(tablet) {
@@ -137,7 +136,7 @@
 }
 
 .jcc-timeline__wrapper {
-  @include u-position('relative');
+  @include u-position("relative");
 }
 
 .jcc-timeline__scroller--left {
