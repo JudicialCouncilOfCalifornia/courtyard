@@ -5,7 +5,7 @@ top:
     title: "Form FL-300"
     lead: "What do these papers mean?"
     body: "<p>The other party in your family law case is asking the court to make a decision. The court set a date to hear from both sides <strong>(a “hearing”)</strong> before it makes a decision.</p>"
-    background_variant: "has-background-color--light"
+    background_variant: ""
     column_content_right: '
       <div class="jcc-jump-nav"><nav>
         <h2 class="jcc-jump-nav__title">Common Questions</h2>
