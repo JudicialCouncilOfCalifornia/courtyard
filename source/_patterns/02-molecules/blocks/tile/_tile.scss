@@ -4,8 +4,8 @@
   @include u-padding(3);
   @include u-text("base-darkest");
   @include u-shadow(2);
-  position: relative;
-  text-align: left;
+  @include u-position('relative');
+  @include u-text('left');
 }
 
 .jcc-tile__brow {
@@ -21,11 +21,11 @@
 
     &::after {
       content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      @include u-position('absolute');
+      @include u-left(0);
+      @include u-top(0);
+      @include u-right(0);
+      @include u-bottom(0);
     }
   }
 }
