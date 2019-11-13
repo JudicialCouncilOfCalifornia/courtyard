@@ -2,7 +2,7 @@
   @include responsive-h4($responsive-font-family: "heading");
   @include u-padding-bottom(2);
   @include u-text("italic");
-  @include u-display('block');
+  @include u-display("block");
 }
 
 .jcc-dropdown {
@@ -18,19 +18,17 @@
   }
 
   .edd-root {
-    @include u-display('inline-block');
-    @include u-position('relative');
-    @include u-width('full')
-    user-select: none;
+    @include u-display("inline-block");
+    @include u-position("relative");
+    @include u-width("full") user-select: none;
   }
 
   .edd-root-disabled {
   }
 
   .edd-head {
-    @include u-position('relative');
-    @include u-overflow('hidden')
-    @include u-border(2px, "blue-80");
+    @include u-position("relative");
+    @include u-overflow("hidden") @include u-border(2px, "blue-80");
     @include u-bg("white");
   }
 
@@ -46,7 +44,7 @@
 
   .edd-value {
     width: calc(100% - 50px);
-    @include u-display('inline-block');
+    @include u-display("inline-block");
     @include u-text(middle);
     @include u-padding(1);
     @include u-margin(1, 0, 1, 1);
@@ -54,9 +52,9 @@
 
   .edd-arrow {
     // This will be replaced by the proper icon
-    @include u-position('absolute');
-    @include u-width(18px);
-    @include u-height(10px);
+    @include u-position("absolute");
+    width: 18px;
+    height: 10px;
     top: calc(50% - 5px);
     right: calc(24px - 9px);
     transition: transform 150ms;
@@ -66,13 +64,13 @@
   .edd-arrow::before {
     // This will be replaced by the proper icon
     content: "";
-    @include u-position('absolute');
-    @include u-width(13px);
-    @include u-height(13px);
+    @include u-position("absolute");
+    @include u-right(0);
+    top: -5px;
+    width: 13px;
+    height: 13px;
     border-right: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
-    @include u-top(-5px);
-    @include u-right(0);
     transform: rotate(45deg);
     transform-origin: 50% 25%;
   }
@@ -85,9 +83,9 @@
   .edd-value,
   .edd-option,
   .edd-group-label {
-    @include u-text('no-wrap');
+    @include u-text("no-wrap");
+    @include u-overflow("hidden");
     text-overflow: ellipsis;
-    @include u-overflow('hidden')
   }
 
   .edd-root:not(.edd-root-disabled) .edd-value,
@@ -96,32 +94,32 @@
   }
 
   .edd-select {
-    @include u-position('absolute');
-    opacity: 0;
-    @include u-width('full');
-    @include u-left(-100%);
+    @include u-position("absolute");
+    @include u-width("full");
     @include u-top(0);
+    left: -100%;
+    opacity: 0;
   }
 
   .edd-root-native .edd-select {
     @include u-left(0);
     @include u-top(0);
-    @include u-width('full');
-    @include u-height('full');
+    @include u-width("full");
+    @include u-height("full");
   }
 
   .edd-body {
     @include u-border(1px, "gray-cool-10");
-    opacity: 0;
-    @include u-position('absolute');
+    @include u-position("absolute");
     @include u-left(0);
-    @include u-right(0);
-    pointer-events: none;
-    @include u-overflow('hidden')
+    @include u-overflow("hidden");
     @include u-margin-y(1);
     @include u-margin-x(0);
+    @include u-right(0);
+    @include u-bg("white");
+    opacity: 0;
+    pointer-events: none;
     z-index: 999;
-    @include u-bg('white')
   }
 
   .edd-root-open .edd-body {
@@ -130,16 +128,16 @@
   }
 
   .edd-root-open-above .edd-body {
-    @include u-bottom('full');
+    @include u-bottom("full");
   }
 
   .edd-root-open-below .edd-body {
-    @include u-top(100%);
+    top: 100%;
   }
 
   .edd-items-list {
-    @include u-overflow('auto')
-    @include u-maxh('none');
+    @include u-overflow("auto");
+    @include u-maxh("none");
     -webkit-overflow-scrolling: touch;
   }
 

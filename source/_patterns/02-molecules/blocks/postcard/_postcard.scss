@@ -12,36 +12,36 @@
 
 .jcc-postcard__image {
   @include u-border(1px, "base-light");
-  @include u-position('relative');
+  @include u-position("relative");
 
   @include at-media(desktop) {
-    @include u-text('right');
-    @include u-display('flex');
-    @include u-flex('justify');
+    @include u-text("right");
+    @include u-display("flex");
+    @include u-flex("justify-end");
   }
 
   img {
-    @include u-display('block')
+    @include u-display("block");
   }
 }
 
 .jcc-postcard--has-background-image {
   @include u-padding-y(6);
-  @include u-position('relative');
+  @include u-position("relative");
 
   .jcc-postcard__media {
     @include cover-image();
   }
 
   .jcc-postcard__image {
-    @include u-position('absolute');
+    @include u-position("absolute");
     @include u-top(0);
     @include u-right(0);
     @include u-bottom(0);
     @include u-left(0);
-    @include u-width('full');
-    @include u-height('full');
-    @include u-overflow('hidden');
+    @include u-width("full");
+    @include u-height("full");
+    @include u-overflow("hidden");
   }
 
   .jcc-postcard__content {
@@ -119,12 +119,12 @@
 
 .jcc-postcard__content {
   @include u-line-height("body", 4);
-  @include u-position('relative');
+  @include u-position("relative");
 
   @include at-media(desktop) {
     display: flex;
-    @include u-display('flex');
-    @include u-text('center');
+    @include u-display("flex");
+    @include u-text("center");
   }
 }
 
@@ -138,7 +138,7 @@
 .jcc-postcard__media,
 .jcc-postcard__content {
   @include u-width(full);
-  @include u-position('relative');
+  @include u-position("relative");
 
   @include at-media(desktop) {
     @include grid-col(6);
