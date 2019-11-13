@@ -6,15 +6,15 @@
 .jcc-breadcrumb__item {
   @include responsive-lead();
   @include u-padding-right(1);
-  @include u-display('inline');
+  @include u-display("inline");
 
   a {
     @include u-text("cyan-40v");
 
     &:after {
+      @include u-display("inline-block");
       content: "/";
-      @include u-display('inline-block');
-      @include u-margin-left(0.6275rem);
+      margin-left: 0.6275rem;
     }
   }
 }

@@ -8,12 +8,12 @@
 
 .jcc-link-list__item {
   @include u-padding-y(1);
-  @include u-position('relative');
+  @include u-position("relative");
 }
 
 .jcc-link-list__icon {
-  @include u-position('absolute');
-  @include u-left(-24px);
+  @include u-position("absolute");
+  left: -24px;
 }
 
 .jcc-link-list--files {
@@ -24,7 +24,7 @@
 }
 
 .icon {
-  @include u-display('inline-block');
+  @include u-display("inline-block");
   @include u-width(1);
   @include u-height(1);
   stroke-width: 0;
