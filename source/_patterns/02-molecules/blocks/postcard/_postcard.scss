@@ -17,7 +17,7 @@
   @include at-media(desktop) {
     @include u-text("right");
     @include u-display("flex");
-    @include u-flex("justify-end");
+    justify-content: flex-end;
   }
 
   img {
@@ -113,7 +113,7 @@
 
   @include at-media(desktop) {
     @include u-right(0);
-    @include u-left(0);
+    @include u-left(auto);
   }
 }
 
@@ -122,9 +122,8 @@
   @include u-position("relative");
 
   @include at-media(desktop) {
-    display: flex;
     @include u-display("flex");
-    @include u-text("center");
+    align-items: center;
   }
 }
 

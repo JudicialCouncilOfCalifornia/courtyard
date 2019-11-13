@@ -24901,7 +24901,7 @@ h3.jcc-header-group__title {
     display: flex ;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end ;
+            justify-content: flex-end;
   }
   .jcc-postcard__media {
     margin-bottom: 0 ;
@@ -24925,14 +24925,15 @@ h3.jcc-header-group__title {
   }
   .jcc-postcard__tag {
     right: 0 ;
-    left: 0 ;
+    left: auto ;
   }
   .jcc-postcard__content {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     display: flex ;
-    text-align: center ;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .jcc-postcard__row {
     display: -webkit-box;
