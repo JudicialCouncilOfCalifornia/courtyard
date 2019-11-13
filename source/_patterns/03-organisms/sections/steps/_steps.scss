@@ -47,10 +47,10 @@
   li {
     @include custom-counter();
     @include custom-counter-line();
-    list-style: none;
+    @include add-list-reset
 
     @include at-media(desktop) {
-      padding-left: 6rem;
+      @include u-padding-left(6rem);
     }
   }
 }
