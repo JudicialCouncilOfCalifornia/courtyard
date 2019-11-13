@@ -1,6 +1,6 @@
 .jcc-hero {
   @include u-position("relative");
-  @include u-bg("gray-2");
+  @include u-bg("blue-5");
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");

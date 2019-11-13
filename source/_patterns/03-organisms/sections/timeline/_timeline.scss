@@ -54,13 +54,6 @@
   }
 }
 
-.jcc-timeline-item__media {
-  @include at-media(tablet) {
-    @include u-position("absolute");
-    @include u-top(0);
-  }
-}
-
 .jcc-timeline-section__container {
   @include section-container;
 }
@@ -147,7 +140,14 @@
 }
 
 .jcc-timeline__scroller-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+
   svg {
+    display: block;
+    margin: auto;
+    height: 1.75rem;
+    width: 1.75rem;
     fill: color("ink");
   }
 }

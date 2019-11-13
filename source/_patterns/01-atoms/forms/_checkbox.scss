@@ -31,8 +31,8 @@
   }
 
   .usa-checkbox__input:focus + .usa-checkbox__label {
-    @include u-outline('05');
-    @include u-outline-color('yellow-20v')
+    @include u-outline("05");
+    @include u-outline-color("yellow-20v");
     outline-offset: 0;
   }
 }
