@@ -2,7 +2,7 @@
 
 .jcc-timeline-section {
   @include section-wrapper;
-  position: relative;
+  @include u-position("relative");
 
   .jcc-header-group {
     @include u-padding-bottom(6);
@@ -42,8 +42,8 @@
       @include media-icon($icon-circle-bg: "blue-70v");
 
       @include at-media(tablet) {
-        position: absolute;
-        top: 0;
+        @include u-position("absolute");
+        @include u-top(0);
       }
     }
   }
@@ -64,8 +64,7 @@
   @include at-media("tablet") {
     @include grid-row;
     // padding-top: 3rem;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    @include u-overflow-x("auto") @include u-flex("no-wrap");
   }
 
   li {
@@ -95,15 +94,15 @@
 
   .jcc-timeline-item__media {
     @include at-media(tablet) {
-      position: absolute;
-      top: 0;
+      @include u-position("absolute");
+      @include u-top(0);
     }
   }
 }
 
 // remove line from last timeline item
 .slick-slide:last-of-type .jcc-timeline-item__title:after {
-  width: 0;
+  @include u-width(0);
 }
 
 .jcc-timeline__label {
@@ -113,31 +112,31 @@
 .jcc-timeline__scroller--left,
 .jcc-timeline__scroller--right {
   @include u-bg("gold-30v");
-  position: absolute;
-  top: 2.875rem;
-  bottom: 0;
+  @include u-position("absolute");
+  @include u-bottom(0);
+  @include u-display(none);
+  top: 3.125rem;
   width: 3rem;
   height: 3rem;
-  z-index: 10;
-  display: none;
   border-radius: 50%;
+  z-index: 10;
 
   &.is-active {
     @include at-media(tablet) {
-      display: block;
+      @include u-display(block);
     }
   }
 }
 
 .jcc-timeline__wrapper {
-  position: relative;
+  @include u-position("relative");
 }
 
 .jcc-timeline__scroller--left {
-  left: 0;
+  @include u-left(0);
 }
 .jcc-timeline__scroller--right {
-  right: 0;
+  @include u-right(0);
 }
 
 .jcc-timeline__scroller-icon {

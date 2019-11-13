@@ -14265,8 +14265,6 @@ a:visited {
 }
 
 .jcc-datefinder__icon {
-  pointer-events: none;
-  font-size: 1.5rem;
   color: #2378c3 ;
   font-weight: bold ;
   position: absolute ;
@@ -14277,6 +14275,8 @@ a:visited {
   padding-left: 0.5rem ;
   padding-right: 0.5rem ;
   color: #73b3e7 ;
+  pointer-events: none;
+  font-size: 1.5rem;
 }
 
 .jcc-datefinder__icon:before {
@@ -15085,55 +15085,58 @@ h3.jcc-header-group__title {
 }
 
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
-  display: none;
+  display: none ;
 }
 
 .jcc-modal__dialog[open] {
-  display: block;
+  display: block ;
 }
 
 .jcc-modal [aria-hidden="true"] {
-  display: none;
+  display: none ;
 }
 
 .jcc-modal__dialog::-webkit-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: fixed ;
+  top: 0 ;
+  bottom: 0 ;
+  left: 0 ;
+  right: 0 ;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .jcc-modal__backdrop,
 .jcc-modal__dialog::backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: fixed ;
+  top: 0 ;
+  bottom: 0 ;
+  left: 0 ;
+  right: 0 ;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .jcc-modal__dialog {
   padding: 1rem ;
-  min-height: 80%;
-  margin: 5% auto;
-  width: 90%;
-  max-width: 70rem;
-  position: relative;
+  margin-left: auto ;
+  margin-right: auto ;
+  position: relative ;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0;
-  -webkit-box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
-          box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  min-height: 80%;
+  width: 90%;
+  max-width: 70rem;
+  border-width: 0;
+  border-style: solid;
+  -webkit-box-shadow: 0 0.75rem 1.5rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.75rem 1.5rem 0 rgba(0, 0, 0, 0.1) ;
 }
 
 .jcc-modal__close-button {
-  position: absolute;
-  webkit-appearance: none;
-  top: 0;
-  right: 0;
+  position: absolute ;
+  top: 0 ;
+  right: 0 ;
 }
 
 .jcc-modal__trigger {
@@ -15181,10 +15184,10 @@ h3.jcc-header-group__title {
 }
 
 .jcc-modal--full .jcc-modal__dialog {
-  min-height: 100%;
-  width: 100%;
-  margin: 0;
-  max-width: 100%;
+  min-height: 100% ;
+  width: 100% ;
+  margin: 0 ;
+  max-width: 100% ;
 }
 
 .jcc-steps-section {
@@ -15317,7 +15320,10 @@ h3.jcc-header-group__title {
 .jcc-steps li {
   counter-increment: step-counter;
   position: relative;
-  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .jcc-steps li::before {
@@ -15454,7 +15460,7 @@ h3.jcc-header-group__title {
   font-size: 1.49rem;
   font-weight: normal ;
   font-style: italic ;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem ;
 }
 
 .jcc-tab-section--has-background-color--light {
@@ -15464,25 +15470,31 @@ h3.jcc-header-group__title {
 }
 
 [role="tablist"] {
-  padding: 0;
-  margin: 0;
+  margin: 0 ;
+  padding: 0 ;
 }
 
 [role="tablist"] li,
 [role="tablist"] a {
-  display: inline-block;
-  margin-right: 0.25rem;
+  display: inline-block ;
+  margin-right: 0.25rem ;
 }
 
 [role="tablist"] a {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.24rem;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-  border: 2px solid;
-  border-color: #222;
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+  padding-left: 1.25rem ;
+  padding-right: 1.25rem ;
+  position: relative ;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #1b1b1b ;
+  border-color: #2378c3 ;
+  border-style: solid;
   border-radius: 10rem;
-  position: relative;
+  text-decoration: none;
 }
 
 [role="tablist"] [aria-selected] {
@@ -15490,11 +15502,11 @@ h3.jcc-header-group__title {
 }
 
 [role="tabpanel"] {
-  padding: 0;
+  padding: 0 ;
 }
 
 [role="tabpanel"] * + * {
-  margin-top: 0.75rem;
+  margin-top: 0.75rem ;
 }
 
 .jcc-text-section {
@@ -15692,7 +15704,7 @@ h3.jcc-header-group__title {
 .jcc-timeline-section {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-timeline-section .jcc-header-group {
@@ -15831,7 +15843,7 @@ h3.jcc-header-group__title {
 }
 
 .slick-slide:last-of-type .jcc-timeline-item__title:after {
-  width: 0;
+  width: 0 ;
 }
 
 .jcc-timeline__label {
@@ -15842,26 +15854,26 @@ h3.jcc-header-group__title {
 .jcc-timeline__scroller--left,
 .jcc-timeline__scroller--right {
   background-color: #e5a000 ;
-  position: absolute;
-  top: 2.875rem;
-  bottom: 0;
+  position: absolute ;
+  bottom: 0 ;
+  display: none ;
+  top: 3.125rem;
   width: 3rem;
   height: 3rem;
-  z-index: 10;
-  display: none;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .jcc-timeline__wrapper {
-  position: relative;
+  position: relative ;
 }
 
 .jcc-timeline__scroller--left {
-  left: 0;
+  left: 0 ;
 }
 
 .jcc-timeline__scroller--right {
-  right: 0;
+  right: 0 ;
 }
 
 .jcc-timeline__scroller-icon {
@@ -21656,8 +21668,8 @@ h3.jcc-header-group__title {
     z-index: 2;
   }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
-    position: absolute;
-    top: 0;
+    position: absolute ;
+    top: 0 ;
   }
   .jcc-timeline {
     display: -webkit-box;
@@ -21665,9 +21677,9 @@ h3.jcc-header-group__title {
     display: flex ;
     -ms-flex-wrap: wrap ;
         flex-wrap: wrap ;
-    overflow-x: auto;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    overflow-x: auto ;
+    -ms-flex-wrap: nowrap ;
+        flex-wrap: nowrap ;
   }
   .jcc-timeline li {
     -webkit-box-flex: 0;
@@ -21709,12 +21721,12 @@ h3.jcc-header-group__title {
     z-index: 2;
   }
   .jcc-timeline .jcc-timeline-item__media {
-    position: absolute;
-    top: 0;
+    position: absolute ;
+    top: 0 ;
   }
   .jcc-timeline__scroller--left.is-active,
   .jcc-timeline__scroller--right.is-active {
-    display: block;
+    display: block ;
   }
 }
 
@@ -25149,6 +25161,7 @@ h3.jcc-header-group__title {
   .jcc-modal__close-button {
     top: 32px;
     right: 32px;
+    -webkit-appearance: none;
   }
   .jcc-steps-section__container {
     padding-left: 2rem ;
@@ -25849,20 +25862,23 @@ h3.jcc-header-group__title {
 @media (max-width: 550px) {
   [role="tablist"] li,
   [role="tablist"] a {
-    display: block;
-    position: static;
+    display: block ;
+    position: static ;
   }
   [role="tablist"] li {
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem ;
   }
   [role="tablist"] a {
-    border: 2px solid #222 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #1b1b1b  !important;
   }
   [role="tablist"] [aria-selected] {
-    position: static;
+    position: static ;
   }
   [role="tabpanel"] {
-    border-top: 0;
+    border-top-width: 0;
+    border-top-style: solid;
   }
 }
 

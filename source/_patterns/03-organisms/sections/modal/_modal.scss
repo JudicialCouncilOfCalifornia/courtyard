@@ -1,26 +1,26 @@
 // Disables non-native backdrop
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
-  display: none;
+  @include u-display("none");
 }
 
 // Shows the dialog window. This attr is added by the A11yDialog script.
 .jcc-modal__dialog[open] {
-  display: block;
+  @include u-display("block");
 }
 
 // Hides the dialog window. This attr is added by the A11yDialog script.
 .jcc-modal [aria-hidden="true"] {
-  display: none;
+  @include u-display("none");
 }
 
 .jcc-modal__backdrop,
 .jcc-modal__dialog::backdrop {
   // Structural Attributes
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include u-position("fixed");
+  @include u-top(0);
+  @include u-bottom(0);
+  @include u-left(0);
+  @include u-right(0);
 
   // Visual Attributes
   background-color: rgba(black, 0.2);
@@ -29,31 +29,33 @@
 .jcc-modal__dialog {
   // Structural Attributes
   @include u-padding(2);
+  @include u-margin-x("auto");
+  @include u-position("relative");
+  box-sizing: border-box;
+  margin-top: 5%;
+  margin-bottom: 5%;
   min-height: 80%;
-  margin: 5% auto;
   width: 90%;
   max-width: 70rem;
-  position: relative;
-  box-sizing: border-box;
 
   @include at-media(desktop) {
     @include u-padding(6);
   }
 
   // Visual Attributes
-  border: 0;
-  box-shadow: 8px 8px 32px rgba(black, 0.2);
+  @include u-border(0);
+  @include u-shadow(4);
 }
 
 .jcc-modal__close-button {
-  position: absolute;
-  webkit-appearance: none;
-  top: 0;
-  right: 0;
+  @include u-position("absolute");
+  @include u-top(0);
+  @include u-right(0);
 
   @include at-media(desktop) {
     top: 32px;
     right: 32px;
+    -webkit-appearance: none;
   }
 }
 
@@ -68,9 +70,9 @@
 
 .jcc-modal--full {
   .jcc-modal__dialog {
-    min-height: 100%;
-    width: 100%;
-    margin: 0;
-    max-width: 100%;
+    @include u-minh("full");
+    @include u-width("full");
+    @include u-margin(0);
+    @include u-maxw("full");
   }
 }

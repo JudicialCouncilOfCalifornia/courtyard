@@ -36,15 +36,16 @@
 
 .jcc-datefinder__icon {
   // Temp styles
-  pointer-events: none;
-  font-size: 1.5rem;
   @include u-color("primary-vivid");
-  @include u-text("bold") @include u-position("absolute");
+  @include u-text("bold");
+  @include u-position("absolute");
   @include u-right(1);
   @include u-display("inline-block");
   @include u-padding-y("05");
   @include u-padding-x(1);
   @include u-color(primary-light);
+  pointer-events: none;
+  font-size: 1.5rem;
 
   &:before {
     @include u-bg("gold-5v");
