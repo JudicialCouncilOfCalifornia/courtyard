@@ -1,11 +1,11 @@
 .jcc-form {
   &.usa-form {
-    max-width: none;
+    @include u-maxw('none');
   }
 
   .usa-checkbox,
   .usa-radio {
-    margin-bottom: 0.5rem;
+    @include u-margin-bottom(1);
   }
 }
 
@@ -13,8 +13,8 @@
   .usa-checkbox,
   .usa-radio {
     @include at-media("desktop") {
-      display: inline-block;
-      margin-right: 0.5rem;
+      @include u-display('inline-block');
+      @include u-margin-right(1);
     }
   }
 }
@@ -22,8 +22,5 @@
 .jcc-form-group__title {
   @include responsive-h4($responsive-font-family: "heading");
   @include u-text("normal");
-  margin-bottom: 1rem;
-}
-
-.jcc-form-group__option {
+  @include u-margin-bottom(2);
 }

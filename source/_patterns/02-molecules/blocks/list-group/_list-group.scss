@@ -14,7 +14,7 @@
 .jcc-list-item p {
   &:first-of-type {
     @include u-margin-bottom(0);
-    padding-bottom: 1px;
+    @include u-padding-bottom(1px);
   }
 }
 

@@ -2,11 +2,8 @@
   @include t-intro();
   @include u-measure("6");
   @include u-line-height("body", 4);
-  padding-bottom: 2.5rem;
-  margin-bottom: 0;
-
-  .jcc-read-more__content {
-  }
+  @include u-padding-bottom(5);
+  @include u-margin-bottom(0);
 }
 
 .jcc-step__title {
@@ -18,5 +15,5 @@
 }
 
 .jcc-step__excerpt {
-  margin-bottom: 1rem;
+  @include u-margin-bottom(2);
 }

@@ -13651,7 +13651,7 @@ a:visited {
   width: 3rem;
   min-width: 3rem;
   position: relative;
-  margin-right: 2rem;
+  margin-right: 2rem ;
 }
 
 .jcc-card--has-icon .jcc-card__media img {
@@ -13796,12 +13796,12 @@ a:visited {
 }
 
 .jcc-hero--has-one-column .jcc-hero__column-left {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem ;
 }
 
 .jcc-hero__columns > :last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 0 ;
+  padding-bottom: 0 ;
 }
 
 .jcc-hero--has-two-columns-half .jcc-hero__column-left,
@@ -13820,8 +13820,8 @@ a:visited {
 
 .jcc-hero__column-left > :last-child,
 .jcc-hero__column-right > :last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 0 ;
+  padding-bottom: 0 ;
 }
 
 .jcc-link-list {
@@ -13830,17 +13830,17 @@ a:visited {
 }
 
 .jcc-link-list__list {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem ;
 }
 
 .jcc-link-list__item {
   padding-bottom: 0.5rem ;
   padding-top: 0.5rem ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-link-list__icon {
-  position: absolute;
+  position: absolute ;
   left: -24px;
 }
 
@@ -13856,9 +13856,9 @@ a:visited {
 }
 
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  display: inline-block ;
+  width: 0.5rem ;
+  height: 0.5rem ;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -13890,7 +13890,7 @@ a:visited {
 
 .jcc-list-item p:first-of-type {
   margin-bottom: 0 ;
-  padding-bottom: 1px;
+  padding-bottom: 1px ;
 }
 
 .jcc-list-item p strong {
@@ -13920,20 +13920,20 @@ a:visited {
 }
 
 .jcc-postcard__image {
-  position: relative;
+  position: relative ;
 }
 
 .jcc-postcard__image img {
+  display: block ;
   border-width: 1px;
   border-color: #c9c9c9 ;
   border-style: solid;
-  display: block;
 }
 
 .jcc-postcard--has-background-image {
   padding-bottom: 3rem ;
   padding-top: 3rem ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-postcard--has-background-image .jcc-postcard__media {
@@ -13958,14 +13958,14 @@ a:visited {
 }
 
 .jcc-postcard--has-background-image .jcc-postcard__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: absolute ;
+  top: 0 ;
+  right: 0 ;
+  bottom: 0 ;
+  left: 0 ;
+  width: 100% ;
+  height: 100% ;
+  overflow: hidden ;
 }
 
 .jcc-postcard--has-background-image .jcc-postcard__content {
@@ -13977,7 +13977,7 @@ a:visited {
 }
 
 .jcc-postcard--has-background-image .jcc-postcard__row > * {
-  padding: 0;
+  padding: 0 ;
 }
 
 .jcc-postcard--has-background-color--light,
@@ -14036,19 +14036,19 @@ a:visited {
   padding-left: 1rem ;
   padding-right: 1rem ;
   background-color: #0b4778 ;
-  left: 0rem;
-  bottom: 0rem;
+  left: 0 ;
+  bottom: 0 ;
 }
 
 .jcc-postcard__content {
   line-height: 1.5 ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-postcard__media,
 .jcc-postcard__content {
   width: 100% ;
-  position: relative;
+  position: relative ;
 }
 
 .jcc-step {
@@ -14056,8 +14056,8 @@ a:visited {
   font-size: 1.12rem;
   max-width: 88ex ;
   line-height: 1.5 ;
-  padding-bottom: 2.5rem;
-  margin-bottom: 0;
+  padding-bottom: 2.5rem ;
+  margin-bottom: 0 ;
 }
 
 .jcc-step__title {
@@ -14071,7 +14071,7 @@ a:visited {
 }
 
 .jcc-step__excerpt {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem ;
 }
 
 .jcc-tile {
@@ -14083,8 +14083,8 @@ a:visited {
   color: #1b1b1b ;
   -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
           box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1) ;
-  position: relative;
-  text-align: left;
+  position: relative ;
+  text-align: left ;
 }
 
 .jcc-tile__brow {
@@ -14103,11 +14103,11 @@ a:visited {
 
 .jcc-tile__title a::after {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute ;
+  left: 0 ;
+  top: 0 ;
+  right: 0 ;
+  bottom: 0 ;
 }
 
 .jcc-tile.is-secondary {
@@ -14161,23 +14161,23 @@ a:visited {
 }
 
 .jcc-form.usa-form {
-  max-width: none;
+  max-width: none ;
 }
 
 .jcc-form .usa-checkbox,
 .jcc-form .usa-radio {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem ;
 }
 
 .jcc-form-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49rem;
   font-weight: normal ;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem ;
 }
 
 .summary-results .jcc-header-group {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem ;
 }
 
 .summary-results .jcc-header-group__title {
@@ -14185,7 +14185,7 @@ a:visited {
   font-size: 1.49rem;
   font-weight: normal ;
   font-style: italic ;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem ;
 }
 
 .jcc-accordion__heading-container {
@@ -14213,7 +14213,7 @@ a:visited {
   font-size: 1.49rem;
   font-weight: normal ;
   font-style: italic ;
-  background-color: transparent;
+  background-color: transparent ;
 }
 
 .jcc-accordion__content-container .usa-accordion__content {
@@ -14249,30 +14249,33 @@ a:visited {
 }
 
 .jcc-datefinder__content {
-  position: relative;
+  position: relative ;
 }
 
 .jcc-datefinder__label {
-  display: block;
+  display: block ;
   margin-bottom: 0.5rem ;
   margin-top: 0.5rem ;
 }
 
 .jcc-datefinder__input {
-  display: block;
+  display: block ;
   width: 100% ;
   padding: 0.5rem ;
 }
 
 .jcc-datefinder__icon {
   pointer-events: none;
-  position: absolute;
-  right: 8px;
-  color: blue;
-  font-weight: bold;
   font-size: 1.5rem;
-  display: inline-block;
-  padding: 4px 8px;
+  color: #2378c3 ;
+  font-weight: bold ;
+  position: absolute ;
+  right: 0.5rem ;
+  display: inline-block ;
+  padding-bottom: 0.25rem ;
+  padding-top: 0.25rem ;
+  padding-left: 0.5rem ;
+  padding-right: 0.5rem ;
   color: #73b3e7 ;
 }
 
@@ -14314,15 +14317,15 @@ a:visited {
   font-size: 1.49rem;
   padding-bottom: 1rem ;
   font-style: italic ;
-  display: block;
+  display: block ;
 }
 
 .jcc-dropdown .edd-root,
 .jcc-dropdown .edd-root *,
 .jcc-dropdown .edd-root *::before,
 .jcc-dropdown .edd-root *::after {
-  margin: 0;
-  padding: 0;
+  margin: 0 ;
+  padding: 0 ;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -14330,9 +14333,9 @@ a:visited {
 }
 
 .jcc-dropdown .edd-root {
-  display: inline-block;
-  position: relative;
-  width: 100%;
+  display: inline-block ;
+  position: relative ;
+  width: 100% ;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -14340,8 +14343,8 @@ a:visited {
 }
 
 .jcc-dropdown .edd-head {
-  position: relative;
-  overflow: hidden;
+  position: relative ;
+  overflow: hidden ;
   border-width: 2px;
   border-color: #1f303e ;
   border-style: solid;
@@ -14356,14 +14359,14 @@ a:visited {
 
 .jcc-dropdown .edd-value {
   width: calc(100% - 50px);
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-block ;
+  vertical-align: middle ;
   padding: 0.5rem ;
   margin: 0.5rem ;
 }
 
 .jcc-dropdown .edd-arrow {
-  position: absolute;
+  position: absolute ;
   width: 18px;
   height: 10px;
   top: calc(50% - 5px);
@@ -14377,13 +14380,13 @@ a:visited {
 
 .jcc-dropdown .edd-arrow::before {
   content: "";
-  position: absolute;
+  position: absolute ;
+  right: 0 ;
+  top: -5px;
   width: 13px;
   height: 13px;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
-  top: -5px;
-  right: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 50% 25%;
@@ -14398,9 +14401,9 @@ a:visited {
 .jcc-dropdown .edd-value,
 .jcc-dropdown .edd-option,
 .jcc-dropdown .edd-group-label {
-  white-space: nowrap;
+  white-space: nowrap ;
+  overflow: hidden ;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .jcc-dropdown .edd-root:not(.edd-root-disabled) .edd-value,
@@ -14409,33 +14412,36 @@ a:visited {
 }
 
 .jcc-dropdown .edd-select {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
+  position: absolute ;
+  width: 100% ;
+  top: 0 ;
   left: -100%;
-  top: 0;
+  opacity: 0;
 }
 
 .jcc-dropdown .edd-root-native .edd-select {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0 ;
+  top: 0 ;
+  width: 100% ;
+  height: 100% ;
 }
 
 .jcc-dropdown .edd-body {
   border-width: 1px;
   border-color: #dcdee0 ;
   border-style: solid;
+  position: absolute ;
+  left: 0 ;
+  overflow: hidden ;
+  margin-bottom: 0.5rem ;
+  margin-top: 0.5rem ;
+  margin-left: 0 ;
+  margin-right: 0 ;
+  right: 0 ;
+  background-color: white ;
   opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
   pointer-events: none;
-  overflow: hidden;
-  margin: 8px 0;
   z-index: 999;
-  background: white;
 }
 
 .jcc-dropdown .edd-root-open .edd-body {
@@ -14444,7 +14450,7 @@ a:visited {
 }
 
 .jcc-dropdown .edd-root-open-above .edd-body {
-  bottom: 100%;
+  bottom: 100% ;
 }
 
 .jcc-dropdown .edd-root-open-below .edd-body {
@@ -14452,8 +14458,8 @@ a:visited {
 }
 
 .jcc-dropdown .edd-items-list {
-  overflow: auto;
-  max-height: 0;
+  overflow: auto ;
+  max-height: none ;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -14507,11 +14513,11 @@ a:visited {
 .jcc-read-more {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex ;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
 }
 
 .jcc-read-more__trigger {
@@ -14569,7 +14575,7 @@ a:visited {
 }
 
 .jcc-read-more__content[aria-hidden="true"] {
-  display: none;
+  display: none ;
 }
 
 .jcc-read-more__trigger[aria-expanded="true"] .icon {
@@ -14580,14 +14586,14 @@ a:visited {
 
 .jcc-read-more--inverted .jcc-read-more__content {
   -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+      -ms-flex-order: -1 ;
+          order: -1 ;
 }
 
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  display: inline-block ;
+  width: 1rem ;
+  height: 1rem ;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -14622,7 +14628,7 @@ a:visited {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
   padding-right: 0.5rem ;
-  display: inline;
+  display: inline ;
 }
 
 .jcc-breadcrumb__item a {
@@ -14630,7 +14636,7 @@ a:visited {
 }
 
 .jcc-breadcrumb__item a:after {
-  display: inline-block;
+  display: inline-block ;
   content: "/";
   margin-left: 0.6275rem;
 }
@@ -14834,11 +14840,11 @@ a:visited {
 }
 
 .slicknav_menu {
-  display: block;
+  display: block ;
 }
 
 .slicknav_menu.slicknav_menu--desktop {
-  display: none;
+  display: none ;
 }
 
 .slicknav_menu {
@@ -14883,13 +14889,13 @@ a:visited {
 }
 
 .jcc-header-group > :first-child {
-  margin-top: 0;
-  padding-top: 0;
+  margin-top: 0 ;
+  padding-top: 0 ;
 }
 
 .jcc-header-group > :last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 0 ;
+  padding-bottom: 0 ;
 }
 
 .jcc-header-group__title {
@@ -24940,10 +24946,10 @@ h3.jcc-header-group__title {
     max-width: 60ex ;
   }
   .jcc-postcard__image {
-    text-align: right;
+    text-align: right ;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex ;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -24969,13 +24975,13 @@ h3.jcc-header-group__title {
     padding-right: 2rem ;
   }
   .jcc-postcard__tag {
-    right: 0rem;
-    left: auto;
+    right: 0 ;
+    left: auto ;
   }
   .jcc-postcard__content {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex ;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -25002,8 +25008,8 @@ h3.jcc-header-group__title {
   }
   .jcc-form--inline .usa-checkbox,
   .jcc-form--inline .usa-radio {
-    display: inline-block;
-    margin-right: 0.5rem;
+    display: inline-block ;
+    margin-right: 0.5rem ;
   }
   .jcc-accordion__heading-container .usa-accordion__heading {
     padding-left: 2rem ;
@@ -25021,15 +25027,15 @@ h3.jcc-header-group__title {
     font-size: 1.49rem;
   }
   .slicknav_menu {
-    display: none;
+    display: none ;
   }
   .slicknav_menu.slicknav_menu--desktop {
-    display: block;
+    display: block ;
   }
   .slicknav_nav {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex ;
   }
   .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;

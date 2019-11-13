@@ -6,13 +6,13 @@
 .jcc-breadcrumb__item {
   @include responsive-lead();
   @include u-padding-right(1);
-  display: inline;
+  @include u-display("inline");
 
   a {
     @include u-text("cyan-40v");
 
     &:after {
-      display: inline-block;
+      @include u-display("inline-block");
       content: "/";
       margin-left: 0.6275rem;
     }

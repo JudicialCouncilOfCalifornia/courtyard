@@ -1,24 +1,24 @@
 @import "../../node_modules/slicknav/scss/slicknav.scss";
 
 .slicknav_menu {
-  display: block;
+  @include u-display('block');
 
   @include at-media("desktop") {
-    display: none;
+    @include u-display('none');
   }
 }
 
 .slicknav_menu.slicknav_menu--desktop {
-  display: none;
+  @include u-display('none');
 
   @include at-media("desktop") {
-    display: block;
+    @include u-display('block');
   }
 }
 
 .slicknav_nav {
   @include at-media("desktop") {
-    display: flex;
+    @include u-display('flex');
   }
 }
 
