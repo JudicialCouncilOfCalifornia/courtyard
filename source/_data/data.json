@@ -71,7 +71,7 @@
     },
     {
       "label": "primary-lighter",
-      "color": "#e1f3f8"
+      "color": "#E7F2F5"
     },
     {
       "label": "primary-light",
@@ -95,11 +95,11 @@
     },
     {
       "label": "secondary-lighter",
-      "color": "#E7F2F5"
+      "color": "#e7f6f8"
     },
     {
       "label": "secondary-light",
-      "color": "#e7f6f8"
+      "color": "#449DAC"
     },
     {
       "label": "secondary",

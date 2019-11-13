@@ -27,7 +27,8 @@
 
 .jcc-switchboard--has-background-color--dark {
   @include dark-background();
-  @include u-border-top("gold-30v", 1);
+  @include u-border-top("gold-30v");
+  @include u-border-top("05");
 }
 
 .jcc-switchboard__container {

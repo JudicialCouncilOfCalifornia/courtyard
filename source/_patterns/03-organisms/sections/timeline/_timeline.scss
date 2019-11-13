@@ -14,7 +14,7 @@
   }
 
   .slick-track {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -48,7 +48,7 @@
     }
   }
 
-  .jcc-full-modal__trigger,
+  .jcc-modal__trigger,
   .jcc-timeline-item__trigger {
     @include dark-background-link();
   }
@@ -85,7 +85,13 @@
     }
   }
 
-  .jcc-timeline-item__title {
+  .jcc-timeline-item {
+    @include at-media(tablet) {
+      @include u-padding-right(3);
+    }
+  }
+
+  .jcc-timeline-item {
     @include at-media(tablet) {
       @include timeline-line();
       @include timeline-dot();
@@ -115,7 +121,7 @@
   @include u-position("absolute");
   @include u-bottom(0);
   @include u-display(none);
-  top: 3.125rem;
+  top: 2.25rem;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;

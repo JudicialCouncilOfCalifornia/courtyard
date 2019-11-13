@@ -30,9 +30,10 @@ h3.jcc-header-group__title {
   @include responsive-lead();
   @include u-line-height("body", 3);
   @include u-margin-bottom(1.5);
+  @extend .usa-prose;
 
   @include at-media("desktop") {
-    // max-width: 75%;
+    // @include grid-col(8);
   }
 }
 

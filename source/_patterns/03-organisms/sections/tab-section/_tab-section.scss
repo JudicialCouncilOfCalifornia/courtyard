@@ -28,10 +28,9 @@
 [role="tablist"] a {
   @include u-font("sans", 8);
   @include u-padding-y(2);
-  @include u-padding-x("205");
+  @include u-padding-x(4);
   @include u-position("relative");
   @include u-border(2px, solid, "gray-90");
-  @include u-border("primary-vivid");
   border-radius: 10rem;
   text-decoration: none;
 }

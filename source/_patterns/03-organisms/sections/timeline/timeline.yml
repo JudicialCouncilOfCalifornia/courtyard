@@ -7,7 +7,7 @@ timeline:
       label: "Strategy Details"
       url: "#"
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
   - title: "Decide how to negotiate"
     excerpt: "<p>Decide how you wish to negotiate. Common choices are verbally, usually by phone, or in writing.</p>"
@@ -16,19 +16,19 @@ timeline:
       id: "timeline-full-modal-2"
       modal_content: "Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum."
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
   - title: Reach an agreement
     excerpt: "<p>Always confirm the terms of an agreement in writing. Often a settlement will be put into a written settlement agreement. If the debt collector prepares the settlement agreement, read it very carefully, and be sure that you understand and agree to any terms in the settlement before you sign. You are allowed to consult an attorney before signing any settlement agreement.</p>"
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
   - title: Create a settlement strategy
     excerpt: "<p>Before you enter into a negotiation, you should create a strategy as to how you will enter into negotiations.</p>"
     read_more:
       label: "Strategy Details"
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
   - title: "Decide how to negotiate"
     excerpt: "<p>Decide how you wish to negotiate. Common choices are verbally, usually by phone, or in writing.</p>"
@@ -37,12 +37,12 @@ timeline:
       id: "timeline-full-modal-3"
       modal_content: "Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum."
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
   - title: Reach an agreement
     excerpt: "<p>Always confirm the terms of an agreement in writing. Often a settlement will be put into a written settlement agreement. If the debt collector prepares the settlement agreement, read it very carefully, and be sure that you understand and agree to any terms in the settlement before you sign. You are allowed to consult an attorney before signing any settlement agreement.</p>"
     img:
-      src: "../../images/court.svg"
+      src: "../../images/file.svg"
       alt: "Alt text"
 background_variant: ""
 left_icon:
