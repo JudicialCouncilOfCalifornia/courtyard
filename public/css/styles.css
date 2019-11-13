@@ -21718,7 +21718,7 @@ h3.jcc-header-group__title {
   .jcc-timeline .jcc-timeline-item {
     padding-right: 1.5rem ;
   }
-  .jcc-timeline .jcc-timeline-item:after {
+  .jcc-timeline .jcc-timeline-item__title:after {
     position: absolute;
     top: -1.5rem;
     right: auto;
@@ -21731,7 +21731,7 @@ h3.jcc-header-group__title {
     border: 1px solid #005ea2;
     z-index: 1;
   }
-  .jcc-timeline .jcc-timeline-item:before {
+  .jcc-timeline .jcc-timeline-item__title:before {
     position: absolute;
     top: -2.25rem;
     right: auto;

@@ -91,7 +91,7 @@
     }
   }
 
-  .jcc-timeline-item {
+  .jcc-timeline-item__title {
     @include at-media(tablet) {
       @include timeline-line();
       @include timeline-dot();
