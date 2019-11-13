@@ -15823,6 +15823,19 @@ h3.jcc-header-group__title {
   fill: #1b1b1b;
 }
 
+.jcc-hero__options-section {
+  display: none;
+}
+
+.jcc-hero__options {
+  background: #fff;
+  display: none;
+}
+
+.jcc-hero__results {
+  display: none;
+}
+
 .jcc-service__tabs {
   display: none;
 }
