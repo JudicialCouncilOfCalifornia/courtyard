@@ -1,5 +1,5 @@
 .jcc-datefinder {
-  @include u-padding-y(1);
+  @include u-padding-y(3);
   @include u-padding-x(4);
   @include card-border();
 
@@ -45,6 +45,23 @@
   display: inline-block;
   padding: 4px 8px;
   @include u-color(primary-light);
+
+  &:before {
+    @include u-bg("gold-5v");
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    left: 0.75rem;
+    top: 0.75rem;
+    position: absolute;
+  }
+
+  svg {
+    z-index: 2;
+    position: relative;
+  }
 }
 
 .jcc-datefinder__adjacent-dates {

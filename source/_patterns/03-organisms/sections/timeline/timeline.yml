@@ -47,11 +47,11 @@ timeline:
 background_variant: ""
 left_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "arrow_back"
+  icon: "chevron_left"
   title: "Left"
   decorative: true
 right_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "arrow_forward"
+  icon: "chevron_right"
   title: "Right"
   decorative: true

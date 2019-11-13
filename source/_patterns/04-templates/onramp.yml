@@ -5,7 +5,7 @@ top:
     title: "Form FL-210/FL-200"
     lead: "What do these papers mean?"
     body: "<p>If you received this summons and petition, it means someone has gone to court to establish that you or they are the parent of a child.</p>"
-    background_variant: "has-background-color--light"
+    background_variant: ""
     column_content_right: '
       <div class="jcc-jump-nav"><nav>
         <h2 class="jcc-jump-nav__title">Common Questions</h2>

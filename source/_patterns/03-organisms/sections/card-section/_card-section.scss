@@ -22,6 +22,17 @@
 
 .jcc-cards-section--has-background-color--dark {
   @include dark-background($dark-background-color: "cyan-50");
+
+  .jcc-card__media {
+    // @include media-icon($icon-circle-bg: "cyan-60");
+  }
+
+  .jcc-card {
+    @include u-padding-y(3);
+    @include u-padding-x(4);
+    @include card-border();
+    @include u-text("ink");
+  }
 }
 
 .jcc-cards__container {
