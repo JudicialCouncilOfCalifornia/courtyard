@@ -13,7 +13,7 @@
     <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger" {{ url_attributes }}>{{ read_more.label }}</a>
   
   {% elseif read_more.id %}
-    {% include '@organisms/sections/full-modal/full-modal.twig' with {
+    {% include '@organisms/sections/modal/modal.twig' with {
       modal_id: read_more.id,
       button_label: read_more.label,
       modal_content: read_more.modal_content 

@@ -56,8 +56,8 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
+  @include u-margin(0);
+  @include u-padding(0);
 }
 
 a {
@@ -83,7 +83,7 @@ a {
 
 .usa-prose {
   > p {
-    max-width: none;
+    @include u-maxw(none);
   }
 }
 

@@ -1,11 +1,13 @@
+{% set tag = tag|default('h2') %}
+
 <div class="jcc-list-block">
-  <h2 class="jcc-list-block__title">{{ title }}</h2>
+  {% if title %}
+    <{{ tag }} class="jcc-list-block__title">{{ title }}</{{ tag }}>
+  {% endif %}
+
   {% include '@molecules/blocks/link-list/link-list.twig' with {
     files_list: list.files_list,
-    items: list.items
+    items: list.items,
+    icon: list.icon
   } %}
-
 </div>
-
-
-

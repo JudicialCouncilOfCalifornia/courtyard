@@ -8,7 +8,7 @@
   }
 
   .usa-radio__input:focus + .usa-radio__label::before {
-    outline: none;
+    @include u-outline(0);
   }
 
   .usa-radio__input:checked + .usa-radio__label {
@@ -23,7 +23,7 @@
   }
 
   .usa-radio__input:focus + .usa-radio__label {
-    outline: 0.25rem solid color("yellow-20v");
-    outline-offset: 0;
+    @include u-outline("05");
+    @include u-outline-color("yellow-20v") outline-offset: 0;
   }
 }

@@ -1,5 +1,5 @@
 .usa-checkbox__label {
-  margin: 0;
+  @include u-margin(0);
 
   &::before {
   }
@@ -15,7 +15,7 @@
   }
 
   .usa-checkbox__input:focus + .usa-checkbox__label::before {
-    outline: none;
+    @include u-outline(0);
   }
 
   .usa-checkbox__input:checked + .usa-checkbox__label {
@@ -31,7 +31,7 @@
   }
 
   .usa-checkbox__input:focus + .usa-checkbox__label {
-    outline: 0.25rem solid color("yellow-20v");
-    outline-offset: 0;
+    @include u-outline("05");
+    @include u-outline-color("yellow-20v") outline-offset: 0;
   }
 }
