@@ -16,7 +16,7 @@
     @include responsive-h4($responsive-font-family: "heading");
     @include u-text("normal");
     @include u-text("italic");
-    background-color: transparent;
+    @include u-bg('transparent')
   }
 }
 
