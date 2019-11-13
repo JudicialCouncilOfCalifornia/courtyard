@@ -3,17 +3,17 @@
 }
 
 .jcc-link-list__list {
-  padding-left: 1.5rem;
+  @include u-padding-left(3);
 }
 
 .jcc-link-list__item {
   @include u-padding-y(1);
-  position: relative;
+  @include u-position('relative');
 }
 
 .jcc-link-list__icon {
-  position: absolute;
-  left: -24px;
+  @include u-position('absolute');
+  @include u-left(-24px);
 }
 
 .jcc-link-list--files {
@@ -24,9 +24,9 @@
 }
 
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  @include u-display('inline-block');
+  @include u-width(1);
+  @include u-height(1);
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
