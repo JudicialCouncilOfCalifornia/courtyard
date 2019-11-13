@@ -73,14 +73,14 @@
   }
 
   .jcc-hero__column-left {
-    margin-bottom: 2rem;
+    @include u-margin-bottom(4);
   }
 }
 
 .jcc-hero__columns {
   > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
+    @include u-margin-bottom(0);
+    @include u-padding-bottom(0);
   }
 }
 
@@ -135,8 +135,8 @@
 .jcc-hero__column-left,
 .jcc-hero__column-right {
   > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
+    @include u-margin-bottom(0);
+    @include u-padding-bottom(0);
   }
 }
 
