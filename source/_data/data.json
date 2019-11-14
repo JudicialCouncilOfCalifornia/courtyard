@@ -39,11 +39,11 @@
   "theme_color": [
     {
       "label": "base-lightest",
-      "color": "#f9f9f9"
+      "color": "#F9F9F9"
     },
     {
       "label": "base-lighter",
-      "color": "#f3f3f3"
+      "color": "#F3F3F3"
     },
     {
       "label": "base-light",
@@ -63,19 +63,19 @@
     },
     {
       "label": "base-darkest",
-      "color": "#1b1b1b"
+      "color": "#2E2E2E"
     },
     {
       "label": "ink",
-      "color": "#1b1b1b"
+      "color": "#1B1B1B"
     },
     {
       "label": "primary-lighter",
-      "color": "#E7F2F5"
+      "color": "#EFF6FB"
     },
     {
       "label": "primary-light",
-      "color": "#73b3e7"
+      "color": "#73B3E7"
     },
     {
       "label": "primary",
@@ -95,7 +95,7 @@
     },
     {
       "label": "secondary-lighter",
-      "color": "#e7f6f8"
+      "color": "#E7F2F5"
     },
     {
       "label": "secondary-light",
@@ -107,15 +107,15 @@
     },
     {
       "label": "secondary-dark",
-      "color": "#2a646d"
+      "color": "#2A646D"
     },
     {
       "label": "secondary-darker",
-      "color": "#2c4a4e"
+      "color": "#2C4A4E"
     },
     {
       "label": "accent-warm-light",
-      "color": "#fef0c8"
+      "color": "#FEF0C8"
     },
     {
       "label": "accent-warm",
@@ -129,31 +129,31 @@
   "state_color": [
     {
       "label": "info-lighter",
-      "color": "#e7f6f8"
+      "color": "#E1F3F8"
     },
     {
       "label": "info-light",
-      "color": "#9ddfeb"
+      "color": "#97D4EA"
     },
     {
       "label": "info",
-      "color": "#00BDE3"
+      "color": "#59B9DE"
     },
     {
       "label": "info-dark",
-      "color": "#009BC2"
+      "color": "#28A0CB"
     },
     {
       "label": "info-darker",
-      "color": "#2e6276"
+      "color": "#07648D"
     },
     {
       "label": "error-lighter",
-      "color": "#fde0db"
+      "color": "#FDE0DB"
     },
     {
       "label": "error-light",
-      "color": "#fdb8ae"
+      "color": "#FDB8AE"
     },
     {
       "label": "error",
@@ -161,19 +161,19 @@
     },
     {
       "label": "error-dark",
-      "color": "#b51d09"
+      "color": "#B51D09"
     },
     {
       "label": "error-darker",
-      "color": "#8b1303"
+      "color": "#8B1303"
     },
     {
       "label": "warning-lighter",
-      "color": "#faf3d1"
+      "color": "#FAF3D1"
     },
     {
       "label": "warning-light",
-      "color": "#fee685"
+      "color": "#FEE685"
     },
     {
       "label": "warning",
@@ -181,27 +181,27 @@
     },
     {
       "label": "warning-dark",
-      "color": "#e6c74c"
+      "color": "#E6C74C"
     },
     {
       "label": "warning-darker",
-      "color": "#a88f48"
+      "color": "#A88F48"
     },
     {
       "label": "success-lighter",
-      "color": "#e3f5e1"
+      "color": "#E3F5E1"
     },
     {
       "label": "success-light",
-      "color": "#b7f5bd"
+      "color": "#B7F5BD"
     },
     {
       "label": "success",
-      "color": "#21c834"
+      "color": "#21C834"
     },
     {
       "label": "success-dark",
-      "color": "#00a91c"
+      "color": "#00A91C"
     },
     {
       "label": "success-darkerr",
@@ -209,15 +209,15 @@
     },
     {
       "label": "disabled-light",
-      "color": "#e6e6e6"
+      "color": "#E6E6E6"
     },
     {
       "label": "disabled",
-      "color": "#c9c9c9"
+      "color": "#C9C9C9"
     },
     {
       "label": "disabled-dark",
-      "color": "#adadad"
+      "color": "#ADADAD"
     }
   ],
   "headergroup": {
