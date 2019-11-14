@@ -41,7 +41,7 @@
   @include u-position(absolute);
   @include u-right(1);
   @include u-display(inline-block);
-  @include u-padding-y(05);
+  @include u-padding-y("05");
   @include u-padding-x(1);
   @include u-color(primary-light);
   pointer-events: none;

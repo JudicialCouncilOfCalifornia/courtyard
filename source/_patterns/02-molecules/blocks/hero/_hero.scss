@@ -3,7 +3,7 @@
   @include u-bg(primary-lighter);
 
   .jcc-breadcrumbs-nav {
-    @include u-display("flex");
+    @include u-display(flex);
   }
 }
 

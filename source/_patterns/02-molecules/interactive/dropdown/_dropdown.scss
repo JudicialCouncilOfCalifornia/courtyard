@@ -65,9 +65,9 @@
 
   .edd-arrow::before {
     // This will be replaced by the proper icon
-    content: "";
     @include u-position(absolute);
     @include u-right(0);
+    content: "";
     top: -5px;
     width: 13px;
     height: 13px;

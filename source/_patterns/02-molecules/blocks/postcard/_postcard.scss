@@ -105,7 +105,7 @@
   @extend .usa-tag;
   @include u-pin-bottom;
   @include u-font-size(body, 8);
-  @include u-padding-y(0.5);
+  @include u-padding-y("0.5");
   @include u-padding-x(2);
   @include u-bg(primary-dark);
   @include u-left(0);
