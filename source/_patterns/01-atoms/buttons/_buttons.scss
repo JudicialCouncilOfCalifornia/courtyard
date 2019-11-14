@@ -6,7 +6,7 @@
 .usa-button--big {
   @include u-padding-y(2.5);
   @include u-padding-x(4);
-  @include u-font-size("body", 8);
+  @include u-font-size(body, 8);
   @include u-radius(0);
 }
 
@@ -16,17 +16,17 @@
 
 .usa-button--accent-warm {
   @include u-text(ink);
-  background-color: color("warning");
+  background-color: color(accent-warm);
 
   &:hover,
   &.usa-button--hover {
     @include u-text(ink);
-    background-color: color("warning-dark");
+    background-color: color(accent-warm-dark);
   }
 
   &:active,
   &.usa-button--active {
     @include u-text("white");
-    background-color: color("warning-darker");
+    background-color: color(accent-warm-darker);
   }
 }

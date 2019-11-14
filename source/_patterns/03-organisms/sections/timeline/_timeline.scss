@@ -2,7 +2,7 @@
 
 .jcc-timeline-section {
   @include section-wrapper;
-  @include u-position("relative");
+  @include u-position(relative);
 
   .jcc-header-group {
     @include u-padding-bottom(6);
@@ -14,7 +14,7 @@
   }
 
   .slick-track {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .jcc-timeline-section--has-background-color--light {
-  @include u-bg("blue-5");
+  @include u-bg(primary-lighter);
 }
 
 .jcc-timeline-section--has-background-color--dark {
@@ -33,22 +33,22 @@
   .jcc-timeline {
     .jcc-timeline-item__title {
       @include at-media(tablet) {
-        @include timeline-line($timeline-line-border: "gold-20v");
-        @include timeline-dot($timeline-dot-bg: "blue-50v", $timeline-dot-border: "gold-20v");
+        @include timeline-line($timeline-line-border: accent-warm);
+        @include timeline-dot($timeline-dot-bg: primary-vivid, $timeline-dot-border: accent-warm);
       }
     }
 
     .jcc-timeline-item__media {
-      @include media-icon($icon-circle-bg: "blue-70v");
+      @include media-icon($icon-circle-bg: primary-dark);
 
       @include at-media(tablet) {
-        @include u-position("absolute");
+        @include u-position(absolute);
         @include u-top(0);
       }
     }
   }
 
-  .jcc-full-modal__trigger,
+  .jcc-modal__trigger,
   .jcc-timeline-item__trigger {
     @include dark-background-link();
   }
@@ -61,10 +61,11 @@
 .jcc-timeline {
   @include unstyled-list();
 
-  @include at-media("tablet") {
+  @include at-media(tablet) {
     @include grid-row;
     // padding-top: 3rem;
-    @include u-overflow-x("auto") @include u-flex("no-wrap");
+    @include u-overflow-x(auto);
+    @include u-flex(no-wrap);
   }
 
   li {
@@ -85,6 +86,12 @@
     }
   }
 
+  .jcc-timeline-item {
+    @include at-media(tablet) {
+      @include u-padding-right(3);
+    }
+  }
+
   .jcc-timeline-item__title {
     @include at-media(tablet) {
       @include timeline-line();
@@ -94,7 +101,7 @@
 
   .jcc-timeline-item__media {
     @include at-media(tablet) {
-      @include u-position("absolute");
+      @include u-position(absolute);
       @include u-top(0);
     }
   }
@@ -111,11 +118,11 @@
 
 .jcc-timeline__scroller--left,
 .jcc-timeline__scroller--right {
-  @include u-bg("gold-30v");
-  @include u-position("absolute");
+  @include u-bg(accent-warm-dark);
+  @include u-position(absolute);
   @include u-bottom(0);
   @include u-display(none);
-  top: 3.125rem;
+  top: 2.25rem;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -129,7 +136,7 @@
 }
 
 .jcc-timeline__wrapper {
-  @include u-position("relative");
+  @include u-position(relative);
 }
 
 .jcc-timeline__scroller--left {
@@ -148,6 +155,6 @@
     margin: auto;
     height: 1.75rem;
     width: 1.75rem;
-    fill: color("ink");
+    fill: color(ink);
   }
 }

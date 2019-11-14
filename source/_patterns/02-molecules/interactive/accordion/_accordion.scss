@@ -2,9 +2,9 @@
 }
 
 .jcc-accordion__heading-container {
-  @include u-bg("gray-2");
-  @include u-border-bottom("gray-5");
-  @include u-border-bottom("1px");
+  @include u-bg(base-lightest);
+  @include u-border-bottom(base-lighter);
+  @include u-border-bottom(1px);
 
   .usa-accordion__heading {
     @include section-container;
@@ -13,10 +13,10 @@
   .usa-accordion__button {
     @include u-padding-y(5);
     @include u-padding-x(0);
-    @include responsive-h4($responsive-font-family: "heading");
-    @include u-text("normal");
-    @include u-text("italic");
-    @include u-bg('transparent')
+    @include responsive-h4($responsive-font-family: heading);
+    @include u-text(normal);
+    @include u-text(italic);
+    @include u-bg("transparent");
   }
 }
 

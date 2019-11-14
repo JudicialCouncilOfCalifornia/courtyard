@@ -1,22 +1,22 @@
 // Disables non-native backdrop
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
-  @include u-display("none");
+  @include u-display(none);
 }
 
 // Shows the dialog window. This attr is added by the A11yDialog script.
 .jcc-modal__dialog[open] {
-  @include u-display("block");
+  @include u-display(block);
 }
 
 // Hides the dialog window. This attr is added by the A11yDialog script.
 .jcc-modal [aria-hidden="true"] {
-  @include u-display("none");
+  @include u-display(none);
 }
 
 .jcc-modal__backdrop,
 .jcc-modal__dialog::backdrop {
   // Structural Attributes
-  @include u-position("fixed");
+  @include u-position(fixed);
   @include u-top(0);
   @include u-bottom(0);
   @include u-left(0);
@@ -29,8 +29,8 @@
 .jcc-modal__dialog {
   // Structural Attributes
   @include u-padding(2);
-  @include u-margin-x("auto");
-  @include u-position("relative");
+  @include u-margin-x(auto);
+  @include u-position(relative);
   box-sizing: border-box;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -48,7 +48,7 @@
 }
 
 .jcc-modal__close-button {
-  @include u-position("absolute");
+  @include u-position(absolute);
   @include u-top(0);
   @include u-right(0);
 
@@ -64,15 +64,15 @@
 
 .jcc-modal__trigger {
   @include button-unstyled;
-  @include u-font-size("sans", "md");
+  @include u-font-size(sans, md);
   text-decoration: none;
 }
 
 .jcc-modal--full {
   .jcc-modal__dialog {
-    @include u-minh("full");
-    @include u-width("full");
+    @include u-minh(full);
+    @include u-width(full);
     @include u-margin(0);
-    @include u-maxw("full");
+    @include u-maxw(full);
   }
 }

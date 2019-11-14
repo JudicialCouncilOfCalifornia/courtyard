@@ -17,22 +17,19 @@
 }
 
 .jcc-text-section--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg(secondary-lighter);
 }
 
 .jcc-text-section--has-background-color--dark {
-  @include dark-background($dark-background-color: "cyan-50");
+  @include dark-background($dark-background-color: secondary);
 }
 
 .jcc-text-section__container {
   @include section-container;
 }
 
-.jcc-text-section__header {
-}
-
 .jcc-text-section__content {
-  @include u-line-height("body", 4);
+  @include u-line-height(body, 4);
   @extend .usa-prose;
 }
 
@@ -44,19 +41,19 @@
 .jcc-text-section__column-left {
   @include u-margin-bottom(4);
 
-  @include at-media("desktop") {
+  @include at-media(desktop) {
     @include u-margin-bottom(0);
   }
 }
 
 .jcc-text-section--has-one-column {
-  @include u-measure("6");
+  @include u-measure(6);
 }
 
 .jcc-text-section--has-two-columns-half,
 .jcc-text-section--has-two-columns-threequarter {
   .jcc-text-section__content {
-    @include at-media("desktop") {
+    @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
     }

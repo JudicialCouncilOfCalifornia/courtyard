@@ -17,11 +17,11 @@
 }
 
 .jcc-cards-section--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg(secondary-lighter);
 }
 
 .jcc-cards-section--has-background-color--dark {
-  @include dark-background($dark-background-color: "cyan-50");
+  @include dark-background($dark-background-color: secondary);
 
   .jcc-card__media {
     // @include media-icon($icon-circle-bg: "cyan-60");
@@ -31,7 +31,7 @@
     @include u-padding-y(3);
     @include u-padding-x(4);
     @include card-border();
-    @include u-text("ink");
+    @include u-text(ink);
   }
 }
 
@@ -41,7 +41,7 @@
 
 .jcc-cards {
   @include unstyled-list();
-  @include at-media("desktop") {
+  @include at-media(desktop) {
     @include grid-row;
     @include grid-gap;
   }
@@ -54,7 +54,7 @@
 .jcc-cards-section--has-two-columns,
 .jcc-cards-section--has-three-columns {
   .jcc-cards {
-    @include at-media("desktop") {
+    @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
     }

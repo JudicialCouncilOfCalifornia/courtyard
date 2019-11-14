@@ -7,21 +7,21 @@
   }
 
   .jcc-header-group__title {
-    @include responsive-h4($responsive-font-family: "heading");
-    @include u-text("normal", "italic");
+    @include responsive-h4($responsive-font-family: heading);
+    @include u-text(normal, italic);
   }
 }
 
 .jcc-choice-section--has-background-color--light {
   @include section-wrapper-bg;
-  @include u-bg("blue-cool-5");
+  @include u-bg(secondary-lighter);
 }
 
 .jcc-choice-section__container {
   @include section-container;
 
   .jcc-form-group__options {
-    @include at-media("desktop") {
+    @include at-media(desktop) {
       max-width: 75%;
     }
   }
