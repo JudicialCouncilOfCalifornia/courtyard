@@ -1,6 +1,6 @@
 .jcc-form {
   &.usa-form {
-    @include u-maxw('none');
+    @include u-maxw(none);
   }
 
   .usa-checkbox,
@@ -12,15 +12,15 @@
 .jcc-form--inline {
   .usa-checkbox,
   .usa-radio {
-    @include at-media("desktop") {
-      @include u-display('inline-block');
+    @include at-media(desktop) {
+      @include u-display(inline-block);
       @include u-margin-right(1);
     }
   }
 }
 
 .jcc-form-group__title {
-  @include responsive-h4($responsive-font-family: "heading");
-  @include u-text("normal");
+  @include responsive-h4($responsive-font-family: heading);
+  @include u-text(normal);
   @include u-margin-bottom(2);
 }

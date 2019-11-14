@@ -11,37 +11,37 @@
 }
 
 .jcc-postcard__image {
-  @include u-position("relative");
+  @include u-position(relative);
 
   @include at-media(desktop) {
-    @include u-text("right");
-    @include u-display("flex");
+    @include u-text(right);
+    @include u-display(flex);
     justify-content: flex-end;
   }
 
   img {
-    @include u-display("block");
-    @include u-border(1px, "base-light");
+    @include u-display(block);
+    @include u-border(1px, base-light);
   }
 }
 
 .jcc-postcard--has-background-image {
   @include u-padding-y(6);
-  @include u-position("relative");
+  @include u-position(relative);
 
   .jcc-postcard__media {
     @include cover-image();
   }
 
   .jcc-postcard__image {
-    @include u-position("absolute");
+    @include u-position(absolute);
     @include u-top(0);
     @include u-right(0);
     @include u-bottom(0);
     @include u-left(0);
-    @include u-width("full");
-    @include u-height("full");
-    @include u-overflow("hidden");
+    @include u-width(full);
+    @include u-height(full);
+    @include u-overflow(hidden);
   }
 
   .jcc-postcard__content {
@@ -65,11 +65,11 @@
 }
 
 .jcc-postcard--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg(secondary-lighter);
 }
 
 .jcc-postcard--has-background-color--dark {
-  @include dark-background($dark-background-color: "cyan-50");
+  @include dark-background($dark-background-color: secondary);
 }
 
 .jcc-postcard__media {
@@ -77,14 +77,14 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
-    @include u-order("last");
+    @include u-order(last);
   }
 }
 
 .jcc-postcard--has-header-left {
   .jcc-postcard__media {
     @include at-media(desktop) {
-      @include u-order("last");
+      @include u-order(last);
     }
   }
 }
@@ -92,22 +92,22 @@
 .jcc-postcard--has-header-right {
   .jcc-postcard__media {
     @include at-media(desktop) {
-      @include u-order("first");
+      @include u-order(first);
     }
   }
 }
 
 .jcc-postcard__container {
-  @include grid-container("widescreen");
+  @include grid-container(widescreen);
 }
 
 .jcc-postcard__tag {
   @extend .usa-tag;
   @include u-pin-bottom;
-  @include u-font-size("body", 8);
+  @include u-font-size(body, 8);
   @include u-padding-y(0.5);
   @include u-padding-x(2);
-  @include u-bg("primary-dark");
+  @include u-bg(primary-dark);
   @include u-left(0);
   @include u-bottom(0);
 
@@ -118,17 +118,17 @@
 }
 
 .jcc-postcard__content {
-  @include u-line-height("body", 4);
-  @include u-position("relative");
+  @include u-line-height(body, 4);
+  @include u-position(relative);
 
   @include at-media(desktop) {
-    @include u-display("flex");
+    @include u-display(flex);
     align-items: center;
   }
 }
 
 .jcc-postcard__row {
-  @include at-media("desktop") {
+  @include at-media(desktop) {
     @include grid-row;
     @include grid-gap;
   }
@@ -137,7 +137,7 @@
 .jcc-postcard__media,
 .jcc-postcard__content {
   @include u-width(full);
-  @include u-position("relative");
+  @include u-position(relative);
 
   @include at-media(desktop) {
     @include grid-col(6);

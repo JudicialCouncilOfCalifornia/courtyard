@@ -124,6 +124,10 @@
     {
       "label": "accent-warm-dark",
       "color": "#E5A000"
+    },
+    {
+      "label": "accent-warm-darker",
+      "color": "#C2850C"
     }
   ],
   "state_color": [

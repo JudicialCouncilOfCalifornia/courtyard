@@ -1,6 +1,6 @@
 .jcc-hero {
-  @include u-position("relative");
-  @include u-bg("blue-5");
+  @include u-position(relative);
+  @include u-bg(primary-lighter);
 
   .jcc-breadcrumbs-nav {
     @include u-display("flex");
@@ -20,7 +20,7 @@
 }
 
 .jcc-hero--has-background-color--light {
-  @include u-bg("blue-cool-5");
+  @include u-bg(secondary-lighter);
 }
 
 .jcc-hero--has-background-color--dark {
@@ -37,9 +37,9 @@
 }
 
 .jcc-hero__container {
-  @include grid-container("widescreen");
+  @include grid-container(widescreen);
 
-  @include at-media("desktop") {
+  @include at-media(desktop) {
   }
 }
 
@@ -48,7 +48,7 @@
   @include u-padding-top(10);
   @include u-padding-bottom(6);
   @include u-line-height("body", 6);
-  @include u-position("relative");
+  @include u-position(relative);
 }
 
 .jcc-hero__title {
@@ -67,7 +67,7 @@
   .jcc-hero__lead,
   .jcc-body,
   .jcc-hero__column-right {
-    @include at-media("desktop") {
+    @include at-media(desktop) {
       @include u-measure("6");
     }
   }
@@ -87,7 +87,7 @@
 .jcc-hero--has-two-columns-half,
 .jcc-hero--has-two-columns-threequarter {
   .jcc-hero__columns {
-    @include at-media("desktop") {
+    @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
     }

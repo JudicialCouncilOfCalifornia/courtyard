@@ -22,12 +22,12 @@
 }
 
 .jcc-switchboard--has-background-color--light {
-  @include u-bg("blue-5");
+  @include u-bg(primary-lighter);
 }
 
 .jcc-switchboard--has-background-color--dark {
   @include dark-background();
-  @include u-border-top("gold-30v");
+  @include u-border-top(accent-warm-dark);
   @include u-border-top("05");
 }
 
@@ -37,22 +37,22 @@
 
 .jcc-switchboard__tiles {
   @include add-list-reset;
-  @include at-media("desktop") {
+  @include at-media(desktop) {
     @include grid-row;
     @include grid-gap;
   }
 
   .jcc-tile {
-    @include u-border(1px, "base-light");
+    @include u-border(1px, base-light);
     @include u-bg("white");
-    @include u-height("full");
+    @include u-height(full);
   }
 }
 
 .jcc-switchboard__tiles--secondary {
   .jcc-tile {
-    @include u-border(1px, "base-light");
-    @include u-bg("base-lightest");
+    @include u-border(1px, base-light);
+    @include u-bg(base-lightest);
   }
 }
 
