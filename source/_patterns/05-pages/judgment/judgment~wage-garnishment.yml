@@ -58,7 +58,7 @@ entries:
     type: "steps"
     headergroup:
       brow: ""
-      title: "Steps to pay in installments"
+      title: ""
       lead: ""
     steps:
       - title: "Prepare the claim of exemption"
