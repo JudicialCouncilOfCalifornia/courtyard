@@ -14350,7 +14350,7 @@ a:visited {
   width: 18px;
   height: 10px;
   top: calc(50% - 5px);
-  right: calc(24px - 9px);
+  right: 24px;
   -webkit-transition: -webkit-transform 150ms;
   transition: -webkit-transform 150ms;
   transition: transform 150ms;
