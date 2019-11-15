@@ -113,7 +113,7 @@ $aspect-width: 16;
 @mixin timeline-dot($timeline-dot-bg: "primary", $timeline-dot-border: "primary") {
   &:before {
     position: absolute;
-    top: -2.25rem;
+    top: -1.925rem;
     right: auto;
     bottom: auto;
     left: 0;
@@ -121,10 +121,10 @@ $aspect-width: 16;
     border: 2px solid color($timeline-dot-border);
     border-radius: 50%;
     content: "";
-    height: 1.5rem;
+    height: 1rem;
     line-height: 1;
     text-align: center;
-    width: 1.5rem;
+    width: 1rem;
     z-index: 2;
   }
 }

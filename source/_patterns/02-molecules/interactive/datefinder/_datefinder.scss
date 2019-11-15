@@ -36,28 +36,14 @@
 
 .jcc-datefinder__icon {
   // Temp styles
-  @include u-color(primary-vivid);
+  @include u-color(info-darker);
   @include u-text(bold);
-  @include u-position(absolute);
   @include u-right(1);
-  @include u-display(inline-block);
-  @include u-padding-y("05");
-  @include u-padding-x(1);
-  @include u-color(primary-light);
   pointer-events: none;
   font-size: 1.5rem;
 
-  &:before {
-    @include u-bg(accent-warm-light);
-    content: "";
-    display: block;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-    left: 0.75rem;
-    top: 0.75rem;
-    position: absolute;
-  }
+  @include media-icon();
+  @include u-position(absolute);
 
   svg {
     z-index: 2;
@@ -72,6 +58,7 @@
 .jcc-datefinder__date {
   @include u-font(body, lg);
   @include u-margin-y(1);
+  @include u-color(info-darker);
 }
 
 .jcc-datefinder__form,

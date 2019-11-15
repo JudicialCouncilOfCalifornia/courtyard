@@ -5,9 +5,6 @@
     @include u-text(primary-dark);
     @include has-dash();
   }
-
-  .jcc-header-group__body {
-  }
 }
 
 .jcc-postcard__image {
@@ -73,7 +70,7 @@
 }
 
 .jcc-postcard__media {
-  @include u-margin-bottom(2);
+  @include u-margin-bottom(4);
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
@@ -85,6 +82,12 @@
   .jcc-postcard__media {
     @include at-media(desktop) {
       @include u-order(last);
+    }
+  }
+
+  .jcc-header-group {
+    @include at-media(desktop) {
+      @include u-padding-right(2);
     }
   }
 }

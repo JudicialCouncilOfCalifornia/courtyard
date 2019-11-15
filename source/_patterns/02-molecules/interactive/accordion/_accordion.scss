@@ -10,6 +10,11 @@
     @include section-container;
   }
 
+  .usa-accordion__button,
+  .usa-accordion__button[aria-expanded="false"] {
+    background-size: 2rem;
+  }
+
   .usa-accordion__button {
     @include u-padding-y(5);
     @include u-padding-x(0);
@@ -24,4 +29,17 @@
   .usa-accordion__content {
     @include section-container;
   }
+}
+
+.usa-accordion__button,
+.usa-accordion__button[aria-expanded="false"] {
+  background-size: 1.5rem;
+}
+
+.usa-accordion__button {
+  background-image: url("../images/icomoon/svg/remove.svg");
+}
+
+.usa-accordion__button[aria-expanded="false"] {
+  background-image: url("../images/icomoon/svg/add.svg");
 }
