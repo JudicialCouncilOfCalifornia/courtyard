@@ -1,0 +1,159 @@
+top:
+  hero:
+    image: ""
+    alt: ""
+    title: "Bank Levy"
+    lead: "A bank levy is when the debt collector directs the sheriff to take the money in your bank account or items in a safe deposit box."
+    body: ""
+    column_content_right: ""
+    column_variant: "has-one-column"
+  breadcrumbs:
+    - url: "link.pages-judgment"
+      label: "Debt Collection"
+      url_attributes: ''
+    - url: ""
+      label: "Bank Levy"
+      url_attributes: ''
+  headergroup:
+      title: "What did the bank notice say?"
+      brow: ""
+      lead: ""
+      tag: "h4"
+  tabs:
+    - title: 'The bank levied my account'
+    - title: 'The bank attempted but did not levy my account'
+  tab_panels:
+    - entries:
+        -
+          type: "section"
+          headergroup:
+            brow: ""
+            title: ""
+          column_content_left:
+            "<h2 class=\"jcc-title--serif\">Filing a claim of exemption for bank levy</h2>
+              <p class=\"jcc-lead\">The amount taken will be up to the amount of the judgment plus interest. The levy is not continuous; it only takes the money in the account at the time of the levy. Funds deposited after the levy are not taken. You may be able to get some or all of the money levied depending on the source of the funds deposited into the account or your financial situation.</p>
+              <p>If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exemption (plus five days if the notice was sent by mail) with the sheriff performing the levy.</p>
+              "
+          column_content_right: ""
+          background_variant: "has-background-color--light" #has-background-color
+          column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+          right_column_components:
+            list_block:
+              title: Relevant Files
+              list:
+                items:
+                  - name: Claim of Exemption (form WG-006)
+                    url: "#"
+                  - name: Financial Statement (form WG-007)
+                    url: "#"
+                files_list: true
+                icon:
+                  icon_file: "../../images/icomoon/symbol-defs.svg"
+                  icon: "file"
+                  title: "File"
+                  decorative: false
+            read_more:
+              id: "what-is-judgment"
+              title: "What is judgment?"
+              content: "Lorem ipsum"
+              block_variant: true
+        -
+          type: "steps"
+          headergroup:
+            brow: ""
+            title: "Steps to pay in installments"
+            lead: ""
+          steps:
+            - title: "Prepare the claim of exemption"
+              excerpt: "Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)"
+              read_more:
+                id: "steps-target-1"
+                title: "read more"
+                content: "If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy."
+            - title: "File the claim of exemption"
+              excerpt: "File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail)"
+              read_more:
+                id: "steps-target-2"
+                title: "read more"
+                content: "read more content"
+            - title: "Wait to see if the claim of exemption is opposed"
+              excerpt: "File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail)."
+              read_more:
+                id: "steps-target-3"
+                title: "read more"
+                content: "Read more content"
+            - title: "Reply to the opposition, if any"
+              excerpt: "Serve and file your reply, if any with the court"
+              read_more:
+                id: "steps-target-4"
+                title: "read more"
+                content: "Read more content"
+            - title: "Attend the hearing, if any"
+              excerpt: "Gather your evidence. Check tentative rulings the court day before if your court uses them."
+              read_more:
+                id: "steps-target-5"
+                title: "read more"
+                content: "Read more content"
+    - entries:
+        -
+          type: "section"
+          headergroup:
+            brow: ""
+            title: ""
+          column_content_left:
+            "<h2 class=\"jcc-title--serif\">Direct-deposit federal benefit accounts</h2>
+            <p class=\"jcc-lead\">You likely received this notice because your bank account is a Social Security direct-deposit account.</p>
+            <p>Federal benefits are exempt from a bank levy, and in recent years federal regulations have required banks to look at whether an account is receiving federal benefits before levying any funds. If an account is a deposit account for federal benefits the bank then looks at the total amount of benefits deposited in the two months prior to the levy. If the balance in the account is less than the two months of benefits, the bank does not levy the account, and sends a notice of this to the account holder. If the account balance exceeded the levy amounts, then only the amount over these two months of benefits would be taken.</p>
+            <p>As long as your account balance is less than two months of the federal benefits being deposited into it, your account will remain safe from garnishment.</p>
+            "
+          column_content_right: ""
+          background_variant: "has-background-color--light" #has-background-color
+          column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+          right_column_components:
+            list_block:
+              title: Relevant Files
+              list:
+                items:
+                  - name: Claim of Exemption (form WG-006)
+                    url: "#"
+                  - name: Financial Statement (form WG-007)
+                    url: "#"
+                files_list: true
+                icon:
+                  icon_file: "../../images/icomoon/symbol-defs.svg"
+                  icon: "file"
+                  title: "File"
+                  decorative: false
+            read_more:
+              id: "what-is-judgment"
+              title: "What is judgment?"
+              content: "Lorem ipsum"
+              block_variant: true
+  switchboard:
+    background_variant: "has-background-color--dark"
+    switchboard_tiles:
+      - brow: "Wage Garnishment"
+        title: 'Someone took money from my paycheck'
+        url: 'link.pages-judgment-wage-garnishment'
+        url_attributes: ''
+      - brow: "Lien Against Property"
+        title: 'I was told I can’t sell my property'
+        url: 'link.pages-judgment-lien-against-property'
+        url_attributes: ''
+      - brow: "Bank Levy"
+        title: 'Someone tried to take money from my bank account '
+        url: 'link.pages-judgment-bank-levy'
+        url_attributes: ''
+    switchboard_tiles2:
+      - brow: "General Information"
+        title: 'I want to find out more about Debt Collection'
+        url: 'link.pages-judgment-general-information'
+        url_attributes: ''
+      - brow: "Negotiating a Settlement"
+        title: 'I want to talk with someone and work something out'
+        url: 'link.pages-judgment-negotiating-a-settlement'
+        url_attributes: ''
+      - brow: "Pay in Installments"
+        title: 'I don’t have all the money but can pay over time'
+        url: 'link.pages-judgment-pay-in-installments'
+        url_attributes: ''

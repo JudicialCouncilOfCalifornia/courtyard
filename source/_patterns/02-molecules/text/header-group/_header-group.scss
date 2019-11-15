@@ -13,10 +13,12 @@
 .jcc-header-group__title {
   @include responsive-h2();
   @include u-margin-bottom(3);
+  @include u-text(normal);
 }
 
 h3.jcc-header-group__title {
   @include responsive-h3($responsive-font-family: body);
+  @include u-text(normal);
 }
 
 .jcc-header-group__brow {

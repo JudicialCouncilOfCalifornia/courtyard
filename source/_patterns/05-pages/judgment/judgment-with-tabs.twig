@@ -1,0 +1,80 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig'  with {
+  title: top.hero.title,
+  lead: top.hero.lead,
+  body: top.hero.body,
+  column_variant: top.hero.column_variant,
+  column_content_right: top.hero.column_content_right,
+  breadcrumbs: top.breadcrumbs
+} %}
+
+<div class="jcc-tab-section tabbed">
+  <div class="jcc-tab-section__container">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      brow: top.headergroup.brow,
+      title: top.headergroup.title,
+      lead: top.headergroup.lead,
+      tag: top.headergroup.tag
+    } %}  
+
+    <ul>
+      {% for tab in top.tabs %}
+      <li>
+        <a href="#section{{ loop.index }}">{{ tab.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% for section in top.tab_panels %}
+    <section id="section{{loop.index}}" class="jcc-tab-section--has-background-color--light">
+      {% for entry in section.entries %}
+        {% if entry.type == 'section' %}
+          {# Assign the components to a variable.  Then pass the variable to the right column section. #}
+          {% if entry.right_column_components %}
+            {% set right_column_component_content %}
+              {% if entry.right_column_components.read_more %}
+              <div class="margin-bottom-4">
+                {% include "@molecules/interactive/read-more/read-more.twig" with {
+                  id: entry.right_column_components.read_more.id,
+                  title: entry.right_column_components.read_more.title,
+                  content: entry.right_column_components.read_more.content,
+                  block_variant: entry.right_column_components.read_more.block_variant
+                } %}
+              </div>
+              {% endif %}
+
+              {% if entry.right_column_components.list_block %}
+              <div class="margin-bottom-4">
+                {% include '@molecules/blocks/list-block/list-block.twig' with {
+                  title: entry.right_column_components.list_block.title,
+                  items: entry.right_column_components.list_block.list.items,
+                  files_list: entry.right_column_components.list_block.list.files_list,
+                  icon: entry.right_column_components.list_block.list.icon
+                } %}
+              </div>
+              {% endif %}
+            {% endset %}
+          {% endif %}
+
+          {% include '@organisms/sections/text-section/text-section.twig' with {
+            column_content_left: entry.column_content_left,
+            column_content_right: entry.right_column_components ? right_column_component_content : entry.column_content_right,
+            column_variant: entry.column_variant,
+            headergroup: entry.headergroup
+          } %}
+        {% elseif entry.type == 'steps' %}
+          {% include '@organisms/sections/steps/steps.twig' with {
+            headergroup: entry.headergroup,
+            steps: entry.steps
+          } %}
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endfor %}
+</div>
+
+{% include '@organisms/sections/switchboard/switchboard.twig'  with {
+  background_variant: top.switchboard.background_variant,
+  switchboard_tiles: top.switchboard.switchboard_tiles,
+  switchboard_tiles2: top.switchboard.switchboard_tiles2
+} %}
