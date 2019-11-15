@@ -14,6 +14,11 @@ top:
     - url: ""
       label: "Bank Levy"
       url_attributes: ''
+  headergroup:
+      title: "What did the bank notice say?"
+      brow: ""
+      lead: ""
+      tag: "h4"
   tabs:
     - title: 'The bank levied my account'
     - title: 'The bank attempted but did not levy my account'
@@ -25,15 +30,9 @@ top:
             brow: ""
             title: ""
           column_content_left:
-            "
-              <p class=\"font-heading-lg\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
-              low or near minimum wage, the amount taken may be less than 25%. Unfortunately, some employers miscalculate the amount below 25%.</p>
-              <p class=\"font-heading-lg\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
-              <p>If you are unable to afford the amount to be garnished from wages, a claim of exemption may reduce or stop the
-                withholding. Act quickly! If you file within ten days you might be able to prevent the garnishment from
-                starting. Even if the garnishment starts, file as early as possible, since the sheriff will hold onto funds
-                levied after filing the claim of exemption. Once the garnishment starts and funds are transferred to the debt
-                collector, it is almost impossible to get them back.</p>
+            "<h2 class=\"jcc-title--serif\">Filing a claim of exemption for bank levy</h2>
+              <p class=\"jcc-lead\">The amount taken will be up to the amount of the judgment plus interest. The levy is not continuous; it only takes the money in the account at the time of the levy. Funds deposited after the levy are not taken. You may be able to get some or all of the money levied depending on the source of the funds deposited into the account or your financial situation.</p>
+              <p>If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exemption (plus five days if the notice was sent by mail) with the sheriff performing the levy.</p>
               "
           column_content_right: ""
           background_variant: "has-background-color--light" #has-background-color
@@ -102,10 +101,10 @@ top:
             brow: ""
             title: ""
           column_content_left:
-            "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
-            judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
-            the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
-            file an Answer due to inadvertence, mistake, or excusable neglect.
+            "<h2 class=\"jcc-title--serif\">Direct-deposit federal benefit accounts</h2>
+            <p class=\"jcc-lead\">You likely received this notice because your bank account is a Social Security direct-deposit account.</p>
+            <p>Federal benefits are exempt from a bank levy, and in recent years federal regulations have required banks to look at whether an account is receiving federal benefits before levying any funds. If an account is a deposit account for federal benefits the bank then looks at the total amount of benefits deposited in the two months prior to the levy. If the balance in the account is less than the two months of benefits, the bank does not levy the account, and sends a notice of this to the account holder. If the account balance exceeded the levy amounts, then only the amount over these two months of benefits would be taken.</p>
+            <p>As long as your account balance is less than two months of the federal benefits being deposited into it, your account will remain safe from garnishment.</p>
             "
           column_content_right: ""
           background_variant: "has-background-color--light" #has-background-color

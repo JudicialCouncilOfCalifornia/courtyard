@@ -10,6 +10,13 @@
 
 <div class="jcc-tab-section tabbed">
   <div class="jcc-tab-section__container">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      brow: top.headergroup.brow,
+      title: top.headergroup.title,
+      lead: top.headergroup.lead,
+      tag: top.headergroup.tag
+    } %}  
+
     <ul>
       {% for tab in top.tabs %}
       <li>

@@ -13617,6 +13617,34 @@ a:visited {
   max-width: none ;
 }
 
+.usa-prose .jcc-title--serif, .jcc-card__excerpt .jcc-title--serif, .jcc-hero__body .jcc-title--serif, .jcc-hero__column-right .jcc-title--serif, .jcc-header-group__body .jcc-title--serif, .jcc-text-section__content .jcc-title--serif, .jcc-text-section__column-left .jcc-title--serif, .jcc-text-section__column-right .jcc-title--serif,
+.usa-prose .jcc-subtitle--serif,
+.jcc-card__excerpt .jcc-subtitle--serif,
+.jcc-hero__body .jcc-subtitle--serif,
+.jcc-hero__column-right .jcc-subtitle--serif,
+.jcc-header-group__body .jcc-subtitle--serif,
+.jcc-text-section__content .jcc-subtitle--serif,
+.jcc-text-section__column-left .jcc-subtitle--serif,
+.jcc-text-section__column-right .jcc-subtitle--serif,
+.usa-prose .jcc-card__title,
+.jcc-card__excerpt .jcc-card__title,
+.jcc-hero__body .jcc-card__title,
+.jcc-hero__column-right .jcc-card__title,
+.jcc-header-group__body .jcc-card__title,
+.jcc-text-section__content .jcc-card__title,
+.jcc-text-section__column-left .jcc-card__title,
+.jcc-text-section__column-right .jcc-card__title,
+.usa-prose .jcc-header-group__title,
+.jcc-card__excerpt .jcc-header-group__title,
+.jcc-hero__body .jcc-header-group__title,
+.jcc-hero__column-right .jcc-header-group__title,
+.jcc-header-group__body .jcc-header-group__title,
+.jcc-text-section__content .jcc-header-group__title,
+.jcc-text-section__column-left .jcc-header-group__title,
+.jcc-text-section__column-right .jcc-header-group__title {
+  font-weight: normal ;
+}
+
 .h-dash {
   position: relative;
   padding-bottom: 0.5em;
@@ -13632,11 +13660,44 @@ a:visited {
   left: 0;
 }
 
+.jcc-title--serif {
+  color: #0b4778 ;
+  position: relative;
+  padding-bottom: 0.5em;
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.99rem;
+  margin-bottom: 1.5rem ;
+}
+
+.jcc-title--serif:after {
+  background-color: #e5a000;
+  content: "";
+  height: 3px;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.jcc-subtitle--serif {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.74rem;
+  margin-bottom: 1.5rem ;
+}
+
+.jcc-lead {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.37rem;
+  line-height: 1.4 ;
+  margin-bottom: 0.75rem ;
+}
+
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
   margin-bottom: 0.75rem ;
   margin-top: 0.75rem ;
+  font-weight: normal ;
 }
 
 .jcc-card--has-icon {
@@ -14902,11 +14963,13 @@ a:visited {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.99rem;
   margin-bottom: 1.5rem ;
+  font-weight: normal ;
 }
 
 h3.jcc-header-group__title {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.74rem;
+  font-weight: normal ;
 }
 
 .jcc-header-group__brow {
@@ -24900,6 +24963,18 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
+  .jcc-title--serif {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.49rem;
+  }
+  .jcc-subtitle--serif {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.24rem;
+  }
+  .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
   .jcc-hero__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -25531,6 +25606,18 @@ h3.jcc-header-group__title {
   .t-small {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.81rem;
+  }
+  .jcc-title--serif {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
+  .jcc-subtitle--serif {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49rem;
+  }
+  .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.12rem;
   }
   .jcc-card__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;

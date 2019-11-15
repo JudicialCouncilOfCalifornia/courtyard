@@ -85,8 +85,33 @@ a {
   > p {
     @include u-maxw(none);
   }
+
+  .jcc-title--serif,
+  .jcc-subtitle--serif,
+  .jcc-card__title,
+  .jcc-header-group__title {
+    @include u-text(normal);
+  }
 }
 
 .h-dash {
   @include has-dash();
+}
+
+.jcc-title--serif {
+  @include u-text(primary-dark);
+  @include has-dash();
+  @include responsive-h2();
+  @include u-margin-bottom(3);
+}
+
+.jcc-subtitle--serif {
+  @include responsive-h3();
+  @include u-margin-bottom(3);
+}
+
+.jcc-lead {
+  @include responsive-lead();
+  @include u-line-height("body", 3);
+  @include u-margin-bottom(1.5);
 }
