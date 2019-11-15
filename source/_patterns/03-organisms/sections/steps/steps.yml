@@ -3,7 +3,30 @@ headergroup:
   lead: "Nullam at semper mauris, at rhoncus purus."
 steps:
   - title: Prepare the claim of exemption
-    excerpt: "Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)"
+    excerpt: '
+      <div class="jcc-step__excerpt"><p><strong>Complete Claim of Exemption Forms</strong></p>
+
+        <ol start="1"><li>
+          <p>Claim of Exemption&nbsp;(form WG-006)&nbsp;and a&nbsp;</p>
+          </li>
+        </ol><ol start="2"><li>
+          <p>Financial Statement&nbsp;(form WG-007).&nbsp;</p>
+          </li>
+        </ol><p>Use a guided interview to complete these forms online or use follow these&nbsp;instructions.&nbsp;&nbsp;</p>
+
+        <p><strong>Submit&nbsp;the Claim of Exemption Forms</strong></p>
+
+        <ul><li>
+          <p>Make 2 copies of your completed forms.&nbsp;</p>
+          </li>
+          <li>
+          <p>Keep one copy for yourself.&nbsp;&nbsp;</p>
+          </li>
+          <li>
+          <p>Take&nbsp;or mail&nbsp;the originals and one copy to&nbsp;the&nbsp;Levying Officer&nbsp;identified in the upper right-hand corner of the&nbsp;Earnings Withholding Order&nbsp;(form WG-002).&nbsp;&nbsp;This is usually the sheriff.&nbsp;&nbsp;It&nbsp;may or may&nbsp;not be your local sheriff.&nbsp;&nbsp;</p>
+          </li>
+        </ul><p>The sheriff keeps the original and sends a copy to the debt collector.&nbsp;</p></div>
+    '
     read_more:
       id: "steps-target-1"
       title: "What is a judgment"

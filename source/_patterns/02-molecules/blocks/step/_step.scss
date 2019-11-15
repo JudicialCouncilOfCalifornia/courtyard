@@ -16,4 +16,5 @@
 
 .jcc-step__excerpt {
   @include u-margin-bottom(2);
+  @extend .usa-prose;
 }

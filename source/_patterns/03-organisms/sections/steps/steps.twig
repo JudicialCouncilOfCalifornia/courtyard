@@ -11,7 +11,7 @@
 
       <ul class="jcc-steps">
         {% for step in steps %}
-          <li>
+          <li class="jcc-step__item">
             {% include '@molecules/blocks/step/step.twig' with {
               title: step.title,
               excerpt: step.excerpt,
