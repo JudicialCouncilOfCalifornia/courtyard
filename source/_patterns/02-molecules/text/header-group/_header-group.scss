@@ -17,28 +17,29 @@
 }
 
 h3.jcc-header-group__title {
-  @include responsive-h3($responsive-font-family: "body");
+  @include responsive-h3($responsive-font-family: body);
   @include u-text(normal);
 }
 
 .jcc-header-group__brow {
   @include t-copy();
-  @include u-text("uppercase");
-  @include u-text("ls-3");
+  @include u-text(uppercase);
+  @include u-text(ls-3);
   @include u-margin-bottom(1.5);
 }
 
 .jcc-header-group__lead {
   @include responsive-lead();
-  @include u-line-height("body", 3);
+  @include u-line-height(body, 3);
   @include u-margin-bottom(1.5);
+  @extend .usa-prose;
 
-  @include at-media("desktop") {
-    // max-width: 75%;
+  @include at-media(desktop) {
+    // @include grid-col(8);
   }
 }
 
 .jcc-header-group__body {
-  @include u-font("body", 6);
+  @include u-font(body, 6);
   @extend .usa-prose;
 }

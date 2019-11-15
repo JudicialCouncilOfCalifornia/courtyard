@@ -1,11 +1,11 @@
 .jcc-read-more {
-  @include u-display("flex");
-  @include u-flex("column");
+  @include u-display(flex);
+  @include u-flex(column);
 }
 
 .jcc-read-more__trigger {
   @include button-unstyled;
-  @include u-font-size("sans", "md");
+  @include u-font-size(sans, md);
   text-decoration: none;
   vertical-align: bottom; // Temporary Styles for icon
   // This will be replaced when the icons system is in place.
@@ -13,13 +13,13 @@
 
 .jcc-read-more__content {
   @include u-padding(3);
-  @include u-bg("blue-cool-5");
-  @include u-border-left("05", "cyan-50");
+  @include u-bg(secondary-lighter);
+  @include u-border-left("05", secondary);
   @include u-margin-top(2);
 }
 
 .jcc-read-more__content[aria-hidden="true"] {
-  @include u-display("none");
+  @include u-display(none);
 }
 
 .jcc-read-more__trigger[aria-expanded="true"] .icon {
@@ -28,13 +28,13 @@
 }
 
 .jcc-read-more--inverted .jcc-read-more__content {
-  @include u-order("first");
+  @include u-order(first);
 }
 
 // Temporary Styles for icon
 // This will be replaced when the icons system is in place.
 .icon {
-  @include u-display("inline-block");
+  @include u-display(inline-block);
   @include u-width(2);
   @include u-height(2);
   stroke-width: 0;
@@ -47,10 +47,10 @@
   .jcc-read-more__trigger {
     @include u-padding-y(3);
     @include u-padding-x(4);
-    @include u-bg("blue-cool-5");
-    @include u-radius("lg");
-    @include t-intro($responsive-font-family: "heading");
-    @include u-text("italic");
+    @include u-bg(secondary-lighter);
+    @include u-radius(lg);
+    @include t-intro($responsive-font-family: heading);
+    @include u-text(italic);
   }
 
   .jcc-read-more__content {

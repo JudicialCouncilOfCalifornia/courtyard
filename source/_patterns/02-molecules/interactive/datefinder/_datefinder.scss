@@ -3,7 +3,7 @@
   @include u-padding-x(4);
   @include card-border();
 
-  @include at-media("desktop") {
+  @include at-media(desktop) {
     @include u-measure(2);
   }
 
@@ -13,34 +13,34 @@
 }
 
 .jcc-datefinder__title {
-  @include responsive-h4($responsive-font-family: "heading");
+  @include responsive-h4($responsive-font-family: heading);
 }
 
 .jcc-datefinder__content {
-  @include u-position("relative");
+  @include u-position(relative);
 }
 
 .jcc-datefinder__form {
 }
 
 .jcc-datefinder__label {
-  @include u-display("block");
+  @include u-display(block);
   @include u-margin-y(1);
 }
 
 .jcc-datefinder__input {
-  @include u-display("block");
+  @include u-display(block);
   @include u-width(full);
   @include u-padding(1);
 }
 
 .jcc-datefinder__icon {
   // Temp styles
-  @include u-color("primary-vivid");
-  @include u-text("bold");
-  @include u-position("absolute");
+  @include u-color(primary-vivid);
+  @include u-text(bold);
+  @include u-position(absolute);
   @include u-right(1);
-  @include u-display("inline-block");
+  @include u-display(inline-block);
   @include u-padding-y("05");
   @include u-padding-x(1);
   @include u-color(primary-light);
@@ -48,7 +48,7 @@
   font-size: 1.5rem;
 
   &:before {
-    @include u-bg("gold-5v");
+    @include u-bg(accent-warm-light);
     content: "";
     display: block;
     border-radius: 50%;
@@ -70,7 +70,7 @@
 }
 
 .jcc-datefinder__date {
-  @include u-font("body", "lg");
+  @include u-font(body, lg);
   @include u-margin-y(1);
 }
 

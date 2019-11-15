@@ -1,8 +1,8 @@
 h1,
 h2,
 h3 {
-  @include u-font-family("serif");
-  @include u-text("normal");
+  @include u-font-family(serif);
+  @include u-text(normal);
 }
 
 .h-responsive-mega {

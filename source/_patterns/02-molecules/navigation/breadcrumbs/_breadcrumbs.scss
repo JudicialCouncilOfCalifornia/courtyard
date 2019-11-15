@@ -1,18 +1,19 @@
 .jcc-breadcrumbs {
   @include add-list-reset;
-  @include u-text("gray-60");
+  @include u-text(base-dark);
 }
 
 .jcc-breadcrumb__item {
   @include responsive-lead();
   @include u-padding-right(1);
-  @include u-display("inline");
+  @include u-display(inline);
 
   a {
-    @include u-text("cyan-40v");
+    @include u-text(secondary);
+    text-decoration: none;
 
     &:after {
-      @include u-display("inline-block");
+      @include u-display(inline-block);
       content: "/";
       margin-left: 0.6275rem;
     }
