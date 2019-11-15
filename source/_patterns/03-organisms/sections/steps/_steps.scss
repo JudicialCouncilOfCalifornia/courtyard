@@ -44,7 +44,7 @@
 .jcc-steps {
   @include unstyled-list();
 
-  li {
+  .jcc-step__item {
     @include custom-counter();
     @include custom-counter-line();
     @include add-list-reset;
