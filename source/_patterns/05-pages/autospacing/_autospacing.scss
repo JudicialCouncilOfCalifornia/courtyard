@@ -1,0 +1,10 @@
+section.has-background-color--transparent + section.has-background-color--transparent,
+section.has-background-color--light + section.has-background-color--light,
+section.has-background-color--dark + section.has-background-color--dark,
+section.has-background-color--transparent + section.has-background-color--transparent,
+section.has-background-color--light--primary + section.has-background-color--light--primary,
+section.has-background-color--light--secondary + section.has-background-color--light--secondary,
+section.has-background-color--dark--primary + section.has-background-color--dark--primary,
+section.has-background-color--dark--secondary + section.has-background-color--dark--secondary {
+  margin-top: units(-6);
+}
