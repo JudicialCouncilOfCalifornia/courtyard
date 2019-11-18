@@ -12,9 +12,19 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 1. `git clone https://github.com/Exygy/courtyard.git` to create the project directory.
 1. `cd courtyard` to go to the directory.
 1. `composer install` to install Pattern Lab.
-   - Answer `Y` to `update the config option styleguideKitPath (/[path to your repo]/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default?`
 1. `npm install`
 1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+
+| Question      | Answer |
+| ----------- | ----------- |
+| the path ./source/_twig-components/functions already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M       |
+| the path ./source/_twig-components/filters already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M        |
+| the path ./source/_twig-components/tags already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M       |
+| update the config option twigDebug (1) with the value ? Y/n | N        |
+| update the config option twigAutoescape () with the value html? Y/n | N       |
+| the path ./public/ already exists. merge or replace with the contents of pattern-lab/styleguidekit-assets-default package? M/r | R        |
+| update the config option styleguideKitPath (...web/libraries/courtyard/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default? Y/n| Y        |
+
 
 ## To update Pattern Lab
 
