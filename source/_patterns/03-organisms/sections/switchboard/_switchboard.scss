@@ -16,7 +16,8 @@
 .jcc-switchboard--has-background-color--dark,
 .jcc-switchboard--has-background-color--light--primary,
 .jcc-switchboard--has-background-color--dark--primary {
-  @include u-padding-y(8);
+  @include u-padding-top(8, "!important");
+  @include u-padding-bottom(8);
 
   @media print {
     @include u-padding-y(4);

@@ -15521,8 +15521,8 @@ h3.jcc-header-group__title {
 .jcc-switchboard--has-background-color--dark,
 .jcc-switchboard--has-background-color--light--primary,
 .jcc-switchboard--has-background-color--dark--primary {
+  padding-top: 4rem  !important;
   padding-bottom: 4rem ;
-  padding-top: 4rem ;
 }
 
 .jcc-switchboard--has-background-color--light,

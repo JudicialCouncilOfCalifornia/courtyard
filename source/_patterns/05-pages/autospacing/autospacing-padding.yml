@@ -118,6 +118,36 @@ entries:
     background_variant: "has-background-color--dark--secondary" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
   -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+    column_content_left:
+      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
+      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
+      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
+      file an Answer due to inadvertence, mistake, or excusable neglect.
+       "
+    column_content_right: ""
+    background_variant: "has-background-color--light--secondary" #has-background-color
+    background_variant_token: "secondary"
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+    column_content_left:
+      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
+      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
+      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
+      file an Answer due to inadvertence, mistake, or excusable neglect.
+       "
+    column_content_right: ""
+    background_variant: "has-background-color--light--secondary" #has-background-color
+    background_variant_token: "secondary"
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
     type: "steps"
     headergroup:
       brow: ""
@@ -138,36 +168,6 @@ entries:
           id: "steps-target-2"
           title: "read more"
           content: "read more content"
-  -
-    type: "section"
-    headergroup:
-      brow: ""
-      title: ""
-    column_content_left:
-      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
-      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
-      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
-      file an Answer due to inadvertence, mistake, or excusable neglect.
-       "
-    column_content_right: ""
-    background_variant: "has-background-color--light--secondary" #has-background-color
-    background_variant_token: "secondary"
-    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
-  -
-    type: "section"
-    headergroup:
-      brow: ""
-      title: ""
-    column_content_left:
-      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
-      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
-      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
-      file an Answer due to inadvertence, mistake, or excusable neglect.
-       "
-    column_content_right: ""
-    background_variant: "has-background-color--light--secondary" #has-background-color
-    background_variant_token: "secondary"
-    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
   background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
