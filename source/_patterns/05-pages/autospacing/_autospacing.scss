@@ -10,8 +10,6 @@ section.has-background-color--dark--secondary + section.has-background-color--da
 }
 
 [class*="--has-background-color--transparent"] + [class*="--has-background-color--transparent"],
-[class*="--has-background-color--light"] + [class*="--has-background-color--light"],
-[class*="--has-background-color--dark"] + [class*="--has-background-color--dark"],
 [class*="--has-background-color--light--primary"]
   + [class*="--has-background-color--light--primary"],
 [class*="--has-background-color--light--secondary"]

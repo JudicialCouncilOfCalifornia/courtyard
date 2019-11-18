@@ -101,7 +101,7 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--dark" #has-background-color
+    background_variant: "has-background-color--dark--secondary" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
   -
     type: "section"
@@ -115,7 +115,7 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--dark" #has-background-color
+    background_variant: "has-background-color--dark--secondary" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
   -
     type: "steps"
@@ -123,7 +123,7 @@ entries:
       brow: ""
       title: ""
       lead: ""
-    background_variant: "has-background-color--light"
+    background_variant: "has-background-color--light--primary"
     background_variant_token: "primary"
     steps:
       - title: "Prepare the claim of exemption"
@@ -150,7 +150,7 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "has-background-color--light--secondary" #has-background-color
     background_variant_token: "secondary"
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
   -
@@ -165,11 +165,11 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "has-background-color--light--secondary" #has-background-color
     background_variant_token: "secondary"
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
-  background_variant: "has-background-color--dark"
+  background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

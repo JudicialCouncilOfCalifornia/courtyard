@@ -12,7 +12,8 @@
   }
 }
 
-.jcc-choice-section--has-background-color--light {
+.jcc-choice-section--has-background-color--light,
+.jcc-choice-section--has-background-color--light--secondary {
   @include section-wrapper-bg;
   @include u-bg(secondary-lighter);
 }

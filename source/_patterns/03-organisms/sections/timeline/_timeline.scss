@@ -19,15 +19,19 @@
 }
 
 .jcc-timeline-section--has-background-color--light,
-.jcc-timeline-section--has-background-color--dark {
+.jcc-timeline-section--has-background-color--dark,
+.jcc-timeline-section--has-background-color--light--primary,
+.jcc-timeline-section--has-background-color--dark--primary {
   @include section-wrapper-bg;
 }
 
-.jcc-timeline-section--has-background-color--light {
+.jcc-timeline-section--has-background-color--light,
+.jcc-timeline-section--has-background-color--light--primary {
   @include u-bg(primary-lighter);
 }
 
-.jcc-timeline-section--has-background-color--dark {
+.jcc-timeline-section--has-background-color--dark,
+.jcc-timeline-section--has-background-color--dark--primary {
   @include dark-background();
 
   .jcc-timeline {
