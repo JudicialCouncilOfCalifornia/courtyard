@@ -57,3 +57,11 @@
     @include u-bg("white");
   }
 }
+
+[class*="--has-background-color--light"] {
+  .jcc-read-more--block {
+    .jcc-read-more__trigger {
+      @include u-bg("white");
+    }
+  }
+}
