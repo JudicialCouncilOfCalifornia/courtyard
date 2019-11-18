@@ -9,7 +9,7 @@
   @include u-display(inline);
 
   a {
-    @include u-text(secondary);
+    @include u-text(info-dark);
     text-decoration: none;
 
     &:after {

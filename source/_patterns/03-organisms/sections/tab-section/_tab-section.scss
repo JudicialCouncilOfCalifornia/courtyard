@@ -22,7 +22,7 @@
 [role="tablist"] li,
 [role="tablist"] a {
   @include u-display(inline-block);
-  @include u-margin-right(05);
+  @include u-margin-right("05");
 }
 
 [role="tablist"] a {
