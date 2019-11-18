@@ -148,7 +148,7 @@ $aspect-width: 16;
     left: auto;
     content: "";
     display: block;
-    width: 110%;
+    width: calc(100% + 1.5rem);
     height: 1px;
     border: 1px solid color($timeline-line-border);
     z-index: 1;

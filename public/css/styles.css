@@ -21746,7 +21746,7 @@ h3.jcc-header-group__title {
     left: auto;
     content: "";
     display: block;
-    width: 110%;
+    width: calc(100% + 1.5rem);
     height: 1px;
     border: 1px solid #ffbe2e;
     z-index: 1;
@@ -21802,7 +21802,7 @@ h3.jcc-header-group__title {
     left: auto;
     content: "";
     display: block;
-    width: 110%;
+    width: calc(100% + 1.5rem);
     height: 1px;
     border: 1px solid #005ea2;
     z-index: 1;
