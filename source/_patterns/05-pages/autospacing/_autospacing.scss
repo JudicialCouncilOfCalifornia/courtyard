@@ -8,3 +8,16 @@ section.has-background-color--dark--primary + section.has-background-color--dark
 section.has-background-color--dark--secondary + section.has-background-color--dark--secondary {
   margin-top: units(-6);
 }
+
+[class*="--has-background-color--transparent"] + [class*="--has-background-color--transparent"],
+[class*="--has-background-color--light"] + [class*="--has-background-color--light"],
+[class*="--has-background-color--dark"] + [class*="--has-background-color--dark"],
+[class*="--has-background-color--light--primary"]
+  + [class*="--has-background-color--light--primary"],
+[class*="--has-background-color--light--secondary"]
+  + [class*="--has-background-color--light--secondary"],
+[class*="--has-background-color--dark--primary"] + [class*="--has-background-color--dark--primary"],
+[class*="--has-background-color--dark--secondary"]
+  + [class*="--has-background-color--dark--secondary"] {
+  padding-top: units(0);
+}
