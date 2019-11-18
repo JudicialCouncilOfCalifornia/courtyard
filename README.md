@@ -15,7 +15,7 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 1. `npm install`
 1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
 
-| Question      | Answer |
+| Question    | Answer     |
 | ----------- | ----------- |
 | the path ./source/_twig-components/functions already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M       |
 | the path ./source/_twig-components/filters already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M        |
