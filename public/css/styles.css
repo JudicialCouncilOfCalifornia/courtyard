@@ -13668,6 +13668,14 @@ a:visited {
   font-weight: normal ;
 }
 
+.usa-prose h1, .jcc-card__excerpt h1, .jcc-hero__body h1, .jcc-hero__column-right h1, .jcc-step__excerpt h1, .jcc-timeline-item__excerpt h1, .jcc-header-group__lead h1, .jcc-header-group__body h1, .jcc-text-section__content h1, .jcc-text-section__column-left h1, .jcc-text-section__column-right h1, .usa-prose h2, .jcc-card__excerpt h2, .jcc-hero__body h2, .jcc-hero__column-right h2, .jcc-step__excerpt h2, .jcc-timeline-item__excerpt h2, .jcc-header-group__lead h2, .jcc-header-group__body h2, .jcc-text-section__content h2, .jcc-text-section__column-left h2, .jcc-text-section__column-right h2, .usa-prose h3, .jcc-card__excerpt h3, .jcc-hero__body h3, .jcc-hero__column-right h3, .jcc-step__excerpt h3, .jcc-timeline-item__excerpt h3, .jcc-header-group__lead h3, .jcc-header-group__body h3, .jcc-text-section__content h3, .jcc-text-section__column-left h3, .jcc-text-section__column-right h3 {
+  font-weight: normal ;
+}
+
+.usa-prose h4, .jcc-card__excerpt h4, .jcc-hero__body h4, .jcc-hero__column-right h4, .jcc-step__excerpt h4, .jcc-timeline-item__excerpt h4, .jcc-header-group__lead h4, .jcc-header-group__body h4, .jcc-text-section__content h4, .jcc-text-section__column-left h4, .jcc-text-section__column-right h4, .usa-prose h4, .jcc-card__excerpt h4, .jcc-hero__body h4, .jcc-hero__column-right h4, .jcc-step__excerpt h4, .jcc-timeline-item__excerpt h4, .jcc-header-group__lead h4, .jcc-header-group__body h4, .jcc-text-section__content h4, .jcc-text-section__column-left h4, .jcc-text-section__column-right h4, .usa-prose h6, .jcc-card__excerpt h6, .jcc-hero__body h6, .jcc-hero__column-right h6, .jcc-step__excerpt h6, .jcc-timeline-item__excerpt h6, .jcc-header-group__lead h6, .jcc-header-group__body h6, .jcc-text-section__content h6, .jcc-text-section__column-left h6, .jcc-text-section__column-right h6 {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+
 .h-dash {
   position: relative;
   padding-bottom: 0.5em;
@@ -13970,16 +13978,16 @@ a:visited {
   font-size: 1.37rem;
 }
 
-.jcc-list-group__item {
-  margin-bottom: 1rem ;
+.jcc-list-group li {
+  margin-bottom: 1rem  !important;
 }
 
-.jcc-list-item p:first-of-type {
+.jcc-list-group li p:first-of-type {
   margin-bottom: 0 ;
   padding-bottom: 1px ;
 }
 
-.jcc-list-item p strong {
+.jcc-list-group li strong {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.12rem;
 }
@@ -25699,7 +25707,7 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
   }
-  .jcc-list-item p strong {
+  .jcc-list-group li strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.99rem;
   }

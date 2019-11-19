@@ -1,12 +1,10 @@
-<div class="jcc-list-group">
-  <ul class="jcc-list-group__container">
-    
-    {% for item in list_group %}
-    <li class="jcc-list-group__item jcc-list-item">
-      <p><strong>{{ item.title }}</strong></p>
-      <p>{{ item.excerpt }}</p>
-    </li>
-    {% endfor %}
-    
-  </ul>
-</div>
+<ul class="jcc-list-group">
+  
+  {% for item in list_group %}
+  <li>
+    <p><strong>{{ item.title }}</strong></p>
+    <p>{{ item.excerpt }}</p>
+  </li>
+  {% endfor %}
+  
+</ul>

@@ -51,7 +51,8 @@
       column_content_left: entry.column_content_left,
       column_content_right: entry.right_column_components ? right_column_component_content : entry.column_content_right,
       column_variant: entry.column_variant,
-      headergroup: entry.headergroup
+      headergroup: entry.headergroup,
+      background_variant: entry.background_variant
     } %}
   {% elseif entry.type == 'steps' %}
     {% include '@organisms/sections/steps/steps.twig' with {

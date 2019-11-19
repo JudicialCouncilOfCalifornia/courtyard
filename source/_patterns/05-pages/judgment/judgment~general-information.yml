@@ -2,17 +2,20 @@ top:
   hero:
     image: ""
     alt: ""
-    title: "Filing a claim of exemption for wage garnishment"
-    lead: "A wage garnishment is one of the most common ways to collect a judgment."
+    title: "General information about judgments, collection, and your options"
+    lead: "A judgment is an order stating that you owe the debt collector the amount on the judgment."
     body: ""
-    column_content_right: ""
-    column_variant: "has-one-column"
+    column_content_right: "<ul>
+      <li>You would owe the full amount right away unless the judge ordered a payment plan (or you are filing an appeal).</li>
+      <li>The court does not take any steps to collect a judgment on its own. It is up to you to pay the judgment, or the debt collector to collect the judgment.</li>
+      <li>As long as the judgment is unpaid, it will gather interest at 10% per year. The sooner a judgment is paid, the less interest you will have to pay on top of the judgment.</li>"
+    column_variant: "has-two-columns-threequarter"
   breadcrumbs:
     - url: "link.pages-judgment"
       label: "Debt Collection"
       url_attributes: ''
     - url: ""
-      label: "Wage Garnishment"
+      label: "General Information"
       url_attributes: ''
 entries:
   -
@@ -22,89 +25,64 @@ entries:
       title: ""
     column_content_left:
       "
-         <p class=\"jcc-header-group__lead\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
-         low or near minimum wage, the amount taken may be less than 25%. Unfortunately, some employers miscalculate the amount below 25%.</p>
-         <p class=\"jcc-header-group__lead\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
-         <p>If you are unable to afford the amount to be garnished from wages, a claim of exemption may reduce or stop the
-           withholding. Act quickly! If you file within ten days you might be able to prevent the garnishment from
-           starting. Even if the garnishment starts, file as early as possible, since the sheriff will hold onto funds
-           levied after filing the claim of exemption. Once the garnishment starts and funds are transferred to the debt
-           collector, it is almost impossible to get them back.</p>
+         <h3 class=\"jcc-subtitle--serif\">Why did I receive a judgment?</h3>
+         <p class=\"jcc-header-group__lead\">You received a judgment because the court decided against you in a court case. This could have happened in one of a few ways:</p>
+         <h4>By default</h4>
+         <p>Because you didn’t respond to the lawsuit.</p>
+         <p>At the beginning of a case, the defendant is supposed to serve you with a few documents including a Summons and Complaint. This means that someone is supposed to hand you or someone in your home or work with a copy of these documents. If they hand it to someone else, a copy is supposed to be mailed to you. This starts your time to respond to the lawsuit. Normally, you have 30 days to respond. If you do not, the other side may request a “default” and ask the court to decide the case without you.</p>
+         <ul class=\"jcc-list-group\">
+         <li><p><strong>I didn’t understand I needed to file a response.</strong></p>
+            <p>If you act quickly, you may be eligible to “set aside” the default judgment, or you might be able to negotiate a settlement with the debt collector.</p>
+         </li>
+         <li><p><strong>I didn’t know there was a court case.</strong></p>
+            <p>Depending on the reasons, you may be eligible to “set aside” the default judgment, or you might be able to negotiate a settlement with the debt collector.</p>
+         </li>
+         </ul>
+         <h4>After trial</h4>
+         <p>After each side appears in court to present their case.</p>
+         <h4>After a motion for summary judgment or judgment on the pleadings</h4>
+         <p>After the debt collector files a motion to decide the case without trial.</p>
          "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
     right_column_components:
-      list_block:
-        title: Relevant Files
-        list:
-          items:
-            - name: Claim of Exemption (form WG-006)
-              url: "#"
-            - name: Financial Statement (form WG-007)
-              url: "#"
-          files_list: true
-          icon:
-            icon_file: "../../images/icomoon/symbol-defs.svg"
-            icon: "file"
-            title: "File"
-            decorative: false
       read_more:
         id: "what-is-judgment"
         title: "What is judgment?"
         content: "Lorem ipsum"
         block_variant: true
   -
-    type: "steps"
-    headergroup:
-      brow: ""
-      title: ""
-      lead: ""
-    steps:
-      - title: "Prepare the claim of exemption"
-        excerpt: "Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)"
-        read_more:
-          id: "steps-target-1"
-          title: "read more"
-          content: "If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy."
-      - title: "File the claim of exemption"
-        excerpt: "File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail)"
-        read_more:
-          id: "steps-target-2"
-          title: "read more"
-          content: "read more content"
-      - title: "Wait to see if the claim of exemption is opposed"
-        excerpt: "File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail)."
-        read_more:
-          id: "steps-target-3"
-          title: "read more"
-          content: "Read more content"
-      - title: "Reply to the opposition, if any"
-        excerpt: "Serve and file your reply, if any with the court"
-        read_more:
-          id: "steps-target-4"
-          title: "read more"
-          content: "Read more content"
-      - title: "Attend the hearing, if any"
-        excerpt: "Gather your evidence. Check tentative rulings the court day before if your court uses them."
-        read_more:
-          id: "steps-target-5"
-          title: "read more"
-          content: "Read more content"
-  -
     type: "section"
     headergroup:
       brow: ""
       title: ""
     column_content_left:
-      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
-      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
-      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
-      file an Answer due to inadvertence, mistake, or excusable neglect.
+      "<h3 class=\"jcc-subtitle--serif\">What can happen next</h3>
+      <p>In collection cases, it is common for a debt collector to try to collect by:</p>
+      <ul class=\"jcc-list-group\">
+      <li><p><strong>Wage garnishment</strong></p>
+      <p>Taking up to 25% of after-tax wages</p></li>
+      <li><p><strong>Lien against real property</strong></p>
+      <p>Making it so you cannot sell, re-finance, or buy land without paying</p></li>
+      <li><p><strong>Bank levy</strong></p>
+      <p>Taking the money from a bank account or emptying a safe-deposit box</p></li>
+      </ul>
+      <p>You have the opportunity to defend against each type of collection. You may also negotiate a settlement with the debt collector, or in a limited civil case (under $25,000) file a motion to pay judgment in installments.</p>
        "
-    column_content_right: ""
+    column_content_right: "<h3 class=\"jcc-subtitle--serif\">How can I protect my money or things from collection?</h3>
+      <p>When a debt collector tries to collect, you may attempt to defend your money or property from collection. Other than negotiating a settlement, these defenses do not reduce a judgment, or stop interest from being added to the judgment.</p>
+      <ul class=\"jcc-list-group\">
+      <li><p><strong>Wage garnishment</strong></p>
+      <p>Claim of exemption (Wage Garnishment)</p></li>
+      <li><p><strong>Lien against real property</strong></p>
+      <p>Pay the judgment, negotiate a settlement</p></li>
+      <li><p><strong>Bank levy</strong></p>
+      <p>Claim of exemption (Bank Levy)</p></li>
+      </ul>
+      "
     background_variant: "has-background-color--light" #has-background-color
-    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+    column_variant: "has-two-columns-half" #has-two-columns-half has-two-columns-threequarter
 switchboard:
   background_variant: "has-background-color--dark"
   switchboard_tiles:

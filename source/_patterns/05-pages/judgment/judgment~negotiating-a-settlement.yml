@@ -35,7 +35,7 @@ entries:
       <p>Ideally, a settlement should allow you to leave in a better position than if you did nothing. For you, that may be paying less, or paying on more favorable terms. To the debt collector, this could be collecting sooner rather than later, and with less effort.</p>
     "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
   -
     type: "timeline"

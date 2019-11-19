@@ -27,7 +27,7 @@ entries:
       <p>To clear the lien, you must either pay the judgment in full or negotiate a settlement with the debt collector.</p>
     "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
   background_variant: "has-background-color--dark"
