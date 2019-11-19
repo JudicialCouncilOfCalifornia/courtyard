@@ -1,25 +1,26 @@
 {% if tabs|length > 0 %}
+{% set section_name = "section" ~ random() %}
 <div class="jcc-tab-section{% if background_variant %} jcc-tab-section--{{ background_variant }}{% endif %} tabbed">
   <div class="jcc-tab-section__container">
   
   {% include '@molecules/text/header-group/header-group.twig' with {
-      brow: headergroup.brow,
-      title: headergroup.title,
-      lead: headergroup.lead,
-      tag: headergroup.tag
-    } %}
+    brow: headergroup.brow,
+    title: headergroup.title,
+    lead: headergroup.lead,
+    tag: headergroup.tag
+  } %}
   
   <ul>
     {% for tab in tabs %}
     <li>
-      <a href="#section{{ loop.index }}" data-selected="{{tab.selected}}">{{ tab.title }}</a>
+      <a href="#{{section_name}}{{ loop.index }}" data-selected="{{tab.selected}}">{{ tab.title }}</a>
     </li>
     {% endfor %}
   </ul>
   </div>
   
   {% for tab_panel in tab_panels %}
-  <section id="section{{ loop.index }}">
+  <section id="{{section_name}}{{ loop.index }}">
     {{ tab_panel.content }}
   </section>
   {% endfor %}

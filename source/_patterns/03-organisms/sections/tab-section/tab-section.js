@@ -1,7 +1,5 @@
 (function() {
-  // Get relevant elements and collections
-  const tabbed = document.querySelector(".tabbed");
-  if (tabbed) {
+  document.querySelectorAll(".tabbed").forEach(tabbed => {
     const tablist = tabbed.querySelector("ul");
     const tabs = tablist.querySelectorAll("a");
     const panels = tabbed.querySelectorAll('[id^="section"]');
@@ -79,5 +77,5 @@
       tabs[0].setAttribute("aria-selected", "true");
       panels[0].hidden = false;
     }
-  }
+  });
 })();
