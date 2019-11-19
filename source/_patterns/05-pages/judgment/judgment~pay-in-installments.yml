@@ -1,0 +1,62 @@
+top:
+  hero:
+    image: ""
+    alt: ""
+    title: "Motion to pay judgment in installments"
+    lead: "In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay."
+    body: ""
+    column_content_right: ""
+    column_variant: "has-one-column"
+  breadcrumbs:
+    - url: "link.pages-judgment"
+      label: "Debt Collection"
+      url_attributes: ''
+    - url: ""
+      label: "Wage Garnishment"
+      url_attributes: ''
+entries:
+  -
+    type: "steps"
+    headergroup:
+      brow: ""
+      title: ""
+      lead: ""
+    steps:
+      - title: "Prepare the Motion to Pay Judgment in Installments"
+        excerpt: "Follow the instructions or use the guided interview to pay the judgment in installments"
+      - title: "File the Motion to Pay Judgment in Installments with the court"
+        excerpt: "File the original plus three copies of the Motion to Pay Judgment in Installments with the court, following local procedure"
+      - title: "Wait for opposition"
+        excerpt: "If opposed, the opposing party will serve an opposition at least 9 court days before the hearing"
+      - title: "Reply to opposition, if any"
+        excerpt: "If opposed, reply to the opposition up to 5 court days before the hearing"
+      - title: "Attend the hearing"
+        excerpt: "Gather your evidence. Check tentative rulings the court day before if your court uses them."
+switchboard:
+  background_variant: "has-background-color--dark"
+  switchboard_tiles:
+    - brow: "Wage Garnishment"
+      title: 'Someone took money from my paycheck'
+      url: 'link.pages-judgment-wage-garnishment'
+      url_attributes: ''
+    - brow: "Lien Against Property"
+      title: 'I was told I can’t sell my property'
+      url: 'link.pages-judgment-lien-against-property'
+      url_attributes: ''
+    - brow: "Bank Levy"
+      title: 'Someone tried to take money from my bank account '
+      url: 'link.pages-judgment-bank-levy'
+      url_attributes: ''
+  switchboard_tiles2:
+    - brow: "General Information"
+      title: 'I want to find out more about Debt Collection'
+      url: 'link.pages-judgment-general-information'
+      url_attributes: ''
+    - brow: "Negotiating a Settlement"
+      title: 'I want to talk with someone and work something out'
+      url: 'link.pages-judgment-negotiating-a-settlement'
+      url_attributes: ''
+    - brow: "Pay in Installments"
+      title: 'I don’t have all the money but can pay over time'
+      url: 'link.pages-judgment-pay-in-installments'
+      url_attributes: ''

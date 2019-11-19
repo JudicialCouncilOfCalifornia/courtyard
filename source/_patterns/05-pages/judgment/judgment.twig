@@ -65,6 +65,12 @@
       excerpt: entry.excerpt,
       card_variant: entry.card_variant
     } %}
+  {% elseif entry.type == 'timeline' %}
+    {% include '@organisms/sections/timeline/timeline.twig' with {
+      headergroup: entry.headergroup,
+      timeline: entry.timeline,
+      background_variant: entry.background_variant
+    } %}
   {% endif %}
 {% endfor %}
 {% include '@organisms/sections/switchboard/switchboard.twig'  with {
