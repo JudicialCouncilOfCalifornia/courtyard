@@ -49,17 +49,10 @@ const settings = slider => {
     prevArrow: $(slider).siblings(".jcc-timeline__scroller--left"),
     responsive: [
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-          dots: false
-        }
-      },
-      {
         breakpoint: 800,
         arrows: true,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           dots: false
         }
       },

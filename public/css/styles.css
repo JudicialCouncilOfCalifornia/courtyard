@@ -15825,10 +15825,6 @@ h3.jcc-header-group__title {
   left: 0;
 }
 
-.jcc-timeline-section .slick-track {
-  padding-top: 2.5rem;
-}
-
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--dark {
   padding-top: 3rem ;
@@ -15942,6 +15938,7 @@ h3.jcc-header-group__title {
   padding-bottom: 2rem ;
 }
 
+.jcc-timeline:not(.slick-initialized) li:last-of-type .jcc-timeline-item__title:after,
 .slick-slide:last-of-type .jcc-timeline-item__title:after {
   width: 0 ;
 }
@@ -21726,98 +21723,9 @@ h3.jcc-header-group__title {
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
   }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
-    position: absolute;
-    top: -1.5rem;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    content: "";
-    display: block;
-    width: 120%;
-    height: 1px;
-    border: 1px solid #ffbe2e;
-    z-index: 1;
-  }
-  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
-    position: absolute;
-    top: -1.925rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    background-color: #2378c3;
-    border: 2px solid #ffbe2e;
-    border-radius: 50%;
-    content: "";
-    height: 1rem;
-    line-height: 1;
-    text-align: center;
-    width: 1rem;
-    z-index: 2;
-  }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media {
     position: absolute ;
     top: 0 ;
-  }
-  .jcc-timeline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -ms-flex-wrap: wrap ;
-        flex-wrap: wrap ;
-    overflow-x: auto ;
-    -ms-flex-wrap: nowrap ;
-        flex-wrap: nowrap ;
-  }
-  .jcc-timeline li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 33.33333% ;
-    padding-bottom: 4.5rem ;
-  }
-  .jcc-timeline li > * {
-    padding-top: 2rem ;
-  }
-  .jcc-timeline .jcc-timeline-item {
-    padding-right: 1.5rem ;
-  }
-  .jcc-timeline .jcc-timeline-item__title:after {
-    position: absolute;
-    top: -1.5rem;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    content: "";
-    display: block;
-    width: 120%;
-    height: 1px;
-    border: 1px solid #005ea2;
-    z-index: 1;
-  }
-  .jcc-timeline .jcc-timeline-item__title:before {
-    position: absolute;
-    top: -1.925rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    background-color: #005ea2;
-    border: 2px solid #005ea2;
-    border-radius: 50%;
-    content: "";
-    height: 1rem;
-    line-height: 1;
-    text-align: center;
-    width: 1rem;
-    z-index: 2;
-  }
-  .jcc-timeline .jcc-timeline-item__media {
-    position: absolute ;
-    top: 0 ;
-  }
-  .jcc-timeline__scroller--left.is-active,
-  .jcc-timeline__scroller--right.is-active {
-    display: block ;
   }
 }
 
@@ -25356,9 +25264,104 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:after {
+    position: absolute;
+    top: -1rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: calc(100% + 2rem);
+    height: 1px;
+    border: 1px solid #ffbe2e;
+    z-index: 1;
+  }
+  .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__title:before {
+    position: absolute;
+    top: -1.425rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #2378c3;
+    border: 2px solid #ffbe2e;
+    border-radius: 50%;
+    content: "";
+    height: 1rem;
+    line-height: 1;
+    text-align: center;
+    width: 1rem;
+    z-index: 2;
+  }
   .jcc-timeline-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-timeline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    overflow-x: auto ;
+    -ms-flex-wrap: nowrap ;
+        flex-wrap: nowrap ;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
+  }
+  .jcc-timeline li > * {
+    padding-top: 2rem ;
+  }
+  .jcc-timeline li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+  }
+  .jcc-timeline .jcc-timeline-item {
+    padding-right: 1.5rem ;
+    padding-top: 4rem;
+  }
+  .jcc-timeline .jcc-timeline-item__title:after {
+    position: absolute;
+    top: -1rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: calc(100% + 2rem);
+    height: 1px;
+    border: 1px solid #005ea2;
+    z-index: 1;
+  }
+  .jcc-timeline .jcc-timeline-item__title:before {
+    position: absolute;
+    top: -1.425rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #005ea2;
+    border: 2px solid #005ea2;
+    border-radius: 50%;
+    content: "";
+    height: 1rem;
+    line-height: 1;
+    text-align: center;
+    width: 1rem;
+    z-index: 2;
+  }
+  .jcc-timeline .jcc-timeline-item__media {
+    position: absolute ;
+    top: 0 ;
+  }
+  .jcc-timeline__scroller--left.is-active,
+  .jcc-timeline__scroller--right.is-active {
+    display: block ;
   }
 }
 
@@ -25562,15 +25565,6 @@ h3.jcc-header-group__title {
   .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
-  }
-}
-
-@media all and (min-width: 75em) {
-  .jcc-timeline li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 25% ;
   }
 }
 

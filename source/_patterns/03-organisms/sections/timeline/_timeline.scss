@@ -12,10 +12,6 @@
     @include u-text(primary-dark);
     @include has-dash();
   }
-
-  .slick-track {
-    padding-top: 2.5rem;
-  }
 }
 
 .jcc-timeline-section--has-background-color--light,
@@ -32,7 +28,7 @@
 
   .jcc-timeline {
     .jcc-timeline-item__title {
-      @include at-media(tablet) {
+      @include at-media(desktop) {
         @include timeline-line($timeline-line-border: accent-warm);
         @include timeline-dot($timeline-dot-bg: primary-vivid, $timeline-dot-border: accent-warm);
       }
@@ -61,9 +57,8 @@
 .jcc-timeline {
   @include unstyled-list();
 
-  @include at-media(tablet) {
+  @include at-media(desktop) {
     @include grid-row;
-    // padding-top: 3rem;
     @include u-overflow-x(auto);
     @include u-flex(no-wrap);
   }
@@ -72,35 +67,35 @@
     @include u-width(full);
     @include u-padding-bottom(4);
 
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       @include grid-col(4);
-      @include u-padding-bottom(9);
 
       > * {
         @include u-padding-top(4);
       }
     }
 
-    @include at-media(desktop-lg) {
+    @include at-media(desktop) {
       @include grid-col(3);
     }
   }
 
   .jcc-timeline-item {
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       @include u-padding-right(3);
+      padding-top: 4rem;
     }
   }
 
   .jcc-timeline-item__title {
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       @include timeline-line();
       @include timeline-dot();
     }
   }
 
   .jcc-timeline-item__media {
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       @include u-position(absolute);
       @include u-top(0);
     }
@@ -108,6 +103,7 @@
 }
 
 // remove line from last timeline item
+.jcc-timeline:not(.slick-initialized) li:last-of-type .jcc-timeline-item__title:after,
 .slick-slide:last-of-type .jcc-timeline-item__title:after {
   @include u-width(0);
 }
@@ -129,7 +125,7 @@
   z-index: 10;
 
   &.is-active {
-    @include at-media(tablet) {
+    @include at-media(desktop) {
       @include u-display(block);
     }
   }
