@@ -45,7 +45,8 @@
   }
 
   .jcc-modal__trigger,
-  .jcc-timeline-item__trigger {
+  .jcc-timeline-item__trigger,
+  a {
     @include dark-background-link();
   }
 }
