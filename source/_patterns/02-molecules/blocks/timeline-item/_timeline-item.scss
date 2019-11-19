@@ -9,6 +9,7 @@
 }
 
 .jcc-timeline-item__excerpt {
+  @extend .usa-prose;
   @include t-copy();
   @include u-line-height(body, 4);
   @include u-margin-bottom(1.5);

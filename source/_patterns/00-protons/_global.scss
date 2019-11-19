@@ -26,7 +26,7 @@
 }
 
 @mixin section-container {
-  @include grid-container("widescreen");
+  @include grid-container(widescreen);
 }
 
 // Cover image with bleed
@@ -63,54 +63,64 @@ $aspect-width: 16;
   position: relative;
 
   &::before {
-    @include u-font("heading", 14);
+    @include u-font(heading, 11);
     padding: 0.625rem;
     background-color: color("white");
     border: 3px solid color("gold-30v");
     border-radius: 50%;
     color: color("primary");
     content: counter(step-counter);
-    height: 4.6875rem;
+    height: 3.5rem;
     line-height: 1.25;
     text-align: center;
-    width: 4.6875rem;
+    width: 3.5rem;
     display: block;
     z-index: 2;
 
     @include at-media(desktop) {
+      @include u-font(heading, 14);
       position: absolute;
       top: -7px;
       right: 0;
       bottom: 0;
       left: -7px;
+      height: 4.6875rem;
+      width: 4.6875rem;
     }
   }
 }
 
 @mixin custom-counter-line() {
   &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    height: 3px;
+    top: 1.625rem;
+    left: 3.5rem;
+    background-color: color(accent-warm-dark);
+
     @include at-media(desktop) {
-      content: "";
-      display: block;
-      width: 0;
-      height: 100%;
-      border: 1px solid color("gold-30v");
-      position: absolute;
       top: 2.5rem;
       left: 1.875rem;
-      z-index: 1;
+      height: 100%;
+      width: 3px;
     }
   }
 
   &:last-of-type {
-    &:after {
-      height: 0;
+    @include at-media(desktop) {
+      &:after {
+        height: 0;
+      }
     }
   }
 }
 
 // Timeline elements
-@mixin timeline-dot($timeline-dot-bg: "primary", $timeline-dot-border: "primary") {
+@mixin timeline-dot($timeline-dot-bg: primary, $timeline-dot-border: primary) {
   &:before {
     position: absolute;
     top: -1.425rem;
@@ -129,7 +139,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin timeline-line($timeline-line-border: "primary") {
+@mixin timeline-line($timeline-line-border: primary) {
   &:after {
     position: absolute;
     top: -1rem;
@@ -138,7 +148,7 @@ $aspect-width: 16;
     left: auto;
     content: "";
     display: block;
-    width: calc(100% + 2rem);
+    width: calc(100% + 1.5rem);
     height: 1px;
     border: 1px solid color($timeline-line-border);
     z-index: 1;
@@ -193,7 +203,7 @@ $aspect-width: 16;
 }
 
 // Type
-@mixin responsive-h-mega($responsive-font-family: "heading") {
+@mixin responsive-h-mega($responsive-font-family: heading) {
   @include u-font($responsive-font-family, 14); // 40
 
   @include at-media(desktop) {
@@ -205,7 +215,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h1($responsive-font-family: "heading") {
+@mixin responsive-h1($responsive-font-family: heading) {
   @include u-font($responsive-font-family, 13); // 36
 
   @include at-media(desktop) {
@@ -217,7 +227,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h2($responsive-font-family: "heading") {
+@mixin responsive-h2($responsive-font-family: heading) {
   @include u-font($responsive-font-family, 12); // 32
 
   @include at-media(desktop) {
@@ -229,7 +239,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h3($responsive-font-family: "heading") {
+@mixin responsive-h3($responsive-font-family: heading) {
   @include u-font($responsive-font-family, 11); // 28
 
   @include at-media(desktop) {
@@ -241,7 +251,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h4($responsive-font-family: "body") {
+@mixin responsive-h4($responsive-font-family: body) {
   @include u-font($responsive-font-family, 10);
 
   @media print {
@@ -249,7 +259,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-h5($responsive-font-family: "body") {
+@mixin responsive-h5($responsive-font-family: body) {
   @include u-font($responsive-font-family, 9);
 
   @media print {
@@ -257,7 +267,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin responsive-lead($responsive-font-family: "body") {
+@mixin responsive-lead($responsive-font-family: body) {
   @include u-font($responsive-font-family, 9); // 22
 
   @include at-media(desktop) {
@@ -265,11 +275,11 @@ $aspect-width: 16;
   }
 
   @media print {
-    @include u-font("body", 7); // 18
+    @include u-font(body, 7); // 18
   }
 }
 
-@mixin t-intro($responsive-font-family: "body") {
+@mixin t-intro($responsive-font-family: body) {
   @include u-font($responsive-font-family, 7); // 18
 
   @media print {
@@ -278,22 +288,22 @@ $aspect-width: 16;
 }
 
 @mixin t-copy() {
-  @include u-font("body", 5); // 16
+  @include u-font(body, 5); // 16
 
   @media print {
-    @include u-font("body", 4); // 16
+    @include u-font(body, 4); // 16
   }
 }
 
 @mixin t-small() {
-  @include u-font("body", 4); // 16
+  @include u-font(body, 4); // 16
 
   @media print {
-    @include u-font("body", 2);
+    @include u-font(body, 2);
   }
 }
 
-@mixin dark-background($dark-background-color: "primary") {
+@mixin dark-background($dark-background-color: primary) {
   @include u-bg($dark-background-color);
   @include u-text("white");
 
@@ -302,19 +312,19 @@ $aspect-width: 16;
   }
 
   > a {
-    @include u-text("gold-30v");
+    @include u-text(accent-warm-dark);
 
     &:hover {
-      @include u-text("gold-20v");
+      @include u-text(accent-warm);
     }
 
     &:active,
     &:focus {
-      @include u-text("gold-20v");
+      @include u-text(accent-warm);
     }
 
     &:visited {
-      @include u-text("gold-10v");
+      @include u-text(accent-warm-dark);
     }
   }
 }
@@ -324,24 +334,24 @@ $aspect-width: 16;
 }
 
 @mixin dark-background-link() {
-  @include u-text("gold-30v");
+  @include u-text(accent-warm-dark);
 
   &:hover {
-    @include u-text("gold-20v");
+    @include u-text(accent-warm);
   }
 
   &:active,
   &:focus {
-    @include u-text("gold-20v");
+    @include u-text(accent-warm);
   }
 
   &:visited {
-    @include u-text("gold-10v");
+    @include u-text(accent-warm-dark);
   }
 }
 
 @mixin dark-background-link-button() {
-  @include u-text("gold-30v");
+  @include u-text(accent-warm-dark);
 }
 
 @mixin media-icon($icon-size: 2rem, $icon-circle-size: 2.5rem, $icon-circle-bg: "gold-5v") {
@@ -378,7 +388,7 @@ $aspect-width: 16;
 
 @mixin body-prose() {
   ul {
-    @include u-line-height("body", 2);
+    @include u-line-height(body, 2);
   }
 
   li {
@@ -389,8 +399,8 @@ $aspect-width: 16;
 @mixin card-border() {
   @include u-bg("white");
   @include u-border(1px);
-  @include u-border("base-light");
-  @include u-radius("lg");
+  @include u-border(base-light);
+  @include u-radius(lg);
   @include u-shadow(3);
 }
 

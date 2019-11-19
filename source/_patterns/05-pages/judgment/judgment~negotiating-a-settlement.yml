@@ -1,0 +1,105 @@
+top:
+  hero:
+    image: ""
+    alt: ""
+    title: "Negotiating a Settlement"
+    lead: "At any time you and the debt collector may agree to settle the judgment. Any settlement that you and the debt collector can agree to is a valid settlement."
+    body: ""
+    column_content_right: ""
+    column_variant: "has-one-column"
+  breadcrumbs:
+    - url: "link.pages-judgment"
+      label: "Debt Collection"
+      url_attributes: ''
+    - url: ""
+      label: "Negotiating a Settlement"
+      url_attributes: ''
+entries:
+  -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+      lead: ""
+      body: ""
+    column_content_left: "
+      <h3 class=\"jcc-subtitle--serif\">Common types of settlements include:</h3>
+      <ul>
+      <li>A lump sum payment of less than the full amount to settle the entire judgment</li>
+      <li>A partial lump sum payment, plus monthly payments until a set amount is paid</li>
+      <li>Monthly payments with or without any discount to the judgment or even</li>
+      <li>Dismissal of the case/judgment</li>
+      </ul>
+      <h3 class=\"jcc-subtitle--serif\">Benefits of settlement</h3>
+      <p>Settlements allow you to take control of the judgment and set its terms. Settlements are often successful because each party has agreed to it, and is therefore more willing to do what is agreed.</p>
+      <p>Ideally, a settlement should allow you to leave in a better position than if you did nothing. For you, that may be paying less, or paying on more favorable terms. To the debt collector, this could be collecting sooner rather than later, and with less effort.</p>
+    "
+    column_content_right: ""
+    background_variant: "" #has-background-color
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "timeline"
+    headergroup:
+      title: "Steps of Negotiation"
+      lead: ""
+    timeline:
+      - title: Create a settlement strategy
+        excerpt: "<p>Before you enter into a negotiation, you should create a strategy as to how you will enter into negotiations.</p>"
+        read_more:
+          label: "Strategy Details"
+          url: "#"
+        img:
+          src: "../../images/graphics/file.svg"
+          alt: "Alt text"
+      - title: "Decide how to negotiate"
+        excerpt: "<p>Decide how you wish to negotiate. Common choices are verbally, usually by phone, or in writing.</p>"
+        read_more:
+          label: "Negotiation Details"
+          id: "timeline-full-modal-2"
+          modal_content: "Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum."
+        img:
+          src: "../../images/graphics/person.svg"
+          alt: "Alt text"
+      - title: Reach an agreement
+        excerpt: "<p>Always confirm the terms of an agreement in writing. Often a settlement will be put into a written settlement agreement. If the debt collector prepares the settlement agreement, read it very carefully, and be sure that you understand and agree to any terms in the settlement before you sign.</p> 
+          <p>You are allowed to consult an attorney before signing any settlement agreement.</p>"
+        img:
+          src: "../../images/graphics/home.svg"
+          alt: "Alt text"
+      - title: Handle a non-agreement
+        excerpt: "<p>It’s perfectly fine not to agree.</p>
+          <p>If negotiating by telephone, you can always explain that you cannot reach an agreement that day, and call back another time.</p>
+          <p>In writing, you may always end the conversation, or respond with a counter-offer.</p>
+          <p>Settlement is voluntary, and sometimes settlement just isn’t possible.</p>"
+        img:
+          src: "../../images/graphics/globe.svg"
+          alt: "Alt text"
+    background_variant: "has-background-color--light"
+switchboard:
+  background_variant: "has-background-color--dark"
+  switchboard_tiles:
+    - brow: "Wage Garnishment"
+      title: 'Someone took money from my paycheck'
+      url: 'link.pages-judgment-wage-garnishment'
+      url_attributes: ''
+    - brow: "Lien Against Property"
+      title: 'I was told I can’t sell my property'
+      url: 'link.pages-judgment-lien-against-property'
+      url_attributes: ''
+    - brow: "Bank Levy"
+      title: 'Someone tried to take money from my bank account '
+      url: 'link.pages-judgment-bank-levy'
+      url_attributes: ''
+  switchboard_tiles2:
+    - brow: "General Information"
+      title: 'I want to find out more about Debt Collection'
+      url: 'link.pages-judgment-general-information'
+      url_attributes: ''
+    - brow: "Negotiating a Settlement"
+      title: 'I want to talk with someone and work something out'
+      url: 'link.pages-judgment-negotiating-a-settlement'
+      url_attributes: ''
+    - brow: "Pay in Installments"
+      title: 'I don’t have all the money but can pay over time'
+      url: 'link.pages-judgment-pay-in-installments'
+      url_attributes: ''

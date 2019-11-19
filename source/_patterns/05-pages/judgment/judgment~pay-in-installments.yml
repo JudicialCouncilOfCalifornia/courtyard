@@ -2,8 +2,8 @@ top:
   hero:
     image: ""
     alt: ""
-    title: "Liens against real property"
-    lead: "A lien is the result of the judgment being recorded with the Clerk Recorder for the county."
+    title: "Motion to pay judgment in installments"
+    lead: "In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay."
     body: ""
     column_content_right: ""
     column_variant: "has-one-column"
@@ -12,23 +12,26 @@ top:
       label: "Debt Collection"
       url_attributes: ''
     - url: ""
-      label: "Lien Against Property"
+      label: "Wage Garnishment"
       url_attributes: ''
 entries:
   -
-    type: "section"
+    type: "steps"
     headergroup:
       brow: ""
       title: ""
       lead: ""
-      body: ""
-    column_content_left: "
-      <p class=\"jcc-header-group__lead\">This lien will prevent you from buying, selling, or refinancing any land until the lien is cleared. Liens are on a county-by-county basis, so having a lien in one county does not affect your property in another.</p>
-      <p>To clear the lien, you must either pay the judgment in full or negotiate a settlement with the debt collector.</p>
-    "
-    column_content_right: ""
-    background_variant: "" #has-background-color
-    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+    steps:
+      - title: "Prepare the Motion to Pay Judgment in Installments"
+        excerpt: "Follow the instructions or use the guided interview to pay the judgment in installments"
+      - title: "File the Motion to Pay Judgment in Installments with the court"
+        excerpt: "File the original plus three copies of the Motion to Pay Judgment in Installments with the court, following local procedure"
+      - title: "Wait for opposition"
+        excerpt: "If opposed, the opposing party will serve an opposition at least 9 court days before the hearing"
+      - title: "Reply to opposition, if any"
+        excerpt: "If opposed, reply to the opposition up to 5 court days before the hearing"
+      - title: "Attend the hearing"
+        excerpt: "Gather your evidence. Check tentative rulings the court day before if your court uses them."
 switchboard:
   background_variant: "has-background-color--dark"
   switchboard_tiles:
