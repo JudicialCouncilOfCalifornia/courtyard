@@ -5,6 +5,10 @@
  * These styles will not be your production CSS.
  */
 
+.patternLink {
+  text-decoration: none;
+}
+
 .sg-pattern-category-title {
   font-size: 1.4rem !important;
   color: #222 !important;

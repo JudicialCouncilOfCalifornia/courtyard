@@ -17,16 +17,15 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 ## Composer Install Wizard
 
-| Question    | Answer     |
-| ----------- | ----------- |
-| the path ./source/_twig-components/functions already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M                                                     |
-| the path ./source/_twig-components/filters already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M                                                     |
-| the path ./source/_twig-components/tags already exists.merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r | M                                                     |
-| update the config option twigDebug (1) with the value ? Y/n | N                                                     |
-| update the config option twigAutoescape () with the value html? Y/n | N                                                     |
-| the path ./public/ already exists. merge or replace with the contents of pattern-lab/styleguidekit-assets-default package? M/r | R                                                     |
-| update the config option styleguideKitPath (...web/libraries/courtyard/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default? Y/n| Y                                                     |
-
+| Question                                                                                                                                                                                | Answer |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| the path ./source/\_twig-components/functions already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r                                     | M      |
+| the path ./source/\_twig-components/filters already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r                                       | M      |
+| the path ./source/\_twig-components/tags already exists.merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r                                           | M      |
+| update the config option twigDebug (1) with the value ? Y/n                                                                                                                             | N      |
+| update the config option twigAutoescape () with the value html? Y/n                                                                                                                     | N      |
+| the path ./public/ already exists. merge or replace with the contents of pattern-lab/styleguidekit-assets-default package? M/r                                                          | R      |
+| update the config option styleguideKitPath (...web/libraries/courtyard/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default? Y/n | Y      |
 
 ## To update Pattern Lab
 
