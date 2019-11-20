@@ -3,6 +3,7 @@ h2,
 h3 {
   @include u-font-family(serif);
   @include u-text(normal);
+  @include u-line-height("heading", 2);
 }
 
 .h-responsive-mega {
@@ -39,7 +40,6 @@ h6,
   @include responsive-h6();
 }
 
-h6,
 .t-responsive-lead {
   @include responsive-lead();
 }

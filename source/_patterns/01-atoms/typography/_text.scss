@@ -86,6 +86,10 @@ a {
     @include u-maxw(none);
   }
 
+  > ul li {
+    @include u-margin-bottom(1.5);
+  }
+
   .jcc-title--serif,
   .jcc-subtitle--serif,
   .jcc-card__title,
@@ -104,22 +108,16 @@ a {
   h6 {
     @include u-font-family(sans);
   }
+
+  h2 {
+    @include u-text(primary-dark);
+    @include has-dash();
+    @include u-margin-bottom(3);
+  }
 }
 
 .h-dash {
   @include has-dash();
-}
-
-.jcc-title--serif {
-  @include u-text(primary-dark);
-  @include has-dash();
-  @include responsive-h2();
-  @include u-margin-bottom(3);
-}
-
-.jcc-subtitle--serif {
-  @include responsive-h3();
-  @include u-margin-bottom(3);
 }
 
 .jcc-lead {
