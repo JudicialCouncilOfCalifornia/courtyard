@@ -12,6 +12,7 @@
 }
 
 .jcc-read-more__content {
+  @extend .usa-prose;
   @include u-padding(3);
   @include u-bg(secondary-lighter);
   @include u-border-left("05", secondary);
