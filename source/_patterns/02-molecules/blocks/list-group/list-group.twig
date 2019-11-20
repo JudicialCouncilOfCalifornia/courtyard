@@ -1,5 +1,5 @@
-<ul class="jcc-list-group">
-  
+<ul class="jcc-list-group"{% if id %} id="{{ id }}"{% endif %}>
+
   {% for item in list_group %}
   <li>
     <p><strong>{{ item.title }}</strong></p>
