@@ -23,14 +23,14 @@ entries:
       lead: ""
       body: ""
     column_content_left: "
-      <h3 class=\"jcc-subtitle--serif\">Common types of settlements include:</h3>
+      <h3>Common types of settlements include:</h3>
       <ul>
       <li>A lump sum payment of less than the full amount to settle the entire judgment</li>
       <li>A partial lump sum payment, plus monthly payments until a set amount is paid</li>
       <li>Monthly payments with or without any discount to the judgment or even</li>
       <li>Dismissal of the case/judgment</li>
       </ul>
-      <h3 class=\"jcc-subtitle--serif\">Benefits of settlement</h3>
+      <h3>Benefits of settlement</h3>
       <p>Settlements allow you to take control of the judgment and set its terms. Settlements are often successful because each party has agreed to it, and is therefore more willing to do what is agreed.</p>
       <p>Ideally, a settlement should allow you to leave in a better position than if you did nothing. For you, that may be paying less, or paying on more favorable terms. To the debt collector, this could be collecting sooner rather than later, and with less effort.</p>
     "
@@ -74,9 +74,9 @@ entries:
         img:
           src: "../../images/graphics/globe.svg"
           alt: "Alt text"
-    background_variant: "has-background-color--light"
+    background_variant: "has-background-color--light--primary"
 switchboard:
-  background_variant: "has-background-color--dark"
+  background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

@@ -15,7 +15,7 @@ body: '<div class="summary-results">
         </div>
         <button  class="usa-button usa-button--primary">Edit</button>'
 column_content_right: ""
-background_variant: "has-background-color--light"
+background_variant: "has-background-color--light--secondary"
 column_variant: "has-two-columns-threequarter" # has-one-column has-two-columns-half has-two-columns-threequarter
 breadcrumbs:
   - url: ""

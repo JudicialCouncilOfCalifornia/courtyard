@@ -23,7 +23,7 @@ timeline:
     img:
       src: "../../images/graphics/home.svg"
       alt: "Alt text"
-background_variant: ""
+background_variant: "has-background-color--transparent"  #has-background-color--light--primary has-background-color--dark--primary
 left_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
   icon: "chevron_left"

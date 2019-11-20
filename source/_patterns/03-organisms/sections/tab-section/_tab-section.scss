@@ -46,7 +46,7 @@
 }
 
 [role="tabpanel"] * + * {
-  @include u-margin-top("105");
+  // @include u-margin-top("105");
 }
 
 *:focus {

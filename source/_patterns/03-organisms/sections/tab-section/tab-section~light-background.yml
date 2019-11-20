@@ -7,7 +7,7 @@ tabs:
   - title: 'One'
   - title: 'Two'
 tab_panels:
-  - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light  jcc-text-section--has-two-columns-threequarter">
+  - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light--secondary jcc-text-section--has-two-columns-threequarter">
     <div class="jcc-text-section__container"> 
     <header class="jcc-header-group">
         <p class="jcc-header-group__brow">More Steps</p>
@@ -23,7 +23,7 @@ tab_panels:
         </div>
           </div>
     </div>'
-  - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light  jcc-text-section--has-two-columns-threequarter">
+  - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light--secondary jcc-text-section--has-two-columns-threequarter">
     <div class="jcc-text-section__container">
     <header class="jcc-header-group">
         <h2 class="jcc-header-group__title">What can we assist you with?</h2>
@@ -38,4 +38,4 @@ tab_panels:
       </div>
       </div>
     </div>'
-background_variant: "has-background-color--light"
+background_variant: "has-background-color--light--secondary"

@@ -22,9 +22,9 @@ entries:
       title: ""
     column_content_left:
       "
-         <p class=\"jcc-header-group__lead\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
+         <p class=\"jcc-lead\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
          low or near minimum wage, the amount taken may be less than 25%. Unfortunately, some employers miscalculate the amount below 25%.</p>
-         <p class=\"jcc-header-group__lead\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
+         <p class=\"jcc-lead\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
          <p>If you are unable to afford the amount to be garnished from wages, a claim of exemption may reduce or stop the
            withholding. Act quickly! If you file within ten days you might be able to prevent the garnishment from
            starting. Even if the garnishment starts, file as early as possible, since the sheriff will hold onto funds
@@ -32,7 +32,7 @@ entries:
            collector, it is almost impossible to get them back.</p>
          "
     column_content_right: ""
-    background_variant: "" #has-background-color
+    background_variant: "has-background-color--transparent"
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
     right_column_components:
       list_block:
@@ -103,10 +103,10 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "" #has-background-color
+    background_variant: "has-background-color--transparent"
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
-  background_variant: "has-background-color--dark"
+  background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'
