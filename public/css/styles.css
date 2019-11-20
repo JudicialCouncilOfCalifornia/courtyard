@@ -14252,6 +14252,7 @@ a:visited {
 .jcc-tile__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
+  line-height: 1.4 ;
 }
 
 .jcc-tile__title a {
@@ -15096,7 +15097,7 @@ a:visited {
 .jcc-header-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.99rem;
-  margin-bottom: 1.5rem ;
+  margin-bottom: 1.25rem ;
   font-weight: normal ;
 }
 
@@ -15111,7 +15112,7 @@ h3.jcc-header-group__title {
   font-size: 0.99rem;
   text-transform: uppercase ;
   letter-spacing: 0.15em ;
-  margin-bottom: 0.75rem ;
+  margin-bottom: 1rem ;
 }
 
 .jcc-header-group__lead {
@@ -25104,7 +25105,7 @@ h3.jcc-header-group__title {
   h4,
   .h4 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   h5,
   .h5 {
@@ -25255,7 +25256,7 @@ h3.jcc-header-group__title {
   }
   .jcc-step__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-tile__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
@@ -25272,11 +25273,11 @@ h3.jcc-header-group__title {
   }
   .jcc-form-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .summary-results .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-accordion__heading-container .usa-accordion__heading {
     padding-left: 2rem ;
@@ -25284,7 +25285,7 @@ h3.jcc-header-group__title {
   }
   .jcc-accordion__heading-container .usa-accordion__button {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-accordion__content-container .usa-accordion__content {
     padding-left: 2rem ;
@@ -25295,11 +25296,11 @@ h3.jcc-header-group__title {
   }
   .jcc-datefinder__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-dropdown__Label {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-breadcrumb__item {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25417,7 +25418,7 @@ h3.jcc-header-group__title {
   }
   .jcc-choice-section .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-choice-section__container {
     padding-left: 2rem ;
@@ -25490,7 +25491,7 @@ h3.jcc-header-group__title {
   }
   .jcc-tab-section__container .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
+    font-size: 1.74rem;
   }
   .jcc-text-section__container {
     padding-left: 2rem ;
