@@ -108,16 +108,16 @@ a {
   h6 {
     @include u-font-family(sans);
   }
-
-  h2 {
-    @include u-text(primary-dark);
-    @include has-dash();
-    @include u-margin-bottom(3);
-  }
 }
 
 .h-dash {
   @include has-dash();
+}
+
+.jcc-title {
+  @include u-text(primary-dark);
+  @include has-dash();
+  @include u-margin-bottom(3);
 }
 
 .jcc-lead {

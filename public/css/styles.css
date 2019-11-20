@@ -13727,25 +13727,12 @@ a:visited {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
 }
 
-
-.usa-prose h2,
-.jcc-card__excerpt h2,
-.jcc-hero__body h2,
-.jcc-hero__column-right h2,
-.jcc-step__excerpt h2,
-.jcc-timeline-item__excerpt h2,
-.jcc-header-group__lead h2,
-.jcc-header-group__body h2,
-.jcc-text-section__content h2,
-.jcc-text-section__column-left h2,
-.jcc-text-section__column-right h2 {
-  color: #0b4778 ;
+.h-dash {
   position: relative;
   padding-bottom: 0.5em;
-  margin-bottom: 1.5rem ;
 }
 
-.usa-prose h2:after, .jcc-card__excerpt h2:after, .jcc-hero__body h2:after, .jcc-hero__column-right h2:after, .jcc-step__excerpt h2:after, .jcc-timeline-item__excerpt h2:after, .jcc-header-group__lead h2:after, .jcc-header-group__body h2:after, .jcc-text-section__content h2:after, .jcc-text-section__column-left h2:after, .jcc-text-section__column-right h2:after {
+.h-dash:after {
   background-color: #e5a000;
   content: "";
   height: 3px;
@@ -13755,12 +13742,14 @@ a:visited {
   left: 0;
 }
 
-.h-dash {
+.jcc-title {
+  color: #0b4778 ;
   position: relative;
   padding-bottom: 0.5em;
+  margin-bottom: 1.5rem ;
 }
 
-.h-dash:after {
+.jcc-title:after {
   background-color: #e5a000;
   content: "";
   height: 3px;
