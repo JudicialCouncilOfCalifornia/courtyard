@@ -27,7 +27,7 @@ top:
         </fieldset>
       </form>'
     column_content_right: ''
-    background_variant: "has-background-color--light"
+    background_variant: "has-background-color--light--secondary"
     column_variant: "has-one-column"
   breadcrumbs:
     - url: ""

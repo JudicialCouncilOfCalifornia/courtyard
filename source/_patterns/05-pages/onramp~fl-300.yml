@@ -54,7 +54,7 @@ entries:
         src: "/images/onramp-fl-300-what-the-other-party-is-asking.png"
         alt: "What the other party is asking the court to decide"
       alt: "Avatar"
-      background_variant: "has-background-color--light"
+      background_variant: "has-background-color--light--secondary"
       header_align_variant: "has-header-left"
       tag: "Page 2"
     headergroup:
@@ -96,7 +96,7 @@ entries:
     column_variant: "has-two-columns-threequarter"
     headergroup:
       title: "What you can do"
-    background_variant: "has-background-color--light"
+    background_variant: "has-background-color--light--secondary"
   -
     type: "section"
     column_content_right: ""
@@ -106,9 +106,11 @@ entries:
     column_variant: "has-two-columns-threequarter"
     headergroup:
       lead: "<p>If You Can Reach an Agreement</p>"
+    background_variant: "has-background-color--transparent"
   -
     type: "card-section"
     column_variant: "has-two-columns" # "has-two-columns" #has-one-colummn
+    background_variant: "has-background-color--transparent"
     cards:
       - title: "If You Disagree"
         excerpt: "
@@ -139,3 +141,4 @@ entries:
     column_variant: "has-two-columns-threequarter"
     headergroup:
       lead: "<p>Ask for something not in the Request</p>"
+    background_variant: "has-background-color--transparent"

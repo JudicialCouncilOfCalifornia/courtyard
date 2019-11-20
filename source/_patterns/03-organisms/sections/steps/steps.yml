@@ -43,4 +43,4 @@ steps:
       id: "steps-target-3"
       title: "Read more"
       content: "Read more content"
-background_variant: # has-background-color
+background_variant: "has-background-color--transparent" #has-background-color--light--primary has-background-color--dark--primary

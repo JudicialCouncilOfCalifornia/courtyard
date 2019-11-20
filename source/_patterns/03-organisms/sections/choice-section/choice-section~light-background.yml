@@ -20,4 +20,4 @@ headergroup:
   tag: "h4"
 button:
   text: "Save"
-background_variant: "has-background-color--light"
+background_variant: "has-background-color--light--secondary"

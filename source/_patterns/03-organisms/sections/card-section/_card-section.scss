@@ -12,15 +12,19 @@
 }
 
 .jcc-cards-section--has-background-color--light,
-.jcc-cards-section--has-background-color--dark {
+.jcc-cards-section--has-background-color--dark,
+.jcc-cards-section--has-background-color--light--secondary,
+.jcc-cards-section--has-background-color--dark--secondary {
   @include section-wrapper-bg;
 }
 
-.jcc-cards-section--has-background-color--light {
+.jcc-cards-section--has-background-color--light,
+.jcc-cards-section--has-background-color--light--secondary {
   @include u-bg(secondary-lighter);
 }
 
-.jcc-cards-section--has-background-color--dark {
+.jcc-cards-section--has-background-color--dark,
+.jcc-cards-section--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
 
   .jcc-card__media {

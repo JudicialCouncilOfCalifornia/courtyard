@@ -39,4 +39,4 @@ timeline:
     img:
       src: "../../images/graphics/home-white.svg"
       alt: "Alt text"
-background_variant: has-background-color--dark
+background_variant: has-background-color--dark--primary

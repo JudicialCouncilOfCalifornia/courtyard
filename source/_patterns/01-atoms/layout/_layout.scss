@@ -1,0 +1,10 @@
+[class*="--has-background-color--transparent"] + [class*="--has-background-color--transparent"],
+[class*="--has-background-color--light--primary"]
+  + [class*="--has-background-color--light--primary"],
+[class*="--has-background-color--light--secondary"]
+  + [class*="--has-background-color--light--secondary"],
+[class*="--has-background-color--dark--primary"] + [class*="--has-background-color--dark--primary"],
+[class*="--has-background-color--dark--secondary"]
+  + [class*="--has-background-color--dark--secondary"] {
+  padding-top: units(0);
+}

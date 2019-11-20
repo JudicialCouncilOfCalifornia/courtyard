@@ -54,7 +54,7 @@ entries:
         src: "https://placeimg.com/800/400/arch"
         alt: "Alt text"
       alt: "Avatar"
-      background_variant: "has-background-color--light"
+      background_variant: "has-background-color--light--secondary"
       header_align_variant: "has-header-left"
       tag: "Page 2"
     headergroup:
@@ -67,6 +67,7 @@ entries:
     column_content_right: ""
     column_content_left: ""
     column_variant: "has-two-columns-threequarter"
+    background_variant: "has-background-color--transparent"
     headergroup:
       lead: "<p>On the second page of FL-200, read sections 7, 8, 9, and 10 to see what orders the person is asking the court to make about parentage, custody and visitation.</p>"
   -
@@ -76,7 +77,7 @@ entries:
         src: "https://placeimg.com/800/400/arch"
         alt: "Alt text"
       alt: "Avatar"
-      background_variant: ""
+      background_variant: "has-background-color--transparent"
       header_align_variant: "has-header-left"
       tag: "Page 2"
     headergroup:
@@ -87,7 +88,7 @@ entries:
       tag: "h3"
   -
     type: "card-section"
-    background_variant: ""
+    background_variant: "has-background-color--transparent"
     column_variant: ""
     cards:
       - title: "Prepare the claim of exemption"
@@ -115,7 +116,7 @@ entries:
     headergroup:
       title: "Additional Fields"
       lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
-    background_variant: has-background-color--dark
+    background_variant: has-background-color--dark--secondary
     column_content_left: ""
 expandable:
   full: true

@@ -2,17 +2,14 @@ top:
   hero:
     image: ""
     alt: ""
-    title: "Filing a claim of exemption for wage garnishment"
-    lead: "A wage garnishment is one of the most common ways to collect a judgment."
+    title: "Stacked Sections Autospacing"
+    lead: "Automate removal of extra spacing when sections of the same background color are stacked."
     body: ""
     column_content_right: ""
     column_variant: "has-one-column"
   breadcrumbs:
-    - url: "link.pages-judgment"
-      label: "Debt Collection"
-      url_attributes: ''
     - url: ""
-      label: "Wage Garnishment"
+      label: "Experiment"
       url_attributes: ''
 entries:
   -
@@ -32,7 +29,7 @@ entries:
            collector, it is almost impossible to get them back.</p>
          "
     column_content_right: ""
-    background_variant: "has-background-color--transparent"
+    background_variant: "has-background-color--transparent" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
     right_column_components:
       list_block:
@@ -60,6 +57,7 @@ entries:
       brow: ""
       title: ""
       lead: ""
+    background_variant: "has-background-color--transparent"
     steps:
       - title: "Prepare the claim of exemption"
         excerpt: "Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)"
@@ -103,8 +101,73 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--transparent"
+    background_variant: "has-background-color--dark--secondary" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+    column_content_left:
+      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
+      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
+      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
+      file an Answer due to inadvertence, mistake, or excusable neglect.
+       "
+    column_content_right: ""
+    background_variant: "has-background-color--dark--secondary" #has-background-color
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+    column_content_left:
+      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
+      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
+      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
+      file an Answer due to inadvertence, mistake, or excusable neglect.
+       "
+    column_content_right: ""
+    background_variant: "has-background-color--light--secondary" #has-background-color
+    background_variant_token: "secondary"
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "section"
+    headergroup:
+      brow: ""
+      title: ""
+    column_content_left:
+      "In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the
+      judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside
+      the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t
+      file an Answer due to inadvertence, mistake, or excusable neglect.
+       "
+    column_content_right: ""
+    background_variant: "has-background-color--light--secondary" #has-background-color
+    background_variant_token: "secondary"
+    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+  -
+    type: "steps"
+    headergroup:
+      brow: ""
+      title: ""
+      lead: ""
+    background_variant: "has-background-color--light--primary"
+    background_variant_token: "primary"
+    steps:
+      - title: "Prepare the claim of exemption"
+        excerpt: "Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)"
+        read_more:
+          id: "steps-target-1"
+          title: "read more"
+          content: "If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy."
+      - title: "File the claim of exemption"
+        excerpt: "File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail)"
+        read_more:
+          id: "steps-target-2"
+          title: "read more"
+          content: "read more content"
 switchboard:
   background_variant: "has-background-color--dark--primary"
   switchboard_tiles:

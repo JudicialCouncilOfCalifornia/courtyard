@@ -13,19 +13,24 @@
 }
 
 .jcc-switchboard--has-background-color--light,
-.jcc-switchboard--has-background-color--dark {
-  @include u-padding-y(8);
+.jcc-switchboard--has-background-color--dark,
+.jcc-switchboard--has-background-color--light--primary,
+.jcc-switchboard--has-background-color--dark--primary {
+  @include u-padding-top(8, "!important");
+  @include u-padding-bottom(8);
 
   @media print {
     @include u-padding-y(4);
   }
 }
 
-.jcc-switchboard--has-background-color--light {
+.jcc-switchboard--has-background-color--light,
+.jcc-switchboard--has-background-color--light--primary {
   @include u-bg(primary-lighter);
 }
 
-.jcc-switchboard--has-background-color--dark {
+.jcc-switchboard--has-background-color--dark,
+.jcc-switchboard--has-background-color--dark--primary {
   @include dark-background();
   @include u-border-top(accent-warm-dark);
   @include u-border-top("05");

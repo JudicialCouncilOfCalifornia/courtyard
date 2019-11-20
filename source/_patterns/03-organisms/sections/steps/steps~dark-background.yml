@@ -20,4 +20,4 @@ steps:
       id: "steps-target-3"
       title: "Read more"
       content: "Read more content"
-background_variant: "has-background-color--dark"
+background_variant: "has-background-color--dark--primary"
