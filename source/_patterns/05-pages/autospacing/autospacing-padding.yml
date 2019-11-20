@@ -19,9 +19,9 @@ entries:
       title: ""
     column_content_left:
       "
-         <p class=\"jcc-header-group__lead\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
+         <p class=\"jcc-lead\">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is
          low or near minimum wage, the amount taken may be less than 25%. Unfortunately, some employers miscalculate the amount below 25%.</p>
-         <p class=\"jcc-header-group__lead\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
+         <p class=\"jcc-lead\">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
          <p>If you are unable to afford the amount to be garnished from wages, a claim of exemption may reduce or stop the
            withholding. Act quickly! If you file within ten days you might be able to prevent the garnishment from
            starting. Even if the garnishment starts, file as early as possible, since the sheriff will hold onto funds
