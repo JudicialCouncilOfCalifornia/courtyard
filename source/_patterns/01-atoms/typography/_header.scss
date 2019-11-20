@@ -35,6 +35,11 @@ h5,
 }
 
 h6,
+.h6 {
+  @include responsive-h6();
+}
+
+h6,
 .t-responsive-lead {
   @include responsive-lead();
 }
