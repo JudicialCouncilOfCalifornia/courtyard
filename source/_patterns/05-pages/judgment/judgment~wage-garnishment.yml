@@ -32,7 +32,7 @@ entries:
            collector, it is almost impossible to get them back.</p>
          "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
     right_column_components:
       list_block:
@@ -103,7 +103,7 @@ entries:
       file an Answer due to inadvertence, mistake, or excusable neglect.
        "
     column_content_right: ""
-    background_variant: "has-background-color--light" #has-background-color
+    background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
   background_variant: "has-background-color--dark"

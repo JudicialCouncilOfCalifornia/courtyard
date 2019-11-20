@@ -26,6 +26,10 @@
 .jcc-text-section--has-background-color--dark,
 .jcc-text-section--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
+
+  a {
+    @include dark-background-link();
+  }
 }
 
 .jcc-text-section__container {

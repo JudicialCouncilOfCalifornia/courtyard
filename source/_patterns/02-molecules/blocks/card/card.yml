@@ -1,5 +1,5 @@
 img:
-  src: "../../images/person.svg"
+  src: "../../images/graphics/person.svg"
   alt: "Alt text"
 title: "Lorem ipsum"
 excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
