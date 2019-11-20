@@ -12,15 +12,19 @@
 }
 
 .jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--dark {
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--light--secondary,
+.jcc-text-section--has-background-color--dark--secondary {
   @include section-wrapper-bg;
 }
 
-.jcc-text-section--has-background-color--light {
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--light--secondary {
   @include u-bg(secondary-lighter);
 }
 
-.jcc-text-section--has-background-color--dark {
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
 
   a {

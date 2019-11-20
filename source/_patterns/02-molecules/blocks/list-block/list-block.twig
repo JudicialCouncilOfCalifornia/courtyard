@@ -1,6 +1,6 @@
 {% set tag = tag|default('h2') %}
 
-<div class="jcc-list-block">
+<div class="jcc-list-block"{% if id %} id="{{ id }}"{% endif %}>
   {% if title %}
     <{{ tag }} class="jcc-list-block__title">{{ title }}</{{ tag }}>
   {% endif %}

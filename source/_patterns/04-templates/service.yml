@@ -14,7 +14,7 @@ top:
                 <option value="3"><strong>FL124</strong> Filing for Payment Plan</option>
             </select>
         </div>'
-    background_variant: "has-background-color--light"
+    background_variant: "has-background-color--light--secondary"
     column_variant: "has-one-column"
   breadcrumbs:
     - url: ""
@@ -30,7 +30,7 @@ tabs_content:
     - title: 'Personal Service'
     - title: 'Mail Service'
   tab_panels:
-    - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light  jcc-text-section--has-two-columns-threequarter">
+    - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light--secondary  jcc-text-section--has-two-columns-threequarter">
       <div class="jcc-text-section__container"> 
       <header class="jcc-header-group">
           <p class="jcc-header-group__brow">Who Steps</p>
@@ -46,7 +46,7 @@ tabs_content:
           </div>
             </div>
       </div>'
-    - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light  jcc-text-section--has-two-columns-threequarter">
+    - content: '<div class="jcc-text-section jcc-text-section--has-background-color--light--secondary  jcc-text-section--has-two-columns-threequarter">
       <div class="jcc-text-section__container">
       <header class="jcc-header-group">
             <h2 class="jcc-header-group__title">What ca we assist you with?</h2>

@@ -9,7 +9,8 @@
   }
 }
 
-.jcc-tab-section--has-background-color--light {
+.jcc-tab-section--has-background-color--light,
+.jcc-tab-section--has-background-color--light--secondary {
   @include section-wrapper-bg;
   @include u-bg(secondary-lighter);
 }
@@ -45,7 +46,7 @@
 }
 
 [role="tabpanel"] * + * {
-  @include u-margin-top("105");
+  // @include u-margin-top("105");
 }
 
 *:focus {

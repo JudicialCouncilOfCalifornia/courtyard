@@ -1,5 +1,5 @@
 
-<div class="jcc-switchboard{% if background_variant %} jcc-switchboard--{{ background_variant }}{% endif %}">
+<div class="jcc-switchboard{% if background_variant %} jcc-switchboard--{{ background_variant }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
   <div class="jcc-switchboard__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
         brow: headergroup.brow,

@@ -26,7 +26,7 @@
     </ul>
   </div>
   {% for section in top.tab_panels %}
-    <section id="section{{loop.index}}" class="jcc-tab-section--has-background-color--light">
+    <section id="section{{loop.index}}" class="jcc-tab-section--has-background-color--light--secondary">
       {% for entry in section.entries %}
         {% if entry.type == 'section' %}
           {# Assign the components to a variable.  Then pass the variable to the right column section. #}

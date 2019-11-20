@@ -23,14 +23,14 @@ entries:
       lead: ""
       body: ""
     column_content_left: "
-      <p class=\"jcc-header-group__lead\">This lien will prevent you from buying, selling, or refinancing any land until the lien is cleared. Liens are on a county-by-county basis, so having a lien in one county does not affect your property in another.</p>
+      <p class=\"jcc-lead\">This lien will prevent you from buying, selling, or refinancing any land until the lien is cleared. Liens are on a county-by-county basis, so having a lien in one county does not affect your property in another.</p>
       <p>To clear the lien, you must either pay the judgment in full or negotiate a settlement with the debt collector.</p>
     "
     column_content_right: ""
     background_variant: "" #has-background-color
     column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
 switchboard:
-  background_variant: "has-background-color--dark"
+  background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'

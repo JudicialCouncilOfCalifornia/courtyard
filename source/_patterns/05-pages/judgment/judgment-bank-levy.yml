@@ -30,12 +30,12 @@ top:
             brow: ""
             title: ""
           column_content_left:
-            "<h2 class=\"jcc-title--serif\">Filing a claim of exemption for bank levy</h2>
+            "<h2>Filing a claim of exemption for bank levy</h2>
               <p class=\"jcc-lead\">The amount taken will be up to the amount of the judgment plus interest. The levy is not continuous; it only takes the money in the account at the time of the levy. Funds deposited after the levy are not taken. You may be able to get some or all of the money levied depending on the source of the funds deposited into the account or your financial situation.</p>
               <p>If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exemption (plus five days if the notice was sent by mail) with the sheriff performing the levy.</p>
               "
           column_content_right: ""
-          background_variant: "has-background-color--light" #has-background-color
+          background_variant: "has-background-color--light--secondary" #has-background-color
           column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
           right_column_components:
             list_block:
@@ -107,7 +107,7 @@ top:
             <p>As long as your account balance is less than two months of the federal benefits being deposited into it, your account will remain safe from garnishment.</p>
             "
           column_content_right: ""
-          background_variant: "has-background-color--light" #has-background-color
+          background_variant: "has-background-color--light--secondary" #has-background-color
           column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
           right_column_components:
             list_block:
@@ -130,7 +130,7 @@ top:
               content: "Lorem ipsum"
               block_variant: true
   switchboard:
-    background_variant: "has-background-color--dark"
+    background_variant: "has-background-color--dark--primary"
     switchboard_tiles:
       - brow: "Wage Garnishment"
         title: 'Someone took money from my paycheck'

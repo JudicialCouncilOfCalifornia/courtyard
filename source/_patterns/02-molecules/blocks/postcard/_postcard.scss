@@ -57,15 +57,19 @@
 }
 
 .jcc-postcard--has-background-color--light,
-.jcc-postcard--has-background-color--dark {
+.jcc-postcard--has-background-color--dark,
+.jcc-postcard--has-background-color--light--secondary,
+.jcc-postcard--has-background-color--dark--secondary {
   @include section-wrapper-bg;
 }
 
-.jcc-postcard--has-background-color--light {
+.jcc-postcard--has-background-color--light,
+.jcc-postcard--has-background-color--light--secondary {
   @include u-bg(secondary-lighter);
 }
 
-.jcc-postcard--has-background-color--dark {
+.jcc-postcard--has-background-color--dark,
+.jcc-postcard--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
 }
 

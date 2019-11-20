@@ -33,7 +33,7 @@ entries:
       - title: "Attend the hearing"
         excerpt: "Gather your evidence. Check tentative rulings the court day before if your court uses them."
 switchboard:
-  background_variant: "has-background-color--dark"
+  background_variant: "has-background-color--dark--primary"
   switchboard_tiles:
     - brow: "Wage Garnishment"
       title: 'Someone took money from my paycheck'
