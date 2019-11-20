@@ -254,6 +254,10 @@ $aspect-width: 16;
 @mixin responsive-h4($responsive-font-family: body) {
   @include u-font($responsive-font-family, 10);
 
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 11);
+  }
+
   @media print {
     @include u-font($responsive-font-family, 9);
   }
@@ -262,8 +266,24 @@ $aspect-width: 16;
 @mixin responsive-h5($responsive-font-family: body) {
   @include u-font($responsive-font-family, 9);
 
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
   @media print {
-    @include u-font("body", 7); // 18
+    @include u-font($responsive-font-family, 8); // 18
+  }
+}
+
+@mixin responsive-h6($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 9);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 7); // 18
   }
 }
 
@@ -275,7 +295,7 @@ $aspect-width: 16;
   }
 
   @media print {
-    @include u-font(body, 7); // 18
+    @include u-font($responsive-font-family, 6); // 18
   }
 }
 

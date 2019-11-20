@@ -14,6 +14,7 @@
 
 .jcc-tile__title {
   @include responsive-h5($responsive-font-family: heading);
+  @include u-line-height("heading", 3);
 
   a {
     @include u-text(primary-dark);

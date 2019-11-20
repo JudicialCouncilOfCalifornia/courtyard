@@ -13494,6 +13494,7 @@ h2,
 h3 {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-weight: normal ;
+  line-height: 1.2 ;
 }
 
 .h-responsive-mega {
@@ -13532,6 +13533,11 @@ h5,
 }
 
 h6,
+.h6 {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.37rem;
+}
+
 .t-responsive-lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
@@ -13639,6 +13645,10 @@ a:visited {
   max-width: none ;
 }
 
+.usa-prose > ul li, .jcc-card__excerpt > ul li, .jcc-hero__body > ul li, .jcc-hero__column-right > ul li, .jcc-step__excerpt > ul li, .jcc-timeline-item__excerpt > ul li, .jcc-header-group__lead > ul li, .jcc-header-group__body > ul li, .jcc-text-section__content > ul li, .jcc-text-section__column-left > ul li, .jcc-text-section__column-right > ul li {
+  margin-bottom: 0.75rem ;
+}
+
 .usa-prose .jcc-title--serif, .jcc-card__excerpt .jcc-title--serif, .jcc-hero__body .jcc-title--serif, .jcc-hero__column-right .jcc-title--serif, .jcc-step__excerpt .jcc-title--serif, .jcc-timeline-item__excerpt .jcc-title--serif, .jcc-header-group__lead .jcc-title--serif, .jcc-header-group__body .jcc-title--serif, .jcc-text-section__content .jcc-title--serif, .jcc-text-section__column-left .jcc-title--serif, .jcc-text-section__column-right .jcc-title--serif,
 .usa-prose .jcc-subtitle--serif,
 .jcc-card__excerpt .jcc-subtitle--serif,
@@ -13732,16 +13742,14 @@ a:visited {
   left: 0;
 }
 
-.jcc-title--serif {
+.jcc-title {
   color: #0b4778 ;
   position: relative;
   padding-bottom: 0.5em;
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.99rem;
   margin-bottom: 1.5rem ;
 }
 
-.jcc-title--serif:after {
+.jcc-title:after {
   background-color: #e5a000;
   content: "";
   height: 3px;
@@ -13749,12 +13757,6 @@ a:visited {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.jcc-subtitle--serif {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.74rem;
-  margin-bottom: 1.5rem ;
 }
 
 .jcc-lead {
@@ -14239,6 +14241,7 @@ a:visited {
 .jcc-tile__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
+  line-height: 1.4 ;
 }
 
 .jcc-tile__title a {
@@ -15083,7 +15086,7 @@ a:visited {
 .jcc-header-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.99rem;
-  margin-bottom: 1.5rem ;
+  margin-bottom: 1.25rem ;
   font-weight: normal ;
 }
 
@@ -15098,7 +15101,7 @@ h3.jcc-header-group__title {
   font-size: 0.99rem;
   text-transform: uppercase ;
   letter-spacing: 0.15em ;
-  margin-bottom: 0.75rem ;
+  margin-bottom: 1rem ;
 }
 
 .jcc-header-group__lead {
@@ -25088,21 +25091,31 @@ h3.jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 2.24rem;
   }
+  h4,
+  .h4 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.74rem;
+  }
+  h5,
+  .h5 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
   h6,
+  .h6 {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
   .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
-  .jcc-title--serif {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 2.49rem;
-  }
-  .jcc-subtitle--serif {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 2.24rem;
-  }
   .jcc-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
+  .jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.49rem;
   }
   .jcc-hero__container {
@@ -25162,6 +25175,10 @@ h3.jcc-header-group__title {
   .jcc-list-block {
     max-width: 60ex ;
   }
+  .jcc-list-block__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49rem;
+  }
   .jcc-postcard__image {
     text-align: right ;
     display: -webkit-box;
@@ -25198,14 +25215,6 @@ h3.jcc-header-group__title {
     right: 0 ;
     left: auto ;
   }
-  .jcc-postcard__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .jcc-postcard__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -25226,14 +25235,38 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 50% ;
   }
+  .jcc-step__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.74rem;
+  }
+  .jcc-tile__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49rem;
+  }
+  .jcc-timeline-item__title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
   .jcc-form--inline .usa-checkbox,
   .jcc-form--inline .usa-radio {
     display: inline-block ;
     margin-right: 0.5rem ;
   }
+  .jcc-form-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
+  .summary-results .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
   .jcc-accordion__heading-container .usa-accordion__heading {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-accordion__heading-container .usa-accordion__button {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
   }
   .jcc-accordion__content-container .usa-accordion__content {
     padding-left: 2rem ;
@@ -25241,6 +25274,14 @@ h3.jcc-header-group__title {
   }
   .jcc-datefinder {
     max-width: 60ex ;
+  }
+  .jcc-datefinder__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
+  .jcc-dropdown__Label {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
   }
   .jcc-breadcrumb__item {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25356,6 +25397,10 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
+  .jcc-choice-section .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
   .jcc-choice-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -25424,6 +25469,10 @@ h3.jcc-header-group__title {
   .jcc-tab-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-tab-section__container .jcc-header-group__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
   }
   .jcc-text-section__container {
     padding-left: 2rem ;
@@ -25811,12 +25860,16 @@ h3.jcc-header-group__title {
   h5,
   .h5 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.24rem;
   }
   h6,
-  .t-responsive-lead {
+  .h6 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
+  }
+  .t-responsive-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
   }
   .t-intro {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25830,21 +25883,13 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.81rem;
   }
-  .jcc-title--serif {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.74rem;
-  }
-  .jcc-subtitle--serif {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.49rem;
-  }
   .jcc-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.06rem;
   }
   .jcc-card__title {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.24rem;
   }
   .jcc-hero__content {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25856,11 +25901,11 @@ h3.jcc-header-group__title {
   }
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.06rem;
   }
   .jcc-list-block__title {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.24rem;
   }
   .jcc-list-group li strong {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25884,12 +25929,12 @@ h3.jcc-header-group__title {
     font-size: 1.37rem;
   }
   .jcc-tile__title {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.24rem;
   }
   .jcc-timeline-item__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.24rem;
   }
   .jcc-timeline-item__excerpt {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25921,7 +25966,7 @@ h3.jcc-header-group__title {
   }
   .jcc-breadcrumb__item {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.06rem;
   }
   .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
@@ -25937,7 +25982,7 @@ h3.jcc-header-group__title {
   }
   .jcc-header-group__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.12rem;
+    font-size: 1.06rem;
   }
   .jcc-cards-section {
     padding-bottom: 1.5rem ;
