@@ -68,7 +68,7 @@
     @include u-flex(no-wrap);
   }
 
-  li {
+  > li {
     @include u-width(full);
     @include u-padding-bottom(4);
 
