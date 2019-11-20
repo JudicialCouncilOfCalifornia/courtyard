@@ -25215,14 +25215,6 @@ h3.jcc-header-group__title {
     right: 0 ;
     left: auto ;
   }
-  .jcc-postcard__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .jcc-postcard__row {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -129,8 +129,8 @@
   @include u-position(relative);
 
   @include at-media(desktop) {
-    @include u-display(flex);
-    align-items: center;
+    // @include u-display(flex);
+    // align-items: center;
   }
 }
 
