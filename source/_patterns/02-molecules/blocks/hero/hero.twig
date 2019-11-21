@@ -12,13 +12,22 @@
         breadcrumbs: breadcrumbs
       } %}
       <div class="jcc-hero__columns">
-        <div class="jcc-hero__column-left">
+        {% if not nested %}
           <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
           {% if lead %}
           <div class="jcc-hero__lead">{{ lead }}</div>
           {% endif %}
+        {% endif %}
+
+        <div class="jcc-hero__column-left">
+          {% if nested %}
+            <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
+            {% if lead %}
+            <div class="jcc-hero__lead">{{ lead }}</div>
+            {% endif %}
+          {% endif %}
           {% if body %}
-          <div class="jcc-hero__body">{{ body }}</div>
+            <div class="jcc-hero__body">{{ body }}</div>
           {% endif %}
         </div>
         {% if column_content_right %}
