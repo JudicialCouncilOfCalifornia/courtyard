@@ -13660,11 +13660,47 @@ a:visited {
   left: -999em;
 }
 
-.usa-prose > p, .jcc-card__excerpt > p, .jcc-hero__body > p, .jcc-hero__column-right > p, .jcc-step__excerpt > p, .jcc-timeline-item__excerpt > p, .jcc-read-more__content > p, .jcc-header-group__lead > p, .jcc-header-group__body > p, .jcc-text-section__content > p, .jcc-text-section__column-left > p, .jcc-text-section__column-right > p {
-  max-width: none ;
+.usa-prose > h3, .jcc-card__excerpt > h3, .jcc-hero__body > h3, .jcc-hero__column-right > h3, .jcc-step__excerpt > h3, .jcc-timeline-item__excerpt > h3, .jcc-read-more__content > h3, .jcc-header-group__lead > h3, .jcc-header-group__body > h3, .jcc-text-section__content > h3, .jcc-text-section__column-left > h3, .jcc-text-section__column-right > h3, .usa-prose > h4, .jcc-card__excerpt > h4, .jcc-hero__body > h4, .jcc-hero__column-right > h4, .jcc-step__excerpt > h4, .jcc-timeline-item__excerpt > h4, .jcc-read-more__content > h4, .jcc-header-group__lead > h4, .jcc-header-group__body > h4, .jcc-text-section__content > h4, .jcc-text-section__column-left > h4, .jcc-text-section__column-right > h4, .usa-prose > h5, .jcc-card__excerpt > h5, .jcc-hero__body > h5, .jcc-hero__column-right > h5, .jcc-step__excerpt > h5, .jcc-timeline-item__excerpt > h5, .jcc-read-more__content > h5, .jcc-header-group__lead > h5, .jcc-header-group__body > h5, .jcc-text-section__content > h5, .jcc-text-section__column-left > h5, .jcc-text-section__column-right > h5, .usa-prose > h6, .jcc-card__excerpt > h6, .jcc-hero__body > h6, .jcc-hero__column-right > h6, .jcc-step__excerpt > h6, .jcc-timeline-item__excerpt > h6, .jcc-read-more__content > h6, .jcc-header-group__lead > h6, .jcc-header-group__body > h6, .jcc-text-section__content > h6, .jcc-text-section__column-left > h6, .jcc-text-section__column-right > h6,
+.usa-prose > p,
+.jcc-card__excerpt > p,
+.jcc-hero__body > p,
+.jcc-hero__column-right > p,
+.jcc-step__excerpt > p,
+.jcc-timeline-item__excerpt > p,
+.jcc-read-more__content > p,
+.jcc-header-group__lead > p,
+.jcc-header-group__body > p,
+.jcc-text-section__content > p,
+.jcc-text-section__column-left > p,
+.jcc-text-section__column-right > p,
+.usa-prose > ul li,
+.jcc-card__excerpt > ul li,
+.jcc-hero__body > ul li,
+.jcc-hero__column-right > ul li,
+.jcc-step__excerpt > ul li,
+.jcc-timeline-item__excerpt > ul li,
+.jcc-read-more__content > ul li,
+.jcc-header-group__lead > ul li,
+.jcc-header-group__body > ul li,
+.jcc-text-section__content > ul li,
+.jcc-text-section__column-left > ul li,
+.jcc-text-section__column-right > ul li {
+  max-width: 88ex ;
 }
 
-.usa-prose > ul li, .jcc-card__excerpt > ul li, .jcc-hero__body > ul li, .jcc-hero__column-right > ul li, .jcc-step__excerpt > ul li, .jcc-timeline-item__excerpt > ul li, .jcc-read-more__content > ul li, .jcc-header-group__lead > ul li, .jcc-header-group__body > ul li, .jcc-text-section__content > ul li, .jcc-text-section__column-left > ul li, .jcc-text-section__column-right > ul li {
+
+.usa-prose > ul li,
+.jcc-card__excerpt > ul li,
+.jcc-hero__body > ul li,
+.jcc-hero__column-right > ul li,
+.jcc-step__excerpt > ul li,
+.jcc-timeline-item__excerpt > ul li,
+.jcc-read-more__content > ul li,
+.jcc-header-group__lead > ul li,
+.jcc-header-group__body > ul li,
+.jcc-text-section__content > ul li,
+.jcc-text-section__column-left > ul li,
+.jcc-text-section__column-right > ul li {
   margin-bottom: 0.75rem ;
 }
 
@@ -13736,7 +13772,19 @@ a:visited {
   font-weight: normal ;
 }
 
-.usa-prose h4, .jcc-card__excerpt h4, .jcc-hero__body h4, .jcc-hero__column-right h4, .jcc-step__excerpt h4, .jcc-timeline-item__excerpt h4, .jcc-read-more__content h4, .jcc-header-group__lead h4, .jcc-header-group__body h4, .jcc-text-section__content h4, .jcc-text-section__column-left h4, .jcc-text-section__column-right h4, .usa-prose h4, .jcc-card__excerpt h4, .jcc-hero__body h4, .jcc-hero__column-right h4, .jcc-step__excerpt h4, .jcc-timeline-item__excerpt h4, .jcc-read-more__content h4, .jcc-header-group__lead h4, .jcc-header-group__body h4, .jcc-text-section__content h4, .jcc-text-section__column-left h4, .jcc-text-section__column-right h4,
+.usa-prose h4, .jcc-card__excerpt h4, .jcc-hero__body h4, .jcc-hero__column-right h4, .jcc-step__excerpt h4, .jcc-timeline-item__excerpt h4, .jcc-read-more__content h4, .jcc-header-group__lead h4, .jcc-header-group__body h4, .jcc-text-section__content h4, .jcc-text-section__column-left h4, .jcc-text-section__column-right h4,
+.usa-prose h5,
+.jcc-card__excerpt h5,
+.jcc-hero__body h5,
+.jcc-hero__column-right h5,
+.jcc-step__excerpt h5,
+.jcc-timeline-item__excerpt h5,
+.jcc-read-more__content h5,
+.jcc-header-group__lead h5,
+.jcc-header-group__body h5,
+.jcc-text-section__content h5,
+.jcc-text-section__column-left h5,
+.jcc-text-section__column-right h5,
 .usa-prose h6,
 .jcc-card__excerpt h6,
 .jcc-hero__body h6,
@@ -13750,6 +13798,23 @@ a:visited {
 .jcc-text-section__column-left h6,
 .jcc-text-section__column-right h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: bold ;
+}
+
+
+.usa-prose h6,
+.jcc-card__excerpt h6,
+.jcc-hero__body h6,
+.jcc-hero__column-right h6,
+.jcc-step__excerpt h6,
+.jcc-timeline-item__excerpt h6,
+.jcc-read-more__content h6,
+.jcc-header-group__lead h6,
+.jcc-header-group__body h6,
+.jcc-text-section__content h6,
+.jcc-text-section__column-left h6,
+.jcc-text-section__column-right h6 {
+  text-transform: none;
 }
 
 .h-dash {
