@@ -15407,6 +15407,10 @@ h3.jcc-header-group__title {
   display: none ;
 }
 
+.jcc-modal__backdrop {
+  display: none ;
+}
+
 .jcc-modal__dialog[open] {
   display: block ;
 }

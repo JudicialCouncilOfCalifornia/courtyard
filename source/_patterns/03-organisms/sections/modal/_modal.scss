@@ -3,6 +3,10 @@
   @include u-display(none);
 }
 
+.jcc-modal__backdrop {
+  @include u-display(none);
+}
+
 // Shows the dialog window. This attr is added by the A11yDialog script.
 .jcc-modal__dialog[open] {
   @include u-display(block);
