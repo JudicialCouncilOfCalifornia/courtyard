@@ -15457,8 +15457,8 @@ h3.jcc-header-group__title {
 
 .jcc-modal__close-button {
   position: absolute ;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 .jcc-modal__close-button svg {
@@ -15520,6 +15520,11 @@ h3.jcc-header-group__title {
 }
 
 .jcc-modal--full .jcc-modal__footer {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
 }
@@ -25551,6 +25556,10 @@ h3.jcc-header-group__title {
     top: 1rem;
     right: 1rem;
     -webkit-appearance: none;
+  }
+  .jcc-modal--full .jcc-modal__footer {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
   }
   .jcc-modal--full .jcc-modal__footer {
     padding-left: 2rem ;

@@ -85,6 +85,7 @@
   }
 
   .jcc-modal__footer {
+    @include section-container;
     @include u-padding-x(2);
 
     @include at-media(desktop) {
