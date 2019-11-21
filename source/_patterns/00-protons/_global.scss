@@ -327,7 +327,8 @@ $aspect-width: 16;
   @include u-bg($dark-background-color);
   @include u-text("white");
 
-  .jcc-header-group__title {
+  .jcc-header-group__title,
+  .jcc-title {
     @include u-text("white");
   }
 
