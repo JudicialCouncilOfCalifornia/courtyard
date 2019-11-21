@@ -3,7 +3,7 @@
   @include u-display(none);
 }
 
-.jcc-modal__backdrop {
+.jcc-modal[aria-hidden="true"] .jcc-modal__backdrop {
   @include u-display(none);
 }
 

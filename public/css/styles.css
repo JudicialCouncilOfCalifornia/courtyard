@@ -15407,7 +15407,7 @@ h3.jcc-header-group__title {
   display: none ;
 }
 
-.jcc-modal__backdrop {
+.jcc-modal[aria-hidden="true"] .jcc-modal__backdrop {
   display: none ;
 }
 
