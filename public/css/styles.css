@@ -13882,8 +13882,8 @@ a:visited {
 .jcc-lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
+  margin-bottom: 1rem ;
   line-height: 1.4 ;
-  margin-bottom: 0.75rem ;
 }
 
 .jcc-card__title {
@@ -13979,7 +13979,8 @@ a:visited {
   color: white ;
 }
 
-.jcc-hero--has-background-color--dark .jcc-header-group__title {
+.jcc-hero--has-background-color--dark .jcc-header-group__title,
+.jcc-hero--has-background-color--dark .jcc-title {
   color: white ;
 }
 
@@ -14049,7 +14050,8 @@ a:visited {
 .jcc-hero__lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
-  margin-bottom: 0.75rem ;
+  margin-bottom: 1rem ;
+  line-height: 1.4 ;
 }
 
 .jcc-hero--has-one-column .jcc-hero__column-left {
@@ -14257,7 +14259,9 @@ a:visited {
 }
 
 .jcc-postcard--has-background-color--dark .jcc-header-group__title,
-.jcc-postcard--has-background-color--dark--secondary .jcc-header-group__title {
+.jcc-postcard--has-background-color--dark .jcc-title,
+.jcc-postcard--has-background-color--dark--secondary .jcc-header-group__title,
+.jcc-postcard--has-background-color--dark--secondary .jcc-title {
   color: white ;
 }
 
@@ -15227,8 +15231,8 @@ h3.jcc-header-group__title {
 .jcc-header-group__lead {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
+  margin-bottom: 1rem ;
   line-height: 1.4 ;
-  margin-bottom: 0.75rem ;
 }
 
 .jcc-header-group__body {
@@ -15297,7 +15301,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-cards-section--has-background-color--dark .jcc-header-group__title,
-.jcc-cards-section--has-background-color--dark--secondary .jcc-header-group__title {
+.jcc-cards-section--has-background-color--dark .jcc-title,
+.jcc-cards-section--has-background-color--dark--secondary .jcc-header-group__title,
+.jcc-cards-section--has-background-color--dark--secondary .jcc-title {
   color: white ;
 }
 
@@ -15573,7 +15579,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-header-group__title,
-.jcc-steps-section--has-background-color--dark--primary .jcc-header-group__title {
+.jcc-steps-section--has-background-color--dark .jcc-title,
+.jcc-steps-section--has-background-color--dark--primary .jcc-header-group__title,
+.jcc-steps-section--has-background-color--dark--primary .jcc-title {
   color: white ;
 }
 
@@ -15633,7 +15641,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content .jcc-header-group__title,
-.jcc-steps-section--has-background-color--dark--primary .jcc-read-more__content .jcc-header-group__title {
+.jcc-steps-section--has-background-color--dark .jcc-read-more__content .jcc-title,
+.jcc-steps-section--has-background-color--dark--primary .jcc-read-more__content .jcc-header-group__title,
+.jcc-steps-section--has-background-color--dark--primary .jcc-read-more__content .jcc-title {
   color: white ;
 }
 
@@ -15771,7 +15781,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard--has-background-color--dark .jcc-header-group__title,
-.jcc-switchboard--has-background-color--dark--primary .jcc-header-group__title {
+.jcc-switchboard--has-background-color--dark .jcc-title,
+.jcc-switchboard--has-background-color--dark--primary .jcc-header-group__title,
+.jcc-switchboard--has-background-color--dark--primary .jcc-title {
   color: white ;
 }
 
@@ -15934,7 +15946,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-text-section--has-background-color--dark .jcc-header-group__title,
-.jcc-text-section--has-background-color--dark--secondary .jcc-header-group__title {
+.jcc-text-section--has-background-color--dark .jcc-title,
+.jcc-text-section--has-background-color--dark--secondary .jcc-header-group__title,
+.jcc-text-section--has-background-color--dark--secondary .jcc-title {
   color: white ;
 }
 
@@ -16158,7 +16172,9 @@ h3.jcc-header-group__title {
 }
 
 .jcc-timeline-section--has-background-color--dark .jcc-header-group__title,
-.jcc-timeline-section--has-background-color--dark--primary .jcc-header-group__title {
+.jcc-timeline-section--has-background-color--dark .jcc-title,
+.jcc-timeline-section--has-background-color--dark--primary .jcc-header-group__title,
+.jcc-timeline-section--has-background-color--dark--primary .jcc-title {
   color: white ;
 }
 

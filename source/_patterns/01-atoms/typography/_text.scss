@@ -132,6 +132,6 @@ a {
 
 .jcc-lead {
   @include responsive-lead();
-  @include u-line-height("body", 3);
-  @include u-margin-bottom(1.5);
+  @include u-margin-bottom(2);
+  @include u-line-height(body, 3);
 }

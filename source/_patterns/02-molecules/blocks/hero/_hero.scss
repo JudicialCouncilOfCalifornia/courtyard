@@ -60,7 +60,8 @@
 
 .jcc-hero__lead {
   @include responsive-lead();
-  @include u-margin-bottom(1.5);
+  @include u-margin-bottom(2);
+  @include u-line-height(body, 3);
 }
 
 .jcc-hero--has-one-column {
