@@ -5,13 +5,20 @@
   <div class="jcc-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-modal"></div>
 
   <dialog class="jcc-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="{{ headergroup.title }}" title="{{ headergroup.title }}">
-    <button class="jcc-modal__close-button" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">X</button>
+    <button class="jcc-modal__close-button usa-button--unstyled" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">
+      {% include '@atoms/icons/icon.twig' with  {
+        icon: icon.icon,
+        title: icon.title,
+        icon_file: icon.icon_file,
+        decorative: icon.decorative
+      } %}
+    </button>
         
     <div class="jcc-modal__content">
       {{ modal_content }}
     </div>
       <footer class="jcc-modal__footer">
-        <button type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">Done</button>
+        <button class="usa-button" type="button" data-a11y-dialog-hide="{{ modal_id }}" aria-label="Close this dialog window">Done</button>
       </footer>
   </dialog>
 </div>

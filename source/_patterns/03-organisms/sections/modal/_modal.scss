@@ -28,7 +28,8 @@
 
 .jcc-modal__dialog {
   // Structural Attributes
-  @include u-padding(2);
+  @include u-padding-y(6);
+  @include u-padding-x(2);
   @include u-margin-x(auto);
   @include u-position(relative);
   box-sizing: border-box;
@@ -49,17 +50,23 @@
 
 .jcc-modal__close-button {
   @include u-position(absolute);
-  @include u-top(0);
-  @include u-right(0);
+  top: 0.5rem;
+  right: 0.5rem;
 
   @include at-media(desktop) {
-    top: 32px;
-    right: 32px;
+    top: 1rem;
+    right: 1rem;
     -webkit-appearance: none;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
   }
 }
 
 .jcc-modal__content {
+  @extend .usa-prose;
 }
 
 .jcc-modal__trigger {
@@ -73,5 +80,15 @@
     @include u-width(full);
     @include u-margin(0);
     @include u-maxw(full);
+    @include u-padding-x(0);
+    @include u-padding-top(0);
+  }
+
+  .jcc-modal__footer {
+    @include u-padding-x(2);
+
+    @include at-media(desktop) {
+      @include u-padding-x(4);
+    }
   }
 }
