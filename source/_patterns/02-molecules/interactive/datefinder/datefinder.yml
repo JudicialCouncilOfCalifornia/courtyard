@@ -11,6 +11,7 @@ date:
   month_label: Month
   day_label: Day
   year_label: Year
+  error: false
 send_icon:
   icon_file: "../../images/icomoon/symbol-defs.svg"
   icon: "send"

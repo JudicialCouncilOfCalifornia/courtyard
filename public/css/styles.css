@@ -14535,9 +14535,14 @@ a:visited {
   margin-top: 0 ;
 }
 
+.jcc-datefinder .usa-form-group--error {
+  margin-top: 0 ;
+}
+
 .jcc-datefinder__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49rem;
+  margin-bottom: 1rem ;
 }
 
 .jcc-datefinder__content {
