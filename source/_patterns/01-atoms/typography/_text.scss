@@ -135,3 +135,19 @@ a {
   @include u-margin-bottom(2);
   @include u-line-height(body, 3);
 }
+
+.t-responsive-lead {
+  @include responsive-lead();
+}
+
+.t-intro {
+  @include t-intro();
+}
+
+.t-copy {
+  @include t-copy();
+}
+
+.t-small {
+  @include t-small();
+}

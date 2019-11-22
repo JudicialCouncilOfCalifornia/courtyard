@@ -26,32 +26,16 @@ h3,
 }
 
 h4,
-.h4 {
+.h-responsive-h4 {
   @include responsive-h4();
 }
 
 h5,
-.h5 {
+.h-responsive-h5 {
   @include responsive-h5();
 }
 
 h6,
-.h6 {
+.h-responsive-h3 {
   @include responsive-h6();
-}
-
-.t-responsive-lead {
-  @include responsive-lead();
-}
-
-.t-intro {
-  @include t-intro();
-}
-
-.t-copy {
-  @include t-copy();
-}
-
-.t-small {
-  @include t-small();
 }

@@ -13559,41 +13559,21 @@ h3,
 }
 
 h4,
-.h4 {
+.h-responsive-h4 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.49rem;
 }
 
 h5,
-.h5 {
+.h-responsive-h5 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
 }
 
 h6,
-.h6 {
+.h-responsive-h3 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
-}
-
-.t-responsive-lead {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.37rem;
-}
-
-.t-intro {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.12rem;
-}
-
-.t-copy {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99rem;
-}
-
-.t-small {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.93rem;
 }
 
 html,
@@ -13884,6 +13864,26 @@ a:visited {
   font-size: 1.37rem;
   margin-bottom: 1rem ;
   line-height: 1.4 ;
+}
+
+.t-responsive-lead {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.37rem;
+}
+
+.t-intro {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.12rem;
+}
+
+.t-copy {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.99rem;
+}
+
+.t-small {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.93rem;
 }
 
 .jcc-card__title {
@@ -25270,25 +25270,25 @@ h3.jcc-header-group__title {
     font-size: 2.24rem;
   }
   h4,
-  .h4 {
+  .h-responsive-h4 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.74rem;
   }
   h5,
-  .h5 {
+  .h-responsive-h5 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
   h6,
-  .h6 {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.49rem;
-  }
-  .t-responsive-lead {
+  .h-responsive-h3 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
   .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
+  .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
@@ -26039,19 +26039,23 @@ h3.jcc-header-group__title {
     font-size: 1.49rem;
   }
   h4,
-  .h4 {
+  .h-responsive-h4 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.37rem;
   }
   h5,
-  .h5 {
+  .h-responsive-h5 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.24rem;
   }
   h6,
-  .h6 {
+  .h-responsive-h3 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
+  }
+  .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
   }
   .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -26068,10 +26072,6 @@ h3.jcc-header-group__title {
   .t-small {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.81rem;
-  }
-  .jcc-lead {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.06rem;
   }
   .jcc-card__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
