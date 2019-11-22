@@ -14516,6 +14516,18 @@ a:visited {
   background-image: url("../images/icomoon/svg/add.svg");
 }
 
+.usa-accordion--full .jcc-postcard__container,
+.usa-accordion--full .jcc-text-section__container {
+  padding-left: 0 ;
+  padding-right: 0 ;
+}
+
+.usa-accordion--full .jcc-postcard,
+.usa-accordion--full .jcc-text-section {
+  padding-bottom: 2rem ;
+  padding-top: 2rem ;
+}
+
 .jcc-datefinder {
   padding-bottom: 1.5rem ;
   padding-top: 1.5rem ;
