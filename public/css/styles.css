@@ -13571,7 +13571,7 @@ h5,
 }
 
 h6,
-.h-responsive-h3 {
+.h-responsive-h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
 }
@@ -25280,7 +25280,7 @@ h3.jcc-header-group__title {
     font-size: 1.49rem;
   }
   h6,
-  .h-responsive-h3 {
+  .h-responsive-h6 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
@@ -26049,7 +26049,7 @@ h3.jcc-header-group__title {
     font-size: 1.24rem;
   }
   h6,
-  .h-responsive-h3 {
+  .h-responsive-h6 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
   }
