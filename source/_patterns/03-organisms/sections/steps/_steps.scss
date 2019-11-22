@@ -39,6 +39,10 @@
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--light--primary {
   @include u-bg(primary-lighter);
+
+  .jcc-read-more__content {
+    @include u-bg("white");
+  }
 }
 
 .jcc-steps-section__container {

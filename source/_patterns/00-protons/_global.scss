@@ -354,25 +354,45 @@ $aspect-width: 16;
   @include u-text("white");
 }
 
-@mixin dark-background-link() {
-  @include u-text(accent-warm-dark);
+@mixin dark-background-link(
+  $dark-background-link-color: accent-warm-light,
+  $dark-background-link-color-hover: accent-warm
+) {
+  @include u-text($dark-background-link-color);
 
   &:hover {
-    @include u-text(accent-warm);
+    @include u-text($dark-background-link-color-hover);
   }
 
   &:active,
   &:focus {
-    @include u-text(accent-warm);
+    @include u-text($dark-background-link-color-hover);
   }
 
   &:visited {
-    @include u-text(accent-warm-dark);
+    @include u-text($dark-background-link-color-hover);
   }
 }
 
-@mixin dark-background-link-button() {
-  @include u-text(accent-warm-dark);
+@mixin dark-background-link-button($dark-background-link-color: accent-warm-light) {
+  @include u-text($dark-background-link-color);
+}
+
+@mixin light-background-link() {
+  @include u-text(info-darker);
+
+  &:hover {
+    @include u-text(info-dark);
+  }
+
+  &:active,
+  &:focus {
+    @include u-text(info-dark);
+  }
+
+  &:visited {
+    @include u-text(info-darker);
+  }
 }
 
 @mixin media-icon($icon-size: 2rem, $icon-circle-size: 2.5rem, $icon-circle-bg: "gold-5v") {

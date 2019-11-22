@@ -22,7 +22,7 @@ column_content_right: '
       </li>
     </ul>
   </nav></div>'
-background_variant: "has-background-color--dark"
+background_variant: "has-background-color--light"
 column_variant: "has-two-columns-threequarter" # has-one-column has-two-columns-half has-two-columns-threequarter
 breadcrumbs:
   - url: "#"

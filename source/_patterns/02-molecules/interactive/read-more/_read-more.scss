@@ -52,6 +52,7 @@
     @include u-radius(lg);
     @include t-intro($responsive-font-family: heading);
     @include u-text(italic);
+    @include u-text(info-darker);
   }
 
   .jcc-read-more__content {
