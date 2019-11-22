@@ -82,8 +82,13 @@ a {
 }
 
 .usa-prose {
-  > p {
-    @include u-maxw(none);
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul li {
+    @include u-measure(6);
   }
 
   > ul li {
@@ -104,9 +109,14 @@ a {
   }
 
   h4,
-  h4,
+  h5,
   h6 {
     @include u-font-family(sans);
+    @include u-text(bold);
+  }
+
+  h6 {
+    text-transform: none;
   }
 }
 
@@ -122,6 +132,6 @@ a {
 
 .jcc-lead {
   @include responsive-lead();
-  @include u-line-height("body", 3);
-  @include u-margin-bottom(1.5);
+  @include u-margin-bottom(2);
+  @include u-line-height(body, 3);
 }
