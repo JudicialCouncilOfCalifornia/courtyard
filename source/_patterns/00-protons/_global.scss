@@ -323,6 +323,34 @@ $aspect-width: 16;
   }
 }
 
+@mixin dark-background-link(
+  $dark-background-link-color: accent-warm-light,
+  $dark-background-link-color-hover: accent-warm
+) {
+  @include u-text($dark-background-link-color);
+
+  &:hover {
+    @include u-text($dark-background-link-color-hover);
+  }
+
+  &:active,
+  &:focus {
+    @include u-text($dark-background-link-color-hover);
+  }
+
+  &:visited {
+    @include u-text($dark-background-link-color-hover);
+  }
+}
+
+@mixin dark-background-text() {
+  @include u-text("white");
+}
+
+@mixin dark-background-link-button($dark-background-link-color: accent-warm-light) {
+  @include u-text($dark-background-link-color);
+}
+
 @mixin dark-background($dark-background-color: primary) {
   @include u-bg($dark-background-color);
   @include u-text("white");
@@ -333,46 +361,33 @@ $aspect-width: 16;
   }
 
   > a {
-    @include u-text(accent-warm-dark);
-
-    &:hover {
-      @include u-text(accent-warm);
-    }
-
-    &:active,
-    &:focus {
-      @include u-text(accent-warm);
-    }
-
-    &:visited {
-      @include u-text(accent-warm-dark);
-    }
+    @include dark-background-link();
   }
 }
 
-@mixin dark-background-text() {
-  @include u-text("white");
-}
-
-@mixin dark-background-link() {
-  @include u-text(accent-warm-dark);
+@mixin light-background-link() {
+  @include u-text(info-darker);
 
   &:hover {
-    @include u-text(accent-warm);
+    @include u-text(info-dark);
   }
 
   &:active,
   &:focus {
-    @include u-text(accent-warm);
+    @include u-text(info-dark);
   }
 
   &:visited {
-    @include u-text(accent-warm-dark);
+    @include u-text(info-darker);
   }
 }
 
-@mixin dark-background-link-button() {
-  @include u-text(accent-warm-dark);
+@mixin light-background($light-background-color: secondary-lighter) {
+  @include u-bg($light-background-color);
+
+  > a {
+    @include light-background-link();
+  }
 }
 
 @mixin media-icon($icon-size: 2rem, $icon-circle-size: 2.5rem, $icon-circle-bg: "gold-5v") {

@@ -13559,41 +13559,21 @@ h3,
 }
 
 h4,
-.h4 {
+.h-responsive-h4 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.49rem;
 }
 
 h5,
-.h5 {
+.h-responsive-h5 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
 }
 
 h6,
-.h6 {
+.h-responsive-h6 {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
-}
-
-.t-responsive-lead {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.37rem;
-}
-
-.t-intro {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.12rem;
-}
-
-.t-copy {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.99rem;
-}
-
-.t-small {
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.93rem;
 }
 
 html,
@@ -13886,6 +13866,26 @@ a:visited {
   line-height: 1.4 ;
 }
 
+.t-responsive-lead {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.37rem;
+}
+
+.t-intro {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.12rem;
+}
+
+.t-copy {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.99rem;
+}
+
+.t-small {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.93rem;
+}
+
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
@@ -13974,6 +13974,38 @@ a:visited {
   background-color: #e7f2f5 ;
 }
 
+.jcc-hero--has-background-color--light > a {
+  color: #07648d ;
+}
+
+.jcc-hero--has-background-color--light > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light > a:active, .jcc-hero--has-background-color--light > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light > a:visited {
+  color: #07648d ;
+}
+
+.jcc-hero--has-background-color--light .jcc-breadcrumb__item a {
+  color: #07648d ;
+}
+
+.jcc-hero--has-background-color--light .jcc-breadcrumb__item a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light .jcc-breadcrumb__item a:active, .jcc-hero--has-background-color--light .jcc-breadcrumb__item a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light .jcc-breadcrumb__item a:visited {
+  color: #07648d ;
+}
+
 .jcc-hero--has-background-color--dark {
   background-color: #005ea2 ;
   color: white ;
@@ -13985,7 +14017,7 @@ a:visited {
 }
 
 .jcc-hero--has-background-color--dark > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-hero--has-background-color--dark > a:hover {
@@ -13997,11 +14029,11 @@ a:visited {
 }
 
 .jcc-hero--has-background-color--dark > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-hero--has-background-color--dark .jcc-breadcrumb__item a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:hover {
@@ -14013,7 +14045,7 @@ a:visited {
 }
 
 .jcc-hero--has-background-color--dark .jcc-breadcrumb__item a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-hero--has-background-color--dark .jcc-hero__title,
@@ -14252,6 +14284,27 @@ a:visited {
   background-color: #e7f2f5 ;
 }
 
+.jcc-postcard--has-background-color--light > a,
+.jcc-postcard--has-background-color--light--secondary > a {
+  color: #07648d ;
+}
+
+.jcc-postcard--has-background-color--light > a:hover,
+.jcc-postcard--has-background-color--light--secondary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-postcard--has-background-color--light > a:active, .jcc-postcard--has-background-color--light > a:focus,
+.jcc-postcard--has-background-color--light--secondary > a:active,
+.jcc-postcard--has-background-color--light--secondary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-postcard--has-background-color--light > a:visited,
+.jcc-postcard--has-background-color--light--secondary > a:visited {
+  color: #07648d ;
+}
+
 .jcc-postcard--has-background-color--dark,
 .jcc-postcard--has-background-color--dark--secondary {
   background-color: #168092 ;
@@ -14267,7 +14320,7 @@ a:visited {
 
 .jcc-postcard--has-background-color--dark > a,
 .jcc-postcard--has-background-color--dark--secondary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-postcard--has-background-color--dark > a:hover,
@@ -14283,7 +14336,7 @@ a:visited {
 
 .jcc-postcard--has-background-color--dark > a:visited,
 .jcc-postcard--has-background-color--dark--secondary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-postcard__media {
@@ -14516,6 +14569,18 @@ a:visited {
   background-image: url("../images/icomoon/SVG/add.svg");
 }
 
+.usa-accordion--full .jcc-postcard__container,
+.usa-accordion--full .jcc-text-section__container {
+  padding-left: 0 ;
+  padding-right: 0 ;
+}
+
+.usa-accordion--full .jcc-postcard,
+.usa-accordion--full .jcc-text-section {
+  padding-bottom: 2rem ;
+  padding-top: 2rem ;
+}
+
 .jcc-datefinder {
   padding-bottom: 1.5rem ;
   padding-top: 1.5rem ;
@@ -14535,9 +14600,14 @@ a:visited {
   margin-top: 0 ;
 }
 
+.jcc-datefinder .usa-form-group--error {
+  margin-top: 0 ;
+}
+
 .jcc-datefinder__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49rem;
+  margin-bottom: 1rem ;
 }
 
 .jcc-datefinder__content {
@@ -14914,6 +14984,7 @@ a:visited {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.12rem;
   font-style: italic ;
+  color: #07648d ;
 }
 
 .jcc-read-more--block .jcc-read-more__content {
@@ -14940,7 +15011,7 @@ a:visited {
 }
 
 .jcc-breadcrumb__item a {
-  color: #28a0cb ;
+  color: #07648d ;
   text-decoration: none;
 }
 
@@ -15294,6 +15365,27 @@ h3.jcc-header-group__title {
   background-color: #e7f2f5 ;
 }
 
+.jcc-cards-section--has-background-color--light > a,
+.jcc-cards-section--has-background-color--light--secondary > a {
+  color: #07648d ;
+}
+
+.jcc-cards-section--has-background-color--light > a:hover,
+.jcc-cards-section--has-background-color--light--secondary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-cards-section--has-background-color--light > a:active, .jcc-cards-section--has-background-color--light > a:focus,
+.jcc-cards-section--has-background-color--light--secondary > a:active,
+.jcc-cards-section--has-background-color--light--secondary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-cards-section--has-background-color--light > a:visited,
+.jcc-cards-section--has-background-color--light--secondary > a:visited {
+  color: #07648d ;
+}
+
 .jcc-cards-section--has-background-color--dark,
 .jcc-cards-section--has-background-color--dark--secondary {
   background-color: #168092 ;
@@ -15309,7 +15401,7 @@ h3.jcc-header-group__title {
 
 .jcc-cards-section--has-background-color--dark > a,
 .jcc-cards-section--has-background-color--dark--secondary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-cards-section--has-background-color--dark > a:hover,
@@ -15325,7 +15417,7 @@ h3.jcc-header-group__title {
 
 .jcc-cards-section--has-background-color--dark > a:visited,
 .jcc-cards-section--has-background-color--dark--secondary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-cards-section--has-background-color--dark .jcc-card,
@@ -15399,6 +15491,27 @@ h3.jcc-header-group__title {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
   background-color: #e7f2f5 ;
+}
+
+.jcc-choice-section--has-background-color--light > a,
+.jcc-choice-section--has-background-color--light--secondary > a {
+  color: #07648d ;
+}
+
+.jcc-choice-section--has-background-color--light > a:hover,
+.jcc-choice-section--has-background-color--light--secondary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-choice-section--has-background-color--light > a:active, .jcc-choice-section--has-background-color--light > a:focus,
+.jcc-choice-section--has-background-color--light--secondary > a:active,
+.jcc-choice-section--has-background-color--light--secondary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-choice-section--has-background-color--light > a:visited,
+.jcc-choice-section--has-background-color--light--secondary > a:visited {
+  color: #07648d ;
 }
 
 .jcc-choice-section__container {
@@ -15587,7 +15700,7 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark > a,
 .jcc-steps-section--has-background-color--dark--primary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-steps-section--has-background-color--dark > a:hover,
@@ -15603,7 +15716,7 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark > a:visited,
 .jcc-steps-section--has-background-color--dark--primary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-step__title,
@@ -15613,7 +15726,7 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__trigger,
 .jcc-steps-section--has-background-color--dark--primary .jcc-read-more__trigger {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:hover,
@@ -15629,7 +15742,7 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__trigger:visited,
 .jcc-steps-section--has-background-color--dark--primary .jcc-read-more__trigger:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content,
@@ -15649,7 +15762,7 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content > a,
 .jcc-steps-section--has-background-color--dark--primary .jcc-read-more__content > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:hover,
@@ -15665,12 +15778,59 @@ h3.jcc-header-group__title {
 
 .jcc-steps-section--has-background-color--dark .jcc-read-more__content > a:visited,
 .jcc-steps-section--has-background-color--dark--primary .jcc-read-more__content > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--light--primary {
   background-color: #eff6fb ;
+}
+
+.jcc-steps-section--has-background-color--light > a,
+.jcc-steps-section--has-background-color--light--primary > a {
+  color: #07648d ;
+}
+
+.jcc-steps-section--has-background-color--light > a:hover,
+.jcc-steps-section--has-background-color--light--primary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-steps-section--has-background-color--light > a:active, .jcc-steps-section--has-background-color--light > a:focus,
+.jcc-steps-section--has-background-color--light--primary > a:active,
+.jcc-steps-section--has-background-color--light--primary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-steps-section--has-background-color--light > a:visited,
+.jcc-steps-section--has-background-color--light--primary > a:visited {
+  color: #07648d ;
+}
+
+.jcc-steps-section--has-background-color--light .jcc-read-more__trigger,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__trigger {
+  color: #07648d ;
+}
+
+.jcc-steps-section--has-background-color--light .jcc-read-more__trigger:hover,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__trigger:hover {
+  color: #28a0cb ;
+}
+
+.jcc-steps-section--has-background-color--light .jcc-read-more__trigger:active, .jcc-steps-section--has-background-color--light .jcc-read-more__trigger:focus,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__trigger:active,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__trigger:focus {
+  color: #28a0cb ;
+}
+
+.jcc-steps-section--has-background-color--light .jcc-read-more__trigger:visited,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__trigger:visited {
+  color: #07648d ;
+}
+
+.jcc-steps-section--has-background-color--light .jcc-read-more__content,
+.jcc-steps-section--has-background-color--light--primary .jcc-read-more__content {
+  background-color: white ;
 }
 
 .jcc-steps-section__container {
@@ -15770,6 +15930,27 @@ h3.jcc-header-group__title {
   background-color: #eff6fb ;
 }
 
+.jcc-switchboard--has-background-color--light > a,
+.jcc-switchboard--has-background-color--light--primary > a {
+  color: #07648d ;
+}
+
+.jcc-switchboard--has-background-color--light > a:hover,
+.jcc-switchboard--has-background-color--light--primary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-switchboard--has-background-color--light > a:active, .jcc-switchboard--has-background-color--light > a:focus,
+.jcc-switchboard--has-background-color--light--primary > a:active,
+.jcc-switchboard--has-background-color--light--primary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-switchboard--has-background-color--light > a:visited,
+.jcc-switchboard--has-background-color--light--primary > a:visited {
+  color: #07648d ;
+}
+
 .jcc-switchboard--has-background-color--dark,
 .jcc-switchboard--has-background-color--dark--primary {
   background-color: #005ea2 ;
@@ -15789,7 +15970,7 @@ h3.jcc-header-group__title {
 
 .jcc-switchboard--has-background-color--dark > a,
 .jcc-switchboard--has-background-color--dark--primary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-switchboard--has-background-color--dark > a:hover,
@@ -15805,7 +15986,7 @@ h3.jcc-header-group__title {
 
 .jcc-switchboard--has-background-color--dark > a:visited,
 .jcc-switchboard--has-background-color--dark--primary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-switchboard__container {
@@ -15865,6 +16046,27 @@ h3.jcc-header-group__title {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
   background-color: #e7f2f5 ;
+}
+
+.jcc-tab-section--has-background-color--light > a,
+.jcc-tab-section--has-background-color--light--secondary > a {
+  color: #07648d ;
+}
+
+.jcc-tab-section--has-background-color--light > a:hover,
+.jcc-tab-section--has-background-color--light--secondary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-tab-section--has-background-color--light > a:active, .jcc-tab-section--has-background-color--light > a:focus,
+.jcc-tab-section--has-background-color--light--secondary > a:active,
+.jcc-tab-section--has-background-color--light--secondary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-tab-section--has-background-color--light > a:visited,
+.jcc-tab-section--has-background-color--light--secondary > a:visited {
+  color: #07648d ;
 }
 
 [role="tablist"] {
@@ -15939,6 +16141,27 @@ h3.jcc-header-group__title {
   background-color: #e7f2f5 ;
 }
 
+.jcc-text-section--has-background-color--light > a,
+.jcc-text-section--has-background-color--light--secondary > a {
+  color: #07648d ;
+}
+
+.jcc-text-section--has-background-color--light > a:hover,
+.jcc-text-section--has-background-color--light--secondary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-text-section--has-background-color--light > a:active, .jcc-text-section--has-background-color--light > a:focus,
+.jcc-text-section--has-background-color--light--secondary > a:active,
+.jcc-text-section--has-background-color--light--secondary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-text-section--has-background-color--light > a:visited,
+.jcc-text-section--has-background-color--light--secondary > a:visited {
+  color: #07648d ;
+}
+
 .jcc-text-section--has-background-color--dark,
 .jcc-text-section--has-background-color--dark--secondary {
   background-color: #168092 ;
@@ -15954,7 +16177,7 @@ h3.jcc-header-group__title {
 
 .jcc-text-section--has-background-color--dark > a,
 .jcc-text-section--has-background-color--dark--secondary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-text-section--has-background-color--dark > a:hover,
@@ -15970,28 +16193,28 @@ h3.jcc-header-group__title {
 
 .jcc-text-section--has-background-color--dark > a:visited,
 .jcc-text-section--has-background-color--dark--secondary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-text-section--has-background-color--dark a,
 .jcc-text-section--has-background-color--dark--secondary a {
-  color: #e5a000 ;
+  color: white ;
 }
 
 .jcc-text-section--has-background-color--dark a:hover,
 .jcc-text-section--has-background-color--dark--secondary a:hover {
-  color: #ffbe2e ;
+  color: #fef0c8 ;
 }
 
 .jcc-text-section--has-background-color--dark a:active, .jcc-text-section--has-background-color--dark a:focus,
 .jcc-text-section--has-background-color--dark--secondary a:active,
 .jcc-text-section--has-background-color--dark--secondary a:focus {
-  color: #ffbe2e ;
+  color: #fef0c8 ;
 }
 
 .jcc-text-section--has-background-color--dark a:visited,
 .jcc-text-section--has-background-color--dark--secondary a:visited {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-text-section__container {
@@ -16165,6 +16388,68 @@ h3.jcc-header-group__title {
   background-color: #eff6fb ;
 }
 
+.jcc-timeline-section--has-background-color--light > a,
+.jcc-timeline-section--has-background-color--light--primary > a {
+  color: #07648d ;
+}
+
+.jcc-timeline-section--has-background-color--light > a:hover,
+.jcc-timeline-section--has-background-color--light--primary > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-timeline-section--has-background-color--light > a:active, .jcc-timeline-section--has-background-color--light > a:focus,
+.jcc-timeline-section--has-background-color--light--primary > a:active,
+.jcc-timeline-section--has-background-color--light--primary > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-timeline-section--has-background-color--light > a:visited,
+.jcc-timeline-section--has-background-color--light--primary > a:visited {
+  color: #07648d ;
+}
+
+.jcc-timeline-section--has-background-color--light .jcc-modal__trigger,
+.jcc-timeline-section--has-background-color--light .jcc-timeline-item__trigger,
+.jcc-timeline-section--has-background-color--light a,
+.jcc-timeline-section--has-background-color--light--primary .jcc-modal__trigger,
+.jcc-timeline-section--has-background-color--light--primary .jcc-timeline-item__trigger,
+.jcc-timeline-section--has-background-color--light--primary a {
+  color: #07648d ;
+}
+
+.jcc-timeline-section--has-background-color--light .jcc-modal__trigger:hover,
+.jcc-timeline-section--has-background-color--light .jcc-timeline-item__trigger:hover,
+.jcc-timeline-section--has-background-color--light a:hover,
+.jcc-timeline-section--has-background-color--light--primary .jcc-modal__trigger:hover,
+.jcc-timeline-section--has-background-color--light--primary .jcc-timeline-item__trigger:hover,
+.jcc-timeline-section--has-background-color--light--primary a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-timeline-section--has-background-color--light .jcc-modal__trigger:active, .jcc-timeline-section--has-background-color--light .jcc-modal__trigger:focus,
+.jcc-timeline-section--has-background-color--light .jcc-timeline-item__trigger:active,
+.jcc-timeline-section--has-background-color--light .jcc-timeline-item__trigger:focus,
+.jcc-timeline-section--has-background-color--light a:active,
+.jcc-timeline-section--has-background-color--light a:focus,
+.jcc-timeline-section--has-background-color--light--primary .jcc-modal__trigger:active,
+.jcc-timeline-section--has-background-color--light--primary .jcc-modal__trigger:focus,
+.jcc-timeline-section--has-background-color--light--primary .jcc-timeline-item__trigger:active,
+.jcc-timeline-section--has-background-color--light--primary .jcc-timeline-item__trigger:focus,
+.jcc-timeline-section--has-background-color--light--primary a:active,
+.jcc-timeline-section--has-background-color--light--primary a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-timeline-section--has-background-color--light .jcc-modal__trigger:visited,
+.jcc-timeline-section--has-background-color--light .jcc-timeline-item__trigger:visited,
+.jcc-timeline-section--has-background-color--light a:visited,
+.jcc-timeline-section--has-background-color--light--primary .jcc-modal__trigger:visited,
+.jcc-timeline-section--has-background-color--light--primary .jcc-timeline-item__trigger:visited,
+.jcc-timeline-section--has-background-color--light--primary a:visited {
+  color: #07648d ;
+}
+
 .jcc-timeline-section--has-background-color--dark,
 .jcc-timeline-section--has-background-color--dark--primary {
   background-color: #005ea2 ;
@@ -16180,7 +16465,7 @@ h3.jcc-header-group__title {
 
 .jcc-timeline-section--has-background-color--dark > a,
 .jcc-timeline-section--has-background-color--dark--primary > a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-timeline-section--has-background-color--dark > a:hover,
@@ -16196,7 +16481,7 @@ h3.jcc-header-group__title {
 
 .jcc-timeline-section--has-background-color--dark > a:visited,
 .jcc-timeline-section--has-background-color--dark--primary > a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media,
@@ -16241,7 +16526,7 @@ h3.jcc-header-group__title {
 .jcc-timeline-section--has-background-color--dark--primary .jcc-modal__trigger,
 .jcc-timeline-section--has-background-color--dark--primary .jcc-timeline-item__trigger,
 .jcc-timeline-section--has-background-color--dark--primary a {
-  color: #e5a000 ;
+  color: #fef0c8 ;
 }
 
 .jcc-timeline-section--has-background-color--dark .jcc-modal__trigger:hover,
@@ -16273,7 +16558,7 @@ h3.jcc-header-group__title {
 .jcc-timeline-section--has-background-color--dark--primary .jcc-modal__trigger:visited,
 .jcc-timeline-section--has-background-color--dark--primary .jcc-timeline-item__trigger:visited,
 .jcc-timeline-section--has-background-color--dark--primary a:visited {
-  color: #e5a000 ;
+  color: #ffbe2e ;
 }
 
 .jcc-timeline-section__container {
@@ -25253,25 +25538,25 @@ h3.jcc-header-group__title {
     font-size: 2.24rem;
   }
   h4,
-  .h4 {
+  .h-responsive-h4 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.74rem;
   }
   h5,
-  .h5 {
+  .h-responsive-h5 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
   h6,
-  .h6 {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.49rem;
-  }
-  .t-responsive-lead {
+  .h-responsive-h6 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
   .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.49rem;
+  }
+  .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
@@ -26022,19 +26307,23 @@ h3.jcc-header-group__title {
     font-size: 1.49rem;
   }
   h4,
-  .h4 {
+  .h-responsive-h4 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.37rem;
   }
   h5,
-  .h5 {
+  .h-responsive-h5 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.24rem;
   }
   h6,
-  .h6 {
+  .h-responsive-h6 {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.12rem;
+  }
+  .jcc-lead {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
   }
   .t-responsive-lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -26051,10 +26340,6 @@ h3.jcc-header-group__title {
   .t-small {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.81rem;
-  }
-  .jcc-lead {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.06rem;
   }
   .jcc-card__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;

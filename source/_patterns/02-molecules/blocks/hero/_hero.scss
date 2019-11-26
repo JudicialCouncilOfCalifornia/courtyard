@@ -20,7 +20,11 @@
 }
 
 .jcc-hero--has-background-color--light {
-  @include u-bg(secondary-lighter);
+  @include light-background($light-background-color: secondary-lighter);
+
+  .jcc-breadcrumb__item a {
+    @include light-background-link();
+  }
 }
 
 .jcc-hero--has-background-color--dark {

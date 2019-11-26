@@ -20,7 +20,7 @@
 
 .jcc-cards-section--has-background-color--light,
 .jcc-cards-section--has-background-color--light--secondary {
-  @include u-bg(secondary-lighter);
+  @include light-background($light-background-color: secondary-lighter);
 }
 
 .jcc-cards-section--has-background-color--dark,

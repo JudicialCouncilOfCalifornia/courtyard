@@ -10,10 +10,15 @@
   .usa-label {
     @include u-margin-top(0);
   }
+
+  .usa-form-group--error {
+    @include u-margin-top(0);
+  }
 }
 
 .jcc-datefinder__title {
   @include responsive-h4($responsive-font-family: heading);
+  @include u-margin-bottom(2);
 }
 
 .jcc-datefinder__content {

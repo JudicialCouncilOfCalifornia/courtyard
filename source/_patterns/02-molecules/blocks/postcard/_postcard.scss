@@ -65,7 +65,7 @@
 
 .jcc-postcard--has-background-color--light,
 .jcc-postcard--has-background-color--light--secondary {
-  @include u-bg(secondary-lighter);
+  @include light-background($light-background-color: secondary-lighter);
 }
 
 .jcc-postcard--has-background-color--dark,
