@@ -14562,11 +14562,11 @@ a:visited {
 }
 
 .usa-accordion__button {
-  background-image: url("../images/icomoon/svg/remove.svg");
+  background-image: url("../images/icomoon/SVG/remove.svg");
 }
 
 .usa-accordion__button[aria-expanded=false] {
-  background-image: url("../images/icomoon/svg/add.svg");
+  background-image: url("../images/icomoon/SVG/add.svg");
 }
 
 .usa-accordion--full .jcc-postcard__container,
