@@ -65,14 +65,7 @@
 
 .jcc-postcard--has-background-color--light,
 .jcc-postcard--has-background-color--light--secondary {
-  @include dark-background($dark-background-color: secondary-lighter);
-
-  a {
-    @include dark-background-link(
-      $dark-background-link-color: "white",
-      $dark-background-link-color-hover: accent-warm-light
-    );
-  }
+  @include light-background($light-background-color: secondary-lighter);
 }
 
 .jcc-postcard--has-background-color--dark,

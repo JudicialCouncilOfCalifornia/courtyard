@@ -13974,6 +13974,22 @@ a:visited {
   background-color: #e7f2f5 ;
 }
 
+.jcc-hero--has-background-color--light > a {
+  color: #07648d ;
+}
+
+.jcc-hero--has-background-color--light > a:hover {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light > a:active, .jcc-hero--has-background-color--light > a:focus {
+  color: #28a0cb ;
+}
+
+.jcc-hero--has-background-color--light > a:visited {
+  color: #07648d ;
+}
+
 .jcc-hero--has-background-color--light .jcc-breadcrumb__item a {
   color: #07648d ;
 }
@@ -14266,56 +14282,27 @@ a:visited {
 .jcc-postcard--has-background-color--light,
 .jcc-postcard--has-background-color--light--secondary {
   background-color: #e7f2f5 ;
-  color: white ;
-}
-
-.jcc-postcard--has-background-color--light .jcc-header-group__title,
-.jcc-postcard--has-background-color--light .jcc-title,
-.jcc-postcard--has-background-color--light--secondary .jcc-header-group__title,
-.jcc-postcard--has-background-color--light--secondary .jcc-title {
-  color: white ;
 }
 
 .jcc-postcard--has-background-color--light > a,
 .jcc-postcard--has-background-color--light--secondary > a {
-  color: #fef0c8 ;
+  color: #07648d ;
 }
 
 .jcc-postcard--has-background-color--light > a:hover,
 .jcc-postcard--has-background-color--light--secondary > a:hover {
-  color: #ffbe2e ;
+  color: #28a0cb ;
 }
 
 .jcc-postcard--has-background-color--light > a:active, .jcc-postcard--has-background-color--light > a:focus,
 .jcc-postcard--has-background-color--light--secondary > a:active,
 .jcc-postcard--has-background-color--light--secondary > a:focus {
-  color: #ffbe2e ;
+  color: #28a0cb ;
 }
 
 .jcc-postcard--has-background-color--light > a:visited,
 .jcc-postcard--has-background-color--light--secondary > a:visited {
-  color: #ffbe2e ;
-}
-
-.jcc-postcard--has-background-color--light a,
-.jcc-postcard--has-background-color--light--secondary a {
-  color: white ;
-}
-
-.jcc-postcard--has-background-color--light a:hover,
-.jcc-postcard--has-background-color--light--secondary a:hover {
-  color: #fef0c8 ;
-}
-
-.jcc-postcard--has-background-color--light a:active, .jcc-postcard--has-background-color--light a:focus,
-.jcc-postcard--has-background-color--light--secondary a:active,
-.jcc-postcard--has-background-color--light--secondary a:focus {
-  color: #fef0c8 ;
-}
-
-.jcc-postcard--has-background-color--light a:visited,
-.jcc-postcard--has-background-color--light--secondary a:visited {
-  color: #fef0c8 ;
+  color: #07648d ;
 }
 
 .jcc-postcard--has-background-color--dark,
