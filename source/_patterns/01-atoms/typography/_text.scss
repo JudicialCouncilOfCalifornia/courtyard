@@ -151,24 +151,3 @@ a {
 .t-small {
   @include t-small();
 }
-
-[class*="--has-background-color--light"] {
-  > a,
-  .jcc-read-more__trigger,
-  .jcc-modal__trigger {
-    @include u-text(info-darker);
-
-    &:hover {
-      @include u-text(info-dark);
-    }
-
-    &:active,
-    &:focus {
-      @include u-text(info-dark);
-    }
-
-    &:visited {
-      @include u-text(info-darker);
-    }
-  }
-}

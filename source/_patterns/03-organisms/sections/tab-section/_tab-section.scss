@@ -12,7 +12,7 @@
 .jcc-tab-section--has-background-color--light,
 .jcc-tab-section--has-background-color--light--secondary {
   @include section-wrapper-bg;
-  @include u-bg(secondary-lighter);
+  @include light-background($light-background-color: secondary-lighter);
 }
 
 [role="tablist"] {

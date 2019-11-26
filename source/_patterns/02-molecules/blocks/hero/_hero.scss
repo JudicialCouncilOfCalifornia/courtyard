@@ -22,7 +22,6 @@
 .jcc-hero--has-background-color--light {
   @include u-bg(secondary-lighter);
 
-  > a,
   .jcc-breadcrumb__item a {
     @include light-background-link();
   }

@@ -23,10 +23,11 @@
 
 .jcc-timeline-section--has-background-color--light,
 .jcc-timeline-section--has-background-color--light--primary {
-  @include u-bg(primary-lighter);
+  @include light-background($light-background-color: primary-lighter);
 
   .jcc-modal__trigger,
-  .jcc-timeline-item__trigger {
+  .jcc-timeline-item__trigger,
+  a {
     @include light-background-link();
   }
 }
