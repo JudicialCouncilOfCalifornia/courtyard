@@ -2,17 +2,17 @@
   <h2 class="jcc-datefinder__title">{{ title }}</h2>
   <div class="jcc-datefinder__content">
     {% if patternlab %}
-    <form action="#" class="jcc-datefinder__form">
-      <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
-      {% include '@atoms/forms/date-input.twig' with  {
-        title: date.title,
-        hint: date.hint,
-        month_label: date.month_label,
-        day_label: date.day_label,
-        year_label: date.year_label,
-        error: date.error
-      } %}
-    </form>
+      <form action="#" class="jcc-datefinder__form">
+        <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
+        {% include '@atoms/forms/date-input.twig' with  {
+          title: date.title,
+          hint: date.hint,
+          month_label: date.month_label,
+          day_label: date.day_label,
+          year_label: date.year_label,
+          error: date.error
+        } %}
+      </form>
     {% else %}
       {{ date_input }}
     {% endif %}
@@ -29,18 +29,18 @@
       <p class="jcc-datefinder__date">{{ serve_date }}</p>
     </div>
     {% if respond_date %}
-    <div class="jcc-datefinder__adjacent-dates">
-      <p class="jcc-datefinder__label">{{ respond_date_label }}</p>
-      <span class="jcc-datefinder__icon">
-        {% include '@atoms/icons/icon.twig' with  {
-            icon: reply_icon.icon,
-            title: reply_icon.title,
-            icon_file: reply_icon.icon_file,
-            decorative: reply_icon.decorative
-          } %}
-      </span>
-      <p class="jcc-datefinder__date">{{ respond_date }}</p>
-    </div>
+      <div class="jcc-datefinder__adjacent-dates">
+        <p class="jcc-datefinder__label">{{ respond_date_label }}</p>
+        <span class="jcc-datefinder__icon">
+          {% include '@atoms/icons/icon.twig' with  {
+              icon: reply_icon.icon,
+              title: reply_icon.title,
+              icon_file: reply_icon.icon_file,
+              decorative: reply_icon.decorative
+            } %}
+        </span>
+        <p class="jcc-datefinder__date">{{ respond_date }}</p>
+      </div>
     {% endif %}
   </div>
 </div>
