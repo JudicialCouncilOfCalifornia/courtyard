@@ -1,6 +1,7 @@
 <div class="jcc-datefinder">
   <h2 class="jcc-datefinder__title">{{ title }}</h2>
   <div class="jcc-datefinder__content">
+    {% if patternlab %}
     <form action="#" class="jcc-datefinder__form">
       <label for="filing_date" class="jcc-datefinder__label" title="{{ filing_date_label }}">{{ filing_date_label }}</label>
       {% include '@atoms/forms/date-input.twig' with  {
@@ -12,7 +13,10 @@
         error: date.error
       } %}
     </form>
-    <div class="jcc-datefinder__adjacent-dates">
+    {% else %}
+      {{ date_input }}
+    {% endif %}
+    <div class="jcc-datefinder__adjacent-dates" {{ serve_hidden ? "hidden=true" }}>
       <p class="jcc-datefinder__label">{{ serve_date_label }}</p>
       <span class="jcc-datefinder__icon">
         {% include '@atoms/icons/icon.twig' with  {
@@ -24,6 +28,7 @@
       </span>
       <p class="jcc-datefinder__date">{{ serve_date }}</p>
     </div>
+    {% if respond_date %}
     <div class="jcc-datefinder__adjacent-dates">
       <p class="jcc-datefinder__label">{{ respond_date_label }}</p>
       <span class="jcc-datefinder__icon">
@@ -36,5 +41,6 @@
       </span>
       <p class="jcc-datefinder__date">{{ respond_date }}</p>
     </div>
+    {% endif %}
   </div>
 </div>
