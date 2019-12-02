@@ -15522,6 +15522,10 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
+.jcc-modal__backdrop {
+  display: none ;
+}
+
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
   display: none ;
 }

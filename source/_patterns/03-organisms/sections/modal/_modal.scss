@@ -1,4 +1,8 @@
 // Disables non-native backdrop
+.jcc-modal__backdrop {
+  @include u-display(none);
+}
+
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
   @include u-display(none);
 }
