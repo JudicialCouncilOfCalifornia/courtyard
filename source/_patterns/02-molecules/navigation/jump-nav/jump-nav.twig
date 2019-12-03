@@ -1,6 +1,6 @@
 {% set tag = tag|default('h2') %}
 
-{% if jump_nav|length > 0 %}
+{% if jump_nav|length > 0 or title %}
 <div class="jcc-jump-nav">
   <nav>
     <{{ tag }} class="jcc-jump-nav__title">{{ title }}</{{ tag }}>
