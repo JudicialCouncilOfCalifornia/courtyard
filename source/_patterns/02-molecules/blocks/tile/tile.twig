@@ -1,5 +1,11 @@
+{% set tag = tag|default('h3') %}
+
 {% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
 <div class="jcc-tile">
+  {% if brow %}
   <p class="jcc-tile__brow">{{ brow }}</p>
-  <h3 class="jcc-tile__title"><a href="{{ url }}"{% if url_attributes %}{{ url_attributes }}{% endif %}>{{ title }}</a></h3>
+  {% endif %}
+  {% if title %}
+  <{{ tag }} class="jcc-tile__title"><a href="{{ url }}"{% if url_attributes %}{{ url_attributes }}{% endif %}>{{ title }}</a></{{ tag }}>
+  {% endif %}
 </div>
