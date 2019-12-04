@@ -21,10 +21,9 @@
 }
 
 .jcc-jump-nav__title {
-  @include u-text(ink);
   @include u-text(uppercase);
   @include u-text(ls-3);
-  @include u-text(base);
+  @include u-text(gray-50);
   @include u-font(body, 2xs);
   @include u-margin-left(2);
   @include u-margin-y(1);

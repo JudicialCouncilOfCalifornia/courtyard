@@ -61,7 +61,7 @@ video {
 }
 
 a {
-  @include u-text("blue-cool-40v");
+  @include u-text("blue-cool-50v");
 
   &:hover {
     @include u-text("cyan-40v");
@@ -69,11 +69,11 @@ a {
 
   &:active,
   &:focus {
-    @include u-text("blue-cool-30v");
+    @include u-text("blue-cool-40v");
   }
 
   &:visited {
-    @include u-text("blue-cool-40v");
+    @include u-text("blue-cool-50v");
   }
 }
 
@@ -150,4 +150,8 @@ a {
 
 .t-small {
   @include t-small();
+}
+
+.usa-hint {
+  @include u-text(gray-50);
 }
