@@ -6,10 +6,10 @@
     {% if hint %}
     <span class="usa-hint" id="dobHint">{{ hint }}</span>
     {% endif %}
-    {% if error %}
-    <span class="usa-error-message" id="input-error-message" role="alert">Helpful error message</span>
-    {% endif %}
-    {% if error %}<div class="usa-form-group usa-form-group--error">{% endif %}
+    <div class="usa-form-group{% if error %} usa-form-group--error{% endif %}">
+      {% if error %}
+      <div class="usa-error-message" id="input-error-message" role="alert">Helpful error message</div>
+      {% endif %}
       <div class="usa-memorable-date">
         <div class="usa-form-group usa-form-group--month">
           <label class="usa-label" for="date_of_birth_1">{{ month_label }}</label>

@@ -20,7 +20,7 @@
 
 .jcc-text-section--has-background-color--light,
 .jcc-text-section--has-background-color--light--secondary {
-  @include u-bg(secondary-lighter);
+  @include light-background($light-background-color: secondary-lighter);
 }
 
 .jcc-text-section--has-background-color--dark,
@@ -28,7 +28,10 @@
   @include dark-background($dark-background-color: secondary);
 
   a {
-    @include dark-background-link();
+    @include dark-background-link(
+      $dark-background-link-color: "white",
+      $dark-background-link-color-hover: accent-warm-light
+    );
   }
 }
 

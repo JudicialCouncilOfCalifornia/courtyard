@@ -13,10 +13,12 @@
       } %}
       <div class="jcc-hero__columns">
         {% if not nested %}
-          <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
-          {% if lead %}
-          <div class="jcc-hero__lead">{{ lead }}</div>
-          {% endif %}
+          <div class="jcc-hero__header">
+            <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
+            {% if lead %}
+            <div class="jcc-hero__lead">{{ lead }}</div>
+            {% endif %}
+          </div>
         {% endif %}
 
         <div class="jcc-hero__column-left">

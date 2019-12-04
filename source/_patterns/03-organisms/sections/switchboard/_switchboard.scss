@@ -26,7 +26,7 @@
 
 .jcc-switchboard--has-background-color--light,
 .jcc-switchboard--has-background-color--light--primary {
-  @include u-bg(primary-lighter);
+  @include light-background($light-background-color: primary-lighter);
 }
 
 .jcc-switchboard--has-background-color--dark,

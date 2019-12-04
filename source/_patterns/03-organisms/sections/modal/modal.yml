@@ -2,4 +2,9 @@ modal_id: jcc-modal
 parent_component_class: ""
 button_label: Open Dialog Window
 modal_content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia corporis, sed culpa, nam earum repellat nemo dolor, alias doloribus cupiditate aliquid. Dolores nobis perferendis molestias atque autem placeat quam ipsum."
-size_variant: "full"
+size_variant: ""
+icon:
+  icon_file: "../../images/icomoon/symbol-defs.svg"
+  icon: "close"
+  title: "Close"
+  decorative: false

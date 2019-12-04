@@ -1,6 +1,3 @@
-.usa-accordion--full {
-}
-
 .jcc-accordion__heading-container {
   @include u-bg(base-lightest);
   @include u-border-bottom(base-lighter);
@@ -37,9 +34,21 @@
 }
 
 .usa-accordion__button {
-  background-image: url("../images/icomoon/svg/remove.svg");
+  background-image: url("../images/icomoon/SVG/remove.svg");
 }
 
 .usa-accordion__button[aria-expanded="false"] {
-  background-image: url("../images/icomoon/svg/add.svg");
+  background-image: url("../images/icomoon/SVG/add.svg");
+}
+
+.usa-accordion--full {
+  .jcc-postcard__container,
+  .jcc-text-section__container {
+    @include u-padding-x(0);
+  }
+
+  .jcc-postcard,
+  .jcc-text-section {
+    @include u-padding-y(4);
+  }
 }
