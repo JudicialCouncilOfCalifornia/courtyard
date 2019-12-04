@@ -7160,11 +7160,11 @@ through all possible variants
 }
 
 .bg-jcc-cyan, .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label, .jcc-radio--bordered .usa-radio__input:checked + .usa-radio__label, [role="tablist"] [aria-selected] {
-  background-color: #017CC1 !important;
+  background-color: #017cc1 !important;
 }
 
 .hover\:bg-jcc-cyan:hover {
-  background-color: #017CC1 !important;
+  background-color: #017cc1 !important;
 }
 
 .border-1px {
@@ -8152,11 +8152,11 @@ through all possible variants
 }
 
 .border-jcc-cyan, .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label, .jcc-radio--bordered .usa-radio__input:checked + .usa-radio__label {
-  border-color: #017CC1 !important;
+  border-color: #017cc1 !important;
 }
 
 .hover\:border-jcc-cyan:hover {
-  border-color: #017CC1 !important;
+  border-color: #017cc1 !important;
 }
 
 .radius-0 {
@@ -13472,8 +13472,8 @@ through all possible variants
 
 .jcc-checkbox--bordered .usa-checkbox__input:checked + .usa-checkbox__label::before {
   background-color: white ;
-  -webkit-box-shadow: 0 0 0 2px #017CC1;
-          box-shadow: 0 0 0 2px #017CC1;
+  -webkit-box-shadow: 0 0 0 2px #017cc1;
+          box-shadow: 0 0 0 2px #017cc1;
   background-image: url("../images/collect-dark.svg");
 }
 
@@ -17848,10 +17848,10 @@ h3.jcc-header-group__title {
     border-color: #e1f3f8 !important;
   }
   .mobile-lg\:border-jcc-cyan {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .mobile-lg\:border-jcc-cyan .mobile-lg\:hover\:border-jcc-cyan:hover {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .mobile-lg\:radius-0 {
     border-radius: 0 !important;
@@ -20722,10 +20722,10 @@ h3.jcc-header-group__title {
     border-color: #e1f3f8 !important;
   }
   .tablet\:border-jcc-cyan {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .tablet\:border-jcc-cyan .tablet\:hover\:border-jcc-cyan:hover {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .tablet\:radius-0 {
     border-radius: 0 !important;
@@ -23869,10 +23869,10 @@ h3.jcc-header-group__title {
     border-color: #e1f3f8 !important;
   }
   .desktop\:border-jcc-cyan {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .desktop\:border-jcc-cyan .desktop\:hover\:border-jcc-cyan:hover {
-    border-color: #017CC1 !important;
+    border-color: #017cc1 !important;
   }
   .desktop\:radius-0 {
     border-radius: 0 !important;
