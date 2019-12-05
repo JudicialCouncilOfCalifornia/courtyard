@@ -14902,6 +14902,16 @@ a:visited {
           flex-direction: column ;
 }
 
+.jcc-read-more .icon {
+  display: inline-block ;
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin-bottom: -4px;
+}
+
 .jcc-read-more__trigger {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -14970,16 +14980,6 @@ a:visited {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1 ;
           order: -1 ;
-}
-
-.icon {
-  display: inline-block ;
-  width: 1rem ;
-  height: 1rem ;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  margin-bottom: -4px;
 }
 
 .jcc-read-more--block .jcc-read-more__trigger {
