@@ -28,7 +28,7 @@ accordion:
     content_attributes:
       Attribute():
         class: []
-  - title: "Second Amendment"
+  - title: "Second Amendment and other words so that this title wraps and allows us to troubleshoot really long titles"
     body: "<p>A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.</p> <ul><li>This is a list item</li><li>Another list item</li></ul>"
     title_attributes:
       Attribute():

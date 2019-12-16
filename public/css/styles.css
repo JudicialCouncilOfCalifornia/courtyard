@@ -14589,6 +14589,11 @@ a:visited {
   padding-top: 2rem ;
 }
 
+.usa-accordion--full .usa-accordion__button {
+  padding-right: 4rem ;
+  line-height: 1.2 ;
+}
+
 .jcc-datefinder {
   padding-bottom: 1.5rem ;
   padding-top: 1.5rem ;

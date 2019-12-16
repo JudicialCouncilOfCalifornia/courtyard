@@ -51,4 +51,9 @@
   .jcc-text-section {
     @include u-padding-y(4);
   }
+
+  .usa-accordion__button {
+    @include u-padding-right(8);
+    @include u-line-height(heading, 2);
+  }
 }
