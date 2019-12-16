@@ -13919,7 +13919,8 @@ a:visited {
   margin-bottom: 1.5rem ;
 }
 
-.jcc-action-list__content, .jcc-action-list__action {
+.jcc-action-list__content,
+.jcc-action-list__action {
   width: 100% ;
   padding-top: 1.5rem ;
 }
