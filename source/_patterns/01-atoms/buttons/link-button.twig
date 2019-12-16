@@ -2,9 +2,9 @@
 
 {% set classes = [
   'usa-button',
-  style ? 'usa-button--' ~ style : '',
+  'usa-button--' ~ link_button.style|default('primary'),
 ]|merge(classes|default([''])) %}
 
-<a {{attributes.addClass(classes) }} href="{{ url }}">
-  {{- text -}}
+<a{{ attributes.addClass(classes) }} href="{{ link_button.url }}">
+  {{- link_button.text -}}
 </a>
