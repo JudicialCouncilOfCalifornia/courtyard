@@ -3,16 +3,17 @@
     {% include '@molecules/text/header-group/header-group.twig' with {
       brow: headergroup.brow,
       title: headergroup.title
-    } %}  
+    } %}
 
     <ul class="jcc-cards">
-      
+
       {% for card in cards %}
       <li class="jcc-cards__item">
         {% include '@molecules/blocks/card/card.twig' with {
           title: card.title,
           excerpt: card.excerpt,
-          img: card.img
+          img: card.img,
+          card_variant: card.img ? 'has-icon' : ''
         } %}
       </li>
       {% endfor %}
