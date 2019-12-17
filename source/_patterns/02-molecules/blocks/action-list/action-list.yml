@@ -1,0 +1,18 @@
+action_list:
+  items:
+    - title: "First brief sentence describing the action"
+      description: "One to two sentences providing addition details about the action link."
+      button:
+        text: "Click 1"
+        url: "#"
+        style: 'primary'
+    - title: "Second brief sentence describing the action"
+      description: "One to two sentences providing addition details about the action link."
+      button:
+        text: "Click 2 longer"
+        url: "#"
+    - title: "Third brief sentence describing the action"
+      description: "One to two sentences providing addition details about the action link."
+      button:
+        text: "Click 3"
+        url: "#"

@@ -13886,6 +13886,58 @@ a:visited {
   font-size: 0.93rem;
 }
 
+.jcc-action-list,
+.usa-prose > .jcc-action-list,
+.jcc-card__excerpt > .jcc-action-list,
+.jcc-hero__body > .jcc-action-list,
+.jcc-hero__column-right > .jcc-action-list,
+.jcc-step__excerpt > .jcc-action-list,
+.jcc-timeline-item__excerpt > .jcc-action-list,
+.jcc-read-more__content > .jcc-action-list,
+.jcc-header-group__lead > .jcc-action-list,
+.jcc-header-group__body > .jcc-action-list,
+.jcc-modal__content > .jcc-action-list,
+.jcc-text-section__content > .jcc-action-list,
+.jcc-text-section__column-left > .jcc-action-list,
+.jcc-text-section__column-right > .jcc-action-list {
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #c9c9c9 ;
+  border-top-style: solid;
+}
+
+[class*="has-background-color--dark"] .jcc-action-list, [class*="has-background-color--dark"] .usa-prose > .jcc-action-list, [class*="has-background-color--dark"] .jcc-card__excerpt > .jcc-action-list, [class*="has-background-color--dark"] .jcc-hero__body > .jcc-action-list, [class*="has-background-color--dark"] .jcc-hero__column-right > .jcc-action-list, [class*="has-background-color--dark"] .jcc-step__excerpt > .jcc-action-list, [class*="has-background-color--dark"] .jcc-timeline-item__excerpt > .jcc-action-list, [class*="has-background-color--dark"] .jcc-read-more__content > .jcc-action-list, [class*="has-background-color--dark"] .jcc-header-group__lead > .jcc-action-list, [class*="has-background-color--dark"] .jcc-header-group__body > .jcc-action-list, [class*="has-background-color--dark"] .jcc-modal__content > .jcc-action-list, [class*="has-background-color--dark"] .jcc-text-section__content > .jcc-action-list, [class*="has-background-color--dark"] .jcc-text-section__column-left > .jcc-action-list, [class*="has-background-color--dark"] .jcc-text-section__column-right > .jcc-action-list {
+  border-top-color: #2a646d ;
+  border-top-style: solid;
+}
+
+.jcc-action-list li {
+  margin-bottom: 1.5rem ;
+}
+
+.jcc-action-list__content,
+.jcc-action-list__action {
+  width: 100% ;
+  padding-top: 1.5rem ;
+}
+
+.jcc-action-list__action {
+  border-bottom-color: #c9c9c9 ;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 1.5rem ;
+}
+
+[class*="has-background-color--dark"] .jcc-action-list__action {
+  border-bottom-color: #2a646d ;
+  border-bottom-style: solid;
+}
+
 .jcc-card__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.37rem;
@@ -22374,6 +22426,75 @@ h3.jcc-header-group__title {
   }
   .tablet\:padding-left-0 {
     padding-left: 0 !important;
+  }
+  @supports (display: grid) {
+    .jcc-action-list {
+      display: grid;
+      grid-template-columns: 1fr -webkit-max-content;
+      grid-template-columns: 1fr max-content;
+      grid-template-areas: "content button";
+    }
+  }
+  .jcc-action-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+  }
+  @supports (display: grid) {
+    .jcc-action-list li {
+      display: contents;
+    }
+  }
+  .jcc-action-list__content {
+    padding-bottom: 1.5rem ;
+    padding-right: 0.5rem ;
+    border-bottom-color: #c9c9c9 ;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 75% ;
+  }
+  [class*="has-background-color--dark"] .jcc-action-list__content {
+    border-bottom-color: #2a646d ;
+    border-bottom-style: solid;
+  }
+  @supports (display: grid) {
+    .jcc-action-list__content {
+      -webkit-box-flex: unset;
+          -ms-flex: unset;
+              flex: unset;
+      margin-left: unset;
+      margin-right: unset;
+      padding-left: unset;
+      padding-right: unset;
+      width: unset;
+      padding-right: 0.5rem ;
+      grid-column: content;
+    }
+  }
+  .jcc-action-list__action {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+  }
+  @supports (display: grid) {
+    .jcc-action-list__action {
+      -webkit-box-flex: unset;
+          -ms-flex: unset;
+              flex: unset;
+      margin-left: unset;
+      margin-right: unset;
+      padding-left: unset;
+      padding-right: unset;
+      width: unset;
+      grid-column: button;
+    }
   }
   .jcc-timeline-section--has-background-color--dark .jcc-timeline .jcc-timeline-item__media,
   .jcc-timeline-section--has-background-color--dark--primary .jcc-timeline .jcc-timeline-item__media {

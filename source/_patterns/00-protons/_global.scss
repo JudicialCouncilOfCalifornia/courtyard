@@ -461,3 +461,13 @@ $aspect-width: 16;
   align-items: center;
   justify-content: center;
 }
+
+// Reset grid-col() styles (use with CSS Grid).
+@mixin grid-col-reset() {
+  flex: unset;
+  margin-left: unset;
+  margin-right: unset;
+  padding-left: unset;
+  padding-right: unset;
+  width: unset;
+}

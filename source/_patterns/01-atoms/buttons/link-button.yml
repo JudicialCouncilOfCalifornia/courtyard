@@ -1,3 +1,4 @@
-text: 'Click me!'
-url: "#"
-style: 'primary'
+link_button:
+  text: 'Click me!'
+  url: "#"
+  style: 'primary'
