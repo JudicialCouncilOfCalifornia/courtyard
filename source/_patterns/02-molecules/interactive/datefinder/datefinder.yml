@@ -13,12 +13,12 @@ date:
   year_label: Year
   error: false
 send_icon:
-  icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "send"
+  file: "../../images/icomoon/symbol-defs.svg"
+  name: "send"
   title: "Send"
   decorative: true
 reply_icon:
-  icon_file: "../../images/icomoon/symbol-defs.svg"
-  icon: "reply"
+  file: "../../images/icomoon/symbol-defs.svg"
+  name: "reply"
   title: "Reply"
   decorative: true
