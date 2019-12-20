@@ -27,9 +27,11 @@
         </section>
       {% endfor %}
       {% include '@atoms/buttons/button.twig' with {
+        button: {
           text: 'Submit',
           style: 'primary',
           url: '#'
+        }
       } %}
     </div>
     <div class="jcc-hero__results">

@@ -48,8 +48,8 @@ top:
                     url: "#"
                 files_list: true
                 icon:
-                  icon_file: "../../images/icomoon/symbol-defs.svg"
-                  icon: "file"
+                  file: "../../images/icomoon/symbol-defs.svg"
+                  name: "file"
                   title: "File"
                   decorative: false
             read_more:
@@ -120,8 +120,8 @@ top:
                     url: "#"
                 files_list: true
                 icon:
-                  icon_file: "../../images/icomoon/symbol-defs.svg"
-                  icon: "file"
+                  file: "../../images/icomoon/symbol-defs.svg"
+                  name: "file"
                   title: "File"
                   decorative: false
             read_more:
