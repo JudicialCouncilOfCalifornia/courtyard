@@ -1,1 +1,2 @@
-icon: "file_download"
+icon:
+  name: "file_download"

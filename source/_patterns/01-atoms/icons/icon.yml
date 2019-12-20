@@ -1,4 +1,5 @@
-icon_file: "../../images/icomoon/symbol-defs.svg"
-icon: "file"
-title: "File"
-decorative: false
+icon:
+  file: "../../images/icomoon/symbol-defs.svg"
+  name: "file"
+  title: "File"
+  decorative: false
