@@ -1,11 +1,14 @@
-{% set tag = tag|default('h3') %}
+{% set tag = tile.tag|default('h3') %}
+{% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
 
-{% set url_attributes = url_attributes ? url_attributes : create_attribute() %}
 <div class="jcc-tile">
-  {% if brow %}
-  <p class="jcc-tile__brow">{{ brow }}</p>
+  {% if tile.brow %}
+    <p class="jcc-tile__brow">{{ tile.brow }}</p>
   {% endif %}
-  {% if title %}
-  <{{ tag }} class="jcc-tile__title"><a href="{{ url }}"{% if url_attributes %}{{ url_attributes }}{% endif %}>{{ title }}</a></{{ tag }}>
+
+  {% if tile.title %}
+    <{{ tag }} class="jcc-tile__title">
+      <a href="{{ tile.url }}"{{ url_attributes }}>{{ tile.title }}</a>
+    </{{ tag }}>
   {% endif %}
 </div>
