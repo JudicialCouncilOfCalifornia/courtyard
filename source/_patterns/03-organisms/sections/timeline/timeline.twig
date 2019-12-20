@@ -1,45 +1,55 @@
-<div class="jcc-timeline-section jcc-timeline-section--{{ background_variant }}"{% if id %} id="{{ id }}"{% endif %}>
+{% set classes = [
+  'jcc-timeline-section',
+  'jcc-timeline-section--' ~ timeline.background_variant|default('has-background-color--transparent'),
+]|merge(timeline.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if timeline.id %} id="{{ timeline.id }}"{% endif %}>
   <div class="jcc-timeline-section__container">
 
-    {% include '@molecules/text/header-group/header-group.twig' with {
-      brow: headergroup.brow,
-      title: headergroup.title
-    } %}   
-    
-    <div class="jcc-timeline__wrapper">
-    <ul class="jcc-timeline slider" aria-label="timeline" tabindex="0">
-      {% for item in timeline %}
-      <li>
-      {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
-        img: item.img,
-        title: item.title,
-        excerpt: item.excerpt,
-        read_more: item.read_more
+    {% if timeline.headergroup %}
+      {% include '@molecules/text/header-group/header-group.twig' with {
+        headergroup: timeline.headergroup
       } %}
-      {% endfor %}
-      </li>
-    </ul>
-    <button class="jcc-timeline__scroller--left"><span class="jcc-timeline__label">Scroll Left</span>
-      <span class="jcc-timeline__scroller-icon">
-        {% include '@atoms/icons/icon.twig' with  {
-            icon: left_icon.icon,
-            title: left_icon.title,
-            icon_file: left_icon.icon_file,
-            decorative: left_icon.decorative
-          } %}
-      </span>
-    </button>
-    <button class="jcc-timeline__scroller--right is-active"><span class="jcc-timeline__label">Scroll Right</span>
-      <span class="jcc-timeline__scroller-icon">
-       {% include '@atoms/icons/icon.twig' with  {
-            icon: right_icon.icon,
-            title: right_icon.title,
-            icon_file: right_icon.icon_file,
-            decorative: right_icon.decorative
-          } %}
-      </span>
-    </button>
+    {% endif %}
+
+    <div class="jcc-timeline__wrapper">
+      <ul class="jcc-timeline slider" aria-label="timeline" tabindex="0">
+        {% for item in timeline.items %}
+          <li>
+            {% include '@molecules/blocks/timeline-item/timeline-item.twig' with {
+              timeline_item: item,
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      {# @todo: Remove these as variables? #}
+      <button class="jcc-timeline__scroller--left">
+        <span class="jcc-timeline__label">{{ "Scroll Left"|t }}</span>
+        <span class="jcc-timeline__scroller-icon">
+          {% set left_icon = timeline.left_icon|default({
+            file: "../../images/icomoon/symbol-defs.svg",
+            name: "chevron_left",
+            title: "Left"|t,
+            decorative: true,
+          }) %}
+          {% include '@atoms/icons/icon.twig' with { icon: left_icon } %}
+        </span>
+      </button>
+
+      <button class="jcc-timeline__scroller--right is-active">
+        <span class="jcc-timeline__label">{{ "Scroll Right"|t }}</span>
+        <span class="jcc-timeline__scroller-icon">
+          {% set right_icon = timeline.right_icon|default({
+            file: "../../images/icomoon/symbol-defs.svg",
+            name: "chevron_right",
+            title: "Right"|t,
+            decorative: true,
+          }) %}
+          {% include '@atoms/icons/icon.twig' with { icon: right_icon } %}
+        </span>
+      </button>
     </div>
-    
+
   </div>
 </div>
