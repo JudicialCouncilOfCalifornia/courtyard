@@ -1,0 +1,6 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
+{% include '@organisms/sections/choice-section/choice-section.twig' with {
+  headergroup: choice_content.headergroup,
+  checkbox_group: choice_content.checkbox_group
+} %}
