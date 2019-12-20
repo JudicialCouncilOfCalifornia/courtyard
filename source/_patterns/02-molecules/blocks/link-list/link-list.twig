@@ -1,21 +1,31 @@
-<div class="jcc-link-list {% if files_list %} jcc-link-list--files{% endif %}">
+{% set classes = [
+  'jcc-link-list',
+  link_list.files_list ? 'jcc-link-list--files' : '',
+]|merge(link_list.classes|default([''])) %}
 
+<div class="{{ classes|join(' ')|trim }}">
   <ul class="jcc-link-list__list">
-    {% for item in items %}
+    {% for item in link_list.items %}
       {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
       <li class="jcc-link-list__item">
+        {% if link_list.files_list %}
+          {% set icon = link_list.icon|default({
+            file: "../../images/icomoon/symbol-defs.svg",
+            name: "file",
+            title: "File"|t,
+            decorative: false,
+          }) %}
 
-        {% if icon %}
-        <span class="jcc-link-list__icon">
-          {% include '@atoms/icons/icon.twig' with  {
-            icon: icon.icon,
-            title: icon.title,
-            icon_file: icon.icon_file,
-            decorative: icon.decorative
-          } %}
-        </span>
+          <span class="jcc-link-list__icon">
+            {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+          </span>
         {% endif %}
-        {{ item.name }} (<a{% if files_list %} download{% endif %} href="{{ item.url }}"{{ url_attributes }}>{{ item.url_title }}</a>)
+
+        {{ item.name }}
+
+        (<a{% if link_list.files_list %} download{% endif %} href="{{ item.url }}"{{ url_attributes }}>
+          {{- item.url_title -}}
+        </a>)
       </li>
     {% endfor %}
   </ul>

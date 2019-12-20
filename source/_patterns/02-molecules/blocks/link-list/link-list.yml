@@ -1,8 +1,9 @@
-files_list: false
-items:
-  - name: Claim of Exemption (Enforcement of Judgement)
-    url_title: Form EJ-160
-    url: "#"
-  - name: Financial Statement
-    url_title: Form EJ-165
-    url: "#"
+link_list:
+  files_list: false
+  items:
+    - name: "Claim of Exemption (Enforcement of Judgement)"
+      url_title: "Form EJ-160"
+      url: "#"
+    - name: "Financial Statement"
+      url_title: "Form EJ-165"
+      url: "#"
