@@ -1,0 +1,19 @@
+top:
+  hero:
+    background_variant: "has-background-color--light--secondary"
+    column_variant: "has-two-columns-threequarter"
+    title: "Name Change"
+    body: '
+      <div class="summary-results">
+        <header class="jcc-header-group">
+          <h4 class="jcc-header-group__title">Whose name is being changed?</h4>
+          <div class="jcc-header-group__lead">Adult</div>
+        </header>
+        <header class="jcc-header-group">
+          <h4 class="jcc-header-group__title">Details</h4>
+          <div class="jcc-header-group__lead">One or more of the persons above are changing their name to conform to their gender identity.</div>
+        </header>
+      </div>
+      <button class="usa-button usa-button--primary">Edit</button>'
+    breadcrumbs:
+      - label: "Choice"
