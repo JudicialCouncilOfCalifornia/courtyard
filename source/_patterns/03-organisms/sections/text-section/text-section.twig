@@ -1,19 +1,27 @@
-<div class="jcc-text-section{% if background_variant %} jcc-text-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-text-section--{{ column_variant }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+{% set classes = [
+  'jcc-text-section',
+  'jcc-text-section--' ~ text_section.background_variant|default('has-background-color--transparent'),
+  'jcc-text-section--' ~ text_section.column_variant|default('has-two-columns-threequarter'),
+]|merge(text_section.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if text_section.id %} id="{{ text_section.id }}"{% endif %}>
   <div class="jcc-text-section__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
-        brow: headergroup.brow,
-        title: headergroup.title,
-        lead: headergroup.lead
+      headergroup: text_section.headergroup
     } %}
-    {% if column_content_left %}
-    <div class="jcc-text-section__content">
-      <div class="jcc-text-section__column-left">
-        {{ column_content_left }}
+
+    {% if text_section.column_content_left %}
+      <div class="jcc-text-section__content">
+        <div class="jcc-text-section__column-left">
+          {{ text_section.column_content_left }}
+        </div>
+
+        {% if text_section.column_content_right %}
+          <div class="jcc-text-section__column-right">
+            {{ text_section.column_content_right }}
+          </div>
+        {% endif %}
       </div>
-      <div class="jcc-text-section__column-right">
-        {{ column_content_right }}
-      </div>
-    </div>
     {% endif %}
   </div>
 </div>

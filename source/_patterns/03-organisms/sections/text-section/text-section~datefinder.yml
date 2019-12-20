@@ -1,43 +1,38 @@
-headergroup:
-  brow: "More Steps"
-  title: "How can we help you today?"
-column_content_left:
-  "<p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque
-  consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula
-  risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem
-  sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
-  rhoncus.</p>"
-column_content_right:
-      '<div class="jcc-datefinder">
-          <h2 class="jcc-datefinder__title">Estimate your timing</h2>
-          <div class="jcc-datefinder__content">
-            <form action="#" class="jcc-datefinder__form">
-              <label for="filing_date" class="jcc-datefinder__label" title="Enter your Filing Date">Enter your Filing Date</label>
-              <form class="usa-form">
+text_section:
+  background_variant: "has-background-color--light--secondary"
+  column_content_right: '
+    <div class="jcc-datefinder">
+      <h2 class="jcc-datefinder__title">Estimate your timing</h2>
+      <div class="jcc-datefinder__content">
+        <form action="#" class="jcc-datefinder__form">
+          <label for="filing_date" class="jcc-datefinder__label" title="Enter your Filing Date">Enter your Filing Date</label>
+        <form class="usa-form">
           <fieldset class="usa-fieldset">
-                              <div class="usa-memorable-date">
-                <div class="usa-form-group usa-form-group--month">
-                  <label class="usa-label" for="date_of_birth_1">Month</label>
-                  <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_1" name="date_of_birth_1" type="number" min="1" max="12" value="">
-                </div>
-                <div class="usa-form-group usa-form-group--day">
-                  <label class="usa-label" for="date_of_birth_2">Day</label>
-                  <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_2" name="date_of_birth_2" type="number" min="1" max="31" value="">
-                </div>
-                <div class="usa-form-group usa-form-group--year">
-                  <label class="usa-label" for="date_of_birth_3">Year</label>
-                  <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_3" name="date_of_birth_3" type="number" min="1900" max="2019" value="">
-                </div>
+            <div class="usa-memorable-date">
+              <div class="usa-form-group usa-form-group--month">
+                <label class="usa-label" for="date_of_birth_1">Month</label>
+                <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_1" name="date_of_birth_1" type="number" min="1" max="12" value="">
               </div>
-              </fieldset>
-        </form>    </form>
-            <div class="jcc-datefinder__adjacent-dates">
-              <p class="jcc-datefinder__label">Ideally serve the other party by</p>
-              <span class="jcc-datefinder__icon">
-                  <svg class="icon icon-send" role="img" title="Send" aria-hidden="true"><use xlink:href="../../images/icomoon/symbol-defs.svg#i-send"></use></svg>      </span>
-              <p class="jcc-datefinder__date">March 01, 2020</p>
+              <div class="usa-form-group usa-form-group--day">
+                <label class="usa-label" for="date_of_birth_2">Day</label>
+                <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_2" name="date_of_birth_2" type="number" min="1" max="31" value="">
+              </div>
+              <div class="usa-form-group usa-form-group--year">
+                <label class="usa-label" for="date_of_birth_3">Year</label>
+                <input class="usa-input usa-input--inline" aria-describedby="dobHint" id="date_of_birth_3" name="date_of_birth_3" type="number" min="1900" max="2019" value="">
+              </div>
             </div>
-          </div>
-        </div>'
-background_variant: "has-background-color--light--secondary" #has-background-color
-column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
+          </fieldset>
+        </form>
+        </form>
+        <div class="jcc-datefinder__adjacent-dates">
+          <p class="jcc-datefinder__label">Ideally serve the other party by</p>
+          <span class="jcc-datefinder__icon">
+            <svg class="icon icon-send" role="img" title="Send" aria-hidden="true">
+              <use xlink:href="../../images/icomoon/symbol-defs.svg#i-send"></use>
+            </svg>
+          </span>
+          <p class="jcc-datefinder__date">March 01, 2020</p>
+        </div>
+      </div>
+    </div>'
