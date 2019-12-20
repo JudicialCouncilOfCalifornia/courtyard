@@ -1,4 +1,6 @@
-{% if patternlab %}
+{% set renderer = image.renderer|default(patternlab) %}
+
+{% if renderer == 'patternlab' %}
   {% if image.src %}
     <img src="{{- image.src -}}"{% if image.alt %} alt="{{ image.alt }}"{% endif %} />
   {% endif %}

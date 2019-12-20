@@ -1,6 +1,10 @@
 .usa-button {
   @include u-padding-y(2);
   @include u-padding-x(3);
+
+  &:disabled {
+    @include u-text(gray-70);
+  }
 }
 
 .usa-button--big {
@@ -26,7 +30,7 @@
 
   &:active,
   &.usa-button--active {
-    @include u-text("white");
+    @include u-text(gray-90);
     background-color: color(accent-warm-darker);
   }
 }
