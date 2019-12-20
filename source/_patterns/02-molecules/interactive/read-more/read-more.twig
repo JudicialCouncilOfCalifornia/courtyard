@@ -1,20 +1,24 @@
-{% if id and content %}
-  <div class="jcc-read-more {% if block_variant %} jcc-read-more--block{% endif %}">   
-    <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ id }}">
-      {{ title ?? 'Read more'|t }}
+{% set classes = [
+  'jcc-read-more',
+  read_more.icon ? 'jcc-read-more--has-icon' : '',
+  read_more.block_variant ? 'jcc-read-more--block' : '',
+]|merge(read_more.classes|default([''])) %}
 
-      {% include '@atoms/icons/icon.twig' with  {
-        icon: left_icon.icon,
-        title: left_icon.title,
-        icon_file: left_icon.icon_file,
-        decorative: left_icon.decorative
-      } %}
+{% set icon = read_more.icon|default({
+  file: "../../images/icomoon/symbol-defs.svg",
+  name: "expand_more",
+  title: "Expand"|t,
+  decorative: true,
+}) %}
 
+{% if read_more.id and read_more.content %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ read_more.id }}">
+      {{ read_more.title ?? 'Read more'|t }}
+      {% include '@atoms/icons/icon.twig' with { icon: icon } %}
     </button>
-
-    <div id="{{ id }}" class="jcc-read-more__content">
-      {{ content }}
+    <div class="jcc-read-more__content" id="{{ read_more.id }}">
+      {{ read_more.content }}
     </div>
-
   </div>
 {% endif %}
