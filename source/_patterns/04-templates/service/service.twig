@@ -1,0 +1,7 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
+{% include '@organisms/sections/tab-section/tab-section.twig' with {
+  headergroup: tabs_content.headergroup,
+  tabs: tabs_content.tabs,
+  tabs_panels: tabs_content.tabs_panels
+} %}
