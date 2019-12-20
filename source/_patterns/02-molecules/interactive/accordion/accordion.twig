@@ -1,33 +1,41 @@
-{% set tag = tag|default('h2') %}
+{% set tag = accordion.tag|default('h2') %}
 {% set classes = [
-  'usa-accordion'
-  ]|merge(classes|default([]))
-%}
+  'usa-accordion',
+  accordion.full ? 'usa-accordion--full' : '',
+]|merge(accordion.classes|default([])) %}
 
-{% if accordion|length > 0 %}
-{% if full %}
-<div{{ attributes.addClass(classes, 'usa-accordion--full') }}>
-{% else %}
-<div{{ attributes.addClass(classes) }}>
-{% endif %}
-  {% for item in accordion %}
+<div class="{{ classes|join(' ')|trim }}">
+  {% for item in accordion.items %}
     {% set expanded = loop.first ? 'true' : 'false' %}
     {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
 
-    {% if full %}<div class="jcc-accordion__heading-container">{% endif %}
-    {# Use `tag` to pass the accurate heading level to maintain the document outline #}
-    <{{ tag }}{{ item.title_attributes.addClass('usa-accordion__heading')}}>
-      <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
-        {{- item.title -}}
-      </button>
-    </{{ tag }}>
-    {% if full %}</div>{% endif %}
+    {% set item_title %}
+      {# Use `tag` to pass the accurate heading level to maintain the document outline #}
+      <{{ tag }} class="usa-accordion__heading">
+        <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
+          {{- item.title -}}
+        </button>
+      </{{ tag }}>
+    {% endset %}
 
-    {% if full %}<div class="jcc-accordion__content-container">{% endif %}
-    <div{{ item.content_attributes.addClass('usa-accordion__content','usa-prose') }} id="{{ id }}">
-      {{- item.body|raw -}}
-    </div>
-    {% if full %}</div>{% endif %}
+    {% set item_content %}
+      <div class="usa-accordion__content usa-prose" id="{{ id }}">
+        {{- item.body|raw -}}
+      </div>
+    {% endset %}
+
+    {# The "full" version requries additional wrapper markup. #}
+    {% if accordion.full %}
+      <div class="jcc-accordion__heading-container">
+        {{ item_title }}
+      </div>
+      <div class="jcc-accordion__content-container">
+        {{ item_content }}
+      </div>
+
+    {% else %}
+      {{ item_title }}
+      {{ item_content }}
+    {% endif %}
   {% endfor %}
 </div>
-{% endif %}
