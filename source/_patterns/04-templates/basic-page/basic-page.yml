@@ -1,0 +1,18 @@
+hero:
+  column_variant: "has-two-columns-threequarter"
+  title: "Motion to pay judgment in installments"
+  lead: "In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay."
+  body: ""
+  breadcrumbs:
+    - url: "#"
+      label: "Debt Collection"
+    - label: "Pay in Installments"
+
+steps:
+  headergroup:
+    brow: ""
+    title: "Steps to pay in installments"
+    lead: ""
+
+switchboard:
+  background_variant: "has-background-color--dark"
