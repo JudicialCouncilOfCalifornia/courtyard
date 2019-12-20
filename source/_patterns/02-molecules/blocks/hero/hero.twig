@@ -1,30 +1,51 @@
-<div class="jcc-hero{% if background_variant %} jcc-hero--{{ background_variant }}{% endif %}{% if column_variant %} jcc-hero--{{ column_variant }}{% endif %}{% if id %} id="{{ id }}"{% endif %}">
-  <div class="jcc-hero__container">
 
-    {% if img %}
+{% if hero.column_content_right %}
+    {% set column_variant = hero.column_variant|default('has-two-columns-half') %}
+  {% else %}
+    {% set column_variant = hero.column_variant|default('has-one-column') %}
+{% endif %}
+
+
+{% set classes = [
+  'jcc-hero',
+  'jcc-hero--' ~ column_variant|default('has-two-columns-half'),
+  hero.background_variant ? 'jcc-hero--' ~ hero.background_variant : '',
+]|merge(hero.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if hero.id %} id="{{ hero.id }}"{% endif %}>
+  <div class="jcc-hero__container">
+    {% if hero.img %}
       <div class="jcc-hero__media">
-        {% include '@atoms/image/image.twig' with { image: img } %}
+        {% include '@atoms/image/image.twig' with { image: hero.img } %}
       </div>
     {% endif %}
 
     <div class="jcc-hero__content">
-      {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-        breadcrumbs: breadcrumbs
-      } %}
+      {% if hero.breadcrumbs %}
+        {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
+          breadcrumbs: hero.breadcrumbs
+        } %}
+      {% endif %}
+
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">
-          <h1 class="jcc-hero__title {{ title_variant }}">{{ title }}</h1>
-          {% if lead %}
-          <div class="jcc-hero__lead">{{ lead }}</div>
+          <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
+            {{- hero.title -}}
+          </h1>
+
+          {% if hero.lead %}
+            <div class="jcc-hero__lead">{{ hero.lead }}</div>
           {% endif %}
-          {% if body %}
-          <div class="jcc-hero__body">{{ body }}</div>
+
+          {% if hero.body %}
+          <div class="jcc-hero__body">{{ hero.body }}</div>
           {% endif %}
         </div>
-        {% if column_content_right %}
-        <div class="jcc-hero__column-right">
-          {{ column_content_right }}
-        </div>
+
+        {% if hero.column_content_right %}
+          <div class="jcc-hero__column-right">
+            {{ hero.column_content_right }}
+          </div>
         {% endif %}
       </div>
     </div>

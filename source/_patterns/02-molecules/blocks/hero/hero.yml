@@ -1,13 +1,18 @@
-img: ""
-title: "Serving your papers"
-title_variant: ""
-lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
-body: "<h2>Heading level 2 with <strong>bold</strong>, <em>italics</em>, and <strong><em>bold italics</em></strong></h2><ul><li>One</li><li>Two</li></ul>"
-column_content_right: ""
-background_variant: ""
-column_variant: "has-two-columns-half" # has-one-column has-two-columns-half has-two-columns-threequarter
-breadcrumbs:
-  - url: "#"
-    label: "Home"
-  - url: ""
-    label: "Wage Garnishment"
+# Background variants
+#  - has-background-color--dark
+#  - has-background-color--light--secondary
+#
+# Column variants
+# - has-one-column
+# - has-two-columns-half
+# - has-two-columns-threequarter
+
+hero:
+  title: "Serving your papers"
+  lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
+  body: "<h2>Heading level 2 with <strong>bold</strong>, <em>italics</em>, and <strong><em>bold italics</em></strong></h2><ul><li>One</li><li>Two</li></ul>"
+  breadcrumbs:
+    - url: "#"
+      label: "Home"
+    - url: ""
+      label: "Wage Garnishment"
