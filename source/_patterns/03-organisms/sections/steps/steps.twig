@@ -1,22 +1,20 @@
-{% if steps|length > 0 %}
-  <div class="jcc-steps-section{% if background_variant %} jcc-steps-section--{{ background_variant }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+{% set classes = [
+  'jcc-steps-section',
+  'jcc-steps-section--' ~ steps.background_variant|default('has-background-color--transparent'),
+]|merge(steps.classes|default([''])) %}
+
+{% if steps.items|length > 0 %}
+  <div class="{{ classes|join(' ')|trim }}"{% if steps.id %} id="{{ steps.id }}"{% endif %}>
     <div class="jcc-steps-section__container">
 
       {% include '@molecules/text/header-group/header-group.twig' with {
-        brow: headergroup.brow,
-        title: headergroup.title,
-        lead: headergroup.lead,
-        tag: headergroup.tag
+        headergroup: steps.headergroup
       } %}
 
       <ul class="jcc-steps">
-        {% for step in steps %}
+        {% for step in steps.items %}
           <li class="jcc-step__item">
-            {% include '@molecules/blocks/step/step.twig' with {
-              title: step.title,
-              excerpt: step.excerpt,
-              read_more: step.read_more
-            } %}
+            {% include '@molecules/blocks/step/step.twig' with { step: step } %}
           </li>
         {% endfor %}
       </ul>
