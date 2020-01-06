@@ -17,3 +17,6 @@ top:
       <button class="usa-button usa-button--primary">Edit</button>'
     breadcrumbs:
       - label: "Choice"
+
+steps:
+  headergroup: false
