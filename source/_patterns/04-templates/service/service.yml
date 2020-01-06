@@ -16,44 +16,8 @@ top:
           <option value="3"><strong>FL124</strong> Filing for Payment Plan</option>
         </select>
       </div>'
-tabs_content:
-  headergroup:
-    title: "What type of service are you interested in?"
-    tag: "h4"
+
+tab_section:
   tabs:
     - title: 'Personal Service'
     - title: 'Mail Service'
-  tab_panels:
-    - content: '
-        <div class="jcc-text-section jcc-text-section--has-background-color--light--secondary jcc-text-section--has-two-columns-threequarter">
-          <div class="jcc-text-section__container">
-            <header class="jcc-header-group">
-              <p class="jcc-header-group__brow">Who Steps</p>
-              <h2 class="jcc-header-group__title">How can we help you today?</h2>
-            </header>
-            <div class="jcc-text-section__content">
-              <div class="jcc-text-section__column-left">
-                <p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu rhoncus.</p>
-              </div>
-              <div class="jcc-text-section__column-right">
-                <p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu rhoncus.</p>
-              </div>
-            </div>
-          </div>
-        </div>'
-    - content: '
-        <div class="jcc-text-section jcc-text-section--has-background-color--light--secondary jcc-text-section--has-two-columns-threequarter">
-          <div class="jcc-text-section__container">
-            <header class="jcc-header-group">
-              <h2 class="jcc-header-group__title">What ca we assist you with?</h2>
-            </header>
-            <div class="jcc-text-section__content">
-              <div class="jcc-text-section__column-left">
-                <p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu rhoncus.</p>
-              </div>
-              <div class="jcc-text-section__column-right">
-                <p>Morbi at auctor turpis. Morbi pellentesque dui quis congue rutrum. Nam quis rhoncus felis, vel egestas risus. Maecenas quis semper sem. Pellentesque consectetur ultrices varius. Aliquam placerat erat vitae leo rutrum, pharetra interdum sapien iaculis. Donec mattis nibh neque, et placerat dolor pretium in. Nullam vehicula risus ac mi pharetra elementum. Proin blandit, justo sed rutrum gravida, ex leo ullamcorper risus, sit amet tempor justo sem id tellus. Vestibulum lobortis sem sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu rhoncus.</p>
-              </div>
-            </div>
-          </div>
-        </div>'
