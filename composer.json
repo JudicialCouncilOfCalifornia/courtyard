@@ -38,7 +38,8 @@
     "pattern-lab/styleguidekit-twig-default": "^3.0.0",
     "pattern-lab/drupal-twig-components": "^2.0.0",
     "aleksip/plugin-data-transform": "^1.0.0",
-    "ajgl/breakpoint-twig-extension": "^0.3.4"
+    "ajgl/breakpoint-twig-extension": "^0.3.4",
+    "pattern-lab/plugin-data-inheritance": "^1.0"
   },
   "scripts": {
     "server": "php core/console --server",

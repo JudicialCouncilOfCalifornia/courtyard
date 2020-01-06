@@ -44,3 +44,5 @@ plugins:
     dataTransform:
         enabled: true
         verbose: false
+    dataInheritance:
+        enabled: true
