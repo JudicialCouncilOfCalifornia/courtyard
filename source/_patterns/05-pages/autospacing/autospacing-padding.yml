@@ -128,12 +128,3 @@ entries:
 
 switchboard:
   background_variant: 'has-background-color--dark--primary'
-  items:
-    primary:
-      - url: 'link.pages-judgment-wage-garnishment'
-        url: 'link.pages-judgment-lien-against-property'
-      - url: 'link.pages-judgment-bank-levy'
-    secondary:
-      - url: 'link.pages-judgment-general-information'
-      - url: 'link.pages-judgment-negotiating-a-settlement'
-      - url: 'link.pages-judgment-pay-in-installments'

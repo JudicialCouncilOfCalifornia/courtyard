@@ -1,25 +1,25 @@
 switchboard:
   headergroup:
-    brow: "Next Steps"
-    title: "What can we help you with today?"
+    brow: 'Next Steps'
+    title: 'What can we help you with today?'
   items:
     primary:
-      - brow: "Wage Garnishment"
-        title: "Someone took money from my paycheck"
-        url: "#"
-      - brow: "Lien Against Property"
-        title: "I was told I can’t sell my property"
-        url: "#"
-      - brow: "Bank Levy"
-        title: "Someone tried to take money from my bank account"
-        url: "#"
+      - brow: 'Wage Garnishment'
+        title: 'Someone took money from my paycheck'
+        url: 'link.pages-judgment-wage-garnishment'
+      - brow: 'Lien Against Property'
+        title: 'I was told I can’t sell my property'
+        url: 'link.pages-judgment-lien-against-property'
+      - brow: 'Bank Levy'
+        title: 'Someone tried to take money from my bank account'
+        url: 'link.pages-judgment-bank-levy'
     secondary:
-      - brow: "General Information"
-        title: "I want to find out more about Debt Collection"
-        url: "#"
-      - brow: "Negotiating a Settlement"
-        title: "I want to talk with someone and work something out"
-        url: "#"
-      - brow: "Pay in Installments"
-        title: "I don’t have all the money but can pay over time"
-        url: "#"
+      - brow: 'General Information'
+        title: 'I want to find out more about Debt Collection'
+        url: 'link.pages-judgment-general-information'
+      - brow: 'Negotiating a Settlement'
+        title: 'I want to talk with someone and work something out'
+        url: 'link.pages-judgment-negotiating-a-settlement'
+      - brow: 'Pay in Installments'
+        title: 'I don’t have all the money but can pay over time'
+        url: 'link.pages-judgment-pay-in-installments'
