@@ -1,78 +1,27 @@
 {% include '@organisms/global/header/header.twig' %}
-{% include '@molecules/blocks/hero/hero.twig'  with {
-    title: top.hero.title,
-    lead: top.hero.lead,
-    body: top.hero.body,
-    column_variant: top.hero.column_variant,
-    column_content_right: top.hero.column_content_right,
-    breadcrumbs: top.breadcrumbs
-} %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
 
-{# Default Body Section #}
 {% for entry in entries %}
-    {% if entry.type == 'postcard' %}
-        {% include '@molecules/blocks/postcard/postcard.twig' with {
-            image: entry.postcard.image,
-            alt: entry.postcard.alt,
-            background_variant: entry.postcard.background_variant,
-            header_align_variant: entry.postcard.header_align_variant,
-            tag: entry.tag.image,
-            headergroup: entry.headergroup,
-            background_variant: entry.background_variant
-        } %}
-    {% elseif entry.type == 'section' %}
-        {# Assign the components to a variable.  Then pass the variable to the right column section. #}
-        {% if entry.right_column_components %}
-            {% set right_column_component_content %}
-                {% if entry.right_column_components.read_more %}
-                    <div class="margin-bottom-4">
-                        {% include "@molecules/interactive/read-more/read-more.twig" with {
-                            id: entry.right_column_components.read_more.id,
-                            title: entry.right_column_components.read_more.title,
-                            content: entry.right_column_components.read_more.content,
-                            block_variant: entry.right_column_components.read_more.block_variant
-                        } %}
-                    </div>
-                {% endif %}
+  {% if entry.type == 'postcard' %}
+    {% include '@molecules/blocks/postcard/postcard.twig' with { postcard: entry.postcard } %}
 
-                {% if entry.right_column_components.list_block %}
-                    <div class="margin-bottom-4">
-                        {% include '@molecules/blocks/list-block/list-block.twig' with {
-                            title: entry.right_column_components.list_block.title,
-                            items: entry.right_column_components.list_block.list.items,
-                            files_list: entry.right_column_components.list_block.list.files_list,
-                            icon: entry.right_column_components.list_block.list.icon
-                        } %}
-                    </div>
-                {% endif %}
-            {% endset %}
-        {% endif %}
+  {% elseif entry.type == 'section' %}
+    {% include '@organisms/sections/text-section/text-section.twig' with {
+      text_section: entry.text_section,
+    } %}
 
-        {% include '@organisms/sections/text-section/text-section.twig' with {
-            column_content_left: entry.column_content_left,
-            column_content_right: entry.right_column_components ? right_column_component_content : entry.column_content_right,
-            column_variant: entry.column_variant,
-            headergroup: entry.headergroup,
-            background_variant: entry.background_variant
-        } %}
-    {% elseif entry.type == 'steps' %}
-        {% include '@organisms/sections/steps/steps.twig' with {
-            headergroup: entry.headergroup,
-            steps: entry.steps,
-            background_variant: entry.background_variant
-        } %}
-    {% elseif entry.type == 'card' %}
-        {% include '@molecules/blocks/card/card.twig' with {
-            img: entry.img,
-            title: entry.title,
-            excerpt: entry.excerpt,
-            card_variant: entry.card_variant,
-            background_variant: entry.background_variant
-        } %}
-    {% endif %}
+  {% elseif entry.type == 'steps' %}
+    {% include '@organisms/sections/steps/steps.twig' with {
+      steps: entry.steps
+    } %}
+
+  {% elseif entry.type == 'card' %}
+    {% include '@molecules/blocks/card/card.twig' with {
+      card: entry.card
+    } %}
+  {% endif %}
 {% endfor %}
-{% include '@organisms/sections/switchboard/switchboard.twig'  with {
-    background_variant: switchboard.background_variant,
-    switchboard_tiles: switchboard.switchboard_tiles,
-    switchboard_tiles2: switchboard.switchboard_tiles2
+
+{% include '@organisms/sections/switchboard/switchboard.twig' with {
+  switchboard: switchboard
 } %}
