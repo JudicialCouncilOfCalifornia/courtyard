@@ -16,8 +16,7 @@ top:
       </ul>'
 
 entries:
-  -
-    type: 'section'
+  - type: 'section'
     text_section:
       column_variant: 'has-two-columns-threequarter'
       headergroup: ''
