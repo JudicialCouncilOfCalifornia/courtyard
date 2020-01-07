@@ -5,7 +5,7 @@ switchboard:
   items:
     primary:
       - brow: "Wage Garnishment"
-        title: "Someone took money from my paycheck Someone took money from my paycheck"
+        title: "Someone took money from my paycheck"
         url: "#"
       - brow: "Lien Against Property"
         title: "I was told I can’t sell my property"
