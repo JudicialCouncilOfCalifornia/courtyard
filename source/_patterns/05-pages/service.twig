@@ -1,20 +1,11 @@
 {% include '@organisms/global/header/header.twig' %}
+
 <div class="jcc-service__control">
-  {% include '@molecules/blocks/hero/hero.twig' with {
-    title: top.hero.title,
-    lead: top.hero.lead,
-    body: top.hero.body,
-    column_variant: top.hero.column_variant,
-    column_content_right: top.hero.column_content_right,
-    background_variant: top.hero.background_variant,
-    title_variant: top.hero.title_variant,
-    breadcrumbs: top.breadcrumbs
-  } %}
+  {% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
 </div>
+
 <div class="jcc-service__tabs">
   {% include '@organisms/sections/tab-section/tab-section.twig' with {
-    headergroup: tabs_content.headergroup,
-    tabs: tabs_content.tabs,
-    tabs_panels: tabs_content.tabs_panels
+    tab_section: tab_section
   } %}
 </div>

@@ -1,13 +1,6 @@
 {% include '@organisms/global/header/header.twig' %}
 {% include '@molecules/blocks/hero/hero.twig' with {
-  title: name_change.title,
-  lead: name_change.lead,
-  body: name_change.body,
-  column_variant: name_change.column_variant,
-  column_content_right: name_change.column_content_right,
-  background_variant: name_change.background_variant,
-  title_variant: name_change.title_variant,
-  breadcrumbs: name_change.breadcrumbs
+  hero: name_change.hero
 } %}
 
 <div class="jcc-choice-section">
@@ -35,9 +28,7 @@
       } %}
     </div>
     <div class="jcc-hero__results">
-      {% include '@organisms/sections/steps/steps.twig' with {
-        headergroup: entry.headergroup
-      } %}
+      {% include '@organisms/sections/steps/steps.twig' with { steps: steps } %}
     </div>
   </div>
 </div>
