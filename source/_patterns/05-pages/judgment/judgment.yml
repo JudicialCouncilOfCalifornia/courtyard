@@ -1,47 +1,18 @@
 top:
   hero:
-    image: ""
-    alt: ""
-    title: "After a Judgment in a Debt Collection Case"
-    lead: "If a judgment is entered against you, it is only the first step the debt collector must go through in seeking to collect a judgment.  If you face a collection on a judgment, remember:"
-    body: ""
-    column_content_right: "
+    column_variant: 'has-two-columns-threequarter'
+    breadcrumbs:
+      - url: ''
+        label: "Debt Collection"
+    title: 'After a Judgment in a Debt Collection Case'
+    lead: 'If a judgment is entered against you, it is only the first step the debt collector must go through in seeking to collect a judgment. If you face a collection on a judgment, remember:'
+    body: ''
+    column_content_right: '
       <ul>
-       <li>You will not go to jail for having a judgment against you.</li>
-       <li>If you receive a <a href=\"/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-wage-garnishment.html\">wage garnishment</a> or <a href=\"/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-bank-levy.html\">bank levy</a>, you have only days to take action.</li>
-       <li>There are ways you can control the repayment of the judgment.</li>
-      </ul>
-    "
-    column_variant: "has-two-columns-threequarter"
-  breadcrumbs:
-    - url: ""
-      label: "Debt Collection"
-      url_attributes: ''
+        <li>You will not go to jail for having a judgment against you.</li>
+        <li>If you receive a <a href="/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-wage-garnishment.html">wage garnishment</a> or <a href="/patterns/05-pages-judgment-judgment-wage-garnishment/05-pages-judgment-judgment-bank-levy.html">bank levy</a>, you have only days to take action.</li>
+        <li>There are ways you can control the repayment of the judgment.</li>
+      </ul>'
+
 switchboard:
-  background_variant: "has-background-color--dark"
-  switchboard_tiles:
-    - brow: "Wage Garnishment"
-      title: 'Someone took money from my paycheck'
-      url: 'link.pages-judgment-wage-garnishment'
-      url_attributes: ''
-    - brow: "Lien Against Property"
-      title: 'I was told I can’t sell my property'
-      url: 'link.pages-judgment-lien-against-property'
-      url_attributes: ''
-    - brow: "Bank Levy"
-      title: 'Someone tried to take money from my bank account '
-      url: 'link.pages-judgment-bank-levy'
-      url_attributes: ''
-  switchboard_tiles2:
-    - brow: "General Information"
-      title: 'I want to find out more about Debt Collection'
-      url: 'link.pages-judgment-general-information'
-      url_attributes: ''
-    - brow: "Negotiating a Settlement"
-      title: 'I want to talk with someone and work something out'
-      url: 'link.pages-judgment-negotiating-a-settlement'
-      url_attributes: ''
-    - brow: "Pay in Installments"
-      title: 'I don’t have all the money but can pay over time'
-      url: 'link.pages-judgment-pay-in-installments'
-      url_attributes: ''
+  background_variant: 'has-background-color--dark--primary'
