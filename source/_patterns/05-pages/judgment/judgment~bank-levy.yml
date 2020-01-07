@@ -1,6 +1,5 @@
 top:
   hero:
-    column_variant: 'has-one-column'
     breadcrumbs:
       - label: 'Debt Collection'
         url: 'link.pages-judgment'

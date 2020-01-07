@@ -1,6 +1,5 @@
 top:
   hero:
-    column_variant: 'has-one-column'
     breadcrumbs:
       - label: 'Debt Collection'
         url: 'link.pages-judgment'
@@ -13,7 +12,6 @@ top:
 entries:
   - type: 'section'
     text_section:
-      column_variant: 'has-two-columns-threequarter'
       headergroup: ''
       column_content_left: '
         <h3>Common types of settlements include:</h3>
