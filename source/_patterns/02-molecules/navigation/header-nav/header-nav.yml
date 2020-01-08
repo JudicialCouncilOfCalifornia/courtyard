@@ -1,10 +1,8 @@
-menu_items:
-  - name: Link One
-    url: "#"
-    url_attributes: ""
-  - name: Link Two
-    url: "#"
-    url_attributes: ""
-  - name: Link Three
-    url: "#"
-    url_attributes: ""
+header_nav:
+  items:
+    - name: "Link One"
+      url: "#"
+    - name: "Link Two"
+      url: "#"
+    - name: "Link Three"
+      url: "#"
