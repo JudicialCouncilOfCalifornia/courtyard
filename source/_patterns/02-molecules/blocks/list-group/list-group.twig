@@ -1,8 +1,10 @@
 <ul class="jcc-list-group"{% if list_group.id %} id="{{ list_group.id }}"{% endif %}>
   {% for item in list_group.items %}
-    <li>
-      <p><strong>{{ item.title }}</strong></p>
-      <p>{{ item.excerpt }}</p>
-    </li>
+    {% if item.title or item.excerpt %}
+      <li>
+        <p><strong>{{ item.title }}</strong></p>
+        <p>{{ item.excerpt }}</p>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
