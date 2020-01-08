@@ -36,10 +36,7 @@ entries:
                         join():
                           - '<div class="margin-bottom-4">'
                           - include():
-                              pattern: 'molecules-read-more'
-                              with:
-                                read_more:
-                                  block_variant: true
+                              pattern: 'molecules-read-more-block'
                           - '</div><div class="margin-bottom-4">'
                           - include():
                               pattern: 'molecules-list-block'
@@ -117,10 +114,7 @@ entries:
                     join():
                       - '<div class="margin-bottom-4">'
                       - include():
-                          pattern: 'molecules-read-more'
-                          with:
-                            read_more:
-                              block_variant: true
+                          pattern: 'molecules-read-more-block'
                       - '</div><div class="margin-bottom-4">'
                       - include():
                           pattern: 'molecules-list-block'
