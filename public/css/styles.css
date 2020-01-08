@@ -15602,7 +15602,7 @@ h3.jcc-header-group__title {
   display: block ;
 }
 
-.jcc-modal [aria-hidden="true"] {
+.jcc-modal[aria-hidden="true"] {
   display: none ;
 }
 
