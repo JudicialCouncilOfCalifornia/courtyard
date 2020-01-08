@@ -1,12 +1,11 @@
-top:
-  hero:
-    breadcrumbs:
-      - label: 'Debt Collection'
-        url: 'link.pages-judgment'
-      - label: 'Wage Garnishment'
-    title: 'Filing a claim of exemption for wage garnishment'
-    lead: 'A wage garnishment is one of the most common ways to collect a judgment.'
-    body: ''
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'Wage Garnishment'
+  title: 'Filing a claim of exemption for wage garnishment'
+  lead: 'A wage garnishment is one of the most common ways to collect a judgment.'
+  body: ''
 
 entries:
   - type: 'section'

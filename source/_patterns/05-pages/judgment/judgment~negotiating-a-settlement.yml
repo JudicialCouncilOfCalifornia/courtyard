@@ -1,13 +1,12 @@
-top:
-  hero:
-    breadcrumbs:
-      - label: 'Debt Collection'
-        url: 'link.pages-judgment'
-      - label: 'Negotiating a Settlement'
-    title: 'Negotiating a Settlement'
-    lead: 'At any time you and the debt collector may agree to settle the judgment. Any settlement that you and the debt collector can agree to is a valid settlement.'
-    body: ''
-    column_content_right: ''
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'Negotiating a Settlement'
+  title: 'Negotiating a Settlement'
+  lead: 'At any time you and the debt collector may agree to settle the judgment. Any settlement that you and the debt collector can agree to is a valid settlement.'
+  body: ''
+  column_content_right: ''
 
 entries:
   - type: 'section'

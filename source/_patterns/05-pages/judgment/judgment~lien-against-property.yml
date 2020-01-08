@@ -1,13 +1,12 @@
-top:
-  hero:
-    breadcrumbs:
-      - label: 'Debt Collection'
-        url: 'link.pages-judgment'
-      - label: 'Lien Against Property'
-    title: 'Liens against real property'
-    lead: 'A lien is the result of the judgment being recorded with the Clerk Recorder for the county.'
-    body: ''
-    column_content_right: ''
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'Lien Against Property'
+  title: 'Liens against real property'
+  lead: 'A lien is the result of the judgment being recorded with the Clerk Recorder for the county.'
+  body: ''
+  column_content_right: ''
 
 entries:
   - type: 'section'

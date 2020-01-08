@@ -1,18 +1,17 @@
-top:
-  hero:
-    breadcrumbs:
-      - label: 'Debt Collection'
-        url: 'link.pages-judgment'
-      - label: 'General Information'
-    title: 'General information about judgments, collection, and your options'
-    lead: 'A judgment is an order stating that you owe the debt collector the amount on the judgment.'
-    body: ''
-    column_content_right: '
-      <ul>
-        <li>You would owe the full amount right away unless the judge ordered a payment plan (or you are filing an appeal).</li>
-        <li>The court does not take any steps to collect a judgment on its own. It is up to you to pay the judgment, or the debt collector to collect the judgment.</li>
-        <li>As long as the judgment is unpaid, it will gather interest at 10% per year. The sooner a judgment is paid, the less interest you will have to pay on top of the judgment.</li>
-      </ul>'
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'General Information'
+  title: 'General information about judgments, collection, and your options'
+  lead: 'A judgment is an order stating that you owe the debt collector the amount on the judgment.'
+  body: ''
+  column_content_right: '
+    <ul>
+      <li>You would owe the full amount right away unless the judge ordered a payment plan (or you are filing an appeal).</li>
+      <li>The court does not take any steps to collect a judgment on its own. It is up to you to pay the judgment, or the debt collector to collect the judgment.</li>
+      <li>As long as the judgment is unpaid, it will gather interest at 10% per year. The sooner a judgment is paid, the less interest you will have to pay on top of the judgment.</li>
+    </ul>'
 
 entries:
   - type: 'section'

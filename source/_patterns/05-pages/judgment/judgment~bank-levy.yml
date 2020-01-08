@@ -1,13 +1,12 @@
-top:
-  hero:
-    breadcrumbs:
-      - label: 'Debt Collection'
-        url: 'link.pages-judgment'
-      - label: 'Bank Levy'
-    title: 'Bank Levy'
-    lead: 'A bank levy is when the debt collector directs the sheriff to take the money in your bank account or items in a safe deposit box.'
-    body: ''
-    column_content_right: ''
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'Bank Levy'
+  title: 'Bank Levy'
+  lead: 'A bank levy is when the debt collector directs the sheriff to take the money in your bank account or items in a safe deposit box.'
+  body: ''
+  column_content_right: ''
 
 entries:
   - type: 'tab_section'
