@@ -25,11 +25,7 @@ entries:
                   block_variant: true
           - '</div><div class="margin-bottom-4">'
           - include():
-              pattern: 'molecules-list-block'
-              with:
-                list_block:
-                  link_list:
-                    files_list: true
+              pattern: 'molecules-list-block-files'
           - '</div>'
 
   - type: 'steps'
