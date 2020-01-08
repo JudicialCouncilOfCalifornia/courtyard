@@ -1,0 +1,79 @@
+hero:
+  column_variant: "has-two-columns-threequarter"
+  breadcrumbs:
+    - label: "Legal Parentage"
+      url: ''
+    - null
+  title: "Form FL-210/FL-200"
+  lead: "What do these papers mean?"
+  body: "<p>If you received this summons and petition, it means someone has gone to court to establish that you or they are the parent of a child.</p>"
+  column_content_right:
+    include():
+      pattern: molecules-jump-nav
+
+entries:
+  - type: "postcard"
+    postcard:
+      headergroup:
+        title: "Who sent me these papers?"
+        body: "<p>The name of the person is at the very top of your summons (form FL-210).</p><p>Throughout these forms, you are called the respondent, and the person who sent the petition is called the petitioner.</p>"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Avatar"
+      tag: "Page 2"
+
+  - type: "postcard"
+    postcard:
+      background_variant: "has-background-color--light--secondary"
+      headergroup:
+        title: "What does this petition say?"
+        body: "<p>First look on form FL-200, which should be with the summons, to find the name(s) of the child(ren) this is about.</p>"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Alt text"
+      tag: "Page 2"
+
+  - type: "section"
+    text_section:
+      headergroup:
+        lead: "<p>On the second page of FL-200, read sections 7, 8, 9, and 10 to see what orders the person is asking the court to make about parentage, custody and visitation.</p>"
+      column_variant: "has-two-columns-threequarter"
+
+  - type: "postcard"
+    postcard:
+      headergroup:
+        title: "Parentage"
+        body: "<p>In section 7 the petitioner has indicated who they believe are the legal parents of the child.</p>"
+        tag: "h3"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Alt text"
+      tag: "Page 2"
+
+  - type: "card-section"
+    card_section:
+      cards:
+        - title: "Prepare the claim of exemption"
+          excerpt: "Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)"
+        - title: "File the claim of exemption with the sheriff"
+          excerpt: "File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail"
+
+  - type: "postcard"
+    postcard:
+      background_variant: "has-background-image"
+      headergroup:
+        title: "What is legal parentage all about?"
+        body: "<p>Once a person is established as the parent of a child, they will have all the rights and responsibilities of a parent:</p> <p>Parents are able to request custody and visitation (parenting time) orders from the court</p> <p>Parents are also responsible for paying child support and will have to pay a portion (usually ½) of the uninsured health-care costs for the children as well as a portion of child-care costs that result from the custodial parent getting or having a job or going to school.</p> <p>If there is a court order that a person is the parent of a child, that person MUST financially support the child. It is a crime for a legal parent to fail to support his or her child. The parent also has the right to request custody or visitation rights related to the child.</p>"
+      img:
+        src: "https://placeimg.com/800/400/arch"
+        alt: "Avatar"
+
+  - type: "section"
+    text_section:
+      background_variant: "has-background-color--dark--secondary"
+      headergroup:
+        title: "Additional Fields"
+        lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"
+
+accordion:
+  full: true

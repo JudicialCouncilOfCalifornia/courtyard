@@ -1,5 +1,5 @@
 {% include '@organisms/global/header/header.twig' %}
-{% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: hero } %}
 
 {% for entry in entries %}
   {% if entry.type == 'postcard' %}
