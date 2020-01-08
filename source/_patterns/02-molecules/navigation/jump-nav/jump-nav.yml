@@ -1,13 +1,13 @@
 jump_nav:
-  title: 'Common Questions'
+  title: "Common Questions"
   items:
-  - name: 'Who sent me these papers?'
-    url: '#'
-  - name: 'What does this petition say?'
-    url: '#'
-  - name: 'What do I need to do?'
-    url: '#'
-  - name: 'What is legal parentage all about?'
-    url: '#'
-  - name: 'Additional Sections'
-    url: '#'
+    - name: "Who sent me these papers?"
+      url: "#"
+    - name: "What does this petition say?"
+      url: "#"
+    - name: "What do I need to do?"
+      url: "#"
+    - name: "What is legal parentage all about?"
+      url: "#"
+    - name: "Additional Sections"
+      url: "#"

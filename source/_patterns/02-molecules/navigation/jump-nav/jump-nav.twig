@@ -10,9 +10,11 @@
       <{{ tag }} class="jcc-jump-nav__title">{{ jump_nav.title }}</{{ tag }}>
       <ul class="usa-sidenav">
         {% for item in jump_nav.items %}
-          <li class="usa-sidenav__item">
-            <a href="{{ item.url }}">{{ item.name }}</a>
-          </li>
+          {% if item.name and item.url %}
+            <li class="usa-sidenav__item">
+              <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </nav>
