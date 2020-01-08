@@ -58,7 +58,7 @@ entries:
                           read_more:
                             type: 'toggle'
                             toggle:
-                              id: 'autospacing-steps-toggle-1'
+                              id: 'bl-steps-toggle-1'
                               title: 'read more'
                               content: 'Read more content'
                         - title: 'File the claim of exemption'
@@ -66,7 +66,7 @@ entries:
                           read_more:
                             type: 'toggle'
                             toggle:
-                              id: 'autospacing-steps-toggle-2'
+                              id: 'bl-steps-toggle-2'
                               title: 'read more'
                               content: 'Read more content'
                         - title: 'Wait to see if the claim of exemption is opposed'
@@ -74,7 +74,7 @@ entries:
                           read_more:
                             type: 'toggle'
                             toggle:
-                              id: 'autospacing-steps-toggle-3'
+                              id: 'bl-steps-toggle-3'
                               title: 'read more'
                               content: 'Read more content'
                         - title: 'Reply to the opposition, if any'
@@ -82,7 +82,7 @@ entries:
                           read_more:
                             type: 'toggle'
                             toggle:
-                              id: 'autospacing-steps-toggle-4'
+                              id: 'bl-steps-toggle-4'
                               title: 'read more'
                               content: 'Read more content'
                         - title: 'Attend the hearing, if any'
@@ -90,7 +90,7 @@ entries:
                           read_more:
                             type: 'toggle'
                             toggle:
-                              id: 'autospacing-steps-toggle-5'
+                              id: 'bl-steps-toggle-5'
                               title: 'read more'
                               content: 'Read more content'
 
@@ -114,6 +114,9 @@ entries:
                       - '<div class="margin-bottom-4">'
                       - include():
                           pattern: 'molecules-read-more-block'
+                          with:
+                            read_more:
+                              id: 'bl-read-more-toggle-2'
                       - '</div><div class="margin-bottom-4">'
                       - include():
                           pattern: 'molecules-list-block'
