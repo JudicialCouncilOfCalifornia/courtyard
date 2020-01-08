@@ -54,7 +54,7 @@ entries:
             type: "modal"
             modal:
               button_label: "Negotiation Details 2"
-              id: "timeline-full-modal-2"
+              id: "ns-timeline-full-modal-2"
               content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p>"
           img:
             src: "../../images/graphics/person.svg"
@@ -70,7 +70,7 @@ entries:
             type: "modal"
             modal:
               button_label: "Negotiation Details 3"
-              id: "timeline-full-modal-3"
+              id: "ns-timeline-full-modal-3"
               content: "<p>Negotiation Details 3... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p>"
           img:
             src: "../../images/graphics/person.svg"
