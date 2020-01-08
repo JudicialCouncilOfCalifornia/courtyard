@@ -1,41 +1,43 @@
-{% set tag = tag|default('h2') %}
+{% set tag = side_nav.tag|default('h2') %}
 
-{% if sidenav|length > 0 %}
-<div class="jcc-sidenav">
-  <nav>
-    <{{ tag }} class="jcc-sidenav__title">{{ title }}</{{ tag }}>
-    <ul class="usa-sidenav">
-      {% for item in sidenav %}
-      {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
-      <li class="usa-sidenav__item">
-        <a href="{{ item.url }}"{{ item.url_attributes }}>{{ item.name }}</a>
-        
-        {% if item.sidenav_child|length > 0 %}
-        <ul class="usa-sidenav__sublist">  
-        {% for childitem in item.sidenav_child %}
-        {% set url_attributes = childitem.url_attributes ? childitem.url_attributes : create_attribute() %}
+{% set classes = [
+  'jcc-sidenav',
+]|merge(side_nav.classes|default([''])) %}
+
+{% if side_nav|length > 0 %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <nav>
+      <{{ tag }} class="jcc-sidenav__title">{{ side_nav.title }}</{{ tag }}>
+      <ul class="usa-sidenav">
+        {# Level one #}
+        {% for item in side_nav.items %}
           <li class="usa-sidenav__item">
-            <a href="{{ subitem.url }}"{{ childitem.url_attributes }}>{{ childitem.name }}</a>
+            <a href="{{ item.url }}">{{ item.name }}</a>
 
-            {% if childitem.sidenav_grandchild|length > 0 %}
-            <ul class="usa-sidenav__sublist">  
-            {% for grandchilditem in childitem.sidenav_grandchild %}
-            {% set url_attributes = grandchilditem.url_attributes ? grandchilditem.url_attributes : create_attribute() %}
-              <li class="usa-sidenav__item">
-                <a href="{{ subitem.url }}"{{ grandchilditem.url_attributes }}>{{ grandchilditem.name }}</a>
-              </li>
-            {% endfor %}
-            </ul>
+            {# Level two #}
+            {% if item.children|length > 0 %}
+              <ul class="usa-sidenav__sublist">
+                {% for child in item.children %}
+                  <li class="usa-sidenav__item">
+                    <a href="{{ child.url }}">{{ child.name }}</a>
+
+                    {# Level three #}
+                    {% if child.children|length > 0 %}
+                      <ul class="usa-sidenav__sublist">
+                        {% for grandchild in child.children %}
+                          <li class="usa-sidenav__item">
+                            <a href="{{ grandchild.url }}">{{ grandchild.name }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul> {# Level three #}
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul> {# Level two #}
             {% endif %}
-
           </li>
         {% endfor %}
-        </ul>
-        {% endif %}
-
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</div>
+      </ul> {# Level three #}
+    </nav>
+  </div>
 {% endif %}
