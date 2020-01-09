@@ -1,4 +1,5 @@
 <div class="usa-checkbox{% if bordered %} jcc-checkbox--bordered{% endif %}">
+  {% set id = 'checkbox-' ~ random() %}
   <input class="usa-checkbox__input" id="{{ id }}" type="checkbox" name="{{ name }}" value="{{ id }}">
   <label class="usa-checkbox__label" for="{{ id }}">{{ label }}</label>
 </div>
