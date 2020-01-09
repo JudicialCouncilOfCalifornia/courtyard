@@ -64,6 +64,10 @@ const copyPlStyles = () => {
   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
 };
 
+const copyIconSprite = () => {
+  return gulp.src(config.icons.sprite_src).pipe(gulp.dest(config.icons.sprite_dest));
+};
+
 const plCss = () => {
   const plugins = [
     // Pack media queries
@@ -171,7 +175,7 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, plCss, plJs);
+const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);

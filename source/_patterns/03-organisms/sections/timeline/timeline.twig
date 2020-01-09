@@ -27,24 +27,26 @@
       <button class="jcc-timeline__scroller--left">
         <span class="jcc-timeline__label">{{ "Scroll Left"|t }}</span>
         <span class="jcc-timeline__scroller-icon">
-          {% set left_icon = timeline.left_icon|default({
-            name: "chevron_left",
-            title: "Left"|t,
-            decorative: true,
-          }) %}
-          {% include '@atoms/icons/icon.twig' with { icon: left_icon } %}
+          {% include '@atoms/icons/icon.twig' with {
+            icon: timeline.left_icon|default({
+              name: "chevron_left",
+              title: "Left"|t,
+              decorative: true,
+            })
+          } %}
         </span>
       </button>
 
       <button class="jcc-timeline__scroller--right is-active">
         <span class="jcc-timeline__label">{{ "Scroll Right"|t }}</span>
         <span class="jcc-timeline__scroller-icon">
-          {% set right_icon = timeline.right_icon|default({
-            name: "chevron_right",
-            title: "Right"|t,
-            decorative: true,
-          }) %}
-          {% include '@atoms/icons/icon.twig' with { icon: right_icon } %}
+          {% include '@atoms/icons/icon.twig' with {
+            icon: timeline.right_icon|default({
+              name: "chevron_right",
+              title: "Right"|t,
+              decorative: true,
+            })
+          } %}
         </span>
       </button>
     </div>
