@@ -1,23 +1,25 @@
-<div class="jcc-cards-section{% if background_variant %} jcc-cards-section--{{ background_variant }}{% endif %}{% if column_variant %}  jcc-cards-section--{{ column_variant }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+{% set classes = [
+  'jcc-cards-section',
+  'jcc-cards-section--' ~ card_section.background_variant|default('has-background-color--transparent'),
+  'jcc-cards-section--' ~ card_section.column_variant|default('has-two-columns'),
+]|merge(card_section.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if card_section.id %} id="{{ card_section.id }}"{% endif %}>
   <div class="jcc-cards__container">
-    {% include '@molecules/text/header-group/header-group.twig' with {
-      brow: headergroup.brow,
-      title: headergroup.title
+    {% if card_section.headergroup %}
+      {% include '@molecules/text/header-group/header-group.twig' with {
+        headergroup: card_section.headergroup
     } %}
+    {% endif %}
 
     <ul class="jcc-cards">
-
-      {% for card in cards %}
-      <li class="jcc-cards__item">
-        {% include '@molecules/blocks/card/card.twig' with {
-          title: card.title,
-          excerpt: card.excerpt,
-          img: card.img,
-          card_variant: card.img ? 'has-icon' : ''
-        } %}
-      </li>
+      {% for card in card_section.cards %}
+        <li class="jcc-cards__item">
+          {% include '@molecules/blocks/card/card.twig' with {
+            card: card
+          } %}
+        </li>
       {% endfor %}
-
     </ul>
   </div>
 </div>

@@ -1,113 +1,88 @@
-top:
-  hero:
-    image: ""
-    alt: ""
-    title: "General information about judgments, collection, and your options"
-    lead: "A judgment is an order stating that you owe the debt collector the amount on the judgment."
-    body: ""
-    column_content_right: "<ul>
+hero:
+  breadcrumbs:
+    - label: 'Debt Collection'
+      url: 'link.pages-judgment'
+    - label: 'General Information'
+  title: 'General information about judgments, collection, and your options'
+  lead: 'A judgment is an order stating that you owe the debt collector the amount on the judgment.'
+  body: ''
+  column_content_right: '
+    <ul>
       <li>You would owe the full amount right away unless the judge ordered a payment plan (or you are filing an appeal).</li>
       <li>The court does not take any steps to collect a judgment on its own. It is up to you to pay the judgment, or the debt collector to collect the judgment.</li>
-      <li>As long as the judgment is unpaid, it will gather interest at 10% per year. The sooner a judgment is paid, the less interest you will have to pay on top of the judgment.</li>"
-    column_variant: "has-two-columns-threequarter"
-  breadcrumbs:
-    - url: "link.pages-judgment"
-      label: "Debt Collection"
-      url_attributes: ''
-    - url: ""
-      label: "General Information"
-      url_attributes: ''
+      <li>As long as the judgment is unpaid, it will gather interest at 10% per year. The sooner a judgment is paid, the less interest you will have to pay on top of the judgment.</li>
+    </ul>'
+
 entries:
-  -
-    type: "section"
-    headergroup:
-      brow: ""
-      title: ""
-    column_content_left:
-      "
-         <h3>Why did I receive a judgment?</h3>
-         <p class=\"jcc-lead\">You received a judgment because the court decided against you in a court case. This could have happened in one of a few ways:</p>
-         <h4>By default</h4>
-         <p>Because you didn’t respond to the lawsuit.</p>
-         <p>At the beginning of a case, the defendant is supposed to serve you with a few documents including a Summons and Complaint. This means that someone is supposed to hand you or someone in your home or work with a copy of these documents. If they hand it to someone else, a copy is supposed to be mailed to you. This starts your time to respond to the lawsuit. Normally, you have 30 days to respond. If you do not, the other side may request a “default” and ask the court to decide the case without you.</p>
-         <ul class=\"jcc-list-group\">
-         <li><p><strong>I didn’t understand I needed to file a response.</strong></p>
-            <p>If you act quickly, you may be eligible to “set aside” the default judgment, or you might be able to negotiate a settlement with the debt collector.</p>
-         </li>
-         <li><p><strong>I didn’t know there was a court case.</strong></p>
-            <p>Depending on the reasons, you may be eligible to “set aside” the default judgment, or you might be able to negotiate a settlement with the debt collector.</p>
-         </li>
-         </ul>
-         <h4>After trial</h4>
-         <p>After each side appears in court to present their case.</p>
-         <h4>After a motion for summary judgment or judgment on the pleadings</h4>
-         <p>After the debt collector files a motion to decide the case without trial.</p>
-         "
-    column_content_right: ""
-    background_variant: "" #has-background-color
-    column_variant: "has-two-columns-threequarter" #has-two-columns-half has-two-columns-threequarter
-    right_column_components:
-      read_more:
-        id: "what-is-judgment"
-        title: "What is judgment?"
-        content: "Lorem ipsum"
-        block_variant: true
-  -
-    type: "section"
-    headergroup:
-      brow: ""
-      title: ""
-    column_content_left:
-      "<h3>What can happen next</h3>
-      <p>In collection cases, it is common for a debt collector to try to collect by:</p>
-      <ul class=\"jcc-list-group\">
-      <li><p><strong>Wage garnishment</strong></p>
-      <p>Taking up to 25% of after-tax wages</p></li>
-      <li><p><strong>Lien against real property</strong></p>
-      <p>Making it so you cannot sell, re-finance, or buy land without paying</p></li>
-      <li><p><strong>Bank levy</strong></p>
-      <p>Taking the money from a bank account or emptying a safe-deposit box</p></li>
-      </ul>
-      <p>You have the opportunity to defend against each type of collection. You may also negotiate a settlement with the debt collector, or in a limited civil case (under $25,000) file a motion to pay judgment in installments.</p>
-       "
-    column_content_right: "<h3>How can I protect my money or things from collection?</h3>
-      <p>When a debt collector tries to collect, you may attempt to defend your money or property from collection. Other than negotiating a settlement, these defenses do not reduce a judgment, or stop interest from being added to the judgment.</p>
-      <ul class=\"jcc-list-group\">
-      <li><p><strong>Wage garnishment</strong></p>
-      <p>Claim of exemption (Wage Garnishment)</p></li>
-      <li><p><strong>Lien against real property</strong></p>
-      <p>Pay the judgment, negotiate a settlement</p></li>
-      <li><p><strong>Bank levy</strong></p>
-      <p>Claim of exemption (Bank Levy)</p></li>
-      </ul>
-      "
-    background_variant: "has-background-color--light--secondary" #has-background-color
-    column_variant: "has-two-columns-half" #has-two-columns-half has-two-columns-threequarter
+  - type: 'section'
+    text_section:
+      headergroup: ''
+      column_content_left:
+        join():
+          -  "<h3>Why did I receive a judgment?</h3>
+              <p class=\"jcc-lead\">You received a judgment because the court decided against you in a court case. This could have happened in one of a few ways:</p>
+              <h4>By default</h4>
+              <p>Because you didn't respond to the lawsuit.</p>
+              <p>At the beginning of a case, the defendant is supposed to serve you with a few documents including a Summons and Complaint. This means that someone is supposed to hand you or someone in your home or work with a copy of these documents. If they hand it to someone else, a copy is supposed to be mailed to you. This starts your time to respond to the lawsuit. Normally, you have 30 days to respond. If you do not, the other side may request \"default\" and ask the court to decide the case without you.</p>"
+          - include():
+              pattern: 'molecules-list-group'
+              with:
+                list_group:
+                  items:
+                    - title: "I didn't understand I needed to file a response."
+                      excerpt: "If you act quickly, you may be eligible to \"set aside\" the default judgment, or you might be able to negotiate a settlement with the debt collector."
+                    - title: "I didn't know there was a court case."
+                      excerpt: "Depending on the reasons, you may be eligible to \"set aside\" the default judgment, or you might be able to negotiate a settlement with the debt collector."
+                    - null
+          - "<h4>After trial</h4>
+            <p>After each side appears in court to present their case.</p>
+            <h4>After a motion for summary judgment or judgment on the pleadings</h4>
+            <p>After the debt collector files a motion to decide the case without trial.</p>"
+      column_content_right:
+        join():
+          - '<div class="margin-bottom-4">'
+          - include():
+              pattern: 'molecules-read-more-block'
+          - '</div>'
+
+  - type: 'section'
+    text_section:
+      background_variant: 'has-background-color--light--secondary'
+      column_variant: 'has-two-columns-half'
+      headergroup: ''
+      column_content_left:
+        join():
+          - "
+            <h3>What can happen next</h3>
+            <p>In collection cases, it is common for a debt collector to try to collect by:</p>"
+          - include():
+              pattern: 'molecules-list-group'
+              with:
+                list_group:
+                  items:
+                    - title: "Wage garnishment"
+                      excerpt: "Taking up to 25% of after-tax wages"
+                    - title: "Lien against real property"
+                      excerpt: "Making it so you cannot sell, re-finance, or buy land without paying"
+                    - title: "Bank levy"
+                      excerpt: "Taking the money from a bank account or emptying a safe-deposit box"
+          - "<p>You have the opportunity to defend against each type of collection. You may also negotiate a settlement with the debt collector, or in a limited civil case (under $25,000) file a motion to pay judgment in installments.</p>"
+      column_content_right:
+        join():
+          - "
+            <h3>How can I protect my money or things from collection?</h3>
+            <p>When a debt collector tries to collect, you may attempt to defend your money or property from collection. Other than negotiating a settlement, these defenses do not reduce a judgment, or stop interest from being added to the judgment.</p>"
+          - include():
+              pattern: 'molecules-list-group'
+              with:
+                list_group:
+                  items:
+                    - title: "Wage garnishment"
+                      excerpt: "Claim of exemption (Wage Garnishment)"
+                    - title: "Lien against real property"
+                      excerpt: "Pay the judgment, negotiate a settlement"
+                    - title: "Bank levy"
+                      excerpt: "Claim of exemption (Bank Levy)"
+
 switchboard:
-  background_variant: "has-background-color--dark--primary"
-  switchboard_tiles:
-    - brow: "Wage Garnishment"
-      title: 'Someone took money from my paycheck'
-      url: 'link.pages-judgment-wage-garnishment'
-      url_attributes: ''
-    - brow: "Lien Against Property"
-      title: 'I was told I can’t sell my property'
-      url: 'link.pages-judgment-lien-against-property'
-      url_attributes: ''
-    - brow: "Bank Levy"
-      title: 'Someone tried to take money from my bank account '
-      url: 'link.pages-judgment-bank-levy'
-      url_attributes: ''
-  switchboard_tiles2:
-    - brow: "General Information"
-      title: 'I want to find out more about Debt Collection'
-      url: 'link.pages-judgment-general-information'
-      url_attributes: ''
-    - brow: "Negotiating a Settlement"
-      title: 'I want to talk with someone and work something out'
-      url: 'link.pages-judgment-negotiating-a-settlement'
-      url_attributes: ''
-    - brow: "Pay in Installments"
-      title: 'I don’t have all the money but can pay over time'
-      url: 'link.pages-judgment-pay-in-installments'
-      url_attributes: ''
+  background_variant: 'has-background-color--dark--primary'

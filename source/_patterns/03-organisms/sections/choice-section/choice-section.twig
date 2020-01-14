@@ -1,24 +1,23 @@
-{% if checkbox_group|length > 0 %}
-<div class="jcc-choice-section{% if background_variant %} jcc-choice-section--{{ background_variant }}{% endif %}">
-  <div class="jcc-choice-section__container">
-  
-    {% include '@molecules/text/header-group/header-group.twig' with {
-        brow: headergroup.brow,
-        title: headergroup.title,
-        lead: headergroup.lead,
-        tag: headergroup.tag
-    } %}
-  
-    {% include '@molecules/forms/checkbox-group.twig' with {
-        checkbox_group: checkbox_group
-    } %}
+{% set classes = [
+  'jcc-choice-section',
+  'jcc-choice-section--' ~ choice_section.background_variant|default('has-background-color--transparent'),
+]|merge(choice_section.classes|default([''])) %}
 
-    {% include '@atoms/buttons/button.twig' with {
-        text: button.text,
-        url: button.url,
-        style: button.style
-    } %}
+{% if choice_section.checkbox_group|length > 0 %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-choice-section__container">
 
+      {% include '@molecules/text/header-group/header-group.twig' with {
+        headergroup: choice_section.headergroup
+      } %}
+
+      {% include '@molecules/forms/checkbox-group.twig' with {
+        checkbox_group: choice_section.checkbox_group
+      } %}
+
+      {% include '@atoms/buttons/button.twig' with {
+        button: choice_section.button
+      } %}
+    </div>
   </div>
-</div>
 {% endif %}

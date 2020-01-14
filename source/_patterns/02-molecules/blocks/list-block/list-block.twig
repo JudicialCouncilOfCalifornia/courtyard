@@ -1,13 +1,15 @@
-{% set tag = tag|default('h2') %}
+{% set tag = list_block.tag|default('h2') %}
 
-<div class="jcc-list-block"{% if id %} id="{{ id }}"{% endif %}>
-  {% if title %}
-    <{{ tag }} class="jcc-list-block__title">{{ title }}</{{ tag }}>
+{% set classes = [
+  'jcc-list-block',
+]|merge(list_block.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if list_block.id %} id="{{ list_block.id }}"{% endif %}>
+  {% if list_block.title %}
+    <{{ tag }} class="jcc-list-block__title">{{ list_block.title }}</{{ tag }}>
   {% endif %}
 
   {% include '@molecules/blocks/link-list/link-list.twig' with {
-    files_list: list.files_list,
-    items: list.items,
-    icon: list.icon
+    link_list: list_block.link_list
   } %}
 </div>

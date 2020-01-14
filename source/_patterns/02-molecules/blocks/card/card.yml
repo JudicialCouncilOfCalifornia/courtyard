@@ -1,6 +1,6 @@
-img:
-  src: "../../images/graphics/person.svg"
-  alt: "Alt text"
-title: "Lorem ipsum"
-excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
-card_variant: "has-icon" #has-image (not implemented for MVP)
+card:
+  title: "Lorem ipsum"
+  excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
+  img:
+    src: "../../images/graphics/person.svg"
+    alt: "Alt text"

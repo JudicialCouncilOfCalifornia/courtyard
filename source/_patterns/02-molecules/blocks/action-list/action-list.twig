@@ -1,5 +1,5 @@
 {% if action_list.items|length > 0 %}
-  <ul class="jcc-action-list"{% if id %} id="{{ id }}"{% endif %}>
+  <ul class="jcc-action-list"{% if action_list.id %} id="{{ action_list.id }}"{% endif %}>
 
     {% for item in action_list.items %}
       <li class="jcc-action-list__item">

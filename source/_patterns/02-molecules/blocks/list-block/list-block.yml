@@ -1,10 +1,11 @@
-title: Relevant Files
-list:
-  files_list: false
-  items:
-    - name: This item is mapped from list block (Enforcement of Judgement)
-      url_title: Form EJ-160
-      url: "#"
-    - name: Financial Statement
-      url_title: Form EJ-165
-      url: "#"
+list_block:
+  title: "Relevant Files"
+  link_list:
+    files_list: false
+    items:
+      - name: "This item is mapped from list block (Enforcement of Judgement)"
+        url_title: "Form EJ-160"
+        url: "#"
+      - name: "Financial Statement"
+        url_title: "Form EJ-165"
+        url: "#"

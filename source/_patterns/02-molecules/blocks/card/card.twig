@@ -1,14 +1,21 @@
-<div class="jcc-card {% if card_variant %} jcc-card--{{ card_variant }}{% endif %}">
-  {% if img %}
+{% set tag = card.tag|default('h3') %}
+{% set classes = [
+  'jcc-card',
+  card.img ? 'jcc-card--has-icon' : '',
+  card.variant ? 'jcc-card--' ~ card.variant : '',
+]|merge(card.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if card.img %}
     <div class="jcc-card__media">
-      {% include '@atoms/image/image.twig' with { image: img } %}
+      {% include '@atoms/image/image.twig' with { image: card.img } %}
     </div>
   {% endif %}
 
   <div class="jcc-card__body">
-    <h3 class="jcc-card__title">{{ title }}</h3>
-    {% if excerpt %}
-    <div class="jcc-card__excerpt">{{ excerpt }}</div>
+    <{{ tag }} class="jcc-card__title">{{ card.title }}</{{ tag }}>
+    {% if card.excerpt %}
+      <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
     {% endif %}
   </div>
 </div>

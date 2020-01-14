@@ -1,40 +1,33 @@
+{% set classes = [
+  'jcc-switchboard',
+  'jcc-switchboard--' ~ switchboard.background_variant|default('has-background-color--transparent'),
+]|merge(switchboard.classes|default([''])) %}
 
-<div class="jcc-switchboard{% if background_variant %} jcc-switchboard--{{ background_variant }}{% endif %}"{% if id %} id="{{ id }}"{% endif %}>
+<div class="{{ classes|join(' ')|trim }}"{% if switchboard.id %} id="{{ switchboard.id }}"{% endif %}>
   <div class="jcc-switchboard__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
-        brow: headergroup.brow,
-        title: headergroup.title
+      headergroup: switchboard.headergroup
     } %}
 
     <div class="jcc-switchboard__content">
-      {% if switchboard_tiles %}
-      <ul class="jcc-switchboard__tiles">
-        {% for tile in switchboard_tiles %}
-        <li class="jcc-switchboard__tile">
-          {% include '@molecules/blocks/tile/tile.twig' with {
-            brow: tile.brow,
-            title: tile.title,
-            url: tile.url,
-            url_attributes: tile.url_attributes
-          } %}
-        </li>
-        {% endfor %}
-      </ul>
+      {% if switchboard.items.primary %}
+        <ul class="jcc-switchboard__tiles">
+          {% for tile in switchboard.items.primary %}
+            <li class="jcc-switchboard__tile">
+              {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+            </li>
+          {% endfor %}
+        </ul>
       {% endif %}
-      {% if switchboard_tiles2 %}
 
-      <ul class="jcc-switchboard__tiles{% if tiles_variant %} jcc-switchboard__tiles--{{ tiles_variant }}{% endif %}">
-        {% for tile in switchboard_tiles2 %}
-        <li class="jcc-switchboard__tile">
-          {% include '@molecules/blocks/tile/tile.twig' with {
-            brow: tile.brow,
-            title: tile.title,
-            url: tile.url,
-            url_attributes: tile.url_attributes
-          } %}
-        </li>
-        {% endfor %}
-      </ul>
+      {% if switchboard.items.secondary %}
+        <ul class="jcc-switchboard__tiles jcc-switchboard__tiles-secondary">
+          {% for tile in switchboard.items.secondary %}
+            <li class="jcc-switchboard__tile">
+              {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+            </li>
+          {% endfor %}
+        </ul>
       {% endif %}
     </div>
   </div>

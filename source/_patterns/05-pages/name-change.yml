@@ -1,39 +1,40 @@
 name_change:
-  img: ""
-  title: "Name Change"
-  title_variant: ""
-  lead: ""
-  body: '<div class="summary-results">
-          <header class="jcc-header-group">
-            <h2 class="jcc-header-group__title">Whose name is being changed?</h4>
-            <div class="jcc-hero__results">
-              <div class="jcc-hero__picked-questions jcc-header-group__lead"></div>
-            </div>
-          </header>
-          <div class="jcc-hero__results">
+  hero:
+    img: ""
+    title: "Name Change"
+    title_variant: ""
+    lead: ""
+    body: '<div class="summary-results">
             <header class="jcc-header-group">
-              <h2 class="jcc-header-group__title">Details:</h3>
-            <div class="jcc-hero__answers jcc-header-group__lead"></div>
+              <h2 class="jcc-header-group__title">Whose name is being changed?</h4>
+              <div class="jcc-hero__results">
+                <div class="jcc-hero__picked-questions jcc-header-group__lead"></div>
+              </div>
             </header>
+            <div class="jcc-hero__results">
+              <header class="jcc-header-group">
+                <h2 class="jcc-header-group__title">Details:</h3>
+              <div class="jcc-hero__answers jcc-header-group__lead"></div>
+              </header>
 
-            <button class="usa-button usa-button--primary">Edit Your Details</button>
-            </div>
+              <button class="usa-button usa-button--primary">Edit Your Details</button>
+              </div>
 
-            <div class="jcc-hero__questions jcc-form--inline">
-            <div class="usa-checkbox jcc-checkbox--bordered">
-              <input class="usa-checkbox__input" id="checkbox-0" type="checkbox" name="checkbox-0" value="checkbox-0">
-              <label class="usa-checkbox__label" for="checkbox-0">Adult</label>
+              <div class="jcc-hero__questions jcc-form--inline">
+              <div class="usa-checkbox jcc-checkbox--bordered">
+                <input class="usa-checkbox__input" id="checkbox-0" type="checkbox" name="checkbox-0" value="checkbox-0">
+                <label class="usa-checkbox__label" for="checkbox-0">Adult</label>
+              </div>
+              <div class="usa-checkbox jcc-checkbox--bordered">
+                <input class="usa-checkbox__input" id="checkbox-1" type="checkbox" name="checkbox-1" value="checkbox-1">
+                <label class="usa-checkbox__label" for="checkbox-1">Adult (spouse)</label>
+              </div>
+              <div class="usa-checkbox jcc-checkbox--bordered">
+                <input class="usa-checkbox__input" id="checkbox-2" type="checkbox" name="checkbox-2" value="checkbox-2">
+                <label class="usa-checkbox__label" for="checkbox-2">One or more minor child</label>
+              </div>
             </div>
-            <div class="usa-checkbox jcc-checkbox--bordered">
-              <input class="usa-checkbox__input" id="checkbox-1" type="checkbox" name="checkbox-1" value="checkbox-1">
-              <label class="usa-checkbox__label" for="checkbox-1">Adult (spouse)</label>
-            </div>
-            <div class="usa-checkbox jcc-checkbox--bordered">
-              <input class="usa-checkbox__input" id="checkbox-2" type="checkbox" name="checkbox-2" value="checkbox-2">
-              <label class="usa-checkbox__label" for="checkbox-2">One or more minor child</label>
-            </div>
-          </div>
-        </div>'
+          </div>'
   questions:
     - label: "Adult"
       id: "checkbox-0"
@@ -63,3 +64,6 @@ name_change:
   column_content_right: ""
   background_variant: "has-background-color--light--secondary"
   column_variant: "has-two-columns-threequarter"
+
+steps:
+  headergroup: ''

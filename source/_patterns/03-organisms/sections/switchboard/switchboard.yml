@@ -1,31 +1,25 @@
-headergroup:
-  brow: "Next Steps"
-  title: "What can we help you with today?"
-background_variant: "has-background-color--transparent" #has-background-color--light--primary has-background-color--dark--primary
-tiles_variant: "secondary"
-switchboard_tiles:
-  - brow: "Wage Garnishment"
-    title: 'Someone took money from my paycheck Someone took money from my paycheck'
-    url: '#'
-    url_attributes: ''
-  - brow: "Lien Against Property"
-    title: 'I was told I can’t sell my property'
-    url: '#'
-    url_attributes: ''
-  - brow: "Bank Levy"
-    title: 'Someone tried to take money from my bank account '
-    url: '#'
-    url_attributes: ''
-switchboard_tiles2:
-  - brow: "General Information"
-    title: 'I want to find out more about Debt Collection'
-    url: '#'
-    url_attributes: ''
-  - brow: "Negotiating a Settlement"
-    title: 'I want to talk with someone and work something out'
-    url: '#'
-    url_attributes: ''
-  - brow: "Pay in Installments"
-    title: 'I don’t have all the money but can pay over time'
-    url: '#'
-    url_attributes: ''
+switchboard:
+  headergroup:
+    brow: 'Next Steps'
+    title: 'What can we help you with today?'
+  items:
+    primary:
+      - brow: 'Wage Garnishment'
+        title: 'Someone took money from my paycheck'
+        url: 'link.pages-judgment-wage-garnishment'
+      - brow: 'Lien Against Property'
+        title: 'I was told I can’t sell my property'
+        url: 'link.pages-judgment-lien-against-property'
+      - brow: 'Bank Levy'
+        title: 'Someone tried to take money from my bank account'
+        url: 'link.pages-judgment-bank-levy'
+    secondary:
+      - brow: 'General Information'
+        title: 'I want to find out more about Debt Collection'
+        url: 'link.pages-judgment-general-information'
+      - brow: 'Negotiating a Settlement'
+        title: 'I want to talk with someone and work something out'
+        url: 'link.pages-judgment-negotiating-a-settlement'
+      - brow: 'Pay in Installments'
+        title: 'I don’t have all the money but can pay over time'
+        url: 'link.pages-judgment-pay-in-installments'

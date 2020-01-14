@@ -1,28 +1,36 @@
-{% if tabs|length > 0 %}
-{% set section_name = "section" ~ random() %}
-<div class="jcc-tab-section{% if background_variant %} jcc-tab-section--{{ background_variant }}{% endif %} tabbed">
-  <div class="jcc-tab-section__container">
-  
-  {% include '@molecules/text/header-group/header-group.twig' with {
-    brow: headergroup.brow,
-    title: headergroup.title,
-    lead: headergroup.lead,
-    tag: headergroup.tag
-  } %}
-  
-  <ul>
-    {% for tab in tabs %}
-    <li>
-      <a href="#{{section_name}}{{ loop.index }}" data-selected="{{tab.selected}}">{{ tab.title }}</a>
-    </li>
+{% set classes = [
+  'jcc-tab-section',
+  'jcc-tab-section--' ~ tab_section.background_variant|default('has-background-color--transparent'),
+  tab_section.tabs|length > 0 ? 'tabbed' : '',
+]|merge(tab_section.classes|default([''])) %}
+
+{# This is used with the loop.index to generate an identifier. #}
+{% set section_name = 'section' ~ random() %}
+
+{% if tab_section.tabs|length > 0 %}
+  <div class="{{ classes|join(' ')|trim }}"{% if tab_section.id %} id="{{ tab_section.id }}"{% endif %}>
+
+    <div class="jcc-tab-section__container">
+      {% if tab_section.headergroup %}
+        {% include '@molecules/text/header-group/header-group.twig' with { headergroup: tab_section.headergroup } %}
+      {% endif %}
+
+      <ul>
+        {% for tab in tab_section.tabs %}
+          {% set selected = tab.selected ? ' data-selected-"true"' : '' %}
+          <li>
+            <a href="#{{ section_name ~ loop.index }}"{% if tab.selected %} data-selected="true" {% endif %}>
+              {{- tab.title -}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% for tab_panel in tab_section.tab_panels %}
+      <section id="{{section_name ~ loop.index }}">
+        {{ tab_panel.content }}
+      </section>
     {% endfor %}
-  </ul>
   </div>
-  
-  {% for tab_panel in tab_panels %}
-  <section id="{{section_name}}{{ loop.index }}">
-    {{ tab_panel.content }}
-  </section>
-  {% endfor %}
-</div>
 {% endif %}

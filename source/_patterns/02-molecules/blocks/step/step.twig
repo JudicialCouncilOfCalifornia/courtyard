@@ -1,19 +1,32 @@
-{% set tag = tag|default('h3') %}
+{% set tag = step.tag|default('h3') %}
 
 <div class="jcc-step">
-  <{{tag}} class="jcc-step__title">{{ title }}</{{tag}}>
-
-  {% if excerpt %}
-    <div class="jcc-step__excerpt">{{ excerpt }}</div>
+  {% if step.title %}
+    <{{ tag }} class="jcc-step__title">{{ step.title }}</{{ tag }}>
   {% endif %}
 
-  {% if read_more %}
+  {% if step.excerpt %}
+    <div class="jcc-step__excerpt">{{ step.excerpt }}</div>
+  {% endif %}
+
+  {% if step.read_more %}
     <div class="jcc-step__read-more">
-      {% include "@molecules/interactive/read-more/read-more.twig" with {
-        id: read_more.id,
-        title: read_more.title,
-        content: read_more.content
-      } %}
+      {% if step.read_more.type == 'toggle' %}
+        {% include "@molecules/interactive/read-more/read-more.twig" with {
+          read_more: step.read_more.toggle
+        } %}
+
+      {% elseif step.read_more.type == 'link' %}
+        {% set url_attributes = step.read_more.link.url_attributes|default(create_attribute()) %}
+        <a href="{{ step.read_more.link.url }}"{{ url_attributes }}>
+          {{- step.read_more.link.label -}}
+        </a>
+
+      {% elseif step.read_more.type == 'modal' %}
+        {% include '@organisms/sections/modal/modal.twig' with {
+          modal: step.read_more.modal
+        } %}
+      {% endif %}
     </div>
   {% endif %}
 </div>

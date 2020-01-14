@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5f1a083cde0ec5467e26d6c2ee15c66",
+    "content-hash": "4e6c1aa51ae58037f759094ad659fd64",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -409,9 +409,9 @@
             "authors": [
                 {
                     "name": "Michel Fortin",
-                    "role": "Developer",
                     "email": "michel.fortin@michelf.ca",
-                    "homepage": "https://michelf.ca/"
+                    "homepage": "https://michelf.ca/",
+                    "role": "Developer"
                 },
                 {
                     "name": "John Gruber",
@@ -664,6 +664,63 @@
                 "twig"
             ],
             "time": "2018-02-08T00:11:23+00:00"
+        },
+        {
+            "name": "pattern-lab/plugin-data-inheritance",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pattern-lab/plugin-php-data-inheritance.git",
+                "reference": "c985247aae0b46a7131d12678f118c25e742cd02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pattern-lab/plugin-php-data-inheritance/zipball/c985247aae0b46a7131d12678f118c25e742cd02",
+                "reference": "c985247aae0b46a7131d12678f118c25e742cd02",
+                "shasum": ""
+            },
+            "require": {
+                "pattern-lab/core": "^2.5.0",
+                "php": ">=5.4"
+            },
+            "type": "patternlab-plugin",
+            "extra": {
+                "patternlab": {
+                    "config": {
+                        "plugins": {
+                            "dataInheritance": {
+                                "enabled": true
+                            }
+                        }
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PatternLab\\DataInheritance": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Olsen",
+                    "email": "dmolsen@gmail.com",
+                    "homepage": "http://dmolsen.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Data inheritance based on pattern lineage for Pattern Lab.",
+            "homepage": "http://patternlab.io",
+            "keywords": [
+                "data",
+                "inheritance",
+                "lineage",
+                "pattern lab"
+            ],
+            "time": "2016-07-03T00:17:04+00:00"
         },
         {
             "name": "pattern-lab/styleguidekit-assets-default",
@@ -1347,19 +1404,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org"
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Twig Team",
-                    "role": "Contributors",
-                    "homepage": "https://twig.symfony.com/contributors"
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "role": "Project Founder",
-                    "email": "armin.ronacher@active-4.com"
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",

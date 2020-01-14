@@ -1,0 +1,8 @@
+step:
+  read_more:
+    type: "modal"
+    modal:
+      button_label: "Read more in Modal"
+      id: "step-modal-1"
+      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia corporis, sed culpa, nam earum repellat nemo dolor, alias doloribus cupiditate aliquid. Dolores nobis perferendis molestias atque autem placeat quam ipsum.</p>"
+

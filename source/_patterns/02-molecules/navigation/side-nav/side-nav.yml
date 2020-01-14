@@ -1,29 +1,28 @@
-title: Side nav
-sidenav:
-  - url: "#"
-    name: "Home"
-    url_attributes: ""
-  - url: "#"
-    name: "Page 1"
-    url_attributes: ""
-    current: true
-    sidenav_child:
-      - url: "#"
-        name: "Child"
-        url_attributes: ""
-        sidenav_grandchild:
-          - url: "#"
-            name: "Grandchild"
-            url_attributes: ""
-  - url: "#"
-    name: "Page 2"
-    url_attributes: ""
-  - url: "#"
-    name: "Page 3"
-    url_attributes: ""
-  - url: "#"
-    name: "Page 4"
-    url_attributes: ""
-  - url: "#"
-    name: "Page 5"
-    url_attributes: ""
+side_nav:
+  title: "Side nav"
+  items:
+    - name: "Home"
+      url: "#"
+    - name: "Page 1"
+      url: "#"
+      current: true
+      children:
+        - name: "Page 1.1 (child)"
+          url: "#"
+          children:
+            - name: "Page 1.1.1 (grandchild)"
+              url: "#"
+            - name: "Page 1.1.2 (grandchild)"
+              url: "#"
+        - name: "Page 1.2 (child)"
+          url: "#"
+        - name: "Page 1.3 (child)"
+          url: "#"
+    - name: "Page 2"
+      url: "#"
+    - name: "Page 3"
+      url: "#"
+    - name: "Page 4"
+      url: "#"
+    - name: "Page 5"
+      url: "#"

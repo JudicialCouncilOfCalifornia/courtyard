@@ -1,14 +1,3 @@
 {% include '@organisms/global/header/header.twig' %}
-{% include '@molecules/blocks/hero/hero.twig' with {
-  title: top.hero.title,
-  lead: top.hero.lead,
-  body: top.hero.body,
-  column_variant: top.hero.column_variant,
-  column_content_right: top.hero.column_content_right,
-  background_variant: top.hero.background_variant,
-  title_variant: top.hero.title_variant,
-  breadcrumbs: top.breadcrumbs
-} %}
-{% include '@organisms/sections/steps/steps.twig' with {
-  headergroup: entry.headergroup
-} %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
+{% include '@organisms/sections/steps/steps.twig' with { steps: steps } %}

@@ -1,24 +1,29 @@
-<div class="jcc-timeline-item{% if img %} jcc-timeline-item--has-icon{% endif %}">
-  {% if img %}
-  <div class="jcc-timeline-item__media">
-    {% include '@atoms/image/image.twig' with { image: img } %}
-  </div>
+{% set classes = [
+  'jcc-timeline-item',
+  timeline_item.img ? 'jcc-timeline-item--has-icon',
+]|merge(timeline_item.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if timeline_item.img %}
+    <div class="jcc-timeline-item__media">
+      {% include '@atoms/image/image.twig' with { image: timeline_item.img } %}
+    </div>
   {% endif %}
 
-  <h3 class="jcc-timeline-item__title">{{ title }}</h3>
-  <div class="jcc-timeline-item__excerpt">{{ excerpt }}</div>
+  <h3 class="jcc-timeline-item__title">{{ timeline_item.title }}</h3>
+  <div class="jcc-timeline-item__excerpt">{{ timeline_item.excerpt }}</div>
 
-  {% if read_more.url %}
-    {% set url_attributes = read_more.url_attributes ? read_more.url_attributes : create_attribute() %}
-    <a href="{{ read_more.url }}" class="jcc-timeline-item__trigger" {{ url_attributes }}>{{ read_more.label }}</a>
-  
-  {% elseif read_more.id %}
-    {% include '@organisms/sections/modal/modal.twig' with {
-      modal_id: read_more.id,
-      button_label: read_more.label,
-      modal_content: read_more.modal_content 
-    } %}
-  {% else %}
-  
-  {% endif %}  
+  {% if timeline_item.read_more %}
+    {% if timeline_item.read_more.type == 'link' %}
+      {% set url_attributes = timeline_item.read_more.link.url_attributes|default(create_attribute()) %}
+      <a href="{{ timeline_item.read_more.link.url }}"{{ url_attributes.addClass('jcc-timeline-item__trigger') }}>
+        {{- timeline_item.read_more.link.label -}}
+      </a>
+
+    {% elseif timeline_item.read_more.type == 'modal' %}
+      {% include '@organisms/sections/modal/modal.twig' with {
+        modal: timeline_item.read_more.modal
+      } %}
+    {% endif %}
+  {% endif %}
 </div>

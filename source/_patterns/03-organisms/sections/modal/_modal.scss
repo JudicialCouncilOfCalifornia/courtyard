@@ -17,7 +17,7 @@
 }
 
 // Hides the dialog window. This attr is added by the A11yDialog script.
-.jcc-modal [aria-hidden="true"] {
+.jcc-modal[aria-hidden="true"] {
   @include u-display(none);
 }
 

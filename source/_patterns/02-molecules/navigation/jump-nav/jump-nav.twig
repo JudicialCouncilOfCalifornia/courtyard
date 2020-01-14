@@ -1,17 +1,22 @@
-{% set tag = tag|default('h2') %}
+{% set tag = jump_nav.tag|default('h2') %}
 
-{% if jump_nav|length > 0 or title %}
-<div class="jcc-jump-nav">
-  <nav>
-    <{{ tag }} class="jcc-jump-nav__title">{{ title }}</{{ tag }}>
-    <ul class="usa-sidenav">
-      {% for item in jump_nav %}
-      {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
-      <li class="usa-sidenav__item">
-        <a href="{{ item.url }}"{{ item.url_attributes }}>{{ item.name }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</div>
+{% set classes = [
+  'jcc-jump-nav',
+]|merge(jump_nav.classes|default([''])) %}
+
+{% if jump_nav|length > 0 or jump_nav.title %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <nav>
+      <{{ tag }} class="jcc-jump-nav__title">{{ jump_nav.title }}</{{ tag }}>
+      <ul class="usa-sidenav">
+        {% for item in jump_nav.items %}
+          {% if item.name and item.url %}
+            <li class="usa-sidenav__item">
+              <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 {% endif %}
