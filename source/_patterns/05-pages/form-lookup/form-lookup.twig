@@ -1,0 +1,18 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig'  with {
+  title: 'Find Your Court Forms',
+  lead: '',
+  body: '
+    <div>Search for any topic or form number, or view all forms</div>
+    <input placeholder="E.g. divorce, name change, fl-100, restraining order" class="usa-input" id="input-type-text" name="input-type-text" type="text">
+  ',
+  background_variant: 'has-background-color--dark',
+  breadcrumbs: 'top.breadcrumbs'
+} %}
+{# {% include '@organisms/sections/text-section/text-section.twig' with {
+  column_content_left: 'left',
+  column_content_right: '<input class="usa-input" id="input-type-text" name="input-type-text" type="text">',
+  column_variant: entry.column_variant,
+  headergroup: entry.headergroup,
+  background_variant: 'has-background-color--dark'
+} %} #}
