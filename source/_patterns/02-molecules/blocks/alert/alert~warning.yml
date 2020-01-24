@@ -1,0 +1,8 @@
+alert:
+  type: "warning"
+  heading: "Warning status"
+  text: "Lorem ipsum dolor sit amet, <a href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod."
+  button:
+    text: "Action"
+    url: "#"
+    style: 'primary'
