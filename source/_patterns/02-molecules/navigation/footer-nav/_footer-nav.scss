@@ -1,0 +1,43 @@
+.jcc-footer_menu {
+  @include u-display(block);
+
+  @include at-media(desktop) {
+    @include u-display(none);
+  }
+}
+
+.jcc-footer_menu.jcc-footer__menu {
+  @include u-display(none);
+
+  @include at-media(desktop) {
+    @include u-display(block);
+  }
+}
+
+.jcc-footer__nav {
+  @include at-media(desktop) {
+    @include u-display(flex);
+  }
+  list-style: none;
+  padding: 0;
+}
+
+.jcc-footer_nav__item {
+  display: block;
+  float: left;
+}
+
+.jcc-footer_nav__item a {
+  margin: 2px 5px;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.jcc-footer_nav__item a:hover {
+  text-decoration: underline;
+}
+
+.jcc-footer__menu {
+  @include u-bg(primary-darker);
+}

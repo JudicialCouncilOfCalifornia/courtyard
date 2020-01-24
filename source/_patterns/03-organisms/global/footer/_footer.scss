@@ -1,0 +1,25 @@
+.jcc-footer {
+  @include u-bg(primary-darker);
+  @include u-position(relative);
+  @include u-border-top(accent-warm-dark);
+  @include u-border-top("05");
+  z-index: 10;
+  font-size: 0.875em;
+  color: #fff;
+}
+
+.jcc-footer__container {
+  @include at-media(desktop) {
+    @include grid-container(widescreen);
+    @include clearfix;
+    @include u-padding-top(1);
+    @include u-padding-bottom(1);
+    @include grid-row;
+    @include u-flex(justify);
+  }
+}
+
+.jcc-footer__copyright {
+  margin: 10px 0;
+  padding: 5px 10px;
+}
