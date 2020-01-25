@@ -1,7 +1,7 @@
-<footer class="jcc-footer">
-    <div class="jcc-footer__container">
+<footer class="jcc-footer grid-container">
+    <div class="jcc-footer__container grid-row">
         {% include '@molecules/navigation/footer-nav/footer-nav.twig' %}
-        <div class="jcc-footer__copyright grid-col-auto">
+        <div class="jcc-footer__copyright tablet:grid-col-auto">
             {# @YYYY is dynamically updated via JavaScript ... @2020 Judicial Council of California #}
             {{ footer.copyright_owner }}
         </div>
