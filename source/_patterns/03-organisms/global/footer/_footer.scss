@@ -3,6 +3,10 @@
   @include u-position(relative);
   @include u-border-top(accent-warm-dark);
   @include u-border-top("05");
+  /* BEGIN USWDS layout grid overrides */
+  max-width: none;
+  margin: 0;
+  /* END */
   z-index: 10;
   font-size: 0.875em;
   color: #fff;
