@@ -1,0 +1,15 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig'  with {
+  title: 'All Court Forms',
+  lead: '',
+  body: '
+    <p>Browse the list of all court forms, or <a class="text-white" href="/patterns/05-pages-form-lookup-form-lookup/05-pages-form-lookup-form-lookup.html">search by topic or form number</a></p>
+    <div class="search-results">
+      <div class="results-header">Forms</div>
+      <div class="form-results"></div>
+    </div>
+  ',
+  background_variant: 'has-background-color--dark',
+  height_variant: 'viewport-height',
+  breadcrumbs: 'top.breadcrumbs'
+} %}
