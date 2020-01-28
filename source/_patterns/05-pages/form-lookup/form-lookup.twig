@@ -3,16 +3,15 @@
   title: 'Find Your Court Forms',
   lead: '',
   body: '
-    <div>Search for any topic or form number, or view all forms</div>
-    <input placeholder="E.g. divorce, name change, fl-100, restraining order" class="usa-input" id="input-type-text" name="input-type-text" type="text">
+    <label for="srl-filter-input">Search for any topic or form number, or view all forms</label>
+    <input placeholder="E.g. divorce, name change, fl-100, restraining order" class="usa-input" id="srl-filter-input" name="input-type-text" type="text">
+    <div class="search-results">
+      <div class="results-header">Guides</div>
+      <div class="guide-results"></div>
+      <div class="results-header">Forms</div>
+      <div class="form-results"></div>
+    </div>
   ',
   background_variant: 'has-background-color--dark',
   breadcrumbs: 'top.breadcrumbs'
 } %}
-{# {% include '@organisms/sections/text-section/text-section.twig' with {
-  column_content_left: 'left',
-  column_content_right: '<input class="usa-input" id="input-type-text" name="input-type-text" type="text">',
-  column_variant: entry.column_variant,
-  headergroup: entry.headergroup,
-  background_variant: 'has-background-color--dark'
-} %} #}
