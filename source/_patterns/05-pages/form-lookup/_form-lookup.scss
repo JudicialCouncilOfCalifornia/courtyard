@@ -8,7 +8,9 @@
   .results-header {
     padding: 10px 20px;
     border-bottom: 1px solid #eee;
-    color: rgb(11, 71, 120);
+    @include u-text(bold);
+    @include u-text(primary);
+    @include u-font(sans, md);
   }
 
   .guide-results {
@@ -46,11 +48,16 @@
 
   .form-results {
     .form-result {
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border-bottom: none;
+      }
+      
       a {
         display: block;
         text-decoration: none;
         padding: 10px 20px;
-        border-bottom: 1px solid #eee;
         color: #333;
 
         .form-number {
@@ -61,10 +68,6 @@
         
         .form-title {
           
-        }
-
-        &:last-child {
-          border-bottom: none;
         }
 
         &:hover {
