@@ -1,4 +1,6 @@
-{% include '@organisms/global/header/header.twig' %}
+{% include '@organisms/global/header/header.twig' with {
+  menu_items: []
+} %}
 {% include '@molecules/blocks/hero/hero.twig'  with {
   title: 'Find Your Court Forms',
   lead: '',
