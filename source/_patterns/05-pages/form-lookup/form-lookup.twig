@@ -5,13 +5,15 @@
   title: 'Find Your Court Forms',
   lead: '',
   body: '
-    <label for="srl-filter-input">Search for any topic or form number, or <a class="text-white" href="/patterns/05-pages-form-lookup-all-forms/05-pages-form-lookup-all-forms.html">view all forms</a></label>
-    <input type="text"
-           id="srl-filter-input"
-           placeholder="E.g. divorce, name change, fl-100, restraining order"
-           class="usa-input"
-           name="input-type-text"
-           autocomplete="off">
+    <div class="filter-input-container">
+      <label for="srl-filter-input">Search for any topic or form number, or <a class="text-white" href="/patterns/05-pages-form-lookup-all-forms/05-pages-form-lookup-all-forms.html">view all forms</a></label>
+      <input type="text"
+             id="srl-filter-input"
+             placeholder="E.g. divorce, name change, fl-100, restraining order"
+             class="usa-input srl-filter-input"
+             name="input-type-text"
+             autocomplete="off">
+    </div>
     <div class="search-results">
       <div class="results-header">Guides</div>
       <div class="guide-results">
