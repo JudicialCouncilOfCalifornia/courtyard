@@ -65,26 +65,51 @@
         border-bottom: none;
       }
       
-      a {
-        display: block;
+      .form-result-content {
+        display: flex;
+        align-items: center;
         text-decoration: none;
         padding: 10px 20px;
         color: #333;
+        cursor: pointer;
 
-        .form-number {
-          text-transform: uppercase;
-          color: #333;
-          font-size: 12px;
-        }
-        
-        .form-title {
+        .form-number-and-title {
+          flex-grow: 1;
+          .form-number {
+            text-transform: uppercase;
+            color: #333;
+            font-size: 12px;
+          }
           
+          .form-title {
+            
+          }
+        }
+
+        .expand-button {
+          width: 1.8rem;
+          height: 1.8rem;
+          background-size: 1.8rem;
+          background-image: url("../images/icomoon/SVG/remove.svg");
+
+          &[aria-expanded="false"] {
+            background-image: url("../images/icomoon/SVG/add.svg");
+          }
         }
 
         &:hover {
           .form-title {
             text-decoration: underline;
           }
+        }
+      }
+
+      .form-links {
+        display: none;
+        padding: 4px 20px 10px 20px;
+
+        &.visible {
+          display: block;
         }
       }
     }

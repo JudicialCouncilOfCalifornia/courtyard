@@ -28,7 +28,8 @@ async function init() {
     }
     
     if (matchingForms.length > 0) {
-      formResults.innerHTML = matchingForms.map((form) => formResult(form)).join('\n');  
+      formResults.innerHTML = '';
+      matchingForms.map((form) => formResult(form)).forEach((el) => formResults.appendChild(el));
     } else {
       formResults.innerHTML = noForms();
     }
@@ -70,15 +71,59 @@ async function init() {
     }
   }
 
+  function formResourceLink(resource) {
+    if (resource.type === 'webForm') {
+      return (`
+        <a class="usa-button" href="${resource.url}" target="_blank">Fill out online</a>
+      `);
+    }
+  }
+
   function formResult(form) {
-    return (`
-      <div class="form-result">
-        <a href="${form.url}" target="_blank">
-          <div class="form-number">${form.id}</div>
-          <div class="form-title">${form.title}</div>
-        </a>
-      </div>
-    `);
+    let formResultEl = document.createElement('div');
+    formResultEl.className = 'form-result';
+
+    if (form.resources) {
+      formResultEl.innerHTML = (`
+        <div class="form-result">
+          <div class="form-result-content">
+            <div class="form-number-and-title">
+              <div class="form-number">${form.id}</div>
+              <div class="form-title">${form.title}</div>
+            </div>
+            <div class="expand-button" aria-expanded="false"></div>
+          </div>
+          <div class="form-links">
+            <a class="usa-button" href="${form.url}" target="_blank">Download</a>
+            ${form.resources.map(formResourceLink)}
+          </div>
+        </div>
+      `);
+      formResultEl.querySelector('.form-result-content').addEventListener('click', (e) => {
+        let formLinksEl = formResultEl.querySelector('.form-links');
+        let expandButtonEl = formResultEl.querySelector('.expand-button');
+        if (formLinksEl.className.includes('visible')) {
+          formLinksEl.className = 'form-links';
+          expandButtonEl.setAttribute('aria-expanded', 'false');
+        } else {
+          formLinksEl.className = 'form-links visible';
+          expandButtonEl.setAttribute('aria-expanded', 'true');
+        }
+      });
+    } else {
+      formResultEl.innerHTML = (`
+        <div class="form-result">
+          <a class="form-result-content" href="${form.url}" target="_blank">
+            <div class="form-number-and-title">
+              <div class="form-number">${form.id}</div>
+              <div class="form-title">${form.title}</div>
+            </div>
+          </a>
+        </div>
+      `);
+    }
+
+    return formResultEl;
   }
 
   searchInput.addEventListener('input', () => render());
@@ -4128,7 +4173,10 @@ let forms = [
   {
     "id": "FL-320",
     "title": "Responsive Declaration to Request for Order",
-    "url": "https://www.courts.ca.gov/documents/fl320.pdf"
+    "url": "https://www.courts.ca.gov/documents/fl320.pdf",
+    "resources": [
+      { "type": "webForm", "url": "https://evtn.community.lawyer/interview?i=docassemble.playground1%3Ae3rXTyjMacVzvOir.yml" }
+    ]
   },
   {
     "id": "FL-320 S",
