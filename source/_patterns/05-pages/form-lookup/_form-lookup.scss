@@ -39,7 +39,7 @@
       }
     }
 
-    .no-results {
+    .no-results, .loading {
       padding: 10px 20px;
       border-bottom: 1px solid #eee;
       text-align: center;
@@ -78,7 +78,7 @@
       }
     }
 
-    .no-results {
+    .no-results, .loading {
       padding: 10px 20px;
       text-align: center;
     }
