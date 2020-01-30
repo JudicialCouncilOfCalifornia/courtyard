@@ -66,7 +66,7 @@ async function init() {
             <a href="${guidePair[0].url}" target="_blank">${guidePair[0].title}</a>
           </div>
         </div>
-      `); 
+      `);
     }
   }
 
