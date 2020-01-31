@@ -11,9 +11,11 @@ async function init() {
   function formResult(form) {
     return (`
       <div class="form-result">
-        <a href="${form.url}" target="_blank">
-          <div class="form-number">${form.id}</div>
-          <div class="form-title">${form.title}</div>
+        <a class="form-result-content" href="${form.url}" target="_blank">
+          <div class="form-number-and-title">
+            <div class="form-number">${form.id}</div>
+            <div class="form-title">${form.title}</div>
+          </div>
         </a>
       </div>
     `);
