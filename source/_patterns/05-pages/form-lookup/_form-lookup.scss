@@ -15,6 +15,7 @@
   margin-top: 20px;
   color: #333;
   width: 800px;
+  max-width: 100%;
   
   .results-header {
     padding: 10px 20px;
@@ -29,6 +30,7 @@
       display: flex;
 
       .guide-result {
+        flex-grow: 1;
         width: 50%;
         box-sizing: border-box;
         

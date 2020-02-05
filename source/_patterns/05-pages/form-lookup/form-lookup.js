@@ -21,8 +21,12 @@ async function init() {
     });
 
     if (matchingGuides.length > 0) {
-      let guidePairs = _.chunk(matchingGuides.sort((a, b) => a.title < b.title ? -1 : 1), 2);
-      guideResults.innerHTML = guidePairs.map((guidePair) => guidePairResult(guidePair)).join('\n');
+      matchingGuides = matchingGuides.sort((a, b) => a.title < b.title ? -1 : 1);
+      let guideResultGroups = _.chunk(matchingGuides, 2);
+      if (window.innerWidth < 700) {
+        guideResultGroups = _.chunk(matchingGuides, 1);
+      }
+      guideResults.innerHTML = guideResultGroups.map((guideGroup) => guideResultRow(guideGroup)).join('\n');
     } else {
       guideResults.innerHTML = noGuides();
     }
@@ -48,15 +52,15 @@ async function init() {
     `);
   }
 
-  function guidePairResult(guidePair) {
-    if (guidePair.length == 2) {
+  function guideResultRow(guideResultGroup) {
+    if (guideResultGroup.length == 2) {
       return (`
         <div class="guide-result-row">
           <div class="guide-result">
-            <a href="${guidePair[0].url}" target="_blank">${guidePair[0].title}</a>
+            <a href="${guideResultGroup[0].url}" target="_blank">${guideResultGroup[0].title}</a>
           </div>
           <div class="guide-result">
-            <a href="${guidePair[1].url}" target="_blank">${guidePair[1].title}</a>
+            <a href="${guideResultGroup[1].url}" target="_blank">${guideResultGroup[1].title}</a>
           </div>
         </div>
       `);
@@ -64,7 +68,7 @@ async function init() {
       return (`
         <div class="guide-result-row">
           <div class="guide-result">
-            <a href="${guidePair[0].url}" target="_blank">${guidePair[0].title}</a>
+            <a href="${guideResultGroup[0].url}" target="_blank">${guideResultGroup[0].title}</a>
           </div>
         </div>
       `);
