@@ -47,11 +47,6 @@ const errorHandler = error => {
   this.emit("end");
 };
 
-// Use the Pattern Lab PHP command to generate the pattern library
-const plPhp = () => {
-  return exec("php core/console --generate");
-};
-
 const copyUswdsFonts = () => {
   return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
 };
@@ -175,7 +170,7 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
+const build = gulp.series(copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);
