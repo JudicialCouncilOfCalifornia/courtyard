@@ -9,7 +9,9 @@
       } %}
     </div>
     {% include '@molecules/navigation/header-nav/header-nav.twig' with {
-      menu_items: menu_items
+      header_nav: {
+        items: menu_items
+      }
     } %}
   </div>
 </header>
