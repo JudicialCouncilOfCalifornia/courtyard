@@ -1,0 +1,16 @@
+.jcc-inline__nav {
+  @include add-list-reset;
+  @include u-display(flex);
+  @include u-margin-y(1);
+  @include u-margin-x(0);
+}
+
+.jcc-inline__nav__item {
+  @include u-display(block);
+  @include u-flex('auto');
+  @include u-margin-right(2);
+}
+
+.jcc-inline__nav__item:last-child {
+  @include u-margin-right(0);
+}
