@@ -1,9 +1,14 @@
-<footer class="jcc-footer grid-container">
-  <div class="jcc-footer__container grid-row">
-    {% include '@molecules/navigation/footer-nav/footer-nav.twig' %}
-    <div class="jcc-footer__copyright tablet:grid-col-auto">
-      {# @YYYY is dynamically updated via JavaScript ... @2020 Judicial Council of California #}
-      {{ footer.copyright_owner }}
+<footer class="jcc-footer">
+  <div class="jcc-footer__container">
+    <div class="jcc-footer__row">
+      <div class="jcc-footer__menu">
+        {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+      </div>
+      <div class="jcc-footer__copyright">
+        &#64;
+        {{ "now"|date("Y") }}
+        {{ footer.copyright_owner }}
+      </div>
     </div>
   </div>
 </footer>

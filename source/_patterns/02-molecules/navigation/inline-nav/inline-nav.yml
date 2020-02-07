@@ -1,4 +1,4 @@
-footer_nav:
+inline_nav:
   items:
     - name: "Terms of Service"
       url: "https://www.courts.ca.gov/11529.htm"

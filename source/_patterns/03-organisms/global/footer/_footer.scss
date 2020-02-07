@@ -1,29 +1,49 @@
+.jcc-footer, .jcc-footer_menu, .jcc-inline__nav__item a {
+  @include u-text('base-lightest');
+}
+
 .jcc-footer {
   @include u-bg(primary-darker);
   @include u-position(relative);
   @include u-border-top(accent-warm-dark);
   @include u-border-top("05");
-  /* BEGIN USWDS layout grid overrides */
-  max-width: none;
-  margin: 0;
-  /* END */
-  z-index: 10;
-  font-size: 0.875em;
-  color: #fff;
+  @include u-font('body', 'xs');
+  @include u-margin(0);
 }
 
 .jcc-footer__container {
+  @include grid-container;
+  @include clearfix;
+  @include u-padding-top(1);
+  @include u-padding-bottom(1);
+
   @include at-media(desktop) {
     @include grid-container(widescreen);
-    @include clearfix;
-    @include u-padding-top(1);
-    @include u-padding-bottom(1);
-    @include grid-row;
-    @include u-flex(justify);
+  }
+}
+
+.jcc-footer__row {
+  @include grid-row;
+  @include u-flex('row');
+}
+
+.jcc-footer_menu {
+  @include u-display(block);
+  @include grid-col(12);
+
+  @include at-media(desktop) {
+    @include grid-col;
   }
 }
 
 .jcc-footer__copyright {
-  margin: 10px 0;
-  padding: 5px 10px;
+  @include u-display(block);
+  @include grid-col(12);
+  @include u-margin-y(1);
+  @include u-margin-x(0);
+
+  @include at-media(desktop) {
+    @include grid-col;
+    @include u-text('right');
+  }
 }
