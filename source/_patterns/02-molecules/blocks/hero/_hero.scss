@@ -92,7 +92,7 @@
 .jcc-hero--has-two-columns-half,
 .jcc-hero--has-two-columns-threequarter {
   .jcc-hero__columns {
-    @include at-media(desktop) {
+    @include at-media(desktop-lg) {
       @include grid-row;
       @include grid-gap;
     }
@@ -103,8 +103,7 @@
   .jcc-hero__column-left,
   .jcc-hero__column-right {
     @include u-width(full);
-
-    @include at-media(desktop) {
+    @include at-media(desktop-lg) {
       @include grid-col(6);
     }
   }
@@ -117,13 +116,13 @@
   }
 
   .jcc-hero__column-left {
-    @include at-media(desktop) {
+    @include at-media(desktop-lg) {
       @include grid-col(8);
     }
   }
 
   .jcc-hero__column-right {
-    @include at-media(desktop) {
+    @include at-media(desktop-lg) {
       @include grid-col(4);
     }
   }

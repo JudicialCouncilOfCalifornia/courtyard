@@ -25657,7 +25657,7 @@ h3.jcc-header-group__title {
   }
   .h-responsive-mega {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 3.48rem;
+    font-size: 2.98rem;
   }
   h1,
   .h-responsive-h1 {
@@ -25707,7 +25707,7 @@ h3.jcc-header-group__title {
   }
   .jcc-hero__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 3.48rem;
+    font-size: 2.98rem;
   }
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
@@ -25717,40 +25717,6 @@ h3.jcc-header-group__title {
   .jcc-hero--has-one-column .jcc-body,
   .jcc-hero--has-one-column .jcc-hero__column-right {
     max-width: 88ex ;
-  }
-  .jcc-hero--has-two-columns-half .jcc-hero__columns,
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -ms-flex-wrap: wrap ;
-        flex-wrap: wrap ;
-    margin-left: -0.5rem ;
-    margin-right: -0.5rem ;
-  }
-  .jcc-hero--has-two-columns-half .jcc-hero__columns > *,
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns > * {
-    padding-left: 0.5rem ;
-    padding-right: 0.5rem ;
-  }
-  .jcc-hero--has-two-columns-half .jcc-hero__column-left,
-  .jcc-hero--has-two-columns-half .jcc-hero__column-right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 50% ;
-  }
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__column-left {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 66.66667% ;
-  }
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__column-right {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 33.33333% ;
   }
   .jcc-hero__column-left {
     margin-bottom: 0 ;
@@ -26352,16 +26318,6 @@ h3.jcc-header-group__title {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero--has-two-columns-half .jcc-hero__columns,
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns {
-    margin-left: -1rem ;
-    margin-right: -1rem ;
-  }
-  .jcc-hero--has-two-columns-half .jcc-hero__columns > *,
-  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns > * {
-    padding-left: 1rem ;
-    padding-right: 1rem ;
-  }
   .jcc-postcard__row {
     margin-left: -1rem ;
     margin-right: -1rem ;
@@ -26407,6 +26363,56 @@ h3.jcc-header-group__title {
   }
   .jcc-text-section--has-two-columns-half .jcc-text-section__content > *,
   .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+}
+
+@media all and (min-width: 75em) {
+  .jcc-hero--has-two-columns-half .jcc-hero__columns,
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-hero--has-two-columns-half .jcc-hero__columns > *,
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-hero--has-two-columns-half .jcc-hero__column-left,
+  .jcc-hero--has-two-columns-half .jcc-hero__column-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 50% ;
+  }
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__column-left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 66.66667% ;
+  }
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__column-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
+  }
+}
+
+@media all and (min-width: 75em) and (min-width: 64em) {
+  .jcc-hero--has-two-columns-half .jcc-hero__columns,
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-hero--has-two-columns-half .jcc-hero__columns > *,
+  .jcc-hero--has-two-columns-threequarter .jcc-hero__columns > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
