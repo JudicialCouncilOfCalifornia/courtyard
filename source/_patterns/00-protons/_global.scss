@@ -207,7 +207,7 @@ $aspect-width: 16;
   @include u-font($responsive-font-family, 14); // 40
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 15); // 56
+    @include u-font($responsive-font-family, 16); // 56
   }
 
   @media print {
