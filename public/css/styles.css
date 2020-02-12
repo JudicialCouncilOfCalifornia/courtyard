@@ -25909,6 +25909,7 @@ h3.jcc-header-group__title {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between ;
+    min-height: 5rem ;
   }
   .jcc-header__container::after {
     clear: both;
