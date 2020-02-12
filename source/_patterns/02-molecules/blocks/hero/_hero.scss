@@ -79,6 +79,9 @@
 
   .jcc-hero__column-left {
     @include u-margin-bottom(4);
+    @include at-media(desktop) {
+      max-width: 75%;
+    }
   }
 }
 

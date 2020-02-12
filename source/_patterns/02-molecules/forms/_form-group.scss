@@ -9,6 +9,12 @@
   }
 }
 
+.jcc-form--item {
+  @include at-media(desktop) {
+    max-width: 75%;
+  }
+}
+
 .jcc-form--inline {
   .usa-checkbox,
   .usa-radio {

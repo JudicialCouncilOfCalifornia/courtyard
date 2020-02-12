@@ -15537,6 +15537,7 @@ h3.jcc-header-group__title {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
   padding-bottom: 4rem ;
+  padding-bottom: 0 ;
 }
 
 .jcc-choice-section .jcc-header-group {
@@ -25718,6 +25719,9 @@ h3.jcc-header-group__title {
   .jcc-hero--has-one-column .jcc-hero__column-right {
     max-width: 88ex ;
   }
+  .jcc-hero--has-one-column .jcc-hero__column-left {
+    max-width: 75%;
+  }
   .jcc-hero__column-left {
     margin-bottom: 0 ;
   }
@@ -25795,6 +25799,9 @@ h3.jcc-header-group__title {
   .jcc-timeline-item__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
+  }
+  .jcc-form--item {
+    max-width: 75%;
   }
   .jcc-form--inline .usa-checkbox,
   .jcc-form--inline .usa-radio {
