@@ -14551,12 +14551,12 @@ a:visited {
   max-width: none ;
 }
 
-.jcc-form .usa-checkbox,
-.jcc-form .usa-radio {
+.jcc-form.usa-form .usa-checkbox,
+.jcc-form.usa-form .usa-radio {
   margin-bottom: 0.5rem ;
 }
 
-.jcc-form-group__title {
+.jcc-form .jcc-form-group__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 1.49rem;
   font-weight: normal ;
@@ -25800,15 +25800,12 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
-  .jcc-form--item {
-    max-width: 75%;
-  }
-  .jcc-form--inline .usa-checkbox,
-  .jcc-form--inline .usa-radio {
+  .jcc-form .jcc-form--inline .usa-checkbox,
+  .jcc-form .jcc-form--inline .usa-radio {
     display: inline-block ;
     margin-right: 0.5rem ;
   }
-  .jcc-form-group__title {
+  .jcc-form .jcc-form-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.74rem;
   }
@@ -25962,6 +25959,9 @@ h3.jcc-header-group__title {
     padding-right: 2rem ;
   }
   .jcc-choice-section__container .jcc-form-group__options {
+    max-width: 75%;
+  }
+  .jcc-choice-section__container .jcc-dropdown {
     max-width: 75%;
   }
   .jcc-modal__dialog {
@@ -26544,7 +26544,7 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.93rem;
   }
-  .jcc-form-group__title {
+  .jcc-form .jcc-form-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.37rem;
   }

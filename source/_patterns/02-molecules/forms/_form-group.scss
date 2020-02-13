@@ -1,32 +1,26 @@
 .jcc-form {
   &.usa-form {
     @include u-maxw(none);
-  }
 
-  .usa-checkbox,
-  .usa-radio {
-    @include u-margin-bottom(1);
-  }
-}
-
-.jcc-form--item {
-  @include at-media(desktop) {
-    max-width: 75%;
-  }
-}
-
-.jcc-form--inline {
-  .usa-checkbox,
-  .usa-radio {
-    @include at-media(desktop) {
-      @include u-display(inline-block);
-      @include u-margin-right(1);
+    .usa-checkbox,
+    .usa-radio {
+      @include u-margin-bottom(1);
     }
   }
-}
 
-.jcc-form-group__title {
-  @include responsive-h4($responsive-font-family: heading);
-  @include u-text(normal);
-  @include u-margin-bottom(2);
+  .jcc-form--inline {
+    .usa-checkbox,
+    .usa-radio {
+      @include at-media(desktop) {
+        @include u-display(inline-block);
+        @include u-margin-right(1);
+      }
+    }
+  }
+
+  .jcc-form-group__title {
+    @include responsive-h4($responsive-font-family: heading);
+    @include u-text(normal);
+    @include u-margin-bottom(2);
+  }
 }
