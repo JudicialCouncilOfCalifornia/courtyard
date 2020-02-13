@@ -1,5 +1,5 @@
 hero:
-  column_variant: "has-two-columns-threequarter"
+  column_variant: "has-one-column"
   breadcrumbs:
     - label: "Request for Order"
       url: ''

@@ -17,6 +17,23 @@
     visibility: hidden !important;
   }
 
+  .jcc-switchboard,
+  .jcc-jump-nav {
+    display: none;
+  }
+
+  .usa-accordion [hidden] {
+    display: block !important;
+  }
+
+  .jcc-read-more [aria-hidden="true"] {
+    display: block !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
   // body {
   //   font: 12px Georgia, "Times New Roman", Times, serif;
   //   text-align: left !important;

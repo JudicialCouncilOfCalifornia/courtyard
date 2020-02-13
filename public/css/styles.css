@@ -15537,7 +15537,7 @@ h3.jcc-header-group__title {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
   padding-bottom: 4rem ;
-  padding-bottom: 0 ;
+  padding-top: 0 ;
 }
 
 .jcc-choice-section .jcc-header-group {
@@ -26667,6 +26667,19 @@ h3.jcc-header-group__title {
   }
   #js-header_menu--mobile {
     visibility: hidden !important;
+  }
+  .jcc-switchboard,
+  .jcc-jump-nav {
+    display: none;
+  }
+  .usa-accordion [hidden] {
+    display: block !important;
+  }
+  .jcc-read-more [aria-hidden="true"] {
+    display: block !important;
+  }
+  a[href]:after {
+    content: none !important;
   }
   .show-for-print {
     display: block;
