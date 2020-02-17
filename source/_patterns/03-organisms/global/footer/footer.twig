@@ -2,7 +2,11 @@
   <div class="jcc-footer__container">
     <div class="jcc-footer__row">
       <div class="jcc-footer__menu">
-        {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+        {% if patternlab %}
+          {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+        {% else %}
+          {{ content }}
+        {% endif %}
       </div>
       <div class="jcc-footer__copyright">
         &#64;
