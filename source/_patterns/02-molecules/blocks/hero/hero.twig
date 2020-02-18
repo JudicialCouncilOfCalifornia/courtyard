@@ -28,43 +28,42 @@
       {% endif %}
 
       <div class="jcc-hero__columns">
-          {% if not hero.nested %}
-            <div class="jcc-hero__header">
-              <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
-                {{- hero.title -}}
-              </h1>
+        {% if not hero.nested %}
+          <div class="jcc-hero__header">
+            <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
+              {{- hero.title -}}
+            </h1>
 
-              {% if hero.lead %}
-                <div class="jcc-hero__lead">{{ hero.lead }}</div>
-              {% endif %}
+            {% if hero.lead %}
+              <div class="jcc-hero__lead">{{ hero.lead }}</div>
+            {% endif %}
 
-              {% if hero.body %}
-              <div class="jcc-hero__body">{{ hero.body }}</div>
-              {% endif %}
-            </div>
-          {% endif %}
-
-        <div class="jcc-hero__column-left">
-            {% if hero.nested %}
-              <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
-                {{- hero.title -}}
-              </h1>
-
-              {% if hero.lead %}
-                <div class="jcc-hero__lead">{{ hero.lead }}</div>
-              {% endif %}
-
-              {% if hero.body %}
-              <div class="jcc-hero__body">{{ hero.body }}</div>
-              {% endif %}
+            {% if hero.body %}
+            <div class="jcc-hero__body">{{ hero.body }}</div>
             {% endif %}
           </div>
+        {% endif %}
+
+        <div class="jcc-hero__column-left">
+        {% if hero.nested %}
+          <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
+            {{- hero.title -}}
+          </h1>
+
+          {% if hero.lead %}
+            <div class="jcc-hero__lead">{{ hero.lead }}</div>
+          {% endif %}
+
+          {% if hero.body %}
+          <div class="jcc-hero__body">{{ hero.body }}</div>
+          {% endif %}
+        {% endif %}
         </div>
 
         {% if hero.column_content_right %}
-          <div class="jcc-hero__column-right">
-            {{ hero.column_content_right }}
-          </div>
+        <div class="jcc-hero__column-right">
+          {{ hero.column_content_right }}
+        </div>
         {% endif %}
       </div>
     </div>
