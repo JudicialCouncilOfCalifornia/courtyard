@@ -15536,7 +15536,7 @@ h3.jcc-header-group__title {
 .jcc-choice-section {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
-  padding-bottom: 4rem ;
+  padding-bottom: 0 ;
 }
 
 .jcc-choice-section .jcc-header-group {
@@ -25979,6 +25979,9 @@ h3.jcc-header-group__title {
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 33.33333% ;
+  }
+  .jcc-choice-section .jcc-dropdown {
+    max-width: 75%;
   }
   .jcc-choice-section .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
