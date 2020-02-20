@@ -1,0 +1,3 @@
+alert:
+  type: "warning"
+  heading: "Warning status"
