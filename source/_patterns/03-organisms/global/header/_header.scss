@@ -17,12 +17,7 @@
     @include u-flex(justify);
     @include u-minh(10);
   }
-  @include at-media(tablet) {
-    @include u-minh(8);
-  }
-  @include at-media(mobile) {
-    @include u-minh(8);
-  }
+  @include u-minh(8);
 }
 
 .jcc-header_menu--desktop {
