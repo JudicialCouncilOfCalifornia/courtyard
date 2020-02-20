@@ -30,7 +30,7 @@
       <div class="jcc-hero__columns">
         {% if not hero.nested %}
         <div class="jcc-hero__header">
-          <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
+          <h1 class="jcc-hero__title">
             {{- hero.title -}}
           </h1>
 
@@ -46,7 +46,7 @@
 
         <div class="jcc-hero__column-left">
         {% if hero.nested %}
-          <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
+          <h1 class="jcc-hero__title">
             {{- hero.title -}}
           </h1>
 
