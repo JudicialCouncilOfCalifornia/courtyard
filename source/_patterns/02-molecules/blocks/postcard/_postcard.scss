@@ -117,10 +117,16 @@
   @include u-bg(primary-dark);
   @include u-left(0);
   @include u-bottom(0);
+  @include u-display(none);
+
+  @include at-media(tablet) {
+    @include u-display(block);
+  }
 
   @include at-media(desktop) {
     @include u-right(0);
     @include u-left(auto);
+    @include u-display(block);
   }
 }
 
