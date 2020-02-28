@@ -47,6 +47,7 @@
 
   .jcc-header-group {
     @include u-padding(6);
+    padding: 18px;
   }
 
   .jcc-postcard__row {
@@ -77,7 +78,8 @@
   @include u-margin-bottom(4);
 
   @include at-media(desktop) {
-    @include u-margin-bottom(0);
+    $car: 0;
+    @include u-margin-bottom($car);
     @include u-order(last);
   }
 }

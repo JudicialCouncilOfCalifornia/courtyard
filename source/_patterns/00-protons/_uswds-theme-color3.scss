@@ -23,6 +23,31 @@ Theme palette colors
 ----------------------------------------
 */
 // Base colors
+
+@if ($theme1) {
+  $theme-color-primary-family: "blue";
+  $theme-color-primary-lightest: false;
+  $theme-color-primary-lighter: "blue-5";
+  $theme-color-primary-light: "blue-30";
+  $theme-color-primary: "blue-60v";
+  $theme-color-primary-vivid: "blue-50";
+  $theme-color-primary-dark: "blue-70v";
+  $theme-color-primary-darker: "blue-80";
+  $theme-color-primary-darkest: false;
+}
+
+@if ($theme2) {
+  $theme-color-primary-family: "green";
+  $theme-color-primary-lightest: false;
+  $theme-color-primary-lighter: "green-5" !global;
+  $theme-color-primary-light: "green-30" !global;
+  $theme-color-primary: "green-30" !global;
+  $theme-color-primary-vivid: "green-50" !global;
+  $theme-color-primary-dark: "green-70" !global;
+  $theme-color-primary-darker: "green-70" !global;
+  $theme-color-primary-darkest: false;
+}
+
 $theme-color-base-family: "gray";
 $theme-color-base-lightest: "gray-2";
 $theme-color-base-lighter: "gray-4";
@@ -32,17 +57,6 @@ $theme-color-base-dark: "gray-60";
 $theme-color-base-darker: "gray-70";
 $theme-color-base-darkest: "gray-80";
 $theme-color-base-ink: "gray-90";
-
-// Primary colors
-$theme-color-primary-family: "blue";
-$theme-color-primary-lightest: false;
-$theme-color-primary-lighter: "blue-5";
-$theme-color-primary-light: "blue-30";
-$theme-color-primary: "blue-60v";
-$theme-color-primary-vivid: "blue-50";
-$theme-color-primary-dark: "blue-70v";
-$theme-color-primary-darker: "blue-80";
-$theme-color-primary-darkest: false;
 
 // Secondary colors
 $theme-color-secondary-family: "cyan";

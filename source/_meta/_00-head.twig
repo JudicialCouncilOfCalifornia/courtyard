@@ -13,8 +13,15 @@
 		<!-- End Pattern Lab -->
 
 	</head>
-	<body class="{{ bodyClass }}">
+	<select class="theme-switcher">
+    <option value="default">Select A Theme</option>
+    <option value="theme-1">Theme 1</option>
+    <option value="theme-2">Theme 2</option>
+    <option value="theme-3">Theme 3</option>
+    <option value="theme-4">Theme 4</option>
+    <option value="theme-5">Theme 5</option>
+</select>
+	<body class="{{ bodyClass }} theme2">
     <div style="width:0;height:0;position:absolute;overflow:hidden;">
       {% include "@atoms/icons/symbol-defs.svg" %}
     </div>
-
