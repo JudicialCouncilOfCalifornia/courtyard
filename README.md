@@ -10,10 +10,23 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 ## Getting Started
 
 1. `git clone https://github.com/Exygy/courtyard.git` to create the project directory.
-1. `cd courtyard` to go to the directory.
-1. `composer install` to install Pattern Lab.
-1. `npm install`
-1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+2. `cd courtyard` to go to the directory.
+3. `composer install` to install Pattern Lab.
+4. `npm install`
+5. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+
+## Theming Development
+
+Multiple themes are available for the pattern lab. When developing these theme use separate npm commands to generate different stylesheets to cut down on load times.
+
+SRL
+`npm run srl` to generate the SRL themed pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+
+Trial Court
+`npm run trial` to generate the Trial Court themed pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+
+All themes
+`npm run start` to generate all variations of the style sheet
 
 ## Composer Install Wizard
 

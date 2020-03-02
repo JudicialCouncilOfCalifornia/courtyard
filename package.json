@@ -3,6 +3,8 @@
   "repository": "https://github.com/Exygy/courtyard.git",
   "scripts": {
     "build": "gulp build",
+    "trial": "gulp trial",
+    "srl": "gulp srl",
     "start": "gulp"
   },
   "devDependencies": {
