@@ -7,6 +7,7 @@
 
 .patternLink {
   text-decoration: none;
+  display: none;
 }
 
 .sg-pattern-category-title {
