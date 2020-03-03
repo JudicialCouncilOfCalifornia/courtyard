@@ -46,8 +46,7 @@
     "dialog-polyfill": "^0.5.0",
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1",
-    "slicknav": "^1.0.8",
-    "underscore": "^1.9.2"
+    "slicknav": "^1.0.8"
   },
   "prettier": {
     "printWidth": 100,
