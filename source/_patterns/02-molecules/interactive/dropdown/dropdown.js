@@ -7,3 +7,9 @@ if (selectElements) {
     const edd = easydropdown(select);
   });
 }
+
+const edd = easydropdown(selectElement, {
+  behavior: {
+    useNativeUiOnMobile: false
+  }
+});
