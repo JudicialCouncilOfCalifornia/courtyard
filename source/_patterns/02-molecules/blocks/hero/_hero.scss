@@ -138,6 +138,7 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
+    max-width: 75%;
   }
 }
 
