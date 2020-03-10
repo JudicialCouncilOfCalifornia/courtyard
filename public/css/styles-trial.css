@@ -28317,6 +28317,10 @@ a:visited {
   display: flex ;
 }
 
+.jcc-hero--viewport-height {
+  min-height: 100vh ;
+}
+
 .jcc-hero--has-background-image {
   color: white ;
 }
@@ -28735,6 +28739,7 @@ a:visited {
   background-color: #0b4778 ;
   left: 0 ;
   bottom: 0 ;
+  display: none ;
 }
 
 .jcc-postcard__content {
@@ -29795,6 +29800,10 @@ h3.jcc-header-group__title {
   z-index: 10;
   -webkit-box-shadow: 0px 16px 0px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 16px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.jcc-header__container {
+  min-height: 4rem ;
 }
 
 .jcc-header__logo .jcc-logo {
@@ -31242,6 +31251,132 @@ h3.jcc-header-group__title {
   height: 1.75rem;
   width: 1.75rem;
   fill: #1b1b1b;
+}
+
+.jcc-forms-filter__input {
+  background-position-y: 4px;
+  background-position-x: 0.3rem;
+  background-size: 1.8rem;
+  background-image: url(../images/icomoon/SVG/search.svg);
+  background-repeat: no-repeat;
+  padding-left: 2.4rem;
+}
+
+.jcc-forms-filter__results-container {
+  background: white;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: #333;
+  width: 800px;
+  max-width: 100%;
+}
+
+.jcc-forms-filter__results-header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold ;
+  color: #005ea2 ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.06rem;
+}
+
+.jcc-forms-filter__no-results,
+.jcc-forms-filter__loading {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.jcc-forms-filter__no-results--guides,
+.jcc-forms-filter__loading--guides {
+  border-bottom: 1px solid #eee;
+}
+
+.jcc-forms-filter__guide-result-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jcc-forms-filter__guide-result {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jcc-forms-filter__guide-result:first-child {
+  border-right: 1px solid #eee;
+}
+
+.jcc-forms-filter__guide-result a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.jcc-forms-filter__guide-result a:hover {
+  text-decoration: underline;
+}
+
+.jcc-forms-filter__form-result {
+  border-bottom: 1px solid #eee;
+}
+
+.jcc-forms-filter__form-result:last-child {
+  border-bottom: none;
+}
+
+.jcc-forms-filter__form-result-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.jcc-forms-filter__form-result-content:hover .form-title {
+  text-decoration: underline;
+}
+
+.jcc-forms-filter__expand-button {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-size: 1.8rem;
+  background-image: url("../images/icomoon/SVG/remove.svg");
+}
+
+.jcc-forms-filter__expand-button[aria-expanded="false"] {
+  background-image: url("../images/icomoon/SVG/add.svg");
+}
+
+.jcc-forms-filter__form-number-and-title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.jcc-forms-filter__form-number-and-title .form-number {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 12px;
+}
+
+.jcc-forms-filter__form-links {
+  display: none;
+  padding: 4px 20px 10px 20px;
+}
+
+.jcc-forms-filter__form-links.visible {
+  display: block;
 }
 
 .jcc-hero__options-section {
@@ -50698,6 +50833,9 @@ h3.jcc-header-group__title {
       grid-column: button;
     }
   }
+  .jcc-postcard__tag {
+    display: block ;
+  }
 }
 
 @media all and (max-width: 63.99em) and (min-width: 40em) {
@@ -60913,6 +61051,7 @@ h3.jcc-header-group__title {
   .jcc-postcard__tag {
     right: 0 ;
     left: auto ;
+    display: block ;
   }
   .jcc-postcard__row {
     display: -webkit-box;
@@ -61049,6 +61188,7 @@ h3.jcc-header-group__title {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between ;
+    min-height: 5rem ;
   }
   .jcc-header__container::after {
     clear: both;

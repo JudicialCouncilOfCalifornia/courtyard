@@ -35,7 +35,7 @@ themeSwitcher.addEventListener("change", function() {
   }
   if (themeName == "trial-court-2") {
     console.log("trial-court-2 switch");
-    colorReplace("#005ea2", "#800080");
+    colorReplace("#005ea2", "#000000");
     localStorage["theme"] = "trial-court-2";
   }
 });

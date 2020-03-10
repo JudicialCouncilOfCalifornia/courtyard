@@ -1,0 +1,34 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig' with {
+  hero: name_change.hero
+} %}
+
+<div class="jcc-choice-section">
+  <div class="jcc-choice-section__container">
+    <div class="jcc-hero__options jcc-form">
+      <h3 class="jcc-header-group__title">Check all that apply:</h3>
+      {% for question in name_change.questions %}
+        <section class="jcc-hero__options-section jcc-form-group__options" data-checkbox-id="{{question.id}}">
+          {% for option in question.options %}
+            {% include '@atoms/forms/checkbox.twig' with {
+              label: option.label,
+              id: option.id,
+              name: option.name,
+              bordered: true
+            } %}
+          {% endfor %}
+        </section>
+      {% endfor %}
+      {% include '@atoms/buttons/button.twig' with {
+        button: {
+          text: 'Submit',
+          style: 'primary',
+          url: '#'
+        }
+      } %}
+    </div>
+    <div class="jcc-hero__results">
+      {% include '@organisms/sections/steps/steps.twig' with { steps: steps } %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{% include '@organisms/global/header/header.twig' %}
+
+<div class="jcc-service__control">
+  {% include '@molecules/blocks/hero/hero.twig' with { hero: top.hero } %}
+</div>
+
+<div class="jcc-service__tabs">
+  {% include '@organisms/sections/tab-section/tab-section.twig' with {
+    tab_section: tab_section
+  } %}
+</div>
