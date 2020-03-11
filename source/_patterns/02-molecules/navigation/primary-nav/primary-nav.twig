@@ -1,0 +1,27 @@
+<div id="js-primary_menu--mobile"></div>
+<div class="jcc-primary_menu--desktop slicknav_menu slicknav_menu--desktop">
+  <div class="section-interior">
+    <ul id="slick-menu" class="jcc-primary_nav slicknav_nav__item">
+      {% for item in primary_nav.items %}
+        <li class="jcc-primary_nav__item slicknav_nav__item">
+          <a class="jcc-primary_nav__top_link" href="{{ item.url }}">{{ item.name }}</a>
+					{% if item.sublinks %}
+          <ul class="jcc-primary_nav_sub">
+            {% for i, sublink in item.sublinks %}
+              <li class="jcc-primary_nav__sub--item slicknav_nav__item">
+                <a href="{{ item.sublink[i].url }}">
+                  <div class="jcc-primary_nav__sub--title">
+                    {{ item.sublinks[i].name }}</div>
+                  <div class="jcc-primary_nav__sub--description">
+                    {{ item.sublinks[i].description }}
+                  </div>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+					{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+@import "../../node_modules/slicknav/scss/slicknav.scss";
+
+.slicknav_menu {
+  @include u-display(block);
+
+  @include at-media(desktop) {
+    @include u-display(none);
+  }
+}
+
+.slicknav_menu.slicknav_menu--desktop {
+  @include u-display(none);
+
+  @include at-media(desktop) {
+    @include u-display(block);
+  }
+}
+
+.slicknav_nav {
+  @include at-media(desktop) {
+    @include u-display(flex);
+  }
+}
+
+.slicknav_menu {
+  @include u-color(primary-darker);
+}
+
+.jcc-primary_nav {
+  text-align: left;
+  @include grid-container(widescreen);
+}
+
+.jcc-primary_menu--desktop {
+  background-color: #f9f9f9;
+}
+
+.jcc-primary_nav__item {
+  @include u-display(inline);
+
+  .jcc-primary_nav__top_link {
+    @include u-color(primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 24px 2rem;
+    &:hover + .jcc-primary_nav_sub {
+      max-height: 2000px;
+      transition: max-height 0.7s ease;
+    }
+    &:hover {
+      @include u-bg(primary-dark);
+      @include u-color("white");
+      transition: 0.4s all;
+    }
+    &:after {
+      content: "";
+      background-image: url("../images/graphics/down-arrow.svg");
+      height: 15px;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      margin-left: 7px;
+      margin-top: 10px;
+    }
+    &:only-child:after {
+      content: "";
+      display: none;
+    }
+  }
+  .jcc-primary_nav_sub {
+    @include grid-container(widescreen);
+    @include u-display(block);
+    max-height: 0px;
+    @include u-bg(primary-darker);
+    position: absolute;
+    background-color: #1f303e;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding-right: 10%;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+    &:hover {
+      max-height: 2000px;
+      transition: max-height 0.7s ease;
+    }
+    li {
+      @include u-display(inline-block);
+      width: 30%;
+      text-align: left;
+      padding: 20px 30px;
+      margin: 20px 20px 0px 0;
+      transition: 0.4s all;
+      &:hover {
+        @include u-bg(primary-dark);
+        transition: 0.4s all;
+      }
+      a {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        text-decoration: none;
+        @include u-color(primary-lighter);
+        .jcc-primary_nav__sub--title {
+          position: relative;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          &:after {
+            content: "";
+            background-image: url("../images/graphics/arrow-right.svg");
+            height: 15px;
+            width: 15px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            margin-left: 15px;
+            margin-top: 5px;
+          }
+        }
+        .jcc-primary_nav__sub--description {
+          font-weight: 400;
+          margin-top: 10px;
+
+          font-size: 14px;
+          @include u-color("white");
+        }
+      }
+    }
+  }
+}
