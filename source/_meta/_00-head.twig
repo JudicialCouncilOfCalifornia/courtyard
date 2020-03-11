@@ -6,15 +6,19 @@
 		<meta name="viewport" content="width=device-width" />
 
 		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?{{ cacheBuster }}" media="all" />
-		<link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
-
+		<link rel="stylesheet" id='srl' href="../../css/styles-srl.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" id='trial' href="../../css/styles-trial.css?{{ cacheBuster }}" media="all" disabled/>
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		{{ patternLabHead | raw }}
 		<!-- End Pattern Lab -->
 
 	</head>
+	<select class="theme-switcher">
+    <option value="srl">SRL</option>
+    <option value="trial-court">Trial Court</option>
+    <option value="trial-court-2">Trial Purple</option>
+</select>
 	<body class="{{ bodyClass }}">
     <div style="width:0;height:0;position:absolute;overflow:hidden;">
       {% include "@atoms/icons/symbol-defs.svg" %}
     </div>
-
