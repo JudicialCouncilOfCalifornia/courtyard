@@ -28,11 +28,11 @@
 
 .jcc-primary_nav {
   text-align: left;
-  @include grid-container(widescreen);
 }
 
 .jcc-primary_menu--desktop {
   background-color: #f9f9f9;
+  padding: 0;
 }
 
 .jcc-primary_nav__item {
@@ -46,12 +46,13 @@
     text-decoration: none;
     font-weight: 400;
     padding: 24px 2rem;
-    &:hover + .jcc-primary_nav_sub {
-      max-height: 2000px;
-      transition: max-height 0.7s ease;
+    padding-bottom: 20px;
+    &.nav-open + .jcc-primary_nav__sub-container {
+      opacity: 1;
+      transition: opacity 0.7s ease;
     }
     &:hover {
-      @include u-bg(primary-dark);
+      @include u-bg(primary-darker);
       @include u-color("white");
       transition: 0.4s all;
     }
@@ -71,28 +72,25 @@
       display: none;
     }
   }
-  .jcc-primary_nav_sub {
-    @include grid-container(widescreen);
-    @include u-display(block);
-    max-height: 0px;
+  .jcc-primary_nav__sub-container {
     @include u-bg(primary-darker);
-    position: absolute;
-    background-color: #1f303e;
     width: 100%;
+    position: absolute;
     left: 0;
+    right: 0;
     margin-left: 0;
     padding: 0;
-    margin-top: 20px;
-    padding-right: 10%;
-    padding-bottom: 20px;
+    margin-top: 42px;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.7s ease;
-    &:hover {
-      max-height: 2000px;
-      transition: max-height 0.7s ease;
-    }
+    transition: opacity 0.7s ease;
+    padding-bottom: 30px;
+  }
+  .jcc-primary_nav__sub {
+    @include u-display(block);
+    padding-right: 10%;
     li {
-      @include u-display(inline-block);
+      @include u-display(inline-flex);
       width: 30%;
       text-align: left;
       padding: 20px 30px;
@@ -107,7 +105,7 @@
         margin: 0;
         text-align: left;
         text-decoration: none;
-        @include u-color(primary-lighter);
+        @include u-color(primary-light);
         .jcc-primary_nav__sub--title {
           position: relative;
           letter-spacing: 3px;

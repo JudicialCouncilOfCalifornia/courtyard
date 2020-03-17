@@ -3,111 +3,80 @@ primary_nav:
     - name: "Online Services"
       url: "#"
       sublinks:
-        - name: "All Divisions"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Case Calendar"
+          description: Short Description about what the landing page."
           url: "#"
-        - name: "Civil"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Case Query"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Juvenile"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "EFiling"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Collections"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Tentative Rulings"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Probate"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Traffic- Pay Fines"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Criminal"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Forms & Filing"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Traffic"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Family"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-    - name: "Forms & Filing"
-      description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-      url: "#"
     - name: "Divisions"
-      description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
       url: "#"
       sublinks:
         - name: "All Divisions"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Short description about All Divisions landing page lorem ipsum. Short description about All Divisions landing page lorem ipsum."
           url: "#"
         - name: "Civil"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Adjudication of controversies between individual parties, the redress of private rights, and hearings for child welfare cases."
           url: "#"
         - name: "Juvenile"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "In California, as in all states, there is a separate court system for persons under the age of 18, who are known as minors or juveniles."
           url: "#"
         - name: "Collections"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Collections provides direct assistance in order to facilitate payment of delinquent fines and fees."
           url: "#"
         - name: "Probate"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Probate handles cases involving estates, trusts, guardianships, and conservatorships."
           url: "#"
         - name: "Criminal"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Our Criminal Division contains information to help you resolve warrants and pay your court ordered fines."
           url: "#"
         - name: "Traffic"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Our Traffic Division contains information to help you resolve traffic citations, interact with the court, and if or how to go to traffic school."
           url: "#"
         - name: "Family"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+          description: "Family Law is an area of the law that deals with family-related issues and domestic relations including: the nature of marriage, adoption and child abuse, divorce, annulment, and alimony."
           url: "#"
     - name: "Self Help"
       url: "#"
     - name: "General Information"
       url: "#"
       sublinks:
-        - name: "All Divisions"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Annulment"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Civil"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Child Custody"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Juvenile"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Conservatorships of Adults"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Collections"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Dissolution of Marriage"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Probate"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Gender Changes"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Criminal"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Evictions"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Traffic"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Legal Separations"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "Family"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Spousal Support"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
-        - name: "All Divisions"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Civil"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Juvenile"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Collections"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Probate"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Criminal"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Traffic"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
-          url: "#"
-        - name: "Family"
-          description: Short Description about what the landing page. Could be a variable length, who knows what this will say.
+        - name: "Step-parent Adoptions"
+          description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"

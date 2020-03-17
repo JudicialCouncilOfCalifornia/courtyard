@@ -29795,15 +29795,11 @@ a:visited {
 
 .jcc-primary_nav {
   text-align: left;
-  margin-left: auto ;
-  margin-right: auto ;
-  max-width: 87.5rem ;
-  padding-left: 1rem ;
-  padding-right: 1rem ;
 }
 
 .jcc-primary_menu--desktop {
   background-color: #f9f9f9;
+  padding: 0;
 }
 
 .jcc-primary_nav__item {
@@ -29818,16 +29814,17 @@ a:visited {
   text-decoration: none;
   font-weight: 400;
   padding: 24px 2rem;
+  padding-bottom: 20px;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav__top_link:hover + .jcc-primary_nav_sub {
-  max-height: 2000px;
-  -webkit-transition: max-height 0.7s ease;
-  transition: max-height 0.7s ease;
+.jcc-primary_nav__item .jcc-primary_nav__top_link.nav-open + .jcc-primary_nav__sub-container {
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
 }
 
 .jcc-primary_nav__item .jcc-primary_nav__top_link:hover {
-  background-color: #0b4778 ;
+  background-color: #1f303e ;
   color: white ;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
@@ -29850,37 +29847,31 @@ a:visited {
   display: none;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub {
-  margin-left: auto ;
-  margin-right: auto ;
-  max-width: 87.5rem ;
-  padding-left: 1rem ;
-  padding-right: 1rem ;
-  display: block ;
-  max-height: 0px;
+.jcc-primary_nav__item .jcc-primary_nav__sub-container {
   background-color: #1f303e ;
-  position: absolute;
-  background-color: #1f303e;
   width: 100%;
+  position: absolute;
   left: 0;
+  right: 0;
   margin-left: 0;
   padding: 0;
-  margin-top: 20px;
-  padding-right: 10%;
-  padding-bottom: 20px;
+  margin-top: 42px;
+  opacity: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.7s ease;
-  transition: max-height 0.7s ease;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  padding-bottom: 30px;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub:hover {
-  max-height: 2000px;
-  -webkit-transition: max-height 0.7s ease;
-  transition: max-height 0.7s ease;
+.jcc-primary_nav__item .jcc-primary_nav__sub {
+  display: block ;
+  padding-right: 10%;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li {
-  display: inline-block ;
+.jcc-primary_nav__item .jcc-primary_nav__sub li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex ;
   width: 30%;
   text-align: left;
   padding: 20px 30px;
@@ -29889,27 +29880,27 @@ a:visited {
   transition: 0.4s all;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li:hover {
+.jcc-primary_nav__item .jcc-primary_nav__sub li:hover {
   background-color: #0b4778 ;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li a {
+.jcc-primary_nav__item .jcc-primary_nav__sub li a {
   padding: 0;
   margin: 0;
   text-align: left;
   text-decoration: none;
-  color: #eff6fb ;
+  color: #73b3e7 ;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li a .jcc-primary_nav__sub--title {
+.jcc-primary_nav__item .jcc-primary_nav__sub li a .jcc-primary_nav__sub--title {
   position: relative;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li a .jcc-primary_nav__sub--title:after {
+.jcc-primary_nav__item .jcc-primary_nav__sub li a .jcc-primary_nav__sub--title:after {
   content: "";
   background-image: url("../images/graphics/arrow-right.svg");
   height: 15px;
@@ -29921,7 +29912,7 @@ a:visited {
   margin-top: 5px;
 }
 
-.jcc-primary_nav__item .jcc-primary_nav_sub li a .jcc-primary_nav__sub--description {
+.jcc-primary_nav__item .jcc-primary_nav__sub li a .jcc-primary_nav__sub--description {
   font-weight: 400;
   margin-top: 10px;
   font-size: 14px;
@@ -31647,6 +31638,10 @@ h3.jcc-header-group__title {
   display: block;
 }
 
+.jcc-service__tabs {
+  display: none;
+}
+
 .jcc-hero__options-section {
   display: none;
 }
@@ -31657,10 +31652,6 @@ h3.jcc-header-group__title {
 }
 
 .jcc-hero__results {
-  display: none;
-}
-
-.jcc-service__tabs {
   display: none;
 }
 
@@ -61364,14 +61355,6 @@ h3.jcc-header-group__title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
-  }
-  .jcc-primary_nav {
-    padding-left: 2rem ;
-    padding-right: 2rem ;
-  }
-  .jcc-primary_nav__item .jcc-primary_nav_sub {
-    padding-left: 2rem ;
-    padding-right: 2rem ;
   }
   .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
