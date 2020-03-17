@@ -2,7 +2,7 @@ import _ from "underscore";
 
 async function init() {
   console.log("all-forms init");
-  let formResults = document.querySelector(".form-results");
+  let formResults = document.querySelector(".jcc-forms-filter__form-results");
 
   let render = () => {
     formResults.innerHTML = forms.map(form => formResult(form)).join("\n");
@@ -10,9 +10,9 @@ async function init() {
 
   function formResult(form) {
     return `
-      <div class="form-result">
-        <a class="form-result-content" href="${form.url}" target="_blank">
-          <div class="form-number-and-title">
+      <div class="jcc-forms-filter__form-result">
+        <a class="jcc-forms-filter__form-result-content" href="${form.url}" target="_blank">
+          <div class="jcc-forms-filter__form-number-and-title">
             <div class="form-number">${form.id}</div>
             <div class="form-title">${form.title}</div>
           </div>
