@@ -35,64 +35,14 @@
   padding: 0;
 }
 
-.usa-header--extended .jcc-primary-nav__button-single {
-  background: none !important;
-  padding-right: 0;
-}
-
-.usa-header--extended [aria-expanded="true"]::after {
-  display: none !important;
-}
-
-.jcc-primary-nav .usa-nav__submenu {
-  @include u-display(none);
-}
-
-.jcc-primary-nav .usa-accordion__button + .usa-nav__submenu {
-  @include u-display(none);
-  @include u-bg(primary-light);
+.jcc-primary-nav .usa-nav__primary-item {
   @include at-media(desktop) {
-    @include u-bg(primary-dark);
+    border-top: none;
   }
-  &:after {
+  .usa-nav__link {
+    padding: 1rem 3.5rem 1rem 1.25rem;
+    border: 0;
     @include u-bg(primary-dark);
-  }
-  &:before {
-    @include u-bg(primary-dark);
-  }
-}
-
-.usa-header-extended .usa-nav {
-  @include u-display(none);
-}
-
-.jcc-primary-nav .jcc-primary-nav__top_link {
-  .usa-accordion__button {
-    @include at-media(desktop) {
-      @include u-padding(3);
-      @include u-bg("white");
-    }
-    @include u-bg(primary-dark);
-    span {
-      @include at-media(desktop) {
-        @include u-color(primary);
-      }
-      @include u-color("white");
-      @include u-font-size("body", 7);
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    &:hover {
-      &:after {
-        display: none !important;
-      }
-      span {
-        @include at-media(desktop) {
-          @include u-color(primary-dark);
-        }
-        @include u-color(primary-lighter);
-      }
-    }
     &[aria-expanded="true"] {
       @include u-bg(primary-dark);
       span {
@@ -102,24 +52,68 @@
         display: block;
       }
     }
+    &:hover {
+      &:after {
+        display: none !important;
+      }
+      span {
+        @include at-media(desktop) {
+          @include u-color("white");
+        }
+        @include u-color(primary-lighter);
+      }
+    }
+    @include at-media(desktop) {
+      @include u-padding(3);
+      @include u-bg("white");
+      padding-left: 20px;
+      &:hover {
+        @include u-bg(primary-dark);
+        @include u-color("white");
+        cursor: pointer;
+      }
+      &:hover[aria-expanded="true"] {
+        background-image: url(../images/icomoon/SVG/expand_less_white.svg);
+      }
+      &:hover[aria-expanded="false"] {
+        @include u-bg(primary-dark);
+        background-image: url(../images/icomoon/SVG/expand_more_white.svg);
+      }
+    }
+    span {
+      @include at-media(desktop) {
+        @include u-color(primary);
+      }
+      @include u-color("white");
+      @include u-font-size("body", 7);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
   }
 }
 
-.jcc-primary-nav__sub {
+.jcc-primary-nav .jcc-primary-nav__sub {
+  margin-left: 0;
   @include u-display(block);
-  padding-right: 10%;
+  @include at-media(desktop) {
+    padding-right: 10%;
+  }
   li {
     @include u-display(block);
+    padding: 0 70px;
+    text-align: left;
+    @include u-bg(primary-lighter);
     @include at-media(desktop) {
       @include u-display(inline-flex);
       width: 33%;
+      @include u-padding(1);
+      @include u-bg(primary-dark);
     }
-    text-align: left;
-    @include u-padding(1x);
-    transition: 0.4s all;
     &:hover {
-      background-color: #283e62;
-      transition: 0.4s all;
+      @include u-bg(primary-light);
+      @include at-media(desktop) {
+        background-color: #283e62;
+      }
     }
     a {
       padding: 0;
@@ -128,23 +122,27 @@
       text-decoration: none;
       @include u-color(primary);
       @include u-padding(2);
-      &:hover {
-        @include u-bg(primary-light);
-      }
       @include at-media(desktop) {
         @include u-color(primary-light);
       }
+      &:hover {
+        background-color: transparent;
+      }
       .jcc-primary-nav__sub--title {
         position: relative;
-        @include u-text("bold");
+        padding: 15px 0;
         letter-spacing: 2px;
         text-transform: uppercase;
         @include u-font-size("body", 7);
-        margin-bottom: 1em;
-        &:after {
-          @include at-media(desktop) {
-            @include u-display(inline);
+        @include u-text("bold");
+        @include at-media(desktop) {
+          margin-bottom: 1em;
+          padding: 0;
+          &:hover {
+            background-color: transparent;
           }
+        }
+        &:after {
           @include u-display(none);
           content: "";
           background-image: url("../images/graphics/arrow-right.svg");
@@ -155,6 +153,9 @@
           position: absolute;
           margin-left: 10px;
           margin-top: 1px;
+          @include at-media(desktop) {
+            @include u-display(inline);
+          }
         }
       }
       .jcc-primary-nav__sub--description {
@@ -178,6 +179,36 @@
   }
 }
 
+.usa-header--extended .jcc-primary-nav__button-single {
+  padding-right: 0;
+}
+
+.usa-header--extended [aria-expanded="true"]::after {
+  display: none !important;
+}
+
+.jcc-primary-nav .usa-nav__submenu {
+  @include u-display(none);
+}
+
+.jcc-primary-nav .usa-accordion__button + .usa-nav__submenu {
+  @include u-display(none);
+  @include u-bg(primary-lighter);
+  @include at-media(desktop) {
+    @include u-bg(primary-dark);
+  }
+  &:after {
+    @include u-bg(primary-dark);
+  }
+  &:before {
+    @include u-bg(primary-dark);
+  }
+}
+
+.usa-header-extended .usa-nav {
+  @include u-display(none);
+}
+
 //mobile
 .jcc-primary-nav {
   #js-header_menu--mobile {
@@ -197,17 +228,31 @@
       @include u-padding(0);
       @include u-margin(0);
     }
+
+    .slicknav_nav .usa-nav__primary-item {
+      border-top: 1px solid #7283a0;
+    }
+
     .slicknav_menu .slicknav_icon-bar {
-      @include u-bg(primary-dark);
       display: block;
       width: 27px;
       height: 3px;
       border-radius: 10px;
       -webkit-box-shadow: none;
       margin-bottom: 5px;
+      @include u-bg(primary-dark);
     }
     .slicknav_icon {
       margin: 0;
+    }
+    .usa-accordion__button {
+      background-image: url();
+    }
+    .usa-accordion__button[aria-expanded="true"] {
+      background-image: url(../images/icomoon/SVG/expand_less_white.svg);
+    }
+    .usa-accordion__button[aria-expanded="false"] {
+      background-image: url(../images/icomoon/SVG/expand_more_white.svg);
     }
   }
 }
