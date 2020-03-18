@@ -36,20 +36,21 @@ $theme-color-base-ink: "gray-90";
 // Primary colors
 $theme-color-primary-family: "blue";
 $theme-color-primary-lightest: false;
-$theme-color-primary-lighter: "blue-5";
-$theme-color-primary-light: "blue-30";
+$theme-color-primary-lighter: #f2f6fb;
+$theme-color-primary-light: #bed9f0;
 $theme-color-primary: "blue-60v";
 $theme-color-primary-vivid: "blue-50";
-$theme-color-primary-dark: "blue-70v";
-$theme-color-primary-darker: "blue-80";
+$theme-color-primary-vivid-darker: #0067be;
+$theme-color-primary-dark: #182d4f;
+$theme-color-primary-darker: #1f303e;
 $theme-color-primary-darkest: false;
 
 // Secondary colors
 $theme-color-secondary-family: "mint-cool";
 $theme-color-secondary-lightest: false;
 $theme-color-secondary-lighter: "mint-cool-20";
-$theme-color-secondary-light: "mint-cool-30";
-$theme-color-secondary: "mint-cool-40";
+$theme-color-secondary-light: #29a197;
+$theme-color-secondary: #1d8788;
 $theme-color-secondary-vivid: "mint-cool-50";
 $theme-color-secondary-dark: "mint-cool-60";
 $theme-color-secondary-darker: "mint-cool-70";
@@ -59,9 +60,9 @@ $theme-color-secondary-darkest: false;
 $theme-color-accent-warm-family: "gold-vivid";
 $theme-color-accent-warm-lightest: false;
 $theme-color-accent-warm-lighter: false;
-$theme-color-accent-warm-light: "gold-5v";
+$theme-color-accent-warm-light: #fef0c8;
 $theme-color-accent-warm: "gold-20v";
-$theme-color-accent-warm-dark: "gold-30v";
+$theme-color-accent-warm-dark: #f9e4c3;
 $theme-color-accent-warm-darker: "gold-40v";
 $theme-color-accent-warm-darkest: false;
 

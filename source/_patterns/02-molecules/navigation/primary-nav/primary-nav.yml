@@ -2,6 +2,7 @@ primary_nav:
   items:
     - name: "Online Services"
       url: "#"
+      number: "one"
       sublinks:
         - name: "Case Calendar"
           description: Short Description about what the landing page."
@@ -23,6 +24,7 @@ primary_nav:
           url: "#"
     - name: "Divisions"
       url: "#"
+      number: "two"
       sublinks:
         - name: "All Divisions"
           description: "Short description about All Divisions landing page lorem ipsum. Short description about All Divisions landing page lorem ipsum."
@@ -50,6 +52,7 @@ primary_nav:
           url: "#"
     - name: "Self Help"
       url: "#"
+      number: "four"
     - name: "General Information"
       url: "#"
       sublinks:

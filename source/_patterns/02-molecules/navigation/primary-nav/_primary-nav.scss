@@ -26,7 +26,7 @@
   @include u-color(primary-darker);
 }
 
-.jcc-primary_nav {
+.jcc-primary-nav {
   text-align: left;
 }
 
@@ -35,101 +35,179 @@
   padding: 0;
 }
 
-.jcc-primary_nav__item {
-  @include u-display(inline);
+.usa-header--extended .jcc-primary-nav__button-single {
+  background: none !important;
+  padding-right: 0;
+}
 
-  .jcc-primary_nav__top_link {
-    @include u-color(primary);
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 400;
-    padding: 24px 2rem;
-    padding-bottom: 20px;
-    &.nav-open + .jcc-primary_nav__sub-container {
-      opacity: 1;
-      transition: opacity 0.7s ease;
+.usa-header--extended [aria-expanded="true"]::after {
+  display: none !important;
+}
+
+.jcc-primary-nav .usa-nav__submenu {
+  @include u-display(none);
+}
+
+.jcc-primary-nav .usa-accordion__button + .usa-nav__submenu {
+  @include u-display(none);
+  @include u-bg(primary-light);
+  @include at-media(desktop) {
+    @include u-bg(primary-dark);
+  }
+  &:after {
+    @include u-bg(primary-dark);
+  }
+  &:before {
+    @include u-bg(primary-dark);
+  }
+}
+
+.usa-header-extended .usa-nav {
+  @include u-display(none);
+}
+
+.jcc-primary-nav .jcc-primary-nav__top_link {
+  .usa-accordion__button {
+    @include at-media(desktop) {
+      @include u-padding(3);
+      @include u-bg("white");
+    }
+    @include u-bg(primary-dark);
+    span {
+      @include at-media(desktop) {
+        @include u-color(primary);
+      }
+      @include u-color("white");
+      @include u-font-size("body", 7);
+      text-transform: uppercase;
+      font-weight: 400;
     }
     &:hover {
-      @include u-bg(primary-darker);
-      @include u-color("white");
-      transition: 0.4s all;
-    }
-    &:after {
-      content: "";
-      background-image: url("../images/graphics/down-arrow.svg");
-      height: 15px;
-      width: 15px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: absolute;
-      margin-left: 7px;
-      margin-top: 10px;
-    }
-    &:only-child:after {
-      content: "";
-      display: none;
-    }
-  }
-  .jcc-primary_nav__sub-container {
-    @include u-bg(primary-darker);
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    padding: 0;
-    margin-top: 42px;
-    opacity: 0;
-    overflow: hidden;
-    transition: opacity 0.7s ease;
-    padding-bottom: 30px;
-  }
-  .jcc-primary_nav__sub {
-    @include u-display(block);
-    padding-right: 10%;
-    li {
-      @include u-display(inline-flex);
-      width: 30%;
-      text-align: left;
-      padding: 20px 30px;
-      margin: 20px 20px 0px 0;
-      transition: 0.4s all;
-      &:hover {
-        @include u-bg(primary-dark);
-        transition: 0.4s all;
+      &:after {
+        display: none !important;
       }
-      a {
-        padding: 0;
-        margin: 0;
-        text-align: left;
-        text-decoration: none;
-        @include u-color(primary-light);
-        .jcc-primary_nav__sub--title {
-          position: relative;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          &:after {
-            content: "";
-            background-image: url("../images/graphics/arrow-right.svg");
-            height: 15px;
-            width: 15px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            margin-left: 15px;
-            margin-top: 5px;
-          }
+      span {
+        @include at-media(desktop) {
+          @include u-color(primary-dark);
         }
-        .jcc-primary_nav__sub--description {
-          font-weight: 400;
-          margin-top: 10px;
+        @include u-color(primary-lighter);
+      }
+    }
+    &[aria-expanded="true"] {
+      @include u-bg(primary-dark);
+      span {
+        @include u-color("white");
+      }
+      & + .usa-nav__submenu {
+        display: block;
+      }
+    }
+  }
+}
 
-          font-size: 14px;
-          @include u-color("white");
+.jcc-primary-nav__sub {
+  @include u-display(block);
+  padding-right: 10%;
+  li {
+    @include u-display(block);
+    @include at-media(desktop) {
+      @include u-display(inline-flex);
+      width: 33%;
+    }
+    text-align: left;
+    @include u-padding(1x);
+    transition: 0.4s all;
+    &:hover {
+      background-color: #283e62;
+      transition: 0.4s all;
+    }
+    a {
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      text-decoration: none;
+      @include u-color(primary);
+      @include u-padding(2);
+      &:hover {
+        @include u-bg(primary-light);
+      }
+      @include at-media(desktop) {
+        @include u-color(primary-light);
+      }
+      .jcc-primary-nav__sub--title {
+        position: relative;
+        @include u-text("bold");
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @include u-font-size("body", 7);
+        margin-bottom: 1em;
+        &:after {
+          @include at-media(desktop) {
+            @include u-display(inline);
+          }
+          @include u-display(none);
+          content: "";
+          background-image: url("../images/graphics/arrow-right.svg");
+          height: 15px;
+          width: 15px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          margin-left: 10px;
+          margin-top: 1px;
         }
       }
+      .jcc-primary-nav__sub--description {
+        @include at-media(desktop) {
+          @include u-display(block);
+        }
+        @include u-display(none);
+        @include u-color("white");
+        @include u-text("normal");
+        @include u-font-size("body", 5);
+        margin-top: 10px;
+        line-height: 1.4em;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.usa-nav__primary > .usa-nav__primary-item > a.jcc-primary-nav__top_link {
+  @include at-media(desktop) {
+    @include u-padding(0);
+  }
+}
+
+//mobile
+.jcc-primary-nav {
+  #js-header_menu--mobile {
+    .slicknav_menu {
+      @include u-bg("white");
+    }
+    .slicknav_btn {
+      @include u-bg("white");
+    }
+    .slicknav_menutxt {
+      @include u-display(none);
+    }
+    .slicknav_nav {
+      @include u-bg(primary-dark);
+    }
+    .slicknav_nav a {
+      @include u-padding(0);
+      @include u-margin(0);
+    }
+    .slicknav_menu .slicknav_icon-bar {
+      @include u-bg(primary-dark);
+      display: block;
+      width: 27px;
+      height: 3px;
+      border-radius: 10px;
+      -webkit-box-shadow: none;
+      margin-bottom: 5px;
+    }
+    .slicknav_icon {
+      margin: 0;
     }
   }
 }
