@@ -29803,22 +29803,9 @@ a:visited {
 }
 
 .jcc-primary-nav .usa-nav__primary-item .usa-nav__link {
+  padding: 1rem 3.5rem 1rem 1.25rem;
+  border: 0;
   background-color: #0b4778 ;
-}
-
-.jcc-primary-nav .usa-nav__primary-item .usa-nav__link span {
-  color: white ;
-  font-size: 1.12rem;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover:after {
-  display: none !important;
-}
-
-.jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover span {
-  color: #eff6fb ;
 }
 
 .jcc-primary-nav .usa-nav__primary-item .usa-nav__link[aria-expanded="true"] {
@@ -29833,6 +29820,21 @@ a:visited {
   display: block;
 }
 
+.jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover:after {
+  display: none !important;
+}
+
+.jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover span {
+  color: #eff6fb ;
+}
+
+.jcc-primary-nav .usa-nav__primary-item .usa-nav__link span {
+  color: white ;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .jcc-primary-nav .jcc-primary-nav__sub {
   margin-left: 0;
   display: block ;
@@ -29842,15 +29844,11 @@ a:visited {
   display: block ;
   padding: 0 70px;
   text-align: left;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
   background-color: #eff6fb ;
 }
 
 .jcc-primary-nav .jcc-primary-nav__sub li:hover {
   background-color: #73b3e7 ;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
 }
 
 .jcc-primary-nav .jcc-primary-nav__sub li a {
@@ -29868,11 +29866,11 @@ a:visited {
 
 .jcc-primary-nav .jcc-primary-nav__sub li a .jcc-primary-nav__sub--title {
   position: relative;
-  font-weight: bold ;
+  padding: 15px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 1.12rem;
-  padding: 15px 0;
+  font-weight: bold ;
 }
 
 .jcc-primary-nav .jcc-primary-nav__sub li a .jcc-primary-nav__sub--title:after {
@@ -29953,13 +29951,13 @@ a:visited {
 }
 
 .jcc-primary-nav #js-header_menu--mobile .slicknav_menu .slicknav_icon-bar {
-  background-color: #0b4778 ;
   display: block;
   width: 27px;
   height: 3px;
   border-radius: 10px;
   -webkit-box-shadow: none;
   margin-bottom: 5px;
+  background-color: #0b4778 ;
 }
 
 .jcc-primary-nav #js-header_menu--mobile .slicknav_icon {
@@ -29976,10 +29974,6 @@ a:visited {
 
 .jcc-primary-nav #js-header_menu--mobile .usa-accordion__button[aria-expanded="false"] {
   background-image: url(../images/icomoon/SVG/expand_more_white.svg);
-}
-
-.jcc-header-group {
-  background-color: "blue-70v";
 }
 
 .jcc-header-group > :first-child {
@@ -61418,6 +61412,9 @@ h3.jcc-header-group__title {
   .jcc-primary-nav .usa-nav__primary-item {
     border-top: none;
   }
+  .jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover span {
+    color: white ;
+  }
   .jcc-primary-nav .usa-nav__primary-item .usa-nav__link {
     padding: 1.5rem ;
     background-color: white ;
@@ -61437,9 +61434,6 @@ h3.jcc-header-group__title {
   }
   .jcc-primary-nav .usa-nav__primary-item .usa-nav__link span {
     color: #005ea2 ;
-  }
-  .jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover span {
-    color: white ;
   }
   .jcc-primary-nav .jcc-primary-nav__sub {
     padding-right: 10%;
