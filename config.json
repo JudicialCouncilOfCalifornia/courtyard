@@ -10,8 +10,7 @@
       "source/_patterns/*.scss",
       "source/_patterns/**/*.scss",
       "source/css/styles-trial.scss"
-    ],
-    "base": ["source/css/styles-base.scss"]
+    ]
   },
   "fonts": {
     "source_fonts": "source/fonts/**/**",
