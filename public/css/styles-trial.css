@@ -30394,6 +30394,140 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero {
+  text-align: center ;
+  color: white ;
+  background-color: #182d4f ;
+  height: 430px ;
+  width: 100% ;
+  position: relative ;
+  z-index: -1;
+  padding: 6em 2em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-brow {
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.99rem;
+  z-index: 1;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-divider {
+  width: 80px ;
+  border-bottom: 2px solid white;
+  margin: 20px auto;
+  z-index: 1;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-subtitle {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49rem;
+  font-style: italic;
+  z-index: 1;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__hero img {
+  position: absolute ;
+  left: 0 ;
+  top: 0 ;
+  width: 100% ;
+  opacity: 0.3;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav {
+  width: 92% ;
+  z-index: 2;
+  margin: -80px 4% 0 4%;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block {
+  margin-top: 0.75rem ;
+  display: inline-block;
+  width: 100% ;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile {
+  background-color: #f2f6fb ;
+  text-align: center ;
+  border-width: 2px;
+  border-color: #bed9f0 ;
+  border-style: solid;
+  padding: 1em ;
+  margin-top: 1em ;
+  padding-top: 45px;
+  float: left;
+  width: 48%;
+  margin-right: 2% ;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile:hover {
+  border-width: 2px;
+  border-color: #005ea2 ;
+  border-style: solid;
+  -webkit-transition: 0.4s border;
+  transition: 0.4s border;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile .jcc-tile__icon {
+  border-radius: 80px;
+  background-color: white ;
+  width: 80px ;
+  height: 80px ;
+  top: 0 ;
+  left: 50% ;
+  position: absolute ;
+  margin-right: auto ;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile img {
+  height: 33px;
+  margin-top: 20px ;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile .jcc-tile__title a {
+  color: #005ea2 ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.12rem;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-icon .jcc-tile {
+  width: 48% ;
+  margin-right: 4% ;
+  padding-top: 45px;
+  min-height: 130px;
+  margin-top: 3em ;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-icon .jcc-tile:nth-child(even) {
+  margin-right: 0 ;
+}
+
+.jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-button .jcc-tile {
+  padding-top: 20px;
+  width: 100%;
+  background-color: white ;
+}
+
 .jcc-modal__backdrop {
   display: none ;
 }
@@ -61753,6 +61887,46 @@ h3.jcc-header-group__title {
   .jcc-choice-section__container .jcc-form-group__options {
     max-width: 75%;
   }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__hero {
+    padding: 90px ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 3.48rem;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-subtitle {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.99rem;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav {
+    margin-left: auto ;
+    margin-right: auto ;
+    max-width: 87.5rem ;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    margin-top: -136px ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    margin-top: 0 ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block .jcc-tile {
+    margin-top: 2em ;
+    margin-right: 0 ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-icon .jcc-tile {
+    width: 23.5% ;
+    margin-right: 0 ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-button {
+    margin-top: 15px ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-button .jcc-tile {
+    width: 32.5%;
+    margin-top: 0 ;
+  }
   .jcc-modal__dialog {
     padding: 3rem ;
   }
@@ -62101,6 +62275,10 @@ h3.jcc-header-group__title {
   .jcc-cards-section--has-three-columns .jcc-cards > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
+  }
+  .jcc-hero-icon-nav .jcc-hero-icon-nav__nav {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
   }
   .jcc-switchboard__tiles {
     margin-left: -1rem ;
