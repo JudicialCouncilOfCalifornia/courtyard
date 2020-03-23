@@ -3,6 +3,8 @@
   "repository": "https://github.com/Exygy/courtyard.git",
   "scripts": {
     "build": "gulp build",
+    "trial": "gulp trial",
+    "srl": "gulp srl",
     "start": "gulp"
   },
   "devDependencies": {
@@ -43,7 +45,8 @@
   "dependencies": {
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1",
-    "slicknav": "^1.0.8"
+    "slicknav": "^1.0.8",
+    "underscore": "^1.9.2"
   },
   "prettier": {
     "printWidth": 100,
