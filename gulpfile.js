@@ -68,13 +68,13 @@ const copyIconSprite = () => {
   return gulp.src(config.icons.sprite_src).pipe(gulp.dest(config.icons.sprite_dest));
 };
 
-const plCss = () => {
+const srlCss = () => {
   const plugins = [
     // Pack media queries
     mqpacker({ sort: true })
   ];
   return gulp
-    .src(config.css.src)
+    .src(config.css.srl)
     .pipe(glob())
     .pipe(
       plumber({
@@ -95,7 +95,7 @@ const plCss = () => {
         outputStyle: "expanded",
         errLogToConsole: true,
         includePaths: [
-          config.css.project_scss
+          config.css.project_scss // pulling all the sass and converts to css
           // "${uswds}/scss",
           // "${uswds}/scss/packages",
         ]
@@ -106,11 +106,57 @@ const plCss = () => {
     .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder))
-    .pipe(rename("styles.min.css"))
+    .pipe(gulp.dest(config.css.public_folder)) //writing source map
+    .pipe(rename("styles-srl.min.css"))
     .pipe(cleanCSS({ compatibility: "ie9" }))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder))
+    .pipe(gulp.dest(config.css.public_folder)) //
+    .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
+};
+
+const trialCss = () => {
+  const plugins = [
+    // Pack media queries
+    mqpacker({ sort: true })
+  ];
+  return gulp
+    .src(config.css.trial)
+    .pipe(glob())
+    .pipe(
+      plumber({
+        errorHandler: function(error) {
+          notify.onError({
+            title: "Gulp",
+            subtitle: "Failure!",
+            message: "Error: <%= error.message %>",
+            sound: "Beep"
+          })(error);
+          this.emit("end");
+        }
+      })
+    )
+    .pipe(sourcemaps.init({ largeFile: true }))
+    .pipe(
+      sass({
+        outputStyle: "expanded",
+        errLogToConsole: true,
+        includePaths: [
+          config.css.project_scss // pulling all the sass and converts to css
+          // "${uswds}/scss",
+          // "${uswds}/scss/packages",
+        ]
+        // importer: importOnce
+      })
+    )
+    .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
+    .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
+    .pipe(postcss(plugins))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(config.css.public_folder)) //writing source map
+    .pipe(rename("stylestrial.min.css"))
+    .pipe(cleanCSS({ compatibility: "ie9" }))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(config.css.public_folder)) //
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
 };
 
@@ -158,7 +204,22 @@ const plJs = () => {
 };
 
 const watch = cb => {
-  gulp.watch(config.css.src, plCss);
+  gulp.watch(config.css.src, srlCss);
+  gulp.watch(config.css.trial, trialCss);
+  gulp.watch(config.js.src, plJs);
+  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.css.styleguide_src, copyPlStyles);
+};
+
+const trialwatch = cb => {
+  gulp.watch(config.css.trial, trialCss);
+  gulp.watch(config.js.src, plJs);
+  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.css.styleguide_src, copyPlStyles);
+};
+
+const srlwatch = cb => {
+  gulp.watch(config.css.srl, srlCss);
   gulp.watch(config.js.src, plJs);
   gulp.watch(config.pattern_lab.src, build);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
@@ -175,7 +236,26 @@ const serve = cb => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
+const build = gulp.series(
+  plPhp,
+  copyUswdsFonts,
+  copyUswdsImages,
+  copyIconSprite,
+  srlCss,
+  trialCss,
+  plJs
+);
+const srlbuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, srlCss, plJs);
+const trialbuild = gulp.series(
+  plPhp,
+  copyUswdsFonts,
+  copyUswdsImages,
+  copyIconSprite,
+  trialCss,
+  plJs
+);
 
 exports.build = build;
+exports.trial = gulp.series(trialbuild, serve, trialwatch);
+exports.srl = gulp.series(srlbuild, serve, srlwatch);
 exports.default = gulp.series(build, serve, watch);

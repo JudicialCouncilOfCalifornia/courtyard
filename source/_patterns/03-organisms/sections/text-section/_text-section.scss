@@ -100,3 +100,105 @@
     }
   }
 }
+
+.jcc-text-section {
+  @include section-wrapper;
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+  }
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
+}
+
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--light--secondary,
+.jcc-text-section--has-background-color--dark--secondary {
+  @include section-wrapper-bg;
+}
+
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--light--secondary {
+  @include light-background($light-background-color: secondary-lighter);
+}
+
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--dark--secondary {
+  @include dark-background($dark-background-color: secondary);
+
+  a {
+    @include dark-background-link(
+      $dark-background-link-color: "white",
+      $dark-background-link-color-hover: accent-warm-light
+    );
+  }
+}
+
+.jcc-text-section__container {
+  @include section-container;
+}
+
+.jcc-text-section__content {
+  @include u-line-height(body, 4);
+  @extend .usa-prose;
+}
+
+.jcc-text-section__column-left,
+.jcc-text-section__column-right {
+  @extend .usa-prose;
+}
+
+.jcc-text-section__column-left {
+  @include u-margin-bottom(4);
+
+  @include at-media(desktop) {
+    @include u-margin-bottom(0);
+  }
+}
+
+.jcc-text-section--has-one-column {
+  @include u-measure(6);
+}
+
+.jcc-text-section--has-two-columns-half,
+.jcc-text-section--has-two-columns-threequarter {
+  .jcc-text-section__content {
+    @include at-media(desktop) {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+}
+
+.jcc-text-section--has-two-columns-half {
+  .jcc-text-section__column-left,
+  .jcc-text-section__column-right {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-text-section--has-two-columns-threequarter {
+  .jcc-text-section__column-left,
+  .jcc-text-section__column-right {
+    @include u-width(full);
+  }
+
+  .jcc-text-section__column-left {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+  }
+
+  .jcc-text-section__column-right {
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}

@@ -1,4 +1,3 @@
-
 {% if hero.column_content_right %}
     {% set column_variant = hero.column_variant|default('has-two-columns-half') %}
   {% else %}
@@ -10,6 +9,7 @@
   'jcc-hero',
   'jcc-hero--' ~ column_variant|default('has-two-columns-half'),
   hero.background_variant ? 'jcc-hero--' ~ hero.background_variant : '',
+  hero.height_variant ? 'jcc-hero--' ~ hero.height_variant : '',
 ]|merge(hero.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if hero.id %} id="{{ hero.id }}"{% endif %}>
