@@ -1,0 +1,28 @@
+<div class="jcc-hero-icon-nav">
+  <div class="jcc-hero-icon-nav__hero">
+    <img src="{{ hero_icon_nav.background_img }}">
+    <div class="jcc-hero-icon-nav__hero-brow">
+      {{ hero_icon_nav.brow }}
+    </div>
+    <div class="jcc-hero-icon-nav__hero-title">
+      {{ hero_icon_nav.title }}
+    </div>
+    <div class="jcc-hero-icon-nav__hero-divider">
+    </div>
+    <div class="jcc-hero-icon-nav__hero-subtitle">
+      {{ hero_icon_nav.subtitle }}
+    </div>
+  </div>
+  <div class="jcc-hero-icon-nav__nav">
+    <div class="jcc-hero-icon-nav__block tile-icon">
+        {% for tile in hero_icon_nav.links.icons %}
+            {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+        {% endfor %}
+    </div>
+    <div class="jcc-hero-icon-nav__block tile-button">
+      {% for tile in hero_icon_nav.links.buttons %}
+          {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
