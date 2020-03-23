@@ -1,0 +1,12 @@
+label: "Translate"
+icon:
+  name: "globe"
+  title: "Translate"
+  decorative: true
+links:
+  - title: "English"
+    href: "#"
+  - title: "Spanish"
+    href: "#"
+  - title: "Vietnamese"
+    href: "#"
