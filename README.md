@@ -10,10 +10,51 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 ## Getting Started
 
 1. `git clone https://github.com/Exygy/courtyard.git` to create the project directory.
-1. `cd courtyard` to go to the directory.
-1. `composer install` to install Pattern Lab.
-1. `npm install`
-1. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+2. `cd courtyard` to go to the directory.
+3. `composer install` to install Pattern Lab.
+4. `npm install`
+5. `npm run start` to generate the pattern library, watch for changes, and serve the pattern library on `localhost` at a port that will be specified in the command's console output.
+
+## Pattern Lab Themes
+
+Multiple themes are available for the pattern lab and are being developed over time. These themes are generated into different css sheets to be used in different Drupal instances.
+The major themes are:
+
+1. SRl
+2. Trial Courts
+
+(to be developed) Trail Courts contain color palette options.
+
+### Generating Themes
+
+When developing these theme use separate npm commands to generate different stylesheets through gulp.js to cut down on load times.
+
+SRL
+`npm run srl` to generate the SRL themed pattern library, watch for changes, and serve the pattern library on `localhost`.
+
+Trial Court
+`npm run trial` to generate the Trial Court themed pattern library, watch for changes, and serve the pattern library on `localhost`.
+
+All themes
+`npm run start` to refresh all versions of the themed pattern library, watch for changes, and serve the pattern library on `localhost`.
+
+You can select between these themes in the top left corners section panel.
+
+1. SRl
+2. Trial Courts
+3. Trial Courts Purple - takes a sec to load (JS front-end Primary Color Replacement)
+
+### Theme Development
+
+General Theme Development
+To develop a new theme copy the gulp processes, generate a style sheet, duplicate the base theme in protons and then change your variables accordingly.
+
+Component Theming
+When making changes to components in the pattern library use sass variables referenced in /css scss files to overwrite scss and turn functionality off and on. SRL will be used as the base styling for components. For example:
+
+<img src="./theming.png?raw=true" height="300" >
+
+Theming is currently in development. Feel free to ask Ivan from JCC or Evan from Exygy with questions.
 
 ## Composer Install Wizard
 
