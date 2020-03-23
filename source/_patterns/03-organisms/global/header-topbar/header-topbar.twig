@@ -1,0 +1,14 @@
+<header class="jcc-header--topbar">
+  <div class="jcc-header__container--topbar">
+    <div class="jcc-header__logo--topbar">
+      {% include '@atoms/icons/logo.twig' with  {
+        icon: logo.icon,
+        title: logo.title,
+        icon_file: logo.icon_file,
+        decorative: logo.decorative
+      } %}
+    </div>
+    {% include '@atoms/forms/search-input.twig' %}
+    {% include '@atoms/forms/dropbutton.twig' %}
+  </div>
+</header>

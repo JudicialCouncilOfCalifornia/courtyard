@@ -1,0 +1,12 @@
+menu_items:
+  - name: Link One
+    url: "#"
+    url_attributes: ""
+  - name: Link Two
+    url: "#"
+    url_attributes: ""
+  - name: Link Three
+    url: "#"
+    url_attributes: ""
+img:
+  src: "../../images/jcc-logo.svg"

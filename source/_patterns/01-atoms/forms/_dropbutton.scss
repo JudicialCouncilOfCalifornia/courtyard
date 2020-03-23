@@ -1,0 +1,13 @@
+.jcc-dropbutton {
+  .usa-accordion__button {
+    .jcc-dropbutton__inner {
+      @include u-bg($theme-color-secondary-lighter);
+      padding: units(1);
+    }
+
+    .icon {
+      @include u-height(3);
+      @include u-width(3);
+    }
+  }
+}
