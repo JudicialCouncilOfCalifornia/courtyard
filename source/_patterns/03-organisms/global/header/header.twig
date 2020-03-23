@@ -8,6 +8,10 @@
         decorative: logo.decorative
       } %}
     </div>
-    {% include '@molecules/navigation/header-nav/header-nav.twig' %}
+    {% include '@molecules/navigation/header-nav/header-nav.twig' with {
+      header_nav: {
+        items: menu_items
+      }
+    } %}
   </div>
 </header>
