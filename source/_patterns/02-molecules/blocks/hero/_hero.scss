@@ -7,6 +7,10 @@
   }
 }
 
+.jcc-hero--viewport-height {
+  @include u-minh("viewport");
+}
+
 .jcc-hero--has-background-image {
   @include u-text("white");
 
@@ -134,6 +138,7 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
+    max-width: 75%;
   }
 }
 
