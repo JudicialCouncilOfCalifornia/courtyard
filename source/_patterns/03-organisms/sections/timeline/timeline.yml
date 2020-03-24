@@ -27,7 +27,7 @@ timeline:
         modal:
           button_label: "Negotiation Details 2"
           id: "timeline-full-modal-2"
-          content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p>"
+          content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
       img:
         src: "../../images/graphics/person.svg"
         alt: "Alt text"
