@@ -38,7 +38,7 @@
 
   .jcc-timeline {
     .jcc-timeline-item__title {
-      @include at-media(desktop) {
+      @include at-media(tablet-lg) {
         @include timeline-line($timeline-line-border: accent-warm);
         @include timeline-dot($timeline-dot-bg: primary-vivid, $timeline-dot-border: accent-warm);
       }
@@ -47,7 +47,7 @@
     .jcc-timeline-item__media {
       @include media-icon($icon-circle-bg: primary-dark);
 
-      @include at-media(tablet) {
+      @include at-media(tablet-lg) {
         @include u-position(absolute);
         @include u-top(0);
       }
@@ -68,7 +68,7 @@
 .jcc-timeline {
   @include unstyled-list();
 
-  @include at-media(desktop) {
+  @include at-media(tablet-lg) {
     @include grid-row;
     @include u-overflow-x(auto);
     @include u-flex(no-wrap);
@@ -78,7 +78,7 @@
     @include u-width(full);
     @include u-padding-bottom(4);
 
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include grid-col(4);
 
       > * {
@@ -86,27 +86,27 @@
       }
     }
 
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include grid-col(3);
     }
   }
 
   .jcc-timeline-item {
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include u-padding-right(3);
       padding-top: 4rem;
     }
   }
 
   .jcc-timeline-item__title {
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include timeline-line();
       @include timeline-dot();
     }
   }
 
   .jcc-timeline-item__media {
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include u-position(absolute);
       @include u-top(0);
     }
@@ -136,7 +136,7 @@
   z-index: 10;
 
   &.is-active {
-    @include at-media(desktop) {
+    @include at-media(tablet-lg) {
       @include u-display(block);
     }
   }
