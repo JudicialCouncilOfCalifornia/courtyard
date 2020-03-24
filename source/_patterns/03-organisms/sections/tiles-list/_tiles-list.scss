@@ -1,0 +1,111 @@
+.jcc-tiles-list__container {
+  @include u-padding-y(4);
+
+  > .jcc-header-group {
+    @extend .grid-container;
+    @include u-text-align(center);
+    @include u-overflow(hidden);
+    .jcc-header-group__title:before,
+    .jcc-header-group__title:after {
+      background-color: #000;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    .jcc-header-group__title:before {
+      left: -0.5em;
+      margin-left: -50%;
+    }
+    .jcc-header-group__title:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+
+  .jcc-tiles-list {
+    @extend .grid-container;
+    @include u-padding(0);
+    @include u-display(flex);
+    @include u-flex-direction(column);
+
+    .jcc-tiles-list__tile:not(:last-child) {
+      @include u-border-bottom(2px);
+      @include u-border-bottom(accent-cool);
+    }
+
+    .jcc-tiles-list__tile {
+      @include u-display(flex);
+      @include u-padding-y(2);
+
+      @include at-media-max(desktop) {
+        @include u-flex-direction(column);
+      }
+      @include at-media(desktop) {
+        @include u-flex-direction(row);
+      }
+
+      .jcc-tiles-list__date,
+      .jcc-tiles-list__image,
+      .jcc-card {
+        @include u-width(full);
+        @include u-padding(2);
+      }
+
+      .jcc-tiles-list__date {
+        @include at-media-max(desktop) {
+          @include u-width(10);
+        }
+        @include at-media(desktop) {
+          @include u-width(15);
+        }
+
+        .jcc-tiles-list__date-month {
+          @include u-text-align(center);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .jcc-tiles-list__date-day {
+          @include u-width(full);
+          border-radius: 50%;
+          line-height: 0;
+          border: 3px solid #0d7ea2;
+          @include u-position(relative);
+
+          &:after {
+            content: "";
+            @include u-display(block);
+            padding-bottom: 100%;
+          }
+
+          .jcc-tiles-list__date-day--text {
+            @include u-position(absolute);
+            bottom: 50%;
+            @include u-width(full);
+            @include u-text-align(center);
+          }
+        }
+      }
+
+      .jcc-card {
+        @include at-media(desktop) {
+          @include grid-col(8);
+        }
+      }
+
+      .jcc-tiles-list__image {
+        @include at-media(desktop) {
+          @include grid-col(3);
+        }
+      }
+    }
+  }
+
+  .jcc-tiles-list__button {
+    @include u-text-align(center);
+  }
+}

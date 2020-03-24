@@ -1,0 +1,32 @@
+tiles_list:
+  headergroup:
+    title: "Hearings, Sessions, & Events"
+  tiles:
+    - card:
+        title: "Prepare the claim of exemption"
+        excerpt: "Integer sagittis efficitur efficitur. Integer varius quam id urna eleifend posuere. Duis rhoncus sem purus, at euismod neque mattis vestibulum. Aliquam ut odio condimentum, vestibulum purus eget, ultrices tellus. Aenean viverra velit sit amet luctus efficitur. Suspendisse tincidunt nulla felis. Duis eget tempor dui. Aliquam nec varius eros, non gravida augue."
+        url: "https://www.example.com"
+      date: "02/26/2020"
+      img:
+        src: "https://placeimg.com/300/200/arch"
+        alt: "Alt text"
+    - card:
+        title: "Prepare the claim of exemption"
+        excerpt: "Integer sagittis efficitur efficitur. Integer varius quam id urna eleifend posuere. Duis rhoncus sem purus, at euismod neque mattis vestibulum. Aliquam ut odio condimentum, vestibulum purus eget, ultrices tellus. Aenean viverra velit sit amet luctus efficitur. Suspendisse tincidunt nulla felis. Duis eget tempor dui. Aliquam nec varius eros, non gravida augue."
+        url: "https://www.example.com"
+      date: "02/26/2020"
+      img:
+        src: "https://placeimg.com/300/200/arch"
+        alt: "Alt text"
+    - card:
+        title: "Prepare the claim of exemption"
+        excerpt: "Integer sagittis efficitur efficitur. Integer varius quam id urna eleifend posuere. Duis rhoncus sem purus, at euismod neque mattis vestibulum. Aliquam ut odio condimentum, vestibulum purus eget, ultrices tellus. Aenean viverra velit sit amet luctus efficitur. Suspendisse tincidunt nulla felis. Duis eget tempor dui. Aliquam nec varius eros, non gravida augue."
+        url: "https://www.example.com"
+      date: "02/26/2020"
+      img:
+        src: "https://placeimg.com/300/200/arch"
+        alt: "Alt text"
+  button:
+    text: "Full Calendar"
+    url: "#"
+    style: 'primary'
