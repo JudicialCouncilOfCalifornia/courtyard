@@ -1,0 +1,33 @@
+text_section_aside:
+  content:
+    join():
+      - include():
+          pattern: 'molecules-card'
+          with:
+            card:
+              img: null
+              title: "About the Court"
+              excerpt: '
+                <p>The court consists of thirteen judges and two commissioners. The judiciary, under a single presiding judge, hears all cases filed with the court.</p>
+                <h4>Mission</h4>
+                <p>"Uphold the law and provide equal justice for all."</p>
+                <h4>Vision</h4>
+                <p class="text-italic">"The Court will resolve disputes fairly, in a manner that promotes public trust and confidence. We will be innovative, efficient, and provide equal and meaningful access to justice.</p>
+                <p>"Judicial officers and employees will stand together with a united court culture, where all are able to achieve their very best to serve the needs of the Court and the community."</p>
+              '
+  aside:
+    join():
+      - include():
+          pattern: 'molecules-card'
+          with:
+            card:
+              img: null
+              title: 'Community Outreach'
+              excerpt: '
+                <p>To schedule a speaker, tour, or for more information about Community Outreach projects or the Strategic Plan, contact Michael Powell, Court Executive Officer, at (805) 706-3615.</p>
+              '
+      - include():
+          pattern: 'molecules-card'
+          with:
+            card:
+              img: null

@@ -1,0 +1,38 @@
+.jcc-text-section-aside__container {
+  @include section-container;
+}
+
+.jcc-text-section-aside {
+  @include section-wrapper;
+
+  @include at-media(desktop) {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-text-section-aside__content,
+  .jcc-text-section-aside__aside {
+    @include u-width(full);
+  }
+
+  .jcc-text-section-aside__content {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+
+    .jcc-card__title {
+      @include has-dash($dash-position: "right");
+    }
+  }
+
+  .jcc-text-section-aside__aside {
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+
+    .jcc-card__title {
+      @include has-dash($dash-position: "above");
+      text-transform: uppercase;
+    }
+  }
+}
