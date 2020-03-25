@@ -8,5 +8,6 @@ menu_items:
   - name: Link Three
     url: "#"
     url_attributes: ""
-img:
-  src: "../../images/jcc-logo.svg"
+logo:
+  src: "../../images/jcc-logo-long.png"
+  alt: "trial"

@@ -8,11 +8,11 @@
   @include at-media(desktop) {
     @include grid-container(widescreen);
     @include clearfix;
-    @include u-padding-top(2);
-    @include u-padding-bottom(2);
     @include grid-row;
     @include u-flex;
     @include u-minh(card);
+    padding-top: 0;
+    padding-bottom: 0;
   }
   @include u-minh(15);
 

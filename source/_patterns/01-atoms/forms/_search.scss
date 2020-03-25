@@ -6,7 +6,7 @@
 
   .usa-input {
     @include u-border(0);
-    @include u-bg($theme-color-secondary-lighter);
+    @include u-bg(primary-lighter);
     @include u-margin-top(0);
   }
 
