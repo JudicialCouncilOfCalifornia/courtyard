@@ -1,0 +1,20 @@
+social_links:
+  items:
+    - icon:
+        name: "youtube"
+        title: "Youtube"
+        decorative: false
+      title: "Youtube"
+      url: "#"
+    - icon:
+        name: "facebook2"
+        title: "Facebook"
+        decorative: false
+      title: "Facebook"
+      url: "#"
+    - icon:
+        name: "twitter"
+        title: "Twitter"
+        decorative: false
+      title: "Twitter"
+      url: "#"
