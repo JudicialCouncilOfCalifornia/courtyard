@@ -1,0 +1,88 @@
+.jcc-cards-with-list__container {
+  @include u-padding-y(4);
+
+  > .jcc-header-group {
+    @extend .grid-container;
+    @include u-text-align(center);
+    @include u-overflow(hidden);
+    .jcc-header-group__title:before,
+    .jcc-header-group__title:after {
+      background-color: #000;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    .jcc-header-group__title:before {
+      left: -0.5em;
+      margin-left: -50%;
+    }
+    .jcc-header-group__title:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+
+  > ul {
+    @extend .grid-container;
+    @include u-padding(0);
+    @include u-display(flex);
+    @include u-flex-direction(column);
+    justify-content: flex-start;
+
+    > li {
+      @include u-display(block);
+      flex: 1 0;
+      @include u-margin-x(2);
+      @include u-padding(3);
+      @include u-position(relative);
+
+      > .jcc-cards-with-list__read_more {
+        @include u-position(absolute);
+        @include u-bottom(0);
+        @include u-width(full);
+        text-transform: uppercase;
+      }
+
+      ul {
+        @include u-padding(0);
+        li {
+          list-style-type: none;
+
+          .jcc-card__excerpt,
+          .jcc-cards-with-list__read_more {
+            @include u-display(none);
+          }
+        }
+
+        li:nth-child(n + 4) {
+          @include u-display(none);
+        }
+      }
+    }
+  }
+
+  .jcc-cards-with-list__read_more {
+    @extend .usa-prose;
+  }
+
+  .jcc-cards-with-list__read_more_icon {
+    @include u-float(right);
+
+    svg {
+      @include u-height(4);
+      @include u-width(4);
+    }
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .jcc-cards-with-list__container {
+    > ul {
+      @include u-flex-direction(row);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+cards_with_list:
+  headergroup:
+    title: "What can we help you with today?"
+  cards:
+    - brow: "Feb 04, 2020"
+      title: "Prepare the claim of exemption"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
+    - brow: "Jan 20, 2020"
+      title: "File the claim of exemption with the sheriff"
+      excerpt: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
+    - brow: "Dec 04, 2019"
+      title: "Prepare the claim of exemption"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
+    - brow: "Nov 20, 2019"
+      title: "File the claim of exemption with the sheriff"
+      excerpt: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
+    - brow: "Nov 04, 2019"
+      title: "Prepare the claim of exemption"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
+    - brow: "Oct 20, 2019"
+      title: "File the claim of exemption with the sheriff"
+      excerpt: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+      url: "https://www.example.com"
+      read_more:
+        label: "Read more"
+        url: "https://www.example.com"
