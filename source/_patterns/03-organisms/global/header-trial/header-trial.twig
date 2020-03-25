@@ -1,0 +1,46 @@
+<header class="jcc-trial-header">
+  <div class="jcc-trial-header__container">
+    <div class="desktop">
+
+      {% include '@molecules/navigation/header-topbar/header-topbar.twig' with {
+
+    } %}
+      {% include '@molecules/navigation/primary-nav/primary-nav.twig' with {
+      primary_nav: header_trial.primary_nav
+    } %}
+    </div>
+  </div>
+
+  <div class="mobile">
+    <div class="jcc--header__mobile-container">
+    <div class="jcc-header__logo">
+      {% include '@atoms/icons/logo.twig' with {
+        logo : header_trial.logo
+      } %}
+    </div>
+
+    <div class="buttons slicknav">
+      <span id="mobile-menu" class="mobile_button jcc-primary-nav">
+        <span id="js-header_menu--mobile-2" class="mobile_button"></span>
+      </span>
+      <span id="translate" class="mobile_button translate">
+        {% include '@atoms/icons/icon.twig' with {
+          icon : header_trial.globe
+        } %}
+      </span>
+      <span id="search" class="mobile_button search">
+        {% include '@atoms/icons/icon.twig' with {
+          icon : header_trial.search
+        } %}
+      </span>
+    </div>
+    <div id="show-dropbutton" class=" show-button">
+      {% include '@atoms/forms/dropbutton.twig' %}
+    </div>
+    <div id="show-search" class=" show-button">
+      {% include '@atoms/forms/search-input.twig' %}
+    </div>
+  </div>
+</div>
+</div>
+</header>
