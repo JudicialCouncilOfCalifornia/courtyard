@@ -1,0 +1,118 @@
+.jcc-trial-header {
+  .desktop {
+    @include u-display(none);
+    @include at-media("desktop") {
+      @include u-display(block);
+    }
+  }
+  .mobile {
+    @include u-display(block);
+    @include at-media("desktop") {
+      @include u-display(none);
+    }
+  }
+}
+
+.jcc-header__logo {
+  @include at-media("desktop") {
+    @include grid-col(3);
+    @include u-position(relative);
+  }
+}
+
+.mobile {
+  .jcc--header__mobile-container {
+  }
+  .jcc-header__logo {
+    //mobile
+    @include u-float(left);
+    @include grid-col(6);
+    @include u-display(block);
+    @include u-height(50px);
+    .jcc-logo {
+      @include u-width(100%);
+      img {
+        @include u-width(100%);
+        max-width: 210px;
+        margin-top: 6px;
+      }
+    }
+
+    div.jcc-logo {
+      @include u-position(relative);
+      @include u-width(100%);
+    }
+  }
+  .jcc-header--topbar {
+    float: left;
+    @include grid-col(6);
+    .jcc-dropbutton .label {
+      @include u-display(none);
+    }
+  }
+  .buttons {
+    @include u-float(right);
+    text-align: right;
+    display: inline-block;
+    @include grid-col(6);
+    padding-top: 11px;
+    .jcc-dropbutton .label {
+      @include u-display(none);
+    }
+    .mobile_button {
+      float: right;
+      display: inline-block;
+      padding-left: 0px;
+      @include u-width(50px);
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
+      svg {
+        @include u-width(30px);
+        @include u-height(30px);
+      }
+    }
+  }
+
+  .show-button {
+    @include u-display(none);
+    @include u-position(absolute);
+    @include u-top(80px);
+    @include u-right(0);
+    @include u-left(0);
+  }
+  .usa-nav__primary {
+    margin-top: 0;
+  }
+  .usa-nav__primary button[aria-expanded="false"] {
+    @include u-display(none);
+  }
+  .usa-nav__submenu {
+    @include u-display(block);
+    @include u-bg("white");
+  }
+  .jcc-fieldset-search {
+    max-width: none;
+    .usa-input {
+      max-width: none;
+    }
+  }
+  .jcc-primary-nav {
+    margin-top: -10px;
+    width: 50px;
+    padding-left: 0px;
+    .slicknav_btn {
+      margin-top: -1;
+    }
+    #js-header_menu--mobile .slicknav_nav {
+      @include u-position(absolute);
+      @include u-top(78px);
+      @include u-right(0);
+      @include u-left(0);
+      .jcc-primary-nav__top_link {
+        text-align: left;
+      }
+    }
+  }
+}
