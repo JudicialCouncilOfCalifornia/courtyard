@@ -1,0 +1,44 @@
+list_section:
+  menu:
+    classes:
+    items:
+      - title: Parent Link 1
+        url: https://www.example.com
+        below:
+          - title: Child Link 1 1
+            url: https://www.example.com
+          - title: Child Link 1 2
+            url: https://www.example.com
+            below:
+              - title: Sub Child Link 1 2 1
+                url: https://www.example.com
+      - title: Parent Link 2
+        url: https://www.example.com
+        below:
+          - title: Child Link 2 1
+            url: https://www.example.com
+          - title: Child Link 2 2
+            url: https://www.example.com
+            below:
+              - title: Sub Child Link 2 2 1
+                url: https://www.example.com
+      - title: Parent Link 3
+        url: https://www.example.com
+        below:
+          - title: Child Link 3 1
+            url: https://www.example.com
+          - title: Child Link 3 2
+            url: https://www.example.com
+            below:
+              - title: Sub Child Link 3 2 1
+                url: https://www.example.com
+      - title: Parent Link 4
+        url: https://www.example.com
+        below:
+          - title: Child Link 4 1
+            url: https://www.example.com
+          - title: Child Link 4 2
+            url: https://www.example.com
+            below:
+              - title: Sub Child Link 4 2 1
+                url: https://www.example.com
