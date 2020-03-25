@@ -76,34 +76,4 @@
       }
     }
   }
-
-  //@media screen and (min-width: 32rem) {
-  //  nav {
-  //    > ul {
-  //      @include u-flex-direction(row);
-  //
-  //      > li {
-  //        max-width: 44%;
-  //        @include u-margin-top(0);
-  //        @include u-margin-bottom(4);
-  //        @include u-margin-x(1);
-  //      }
-  //    }
-  //  }
-  //}
-  //
-  //@media screen and (min-width: 64rem) {
-  //  nav {
-  //    > ul {
-  //      flex-direction: row;
-  //
-  //      > li {
-  //        max-width: 27%;
-  //        @include u-margin-top(0);
-  //        @include u-margin-bottom(4);
-  //        @include u-margin-x(1);
-  //      }
-  //    }
-  //  }
-  //}
 }
