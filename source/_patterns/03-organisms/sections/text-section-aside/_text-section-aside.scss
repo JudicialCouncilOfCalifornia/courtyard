@@ -1,0 +1,60 @@
+.jcc-text-section-aside__container {
+  @include section-container;
+}
+
+.jcc-text-section-aside {
+  @include section-wrapper;
+
+  @include at-media(desktop) {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-text-section-aside__content,
+  .jcc-text-section-aside__aside {
+    @include u-width(full);
+  }
+
+  .jcc-text-section-aside__content {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+
+    .jcc-card__title {
+      @include has-dash-position($dash-color: secondary-light, $dash-position: "right");
+      @include u-font(heading, 12);
+
+      @include at-media(desktop) {
+        @include u-padding-bottom(4);
+      }
+    }
+
+    .jcc-card__excerpt {
+      @include u-font(body, 8);
+      @extend .usa-prose;
+
+      @include at-media(desktop) {
+        @include u-padding-right(4);
+      }
+    }
+  }
+
+  .jcc-text-section-aside__aside {
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+
+    .jcc-card__title {
+      @include has-dash-position($dash-color: secondary-light, $dash-position: "above");
+      @include u-text(primary-dark);
+      text-transform: uppercase;
+      @include u-font(ui, 8);
+
+      @include at-media(desktop) {
+        @include u-margin-top(4);
+        @include u-padding-top(4);
+        @include u-padding-bottom(2);
+      }
+    }
+  }
+}
