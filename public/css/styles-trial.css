@@ -528,7 +528,7 @@ General colors
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 GENERAL SETTINGS
 ----------------------------------------
@@ -595,7 +595,7 @@ Icons
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 TYPOGRAPHY SETTINGS
 ----------------------------------------
@@ -882,7 +882,7 @@ none:    none
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 COLOR SETTINGS
 ----------------------------------------
@@ -915,7 +915,7 @@ General colors
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 SPACING SETTINGS
 ----------------------------------------
@@ -985,7 +985,7 @@ Site
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 UTILITIES SETTINGS
 ----------------------------------------
@@ -1033,7 +1033,7 @@ Values
 ========================================
 ========================================
 ----------------------------------------
-USWDS 2.5.0
+USWDS 2.6.0
 ----------------------------------------
 COMPONENT SETTINGS
 ----------------------------------------
@@ -2853,12 +2853,6 @@ img {
   position: relative;
 }
 
-.usa-label--error {
-  display: block;
-  font-weight: bold;
-  margin-top: 0;
-}
-
 .usa-error-message {
   padding-bottom: 0.25rem ;
   padding-top: 0.25rem ;
@@ -2871,15 +2865,20 @@ img {
   color: #919191;
 }
 
-.usa-label--required {
-  color: #b50909;
-}
-
 .usa-label {
   display: block;
   line-height: 1.2;
   margin-top: 1.5rem;
   max-width: 30rem;
+}
+
+.usa-label--error {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.usa-label--required {
+  color: #b50909;
 }
 
 .usa-legend {
@@ -5461,6 +5460,8 @@ img {
   display: block;
 }
 
+.usa-search[role="search"],
+.usa-search[role="search"] > div,
 .usa-search [role="search"] {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7607,11 +7608,11 @@ through all possible variants
   }
   */
 .bg-secondary-vivid {
-  background-color: #21827f !important;
+  background-color: #40807e !important;
 }
 
 .hover\:bg-secondary-vivid:hover {
-  background-color: #21827f !important;
+  background-color: #40807e !important;
 }
 
 /*
@@ -9927,11 +9928,11 @@ through all possible variants
   }
   */
 .border-secondary-vivid {
-  border-color: #21827f !important;
+  border-color: #40807e !important;
 }
 
 .hover\:border-secondary-vivid:hover {
-  border-color: #21827f !important;
+  border-color: #40807e !important;
 }
 
 /*
@@ -13031,11 +13032,11 @@ through all possible variants
   }
   */
 .text-secondary-vivid {
-  color: #21827f !important;
+  color: #40807e !important;
 }
 
 .hover\:text-secondary-vivid:hover {
-  color: #21827f !important;
+  color: #40807e !important;
 }
 
 /*
@@ -22128,7 +22129,7 @@ through all possible variants
   }
   */
 .outline-secondary-vivid {
-  outline-color: #21827f !important;
+  outline-color: #40807e !important;
 }
 
 /*
@@ -25943,13 +25944,13 @@ through all possible variants
   }
   */
 .underline-secondary-vivid {
-  -webkit-text-decoration-color: #21827f !important;
-          text-decoration-color: #21827f !important;
+  -webkit-text-decoration-color: #40807e !important;
+          text-decoration-color: #40807e !important;
 }
 
 .hover\:underline-secondary-vivid:hover {
-  -webkit-text-decoration-color: #21827f !important;
-          text-decoration-color: #21827f !important;
+  -webkit-text-decoration-color: #40807e !important;
+          text-decoration-color: #40807e !important;
 }
 
 /*
@@ -28352,10 +28353,6 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex ;
-}
-
-.jcc-hero--viewport-height {
-  min-height: 100vh ;
 }
 
 .jcc-hero--has-background-image {
@@ -31844,132 +31841,6 @@ h3.jcc-header-group__title {
   fill: #1b1b1b;
 }
 
-.jcc-forms-filter__input {
-  background-position-y: 4px;
-  background-position-x: 0.3rem;
-  background-size: 1.8rem;
-  background-image: url(../images/icomoon/SVG/search.svg);
-  background-repeat: no-repeat;
-  padding-left: 2.4rem;
-}
-
-.jcc-forms-filter__results-container {
-  background: white;
-  border-radius: 4px;
-  margin-top: 20px;
-  color: #333;
-  width: 800px;
-  max-width: 100%;
-}
-
-.jcc-forms-filter__results-header {
-  padding: 10px 20px;
-  border-bottom: 1px solid #eee;
-  font-weight: bold ;
-  color: #005ea2 ;
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.06rem;
-}
-
-.jcc-forms-filter__no-results,
-.jcc-forms-filter__loading {
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.jcc-forms-filter__no-results--guides,
-.jcc-forms-filter__loading--guides {
-  border-bottom: 1px solid #eee;
-}
-
-.jcc-forms-filter__guide-result-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.jcc-forms-filter__guide-result {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.jcc-forms-filter__guide-result:first-child {
-  border-right: 1px solid #eee;
-}
-
-.jcc-forms-filter__guide-result a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-bottom: 1px solid #eee;
-  color: #333;
-}
-
-.jcc-forms-filter__guide-result a:hover {
-  text-decoration: underline;
-}
-
-.jcc-forms-filter__form-result {
-  border-bottom: 1px solid #eee;
-}
-
-.jcc-forms-filter__form-result:last-child {
-  border-bottom: none;
-}
-
-.jcc-forms-filter__form-result-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  padding: 10px 20px;
-  color: #333;
-  cursor: pointer;
-}
-
-.jcc-forms-filter__form-result-content:hover .form-title {
-  text-decoration: underline;
-}
-
-.jcc-forms-filter__expand-button {
-  width: 1.8rem;
-  height: 1.8rem;
-  background-size: 1.8rem;
-  background-image: url("../images/icomoon/SVG/remove.svg");
-}
-
-.jcc-forms-filter__expand-button[aria-expanded="false"] {
-  background-image: url("../images/icomoon/SVG/add.svg");
-}
-
-.jcc-forms-filter__form-number-and-title {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.jcc-forms-filter__form-number-and-title .form-number {
-  text-transform: uppercase;
-  color: #333;
-  font-size: 12px;
-}
-
-.jcc-forms-filter__form-links {
-  display: none;
-  padding: 4px 20px 10px 20px;
-}
-
-.jcc-forms-filter__form-links.visible {
-  display: block;
-}
-
 .jcc-hero__options-section {
   display: none;
 }
@@ -34283,10 +34154,10 @@ h3.jcc-header-group__title {
   }
   */
   .mobile-lg\:border-secondary-vivid {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   .mobile-lg\:hover\:border-secondary-vivid:hover {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   /*
   @if map-deep-get($utility, settings, responsive) {
@@ -43980,10 +43851,10 @@ h3.jcc-header-group__title {
   }
   */
   .tablet\:border-secondary-vivid {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   .tablet\:hover\:border-secondary-vivid:hover {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   /*
   @if map-deep-get($utility, settings, responsive) {
@@ -54125,10 +53996,10 @@ h3.jcc-header-group__title {
   }
   */
   .desktop\:border-secondary-vivid {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   .desktop\:hover\:border-secondary-vivid:hover {
-    border-color: #21827f !important;
+    border-color: #40807e !important;
   }
   /*
   @if map-deep-get($utility, settings, responsive) {
