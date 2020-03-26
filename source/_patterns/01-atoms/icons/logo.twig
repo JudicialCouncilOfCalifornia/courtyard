@@ -1,5 +1,5 @@
  {% if logo.src %}
-  <div class="jcc-logo">
+  <div class="jcc-logo {{ logo.alt }}">
     {% include '@atoms/image/image.twig' with { image: logo } %}
   </div>
 {% endif %}

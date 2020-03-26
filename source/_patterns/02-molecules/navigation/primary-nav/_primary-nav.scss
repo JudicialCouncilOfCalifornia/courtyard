@@ -28,6 +28,15 @@
 
 .jcc-primary-nav {
   text-align: left;
+  @include u-bg("base-lightest");
+}
+
+.jcc-primary-nav__container {
+  @include at-media(desktop) {
+    @include grid-container(widescreen);
+    @include clearfix;
+    @include grid-row;
+  }
 }
 
 .jcc-primary_menu--desktop {
@@ -65,7 +74,7 @@
     }
     @include at-media(desktop) {
       @include u-padding(3);
-      @include u-bg("white");
+      @include u-bg("base-lightest");
       padding-left: 20px;
       &:hover {
         @include u-bg(primary-dark);
@@ -211,7 +220,8 @@
 
 //mobile
 .jcc-primary-nav {
-  #js-header_menu--mobile {
+  #js-header_menu--mobile,
+  #js-header_menu--mobile-2 {
     .slicknav_menu {
       @include u-bg("white");
     }

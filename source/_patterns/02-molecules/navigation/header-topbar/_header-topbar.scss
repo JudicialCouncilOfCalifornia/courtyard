@@ -1,0 +1,42 @@
+.jcc-header--topbar {
+  @include u-bg("white");
+  @include u-position(relative);
+  z-index: 10;
+}
+
+.jcc-header__container--topbar {
+  @include at-media(desktop) {
+    @include grid-container(widescreen);
+    @include clearfix;
+    @include grid-row;
+    @include u-flex;
+    @include u-minh(card);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  @include u-minh(15);
+
+  .jcc-header__logo--topbar {
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-position(relative);
+      margin: auto;
+    }
+  }
+
+  .jcc-fieldset-search {
+    @include at-media(desktop) {
+      @include u-position(relative);
+      @include grid-col(5);
+      margin: auto;
+    }
+  }
+
+  .jcc-dropbutton {
+    @include at-media(desktop) {
+      @include u-position(relative);
+      @include grid-col(1);
+      margin: auto;
+    }
+  }
+}

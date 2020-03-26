@@ -6,9 +6,6 @@
 # - has-one-column
 # - has-two-columns-half
 # - has-two-columns-threequarter
-#
-# Height variants
-# - viewport-height
 
 hero:
   title: "Serving your papers"
