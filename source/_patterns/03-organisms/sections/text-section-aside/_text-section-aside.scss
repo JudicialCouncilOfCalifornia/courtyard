@@ -50,11 +50,9 @@
       text-transform: uppercase;
       @include u-font(ui, 8);
 
-      @include at-media(desktop) {
-        @include u-margin-top(4);
-        @include u-padding-top(4);
-        @include u-padding-bottom(2);
-      }
+      @include u-margin-top(4);
+      @include u-padding-top(4);
+      @include u-padding-bottom(2);
     }
   }
 }
