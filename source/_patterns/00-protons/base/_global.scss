@@ -467,16 +467,18 @@ $aspect-width: 16;
 
 // Adds decorative dash to headers with positions:
 // below, above, left-right, left, right
-@mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below") {
+@mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below", $dash-width: null) {
   @if $dash-position == "below" {
     position: relative;
     padding-bottom: 0.5em;
 
     &:after {
+      $dash-width: 3rem !default;
+      width: $dash-width;
+
       @include u-bg($dash-color);
       content: "";
       height: 3px;
-      width: 3rem;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -486,10 +488,12 @@ $aspect-width: 16;
     padding-top: 0.5em;
 
     &:after {
+      $dash-width: 100% !default;
+      width: $dash-width;
+
       @include u-bg($dash-color);
       content: "";
       height: 3px;
-      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
@@ -498,13 +502,15 @@ $aspect-width: 16;
     @include u-overflow(hidden);
     &:before,
     &:after {
+      $dash-width: 50% !default;
+      width: $dash-width;
+
       @include u-bg($dash-color);
       content: "";
       display: inline-block;
       height: 3px;
       position: relative;
       vertical-align: middle;
-      width: 50%;
     }
     &:before {
       left: -0.5em;
@@ -517,13 +523,15 @@ $aspect-width: 16;
   } @else if $dash-position == "left" {
     @include u-overflow(hidden);
     &:before {
+      $dash-width: 100% !default;
+      width: $dash-width;
+
       @include u-bg($dash-color);
       content: "";
       display: inline-block;
       height: 3px;
       position: relative;
       vertical-align: middle;
-      width: 100%;
     }
     &:before {
       left: -0.5em;
@@ -532,13 +540,15 @@ $aspect-width: 16;
   } @else if $dash-position == "right" {
     @include u-overflow(hidden);
     &:after {
+      $dash-width: 100% !default;
+      width: $dash-width;
+
       @include u-bg($dash-color);
       content: "";
       display: inline-block;
       height: 3px;
       position: relative;
       vertical-align: middle;
-      width: 100%;
     }
     &:after {
       left: 0.5em;

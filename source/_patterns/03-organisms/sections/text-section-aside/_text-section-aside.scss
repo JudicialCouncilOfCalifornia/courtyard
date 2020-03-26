@@ -21,11 +21,16 @@
     }
 
     .jcc-card__title {
-      @include has-dash-position($dash-color: secondary-light, $dash-position: "right");
+      @include has-dash-position(
+        $dash-color: secondary-light,
+        $dash-position: "above",
+        $dash-width: 5rem
+      );
       @include u-font(heading, 12);
 
       @include at-media(desktop) {
         @include u-padding-bottom(4);
+        @include has-dash-position($dash-color: secondary-light, $dash-position: "right");
       }
     }
 
@@ -50,7 +55,7 @@
       text-transform: uppercase;
       @include u-font(ui, 8);
 
-      @include u-margin-top(4);
+      @include u-margin-top(6);
       @include u-padding-top(4);
       @include u-padding-bottom(2);
     }
