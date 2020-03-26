@@ -7,6 +7,10 @@
   }
 }
 
+.jcc-hero--viewport-height {
+  @include u-minh("viewport");
+}
+
 .jcc-hero--has-background-image {
   @include u-text("white");
 
