@@ -425,12 +425,18 @@ $aspect-width: 16;
   }
 }
 
-@mixin card-border() {
-  @include u-bg("white");
-  @include u-border(1px);
-  @include u-border(base-light);
-  @include u-radius(lg);
-  @include u-shadow(3);
+@mixin card-border(
+  $border-color: base-light,
+  $bg: "white",
+  $border-width: 1px,
+  $shadow: 3,
+  $radius: lg
+) {
+  @include u-bg($bg);
+  @include u-border($border-width);
+  @include u-border($border-color);
+  @include u-radius($radius);
+  @include u-shadow($shadow);
 }
 
 // Adds decorative dash to headers

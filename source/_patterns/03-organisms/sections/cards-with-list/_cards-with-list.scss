@@ -1,28 +1,45 @@
 .jcc-cards-with-list__container {
   @include u-padding-y(4);
+  background-color: #f9f9f9;
+
+  a.usa-link {
+    color: #0067be;
+    @include u-text-decoration(no-underline);
+    @include light-background-link();
+    &:hover {
+      @include u-text-decoration(underline);
+    }
+  }
 
   > .jcc-header-group {
     @extend .grid-container;
     @include u-text-align(center);
     @include u-overflow(hidden);
-    .jcc-header-group__title:before,
-    .jcc-header-group__title:after {
-      background-color: #000;
-      content: "";
-      display: inline-block;
-      height: 3px;
-      position: relative;
-      vertical-align: middle;
-      width: 50%;
-    }
 
-    .jcc-header-group__title:before {
-      left: -0.5em;
-      margin-left: -50%;
-    }
-    .jcc-header-group__title:after {
-      left: 0.5em;
-      margin-right: -50%;
+    .jcc-header-group__title {
+      @include u-font(heading, 12);
+      @include u-margin-bottom(4);
+
+      @include at-media(desktop) {
+        @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
+      }
+      @include at-media-max(desktop) {
+        position: relative;
+        padding-top: 0.5em;
+
+        &:after {
+          $dash-width: 45px !default;
+          width: $dash-width;
+
+          @include u-bg(secondary-light);
+          content: "";
+          height: 5px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
     }
   }
 
@@ -32,25 +49,89 @@
     @include u-display(flex);
     @include u-flex-direction(column);
     justify-content: flex-start;
+    @include u-margin-bottom(0);
+
+    @include at-media(desktop) {
+      @include u-flex-direction(row);
+    }
+
+    > li:nth-child(-n + 2) {
+      @include card-border(
+        $border-color: base-lighter,
+        $bg: "white",
+        $border-width: "05",
+        $shadow: none,
+        $radius: "0"
+      );
+    }
+
+    > li:last-child {
+      @include u-margin-left(neg-1);
+    }
 
     > li {
       @include u-display(block);
       flex: 1 0;
-      @include u-margin-x(2);
+      @include u-margin(2);
       @include u-padding(3);
       @include u-position(relative);
 
+      @include at-media(tablet-lg) {
+        //@include u-padding-y(1);
+      }
+
+      .jcc-card__brow {
+        @include u-font(heading, 8);
+        @include u-text(italic);
+      }
+
+      .jcc-card__title {
+        @include u-font(body, 8);
+        @include u-line-height(body, 4);
+        @include u-margin-y(2);
+      }
+
       > .jcc-cards-with-list__read_more {
-        @include u-position(absolute);
-        @include u-bottom(0);
+        @extend .usa-prose;
         @include u-width(full);
-        text-transform: uppercase;
+        @include u-text(uppercase);
+        @include u-margin-top(4);
+        @include u-bottom(2);
+
+        @include at-media(desktop) {
+          @include u-position(absolute);
+        }
+
+        .jcc-cards-with-list__read_more_icon {
+          @include u-position(absolute);
+          @include u-bottom(2);
+          right: 40px;
+
+          @include at-media(desktop) {
+            @include u-bottom(neg-1);
+          }
+
+          svg {
+            @include u-height(4);
+            @include u-width(4);
+            @include u-color(secondary-light);
+          }
+        }
       }
 
       ul {
         @include u-padding(0);
         li {
           list-style-type: none;
+
+          .jcc-card__brow {
+            @include u-font(heading, 4);
+          }
+
+          .jcc-card__title {
+            @include u-font(body, 4);
+            @include u-margin-y(1);
+          }
 
           .jcc-card__excerpt,
           .jcc-cards-with-list__read_more {
@@ -61,28 +142,31 @@
         li:nth-child(n + 4) {
           @include u-display(none);
         }
+
+        li:nth-child(-n + 2) {
+          @include u-border-bottom(base-light);
+          @include u-border-width(2px);
+          @include u-margin-bottom(1);
+          @include u-padding-bottom(1);
+        }
       }
     }
   }
 
-  .jcc-cards-with-list__read_more {
-    @extend .usa-prose;
-  }
+  .jcc-cards-with-list__button {
+    @extend .grid-container;
+    @include u-text-align(center);
 
-  .jcc-cards-with-list__read_more_icon {
-    @include u-float(right);
-
-    svg {
-      @include u-height(4);
-      @include u-width(4);
+    @include at-media(desktop) {
+      @include u-text-align(right);
     }
-  }
-}
 
-@media screen and (min-width: 64rem) {
-  .jcc-cards-with-list__container {
-    > ul {
-      @include u-flex-direction(row);
+    a.usa-button {
+      @include u-width(auto);
+
+      @include at-media(desktop) {
+        @include u-margin-right(8.5em);
+      }
     }
   }
 }
