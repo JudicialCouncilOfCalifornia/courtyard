@@ -108,6 +108,10 @@
 
         .usa-link {
           @include u-text-decoration(no-underline);
+          @include light-background-link();
+          &:hover {
+            @include u-text-decoration(underline);
+          }
         }
       }
 
