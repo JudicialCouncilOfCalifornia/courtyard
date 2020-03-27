@@ -5,6 +5,10 @@
   a.usa-link {
     color: #0067be;
     @include u-text-decoration(no-underline);
+    @include light-background-link();
+    &:hover {
+      @include u-text-decoration(underline);
+    }
   }
 
   > .jcc-header-group {
