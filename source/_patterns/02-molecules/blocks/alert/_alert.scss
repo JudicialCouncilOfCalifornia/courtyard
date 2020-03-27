@@ -1,5 +1,73 @@
-* + .usa-alert {
-  @include u-margin-top(0); /* overriding USWDS core to not use top white space by default */
+.jcc-alert::before {
+  @include u-display("none");
+}
+
+.jcc-alert {
+  background-image: none;
+  @include u-margin-top(0);
+  @include u-padding(0);
+  @include u-line-height("body", 1);
+}
+
+.usa-alert--info {
+  .jcc-alert__body {
+    @include add-background-svg("alerts/info");
+    @include u-padding-left(5);
+  }
+}
+
+.usa-alert--success {
+  .jcc-alert__body {
+    @include add-background-svg("alerts/success");
+    @include u-padding-left(5);
+  }
+}
+
+.usa-alert--warning {
+  .jcc-alert__body {
+    @include add-background-svg("alerts/warning");
+    @include u-padding-left(5);
+  }
+}
+
+.usa-alert--error {
+  .jcc-alert__body {
+    @include add-background-svg("alerts/error");
+    @include u-padding-left(5);
+  }
+}
+
+.jcc-alert__body {
+  @include u-display("block");
+  @include u-maxw("widescreen");
+  @include u-margin-y(0);
+  @include u-margin-x("auto");
+  @include u-padding-y(1.5);
+  @include u-padding-right(2.5);
+  background-size: 1.6rem;
+  background-position: 0 9px !important;
+}
+
+.jcc-alert__heading {
+  @include u-display("inline");
+  @include u-margin-bottom(0);
+  @include u-font("sans", "md");
+  @include u-text("bold");
+}
+
+.jcc-alert__text {
+  @include u-display("inline");
+  @include u-font("sans", "sm");
+
+  p:first-child {
+    @include u-display("inline");
+  }
+
+  p:not(:first-child) {
+    @include u-margin-top(1.5);
+    @include u-margin-bottom(0.5);
+    @include u-margin-x(0);
+  }
 }
 
 .jcc-alert__action {
