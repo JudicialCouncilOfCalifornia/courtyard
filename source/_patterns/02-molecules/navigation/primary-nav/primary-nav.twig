@@ -1,47 +1,48 @@
 <div class="jcc-primary-nav">
-<div id="js-header_menu--mobile"></div>
-<div class="usa-overlay"></div>
-<header class="usa-header usa-header--extended">
-  <nav aria-label="Primary navigation" class="usa-nav jcc-primary-nav">
-    <div class="usa-nav__inner">
-      <button class="usa-nav__close"><img src="../../dist/img/close.svg" alt="close"></button>
-      <ul id="slick-menu" class="usa-nav__primary usa-accordion">
-        {% for item in primary_nav.items %}
-          {% if item.sublinks %}
-            <li class="usa-nav__primary-item jcc-primary-nav__top_link">
-              <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-{{ item|length }}"><span>{{ item.name }}</span></button>
-              <div  id="extended-mega-nav-section-{{ item|length }}" class="usa-nav__submenu usa-megamenu ">
-                <div class="grid-row grid-gap-4">
-                  <div class="usa-col">
-                    <ul class="usa-nav__submenu-list jcc-primary-nav__sub">
-                      {% for i, sublink in item.sublinks %}
-                      <li class="jcc-primary-nav__sub--item">
-                        <a href="{{ item.sublinks[i].url }}">
-                          <div class="jcc-primary-nav__sub--title">
-                            {{ item.sublinks[i].name }}</div>
-                          <div class="jcc-primary-nav__sub--description">
-                            {{ item.sublinks[i].description }}
-                          </div>
-                        </a>
-                      </li>
-                      {% endfor %}
-                    </ul>
+  <div id="js-header_menu--mobile"></div>
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--extended">
+    <nav aria-label="Primary navigation" class="usa-nav jcc-primary-nav">
+      <div class="jcc-primary-nav__container">
+        <button class="usa-nav__close"><img src="../../dist/img/close.svg" alt="close"></button>
+        <ul id="slick-menu" class="usa-nav__primary usa-accordion">
+          {% for item in primary_nav.items %}
+            {% if item.sublinks %}
+              <li class="usa-nav__primary-item jcc-primary-nav__top_link">
+                <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-{{ item|length }}">
+                  <span>{{ item.name }}</span></button>
+                <div id="extended-mega-nav-section-{{ item|length }}" class="usa-nav__submenu usa-megamenu ">
+                  <div class="grid-row grid-gap-4">
+                    <div class="usa-col">
+                      <ul class="usa-nav__submenu-list jcc-primary-nav__sub">
+                        {% for i, sublink in item.sublinks %}
+                          <li class="jcc-primary-nav__sub--item">
+                            <a href="{{ item.sublinks[i].url }}">
+                              <div class="jcc-primary-nav__sub--title">
+                                {{ item.sublinks[i].name }}</div>
+                              <div class="jcc-primary-nav__sub--description">
+                                {{ item.sublinks[i].description }}
+                              </div>
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-          {% else %}
-            <li class="usa-nav__primary-item">
-              <a class="jcc-primary-nav__top_link " href="{{ item.url }}">
-              <button class="usa-nav__link jcc-primary-nav__button-single">
-                <span>{{ item.name }}</span>
-              </button>
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
-</header>
+              </li>
+            {% else %}
+              <li class="usa-nav__primary-item">
+                <a class="jcc-primary-nav__top_link " href="{{ item.url }}">
+                  <button class="usa-nav__link jcc-primary-nav__button-single">
+                    <span>{{ item.name }}</span>
+                  </button>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </header>
 </div>

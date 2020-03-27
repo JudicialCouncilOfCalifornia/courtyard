@@ -1,0 +1,25 @@
+.jcc-fieldset-search {
+  @include u-position("relative");
+  @include u-maxw("mobile-lg");
+  @include u-minw(15);
+  @include u-width("full");
+
+  .usa-input {
+    @include u-border(0);
+    @include u-bg(primary-lighter);
+    @include u-margin-top(0);
+  }
+
+  button {
+    @include u-position("absolute");
+    @include u-right(1);
+    @include u-top(1);
+    @include u-border(0);
+    @include u-bg("transparent");
+
+    .icon-search {
+      @include u-height(3);
+      @include u-width(3);
+    }
+  }
+}
