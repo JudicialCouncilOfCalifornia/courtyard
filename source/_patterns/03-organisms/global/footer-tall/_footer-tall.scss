@@ -9,7 +9,9 @@
     &__site_name {
       @include u-text-align(center);
       @include u-color(base-lightest);
-      @include u-font(heading, 12);
+      @include u-font(heading, 11);
+      @include u-text(uppercase);
+      letter-spacing: 2px;
     }
 
     .jcc-social-links {
@@ -19,6 +21,12 @@
       &__item *,
       &__item:visited {
         @include u-color(base-lightest);
+        @include u-margin-x(1);
+      }
+
+      svg {
+        width: 2em;
+        height: 2em;
       }
     }
 
@@ -27,12 +35,16 @@
       @include u-font(mono, 4);
       @include u-text(uppercase);
       @include u-color(base-lightest);
+      letter-spacing: 3px;
 
       li + li:before {
         content: " | ";
-        //@include u-float(right);
         @include u-color(base-lightest);
         @include u-padding-right(1);
+      }
+
+      a {
+        @include u-text-decoration(no-underline);
       }
     }
   }
