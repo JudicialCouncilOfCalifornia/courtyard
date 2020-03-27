@@ -42,3 +42,7 @@ cards_with_list:
       read_more:
         label: "Read more"
         url: "#"
+  button:
+    text: "More News"
+    url: "#"
+    style: 'primary'

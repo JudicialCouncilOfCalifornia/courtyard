@@ -2,6 +2,11 @@
   @include u-padding-y(4);
   background-color: #f9f9f9;
 
+  a.usa-link {
+    color: #0067be;
+    @include u-text-decoration(no-underline);
+  }
+
   > .jcc-header-group {
     @extend .grid-container;
     @include u-text-align(center);
@@ -9,8 +14,28 @@
 
     .jcc-header-group__title {
       @include u-font(heading, 12);
-      @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
       @include u-margin-bottom(4);
+
+      @include at-media(desktop) {
+        @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
+      }
+      @include at-media-max(desktop) {
+        position: relative;
+        padding-top: 0.5em;
+
+        &:after {
+          $dash-width: 45px !default;
+          width: $dash-width;
+
+          @include u-bg(secondary-light);
+          content: "";
+          height: 5px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
     }
   }
 
@@ -20,6 +45,7 @@
     @include u-display(flex);
     @include u-flex-direction(column);
     justify-content: flex-start;
+    @include u-margin-bottom(0);
 
     @include at-media(desktop) {
       @include u-flex-direction(row);
@@ -35,15 +61,19 @@
       );
     }
 
+    > li:last-child {
+      @include u-margin-left(neg-1);
+    }
+
     > li {
       @include u-display(block);
       flex: 1 0;
-      @include u-margin-x(2);
+      @include u-margin(2);
       @include u-padding(3);
       @include u-position(relative);
 
       @include at-media(tablet-lg) {
-        @include u-padding-y(1);
+        //@include u-padding-y(1);
       }
 
       .jcc-card__brow {
@@ -58,10 +88,31 @@
       }
 
       > .jcc-cards-with-list__read_more {
-        @include u-position(absolute);
-        @include u-bottom(1);
+        @extend .usa-prose;
         @include u-width(full);
         @include u-text(uppercase);
+        @include u-margin-top(4);
+        @include u-bottom(2);
+
+        @include at-media(desktop) {
+          @include u-position(absolute);
+        }
+
+        .jcc-cards-with-list__read_more_icon {
+          @include u-position(absolute);
+          @include u-bottom(2);
+          right: 40px;
+
+          @include at-media(desktop) {
+            @include u-bottom(neg-1);
+          }
+
+          svg {
+            @include u-height(4);
+            @include u-width(4);
+            @include u-color(secondary-light);
+          }
+        }
       }
 
       ul {
@@ -98,19 +149,20 @@
     }
   }
 
-  .jcc-cards-with-list__read_more {
-    @extend .usa-prose;
-  }
+  .jcc-cards-with-list__button {
+    @extend .grid-container;
+    @include u-text-align(center);
 
-  .jcc-cards-with-list__read_more_icon {
-    position: absolute;
-    bottom: -10px;
-    right: 40px;
-    @include u-color(secondary-light);
+    @include at-media(desktop) {
+      @include u-text-align(right);
+    }
 
-    svg {
-      @include u-height(4);
-      @include u-width(4);
+    a.usa-button {
+      @include u-width(auto);
+
+      @include at-media(desktop) {
+        @include u-margin-right(8.5em);
+      }
     }
   }
 }
