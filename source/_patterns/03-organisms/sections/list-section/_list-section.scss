@@ -70,19 +70,23 @@
           @include u-padding-x(0);
           @include u-text(uppercase);
           @include u-font-weight(bold);
-          @include u-text-decoration(no-strike);
+          @include u-text-decoration(underline);
           @include u-text(primary-dark);
           @include u-margin-bottom(1);
           @include u-font(ui, 7);
           color: #012941;
           letter-spacing: 3px;
+
+          &:hover {
+            @include u-text-decoration(underline);
+          }
         }
 
         > ul {
           > li {
             a.usa-link {
-              color: #0067be;
               @include u-font-size(body, 10);
+              color: #0067be;
             }
 
             > ul {
