@@ -45,6 +45,9 @@
 
       a {
         @include u-text-decoration(no-underline);
+        &:hover {
+          @include u-text-decoration(underline);
+        }
       }
     }
   }
