@@ -13,7 +13,16 @@
   {% endif %}
 
   <div class="jcc-card__body">
-    <{{ tag }} class="jcc-card__title">{{ card.title }}</{{ tag }}>
+    {% if card.brow %}
+      <div class="jcc-card__brow">{{ card.brow }}</div>
+    {% endif %}
+    <{{ tag }} class="jcc-card__title">
+      {%  if card.url %}
+        <a class="usa-link" href="{{ card.url }}">{{ card.title }}</a>
+      {% else %}
+        {{ card.title }}
+      {% endif %}
+    </{{ tag }}>
     {% if card.excerpt %}
       <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
     {% endif %}
