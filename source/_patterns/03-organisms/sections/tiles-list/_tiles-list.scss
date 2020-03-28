@@ -1,0 +1,146 @@
+.jcc-tiles-list__container {
+  @include u-padding-y(4);
+
+  > .jcc-header-group {
+    @extend .grid-container;
+    @include u-text-align(center);
+
+    .jcc-header-group__title {
+      @include u-font(heading, 12);
+
+      @include at-media-max(desktop) {
+        @include has-dash-position(
+          $dash-color: secondary-light,
+          $dash-position: above-center,
+          $dash-width: 5rem
+        );
+      }
+
+      @include at-media(desktop) {
+        @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
+      }
+    }
+  }
+
+  .jcc-tiles-list {
+    @extend .grid-container;
+    @include u-padding-x(2);
+    @include u-padding-bottom(0);
+    @include u-display(flex);
+    @include u-flex-direction(column);
+
+    .jcc-tiles-list__tile:not(:last-child) {
+      @include u-border-bottom(2px);
+      @include u-border-bottom(base-light);
+    }
+
+    .jcc-tiles-list__tile {
+      @include u-display(flex);
+      @include u-padding-y(4);
+
+      @include at-media-max(desktop) {
+        @include u-flex-direction(column);
+      }
+      @include at-media(desktop) {
+        @include u-flex-direction(row);
+      }
+
+      .jcc-tiles-list__date,
+      .jcc-tiles-list__image,
+      .jcc-card {
+        @include u-width(full);
+        @include u-padding(2);
+        @include u-padding-top(0);
+
+        @include at-media(desktop) {
+          @include u-padding-top(2);
+        }
+      }
+
+      .jcc-tiles-list__date {
+        @include u-padding-x(0);
+        @include u-color(secondary-light);
+        @include u-display(flex);
+        @include u-flex-direction(row);
+
+        @include at-media(desktop) {
+          @include u-flex-direction(column);
+          @include u-flex(align-center);
+        }
+
+        .jcc-tiles-list__date-month {
+          @include u-text-align(center);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          padding: 3% 0;
+          @include u-margin-x(1);
+          @include u-font-size(ui, 8);
+        }
+
+        .jcc-tiles-list__date-day {
+          @include u-width(8);
+          border-radius: 50%;
+          line-height: 0;
+          @include u-border(secondary-light);
+          @include u-position(relative);
+          @include u-font-size(ui, 8);
+
+          &:after {
+            content: "";
+            @include u-display(block);
+            padding-bottom: 100%;
+          }
+
+          .jcc-tiles-list__date-day--text {
+            @include u-position(absolute);
+            bottom: 50%;
+            @include u-width(full);
+            @include u-text-align(center);
+            @include u-font-size(ui, 12);
+          }
+        }
+      }
+
+      .jcc-card__title {
+        @include u-padding-x(0);
+        @include u-font(body, 8);
+        @include u-line-height(body, 4);
+
+        a {
+          @include u-text-decoration(no-underline);
+          @include light-background-link();
+          color: #0067be;
+          &:hover {
+            @include u-text-decoration(underline);
+          }
+        }
+      }
+
+      .jcc-card {
+        @include u-padding-x(2);
+        @include at-media(desktop) {
+          @include grid-col(8);
+        }
+      }
+
+      .jcc-tiles-list__image {
+        @include u-padding-x(0);
+        @include u-padding-bottom(0);
+        img {
+          @include u-width(full);
+        }
+        @include at-media(desktop) {
+          @include grid-col(3);
+        }
+      }
+    }
+  }
+
+  .jcc-tiles-list__button {
+    @include u-text-align(center);
+
+    a.usa-button {
+      @include u-width(auto);
+    }
+  }
+}
