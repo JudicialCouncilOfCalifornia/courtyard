@@ -87,6 +87,10 @@
             a.usa-link {
               @include u-font-size(body, 10);
               color: #0067be;
+
+              &:hover {
+                @include u-color(info-darker);
+              }
             }
 
             > ul {
