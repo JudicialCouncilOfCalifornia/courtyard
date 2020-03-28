@@ -60,7 +60,6 @@
       .jcc-tiles-list__date {
         @include u-padding-x(0);
         @include u-color(secondary-light);
-        @include u-width(card);
         @include u-display(flex);
         @include u-flex-direction(row);
 
@@ -73,15 +72,15 @@
           @include u-text-align(center);
           text-transform: uppercase;
           letter-spacing: 2px;
-          padding: 5% 0;
+          padding: 3% 0;
           @include u-margin-x(1);
+          @include u-font-size(ui, 8);
         }
 
         .jcc-tiles-list__date-day {
-          @include u-width(5);
+          @include u-width(8);
           border-radius: 50%;
           line-height: 0;
-          @include u-border-width("05");
           @include u-border(secondary-light);
           @include u-position(relative);
           @include u-font-size(ui, 8);
@@ -97,6 +96,7 @@
             bottom: 50%;
             @include u-width(full);
             @include u-text-align(center);
+            @include u-font-size(ui, 12);
           }
         }
       }
@@ -106,9 +106,10 @@
         @include u-font(body, 8);
         @include u-line-height(body, 4);
 
-        .usa-link {
+        a {
           @include u-text-decoration(no-underline);
           @include light-background-link();
+          color: #0067be;
           &:hover {
             @include u-text-decoration(underline);
           }
@@ -116,7 +117,7 @@
       }
 
       .jcc-card {
-        @include u-padding-x(0);
+        @include u-padding-x(2);
         @include at-media(desktop) {
           @include grid-col(8);
         }
