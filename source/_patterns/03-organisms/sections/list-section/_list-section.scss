@@ -24,6 +24,7 @@
       @include u-justify-content(justify-start);
       @include u-flex-direction(column);
       @include u-margin-bottom(neg-3);
+      @include u-margin-x(neg-3);
 
       @include at-media(desktop) {
         @include u-flex-direction(row);
