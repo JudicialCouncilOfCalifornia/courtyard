@@ -1,6 +1,9 @@
 .jcc-hero-icon-nav {
+  @include u-padding-bottom(6);
+
   .jcc-hero-icon-nav__hero {
-    @include u-text("center") @include u-color("white");
+    @include u-text("center");
+    @include u-color("white");
     @include u-bg(primary-dark);
     @include u-height(430px);
     @include u-width(100%);

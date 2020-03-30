@@ -1,5 +1,5 @@
 .jcc-cards-with-list__container {
-  @include u-padding-y(4);
+  @include section-wrapper();
   background-color: #f9f9f9;
 
   a.usa-link {
@@ -12,7 +12,7 @@
   }
 
   > .jcc-header-group {
-    @extend .grid-container;
+    @include section-container();
     @include u-text-align(center);
     @include u-overflow(hidden);
 
@@ -44,7 +44,7 @@
   }
 
   > ul {
-    @extend .grid-container;
+    @include section-container();
     @include u-padding(0);
     @include u-display(flex);
     @include u-flex-direction(column);
@@ -75,10 +75,6 @@
       @include u-margin(2);
       @include u-padding(3);
       @include u-position(relative);
-
-      @include at-media(tablet-lg) {
-        //@include u-padding-y(1);
-      }
 
       .jcc-card__brow {
         @include u-font(heading, 8);
@@ -154,7 +150,7 @@
   }
 
   .jcc-cards-with-list__button {
-    @extend .grid-container;
+    @include section-container();
     @include u-text-align(center);
 
     @include at-media(desktop) {

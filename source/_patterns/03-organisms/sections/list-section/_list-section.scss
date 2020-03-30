@@ -1,14 +1,9 @@
 .jcc-list-section {
-  @include u-margin(0);
-  @include u-padding(2);
+  @include section-wrapper();
   background-color: #f9f9f9;
 
   nav {
-    @include u-margin-y(0);
-    @include u-margin-x(auto);
-    @include u-maxw(desktop);
-    @include u-padding-y(0);
-    @include u-padding-x(2);
+    @include section-container();
 
     ul {
       list-style: none;
@@ -28,6 +23,7 @@
       @include u-display(flex);
       @include u-justify-content(justify-start);
       @include u-flex-direction(column);
+      @include u-margin-bottom(neg-3);
 
       @include at-media(desktop) {
         @include u-flex-direction(row);
