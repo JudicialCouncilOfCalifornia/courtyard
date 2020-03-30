@@ -2,6 +2,12 @@
 {% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
 
 <div class="jcc-tile">
+  {% if tile.icon %}
+    <div class="jcc-tile__icon">
+      <img src="{{ tile.icon }}">
+    </div>
+  {% endif %}
+
   {% if tile.brow %}
     <p class="jcc-tile__brow">{{ tile.brow }}</p>
   {% endif %}
