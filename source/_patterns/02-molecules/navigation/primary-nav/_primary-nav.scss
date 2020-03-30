@@ -26,8 +26,17 @@
   @include u-color(primary-darker);
 }
 
-.jcc-primary-nav {
+nav.jcc-primary-nav {
   text-align: left;
+  @include u-bg("base-lightest");
+}
+
+.jcc-primary-nav__container {
+  @include at-media(desktop) {
+    @include grid-container(widescreen);
+    @include clearfix;
+    @include grid-row;
+  }
 }
 
 .jcc-primary_menu--desktop {
@@ -38,6 +47,7 @@
 .jcc-primary-nav .usa-nav__primary-item {
   @include at-media(desktop) {
     border-top: none;
+    margin-right: 4px;
   }
   .usa-nav__link {
     padding: 1rem 3.5rem 1rem 1.25rem;
@@ -65,7 +75,7 @@
     }
     @include at-media(desktop) {
       @include u-padding(3);
-      @include u-bg("white");
+      @include u-bg("base-lightest");
       padding-left: 20px;
       &:hover {
         @include u-bg(primary-dark);
@@ -179,8 +189,14 @@
   }
 }
 
-.usa-header--extended .jcc-primary-nav__button-single {
-  padding-right: 0;
+.jcc-primary-nav .usa-header--extended .usa-nav__primary-item .jcc-primary-nav__button-single {
+  background-image: none !important;
+  & [aria-expanded="true"] {
+    background-image: none !important;
+  }
+  & [aria-expanded="false"] {
+    background-image: none !important;
+  }
 }
 
 .usa-header--extended [aria-expanded="true"]::after {
@@ -211,7 +227,8 @@
 
 //mobile
 .jcc-primary-nav {
-  #js-header_menu--mobile {
+  #js-header_menu--mobile,
+  #js-header_menu--mobile-2 {
     .slicknav_menu {
       @include u-bg("white");
     }
