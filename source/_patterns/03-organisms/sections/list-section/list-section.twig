@@ -1,0 +1,12 @@
+{% set attributes = create_attribute() %}
+{% set classes = [
+    'jcc-list-section',
+]|merge(list_section.classes|default([''])) %}
+
+<div{{ attributes.addClass(classes) }}>
+    <nav>
+        {% include '@molecules/navigation/menu-links/menu-links.twig' with {
+            menu: list_section.menu
+        } %}
+    </nav>
+</div>
