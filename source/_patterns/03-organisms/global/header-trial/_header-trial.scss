@@ -112,6 +112,7 @@
       @include u-left(0);
       .jcc-primary-nav__top_link {
         text-align: left;
+        @include u-bg(primary-dark);
       }
     }
   }

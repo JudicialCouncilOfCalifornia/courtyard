@@ -29,6 +29,7 @@
 .jcc-primary-nav {
   text-align: left;
   @include u-bg("base-lightest");
+  margin-top: 5px;
 }
 
 .jcc-primary-nav__container {
@@ -188,8 +189,14 @@
   }
 }
 
-.usa-header--extended .jcc-primary-nav__button-single {
-  padding-right: 0;
+.jcc-primary-nav .usa-header--extended .usa-nav__primary-item .jcc-primary-nav__button-single {
+  background-image: none !important;
+  & [aria-expanded="true"] {
+    background-image: none !important;
+  }
+  & [aria-expanded="false"] {
+    background-image: none !important;
+  }
 }
 
 .usa-header--extended [aria-expanded="true"]::after {
