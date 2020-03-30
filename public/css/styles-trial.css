@@ -30096,10 +30096,9 @@ a:visited {
   color: #1f303e ;
 }
 
-.jcc-primary-nav {
+nav.jcc-primary-nav {
   text-align: left;
   background-color: #f9f9f9 ;
-  margin-top: 5px;
 }
 
 .jcc-primary_menu--desktop {
@@ -62673,6 +62672,7 @@ h3.jcc-header-group__title {
   }
   .jcc-primary-nav .usa-nav__primary-item {
     border-top: none;
+    margin-right: 4px;
   }
   .jcc-primary-nav .usa-nav__primary-item .usa-nav__link:hover span {
     color: white ;

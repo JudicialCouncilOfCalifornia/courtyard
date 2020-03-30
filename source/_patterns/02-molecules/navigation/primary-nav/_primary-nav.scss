@@ -26,10 +26,9 @@
   @include u-color(primary-darker);
 }
 
-.jcc-primary-nav {
+nav.jcc-primary-nav {
   text-align: left;
   @include u-bg("base-lightest");
-  margin-top: 5px;
 }
 
 .jcc-primary-nav__container {
@@ -48,6 +47,7 @@
 .jcc-primary-nav .usa-nav__primary-item {
   @include at-media(desktop) {
     border-top: none;
+    margin-right: 4px;
   }
   .usa-nav__link {
     padding: 1rem 3.5rem 1rem 1.25rem;
