@@ -4,24 +4,22 @@
   .jcc-hero-icon-nav__hero {
     @include u-text("center");
     @include u-color("white");
-    @include u-bg(primary-dark);
     @include u-height(430px);
     @include u-width(100%);
     @include u-position(relative);
+    background-color: #01223e;
     z-index: -1;
     padding: 6em 2em;
     object-fit: cover;
-    @include at-media(desktop) {
-      @include u-padding(70px);
-    }
 
     &-brow {
       text-transform: uppercase;
       z-index: 1;
+      font-size: 20px;
     }
     &-title {
-      @include u-font(heading, 12);
       z-index: 1;
+      @include u-font(heading, 12);
       @include at-media(desktop) {
         @include u-font(heading, 16);
       }
@@ -54,75 +52,75 @@
   .jcc-hero-icon-nav__nav {
     @include u-width(92%);
     z-index: 2;
-    margin: -80px 4% 0 4%;
+    @include u-margin-top(-80px);
+    @include grid-container(widescreen);
     @include at-media(desktop) {
-      @include grid-container(widescreen);
       @include u-margin-top(-136px);
+      @include u-margin-bottom(70px);
     }
     .jcc-hero-icon-nav__block {
-      @include u-margin-top(1.5);
-      display: inline-block;
-      @include u-width(100%);
-      justify-content: space-between;
+      @include grid-row;
+      @include grid-gap(sm);
       @include at-media(desktop) {
-        @include u-display(flex);
         @include u-margin-top(0);
       }
       .jcc-tile {
         @include u-bg(primary-lighter);
         @include u-text(center);
-        @include u-border(2px, primary-light);
+        @include u-border(1, primary-light);
         @include u-padding(1em);
         @include u-margin-top(1em);
+        @include u-margin-right(1%);
+        @include u-margin-left(1%);
         padding-top: 45px;
         float: left;
-        width: 48%;
-        @include u-margin-right(2%);
         box-shadow: none;
         border-radius: 0px;
         transition: 0.4s all;
         @include at-media(desktop) {
           @include u-margin-top(2em);
-          @include u-margin-right(0);
         }
         &:hover {
-          @include u-border(2px, primary);
+          @include u-border(1, primary);
           transition: 0.4s border;
-        }
-        .jcc-tile__icon {
-          border-radius: 80px;
-          @include u-bg("white");
-          @include u-width(80px);
-          @include u-height(80px);
-          @include u-top(0);
-          @include u-left(50%);
-          @include u-position(absolute);
-          @include u-margin-right(auto);
-          transform: translate(-50%, -50%);
-        }
-        img {
-          height: 33px;
-          @include u-margin-top(20px);
         }
         .jcc-tile__title a {
           @include u-color(primary);
-          @include u-font(sans, 7);
+          @include u-font(sans, 8);
+          @include at-media(desktop) {
+            @include u-font(sans, 7);
+          }
         }
       }
       &.tile-icon {
         .jcc-tile {
+          @include grid-col(6);
+          width: 48%;
+          @include u-margin-right(1%);
+          @include u-margin-top(3em);
+          padding-top: 45px;
           @include at-media(desktop) {
-            @include u-width(23.5%);
-            @include u-margin-right(0);
+            @include grid-col(3);
+            width: 23%;
           }
-          @include u-width(48%);
-          @include u-margin-right(4%);
+          .jcc-tile__icon {
+            @include u-bg("white");
+            @include u-width(80px);
+            @include u-height(80px);
+            @include u-top(0);
+            @include u-left(50%);
+            @include u-position(absolute);
+            @include u-margin-right(auto);
+            border-radius: 80px;
+            transform: translate(-50%, -50%);
+          }
+          img {
+            height: 33px;
+            @include u-margin-top(22px);
+          }
           &:nth-child(even) {
             @include u-margin-right(0);
           }
-          padding-top: 45px;
-          min-height: 130px;
-          @include u-margin-top(3em);
         }
       }
       &.tile-button {
@@ -130,17 +128,16 @@
           @include u-margin-top(15px);
         }
         .jcc-tile {
-          @include at-media(desktop) {
-            width: 32.5%;
-            @include u-margin-top(0);
-          }
           padding-top: 20px;
           width: 100%;
           @include u-bg("white");
+          @include at-media(desktop) {
+            @include grid-col(4);
+            width: 31%;
+            @include u-margin-top(0);
+          }
         }
       }
-    }
-    .jcc-hero-icon-nav__button-block {
     }
   }
 }
