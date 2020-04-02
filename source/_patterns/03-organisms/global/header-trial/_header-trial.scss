@@ -78,6 +78,7 @@
       svg {
         @include u-width(30px);
         @include u-height(30px);
+        fill: #ffffff;
       }
     }
   }
