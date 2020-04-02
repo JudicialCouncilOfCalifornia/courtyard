@@ -35476,7 +35476,7 @@ h3.jcc-header-group__title {
 .jcc-themebar__title {
   margin-top: 5px;
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.37rem;
+  font-size: 1.06rem;
 }
 
 .jcc-themebar .jcc-themebar__select select {
@@ -35872,7 +35872,7 @@ h3.jcc-header-group__title {
   position: relative ;
   background-color: #01223e;
   z-index: -1;
-  padding: 6em 2em;
+  padding: 5em 2em 2em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -35880,7 +35880,7 @@ h3.jcc-header-group__title {
 .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-brow {
   text-transform: uppercase;
   z-index: 1;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-title {
@@ -35978,7 +35978,7 @@ h3.jcc-header-group__title {
           flex: 0 0 auto ;
   width: 50% ;
   margin-right: 1%;
-  margin-top: 5rem ;
+  margin-top: 3rem ;
   padding-top: 45px;
   width: 48%;
 }
@@ -67743,6 +67743,10 @@ h3.jcc-header-group__title {
     width: 25% ;
     position: relative ;
   }
+  .jcc-themebar__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.37rem;
+  }
   .jcc-cards__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -67878,6 +67882,7 @@ h3.jcc-header-group__title {
             flex: 0 0 auto ;
     width: 25% ;
     width: 23%;
+    margin-top: 5rem ;
   }
   .jcc-hero-icon-nav .jcc-hero-icon-nav__nav .jcc-hero-icon-nav__block.tile-button {
     margin-top: 1.5rem ;
