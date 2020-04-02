@@ -63,6 +63,7 @@
         @include u-display(flex);
         @include u-flex-direction(row);
         @extend .flex-align-center;
+        @extend .flex-justify-start;
 
         @include at-media(desktop) {
           @include u-flex-direction(column);
@@ -116,9 +117,10 @@
       }
 
       .jcc-card {
-        @include u-padding-x(2);
+        @include u-padding-x(0);
         @include at-media(desktop) {
           @include grid-col(8);
+          @include u-padding-x(2);
         }
       }
 

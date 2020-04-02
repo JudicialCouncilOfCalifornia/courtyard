@@ -23,21 +23,11 @@
         @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
       }
       @include at-media-max(desktop) {
-        position: relative;
-        padding-top: 0.5em;
-
-        &:after {
-          $dash-width: 45px !default;
-          width: $dash-width;
-
-          @include u-bg(secondary-light);
-          content: "";
-          height: 5px;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
+        @include has-dash-position(
+          $dash-color: secondary-light,
+          $dash-position: "above-center",
+          $dash-width: 75px
+        );
       }
     }
   }
@@ -62,6 +52,18 @@
         $shadow: none,
         $radius: "0"
       );
+    }
+
+    > li:first-child {
+      @include at-media-max(desktop) {
+        @include u-margin-top(0);
+      }
+    }
+
+    > li:nth-child(2) {
+      @include at-media-max(desktop) {
+        @include u-margin-bottom(0);
+      }
     }
 
     > li:last-child {

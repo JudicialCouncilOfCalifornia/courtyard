@@ -41,17 +41,26 @@
       @include u-color(base-lightest);
       letter-spacing: 3px;
 
-      li + li:before {
-        content: " | ";
-        @include u-color(base-lightest);
-        @include u-padding-right(1);
-      }
-
       a {
         @include u-text-decoration(no-underline);
         &:hover {
           @include u-text-decoration(underline);
           @include u-color(base-light);
+        }
+      }
+    }
+
+    .jcc-inline-nav {
+      @include u-flex-direction(column);
+      @include u-text-align(center);
+
+      @include at-media(desktop) {
+        @include u-flex-direction(row);
+
+        li + li:before {
+          content: " | ";
+          @include u-color(base-lightest);
+          @include u-padding-right(1);
         }
       }
     }

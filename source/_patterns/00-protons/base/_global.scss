@@ -491,7 +491,7 @@ $aspect-width: 16;
     }
   } @else if $dash-position == "above" {
     position: relative;
-    padding-top: 0.5em;
+    padding-top: 0.8em;
 
     &:after {
       $dash-width: 100% !default;
@@ -506,7 +506,7 @@ $aspect-width: 16;
     }
   } @else if $dash-position == "above-center" {
     position: relative;
-    padding-top: 0.5em;
+    padding-top: 0.8em;
 
     &:after {
       $dash-width: 100% !default;
