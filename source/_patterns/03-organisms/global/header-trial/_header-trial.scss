@@ -29,17 +29,18 @@
 
 .mobile {
   .jcc--header__mobile-container {
+    height: 50px;
   }
   .jcc-header__logo {
     //mobile
     @include u-float(left);
     @include grid-col(6);
     @include u-display(block);
-    @include u-height(50px);
+    @include u-height(6);
     .jcc-logo {
-      @include u-width(100%);
+      @include u-width(full);
       img {
-        @include u-width(100%);
+        @include u-width(full);
         max-width: 210px;
         margin-top: 6px;
       }
@@ -47,7 +48,7 @@
 
     div.jcc-logo {
       @include u-position(relative);
-      @include u-width(100%);
+      @include u-width(full);
     }
   }
   .jcc-header--topbar {
@@ -70,15 +71,15 @@
       float: right;
       display: inline-block;
       padding-left: 0px;
-      @include u-width(50px);
+      @include u-width(6);
       text-align: center;
       &:hover {
         cursor: pointer;
       }
       svg {
-        @include u-width(30px);
-        @include u-height(30px);
-        fill: #ffffff;
+        @include u-width(4);
+        @include u-height(4);
+        @include u-color(primary-dark);
       }
     }
   }
@@ -86,7 +87,7 @@
   .show-button {
     @include u-display(none);
     @include u-position(absolute);
-    @include u-top(80px);
+    top: 80px;
     @include u-right(0);
     @include u-left(0);
   }
@@ -115,9 +116,9 @@
     }
     #js-header_menu--mobile .slicknav_nav {
       @include u-position(absolute);
-      @include u-top(78px);
       @include u-right(0);
       @include u-left(0);
+      top: 80px;
       .jcc-primary-nav__top_link {
         text-align: left;
         @include u-bg(primary-dark);

@@ -2,6 +2,7 @@
 
 .slicknav_menu {
   @include u-display(block);
+  background-color: transparent !important;
 
   @include at-media(desktop) {
     @include u-display(none);
