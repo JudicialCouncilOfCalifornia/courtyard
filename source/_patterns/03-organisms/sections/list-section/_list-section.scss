@@ -1,5 +1,5 @@
 .jcc-list-section {
-  @include section-wrapper();
+  @include section-wrapper(9);
   background-color: #f9f9f9;
 
   nav {
@@ -11,7 +11,7 @@
 
       a {
         @include u-display(block);
-        @include u-padding-y(1);
+        @include u-padding-y(2);
         @include u-padding-x(0);
       }
     }
@@ -61,33 +61,24 @@
           max-width: 44%;
         }
 
-        > a {
+        .menu-item__header {
           @include u-display(block);
           @include u-padding-y(1);
           @include u-padding-x(0);
           @include u-text(uppercase);
           @include u-font-weight(bold);
-          @include u-text-decoration(underline);
           @include u-text(primary-dark);
           @include u-margin-bottom(1);
           @include u-font(ui, 7);
           color: #012941;
           letter-spacing: 3px;
-
-          &:hover {
-            @include u-text-decoration(underline);
-          }
         }
 
         > ul {
           > li {
-            a.usa-link {
+            a {
               @include u-font-size(body, 10);
-              color: #0067be;
-
-              &:hover {
-                @include u-color(info-darker);
-              }
+              @include light-background-link();
             }
 
             > ul {

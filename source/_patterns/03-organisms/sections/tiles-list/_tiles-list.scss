@@ -1,5 +1,5 @@
 .jcc-tiles-list__container {
-  @include section-wrapper();
+  @include section-wrapper(9);
 
   > .jcc-header-group {
     @include section-container();
@@ -103,13 +103,12 @@
 
       .jcc-card__title {
         @include u-padding-x(0);
-        @include u-font(body, 8);
+        @include u-font(body, 10);
         @include u-line-height(body, 4);
 
         a {
           @include u-text-decoration(no-underline);
           @include light-background-link();
-          color: #0067be;
           &:hover {
             @include u-text-decoration(underline);
           }

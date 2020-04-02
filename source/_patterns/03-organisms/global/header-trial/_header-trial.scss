@@ -1,8 +1,15 @@
 .jcc-trial-header {
+  @include u-border-top("05");
+  @include u-border-top(secondary-light);
+
   .desktop {
     @include u-display(none);
     @include at-media("desktop") {
       @include u-display(block);
+    }
+
+    .jcc-header__container--topbar {
+      @include u-minh(15);
     }
   }
   .mobile {

@@ -1,5 +1,5 @@
 .jcc-footer-tall__container {
-  @include section-wrapper();
+  @include section-wrapper(9);
   @include u-bg(primary-dark);
   @include centerer();
 
@@ -22,6 +22,10 @@
       &__item:visited {
         @include u-color(base-lightest);
         @include u-margin-x(1);
+        transition: 0.4s all;
+      }
+      &__item:hover * {
+        @include u-color(base-light);
       }
 
       svg {
@@ -47,6 +51,7 @@
         @include u-text-decoration(no-underline);
         &:hover {
           @include u-text-decoration(underline);
+          @include u-color(base-light);
         }
       }
     }

@@ -1,9 +1,8 @@
 .jcc-cards-with-list__container {
-  @include section-wrapper();
+  @include section-wrapper(9);
   background-color: #f9f9f9;
 
-  a.usa-link {
-    color: #0067be;
+  a:not(.usa-button) {
     @include u-text-decoration(no-underline);
     @include light-background-link();
     &:hover {
@@ -82,7 +81,7 @@
       }
 
       .jcc-card__title {
-        @include u-font(body, 8);
+        @include u-font(body, 10);
         @include u-line-height(body, 4);
         @include u-margin-y(2);
       }
@@ -125,7 +124,7 @@
           }
 
           .jcc-card__title {
-            @include u-font(body, 4);
+            @include u-font(body, 8);
             @include u-margin-y(1);
           }
 
@@ -149,20 +148,27 @@
     }
   }
 
-  .jcc-cards-with-list__button {
+  .jcc-cards-with-list__button-container {
     @include section-container();
     @include u-text-align(center);
+    @extend .grid-row;
+    @extend .flex-justify-end;
 
     @include at-media(desktop) {
-      @include u-text-align(right);
+      @include u-text-align(left);
+    }
+
+    .jcc-cards-with-list__button {
+      @include u-padding-x(4);
+      @include grid-col(12);
+
+      @include at-media(desktop) {
+        @include grid-col(4);
+      }
     }
 
     a.usa-button {
       @include u-width(auto);
-
-      @include at-media(desktop) {
-        @include u-margin-right(8.5em);
-      }
     }
   }
 }

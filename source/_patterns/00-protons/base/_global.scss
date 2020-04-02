@@ -1,8 +1,8 @@
 // Section vertical rhythm and centered block
 
-@mixin section-wrapper {
-  @include u-padding-top(6);
-  @include u-padding-bottom(6);
+@mixin section-wrapper($padding-size: 6) {
+  @include u-padding-top($padding-size);
+  @include u-padding-bottom($padding-size);
 
   @media print {
     @include u-padding-bottom(3);
