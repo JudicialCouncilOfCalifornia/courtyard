@@ -1,0 +1,23 @@
+.jcc-themebar {
+  width: 100%;
+  display: table;
+  padding: 15px 9px;
+  -webkit-box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
+  -moz-box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
+  box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
+  span {
+    width: 50%;
+    float: left;
+  }
+  &__title {
+    margin-top: 5px;
+    @include u-font(heading, 9);
+  }
+  .jcc-themebar__select {
+    select {
+      float: right;
+      margin: 0;
+      max-width: 200px;
+    }
+  }
+}

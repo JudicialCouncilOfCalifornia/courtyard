@@ -13,11 +13,17 @@
 		<!-- End Pattern Lab -->
 
 	</head>
-	<select class="theme-switcher">
-    <option value="srl">SRL</option>
-    <option value="trial-court">Trial Court</option>
-</select>
-	<body class="{{ bodyClass }}">
+
+	<body>
+		<div class="jcc-themebar">
+			<span class="jcc-themebar__title"> JCC Pattern Lab</span>
+			<span class="jcc-themebar__select">
+				<select class="usa-select jcc-themebar__switcher" name="options" id="options">
+						<option value="srl">SRL</option>
+						<option value="trial-court">Trial Court</option>
+	      </select>
+			</span>
+		</div>
     <div style="width:0;height:0;position:absolute;overflow:hidden;">
       {% include "@atoms/icons/symbol-defs.svg" %}
     </div>

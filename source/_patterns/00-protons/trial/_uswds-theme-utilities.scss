@@ -707,7 +707,7 @@ $font-weight-manual-values: ();
 
 // .height
 
-$height-palettes: ("palette-height-default");
+$height-palettes: ("palette-units");
 $height-manual-values: ();
 
 // .justify-content
@@ -717,7 +717,7 @@ $justify-content-manual-values: ();
 
 // .left
 
-$left-palettes: ("palette-left-default");
+$left-palettes: ("palette-units");
 $left-manual-values: ();
 
 // .letter-spacing
@@ -741,12 +741,12 @@ $margin-horizontal-manual-values: ();
 
 // .max-height
 
-$max-height-palettes: ("palette-max-height-default");
+$max-height-palettes: ("palette-units");
 $max-height-manual-values: ();
 
 // .max-width
 
-$max-width-palettes: ("palette-max-width-default");
+$max-width-palettes: ("palette-units");
 $max-width-manual-values: ();
 
 // .measure
@@ -801,7 +801,7 @@ $position-manual-values: ();
 
 // .right
 
-$right-palettes: ("palette-right-default");
+$right-palettes: ("palette-units");
 $right-manual-values: ();
 
 // .square
@@ -836,7 +836,7 @@ $text-transform-manual-values: ();
 
 // .top
 
-$top-palettes: ("palette-top-default");
+$top-palettes: ("palette-units");
 $top-manual-values: ();
 
 // .vertical-align

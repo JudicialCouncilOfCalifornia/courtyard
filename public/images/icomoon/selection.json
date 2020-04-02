@@ -4,6 +4,39 @@
     {
       "icon": {
         "paths": [
+          "M487.619 5.048c268.976 0 487.619 218.643 487.619 487.618 0 264.192-210.871 479.598-473.254 487.185-4.706 0.434-9.548 0.434-14.365 0.434h-1.083c-4.459 0-8.93 0.005-13.284-0.434-262.38-7.587-473.252-222.993-473.252-487.185 0-268.976 218.645-487.618 487.619-487.618zM459.755 66c-37.153 12.933-74.177 51.112-104.49 113.632-9.116 18.803-17.38 39.901-24.816 62.259h129.306v-175.891zM619.973 179.632c-30.315-62.52-67.335-100.699-104.492-113.632v175.891h129.307c-7.436-22.358-15.701-43.457-24.815-62.259zM348.735 83.85c-86.527 29.322-160.863 85.169-212.898 158.042h135.837c9.39-31.038 20.401-60.472 33.088-86.64 12.912-26.63 27.541-50.533 43.973-71.402zM839.402 241.891c-52.034-72.873-126.371-128.72-212.899-158.042 16.433 20.869 31.061 44.772 43.973 71.402 12.688 26.169 23.698 55.602 33.090 86.64h135.836zM102.313 297.618c-25.709 50.76-41.898 107.278-45.714 167.184h181.116c1.649-59.192 8.278-115.411 19.592-167.184h-154.994zM459.755 297.618h-144.979c-12.076 50.749-19.486 107.305-21.333 167.184h166.313v-167.184zM515.482 297.618v167.184h166.312c-1.843-59.879-9.255-116.435-21.333-167.184h-144.979zM872.926 297.618h-154.995c11.313 51.773 17.944 107.993 19.593 167.184h181.116c-3.818-59.906-20.007-116.424-45.714-167.184zM56.598 520.528c3.758 59.933 20.045 116.39 45.714 167.185h154.558c-11.288-51.619-17.51-108.095-19.157-167.185h-181.116zM459.755 520.528h-166.313c1.832 59.948 9.24 116.468 21.333 167.185h144.979v-167.185zM515.482 520.528v167.185h144.979c12.098-50.717 19.505-107.237 21.333-167.185h-166.312zM918.64 520.528h-181.116c-1.648 59.090-7.87 115.566-19.159 167.185h154.561c25.668-50.795 41.955-107.252 45.714-167.185zM135.837 743.444c52.119 73.055 126.579 129.17 213.333 158.476-16.584-21.031-31.397-45.436-44.408-72.27-12.708-26.214-23.689-55.164-33.088-86.206h-135.837zM459.755 743.444h-129.306c7.436 22.318 15.7 43.023 24.816 61.825 30.313 62.518 67.337 101.459 104.49 114.503v-176.328zM515.482 743.444v176.328c37.157-13.044 74.177-51.985 104.492-114.503 9.114-18.803 17.379-39.507 24.815-61.825h-129.307zM839.402 743.444h-135.836c-9.401 31.042-20.382 59.992-33.090 86.206-13.010 26.834-27.824 51.239-44.407 72.27 86.752-29.306 161.217-85.421 213.333-158.476z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(11, 71, 121)"
+          }
+        ],
+        "width": 975,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "globe-2"
+        ]
+      },
+      "attrs": [
+        {
+          "fill": "rgb(11, 71, 121)"
+        }
+      ],
+      "properties": {
+        "order": 71,
+        "id": 0,
+        "name": "globe-2",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M554 554v-256h-84v256h84zM554 726v-86h-84v86h84zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
         ],
         "attrs": [],
@@ -23,7 +56,7 @@
         "prevSize": 24,
         "name": "error"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 0
     },
@@ -48,7 +81,7 @@
         "prevSize": 24,
         "name": "warning"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 1
     },
@@ -73,7 +106,7 @@
         "prevSize": 24,
         "name": "email"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 2
     },
@@ -98,7 +131,7 @@
         "prevSize": 24,
         "name": "location"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 3
     },
@@ -123,7 +156,7 @@
         "prevSize": 24,
         "name": "message"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 4
     },
@@ -148,7 +181,7 @@
         "prevSize": 24,
         "name": "mobile"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 5
     },
@@ -173,7 +206,7 @@
         "prevSize": 24,
         "name": "key"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 6
     },
@@ -198,7 +231,7 @@
         "prevSize": 24,
         "name": "light"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 7
     },
@@ -223,7 +256,7 @@
         "prevSize": 24,
         "name": "add"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 8
     },
@@ -248,7 +281,7 @@
         "prevSize": 24,
         "name": "add_circle"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 9
     },
@@ -273,7 +306,7 @@
         "prevSize": 24,
         "name": "close"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 10
     },
@@ -298,7 +331,7 @@
         "prevSize": 24,
         "name": "edit"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 11
     },
@@ -323,7 +356,7 @@
         "prevSize": 24,
         "name": "flag"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 12
     },
@@ -348,7 +381,7 @@
         "prevSize": 24,
         "name": "remove"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 13
     },
@@ -373,7 +406,7 @@
         "prevSize": 24,
         "name": "remove_circle"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 14
     },
@@ -398,7 +431,7 @@
         "prevSize": 24,
         "name": "reply"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 15
     },
@@ -423,7 +456,7 @@
         "prevSize": 24,
         "name": "send"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 16
     },
@@ -448,7 +481,7 @@
         "prevSize": 24,
         "name": "person_check"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 17
     },
@@ -473,7 +506,7 @@
         "prevSize": 24,
         "name": "vote"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 18
     },
@@ -498,7 +531,7 @@
         "prevSize": 24,
         "name": "alarm"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 19
     },
@@ -523,7 +556,7 @@
         "prevSize": 24,
         "name": "attach_file"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 20
     },
@@ -548,7 +581,7 @@
         "prevSize": 24,
         "name": "file"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 21
     },
@@ -573,7 +606,7 @@
         "prevSize": 24,
         "name": "file_download"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 22
     },
@@ -598,7 +631,7 @@
         "prevSize": 24,
         "name": "folder"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 23
     },
@@ -623,7 +656,7 @@
         "prevSize": 24,
         "name": "laptop"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 24
     },
@@ -648,7 +681,7 @@
         "prevSize": 24,
         "name": "mouse"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 25
     },
@@ -673,7 +706,7 @@
         "prevSize": 24,
         "name": "camera"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 26
     },
@@ -698,7 +731,7 @@
         "prevSize": 24,
         "name": "chevron_left"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 27
     },
@@ -723,7 +756,7 @@
         "prevSize": 24,
         "name": "chevron_right"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 28
     },
@@ -748,7 +781,7 @@
         "prevSize": 24,
         "name": "car"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 29
     },
@@ -773,7 +806,7 @@
         "prevSize": 24,
         "name": "subway"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 30
     },
@@ -798,7 +831,7 @@
         "prevSize": 24,
         "name": "railway"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 31
     },
@@ -823,7 +856,7 @@
         "prevSize": 24,
         "name": "walk"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 32
     },
@@ -848,7 +881,7 @@
         "prevSize": 24,
         "name": "taxi"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 33
     },
@@ -873,7 +906,7 @@
         "prevSize": 24,
         "name": "train"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 34
     },
@@ -898,7 +931,7 @@
         "prevSize": 24,
         "name": "tram"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 35
     },
@@ -923,7 +956,7 @@
         "prevSize": 24,
         "name": "expand_less"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 36
     },
@@ -948,7 +981,7 @@
         "prevSize": 24,
         "name": "expand_more"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 37
     },
@@ -973,7 +1006,7 @@
         "prevSize": 24,
         "name": "menu"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 38
     },
@@ -998,7 +1031,7 @@
         "prevSize": 24,
         "name": "exclude"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 39
     },
@@ -1023,7 +1056,7 @@
         "prevSize": 24,
         "name": "event"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 40
     },
@@ -1048,7 +1081,7 @@
         "prevSize": 24,
         "name": "couple"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 41
     },
@@ -1073,7 +1106,7 @@
         "prevSize": 24,
         "name": "city"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 42
     },
@@ -1098,7 +1131,7 @@
         "prevSize": 24,
         "name": "notification"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 43
     },
@@ -1123,7 +1156,7 @@
         "prevSize": 24,
         "name": "person"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 44
     },
@@ -1148,7 +1181,7 @@
         "prevSize": 24,
         "name": "globe"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 45
     },
@@ -1173,7 +1206,7 @@
         "prevSize": 24,
         "name": "thumb_down"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 46
     },
@@ -1198,7 +1231,7 @@
         "prevSize": 24,
         "name": "thumb_up"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 47
     },
@@ -1223,7 +1256,7 @@
         "prevSize": 24,
         "name": "bookmark"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 48
     },
@@ -1248,7 +1281,7 @@
         "prevSize": 24,
         "name": "delete"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 49
     },
@@ -1273,7 +1306,7 @@
         "prevSize": 24,
         "name": "done"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 50
     },
@@ -1298,7 +1331,7 @@
         "prevSize": 24,
         "name": "home"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 51
     },
@@ -1323,7 +1356,7 @@
         "prevSize": 24,
         "name": "info"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 52
     },
@@ -1348,7 +1381,7 @@
         "prevSize": 24,
         "name": "search"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 53
     },
@@ -1373,7 +1406,7 @@
         "prevSize": 24,
         "name": "accessible"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 54
     },
@@ -1398,7 +1431,7 @@
         "prevSize": 24,
         "name": "hand"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 55
     },
@@ -1423,7 +1456,7 @@
         "prevSize": 24,
         "name": "phone"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 56
     },
@@ -1448,7 +1481,7 @@
         "prevSize": 24,
         "name": "people"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 57
     },
@@ -1473,7 +1506,7 @@
         "prevSize": 24,
         "name": "briefcase"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 58
     },
@@ -1499,7 +1532,7 @@
         "id": 402,
         "prevSize": 32
       },
-      "setIdx": 1,
+      "setIdx": 2,
       "setId": 1,
       "iconIdx": 401
     },
@@ -1526,7 +1559,7 @@
         "id": 407,
         "prevSize": 32
       },
-      "setIdx": 1,
+      "setIdx": 2,
       "setId": 1,
       "iconIdx": 406
     },
@@ -1552,7 +1585,7 @@
         "id": 413,
         "prevSize": 32
       },
-      "setIdx": 1,
+      "setIdx": 2,
       "setId": 1,
       "iconIdx": 412
     },
@@ -1578,7 +1611,7 @@
         "id": 414,
         "prevSize": 32
       },
-      "setIdx": 1,
+      "setIdx": 2,
       "setId": 1,
       "iconIdx": 413
     }
