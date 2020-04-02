@@ -86,10 +86,7 @@
         }
         .jcc-tile__title a {
           @include u-color(primary);
-          @include u-font(sans, 8);
-          @include at-media(desktop) {
-            @include u-font(sans, 7);
-          }
+          @include u-font(sans, 9);
         }
       }
       &.tile-icon {
