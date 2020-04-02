@@ -20,7 +20,10 @@
     @include at-media("desktop") {
       @include grid-col(6);
       @include u-position(relative);
-      margin: auto;
+      img {
+        @include u-height(10);
+        @include u-margin-top(2);
+      }
     }
   }
 
@@ -28,7 +31,7 @@
     @include at-media(desktop) {
       @include u-position(relative);
       @include grid-col(5);
-      margin: auto;
+      margin-top: 35px;
     }
   }
 
@@ -36,7 +39,7 @@
     @include at-media(desktop) {
       @include u-position(relative);
       @include grid-col(1);
-      margin: auto;
+      margin-top: 26px;
     }
   }
 }

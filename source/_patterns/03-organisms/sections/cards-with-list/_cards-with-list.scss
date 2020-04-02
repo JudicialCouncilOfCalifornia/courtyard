@@ -1,9 +1,8 @@
 .jcc-cards-with-list__container {
-  @include u-padding-y(4);
+  @include section-wrapper(9);
   background-color: #f9f9f9;
 
-  a.usa-link {
-    color: #0067be;
+  a:not(.usa-button) {
     @include u-text-decoration(no-underline);
     @include light-background-link();
     &:hover {
@@ -12,7 +11,7 @@
   }
 
   > .jcc-header-group {
-    @extend .grid-container;
+    @include section-container();
     @include u-text-align(center);
     @include u-overflow(hidden);
 
@@ -24,27 +23,17 @@
         @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
       }
       @include at-media-max(desktop) {
-        position: relative;
-        padding-top: 0.5em;
-
-        &:after {
-          $dash-width: 45px !default;
-          width: $dash-width;
-
-          @include u-bg(secondary-light);
-          content: "";
-          height: 5px;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
+        @include has-dash-position(
+          $dash-color: secondary-light,
+          $dash-position: "above-center",
+          $dash-width: 75px
+        );
       }
     }
   }
 
   > ul {
-    @extend .grid-container;
+    @include section-container();
     @include u-padding(0);
     @include u-display(flex);
     @include u-flex-direction(column);
@@ -65,6 +54,18 @@
       );
     }
 
+    > li:first-child {
+      @include at-media-max(desktop) {
+        @include u-margin-top(0);
+      }
+    }
+
+    > li:nth-child(2) {
+      @include at-media-max(desktop) {
+        @include u-margin-bottom(0);
+      }
+    }
+
     > li:last-child {
       @include u-margin-left(neg-1);
     }
@@ -76,17 +77,13 @@
       @include u-padding(3);
       @include u-position(relative);
 
-      @include at-media(tablet-lg) {
-        //@include u-padding-y(1);
-      }
-
       .jcc-card__brow {
         @include u-font(heading, 8);
         @include u-text(italic);
       }
 
       .jcc-card__title {
-        @include u-font(body, 8);
+        @include u-font(body, 10);
         @include u-line-height(body, 4);
         @include u-margin-y(2);
       }
@@ -129,7 +126,7 @@
           }
 
           .jcc-card__title {
-            @include u-font(body, 4);
+            @include u-font(body, 8);
             @include u-margin-y(1);
           }
 
@@ -153,20 +150,27 @@
     }
   }
 
-  .jcc-cards-with-list__button {
-    @extend .grid-container;
+  .jcc-cards-with-list__button-container {
+    @include section-container();
     @include u-text-align(center);
+    @extend .grid-row;
+    @extend .flex-justify-end;
 
     @include at-media(desktop) {
-      @include u-text-align(right);
+      @include u-text-align(left);
+    }
+
+    .jcc-cards-with-list__button {
+      @include u-padding-x(4);
+      @include grid-col(12);
+
+      @include at-media(desktop) {
+        @include grid-col(4);
+      }
     }
 
     a.usa-button {
       @include u-width(auto);
-
-      @include at-media(desktop) {
-        @include u-margin-right(8.5em);
-      }
     }
   }
 }

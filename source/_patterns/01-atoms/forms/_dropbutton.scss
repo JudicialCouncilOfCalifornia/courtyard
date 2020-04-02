@@ -6,4 +6,10 @@
     }
     @include u-color(primary);
   }
+
+  .usa-accordion__button[aria-expanded="true"] {
+    .icon {
+      filter: brightness(0) invert(1);
+    }
+  }
 }

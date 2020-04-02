@@ -1,8 +1,8 @@
 .jcc-tiles-list__container {
-  @include u-padding-y(4);
+  @include section-wrapper(9);
 
   > .jcc-header-group {
-    @extend .grid-container;
+    @include section-container();
     @include u-text-align(center);
 
     .jcc-header-group__title {
@@ -23,7 +23,7 @@
   }
 
   .jcc-tiles-list {
-    @extend .grid-container;
+    @include section-container();
     @include u-padding-x(2);
     @include u-padding-bottom(0);
     @include u-display(flex);
@@ -62,6 +62,8 @@
         @include u-color(secondary-light);
         @include u-display(flex);
         @include u-flex-direction(row);
+        @extend .flex-align-center;
+        @extend .flex-justify-start;
 
         @include at-media(desktop) {
           @include u-flex-direction(column);
@@ -72,7 +74,6 @@
           @include u-text-align(center);
           text-transform: uppercase;
           letter-spacing: 2px;
-          padding: 3% 0;
           @include u-margin-x(1);
           @include u-font-size(ui, 8);
         }
@@ -103,13 +104,12 @@
 
       .jcc-card__title {
         @include u-padding-x(0);
-        @include u-font(body, 8);
+        @include u-font(body, 10);
         @include u-line-height(body, 4);
 
         a {
           @include u-text-decoration(no-underline);
           @include light-background-link();
-          color: #0067be;
           &:hover {
             @include u-text-decoration(underline);
           }
@@ -117,9 +117,10 @@
       }
 
       .jcc-card {
-        @include u-padding-x(2);
+        @include u-padding-x(0);
         @include at-media(desktop) {
           @include grid-col(8);
+          @include u-padding-x(2);
         }
       }
 

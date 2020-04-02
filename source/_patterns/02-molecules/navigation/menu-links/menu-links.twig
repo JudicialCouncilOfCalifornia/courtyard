@@ -20,9 +20,9 @@
 ]|merge(menu.classes|default([''])) %}
 
 {% import _self as menus %}
-{{ menus.menu_links(menu.items, attributes.addClass(menu_classes), 0) }}
+{{ menus.menu_links(menu.items, attributes.addClass(menu_classes), 0, menu.disable_header_link) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, disable_header_link) %}
     {% import _self as menus %}
     {% if items %}
         {% if menu_level == 0 %}
@@ -39,7 +39,12 @@
                 item.in_active_trail ? 'menu-item--active-trail',
             ]|merge(item.classes|default([''])) %}
             <li{{ item_attributes.addClass(classes) }}>
-                <a class="usa-link" href="{{ item.url }}">{{ item.title }}</a>
+                {% if disable_header_link and menu_level == 0 %}
+                    <div class="menu-item__header">{{ item.title }}</div>
+                {% else %}
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                {% endif %}
+
                 {% if item.below %}
                     {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                 {% endif %}

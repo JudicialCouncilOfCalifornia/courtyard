@@ -1,4 +1,4 @@
-var themeSwitcher = document.querySelector(".theme-switcher");
+var themeSwitcher = document.querySelector(".jcc-themebar__switcher");
 
 var theme = localStorage["theme"] || "srl";
 

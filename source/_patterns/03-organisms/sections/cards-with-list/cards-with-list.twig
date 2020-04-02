@@ -40,11 +40,13 @@
         {% endfor %}
     </ul>
 
-    <div class="jcc-cards-with-list__button">
+    <div class="jcc-cards-with-list__button-container">
+        <div class="jcc-cards-with-list__button">
         {% if cards_with_list.button %}
             {% include "@atoms/buttons/link-button.twig" with {
                 link_button: cards_with_list.button
             } only %}
         {% endif %}
+        </div>
     </div>
 </div>
