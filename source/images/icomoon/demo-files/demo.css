@@ -139,7 +139,13 @@ p {
   font-size: 16px;
 }
 .fs1 {
+  font-size: 32px;
+}
+.fs2 {
   font-size: 24px;
+}
+.fs3 {
+  font-size: 32px;
 }
 .name {
   margin-left: .25em;
