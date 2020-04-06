@@ -12,28 +12,28 @@
 .usa-alert--info {
   .jcc-alert__body {
     @include add-background-svg("alerts/info");
-    @include u-padding-left(5);
+    @include u-padding-left(6);
   }
 }
 
 .usa-alert--success {
   .jcc-alert__body {
     @include add-background-svg("alerts/success");
-    @include u-padding-left(5);
+    @include u-padding-left(6);
   }
 }
 
 .usa-alert--warning {
   .jcc-alert__body {
     @include add-background-svg("alerts/warning");
-    @include u-padding-left(5);
+    @include u-padding-left(6);
   }
 }
 
 .usa-alert--error {
   .jcc-alert__body {
     @include add-background-svg("alerts/error");
-    @include u-padding-left(5);
+    @include u-padding-left(6);
   }
 }
 
@@ -45,7 +45,7 @@
   @include u-padding-y(1.5);
   @include u-padding-right(2.5);
   background-size: 1.6rem;
-  background-position: 0 9px !important;
+  background-position: 10px 9px !important;
 }
 
 .jcc-alert__heading {
