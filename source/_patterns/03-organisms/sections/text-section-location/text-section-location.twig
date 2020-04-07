@@ -1,0 +1,54 @@
+{% set classes = [
+  'jcc-text-section',
+  'jcc-text-section--' ~ text_section_location.background_variant|default('has-background-color--transparent'),
+  'jcc-text-section--' ~ text_section_location.column_variant|default('has-two-columns-threequarter'),
+]|merge(text_section_location.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if text_section_location.id %} id="{{ text_section_location.id }}"{% endif %}>
+  <div class="jcc-text-section__container">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      headergroup: text_section_location.headergroup
+    } %}
+
+    {% if text_section_location.column_content_left %}
+      <div class="jcc-text-section__content">
+        <div class="jcc-text-section__column-left">
+          {{ text_section_location.column_content_left.body }}
+        </div>
+
+        {% if text_section_location.column_content_right %}
+          <div class="jcc-text-section__column-right">
+            {% include '@molecules/interactive/map/map.twig' with {
+              map: text_section_location.column_content_right.map
+            } %}
+            {% include '@molecules/text/address/address.twig' with {
+              address: text_section_location.column_content_right.address
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with {
+              title_content: text_section_location.column_content_right.office_hours
+            } %}
+            {% include '@molecules/text/address/address.twig' with {
+              address: text_section_location.column_content_right.mailing_address
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with {
+              title_content: text_section_location.column_content_right.phone
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with {
+              title_content: text_section_location.column_content_right.phone_hours
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with {
+              title_content: text_section_location.column_content_right.division
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with {
+              title_content: text_section_location.column_content_right.subject_matter
+            } %}
+            {% include '@molecules/text/title-content/title-content.twig' with
+            {
+              title_content: text_section_location.column_content_right.tags
+            } %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
