@@ -17,7 +17,6 @@ jobs:
     - run: git checkout -- .
     - uses: actions/setup-node@v1
     - run: npm install
-    - run: php core/console --generate
     - run: npm run build
     - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
       with:
