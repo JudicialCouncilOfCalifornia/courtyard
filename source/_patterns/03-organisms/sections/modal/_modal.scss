@@ -47,6 +47,15 @@
   width: 90%;
   max-width: 70rem;
 
+  dialog::backdrop {
+    /* native */
+    background-color: white;
+  }
+  dialog + .backdrop {
+    /* polyfill */
+    background-color: gray;
+  }
+
   @include at-media(desktop) {
     @include u-padding(6);
   }
@@ -96,6 +105,11 @@
 .jcc-modal__trigger {
   @include button-unstyled;
   @include u-font-size(sans, md);
+}
+
+.jcc-modal__dialog {
+  @include u-bg("white");
+  @include u-color("black");
 }
 
 .jcc-modal--full {
