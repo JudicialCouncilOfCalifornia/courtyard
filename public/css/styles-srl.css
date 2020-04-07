@@ -30610,6 +30610,10 @@ h3.jcc-header-group__title {
   background-size: 0.65em auto, 100%;
 }
 
+.jcc-all {
+  margin-top: 36px;
+}
+
 .jcc-cards-section {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
