@@ -1,4 +1,4 @@
-name: Publish Static Web App to Azure Blob Storage
+name: Publish master to Azure
 
 on:
   push:
@@ -10,7 +10,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.3'
+    - run: composer install
+    - run: git checkout -- .
+    - uses: actions/setup-node@v1
+    - run: npm install
+    - run: php core/console --generate
+    - run: npm run build
     - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
       with:
         source_dir: public
