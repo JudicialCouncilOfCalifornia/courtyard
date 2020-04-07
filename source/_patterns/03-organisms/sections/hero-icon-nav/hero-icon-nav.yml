@@ -14,7 +14,7 @@ hero_icon_nav:
       - title: 'E-filing'
         url: '#'
         icon: '../../images/graphics/files.svg'
-      - title: 'Attorney Portal'
+      - title: 'Case Information'
         url: '#'
         icon: '../../images/graphics/justice.svg'
     buttons:
@@ -22,5 +22,5 @@ hero_icon_nav:
         url: '#'
       - title: 'Calendar'
         url: '#'
-      - title: 'Case Information'
+      - title: 'Attorney Portal'
         url: '#'
