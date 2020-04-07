@@ -1,0 +1,18 @@
+name: Publish Static Web App to Azure Blob Storage
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+      with:
+        source_dir: public
+        container_name: $web
+        connection_string: ${{ secrets.AzureProdConnectionString }}
