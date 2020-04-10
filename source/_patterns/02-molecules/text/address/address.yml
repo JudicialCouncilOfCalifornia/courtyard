@@ -1,0 +1,11 @@
+address:
+  inline: false
+  title:
+    tag: "h5"
+    title: "Address"
+  street: "455 Golden Gate Ave"
+  street2: ""
+  locality: "San Francisco"
+  administrative_area: "CA"
+  postal_code: "94102"
+  country: "United States"
