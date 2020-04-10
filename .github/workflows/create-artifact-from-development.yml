@@ -1,0 +1,44 @@
+name: Create artifact from development
+
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target_repo: [ "JudicialCouncilOfCalifornia/courtyard-artifact" ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.3'
+    - run: composer install
+    - run: git checkout -- .
+    - uses: actions/setup-node@v1
+    - run: npm install
+    - run: npm run build
+    - uses: actions/checkout@v2
+      with:
+        repository: ${{ matrix.target_repo }}
+        path: artifact
+        token: ${{ secrets.CourtyardArtifactToken }}
+    - run: cp -R public/* artifact/public/.
+    - run: cp -R source/_patterns/* artifact/source/_patterns/.
+    - run: cp -R node_modules/uswds/src/stylesheets/core/* artifact/source/uswds/core/.
+    - name: Commit to repository
+      env:
+        TOKEN_API: ${{ secrets.TOKEN_API }}
+        COMMIT_MSG: |
+          Artifact generated from development
+      run: |
+        # Hard-code user configuration
+        git config user.email "github-actions@github.com"
+        git config user.name "Github Actions"
+        git add --all
+        git commit -m "${COMMIT_MSG}"
+        git push origin master
+      working-directory: artifact
