@@ -41,4 +41,14 @@ jobs:
         git add --all
         git commit -m "${COMMIT_MSG}"
         git push origin master
+        git fetch origin --tags
+        VERSION=`git tag -l --sort=v:refname | tail -1`
+        VERSION_BITS=(${VERSION//./ })
+        VNUM1=${VERSION_BITS[0]}
+        VNUM2=${VERSION_BITS[1]}
+        VNUM3=${VERSION_BITS[2]}
+        VNUM3=$((VNUM3+1))
+        NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
+        git tag -a $NEW_TAG -m "Autotag $NEW_TAG created by github-actions"
+        git push --tags
       working-directory: artifact
