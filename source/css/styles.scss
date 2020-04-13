@@ -65,6 +65,7 @@
 @import "../../node_modules/uswds/src/stylesheets/utilities/rules/all";
 @import "../../node_modules/uswds/src/stylesheets/utilities/rules/package";
 @import "../../node_modules/uswds/src/stylesheets/core/mixins/_utility-builder.scss";
+@import "../../node_modules/dialog-polyfill/dialog-polyfill.css";
 
 @include render-utilities-in($utilities-package);
 
