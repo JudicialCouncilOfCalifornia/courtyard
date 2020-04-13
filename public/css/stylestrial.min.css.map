@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"stylestrial.min.css","sourcesContent":[]}
+{"version":3,"sources":["05-pages/srl/service/service.scss"],"names":[],"mappings":"AAAA,mBACE,QAAA","file":"stylestrial.min.css","sourcesContent":[".jcc-service__tabs {\n  display: none;\n}\n"]}
