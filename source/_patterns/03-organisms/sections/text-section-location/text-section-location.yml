@@ -11,23 +11,7 @@ text_section_location:
       sed tellus cursus consectetur. Proin in dictum diam. Vivamus vel velit tincidunt lacus vulputate blandit. Nulla mollis erat nec justo condimentum, at tempus arcu
       rhoncus.</p>"
   column_content_right:
-    map:
-      '<div  class="geolocation-map-wrapper" id="map-5e8adf11ab5dd" data-map-type="leaflet">
-        <div class="geolocation-map-controls"></div>
-        <div class="geolocation-map-container js-show"></div>
-        <div  class="geolocation-location js-hide" id="5e8adf11d34bd" data-lat="37.781108" data-lng="-122.418042" data-set-marker="true" typeof="Place">
-          <span property="geo" typeof="GeoCoordinates">
-            <meta property="latitude" content="37.781108" />
-            <meta property="longitude" content="-122.418042" />
-          </span>
-          <h2 class="location-title" property="name">JCC 2</h2>
-          <div class="location-content">
-            <p><strong>JCC 2</strong></p>
-            <p></p>
-            <p><span>455 Golden Gate Ave</span><br /><span>San Francisco</span>, <span>CA</span> <span>94102</span><br /><span>United States</span>
-            </p>
-          </div>
-        </div>'
+    map: '<p>Map Placeholder</p>'
     address:
       inline: false
       street: "455 Golden Gate Ave "

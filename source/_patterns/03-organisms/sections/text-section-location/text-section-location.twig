@@ -1,23 +1,23 @@
 {% set classes = [
-  'jcc-text-section',
-  'jcc-text-section--' ~ text_section_location.background_variant|default('has-background-color--transparent'),
-  'jcc-text-section--' ~ text_section_location.column_variant|default('has-two-columns-threequarter'),
+  'jcc-text-section-location',
+  'jcc-text-section-location--' ~ text_section_location.background_variant|default('has-background-color--transparent'),
+  'jcc-text-section-location--has-two-columns-threequarter',
 ]|merge(text_section_location.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if text_section_location.id %} id="{{ text_section_location.id }}"{% endif %}>
-  <div class="jcc-text-section__container">
+  <div class="jcc-text-section-location__container">
     {% include '@molecules/text/header-group/header-group.twig' with {
       headergroup: text_section_location.headergroup
     } %}
 
     {% if text_section_location.column_content_left %}
-      <div class="jcc-text-section__content">
-        <div class="jcc-text-section__column-left">
+      <div class="jcc-text-section-location__content">
+        <div class="jcc-text-section-location__column-left">
           {{ text_section_location.column_content_left.body }}
         </div>
 
         {% if text_section_location.column_content_right %}
-          <div class="jcc-text-section__column-right">
+          <div class="jcc-text-section-location__column-right">
             {% include '@molecules/interactive/map/map.twig' with {
               map: text_section_location.column_content_right.map
             } %}

@@ -1,4 +1,4 @@
-.jcc-text-section {
+.jcc-text-section-location {
   @include section-wrapper;
 
   .jcc-header-group__title {
@@ -11,20 +11,20 @@
   }
 }
 
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--light--secondary,
-.jcc-text-section--has-background-color--dark--secondary {
+.jcc-text-section-location--has-background-color--light,
+.jcc-text-section-location--has-background-color--dark,
+.jcc-text-section-location--has-background-color--light--secondary,
+.jcc-text-section-location--has-background-color--dark--secondary {
   @include section-wrapper-bg;
 }
 
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--light--secondary {
+.jcc-text-section-location--has-background-color--light,
+.jcc-text-section-location--has-background-color--light--secondary {
   @include light-background($light-background-color: secondary-lighter);
 }
 
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--dark--secondary {
+.jcc-text-section-location--has-background-color--dark,
+.jcc-text-section-location--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
 
   a {
@@ -35,21 +35,21 @@
   }
 }
 
-.jcc-text-section__container {
+.jcc-text-section-location__container {
   @include section-container;
 }
 
-.jcc-text-section__content {
+.jcc-text-section-location__content {
   @include u-line-height(body, 4);
   @extend .usa-prose;
 }
 
-.jcc-text-section__column-left,
-.jcc-text-section__column-right {
+.jcc-text-section-location__column-left,
+.jcc-text-section-location__column-right {
   @extend .usa-prose;
 }
 
-.jcc-text-section__column-left {
+.jcc-text-section-location__column-left {
   @include u-margin-bottom(4);
 
   @include at-media(desktop) {
@@ -57,13 +57,13 @@
   }
 }
 
-.jcc-text-section--has-one-column {
+.jcc-text-section-location--has-one-column {
   @include u-measure(6);
 }
 
-.jcc-text-section--has-two-columns-half,
-.jcc-text-section--has-two-columns-threequarter {
-  .jcc-text-section__content {
+.jcc-text-section-location--has-two-columns-half,
+.jcc-text-section-location--has-two-columns-threequarter {
+  .jcc-text-section-location__content {
     @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
@@ -71,9 +71,9 @@
   }
 }
 
-.jcc-text-section--has-two-columns-half {
-  .jcc-text-section__column-left,
-  .jcc-text-section__column-right {
+.jcc-text-section-location--has-two-columns-half {
+  .jcc-text-section-location__column-left,
+  .jcc-text-section-location__column-right {
     @include u-width(full);
 
     @include at-media(desktop) {
@@ -82,26 +82,26 @@
   }
 }
 
-.jcc-text-section--has-two-columns-threequarter {
-  .jcc-text-section__column-left,
-  .jcc-text-section__column-right {
+.jcc-text-section-location--has-two-columns-threequarter {
+  .jcc-text-section-location__column-left,
+  .jcc-text-section-location__column-right {
     @include u-width(full);
   }
 
-  .jcc-text-section__column-left {
+  .jcc-text-section-location__column-left {
     @include at-media(desktop) {
       @include grid-col(8);
     }
   }
 
-  .jcc-text-section__column-right {
+  .jcc-text-section-location__column-right {
     @include at-media(desktop) {
       @include grid-col(4);
     }
   }
 }
 
-.jcc-text-section {
+.jcc-text-section-location {
   @include section-wrapper;
 
   .jcc-header-group__title {
@@ -113,20 +113,20 @@
   }
 }
 
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--light--secondary,
-.jcc-text-section--has-background-color--dark--secondary {
+.jcc-text-section-location--has-background-color--light,
+.jcc-text-section-location--has-background-color--dark,
+.jcc-text-section-location--has-background-color--light--secondary,
+.jcc-text-section-location--has-background-color--dark--secondary {
   @include section-wrapper-bg;
 }
 
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--light--secondary {
+.jcc-text-section-location--has-background-color--light,
+.jcc-text-section-location--has-background-color--light--secondary {
   @include light-background($light-background-color: secondary-lighter);
 }
 
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--dark--secondary {
+.jcc-text-section-location--has-background-color--dark,
+.jcc-text-section-location--has-background-color--dark--secondary {
   @include dark-background($dark-background-color: secondary);
 
   a {
@@ -137,21 +137,21 @@
   }
 }
 
-.jcc-text-section__container {
+.jcc-text-section-location__container {
   @include section-container;
 }
 
-.jcc-text-section__content {
+.jcc-text-section-location__content {
   @include u-line-height(body, 4);
   @extend .usa-prose;
 }
 
-.jcc-text-section__column-left,
-.jcc-text-section__column-right {
+.jcc-text-section-location__column-left,
+.jcc-text-section-location__column-right {
   @extend .usa-prose;
 }
 
-.jcc-text-section__column-left {
+.jcc-text-section-location__column-left {
   @include u-margin-bottom(4);
 
   @include at-media(desktop) {
@@ -159,13 +159,13 @@
   }
 }
 
-.jcc-text-section--has-one-column {
+.jcc-text-section-location--has-one-column {
   @include u-measure(6);
 }
 
-.jcc-text-section--has-two-columns-half,
-.jcc-text-section--has-two-columns-threequarter {
-  .jcc-text-section__content {
+.jcc-text-section-location--has-two-columns-half,
+.jcc-text-section-location--has-two-columns-threequarter {
+  .jcc-text-section-location__content {
     @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
@@ -173,9 +173,9 @@
   }
 }
 
-.jcc-text-section--has-two-columns-half {
-  .jcc-text-section__column-left,
-  .jcc-text-section__column-right {
+.jcc-text-section-location--has-two-columns-half {
+  .jcc-text-section-location__column-left,
+  .jcc-text-section-location__column-right {
     @include u-width(full);
 
     @include at-media(desktop) {
@@ -184,19 +184,19 @@
   }
 }
 
-.jcc-text-section--has-two-columns-threequarter {
-  .jcc-text-section__column-left,
-  .jcc-text-section__column-right {
+.jcc-text-section-location--has-two-columns-threequarter {
+  .jcc-text-section-location__column-left,
+  .jcc-text-section-location__column-right {
     @include u-width(full);
   }
 
-  .jcc-text-section__column-left {
+  .jcc-text-section-location__column-left {
     @include at-media(desktop) {
       @include grid-col(8);
     }
   }
 
-  .jcc-text-section__column-right {
+  .jcc-text-section-location__column-right {
     @include at-media(desktop) {
       @include grid-col(4);
     }
