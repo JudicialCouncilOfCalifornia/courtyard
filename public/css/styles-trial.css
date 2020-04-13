@@ -33374,31 +33374,31 @@ a:visited {
   line-height: 1 ;
 }
 
-.usa-alert--info .jcc-alert__body {
-  background-image: url("../img/alerts/info.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/info.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
-  padding-left: 3rem ;
+.jcc-alert__body.usa-alert--no-icon {
+  background-image: none !important;
 }
 
-.usa-alert--success .jcc-alert__body {
-  background-image: url("../img/alerts/success.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/success.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
+.usa-alert--error .jcc-alert__body {
+  background-image: url(../images/error.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
   padding-left: 3rem ;
 }
 
 .usa-alert--warning .jcc-alert__body {
-  background-image: url("../img/alerts/warning.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/warning.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
+  background-image: url(../images/warning.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  padding-left: 3rem ;
+}
+
+.usa-alert--success .jcc-alert__body {
+  background-image: url(../images/success.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  padding-left: 3rem ;
+}
+
+.usa-alert--info .jcc-alert__body {
+  background-image: url(../images/info.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
   padding-left: 3rem ;
 }
 
 .usa-alert--error .jcc-alert__body {
-  background-image: url("../img/alerts/error.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/error.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
   padding-left: 3rem ;
 }
 
@@ -33413,7 +33413,8 @@ a:visited {
   padding-top: 0.75rem ;
   padding-right: 1.25rem ;
   background-size: 1.6rem;
-  background-position: 10px 9px !important;
+  background-repeat: no-repeat;
+  background-position: 10px 13px !important;
 }
 
 .jcc-alert__heading {
@@ -33428,10 +33429,9 @@ a:visited {
   display: inline ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99rem;
-}
-
-.jcc-alert__text p:first-child {
-  display: inline ;
+  line-height: 1.8 ;
+  p: first-child;
+  p-display: inline ;
 }
 
 .jcc-alert__text p:not(:first-child) {
@@ -36849,6 +36849,12 @@ h3.jcc-header-group__title {
 .jcc-steps-section--has-background-color--light .jcc-read-more__content,
 .jcc-steps-section--has-background-color--light--primary .jcc-read-more__content {
   background-color: white ;
+}
+
+.jcc-read-more--block .jcc-read-more__trigger {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .jcc-steps-section__container {

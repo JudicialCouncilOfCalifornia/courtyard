@@ -1,5 +1,7 @@
 .jcc-alert::before {
-  @include u-display("none");
+  @if $trial {
+    @include u-display("none");
+  }
 }
 
 .jcc-alert {
@@ -9,30 +11,44 @@
   @include u-line-height("body", 1);
 }
 
-.usa-alert--info {
-  .jcc-alert__body {
-    @include add-background-svg("alerts/info");
-    @include u-padding-left(6);
-  }
+.jcc-alert__body.usa-alert--no-icon {
+  background-image: none !important;
 }
 
-.usa-alert--success {
+.usa-alert--error {
   .jcc-alert__body {
-    @include add-background-svg("alerts/success");
+    background-image: url(../images/error.svg),
+      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     @include u-padding-left(6);
   }
 }
 
 .usa-alert--warning {
   .jcc-alert__body {
-    @include add-background-svg("alerts/warning");
+    background-image: url(../images/warning.svg),
+      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @include u-padding-left(6);
+  }
+}
+
+.usa-alert--success {
+  .jcc-alert__body {
+    background-image: url(../images/success.svg),
+      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @include u-padding-left(6);
+  }
+}
+
+.usa-alert--info {
+  .jcc-alert__body {
+    background-image: url(../images/info.svg),
+      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     @include u-padding-left(6);
   }
 }
 
 .usa-alert--error {
   .jcc-alert__body {
-    @include add-background-svg("alerts/error");
     @include u-padding-left(6);
   }
 }
@@ -45,7 +61,8 @@
   @include u-padding-y(1.5);
   @include u-padding-right(2.5);
   background-size: 1.6rem;
-  background-position: 10px 9px !important;
+  background-repeat: no-repeat;
+  background-position: 10px 13px !important;
 }
 
 .jcc-alert__heading {
@@ -58,8 +75,8 @@
 .jcc-alert__text {
   @include u-display("inline");
   @include u-font("sans", "sm");
-
-  p:first-child {
+  @include u-line-height(body, 6);
+  p: first-child {
     @include u-display("inline");
   }
 

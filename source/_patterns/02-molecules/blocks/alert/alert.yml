@@ -5,6 +5,7 @@
 
 alert:
   type: "info"
+  icon: true
   heading: "Informative status"
   text: "Lorem ipsum dolor sit amet, <a href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod."
   button:

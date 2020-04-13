@@ -49,6 +49,12 @@
   }
 }
 
+.jcc-read-more--block {
+  .jcc-read-more__trigger {
+    width: fit-content;
+  }
+}
+
 .jcc-steps-section__container {
   @include section-container;
 }

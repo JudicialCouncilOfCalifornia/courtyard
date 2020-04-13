@@ -3,6 +3,9 @@ steps:
     title: "Lorem ipsum"
     lead: "Nullam at semper mauris, at rhoncus purus."
   items:
+    - title: "Wait to see if the claim of exemption is opposed"
+      excerpt: "The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned."
+
     - title: "Prepare the claim of exemption"
       excerpt: '
         <p><strong>Complete Claim of Exemption Forms</strong></p>
@@ -34,9 +37,3 @@ steps:
           content: "Read more content"
     - title: "Wait to see if the claim of exemption is opposed"
       excerpt: "The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned."
-      read_more:
-        type: 'toggle'
-        toggle:
-          id: "steps-target-3"
-          title: "Read more"
-          content: "Read more content"

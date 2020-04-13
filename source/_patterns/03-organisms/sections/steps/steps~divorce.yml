@@ -1,0 +1,40 @@
+steps:
+  items:
+    - title: "Wait to see if the claim of exemption is opposed"
+      excerpt: "The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned."
+    - title: "Publish in a Newspaper"
+      excerpt: "Publish one of the forms, the Order to Show Cause for Change of Name (form FL-120) in a newspaper in your county."
+      alert:
+        type: "warning"
+        icon: true
+        heading: "Think about safety when serving papers"
+        text: "For some people, getting served papers can trigger emotional responses. If you’re using someone who is not a professional server, tell them to keep the interaction brief and not to engage in any conversation about the case. They should remain outside and not enter a private home."
+    - title: "Publish in a Newspaper"
+      excerpt: "Publish one of the forms, the Order to Show Cause for Change of Name (form FL-120) in a newspaper in your county."
+      alert:
+        type: "warning"
+        icon: true
+        heading: "Think about safety when serving papers"
+        text: "For some people, getting served papers can trigger emotional responses. If you’re using someone who is not a professional server, tell them to keep the interaction brief and not to engage in any conversation about the case. They should remain outside and not enter a private home."
+    - title: "Complete Forms"
+      excerpt: '
+        <p>Complete the appropriate forms to ask the court to change your name.</p>'
+      read_more:
+        type: 'toggle'
+        toggle:
+          id: "steps-target-1"
+          title: "Read More"
+          content: "<div>Civil Case Cover Sheet (<a>form CM-010</a>)</div>
+                          <div>Petition for Change of Name (<a>form NC-100</a>)</div>
+                          <div>Attachment to Petition for Change of Name (<a>form NC-110</a>) [2 Adults add “per person”]</div>
+                          <div>Order to Show Cause for Change of Name (<a>form NC-120</a>)</div>
+                          <div>Decree Changing Name (<a>form NC-130</a>)</div>"
+    - title: "Tentative Rulings and Obtain Decree"
+      excerpt: "Check your court’s tentative rulings the court day before your hearing (if applicable), attend hearing if required, and obtain your decree."
+      read_more:
+          type: 'toggle'
+          toggle:
+            block_variant: true
+            id: "read-more-block"
+            title: "Read more"
+            content: "Read more content"

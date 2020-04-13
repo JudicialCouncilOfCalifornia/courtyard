@@ -1,0 +1,4 @@
+alert:
+  type: "info"
+  icon: true
+  heading: "Info status"
