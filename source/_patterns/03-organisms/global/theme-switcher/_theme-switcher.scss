@@ -1,26 +1,38 @@
 .jcc-themebar {
   width: 100%;
   display: table;
-  padding: 15px 9px;
-  -webkit-box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
-  -moz-box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
-  box-shadow: inset 0px 0px 12px -3px rgba(115, 115, 115, 1);
-  span {
-    width: 50%;
-    float: left;
-  }
+  padding: 5px 10px;
+  -webkit-box-shadow: 0px 7px 20px -11px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 7px 20px -11px rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 7px 20px -11px rgba(0, 0, 0, 0.49);
+  background-color: #323232;
+  position: fixed;
+  top: 0;
+  z-index: 50;
   &__title {
     margin-top: 5px;
-    @include u-font(heading, 6);
-    @include at-media("desktop") {
-      @include u-font(heading, 9);
-    }
+    font-size: 12px;
+    color: #808080;
+    text-transform: uppercase;
+  }
+  span {
+    float: left;
+    margin-right: 0.8em;
   }
   .jcc-themebar__select {
+    margin-top: -1px;
     select {
-      float: right;
       margin: 0;
-      max-width: 200px;
+      background-color: transparent;
+      border: 0;
+      color: #808080;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background-image: url("../images/graphic/down-caret.svg");
+      background-repeat: no-repeat, repeat;
+      background-position: right 0.7em top 50%, 0 0;
+      background-size: 0.65em auto, 100%;
     }
   }
 }
