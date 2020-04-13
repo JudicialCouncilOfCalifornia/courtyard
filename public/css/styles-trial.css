@@ -57192,6 +57192,10 @@ h3.jcc-header-group__title {
       grid-column: button;
     }
   }
+  .jcc-hero__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 3.48rem;
+  }
   .jcc-postcard__tag {
     display: block ;
   }
@@ -67340,10 +67344,6 @@ h3.jcc-header-group__title {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-hero__title {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 3.48rem;
-  }
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
@@ -68505,10 +68505,6 @@ h3.jcc-header-group__title {
   .jcc-hero__content {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.99rem;
-  }
-  .jcc-hero__title {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 2.24rem;
   }
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
