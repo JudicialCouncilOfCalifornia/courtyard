@@ -28980,6 +28980,27 @@ a:visited {
   font-size: 1.12rem;
 }
 
+.jcc-option {
+  border-radius: 0.5rem ;
+  padding: 1.5rem ;
+  color: #2e2e2e ;
+  position: relative ;
+  text-align: left ;
+}
+
+.jcc-option:before {
+  content: "";
+  display: block ;
+  background-color: #ffbe2e ;
+  width: 3rem ;
+  height: 0.25rem ;
+  margin-bottom: 0.5rem ;
+}
+
+.jcc-option h6 {
+  margin-bottom: 2px ;
+}
+
 .jcc-postcard {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
@@ -31771,6 +31792,27 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
+}
+
+.jcc-option {
+  border-radius: 0.5rem ;
+  padding: 1.5rem ;
+  color: #2e2e2e ;
+  position: relative ;
+  text-align: left ;
+}
+
+.jcc-option:before {
+  content: "";
+  display: block ;
+  background-color: #ffbe2e ;
+  width: 3rem ;
+  height: 0.25rem ;
+  margin-bottom: 0.5rem ;
+}
+
+.jcc-option h6 {
+  margin-bottom: 2px ;
 }
 
 .jcc-steps-section {

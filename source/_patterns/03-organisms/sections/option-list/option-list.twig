@@ -1,0 +1,12 @@
+<div>
+  <div class="jcc-options__container">
+
+    <ul class="jcc-options">
+      {% for option in option_list.options %}
+        <li class="jcc-options__item">
+          {% include '@molecules/blocks/option/option.twig' with { option: option }  %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
