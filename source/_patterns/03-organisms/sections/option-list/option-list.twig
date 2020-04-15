@@ -1,4 +1,8 @@
-<div>
+{% set classes = [
+  'jcc-options-list',
+  'jcc-options-list--' ~ option_list.column_variant|default('')
+]|merge(card_section.classes|default([''])) %}
+<div class="{{ classes|join(' ')|trim }}">
   <div class="jcc-options__container">
 
     <ul class="jcc-options">

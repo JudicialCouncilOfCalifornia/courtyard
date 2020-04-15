@@ -15,4 +15,7 @@
   h6 {
     @include u-margin-bottom(2px);
   }
+  li {
+    @include u-display(block);
+  }
 }

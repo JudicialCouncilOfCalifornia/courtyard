@@ -1,3 +1,12 @@
 step:
   title: "Placeholder Title"
   excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quis quasi sit consequatur asperiores rem cum inventore, doloribus assumenda voluptatibus aperiam iure fugit ratione culpa possimus enim rerum autem voluptatem!"
+  option_list:
+    column_variant: 
+    options:
+      - title: "If you're suing a person (or people)"
+        content: 'Serve each person you are suing.'
+      - title: "If you're suing a business or government"
+        content: 'Business or agencies have a specific person you must serve, not just any employee. Follow these guidelines to make sure you are serving the right person.'
+      - title: "If you're suing for a car accident, and the owner or driver of the other car lives out of state"
+        content: 'You must also serve the Director of the Department of Motor Vehicles.'

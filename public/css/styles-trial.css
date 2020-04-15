@@ -33898,6 +33898,10 @@ a:visited {
   margin-bottom: 2px ;
 }
 
+.jcc-option li {
+  display: block ;
+}
+
 .jcc-postcard {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
@@ -36691,25 +36695,44 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
-.jcc-option {
-  border-radius: 0.5rem ;
-  padding: 1.5rem ;
-  color: #555555 ;
-  position: relative ;
-  text-align: left ;
+.jcc-options__container {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
 }
 
-.jcc-option:before {
-  content: "";
-  display: block ;
-  background-color: #ffbe2e ;
-  width: 3rem ;
-  height: 0.25rem ;
-  margin-bottom: 0.5rem ;
+.jcc-options {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.jcc-option h6 {
-  margin-bottom: 2px ;
+.jcc-options > li {
+  margin-bottom: 0;
+  max-width: unset;
+}
+
+.jcc-options .jcc-options__item {
+  margin-bottom: 1.5rem ;
+}
+
+.jcc-options-list .jcc-options__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 83.33333% ;
+}
+
+.jcc-options-list .jcc-options,
+.jcc-options-list--has-two-columns .jcc-options {
+  width: 100% ;
+}
+
+.jcc-options-list--has-two-columns .jcc-options__item {
+  width: 100% ;
 }
 
 .jcc-steps-section {
@@ -36841,6 +36864,10 @@ h3.jcc-header-group__title {
   color: #ffbe2e ;
 }
 
+.jcc-step__block {
+  margin-bottom: 2.5rem ;
+}
+
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--light--primary {
   background-color: #f2f6fb ;
@@ -36905,6 +36932,25 @@ h3.jcc-header-group__title {
   max-width: 87.5rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
+}
+
+.jcc-steps-section__container .jcc-options__container {
+  padding-left: 0 ;
+  margin-left: -6px;
+}
+
+.jcc-steps-section__container .jcc-options__container .jcc-options__item {
+  padding-left: 0 ;
+}
+
+.jcc-steps-section__container .jcc-options__container .jcc-option {
+  padding-left: 0;
+}
+
+.jcc-steps-section__container .jcc-option {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .jcc-steps {
@@ -68708,9 +68754,53 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-options__container {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+  }
+  .jcc-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-options > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-options-list .jcc-options,
+  .jcc-options-list--has-two-columns .jcc-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-options-list .jcc-options > *,
+  .jcc-options-list--has-two-columns .jcc-options > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-options-list--has-two-columns .jcc-options__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 50% ;
+  }
   .jcc-steps-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-steps-section__container .jcc-options__container .jcc-option {
+    padding-left: 1.5rem ;
+  }
+  .jcc-steps-section__container .jcc-option {
+    padding-left: 0 ;
   }
   .jcc-steps .jcc-step__item::before {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
@@ -69267,6 +69357,24 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
   .jcc-explainers-section--has-two-columns .jcc-explainers > *,
   .jcc-explainers-section--has-three-columns .jcc-explainers > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-options {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-options > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-options-list .jcc-options,
+  .jcc-options-list--has-two-columns .jcc-options {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-options-list .jcc-options > *,
+  .jcc-options-list--has-two-columns .jcc-options > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
