@@ -35150,6 +35150,150 @@ h3.jcc-header-group__title {
   font-size: 1.06rem;
 }
 
+.jcc-trial-header {
+  border-top-width: 0.25rem;
+  border-top-style: solid;
+  border-top-color: #29a197 ;
+  border-top-style: solid;
+}
+
+.jcc-trial-header .desktop {
+  display: none ;
+}
+
+.jcc-trial-header .desktop .jcc-header__container--topbar {
+  min-height: 7.5rem ;
+}
+
+.jcc-trial-header .mobile {
+  display: block ;
+}
+
+.mobile .jcc--header__mobile-container {
+  height: 50px;
+}
+
+.mobile .jcc-header__logo {
+  float: left ;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 50% ;
+  display: block ;
+  height: 3rem ;
+}
+
+.mobile .jcc-header__logo .jcc-logo {
+  width: 100% ;
+}
+
+.mobile .jcc-header__logo .jcc-logo img {
+  width: 100% ;
+  max-width: 210px;
+  margin-top: 6px;
+}
+
+.mobile .jcc-header__logo div.jcc-logo {
+  position: relative ;
+  width: 100% ;
+}
+
+.mobile .jcc-header--topbar {
+  float: left;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 50% ;
+}
+
+.mobile .jcc-header--topbar .jcc-dropbutton .label {
+  display: none ;
+}
+
+.mobile .buttons {
+  float: right ;
+  text-align: right;
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 50% ;
+  padding-top: 11px;
+}
+
+.mobile .buttons .jcc-dropbutton .label {
+  display: none ;
+}
+
+.mobile .buttons .mobile_button {
+  float: right;
+  display: inline-block;
+  padding-left: 0px;
+  width: 3rem ;
+  text-align: center;
+}
+
+.mobile .buttons .mobile_button:hover {
+  cursor: pointer;
+}
+
+.mobile .buttons .mobile_button svg {
+  width: 2rem ;
+  height: 2rem ;
+  color: #182d4f ;
+}
+
+.mobile .show-button {
+  display: none ;
+  position: absolute ;
+  top: 80px;
+  right: 0 ;
+  left: 0 ;
+}
+
+.mobile .usa-nav__primary {
+  margin-top: 0;
+}
+
+.mobile .usa-nav__primary button[aria-expanded="false"] {
+  display: none ;
+}
+
+.mobile .usa-nav__submenu {
+  display: block ;
+  background-color: white ;
+}
+
+.mobile .jcc-fieldset-search {
+  max-width: none;
+}
+
+.mobile .jcc-fieldset-search .usa-input {
+  max-width: none;
+}
+
+.mobile .jcc-primary-nav {
+  margin-top: -10px;
+  width: 50px;
+  padding-left: 0px;
+}
+
+.mobile .jcc-primary-nav .slicknav_btn {
+  margin-top: -1;
+}
+
+.mobile .jcc-primary-nav #js-header_menu--mobile .slicknav_nav {
+  position: absolute ;
+  right: 0 ;
+  left: 0 ;
+  top: 80px;
+}
+
+.mobile .jcc-primary-nav #js-header_menu--mobile .slicknav_nav .jcc-primary-nav__top_link {
+  text-align: left;
+  background-color: #182d4f ;
+}
+
 .jcc-footer-tall__container {
   padding-top: 4.5rem ;
   padding-bottom: 4.5rem ;
@@ -35295,150 +35439,6 @@ h3.jcc-header-group__title {
   margin-top: 0.5rem ;
   margin-left: 0 ;
   margin-right: 0 ;
-}
-
-.jcc-trial-header {
-  border-top-width: 0.25rem;
-  border-top-style: solid;
-  border-top-color: #29a197 ;
-  border-top-style: solid;
-}
-
-.jcc-trial-header .desktop {
-  display: none ;
-}
-
-.jcc-trial-header .desktop .jcc-header__container--topbar {
-  min-height: 7.5rem ;
-}
-
-.jcc-trial-header .mobile {
-  display: block ;
-}
-
-.mobile .jcc--header__mobile-container {
-  height: 50px;
-}
-
-.mobile .jcc-header__logo {
-  float: left ;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
-  width: 50% ;
-  display: block ;
-  height: 3rem ;
-}
-
-.mobile .jcc-header__logo .jcc-logo {
-  width: 100% ;
-}
-
-.mobile .jcc-header__logo .jcc-logo img {
-  width: 100% ;
-  max-width: 210px;
-  margin-top: 6px;
-}
-
-.mobile .jcc-header__logo div.jcc-logo {
-  position: relative ;
-  width: 100% ;
-}
-
-.mobile .jcc-header--topbar {
-  float: left;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
-  width: 50% ;
-}
-
-.mobile .jcc-header--topbar .jcc-dropbutton .label {
-  display: none ;
-}
-
-.mobile .buttons {
-  float: right ;
-  text-align: right;
-  display: inline-block;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
-  width: 50% ;
-  padding-top: 11px;
-}
-
-.mobile .buttons .jcc-dropbutton .label {
-  display: none ;
-}
-
-.mobile .buttons .mobile_button {
-  float: right;
-  display: inline-block;
-  padding-left: 0px;
-  width: 3rem ;
-  text-align: center;
-}
-
-.mobile .buttons .mobile_button:hover {
-  cursor: pointer;
-}
-
-.mobile .buttons .mobile_button svg {
-  width: 2rem ;
-  height: 2rem ;
-  color: #182d4f ;
-}
-
-.mobile .show-button {
-  display: none ;
-  position: absolute ;
-  top: 80px;
-  right: 0 ;
-  left: 0 ;
-}
-
-.mobile .usa-nav__primary {
-  margin-top: 0;
-}
-
-.mobile .usa-nav__primary button[aria-expanded="false"] {
-  display: none ;
-}
-
-.mobile .usa-nav__submenu {
-  display: block ;
-  background-color: white ;
-}
-
-.mobile .jcc-fieldset-search {
-  max-width: none;
-}
-
-.mobile .jcc-fieldset-search .usa-input {
-  max-width: none;
-}
-
-.mobile .jcc-primary-nav {
-  margin-top: -10px;
-  width: 50px;
-  padding-left: 0px;
-}
-
-.mobile .jcc-primary-nav .slicknav_btn {
-  margin-top: -1;
-}
-
-.mobile .jcc-primary-nav #js-header_menu--mobile .slicknav_nav {
-  position: absolute ;
-  right: 0 ;
-  left: 0 ;
-  top: 80px;
-}
-
-.mobile .jcc-primary-nav #js-header_menu--mobile .slicknav_nav .jcc-primary-nav__top_link {
-  text-align: left;
-  background-color: #182d4f ;
 }
 
 .jcc-header {
@@ -67688,6 +67688,19 @@ h3.jcc-header-group__title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
+  .jcc-trial-header .desktop {
+    display: block ;
+  }
+  .jcc-trial-header .mobile {
+    display: none ;
+  }
+  .jcc-header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 25% ;
+    position: relative ;
+  }
   .jcc-footer-tall__container .jcc-footer-tall {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -67726,19 +67739,6 @@ h3.jcc-header-group__title {
             flex: 1 0 0 ;
     width: auto ;
     text-align: right ;
-  }
-  .jcc-trial-header .desktop {
-    display: block ;
-  }
-  .jcc-trial-header .mobile {
-    display: none ;
-  }
-  .jcc-header__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto ;
-            flex: 0 0 auto ;
-    width: 25% ;
-    position: relative ;
   }
   .jcc-header__container {
     margin-left: auto ;

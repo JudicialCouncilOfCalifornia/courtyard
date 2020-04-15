@@ -15,5 +15,5 @@ $("#translate").click(function() {
 });
 
 $(function() {
-  $("#js-header-trial_menu--mobile").append($("#js-header_menu--mobile"));
+  $("#js-double-header_menu--mobile").append($("#js-header_menu--mobile"));
 });
