@@ -1,10 +1,11 @@
 import _ from "underscore";
 
+let guideResults = document.querySelector(".jcc-forms-filter__guide-results");
+let formResults = document.querySelector(".jcc-forms-filter__form-results");
+let searchInput = document.querySelector("#jcc-forms-filter__input");
+
 async function init() {
   console.log("form-lookup init");
-  let guideResults = document.querySelector(".jcc-forms-filter__guide-results");
-  let formResults = document.querySelector(".jcc-forms-filter__form-results");
-  let searchInput = document.querySelector("#jcc-forms-filter__input");
 
   let render = () => {
     let currentInput = searchInput.value;
@@ -10679,4 +10680,6 @@ let forms = [
   }
 ];
 
-init();
+if (guideResults && formResults && searchInput) {
+  init();
+}
