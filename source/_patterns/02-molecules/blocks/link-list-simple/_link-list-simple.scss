@@ -1,0 +1,6 @@
+.jcc-link-list--list_icons {
+  @include u-padding-left(6);
+  .jcc-link-list__list {
+    @include add-list-reset;
+  }
+}

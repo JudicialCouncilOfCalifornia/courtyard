@@ -1,0 +1,8 @@
+link_list:
+  list_icons: true
+  header: Link List Simple
+  items:
+    - url_title: "Form EJ-160"
+      url: "#"
+    - url_title: "Form EJ-165"
+      url: "#"
