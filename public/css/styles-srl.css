@@ -31857,16 +31857,6 @@ h3.jcc-header-group__title {
   padding: 0 ;
 }
 
-/* removing excessive white spacing */
-div[class^='jcc-'] + .jcc-text-section-aside__container .jcc-text-section-aside {
-  padding-top: 0  !important;
-}
-
-/* remove green horizontal rule if follows certain components */
-.jcc-hero ~ .jcc-text-section-aside__container .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card__title::after, .jcc-switchboard ~ .jcc-text-section-aside__container .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card__title::after {
-  background-color: transparent ;
-}
-
 .jcc-text-section-aside__container {
   margin-left: auto ;
   margin-right: auto ;
@@ -63085,12 +63075,6 @@ div[class^='jcc-'] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-tab-section__container .jcc-header-group__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.74rem;
-  }
-  .jcc-text-section-aside .jcc-text-section-aside__aside-main {
-    -webkit-box-flex: 0  !important;
-        -ms-flex: 0 0 auto  !important;
-            flex: 0 0 auto  !important;
-    width: 66.66667%  !important;
   }
   .jcc-text-section-aside__container {
     padding-left: 2rem ;
