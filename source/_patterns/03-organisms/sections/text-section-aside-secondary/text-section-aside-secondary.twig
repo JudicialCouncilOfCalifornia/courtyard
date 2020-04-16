@@ -1,0 +1,42 @@
+{% set classes = [
+    'jcc-text-section-aside',
+]|merge(text_section_aside_secondary.classes|default([''])) %}
+
+{% if text_section_aside_secondary.content and text_section_aside_secondary.aside %}
+    {% set classes_content = [
+        'jcc-text-section-aside__aside',
+        'jcc-text-section-aside__aside-main'
+    ]|merge(text_section_aside_secondary.classes|default([''])) %}
+{% else %}
+    {% set classes_content = [
+        'jcc-text-section-aside__aside'
+    ]|merge(text_section_aside_secondary.classes|default([''])) %}
+{% endif %}
+
+{% if not text_section_aside_secondary.content and text_section_aside_secondary.aside %}
+    {% set classes_aside = [
+        'jcc-text-section-aside__aside',
+        'jcc-text-section-aside__aside-main'
+    ]|merge(text_section_aside_secondary_secondary.classes|default([''])) %}
+{% else %}
+    {% set classes_aside = [
+        'jcc-text-section-aside__aside'
+    ]|merge(text_section_aside_secondary.classes|default([''])) %}
+{% endif %}
+
+
+<div class="jcc-text-section-aside__container">
+    <div class="{{ classes|join(' ')|trim }}"{% if text_section_aside_secondary.id %} id="{{ text_section_aside_secondary.id }}"{% endif %}>
+        {% if text_section_aside_secondary.content %}
+            <div class="{{ classes_content|join(' ')|trim }}">
+                {{ text_section_aside_secondary.content }}
+            </div>
+        {% endif %}
+
+        {% if text_section_aside_secondary.aside %}
+            <div class="{{ classes_aside|join(' ')|trim }}">
+                {{ text_section_aside_secondary.aside }}
+            </div>
+        {% endif %}
+    </div>
+</div>
