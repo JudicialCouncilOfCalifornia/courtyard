@@ -1,8 +1,9 @@
 hero_icon_nav:
-  background_img: '../../images/alameda.jpg'
-  brow: 'Welcome to the'
-  title: 'Superior Court of Alameda'
-  subtitle: 'What would you like to do?'
+  hero_img_banner:
+    background_img: '../../images/alameda.jpg'
+    brow: 'Welcome to the'
+    title: 'Superior Court of Alameda'
+    subtitle: 'What would you like to do?'
   links:
     icons:
       - title: 'Jury Service'

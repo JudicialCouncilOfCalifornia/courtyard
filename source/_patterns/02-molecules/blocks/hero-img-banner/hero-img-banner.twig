@@ -1,0 +1,22 @@
+<div class="jcc-hero-img-banner__hero">
+  {% if hero_img_banner.background_img %}
+  <img src="{{ hero_img_banner.background_img }}">
+  {% endif %}
+  {% if hero_img_banner.brow  %}
+  <div class="jcc-hero-img-banner__hero-brow">
+    {{ hero_img_banner.brow }}
+  </div>
+  {% endif %}
+  {% if hero_img_banner.title  %}
+  <div class="jcc-hero-img-banner__hero-title">
+    {{ hero_img_banner.title }}
+  </div>
+  {% endif %}
+  <div class="jcc-hero-img-banner__hero-divider">
+  </div>
+  {% if hero_img_banner.subtitle  %}
+  <div class="jcc-hero-img-banner__hero-subtitle">
+    {{ hero_img_banner.subtitle }}
+  </div>
+  {% endif %}
+</div>
