@@ -2,6 +2,8 @@ var themeSwitcher = document.querySelector(".jcc-themebar__switcher");
 
 var theme = localStorage["theme"] || "srl";
 
+if (themeSwitcher) {
+
 themeSwitcher.addEventListener("change", function() {
   var themeName = this.value;
   console.log("name: " + themeName);
@@ -31,4 +33,6 @@ if (theme == "trial-court") {
   document.getElementById("trial").disabled = false;
   themeSwitcher.value = theme;
   console.log(theme);
+}
+
 }
