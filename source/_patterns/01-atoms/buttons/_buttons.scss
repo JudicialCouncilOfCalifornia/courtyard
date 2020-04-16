@@ -14,21 +14,48 @@
   @include u-radius(0);
 }
 
-.usa-button--exterior {
-  @include u-padding-y(4);
-  @include u-padding-left(4);
+.usa-button--external {
+  @include u-padding-y(2);
+  @include u-padding-left(3);
   @include u-padding-right(5);
-  @include u-font-size(body, 6);
+  @include u-font-size(body, 7);
   @include u-font-weight(normal);
   @include u-radius("pill");
   @include u-bg(secondary);
+  position: relative;
   &:after {
     content: "";
     display: block;
-    background-image: url("../images/graphic/right-caret-white.svg");
+    background-image: url("../images/graphics/right-arrow-white.svg");
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 8px;
+    top: 18px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+  }
+}
+
+.usa-button--form {
+  @include u-padding-y(2);
+  @include u-padding-left(7);
+  @include u-padding-right(3);
+  @include u-font-size(body, 7);
+  @include u-font-weight(normal);
+  @include u-radius("pill");
+  @include u-bg(secondary);
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    background-image: url("../images/graphics/form.svg");
+    position: absolute;
+    left: 17px;
+    top: 11px;
+    width: 30px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

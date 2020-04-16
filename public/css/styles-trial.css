@@ -32664,24 +32664,53 @@ through all possible variants
   border-radius: 0 ;
 }
 
-.usa-button--exterior {
-  padding-bottom: 2rem ;
-  padding-top: 2rem ;
-  padding-left: 2rem ;
+.usa-button--external {
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+  padding-left: 1.5rem ;
   padding-right: 2.5rem ;
-  font-size: 1.06rem;
+  font-size: 1.12rem;
   font-weight: normal ;
   border-radius: 99rem ;
   background-color: #1d8788 ;
+  position: relative;
 }
 
-.usa-button--exterior:after {
+.usa-button--external:after {
   content: "";
   display: block;
-  background-image: url("../images/graphic/right-caret-white.svg");
+  background-image: url("../images/graphics/right-arrow-white.svg");
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 8px;
+  top: 18px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.usa-button--form {
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+  padding-left: 3.5rem ;
+  padding-right: 1.5rem ;
+  font-size: 1.12rem;
+  font-weight: normal ;
+  border-radius: 99rem ;
+  background-color: #1d8788 ;
+  position: relative;
+}
+
+.usa-button--form:before {
+  content: "";
+  display: block;
+  background-image: url("../images/graphics/form.svg");
+  position: absolute;
+  left: 17px;
+  top: 11px;
+  width: 30px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .usa-button--unstyled {
