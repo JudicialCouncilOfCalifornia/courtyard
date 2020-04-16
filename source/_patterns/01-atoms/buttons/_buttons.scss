@@ -14,6 +14,24 @@
   @include u-radius(0);
 }
 
+.usa-button--exterior {
+  @include u-padding-y(4);
+  @include u-padding-left(4);
+  @include u-padding-right(5);
+  @include u-font-size(body, 6);
+  @include u-font-weight(normal);
+  @include u-radius("pill");
+  @include u-bg(secondary);
+  &:after {
+    content: "";
+    display: block;
+    background-image: url("../images/graphic/right-caret-white.svg");
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
 .usa-button--unstyled {
   @include u-padding(0);
 }

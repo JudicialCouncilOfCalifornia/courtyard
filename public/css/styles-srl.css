@@ -27771,6 +27771,26 @@ through all possible variants
   border-radius: 0 ;
 }
 
+.usa-button--exterior {
+  padding-bottom: 2rem ;
+  padding-top: 2rem ;
+  padding-left: 2rem ;
+  padding-right: 2.5rem ;
+  font-size: 1.06rem;
+  font-weight: normal ;
+  border-radius: 99rem ;
+  background-color: #168092 ;
+}
+
+.usa-button--exterior:after {
+  content: "";
+  display: block;
+  background-image: url("../images/graphic/right-caret-white.svg");
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .usa-button--unstyled {
   padding: 0 ;
 }

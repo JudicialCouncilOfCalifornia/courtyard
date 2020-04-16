@@ -1,0 +1,4 @@
+link_button:
+  text: 'Click me!'
+  url: "#"
+  style: 'exterior'
