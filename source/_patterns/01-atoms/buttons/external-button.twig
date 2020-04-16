@@ -1,10 +1,12 @@
-{% set attributes = attributes ? attributes : create_attribute() %}
-
 {% set classes = [
   'usa-button',
-  'usa-button--' ~ link_button.style|default('external'),
+  'usa-button--' ~ external_button.style|default('external'),
 ]|merge(classes|default([''])) %}
-
-<a{{ attributes.addClass(classes) }} href="{{ link_button.url }}">
-  {{- link_button.text -}}
+<div class="">
+<a class="{{ classes|join(' ')|trim }} external-button" href="{{ external_button.url }}">
+  {{- external_button.text -}}
 </a>
+{% if external_button.explainer %}
+  <span class="external-explainer">{{- external_button.explainer -}}</div>
+{% endif %}
+</div>

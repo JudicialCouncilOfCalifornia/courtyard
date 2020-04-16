@@ -1,4 +1,4 @@
-link_button:
-  text: 'Click me!'
+external_button:
+  text: 'Start Forms Assistant'
   url: "#"
-  style: 'form'
+  style: 'external'
