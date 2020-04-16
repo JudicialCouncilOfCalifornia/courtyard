@@ -1,8 +1,9 @@
 import _ from "underscore";
 
+let formResults = document.querySelector(".form-results");
+
 async function init() {
   console.log("all-forms init");
-  let formResults = document.querySelector(".form-results");
 
   let render = () => {
     formResults.innerHTML = forms.map(form => formResult(form)).join("\n");
@@ -10409,4 +10410,6 @@ let forms = [
   }
 ];
 
-init();
+if (formResults) {
+  init();
+}
