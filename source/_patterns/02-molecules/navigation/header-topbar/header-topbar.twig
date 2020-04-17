@@ -2,10 +2,12 @@
   <div class="jcc-header__container--topbar">
     <div class="jcc-header__logo--topbar">
       {% include '@atoms/icons/logo.twig' with  {
-        logo: logo
+        logo: header_topbar.logo
       } %}
     </div>
     {% include '@atoms/forms/search-input.twig' %}
-    {% include '@atoms/forms/dropbutton.twig' %}
+    {% include '@atoms/forms/dropbutton.twig' with {
+      dropbutton: header_topbar.dropbutton
+    } %}
   </div>
 </div>

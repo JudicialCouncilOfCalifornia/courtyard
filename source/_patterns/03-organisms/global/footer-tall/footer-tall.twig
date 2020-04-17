@@ -9,12 +9,12 @@
         } %}
 
         <div class="jcc-footer-tall__links">
-            {% if patternlab %}
+            {% if footer_tall.links.patternlab %}
                 {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
-                    inline_nav: footer_tall.inline_nav
+                    inline_nav: footer_tall.links.inline_nav
                 } %}
             {% else %}
-                {{ content }}
+                {{ footer_tall.links.content }}
             {% endif %}
         </div>
     </div>

@@ -1,15 +1,21 @@
 header_trial:
-  globe:
-    name: "globe"
-    title: "Translate"
-    decorative: true
-  search:
-    name: "search"
-    title: "Search"
-    decorative: true
-  logo:
-    src: "../../images/jcc-logo-long.png"
-    alt: "trial"
+  header_topbar:
+    logo:
+      src: "../../images/jcc-logo-long.png"
+      alt: "trial"
+    dropbutton:
+      icon:
+        name: "globe-2"
+        title: "Translate"
+        decorative: true
+      label: "Translate"
+      links:
+        - title: "Klingon"
+          href: "#"
+        - title: "Spanish"
+          href: "#"
+        - title: "Vietnamese"
+          href: "#"
   primary_nav:
     items:
       - name: "Online Services"
@@ -95,3 +101,15 @@ header_trial:
           - name: "Step-parent Adoptions"
             description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
             url: "#"
+  mobile:
+    logo:
+      src: "../../images/jcc-logo-long.png"
+      alt: "trial"
+    globe:
+      name: "globe"
+      title: "Translate"
+      decorative: true
+    search:
+      name: "search"
+      title: "Search"
+      decorative: true

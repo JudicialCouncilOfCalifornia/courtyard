@@ -1,13 +1,17 @@
-menu_items:
-  - name: Link One
-    url: "#"
-    url_attributes: ""
-  - name: Link Two
-    url: "#"
-    url_attributes: ""
-  - name: Link Three
-    url: "#"
-    url_attributes: ""
-logo:
-  src: "../../images/jcc-logo-long.png"
-  alt: "trial"
+header_topbar:
+  logo:
+    src: "../../images/jcc-logo-long.png"
+    alt: "trial"
+  dropbutton:
+    icon:
+      name: "globe-2"
+      title: "Translate"
+      decorative: true
+    label: "Translate"
+    links:
+      - title: "Igpe Atinle"
+        href: "#"
+      - title: "Spanish"
+        href: "#"
+      - title: "Vietnamese"
+        href: "#"

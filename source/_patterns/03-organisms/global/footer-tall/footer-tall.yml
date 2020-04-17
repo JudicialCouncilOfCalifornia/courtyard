@@ -26,9 +26,12 @@ footer_tall:
           decorative: false
         title: "RSS"
         url: "#"
-  inline_nav:
-    items:
-      - name: "Privacy Policy"
-        url: "https://www.courts.ca.gov/11530.htm"
-      - name: "Terms & Conditions"
-        url: "https://www.courts.ca.gov/11529.htm"
+  links:
+    patternlab: true
+    inline_nav:
+      items:
+        - name: "Privacy Policy"
+          url: "https://www.courts.ca.gov/11530.htm"
+        - name: "Terms & Conditions"
+          url: "https://www.courts.ca.gov/11529.htm"
+    content: "Raw content alternative to inline_nav component."
