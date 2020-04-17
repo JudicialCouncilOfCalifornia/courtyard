@@ -1,9 +1,9 @@
 {% if icon.name %}
   {% spaceless %}
-    <svg class="icon icon-{{ icon.name }}" role="img"
+    <svg class="icon icon-{{ icon.name }} {{ icon.width|default('') }} {{ icon.height|default('') }}" role="img"
       {%- if icon.title %} title="{{ icon.title }}"{% endif -%}
-      {%- if decorative %} aria-hidden="true"{% endif -%}>
-      <use xlink:href="{{ icon.file }}#i-{{ icon.name }}"></use>
+      {%- if decorative %} aria-hidden="true"{% endif -%}">
+      <use class="{{ icon.color|default('') }}" xlink:href="{{ icon.file }}#i-{{ icon.name }}"></use>
     </svg>
   {% endspaceless %}
 {% endif %}
