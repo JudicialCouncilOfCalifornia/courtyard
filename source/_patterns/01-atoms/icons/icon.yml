@@ -2,6 +2,6 @@ icon:
   name: "file"
   title: "File"
   decorative: false
-  width: 2
-  height: 2
-  color: base-dark
+  width: width-2
+  height: height-2
+  color: text-base-dark
