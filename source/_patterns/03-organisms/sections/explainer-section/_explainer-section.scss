@@ -1,0 +1,66 @@
+.jcc-explainers-section {
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
+}
+
+.jcc-explainers__container {
+  @include section-container;
+}
+
+.jcc-explainers {
+  @include unstyled-list();
+  @include at-media(desktop) {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-explainers__item {
+    @include u-margin-bottom(3);
+    flex: auto 1;
+  }
+  .jcc-explainer {
+    @include u-height(full);
+  }
+}
+
+.jcc-explainers-section--has-two-columns,
+.jcc-explainers-section--has-three-columns {
+  .jcc-explainers {
+    @include at-media(desktop) {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+}
+
+.jcc-explainers-section--has-one-column {
+  .jcc-explainers__item {
+    @include u-width(full);
+  }
+}
+
+.jcc-explainers-section--has-two-columns {
+  .jcc-explainers__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-explainers-section--has-three-columns {
+  .jcc-explainers__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}

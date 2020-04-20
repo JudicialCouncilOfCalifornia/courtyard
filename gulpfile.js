@@ -207,21 +207,21 @@ const watch = cb => {
   gulp.watch(config.css.src, srlCss);
   gulp.watch(config.css.trial, trialCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.pattern_lab.src, buildPattern);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
 const trialwatch = cb => {
   gulp.watch(config.css.trial, trialCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.pattern_lab.src, trialbuild);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
 const srlwatch = cb => {
   gulp.watch(config.css.srl, srlCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.pattern_lab.src, srlbuild);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
@@ -245,6 +245,7 @@ const build = gulp.series(
   trialCss,
   plJs
 );
+const buildPattern = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plJs);
 const srlbuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, srlCss, plJs);
 const trialbuild = gulp.series(
   plPhp,

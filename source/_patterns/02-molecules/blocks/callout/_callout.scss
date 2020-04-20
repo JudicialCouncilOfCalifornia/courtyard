@@ -1,0 +1,17 @@
+.jcc-callout__block {
+  @extend .usa-prose;
+  @include u-padding(3);
+  @include u-bg(secondary-lighter);
+  @include u-border-left("05", accent-warm);
+  @include u-margin-top(2);
+  @include u-color(primary);
+  @include u-bg("white");
+  @include u-text("bold");
+}
+
+.jcc-callout__italic {
+  @extend .usa-prose;
+  @include u-font(heading, 8);
+  @include u-color(primary);
+  @include u-text("italic");
+}

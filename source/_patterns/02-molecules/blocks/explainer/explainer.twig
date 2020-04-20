@@ -1,0 +1,20 @@
+{% set tag = explainer.tag|default('h3') %}
+{% set url_attributes = explainer.url_attributes ? explainer.url_attributes : create_attribute() %}
+
+<div class="jcc-explainer">
+  {% if explainer.icon %}
+    <div class="jcc-explainer__icon">
+      <img src="{{ explainer.icon }}">
+    </div>
+  {% endif %}
+
+  {% if explainer.brow %}
+    <div class="jcc-explainer__brow">{{ explainer.brow }}</div>
+  {% endif %}
+
+  {% if explainer.content %}
+    <p class="jcc-explainer__content">
+    {{ explainer.content }}
+  </p>
+  {% endif %}
+</div>
