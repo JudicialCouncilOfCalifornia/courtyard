@@ -1,6 +1,6 @@
 link_list:
   list_icons: true
-  header: Link List Simple
+  header: "Link List Simple"
   items:
     - url_title: "Form EJ-160"
       url: "#"
