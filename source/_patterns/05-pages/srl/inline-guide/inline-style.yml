@@ -1,0 +1,198 @@
+hero:
+  breadcrumbs:
+    - label: 'Home'
+      url: '#'
+    - label: 'Property Law'
+  title: 'What to know about property law if you’re getting a divorce'
+  lead: 'When you divorce, the court has to formally approve how you’ll divide your property and debts'
+  column_variant: 'has-two-columns-threequarter'
+  body: "Part of your divorce involves dividing your property and debts.  Even if you divided everything informally when you separated, the court still needs to make a formal order about these issues. This doesn’t mean you have to go to court. The court could formally approve an agreement you and your spouse write up. If you can't decide, the court can decide for you at a hearing or trial. To tell the court what you want to happen, it helps to know some terms and basic concepts about property law in California. You will see these terms on many of the court forms you’ll need to use."
+  column_content_right:
+    include():
+      pattern: molecules-jump-nav
+      with:
+        jump_nav:
+          items:
+            - name: "Hearing Date and Time"
+            - name: "What the Other Party is Asking the Court to Decide"
+            - name: "Orders Made Before the Hearing"
+            - name: "What You Can Do"
+
+entries:
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        -  "<h3>California divides property two categories: <em>community</em> property and <em>separate</em> property  </h3>
+            <p><strong>Community property</strong>: This is what either of you earned (or debt you took out) after you married, but before you separated. The “community” is you and your spouse. The property belongs to you both equally.</p>
+
+            <p><strong>Separate property:</strong> This is what you had before you married or got after you separated.  Gifts or inheritance to one of you is also separate property. Separate property means it belongs to one of you.</p>
+
+            <p>Community and separate property applies to property and debts you owe.</p>
+
+            <p>In general, after a divorce, you keep your separate property and divide your community property.
+            </p>"
+    column_content_right:
+      join():
+        - '<div class="margin-top-4">'
+        - include():
+            pattern: 'molecules-callout'
+            with:
+              callout:
+                variant: "block"
+        - '</div>'
+
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<h3>Community or separate? It generally depends on your <strong><em>date of separation</em></strong></h3>
+          <p>You need to know when you married and when you separated to figure out what's separate property and what's community property. The day of your marriage is generally easy to figure out. Separation can be trickier.
+          <strong>Figure out your date of separation:</strong></p>"
+        - include():
+            pattern: 'molecules-list-group'
+            with:
+              list_group:
+                items:
+                  - title: "Start with the day that you let your spouse know (by actions or words) that you wanted to end your marriage "
+                    excerpt: " "
+                  - title: "Confirm that after that day, your actions were consistent with wanting to end your marriage"
+                    excerpt: " "
+
+        - "<p>For some people, this is the day they moved out. For others, this is a day the two spouses agreed together that their marriage was over, and they made plans to divorce.  From that day forward, what you or your spouse earned or loans you took out were no longer community property. </p>"
+    column_content_right:
+      join():
+        - '<div class="margin-bottom-4">'
+        - include():
+            pattern: 'molecules-callout'
+            with:
+              callout:
+                variant: "italic"
+        - '</div>'
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<p>For some people, this is the day they moved out. For others, this is a day the two spouses agreed together that their marriage was over, and they made plans to divorce.  From that day forward, what you or your spouse earned or loans you took out were no longer community property</p>"
+    column_content_right:
+      join():
+        - '<div class="margin-bottom-4">'
+        - include():
+            pattern: 'molecules-callout'
+            with:
+              callout:
+                variant: "italic"
+        - '</div>'
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<h3>How to tell when something is separate property</h3>"
+        - "<p><strong>Separate property is:</strong></p>"
+        - include():
+            pattern: 'molecules-list-group'
+            with:
+              list_group:
+                items:
+                  - title: "Anything you earned or owned (or a debt) from before you married or after you separated"
+                    excerpt: " "
+                  - title: "Gifts or inheritance (to one of you) even if it was given or inherited when you were married"
+                    excerpt: " "
+        - "<p><strong>Anything you buy with separate property or you earn from separate property is also separate property. </strong></p>"
+        - include():
+            pattern: 'organisms-explainer-section'
+            with:
+              explainer_section:
+                column_variant: "has-two-columns"
+                explainers:
+                  - brow: "Example"
+                    content: 'Someone took money from my paycheck'
+                  - brow: "Wage Garnishment"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
+        - "<p>If you have separate property, it belongs only to you, as long as it was kept separately. Kept it separately means you didn’t give it to your spouse. Debts can be separate property too, such as credit cards you might get after you separate.</p>"
+        - "<p><strong>After divorce, each of you can keep your separate property.</strong>The court does not divide separate property. Instead, the court “confirms” it is your separate property. </p>"
+        - "<strong>Anything you buy with separate property or you earn from separate property is also separate property. </strong>"
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<h3>How to tell when something is community property</h3>"
+        - "<p><strong>Community property is:</strong></p>"
+        - include():
+            pattern: 'molecules-list-group'
+            with:
+              list_group:
+                items:
+                  - title: "Anything you earned while married"
+                    excerpt: " "
+                  - title: "Anything you bought with money you earned while married"
+                    excerpt: " "
+                  - title: "Any debt you take on while married"
+                    excerpt: " "
+        - include():
+            pattern: 'organisms-explainer-section'
+            with:
+              explainer_section:
+                column_variant: "has-one-column"
+                explainers:
+                  - brow: "EXAMPLE"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
+                  - brow:
+                    content:
+        - "<p>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property.<strong>Community property is:</strong></p>"
+        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<h3>How to tell when something is separate property</h3>"
+        - "<p><strong>Community property is:</strong></p>"
+        - include():
+            pattern: 'molecules-list-group'
+            with:
+              list_group:
+                items:
+                  - title: "Anything you earned while married"
+                    excerpt: " "
+                  - title: "Anything you bought with money you earned while married"
+                    excerpt: " "
+                  - title: "Any debt you take on while married"
+                    excerpt: " "
+        - include():
+            pattern: 'organisms-explainer-section'
+            with:
+              explainer_section:
+                column_variant: "has-one-column"
+                explainers:
+                  - brow: "EXAMPLE"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
+        - "<p>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property.<strong>Community property is:</strong></p>"
+        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+- type: 'section'
+  text_section:
+    headergroup: ''
+    column_content_left:
+      join():
+        - "<h3>Other Styles</h3>"
+        - "<p>Apparently we had reached a great height in the <span class='jcc-tooltip jcc-tooltip-primary tooltip'>atmosphere<span class='top'> <span>Dolor sit amet, consectetur adipiscing elit.</span>
+        <i></i></span></span>, for the sky was a dead black, and the stars had ceased to twinkle.</p>"
+        - include():
+            pattern: 'organisms-explainer-section'
+            with:
+              explainer_section:
+                column_variant: "has-one-column"
+                explainers:
+                  - brow: "EXAMPLE"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
+                  - brow: "EXAMPLE"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
+                  - brow: "EXAMPLE"
+                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'

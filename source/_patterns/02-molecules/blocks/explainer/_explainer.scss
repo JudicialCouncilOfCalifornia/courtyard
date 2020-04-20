@@ -1,0 +1,37 @@
+.jcc-explainer {
+  @include u-radius(lg);
+  @include u-padding(3);
+  @include u-text(base-darkest);
+  @include u-position(relative);
+  @include u-text(left);
+  @include u-bg(success-lighter);
+}
+
+.jcc-explainer__brow {
+  @include u-margin-bottom(1);
+  text-transform: uppercase;
+  @include u-text("bold");
+}
+
+.jcc-explainer__content {
+  @include u-font("body", 4);
+  @include u-line-height("body", 5);
+
+  a {
+    @include u-text(primary-dark);
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      @include u-position(absolute);
+      @include u-left(0);
+      @include u-top(0);
+      @include u-right(0);
+      @include u-bottom(0);
+    }
+  }
+}
+
+.jcc-explainer.is-secondary {
+  @include u-bg(base-lightest);
+}
