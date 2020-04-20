@@ -54,6 +54,9 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
+    h3 {
+      @include u-font(heading, 11);
+    }
   }
 }
 
@@ -88,9 +91,11 @@
     @include u-width(full);
   }
 
-  .jcc-text-section__column-left {
-    @include at-media(desktop) {
-      @include grid-col(8);
+  .jcc-text-section {
+    .jcc-text-section__column-left {
+      @include at-media(desktop) {
+        @include grid-col(8);
+      }
     }
   }
 

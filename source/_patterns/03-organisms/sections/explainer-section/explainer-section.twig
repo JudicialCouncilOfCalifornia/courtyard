@@ -5,6 +5,7 @@
 ]|merge(explainer_section.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if explainer_section.id %} id="{{ explainer_section.id }}"{% endif %}>
+  <div class="jcc-explainers__container">
     {% if explainer_section.headergroup %}
       {% include '@molecules/text/header-group/header-group.twig' with {
         headergroup: explainer_section.headergroup
@@ -20,4 +21,5 @@
         </li>
       {% endfor %}
     </ul>
+  </div>
 </div>

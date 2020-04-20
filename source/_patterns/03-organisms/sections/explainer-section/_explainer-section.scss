@@ -10,7 +10,8 @@
 }
 
 .jcc-explainers__container {
-  @include section-container;
+  @include u-padding-top(3);
+  @include u-padding-bottom(0);
 }
 
 .jcc-explainers {
