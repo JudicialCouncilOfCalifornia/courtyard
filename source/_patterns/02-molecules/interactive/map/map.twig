@@ -1,0 +1,8 @@
+{% set classes = [
+  'jcc-map',
+  map.full ? 'jcc-map--full' : '',
+]|merge(map.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {{ map }}
+</div>

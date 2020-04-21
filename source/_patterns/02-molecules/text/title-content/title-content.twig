@@ -1,0 +1,16 @@
+{% set classes = [
+  'jcc-title-content',
+]|merge(title_content.classes|default([])) %}
+
+{% set tag = title_content.title.tag|default('h2') %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if title_content.title %}
+    <{{ tag }} class="jcc-title-content__title">{{ title_content.title.title }}</{{ tag }}>
+  {% endif %}
+  {% if title_content.content %}
+    <div class="jcc-title-content__content">
+      {{ title_content.content }}
+    </div>
+  {% endif %}
+</div>
