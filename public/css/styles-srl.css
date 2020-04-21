@@ -30689,6 +30689,7 @@ h3.jcc-header-group__title {
   top: 80px;
   right: 0 ;
   left: 0 ;
+  z-index: 99999 ;
 }
 
 .mobile .usa-nav__primary {
@@ -30726,6 +30727,7 @@ h3.jcc-header-group__title {
   position: absolute ;
   right: 0 ;
   left: 0 ;
+  z-index: 99999 ;
   top: 80px;
 }
 

@@ -90,6 +90,7 @@
     top: 80px;
     @include u-right(0);
     @include u-left(0);
+    @include u-z("top");
   }
   .usa-nav__primary {
     margin-top: 0;
@@ -118,6 +119,7 @@
       @include u-position(absolute);
       @include u-right(0);
       @include u-left(0);
+      @include u-z("top");
       top: 80px;
       .jcc-primary-nav__top_link {
         text-align: left;
