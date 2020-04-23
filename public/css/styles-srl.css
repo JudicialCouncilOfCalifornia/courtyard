@@ -28663,6 +28663,57 @@ a:visited {
   background-color: #f9f9f9 ;
 }
 
+.jcc-hero-img-banner__hero {
+  text-align: center ;
+  color: white ;
+  height: 430px;
+  width: 100% ;
+  position: relative ;
+  background-color: #01223e;
+  z-index: -1;
+  padding: 7em 2em 2em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.jcc-hero-img-banner__hero-brow {
+  text-transform: uppercase;
+  z-index: 1;
+  font-size: 24px;
+}
+
+.jcc-hero-img-banner__hero-title {
+  z-index: 1;
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.99rem;
+}
+
+.jcc-hero-img-banner__hero-divider {
+  width: 5rem ;
+  border-bottom: 2px solid white;
+  margin: 20px auto;
+  z-index: 1;
+}
+
+.jcc-hero-img-banner__hero-subtitle {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.49rem;
+  font-style: italic;
+  z-index: 1;
+}
+
+.jcc-hero-img-banner__hero img {
+  position: absolute ;
+  left: 0 ;
+  top: 0 ;
+  width: 100% ;
+  opacity: 0.3;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 .jcc-hero {
   position: relative ;
   background-color: #eff6fb ;
@@ -31360,55 +31411,8 @@ h3.jcc-header-group__title {
   padding-bottom: 4rem ;
 }
 
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero {
-  text-align: center ;
-  color: white ;
-  height: 430px;
-  width: 100% ;
-  position: relative ;
-  background-color: #01223e;
-  z-index: -1;
+.jcc-hero-icon-nav .jcc-hero-img-banner__hero {
   padding: 5em 2em 2em;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-brow {
-  text-transform: uppercase;
-  z-index: 1;
-  font-size: 24px;
-}
-
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-title {
-  z-index: 1;
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.99rem;
-}
-
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-divider {
-  width: 5rem ;
-  border-bottom: 2px solid white;
-  margin: 20px auto;
-  z-index: 1;
-}
-
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero-subtitle {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.49rem;
-  font-style: italic;
-  z-index: 1;
-}
-
-.jcc-hero-icon-nav .jcc-hero-icon-nav__hero img {
-  position: absolute ;
-  left: 0 ;
-  top: 0 ;
-  width: 100% ;
-  opacity: 0.3;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
 }
 
 .jcc-hero-icon-nav .jcc-hero-icon-nav__nav {
@@ -63070,6 +63074,14 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.49rem;
   }
+  .jcc-hero-img-banner__hero-title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 3.48rem;
+  }
+  .jcc-hero-img-banner__hero-subtitle {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.99rem;
+  }
   .jcc-hero__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -63645,14 +63657,6 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
     width: 33.33333% ;
-  }
-  .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-title {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 3.48rem;
-  }
-  .jcc-hero-icon-nav .jcc-hero-icon-nav__hero-subtitle {
-    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-    font-size: 1.99rem;
   }
   .jcc-hero-icon-nav .jcc-hero-icon-nav__nav {
     padding-left: 2rem ;
