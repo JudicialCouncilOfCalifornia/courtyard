@@ -2,7 +2,6 @@
   > :first-child {
     @include u-margin-top(0);
     @include u-padding-top(0);
-    display: none;
   }
 
   > :last-child {
