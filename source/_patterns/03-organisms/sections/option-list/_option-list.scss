@@ -1,0 +1,42 @@
+.jcc-options__container {
+  @include section-container;
+}
+
+.jcc-options {
+  @include unstyled-list();
+  @include at-media(desktop) {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-options__item {
+    @include u-margin-bottom(3);
+  }
+}
+
+.jcc-options-list {
+  .jcc-options__item {
+    @include grid-col(10);
+  }
+}
+
+.jcc-options-list,
+.jcc-options-list--has-two-columns {
+  .jcc-options {
+    @include u-width(full);
+    @include at-media(desktop) {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+}
+
+.jcc-options-list--has-two-columns {
+  .jcc-options__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}

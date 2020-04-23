@@ -1,0 +1,21 @@
+.jcc-option {
+  @include u-radius(lg);
+  @include u-padding(3);
+  @include u-text(base-darkest);
+  @include u-position(relative);
+  @include u-text(left);
+  &:before {
+    content: "";
+    @include u-display(block);
+    @include u-bg(accent-warm);
+    @include u-width(6);
+    @include u-height(0.5);
+    @include u-margin-bottom(1);
+  }
+  h6 {
+    @include u-margin-bottom(2px);
+  }
+  li {
+    @include u-display(block);
+  }
+}

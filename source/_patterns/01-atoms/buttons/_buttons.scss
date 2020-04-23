@@ -14,6 +14,57 @@
   @include u-radius(0);
 }
 
+.external-button {
+  @include u-padding-y(2);
+  @include u-padding-left(3);
+  @include u-padding-right(5);
+  @include u-font-size(body, 7);
+  @include u-font-weight(normal);
+  @include u-radius("pill");
+  @include u-bg(secondary);
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+}
+
+.usa-button--external {
+  @include u-padding-left(3);
+  @include u-padding-right(5);
+  &:after {
+    background-image: url("../images/graphics/right-arrow-white.svg");
+    right: 8px;
+    top: 19px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.usa-button--form {
+  @include u-padding-left(7);
+  @include u-padding-right(3);
+  &:before {
+    content: "";
+    background-image: url("../images/graphics/form.svg");
+    left: 17px;
+    top: 11px;
+    width: 30px;
+    height: 25px;
+    background-size: cover;
+  }
+}
+
+.external-explainer {
+  @include u-font-size(body, 4);
+  @include u-color(primary);
+  @include u-text("italic");
+}
+
 .usa-button--unstyled {
   @include u-padding(0);
 }

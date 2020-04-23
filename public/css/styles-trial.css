@@ -32664,6 +32664,61 @@ through all possible variants
   border-radius: 0 ;
 }
 
+.external-button {
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+  padding-left: 1.5rem ;
+  padding-right: 2.5rem ;
+  font-size: 1.12rem;
+  font-weight: normal ;
+  border-radius: 99rem ;
+  background-color: #1d8788 ;
+  position: relative;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.external-button:after, .external-button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.usa-button--external {
+  padding-left: 1.5rem ;
+  padding-right: 2.5rem ;
+}
+
+.usa-button--external:after {
+  background-image: url("../images/graphics/right-arrow-white.svg");
+  right: 8px;
+  top: 19px;
+  width: 20px;
+  height: 20px;
+}
+
+.usa-button--form {
+  padding-left: 3.5rem ;
+  padding-right: 1.5rem ;
+}
+
+.usa-button--form:before {
+  content: "";
+  background-image: url("../images/graphics/form.svg");
+  left: 17px;
+  top: 11px;
+  width: 30px;
+  height: 25px;
+  background-size: cover;
+}
+
+.external-explainer {
+  font-size: 0.93rem;
+  color: #005ea2 ;
+  font-style: italic ;
+}
+
 .usa-button--unstyled {
   padding: 0 ;
 }
@@ -33374,31 +33429,31 @@ a:visited {
   line-height: 1 ;
 }
 
-.usa-alert--info .jcc-alert__body {
-  background-image: url("../img/alerts/info.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/info.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
-  padding-left: 3rem ;
+.jcc-alert__body.usa-alert--no-icon {
+  background-image: none !important;
 }
 
-.usa-alert--success .jcc-alert__body {
-  background-image: url("../img/alerts/success.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/success.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
+.usa-alert--error .jcc-alert__body {
+  background-image: url(../images/error.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
   padding-left: 3rem ;
 }
 
 .usa-alert--warning .jcc-alert__body {
-  background-image: url("../img/alerts/warning.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/warning.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
+  background-image: url(../images/warning.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  padding-left: 3rem ;
+}
+
+.usa-alert--success .jcc-alert__body {
+  background-image: url(../images/success.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  padding-left: 3rem ;
+}
+
+.usa-alert--info .jcc-alert__body {
+  background-image: url(../images/info.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
   padding-left: 3rem ;
 }
 
 .usa-alert--error .jcc-alert__body {
-  background-image: url("../img/alerts/error.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  background-image: url("../img/alerts/error.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
   padding-left: 3rem ;
 }
 
@@ -33413,7 +33468,8 @@ a:visited {
   padding-top: 0.75rem ;
   padding-right: 1.25rem ;
   background-size: 1.6rem;
-  background-position: 10px 9px !important;
+  background-repeat: no-repeat;
+  background-position: 10px 13px !important;
 }
 
 .jcc-alert__heading {
@@ -33428,10 +33484,9 @@ a:visited {
   display: inline ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99rem;
-}
-
-.jcc-alert__text p:first-child {
-  display: inline ;
+  line-height: 1.8 ;
+  p: first-child;
+  p-display: inline ;
 }
 
 .jcc-alert__text p:not(:first-child) {
@@ -33875,6 +33930,31 @@ a:visited {
 .jcc-list-group li strong {
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.12rem;
+}
+
+.jcc-option {
+  border-radius: 0.5rem ;
+  padding: 1.5rem ;
+  color: #555555 ;
+  position: relative ;
+  text-align: left ;
+}
+
+.jcc-option:before {
+  content: "";
+  display: block ;
+  background-color: #ffbe2e ;
+  width: 3rem ;
+  height: 0.25rem ;
+  margin-bottom: 0.5rem ;
+}
+
+.jcc-option h6 {
+  margin-bottom: 2px ;
+}
+
+.jcc-option li {
+  display: block ;
 }
 
 .jcc-postcard {
@@ -36670,6 +36750,46 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
+.jcc-options__container {
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 87.5rem ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
+.jcc-options {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.jcc-options > li {
+  margin-bottom: 0;
+  max-width: unset;
+}
+
+.jcc-options .jcc-options__item {
+  margin-bottom: 1.5rem ;
+}
+
+.jcc-options-list .jcc-options__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 83.33333% ;
+}
+
+.jcc-options-list .jcc-options,
+.jcc-options-list--has-two-columns .jcc-options {
+  width: 100% ;
+}
+
+.jcc-options-list--has-two-columns .jcc-options__item {
+  width: 100% ;
+}
+
 .jcc-steps-section {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
@@ -36799,6 +36919,10 @@ h3.jcc-header-group__title {
   color: #ffbe2e ;
 }
 
+.jcc-step__block {
+  margin-bottom: 2.5rem ;
+}
+
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--light--primary {
   background-color: #f2f6fb ;
@@ -36851,12 +36975,37 @@ h3.jcc-header-group__title {
   background-color: white ;
 }
 
+.jcc-read-more--block .jcc-read-more__trigger {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .jcc-steps-section__container {
   margin-left: auto ;
   margin-right: auto ;
   max-width: 87.5rem ;
   padding-left: 1rem ;
   padding-right: 1rem ;
+}
+
+.jcc-steps-section__container .jcc-options__container {
+  padding-left: 0 ;
+  margin-left: -6px;
+}
+
+.jcc-steps-section__container .jcc-options__container .jcc-options__item {
+  padding-left: 0 ;
+}
+
+.jcc-steps-section__container .jcc-options__container .jcc-option {
+  padding-left: 0;
+}
+
+.jcc-steps-section__container .jcc-option {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .jcc-steps {
@@ -68660,9 +68809,53 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
+  .jcc-options__container {
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+  }
+  .jcc-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-options > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-options-list .jcc-options,
+  .jcc-options-list--has-two-columns .jcc-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap ;
+        flex-wrap: wrap ;
+    margin-left: -0.5rem ;
+    margin-right: -0.5rem ;
+  }
+  .jcc-options-list .jcc-options > *,
+  .jcc-options-list--has-two-columns .jcc-options > * {
+    padding-left: 0.5rem ;
+    padding-right: 0.5rem ;
+  }
+  .jcc-options-list--has-two-columns .jcc-options__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 50% ;
+  }
   .jcc-steps-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
+  }
+  .jcc-steps-section__container .jcc-options__container .jcc-option {
+    padding-left: 1.5rem ;
+  }
+  .jcc-steps-section__container .jcc-option {
+    padding-left: 0 ;
   }
   .jcc-steps .jcc-step__item::before {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
@@ -69219,6 +69412,24 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
   .jcc-explainers-section--has-two-columns .jcc-explainers > *,
   .jcc-explainers-section--has-three-columns .jcc-explainers > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-options {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-options > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-options-list .jcc-options,
+  .jcc-options-list--has-two-columns .jcc-options {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-options-list .jcc-options > *,
+  .jcc-options-list--has-two-columns .jcc-options > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
   }

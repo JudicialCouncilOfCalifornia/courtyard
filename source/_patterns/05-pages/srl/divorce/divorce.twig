@@ -1,0 +1,39 @@
+{% include '@organisms/global/header/header.twig' %}
+{% include '@molecules/blocks/hero/hero.twig' with { hero: hero } %}
+
+{% for entry in entries %}
+  {% if entry.type == 'tab_section' %}
+    {% include '@organisms/sections/tab-section/tab-section.twig' with {
+      tab_section: entry.tab_section
+    } %}
+
+  {% elseif entry.type == 'postcard' %}
+    {% include '@molecules/blocks/postcard/postcard.twig' with {
+      postcard: entry.postcard
+    } %}
+
+  {% elseif entry.type == 'section' %}
+    {% include '@organisms/sections/text-section/text-section.twig' with {
+      text_section: entry.text_section
+    } %}
+
+  {% elseif entry.type == 'steps' %}
+    {% include '@organisms/sections/steps/steps.twig' with {
+      steps: entry.steps
+    } %}
+
+  {% elseif entry.type == 'card' %}
+    {% include '@molecules/blocks/card/card.twig' with {
+      card: entry.card
+    } %}
+
+  {% elseif entry.type == 'timeline' %}
+    {% include '@organisms/sections/timeline/timeline.twig' with {
+      timeline: entry.timeline
+    } %}
+  {% endif %}
+{% endfor %}
+
+{% include '@organisms/sections/switchboard/switchboard.twig' with {
+  switchboard: switchboard
+} %}

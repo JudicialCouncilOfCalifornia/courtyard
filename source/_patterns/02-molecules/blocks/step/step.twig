@@ -1,6 +1,7 @@
 {% set tag = step.tag|default('h3') %}
 
 <div class="jcc-step">
+
   {% if step.title %}
     <{{ tag }} class="jcc-step__title">{{ step.title }}</{{ tag }}>
   {% endif %}
@@ -9,13 +10,37 @@
     <div class="jcc-step__excerpt">{{ step.excerpt }}</div>
   {% endif %}
 
+  {% if step.alert %}
+  <div class="jcc-step__block">
+    {% include "@molecules/blocks/alert/alert.twig" with {
+      alert: step.alert
+    } %}
+  </div>
+  {% endif %}
+
+  {% if step.option %}
+  <div class="jcc-step__block">
+    {% include "@molecules/blocks/option/option.twig" with {
+      option: step.option
+    } %}
+  </div>
+  {% endif %}
+
+  {% if step.option_list %}
+  <div class="jcc-step__block">
+    {% include "@organisms/sections/option-list/option-list.twig" with {
+      option_list: step.option_list
+    } %}
+  </div>
+  {% endif %}
+
   {% if step.read_more %}
+  <div class="jcc-step__block">
     <div class="jcc-step__read-more">
       {% if step.read_more.type == 'toggle' %}
         {% include "@molecules/interactive/read-more/read-more.twig" with {
           read_more: step.read_more.toggle
         } %}
-
       {% elseif step.read_more.type == 'link' %}
         {% set url_attributes = step.read_more.link.url_attributes|default(create_attribute()) %}
         <a href="{{ step.read_more.link.url }}"{{ url_attributes }}>
@@ -28,5 +53,6 @@
         } %}
       {% endif %}
     </div>
+  </div>
   {% endif %}
 </div>
