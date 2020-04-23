@@ -17,4 +17,10 @@
       <a href="{{ tile.url }}"{{ url_attributes }}>{{ tile.title }}</a>
     </{{ tag }}>
   {% endif %}
+  {% if tile.body %}
+    <p class="jcc-tile__body">{{ tile.body }}</p>
+  {% endif %}
+  {% if tile.icon_link %}
+    <div class="jcc-tile__icon-link"></div>
+  {% endif %}
 </div>
