@@ -1,11 +1,12 @@
-<div class="usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon"  >
+<div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon" id="alert-bar">
   <div class="usa-alert__body jcc-alert__body {% if alert.icon %} {% else %} usa-alert--no-icon     {% endif %}">
-    <h3 class="usa-alert__heading jcc-alert__heading">{{ alert.heading|trim }},</h3>
+    <h4 class="usa-alert__heading jcc-alert__heading">{{ alert.heading|trim }},</h4>
     <div class="usa-alert__text jcc-alert__text">{{ alert.text }}</div>
     {% if alert.button %}
       <div class="jcc-alert__action">
         {% include "@atoms/buttons/link-button.twig" %}
       </div>
     {% endif %}
+      <div class="jcc-alert__close" id="alert-close"></div>
   </div>
 </div>

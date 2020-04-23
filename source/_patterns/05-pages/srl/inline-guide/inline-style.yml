@@ -64,13 +64,11 @@ entries:
         - "<p>For some people, this is the day they moved out. For others, this is a day the two spouses agreed together that their marriage was over, and they made plans to divorce.  From that day forward, what you or your spouse earned or loans you took out were no longer community property. </p>"
     column_content_right:
       join():
-        - '<div class="margin-bottom-4">'
         - include():
             pattern: 'molecules-callout'
             with:
               callout:
                 variant: "italic"
-        - '</div>'
 - type: 'section'
   text_section:
     headergroup: ''
@@ -79,13 +77,11 @@ entries:
         - "<p>For some people, this is the day they moved out. For others, this is a day the two spouses agreed together that their marriage was over, and they made plans to divorce.  From that day forward, what you or your spouse earned or loans you took out were no longer community property</p>"
     column_content_right:
       join():
-        - '<div class="margin-bottom-4">'
         - include():
             pattern: 'molecules-callout'
             with:
               callout:
                 variant: "italic"
-        - '</div>'
 - type: 'section'
   text_section:
     headergroup: ''
@@ -135,6 +131,24 @@ entries:
                   - title: "Any debt you take on while married"
                     excerpt: " "
         - include():
+            pattern: 'molecules-alert'
+            with:
+              alert:
+                type: "warning"
+                icon: true
+                heading: "Think about safety when serving papers"
+                text: "For some people, getting served papers can trigger emotional responses. If you’re using someone who is not a professional server, tell them to keep the interaction brief and not to engage in any conversation about the case. They should remain outside and not enter a private home."
+        - include():
+            pattern: 'organisms-option-list'
+            with:
+              option_list:
+                column_variant: has-two-columns
+                options:
+                  - title: "If you're suing a person (or people)"
+                    content: 'Serve each person you are suing.'
+                  - title: "If you're suing a business or government"
+                    content: 'Business or agencies have a specific person you must serve, not just any employee. Follow these guidelines to make sure you are serving the right person.'
+        - include():
             pattern: 'organisms-explainer-section'
             with:
               explainer_section:
@@ -166,24 +180,32 @@ entries:
                   - title: "Any debt you take on while married"
                     excerpt: " "
         - include():
-            pattern: 'organisms-explainer-section'
+            pattern: 'organisms-option-list'
             with:
-              explainer_section:
-                column_variant: "has-one-column"
-                explainers:
-                  - brow: "EXAMPLE"
-                    content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'
-        - "<p>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property.<strong>Community property is:</strong></p>"
-        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
-        - "<p><strong>You may have more community property than you realize.</strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+              option_list:
+                column_variant: has-one-column
+                options:
+                  - title: "If you're suing a person (or people)"
+                    content: 'Serve each person you are suing.'
+                  - title: "If you're suing a business or government"
+                    content: 'Business or agencies have a specific person you must serve, not just any employee. Follow these guidelines to make sure you are serving the right person.'
+        - "<p>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property.</p>"
+        - "<p><strong>You may have more community property than you realize. </strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
+        - "<p><strong>You may have more community property than you realize. </strong>Property you didn’t earn, like a gift or inheritance one of you received while married, is not community property. </p>"
 - type: 'section'
   text_section:
     headergroup: ''
     column_content_left:
       join():
         - "<h3>Other Styles</h3>"
-        - "<p>Apparently we had reached a great height in the <span class='jcc-tooltip jcc-tooltip-primary tooltip'>atmosphere<span class='top'> <span>Dolor sit amet, consectetur adipiscing elit.</span>
-        <i></i></span></span>, for the sky was a dead black, and the stars had ceased to twinkle.</p>"
+        - "<p>Apparently we had reached a great height in the,"
+        - include():
+            pattern: 'atoms-tooltip'
+            with:
+              tooltip:
+                highlight: "word"
+                tool-tip-text: "Error status"
+        - "for the sky was a dead black, and the stars had ceased to twinkle.</p>"
         - include():
             pattern: 'organisms-explainer-section'
             with:

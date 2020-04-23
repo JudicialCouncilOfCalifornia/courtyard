@@ -207,3 +207,13 @@
     }
   }
 }
+
+.jcc-text-section__column-left {
+  & .jcc-alert {
+    @include u-margin-bottom(5);
+  }
+
+  & .jcc-option-list {
+    @include u-margin-bottom(5);
+  }
+}
