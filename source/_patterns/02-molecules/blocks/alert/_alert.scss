@@ -17,32 +17,52 @@
 
 .usa-alert--error {
   .jcc-alert__body {
-    background-image: url(../images/error.svg),
-      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @if $trial {
+      background-image: url("../img/alerts/error.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    } @else {
+      background-image: url("../images/error.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    }
     @include u-padding-left(6);
   }
 }
 
 .usa-alert--warning {
   .jcc-alert__body {
-    background-image: url(../images/warning.svg),
-      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @if $trial {
+      background-image: url("../img/alerts/warning.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    } @else {
+      background-image: url("../images/warning.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    }
     @include u-padding-left(6);
   }
 }
 
 .usa-alert--success {
   .jcc-alert__body {
-    background-image: url(../images/success.svg),
-      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @if $trial {
+      background-image: url("../img/alerts/success.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    } @else {
+      background-image: url("../images/success.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    }
     @include u-padding-left(6);
   }
 }
 
 .usa-alert--info {
   .jcc-alert__body {
-    background-image: url(../images/info.svg),
-      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    @if $trial {
+      background-image: url("../img/alerts/info.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    } @else {
+      background-image: url("../images/info.svg"),
+        -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    }
     @include u-padding-left(6);
   }
 }
@@ -60,12 +80,13 @@
   @include u-margin-x("auto");
   @include u-padding-y(1.5);
   @include u-padding-right(2.5);
+  margin-left: 13px;
   background-size: 1.6rem;
   background-repeat: no-repeat;
   background-position: 10px 13px !important;
 }
 
-.jcc-alert__heading {
+.usa-alert .usa-alert__body .jcc-alert__heading {
   @include u-display("inline");
   @include u-margin-bottom(0);
   @include u-font("sans", "md");
@@ -90,4 +111,18 @@
 .jcc-alert__action {
   @include u-padding-top(2);
   @include u-padding-bottom(1);
+}
+
+.jcc-alert__close {
+  @include u-display("block");
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  @if $trial {
+    background-image: url("../images/icomoon/SVG/close.svg"),
+      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+  } @else {
+    display: none;
+  }
 }

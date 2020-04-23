@@ -40,3 +40,29 @@
     }
   }
 }
+
+.jcc-steps-section__container,
+.jcc-text-section {
+  @include section-container;
+  .jcc-options__container {
+    @include u-padding-left(0);
+    margin-left: -6px;
+    .jcc-options__item {
+      @include u-padding-left(0);
+    }
+    .jcc-option {
+      padding-left: 0;
+      @include at-media(desktop) {
+        @include u-padding-left(3);
+      }
+    }
+  }
+  .jcc-option {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    @include at-media(desktop) {
+      @include u-padding-left(0);
+    }
+  }
+}

@@ -2,13 +2,15 @@
 #  - success
 #  - warning
 #  - error
+#  button:
+#    text: "Action"
+#    url: "#"
+#    style: 'primary'
+
+
 
 alert:
   type: "info"
   icon: true
   heading: "Informative status"
   text: "Lorem ipsum dolor sit amet, <a href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod."
-  button:
-    text: "Action"
-    url: "#"
-    style: 'primary'
