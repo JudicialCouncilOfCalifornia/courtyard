@@ -1,0 +1,11 @@
+.jcc_link-list-simple-multicolumn {
+  @include grid-container;
+
+  .jcc_link-list-simple-multicolumn__row {
+    @include grid-row;
+
+    .jcc-link-list__list {
+      @include grid-col(6);
+    }
+  }
+}

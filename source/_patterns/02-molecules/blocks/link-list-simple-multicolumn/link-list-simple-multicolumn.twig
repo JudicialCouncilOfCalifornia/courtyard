@@ -1,0 +1,45 @@
+{% set classes = [
+  'jcc-link-list-simple',
+  'jcc_link-list-simple-multicolumn',
+  link_list.list_icons ? 'jcc-link-list--list_icons' : '',
+]|merge(link_list.classes|default([''])) %}
+
+{% if link_list.header %}
+  {% set tag = tag|default('h2') %}
+  
+  <{{ tag }}>
+    {{ link_list.header }}
+  </{{ tag }}>
+{% endif %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc_link-list-simple-multicolumn__row">
+    {% set items = link_list.items %}
+    {% set batch_size = items|length/2 %} {# max columns #}
+    {% for group_item in items|batch(batch_size) %}
+      <ul class="jcc-link-list__list">
+        {% for item in group_item %}
+          {% if item.url and item.url_title %}
+            <li class="jcc-link-list__item">
+              {% if link_list.list_icons %}
+                {% set icon = item.icon|default({
+                  name: "file",
+                  title: "File"|t,
+                  width: "width-2",
+                  height: "height-2",
+                  color: "text-primary",
+                  decorative: false,
+                }) %}
+
+                <span class="jcc-link-list__icon">
+                  {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                </span>
+              {% endif %}
+              <a href="{{ item.url }}">{{ item.url_title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>
