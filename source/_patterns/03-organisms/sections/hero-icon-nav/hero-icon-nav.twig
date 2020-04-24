@@ -1,6 +1,8 @@
 <div class="jcc-hero-icon-nav">
   {% if hero_icon_nav.hero_img_banner %}
-    {% include '@molecules/blocks/hero-img-banner/hero-img-banner.twig' %}
+    {% include '@molecules/blocks/hero-img-banner/hero-img-banner.twig' with {
+      hero_img_banner: hero_icon_nav.hero_img_banner
+    } %}
   {% endif %}
   <div class="jcc-hero-icon-nav__nav">
     <div class="jcc-hero-icon-nav__block tile-icon">
