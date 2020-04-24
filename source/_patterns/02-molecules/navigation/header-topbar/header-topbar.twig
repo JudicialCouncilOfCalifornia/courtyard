@@ -1,9 +1,11 @@
 <div class="jcc-header--topbar">
   <div class="jcc-header__container--topbar">
     <div class="jcc-header__logo--topbar">
+      <a href="{{ header_topbar.home_url|default('/') }}">
       {% include '@atoms/icons/logo.twig' with  {
         logo: header_topbar.logo
       } %}
+      </a>
     </div>
     {% include '@atoms/forms/search-input.twig' %}
     {% include '@atoms/forms/dropbutton.twig' with {

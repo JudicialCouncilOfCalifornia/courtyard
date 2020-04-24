@@ -2,6 +2,7 @@ header_topbar:
   logo:
     src: "../../images/jcc-logo-long.png"
     alt: "trial"
+  home_url: "#"
   dropbutton:
     icon:
       name: "globe-2"
