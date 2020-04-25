@@ -5,7 +5,11 @@
     @include grid-row;
 
     .jcc-link-list__list {
-      @include grid-col(6);
+      @include grid-col(12);
+
+      @include at-media(tablet) {
+        @include grid-col(6);
+      }
     }
   }
 }
