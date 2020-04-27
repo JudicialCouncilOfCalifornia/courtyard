@@ -2,3 +2,4 @@ alert:
   type: "success"
   icon: true
   heading: "Success status"
+  close: true

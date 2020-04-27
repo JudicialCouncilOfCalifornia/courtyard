@@ -2,3 +2,4 @@ alert:
   type: "error"
   icon: true
   heading: "Error status"
+  close: true
