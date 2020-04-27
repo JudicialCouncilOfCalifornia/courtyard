@@ -2,3 +2,4 @@ alert:
   type: "warning"
   icon: true
   heading: "Warning status"
+  close: true
