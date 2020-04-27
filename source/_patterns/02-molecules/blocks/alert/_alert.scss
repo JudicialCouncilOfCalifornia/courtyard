@@ -75,6 +75,7 @@
 
 .jcc-alert__body {
   @include u-display("block");
+  @include u-position("relative");
   @include u-maxw("widescreen");
   @include u-margin-y(0);
   @if $trial {
@@ -84,10 +85,11 @@
     margin-left: 13px;
   }
   @include u-padding-y(1.5);
-  @include u-padding-right(2.5);
+  @include u-padding-right(4);
   background-size: 1.6rem;
   background-repeat: no-repeat;
   background-position: 10px 13px !important;
+  @include u-cursor("pointer");
 }
 
 .usa-alert .usa-alert__body .jcc-alert__heading {
@@ -119,7 +121,9 @@
 
 .jcc-alert__close {
   @include u-display("block");
-  float: right;
+  @include u-position("absolute");
+  @include u-top(1);
+  @include u-right(0);
   width: 20px;
   height: 20px;
   margin-top: 3px;
