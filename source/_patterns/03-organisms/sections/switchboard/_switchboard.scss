@@ -10,6 +10,16 @@
     @include u-text(primary-dark);
     @include has-dash();
   }
+
+  .jcc-breadcrumbs {
+    @include u-margin-bottom(4);
+    .jcc-breadcrumb__item {
+      @include u-font(body, 8);
+    }
+  }
+  .jcc-switchboard__body {
+    @include u-margin-bottom(4);
+  }
 }
 
 .jcc-switchboard--has-background-color--light,
@@ -34,37 +44,155 @@
   @include dark-background();
   @include u-border-top(accent-warm-dark);
   @include u-border-top("05");
+  .jcc-breadcrumb__item,
+  .jcc-breadcrumb__item a {
+    color: #fff;
+  }
 }
 
 .jcc-switchboard__container {
   @include section-container;
+  .jcc-switchboard__column-left {
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+  }
+}
+
+.jcc-switchboard--default,
+.jcc-switchboard--next {
+  .jcc-switchboard__content {
+    .jcc-switchboard__tiles {
+      @include add-list-reset;
+      @include at-media(desktop) {
+        @include grid-row;
+        @include grid-gap;
+      }
+    }
+  }
+
+  .jcc-switchboard__tile {
+    @include u-margin-bottom(2);
+
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}
+
+.jcc-switchboard--next {
+  .jcc-header-group {
+    margin-top: 40px;
+    padding-bottom: 0;
+  }
+  .jcc-header-group__title {
+    @include u-font(heading, 14);
+  }
+  .jcc-header-group__title:after {
+    left: 0;
+    top: -75px;
+  }
+}
+
+.jcc-switchboard--next-phase {
+  .jcc-switchboard__tile {
+    @include u-margin-bottom(2);
+
+    @include at-media(desktop) {
+      @include grid-col(3);
+    }
+  }
+
+  .jcc-header-group__title {
+    @include u-font(heading, 16);
+  }
+  .jcc-switchboard__column-right {
+    @include at-media(desktop) {
+      margin-top: 2em;
+    }
+    .jcc-switchboard__content {
+      .jcc-switchboard__tiles {
+        @include add-list-reset;
+        @include at-media(desktop) {
+          @include grid-row;
+          @include grid-gap;
+        }
+        .jcc-tile {
+          @include at-media(desktop) {
+            padding-bottom: 4em;
+          }
+          position: relative;
+          .jcc-tile__title {
+            @include u-font(body, 8);
+            @include u-margin-bottom(2);
+          }
+          .jcc-tile__icon-link {
+            @include at-media(desktop) {
+              top: unset;
+              @include u-bottom(2);
+              @include u-left(2);
+            }
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.jcc-switchboard--next-right-column {
+  .jcc-switchboard__columns {
+    @include at-media(desktop) {
+      @include grid-row;
+      @include grid-gap;
+    }
+    .jcc-header-group {
+      margin-top: 40px;
+      padding-bottom: 0;
+    }
+    .jcc-header-group__title:after {
+      left: 0;
+      top: -75px;
+    }
+    .jcc-switchboard__column-left,
+    .jcc-switchboard__column-right {
+      @include u-width(full);
+    }
+
+    .jcc-switchboard__column-left {
+      @include at-media(desktop) {
+        @include grid-col(8);
+      }
+    }
+
+    .jcc-switchboard__column-right {
+      @include at-media(desktop) {
+        @include grid-col(4);
+      }
+      .jcc-switchboard__tile {
+        @include u-margin-bottom(2);
+
+        @include at-media(desktop) {
+          @include grid-col(12);
+        }
+      }
+    }
+  }
 }
 
 .jcc-switchboard__tiles {
   @include add-list-reset;
-  @include at-media(desktop) {
-    @include grid-row;
-    @include grid-gap;
-  }
+}
 
-  .jcc-tile {
-    @include u-border(1px, base-light);
-    @include u-bg("white");
-    @include u-height(full);
-  }
+.jcc-tile {
+  @include u-border(1px, base-light);
+  @include u-bg("white");
+  @include u-height(full);
 }
 
 .jcc-switchboard__tiles--secondary {
   .jcc-tile {
     @include u-border(1px, base-light);
     @include u-bg(base-lightest);
-  }
-}
-
-.jcc-switchboard__tile {
-  @include u-margin-bottom(2);
-
-  @include at-media(desktop) {
-    @include grid-col(4);
   }
 }

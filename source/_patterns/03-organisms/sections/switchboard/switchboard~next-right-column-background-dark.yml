@@ -1,0 +1,18 @@
+switchboard:
+  background_variant: "has-background-color--dark--primary" #has-background-color--dark
+  layout_variant: "next-right-column" #default, #right-column
+  headergroup:
+    brow: 'Next Steps'
+    title: 'What can we help you with today?'
+  body: 'Once you’ve served the petition and summons forms, your spouse has 30 days to respond. How they respond will determine how you’ll move forward with your case.'
+  items:
+    primary:
+      - brow: 'Wage Garnishment'
+        title: 'Someone took money from my paycheck'
+        icon_link: true
+        url: 'link.pages-judgment-wage-garnishment'
+      - brow: 'Lien Against Property'
+        title: 'I was told I can’t sell my property'
+        icon_link: true
+        url: 'link.pages-judgment-lien-against-property'
+    secondary:

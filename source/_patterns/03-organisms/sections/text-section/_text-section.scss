@@ -162,6 +162,16 @@
   @include at-media(desktop) {
     @include u-margin-bottom(0);
   }
+  .jcc-callout__block,
+  .jcc-callout__italic {
+    @include u-margin-bottom(3);
+    @include u-margin-top(3);
+    @include at-media(desktop) {
+      position: absolute;
+      right: 6.5%;
+      width: 27%;
+    }
+  }
 }
 
 .jcc-text-section--has-one-column {

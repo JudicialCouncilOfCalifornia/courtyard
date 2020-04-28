@@ -1,3 +1,5 @@
+# column_variant: has-one-column
+
 option_list:
   column_variant: has-two-columns
   options:

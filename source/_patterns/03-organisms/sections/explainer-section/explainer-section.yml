@@ -1,3 +1,4 @@
+#column_variant: "has-one-column"
 explainer_section:
   column_variant: "has-two-columns"
   explainers:
