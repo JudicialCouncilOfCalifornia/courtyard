@@ -28625,7 +28625,6 @@ a:visited {
   border-left-width: 0.25rem;
   border-left-color: #ffbe2e ;
   border-left-style: solid;
-  margin-top: 1rem ;
   color: #005ea2 ;
   background-color: white ;
   font-weight: bold ;
@@ -33146,6 +33145,12 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 
 .jcc-text-section__column-left {
   margin-bottom: 2rem ;
+}
+
+.jcc-text-section__column-left .jcc-callout__block,
+.jcc-text-section__column-left .jcc-callout__italic {
+  margin-bottom: 1.5rem ;
+  margin-top: 1.5rem ;
 }
 
 .jcc-text-section--has-one-column {
@@ -64413,6 +64418,12 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
   .jcc-text-section__column-left {
     margin-bottom: 0 ;
+  }
+  .jcc-text-section__column-left .jcc-callout__block,
+  .jcc-text-section__column-left .jcc-callout__italic {
+    position: absolute;
+    right: 6.5%;
+    width: 27%;
   }
   .jcc-text-section--has-two-columns-half .jcc-text-section__content,
   .jcc-text-section--has-two-columns-threequarter .jcc-text-section__content {

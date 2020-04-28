@@ -131,6 +131,11 @@ entries:
                   - title: "Any debt you take on while married"
                     excerpt: " "
         - include():
+            pattern: 'molecules-callout'
+            with:
+              callout:
+                variant: "block"
+        - include():
             pattern: 'molecules-alert'
             with:
               alert:
