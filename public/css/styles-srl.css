@@ -63503,7 +63503,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     height: 5rem ;
     margin-top: 1rem ;
   }
-  .jcc-header__container--topbar .jcc-fieldset-search {
+  .jcc-header__container--topbar form {
     position: relative ;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;

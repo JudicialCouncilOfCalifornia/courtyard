@@ -27,7 +27,7 @@
     }
   }
 
-  .jcc-fieldset-search {
+  form {
     @include at-media(desktop) {
       @include u-position(relative);
       @include grid-col(5);

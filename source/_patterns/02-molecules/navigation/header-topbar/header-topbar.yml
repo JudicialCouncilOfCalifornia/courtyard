@@ -16,3 +16,7 @@ header_topbar:
         href: "#"
       - title: "Vietnamese"
         href: "#"
+  search:
+    form_action: "/search"
+    search_input:
+      form_input_name: "keyword"
