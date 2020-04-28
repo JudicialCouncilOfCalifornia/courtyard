@@ -28689,6 +28689,97 @@ a:visited {
   position: absolute;
 }
 
+.jcc-complete {
+  background-color: #168092 ;
+  padding: 2rem ;
+  color: white ;
+}
+
+.jcc-complete .jcc-complete__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -ms-flex-wrap: wrap ;
+      flex-wrap: wrap ;
+  margin-left: -0.5rem ;
+  margin-right: -0.5rem ;
+}
+
+.jcc-complete .jcc-complete__row > * {
+  padding-left: 0.5rem ;
+  padding-right: 0.5rem ;
+}
+
+.jcc-complete .jcc-complete__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 16.66667% ;
+  background-image: url("../../images/check.png");
+  height: 60px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.jcc-complete .jcc-complete__body {
+  padding-bottom: 2rem ;
+}
+
+.jcc-complete .jcc-complete__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 83.33333% ;
+}
+
+.jcc-complete .jcc-complete__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto ;
+          flex: 0 0 auto ;
+  width: 100% ;
+}
+
+.jcc-complete .jcc-complete__button {
+  color: #005ea2 ;
+  background-color: white ;
+  border-radius: 0.25rem ;
+  width: 100% ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.06rem;
+  padding-left: 3.5rem ;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
+  padding: 10px 10px 10px 0;
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.jcc-complete .jcc-complete__button:hover {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1) ;
+          box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1) ;
+}
+
+.jcc-complete .jcc-complete__button::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 30px;
+  display: block;
+  height: 30px;
+  background-image: url("../../images/link.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .jcc-explainer {
   border-radius: 0.5rem ;
   padding: 1.5rem ;
@@ -63421,6 +63512,39 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-card__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.49rem;
+  }
+  .jcc-complete .jcc-complete__row {
+    margin-left: -1rem ;
+    margin-right: -1rem ;
+  }
+  .jcc-complete .jcc-complete__row > * {
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+  }
+  .jcc-complete .jcc-complete__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 8.33333% ;
+  }
+  .jcc-complete .jcc-complete__body {
+    padding-right: 2rem ;
+  }
+  .jcc-complete .jcc-complete__left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 58.33333% ;
+  }
+  .jcc-complete .jcc-complete__right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
+  }
+  .jcc-complete .jcc-complete__button {
+    padding: 0.5rem ;
+    padding-left: 3.5rem ;
   }
   .jcc-hero-img-banner__hero-title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
