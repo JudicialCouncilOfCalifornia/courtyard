@@ -16,6 +16,10 @@ header_trial:
           href: "#"
         - title: "Vietnamese"
           href: "#"
+    search:
+      form_action: "/search"
+      search_input:
+        form_input_name: "keyword"
   primary_nav:
     items:
       - name: "Online Services"

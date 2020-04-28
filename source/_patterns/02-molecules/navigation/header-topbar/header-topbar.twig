@@ -7,7 +7,11 @@
       } %}
       </a>
     </div>
-    {% include '@atoms/forms/search-input.twig' %}
+    <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_topbar.search.form_action|default('/search') }}">
+    {% include '@atoms/forms/search-input.twig' with {
+      search_input: header_topbar.search.search_input
+    }%}
+    </form>
     {% include '@atoms/forms/dropbutton.twig' with {
       dropbutton: header_topbar.dropbutton
     } %}
