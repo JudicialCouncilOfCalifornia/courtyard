@@ -29,6 +29,10 @@
 
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">
+          {% if hero.brow %}
+            <p class="jcc-hero__brow">{{ hero.brow }}</p>
+          {% endif %}
+
           <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
             {{- hero.title -}}
           </h1>

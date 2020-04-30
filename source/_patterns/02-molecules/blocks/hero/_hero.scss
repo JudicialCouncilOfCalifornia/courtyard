@@ -59,6 +59,14 @@
   @include u-position(relative);
 }
 
+.jcc-hero__brow {
+  @include u-display("block");
+  @include t-copy();
+  @include u-text(uppercase);
+  @include u-text(ls-3);
+  @include u-margin-top(3);
+}
+
 .jcc-hero__title {
   @include u-font(heading, 14); // 40
 
@@ -68,6 +76,10 @@
   @include u-line-height("heading", 2);
   @include u-text(primary-darker);
   @include u-margin-y(3);
+}
+
+.jcc-hero__brow + .jcc-hero__title {
+  @include u-margin-top(0);
 }
 
 .jcc-hero__lead {
