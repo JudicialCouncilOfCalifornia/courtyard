@@ -1,5 +1,10 @@
 @import "../../node_modules/slicknav/scss/slicknav.scss";
 
+// Hide slick nav display on desktop. There's an alternate.
+#slick-menu {
+  @include u-display(none);
+}
+
 .slicknav_menu {
   @include u-display(block);
 
@@ -109,12 +114,20 @@ nav.jcc-primary-nav {
     padding-right: 10%;
   }
   li {
+    & .jcc-primary-nav__sub-sub--item {
+      @include at-media(desktop) {
+        @include u-display(block);
+        width: 100%;
+        padding-left: 1.7em;
+      }
+    }
     @include u-display(block);
     padding: 0 70px;
     text-align: left;
     @include u-bg(primary-lighter);
     @include at-media(desktop) {
       @include u-display(inline-flex);
+      flex-direction: column;
       width: 33%;
       @include u-padding(1);
       @include u-bg(primary-dark);
@@ -146,7 +159,6 @@ nav.jcc-primary-nav {
         @include u-font-size("body", 7);
         @include u-text("bold");
         @include at-media(desktop) {
-          margin-bottom: 1em;
           padding: 0;
           &:hover {
             background-color: transparent;
@@ -176,7 +188,7 @@ nav.jcc-primary-nav {
         @include u-color("white");
         @include u-text("normal");
         @include u-font-size("body", 5);
-        margin-top: 10px;
+        margin-top: 1em;
         line-height: 1.4em;
         text-transform: capitalize;
         letter-spacing: 1px;
