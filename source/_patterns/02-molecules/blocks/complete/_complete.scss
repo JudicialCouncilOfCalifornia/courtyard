@@ -12,12 +12,14 @@
     @include at-media(desktop) {
       @include grid-col(1);
     }
-    background-image: url("../../images/check.png");
     height: 60px;
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    &.check {
+      background-image: url("../../images/check.png");
+    }
   }
 
   .jcc-complete__body {
@@ -48,7 +50,7 @@
     @include u-font(body, 6);
     @include u-padding-left(7);
     @include u-shadow(3);
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 10px 55px;
     position: relative;
     display: block;
     transition: all 0.4s;

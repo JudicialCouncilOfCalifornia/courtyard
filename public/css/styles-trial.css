@@ -33612,12 +33612,15 @@ a:visited {
       -ms-flex: 0 0 auto ;
           flex: 0 0 auto ;
   width: 16.66667% ;
-  background-image: url("../../images/check.png");
   height: 60px;
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.jcc-complete .jcc-complete__icon.check {
+  background-image: url("../../images/check.png");
 }
 
 .jcc-complete .jcc-complete__body {
@@ -33648,7 +33651,7 @@ a:visited {
   padding-left: 3.5rem ;
   -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
           box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 10px 55px;
   position: relative;
   display: block;
   -webkit-transition: all 0.4s;
