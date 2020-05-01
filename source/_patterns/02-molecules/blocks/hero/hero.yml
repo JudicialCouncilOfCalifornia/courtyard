@@ -11,6 +11,7 @@
 # - viewport-height
 
 hero:
+  brow: "Brow Description" # Not in used by SRL
   title: "Serving your papers"
   lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
   body: "<h2>Heading level 2 with <strong>bold</strong>, <em>italics</em>, and <strong><em>bold italics</em></strong></h2><ul><li>One</li><li>Two</li></ul>"

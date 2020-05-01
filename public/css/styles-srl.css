@@ -28919,6 +28919,15 @@ a:visited {
   position: relative ;
 }
 
+.jcc-hero__brow {
+  display: block ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.99rem;
+  text-transform: uppercase ;
+  letter-spacing: 0.15em ;
+  margin-top: 1.5rem ;
+}
+
 .jcc-hero__title {
   font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 2.49rem;
@@ -28926,6 +28935,10 @@ a:visited {
   color: #1f303e ;
   margin-bottom: 1.5rem ;
   margin-top: 1.5rem ;
+}
+
+.jcc-hero__brow + .jcc-hero__title {
+  margin-top: 0 ;
 }
 
 .jcc-hero__lead {
@@ -64907,6 +64920,10 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-hero__content {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.99rem;
+  }
+  .jcc-hero__brow {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.93rem;
   }
   .jcc-hero__lead {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
