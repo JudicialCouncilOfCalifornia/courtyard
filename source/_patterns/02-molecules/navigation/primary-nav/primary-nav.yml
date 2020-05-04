@@ -5,7 +5,7 @@ primary_nav:
       number: "one"
       sublinks:
         - name: "Case Calendar"
-          description: Short Description about what the landing page."
+          description: "Short Description about what the landing page."
           url: "#"
         - name: "Case Query"
           description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
@@ -56,6 +56,15 @@ primary_nav:
     - name: "General Information"
       url: "#"
       sublinks:
+        - name: "ADA"
+          url: "#"
+          icon: "<i class='fas fa-universal-access'></i>"
+          sublinks:
+            - name: "Sign Language Interpreters"
+              icon: "<i class='fas fa-american-sign-language-interpreting'></i>"
+              url: "#"
+            - name: "Accomodations"
+              url: "#"
         - name: "Annulment"
           description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
@@ -83,3 +92,4 @@ primary_nav:
         - name: "Step-parent Adoptions"
           description: "Short Description about what the landing page. Could be a variable length, who knows what this will say."
           url: "#"
+
