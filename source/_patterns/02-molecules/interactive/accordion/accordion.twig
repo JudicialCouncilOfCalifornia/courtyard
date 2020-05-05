@@ -1,4 +1,5 @@
 {% set tag = accordion.tag|default('h2') %}
+{% set expand_first = accordion.expand_first|default(true) %}
 {% set classes = [
   'usa-accordion',
   accordion.full ? 'usa-accordion--full' : '',
@@ -6,9 +7,8 @@
 
 <div class="{{ classes|join(' ')|trim }}">
   {% for item in accordion.items %}
-    {% set expanded = loop.first ? 'true' : 'false' %}
+    {% set expanded = loop.first and expand_first ? 'true' : 'false' %}
     {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
-
     {% set item_title %}
       {# Use `tag` to pass the accurate heading level to maintain the document outline #}
       <{{ tag }} class="usa-accordion__heading">
