@@ -38558,7 +38558,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   display: flex ;
   -ms-flex-wrap: wrap ;
       flex-wrap: wrap ;
-  padding-top: 2rem ;
+  padding-bottom: 80px;
 }
 
 .jcc-timeline-dual__title-bar-previous {
@@ -38567,6 +38567,10 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
       -ms-flex: 0 0 auto ;
           flex: 0 0 auto ;
   width: 33.33333% ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.99rem;
+  text-decoration: none;
+  color: #005ea2 ;
 }
 
 .jcc-timeline-dual__title-bar-title {
@@ -38577,7 +38581,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
           flex: 0 0 auto ;
   width: 33.33333% ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.49rem;
+  font-size: 1.06rem;
 }
 
 .jcc-timeline-dual__title-bar-next {
@@ -38587,6 +38591,10 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
       -ms-flex: 0 0 auto ;
           flex: 0 0 auto ;
   width: 33.33333% ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.99rem;
+  text-decoration: none;
+  color: #005ea2 ;
 }
 
 .jcc-timeline-dual-section__container {
@@ -38597,13 +38605,19 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   padding-right: 1rem ;
 }
 
+.jcc-timeline-dual__wrapper {
+  position: relative ;
+  margin-top: 60px;
+}
+
 .jcc-timeline-dual__top-title {
   color: #005ea2 ;
   position: absolute;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.12rem;
-  top: -45px;
   width: 110px;
+  left: 0;
+  top: -100px;
 }
 
 .jcc-timeline-dual__bottom-title {
@@ -38611,8 +38625,10 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   position: absolute;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.12rem;
-  bottom: 0px;
   width: 110px;
+  top: -100px;
+  right: 0;
+  text-align: right;
 }
 
 .jcc-timeline-dual-item {
@@ -38621,39 +38637,47 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 
 .jcc-timeline-dual-item li {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .jcc-timeline-dual__bottom,
 .jcc-timeline-dual__top {
-  width: 100%;
-  display: -webkit-box;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  height: 150px;
   position: inherit;
+  height: 130px;
+  width: 50%;
+  float: left;
 }
 
 .jcc-timeline-dual__bottom:before,
 .jcc-timeline-dual__top:before {
   position: absolute;
-  left: 0;
-  height: 2px;
   background-color: #005ea2 ;
-  z-index: 2;
+  height: 100%;
+  width: 2px;
+  z-index: 3;
   content: "";
-  width: 100%;
+  left: 0;
 }
 
 .jcc-timeline-dual__bottom:after,
 .jcc-timeline-dual__top:after {
   position: absolute;
-  left: 0;
-  height: 20px;
   background-color: #f2f6fb ;
+  height: 100%;
+  width: 20px;
+  z-index: 2;
   content: "";
-  z-index: 1;
-  width: 100%;
+  left: 0;
+}
+
+.jcc-timeline-dual__excerpt {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.12rem;
+  color: #919191 ;
+  font-style: italic;
+  margin-top: 18px;
 }
 
 .jcc-timeline-dual__time {
@@ -38665,11 +38689,11 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  width: 184px;
   color: white ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.75rem;
   z-index: 4;
+  width: 130px;
 }
 
 .jcc-timeline-dual__time:before {
@@ -38687,15 +38711,25 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.06rem;
   position: absolute;
-  margin-left: -8px;
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   color: white ;
   background-color: #005ea2 ;
   border-radius: 50%;
   text-align: center ;
   display: block;
   z-index: 5;
+  left: 30px;
+}
+
+.jcc-timeline-dual__number.none {
+  display: none;
+}
+
+.jcc-timeline-dual__number.wait {
+  background-image: url("../../images/time.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .jcc-timeline-dual__icon {
@@ -38703,62 +38737,61 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   height: 30px;
   display: block;
   position: absolute;
-  top: 115px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-size: contain;
-  left: -4px;
   background-repeat: no-repeat;
+  top: 16px;
 }
 
 .jcc-timeline-dual__icon.both {
   background-image: url("../../images/both.svg");
 }
 
-.jcc-timeline-dual__top:after {
-  top: 80px;
-}
-
-.jcc-timeline-dual__top:before {
-  top: 80px;
-}
-
 .jcc-timeline-dual__top .jcc-timeline-dual__time {
   background-color: #005ea2 ;
-  margin-top: 55px;
+  left: 30px;
+  float: left;
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual__number {
-  top: 64px;
+  left: 0px;
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
-  top: 20px;
+  left: 70px;
   z-index: 4;
   position: absolute;
 }
 
 .jcc-timeline-dual__bottom:after {
-  bottom: 120px;
+  right: 0;
+  left: unset;
   background-color: #fef0c8 ;
 }
 
 .jcc-timeline-dual__bottom:before {
-  bottom: 120px;
+  right: 0;
+  left: unset;
   background-color: #f9e4c3 ;
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual-item__trigger {
-  top: 60px;
+  right: 70px;
+  text-align: right;
   z-index: 4;
   position: absolute;
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual__time {
   background-color: #f9e4c3 ;
-  margin-top: 3px;
+  float: right;
+  left: unset;
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual__number {
-  top: 12px;
+  right: 30px;
   background-color: #ffbe2e ;
 }
 
@@ -38775,10 +38808,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 }
 
 .jcc-timeline-dual__slider li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
-  width: 33.33333% ;
+  width: 100% ;
 }
 
 .jcc-timeline-dual:not(.slick-initialized) li:last-of-type .jcc-timeline-dual-item__title:after,
@@ -38803,18 +38833,14 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   z-index: 10;
 }
 
-.jcc-timeline-dual__wrapper {
-  position: relative ;
-}
-
 .jcc-timeline-dual__scroller--left {
   left: 40px;
-  top: 288px;
+  top: 336px;
 }
 
 .jcc-timeline-dual__scroller--right {
   right: 40px;
-  top: 288px;
+  top: 336px;
 }
 
 .jcc-timeline-dual__scroller-icon {
@@ -58855,6 +58881,101 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 }
 
 @media all and (min-width: 55em) {
+  .jcc-timeline-dual__title-bar-previous {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
+  }
+  .jcc-timeline-dual__title-bar-title {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.37rem;
+  }
+  .jcc-timeline-dual__title-bar-next {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
+  }
+  .jcc-timeline-dual__wrapper {
+    margin-top: 0px;
+  }
+  .jcc-timeline-dual__top-title {
+    top: -63px;
+  }
+  .jcc-timeline-dual__bottom-title {
+    right: unset;
+    top: unset;
+    bottom: -16px;
+    text-align: left;
+  }
+  .jcc-timeline-dual__bottom,
+  .jcc-timeline-dual__top {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    height: 150px;
+  }
+  .jcc-timeline-dual__bottom:before,
+  .jcc-timeline-dual__top:before {
+    height: 2px;
+    width: 100%;
+  }
+  .jcc-timeline-dual__bottom:after,
+  .jcc-timeline-dual__top:after {
+    height: 20px;
+    width: 100%;
+  }
+  .jcc-timeline-dual__time {
+    width: 184px;
+  }
+  .jcc-timeline-dual__number {
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.37rem;
+    position: absolute;
+    top: -21px;
+    margin-left: -8px;
+    width: 35px;
+    height: 35px;
+    left: 0;
+  }
+  .jcc-timeline-dual__icon {
+    left: 10px;
+    top: 130px;
+  }
+  .jcc-timeline-dual__top:after {
+    top: 80px;
+  }
+  .jcc-timeline-dual__top:before {
+    top: 80px;
+  }
+  .jcc-timeline-dual__top .jcc-timeline-dual__time {
+    margin-top: 55px;
+    left: unset;
+  }
+  .jcc-timeline-dual__top .jcc-timeline-dual__number {
+    top: 64px;
+  }
+  .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
+    top: 20px;
+    left: 0;
+  }
+  .jcc-timeline-dual__bottom:after {
+    bottom: 120px;
+  }
+  .jcc-timeline-dual__bottom:before {
+    bottom: 120px;
+  }
+  .jcc-timeline-dual__bottom .jcc-timeline-dual-item__trigger {
+    top: 60px;
+    right: unset;
+  }
+  .jcc-timeline-dual__bottom .jcc-timeline-dual__time {
+    margin-top: 3px;
+  }
+  .jcc-timeline-dual__bottom .jcc-timeline-dual__number {
+    top: 12px;
+    right: unset;
+    left: 0;
+  }
   .jcc-timeline-dual__slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58863,9 +58984,11 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
         flex-wrap: wrap ;
     overflow-x: auto ;
   }
-  .jcc-timeline-dual__slider .jcc-timeline-dual-item__media {
-    position: absolute ;
-    top: 0 ;
+  .jcc-timeline-dual__slider li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 33.33333% ;
   }
   .jcc-timeline-dual__scroller--left.is-active,
   .jcc-timeline-dual__scroller--right.is-active {
@@ -70133,12 +70256,6 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-timeline-dual-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
-  }
-  .jcc-timeline-dual__number {
-    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.37rem;
-    position: absolute;
-    top: -21px;
   }
   .jcc-timeline-section__container {
     padding-left: 2rem ;

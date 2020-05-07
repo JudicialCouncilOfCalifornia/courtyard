@@ -5,7 +5,14 @@
         <div class="jcc-timeline-dual__time">{{ timeline_dual_item.top.deadline}}</div>
       {% endif %}
       {% if timeline_dual_item.top.number %}
-        <div class="jcc-timeline-dual__number">{{ timeline_dual_item.top.number}}</div>
+        {% if timeline_dual_item.top.number == "wait" %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.top.number}}"></div>
+        {% else %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.top.number}}">{{ timeline_dual_item.top.number}}</div>
+        {% endif %}
+      {% endif %}
+      {% if timeline_dual_item.top.excerpt %}
+        <div class="jcc-timeline-dual__excerpt">{{ timeline_dual_item.top.excerpt}}</div>
       {% endif %}
       {% if timeline_dual_item.top.read_more %}
         {% if timeline_dual_item.top.read_more.type == 'link' %}
@@ -33,7 +40,14 @@
         <div class="jcc-timeline-dual__time">{{ timeline_dual_item.bottom.deadline}}</div>
       {% endif %}
       {% if timeline_dual_item.bottom.number %}
-        <div class="jcc-timeline-dual__number">{{ timeline_dual_item.bottom.number}}</div>
+        {% if timeline_dual_item.bottom.number == "wait" %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}"></div>
+        {% else %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}">{{ timeline_dual_item.bottom.number}}</div>
+        {% endif %}
+      {% endif %}
+      {% if timeline_dual_item.bottom.excerpt %}
+        <div class="jcc-timeline-dual__excerpt">{{ timeline_dual_item.bottom.excerpt}}</div>
       {% endif %}
       {% if timeline_dual_item.bottom.read_more %}
         {% if timeline_dual_item.bottom.read_more.type == 'link' %}

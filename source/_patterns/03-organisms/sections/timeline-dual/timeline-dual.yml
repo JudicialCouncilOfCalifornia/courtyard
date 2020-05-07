@@ -70,12 +70,8 @@ timeline_dual:
             label: "Read more link"
             url: "#"
     - top:
-        number: 5
-        read_more:
-          type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
+        number: "wait"
+        excerpt: "Wait"
       bottom:
         number: 5
         read_more:

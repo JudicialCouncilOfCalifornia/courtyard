@@ -14,23 +14,38 @@
   @include u-color(primary);
   @include section-wrapper;
   @include grid-row;
-  @include u-padding-top(4);
+  padding-bottom: 80px;
   &-previous {
     float: left;
     @include grid-col(4);
+    @include u-font(body, 5);
+    text-decoration: none;
+    @include u-color(primary);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 6);
+    }
   }
 
   &-title {
     text-align: center;
     float: none;
     @include grid-col(4);
-    @include u-font(body, 10);
+    @include u-font(body, 6);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 9);
+    }
   }
 
   &-next {
     float: right;
     text-align: right;
     @include grid-col(4);
+    @include u-font(body, 5);
+    text-decoration: none;
+    @include u-color(primary);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 6);
+    }
   }
 }
 
@@ -38,56 +53,96 @@
   @include section-container;
 }
 
+.jcc-timeline-dual__wrapper {
+  @include u-position(relative);
+  margin-top: 60px;
+  @include at-media(tablet-lg) {
+    margin-top: 0px;
+  }
+}
+
 .jcc-timeline-dual__top-title {
   @include u-color(primary);
   position: absolute;
   @include u-font(body, 7);
-  top: -45px;
   width: 110px;
+  left: 0;
+  top: -100px;
+  @include at-media(tablet-lg) {
+    top: -63px;
+  }
 }
 
 .jcc-timeline-dual__bottom-title {
   @include u-color(accent-warm-dark);
   position: absolute;
   @include u-font(body, 7);
-  bottom: 0px;
   width: 110px;
+  top: -100px;
+  right: 0;
+  text-align: right;
+  @include at-media(tablet-lg) {
+    right: unset;
+    top: unset;
+    bottom: -16px;
+    text-align: left;
+  }
 }
 
 .jcc-timeline-dual-item {
   position: relative;
   li {
     position: relative;
+    display: flex;
   }
 }
 
 .jcc-timeline-dual__bottom,
 .jcc-timeline-dual__top {
-  width: 100%;
-  display: -webkit-box;
-  flex: 0 0 100%;
-  height: 150px;
   position: inherit;
+  @include at-media(tablet-lg) {
+    width: 100%;
+    display: -webkit-box;
+    flex: 0 0 100%;
+    height: 150px;
+  }
+  height: 130px;
+  width: 50%;
+  float: left;
 
   &:before {
     position: absolute;
-    left: 0;
-    height: 2px;
     @include u-bg(primary);
-    z-index: 2;
+    height: 100%;
+    width: 2px;
+    z-index: 3;
     content: "";
-    width: 100%;
+    left: 0;
+    @include at-media(tablet-lg) {
+      height: 2px;
+      width: 100%;
+    }
   }
 
   &:after {
     position: absolute;
-    left: 0;
-    height: 20px;
     @include u-bg(primary-lighter);
+    height: 100%;
+    width: 20px;
+    z-index: 2;
     content: "";
-    z-index: 1;
-    width: 100%;
+    left: 0;
+    @include at-media(tablet-lg) {
+      height: 20px;
+      width: 100%;
+    }
   }
+}
+.jcc-timeline-dual__excerpt {
+  @include u-font(heading, 7);
+  @include u-color(base);
+  font-style: italic;
+  margin-top: 18px;
 }
 
 .jcc-timeline-dual__time {
@@ -97,10 +152,13 @@
   color: white;
   position: relative;
   height: min-content;
-  width: 184px;
   @include u-color("white");
   @include u-font(body, 1);
   z-index: 4;
+  width: 130px;
+  @include at-media(tablet-lg) {
+    width: 184px;
+  }
 
   &:before {
     content: "";
@@ -117,19 +175,31 @@
 .jcc-timeline-dual__number {
   @include u-font(body, 6);
   position: absolute;
-  margin-left: -8px;
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   @include u-color("white");
   @include u-bg(primary);
   border-radius: 50%;
   @include u-text(center);
   display: block;
   z-index: 5;
-  @include at-media(desktop) {
+  left: 30px;
+  &.none {
+    display: none;
+  }
+  &.wait {
+    background-image: url("../../images/time.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @include at-media(tablet-lg) {
     @include u-font(body, 9);
     position: absolute;
     top: -21px;
+    margin-left: -8px;
+    width: 35px;
+    height: 35px;
+    left: 0;
   }
 }
 
@@ -138,11 +208,15 @@
   height: 30px;
   display: block;
   position: absolute;
-  top: 115px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-size: contain;
-  left: -4px;
   background-repeat: no-repeat;
-
+  top: 16px;
+  @include at-media(tablet-lg) {
+    left: 10px;
+    top: 130px;
+  }
   &.both {
     background-image: url("../../images/both.svg");
   }
@@ -150,24 +224,40 @@
 
 .jcc-timeline-dual__top {
   &:after {
-    top: 80px;
+    @include at-media(tablet-lg) {
+      top: 80px;
+    }
   }
 
   &:before {
-    top: 80px;
+    @include at-media(tablet-lg) {
+      top: 80px;
+    }
   }
 
   .jcc-timeline-dual__time {
     @include u-bg(primary);
-    margin-top: 55px;
+    @include at-media(tablet-lg) {
+      margin-top: 55px;
+      left: unset;
+    }
+    left: 30px;
+    float: left;
   }
 
   .jcc-timeline-dual__number {
-    top: 64px;
+    @include at-media(tablet-lg) {
+      top: 64px;
+    }
+    left: 0px;
   }
 
   .jcc-timeline-dual-item__trigger {
-    top: 20px;
+    @include at-media(tablet-lg) {
+      top: 20px;
+      left: 0;
+    }
+    left: 70px;
     z-index: 4;
     position: absolute;
   }
@@ -175,28 +265,50 @@
 
 .jcc-timeline-dual__bottom {
   &:after {
-    bottom: 120px;
+    @include at-media(tablet-lg) {
+      bottom: 120px;
+    }
+    right: 0;
+    left: unset;
     @include u-bg(accent-warm-light);
   }
 
   &:before {
-    bottom: 120px;
+    @include at-media(tablet-lg) {
+      bottom: 120px;
+    }
+    right: 0;
+    left: unset;
     @include u-bg(accent-warm-dark);
   }
 
   .jcc-timeline-dual-item__trigger {
-    top: 60px;
+    @include at-media(tablet-lg) {
+      top: 60px;
+      right: unset;
+    }
+    right: 70px;
+    text-align: right;
     z-index: 4;
     position: absolute;
   }
 
   .jcc-timeline-dual__time {
     @include u-bg(accent-warm-dark);
-    margin-top: 3px;
+    @include at-media(tablet-lg) {
+      margin-top: 3px;
+    }
+    float: right;
+    left: unset;
   }
 
   .jcc-timeline-dual__number {
-    top: 12px;
+    @include at-media(tablet-lg) {
+      top: 12px;
+      right: unset;
+      left: 0;
+    }
+    right: 30px;
     @include u-bg(accent-warm);
   }
 }
@@ -209,13 +321,9 @@
   }
 
   li {
-    @include grid-col(4);
-  }
-
-  .jcc-timeline-dual-item__media {
+    @include u-width(full);
     @include at-media(tablet-lg) {
-      @include u-position(absolute);
-      @include u-top(0);
+      @include grid-col(4);
     }
   }
 }
@@ -247,18 +355,14 @@
   }
 }
 
-.jcc-timeline-dual__wrapper {
-  @include u-position(relative);
-}
-
 .jcc-timeline-dual__scroller--left {
   left: 40px;
-  top: 288px;
+  top: 336px;
 }
 
 .jcc-timeline-dual__scroller--right {
   right: 40px;
-  top: 288px;
+  top: 336px;
 }
 
 .jcc-timeline-dual__scroller-icon {
