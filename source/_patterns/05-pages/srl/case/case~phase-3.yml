@@ -1,0 +1,71 @@
+hero:
+  breadcrumbs:
+    - label: 'Divorce Without Children'
+      url: 'link.pages-judgment'
+    - label: 'Phase 3'
+  background_variant: "has-background-color--dark"
+  brow: ""
+  title: "Phase 3: Reaching and documenting an agreement"
+  lead: ""
+  body: "<p></p><ul><li>How you divide your property and debts</li><li>Whether anyone will pay spousal support</li></ul><p>You can work with your spouse to decide these issues together. If you can’t agree, you can ask the court to decide.</p>"
+
+  column_content_right: ""
+
+
+entries:
+  - type: 'dual-timeline'
+    timeline_dual:
+      title_bar:
+        previous: "Phase 2: Sharing Financial Information"
+        title: "Phase 3: Reaching and documenting an agreement"
+        next: "Phase 3: Finalizing a Divorce"
+      top_title: "Spouse Initiating Divorce"
+      bottom_title: "Spouse Responding to Divorce"
+      items:
+        - top:
+            deadline: "Deadline: 60 days after filing for divorce"
+          bottom:
+            deadline: "Deadline: 60 days after filing for divorce"
+        - top:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Figure out what you agree on"
+                url: "#"
+          bottom:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Figure out what you agree on"
+                url: "#"
+        - top:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Propose alternatives and negotiate"
+                url: "#"
+          bottom:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Propose alternatives and negotiate"
+                url: "#"
+        - top:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Reach an agreementor ask the court to decide"
+                url: "#"
+          bottom:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Reach an agreementor ask the court to decide"
+                url: "#"
+switchboard:

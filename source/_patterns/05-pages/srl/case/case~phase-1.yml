@@ -1,0 +1,79 @@
+hero:
+  breadcrumbs:
+    - label: 'Divorce'
+      url: 'link.pages-judgment'
+    - label: 'Wage Garnishment'
+  background_variant: "has-background-color--dark"
+  brow: ""
+  title: "Phase 1: Starting a Divorce"
+  body: "<p>Here's a simplified version of the typical process for starting a divorce. There are many ways this process may be different depending on your situation. For example, it’s possible to get a divorce even if the other spouse doesn’t respond to the divorce papers. </p><p>Select a task from the diagram or from the list below to get step-by-step instructions and also to find out what to do if your situation doesn’t follow the typical path</p>"
+  column_content_right: ""
+
+
+entries:
+  - type: 'dual-timeline'
+    timeline_dual:
+      title_bar:
+        previous: ""
+        title: "Phase 1 <br>Sharing Financial Information"
+        next: "Phase 2: Sharing Financial Information"
+      top_title: "Spouse Initiating Divorce"
+      bottom_title: "Spouse Responding to Divorce"
+      items:
+        - top:
+            deadline: ""
+          bottom:
+            deadline: ""
+        - top:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Fill out Forms"
+                url: "#"
+          bottom:
+            deadline: ""
+        - top:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "File Forms with Court"
+                url: "#"
+          bottom:
+            deadline: "Deadline: 30 days after being served"
+        - top:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Serve Forms"
+                url: "#"
+          icon: "down"
+          bottom:
+            read_more:
+              type: "link"
+              link:
+                label: "Fill out Response Form"
+                url: "#"
+        - top:
+            number: "wait"
+            excerpt: "Wait"
+          bottom:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Fill Response with Court"
+                url: "#"
+        - top:
+            number: 4
+            excerpt: "Receive Response If Any"
+          bottom:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Serve Response"
+                url: "#"
+switchboard:

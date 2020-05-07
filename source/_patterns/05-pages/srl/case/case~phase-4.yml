@@ -1,0 +1,74 @@
+hero:
+  breadcrumbs:
+    - label: 'Divorce Without Children'
+      url: 'link.pages-judgment'
+    - label: 'Phase 4'
+  background_variant: "has-background-color--dark"
+  brow: ""
+  title: "Phase 4: Finalizing a Divorce"
+  lead: ""
+  body: "<p>To finish your divorce, you must turn in a set of final forms along with your agreement to the court. </p><p><The court will review these forms to be sure there’s nothing missing. If not, the judge will sign the judgment, the papers will be filed, and your divorce is final./p> <p>The details of this process are slightly different depending on how you and your spouse are working together, or if you’re not.</p>  "
+  column_content_right: ""
+
+
+entries:
+  - type: 'dual-timeline'
+    timeline_dual:
+      title_bar:
+        previous: "Phase 3: Reaching and documenting an agreement"
+        title: "Phase 4: Finalizing a Divorce"
+        next: ""
+      top_title: "Spouse Initiating Divorce"
+      bottom_title: "Spouse Responding to Divorce"
+      items:
+        - top:
+            number:
+          bottom:
+            number:
+        - top:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Fill out Divorce Forms"
+                url: "#"
+          bottom:
+            number:
+        - top:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Prep envelopes and make copies"
+                url: "#"
+          bottom:
+            number:
+        - top:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Submit to court clerk"
+                url: "#"
+          bottom:
+            number:
+        - top:
+            number: "wait"
+            excerpt: "Wait"
+          bottom:
+            number:
+        - top:
+            number: 4
+            read_more:
+              type: "link"
+              link:
+                label: "Receive Final Judgement signed by Judge"
+                url: "#"
+          bottom:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Receive Final Judgement signed by Judge"
+                url: "#"
+switchboard:

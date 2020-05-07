@@ -1,5 +1,6 @@
 {% set tag = headergroup.tag|default('h2') %}
 
+{% if headergroup == "none" %}
 {% if headergroup.brow or headergroup.title or headergroup.lead or headergroup.body %}
   <header class="jcc-header-group">
     {% if headergroup.brow %}
@@ -18,4 +19,5 @@
       <div class="jcc-header-group__body">{{ headergroup.body }}</div>
     {% endif %}
   </header>
+{% endif %}
 {% endif %}

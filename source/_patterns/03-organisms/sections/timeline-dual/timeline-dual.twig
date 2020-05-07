@@ -8,21 +8,21 @@
 
     {% if timeline_dual.title_bar %}
       <div class="jcc-timeline-dual__title-bar">
-        {% if timeline_dual.title_bar.previous %}
           <a href="{{ timeline_dual.title_bar.previous }}" class="jcc-timeline-dual__title-bar-previous">
+            {% if timeline_dual.title_bar.previous %}
             {{ timeline_dual.title_bar.previous }}
+            {% endif %}
           </a>
-        {% endif %}
-        {% if timeline_dual.title_bar.title %}
           <div class="jcc-timeline-dual__title-bar-title">
-            {{ timeline_dual.title_bar.title }}
+            {% if timeline_dual.title_bar.title %}
+              {{ timeline_dual.title_bar.title }}
+            {% endif %}
           </div>
-        {% endif %}
-        {% if timeline_dual.title_bar.next %}
           <a href="{{ timeline_dual.title_bar.next }}" class="jcc-timeline-dual__title-bar-next">
+          {% if timeline_dual.title_bar.next %}
             {{ timeline_dual.title_bar.next }}
+          {% endif %}
           </a>
-        {% endif %}
       </div>
     {% endif %}
 

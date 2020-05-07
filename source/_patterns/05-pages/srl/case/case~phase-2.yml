@@ -1,0 +1,86 @@
+hero:
+  breadcrumbs:
+    - label: 'Divorce Without Children'
+      url: 'link.pages-judgment'
+    - label: 'Phase 2'
+  background_variant: "has-background-color--dark"
+  brow: ""
+  title: "Phase 2: Sharing Financial Information"
+  lead: ""
+  body: "<h4>Sharing financial information with your spouse is a requirement for getting divorced</h4><p>To divorce, you must share complete and up-to-date information about your finances with your spouse and your spouse must share this with you. This is called <strong>disclosure</strong>. You can’t get divorced if you don’t share financial information.</p><p>Not only is sharing this information required, but being upfront makes it easier to work out an agreement with your spouse. You need this information to divide your property and debts equally and make decisions about child and spousal support.</p> <h4>You must share financial information by a deadline. </h4><p>The first time you give your spouse this information it’s called preliminary disclosures You must complete preliminary disclosures by a deadline:</p><ul><li>60-days after filing for divorce, if you’re the petitioner </li><li>60-days after you’re served with divorce papers, if you’re the responden</li></ul><p>Sometimes, you also must make a second disclosure, a final disclosure, at the end of your case. This happens if you end up having a trial. If you don’t have a trial, you can waive this final requirement.</p>"
+
+  column_content_right: ""
+
+
+entries:
+  - type: 'dual-timeline'
+    timeline_dual:
+      title_bar:
+        previous: "Phase 1 Sharing Financial Information"
+        title: "Phase 2: Sharing Financial Information"
+        next: "Phase 3: Make Decisions"
+      top_title: "Spouse Initiating Divorce"
+      bottom_title: "Spouse Responding to Divorce"
+      items:
+        - top:
+            deadline: "Deadline: 60 days after filing for divorce"
+          bottom:
+            deadline: "Deadline: 60 days after filing for divorce"
+        - top:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Gather Financial Information"
+                url: "#"
+          bottom:
+            number: 1
+            read_more:
+              type: "link"
+              link:
+                label: "Gather Financial Information"
+                url: "#"
+        - top:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Fill out the Financial Disclosures Form"
+                url: "#"
+          bottom:
+            number: 2
+            read_more:
+              type: "link"
+              link:
+                label: "Fill out the Financial Disclosures Form"
+                url: "#"
+        - top:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Serve the Disclosures Form"
+                url: "#"
+          icon: "both"
+          bottom:
+            number: 3
+            read_more:
+              type: "link"
+              link:
+                label: "Serve the Disclosures Form"
+                url: "#"
+        - top:
+            number: 4
+            read_more:
+              type: "link"
+              link:
+                label: "File Form"
+                url: "#"
+          bottom:
+            number: 4
+            read_more:
+              type: "link"
+              link:
+                label: "File Form"
+                url: "#"
+switchboard:

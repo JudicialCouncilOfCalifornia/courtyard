@@ -220,6 +220,12 @@
   &.both {
     background-image: url("../../images/both.svg");
   }
+  &.down {
+    background-image: url("../../images/top-bottom.svg");
+  }
+  &.up {
+    background-image: url("../../images/bottom-top.svg");
+  }
 }
 
 .jcc-timeline-dual__top {

@@ -1,0 +1,85 @@
+hero:
+  breadcrumbs:
+    - label: 'Phase 1'
+      url: 'link.pages-case-phase-1'
+    - label: 'How to Fill Out Forms'
+  brow:
+  background_variant: "has-background-color--light--secondary"
+  title: 'How to fill out a divorce petition and summons'
+  body: 'To start a divorce, you begin by filling out two court forms: a <strong>Petition and a Summons</strong> <br>In the forms, you’ll tell the court when you married and when you separated and how you want your property divided, whether  spousal support and other issues.  You’ll also use these forms to officially tell your spouse you’ve started a divorce case.<h5> Get familiar with a few key terms</h5><p>The way you fill out these form will impact the outcome of your case, so it’  important to do it correctly. The forms include some terms that may be unfamiliar to you – especially terms for how the court treats property in a divorce. </p><p> It helps if you understand the terms the court uses (for example community property, separate property) before you start to fill out the forms. </p> <a href="">What you need to know about property and divorce</a><a href="">What you need to know about spousal support (alimony) in California</a>'
+  column_content_right: '<strong> Some courts allow you to complete these online. Check your court’s website to see if they offer this service.</strong>'
+  column_variant: "has-two-columns-threequarter"
+entries:
+- type: 'section'
+  text_section:
+    headergroup: "none"
+    column_content_left:
+      join():
+        - include():
+            pattern: 'organisms-steps'
+            with:
+              steps:
+                items:
+                  - title: "Confirm you can file in California"
+                    excerpt: '<p>To file for divorce in California, either you or your spouse has to have lived in California for the past 6 months and in your current California county for at least 3 months.</p><p> This is known as meeting the residency requirement.</p><a>See the exceptions for same-sex couples.</a> '
+                    alert:
+                      type: "info"
+                      icon: false
+                      text: "If either you or your spouse lives somewhere that won’t perform divorce for same-sex couples, you can file in the county where you were married."
+                    read_more:
+                      type: 'toggle'
+                      toggle:
+                        block_variant: true
+                        id: "read-more-block"
+                        title: "What if I don’t meet the residency requirement?"
+                        content: "Answer: You may be able to file for a legal separation. You can then file for divorce once you meet the requirements. Learn about legal separation"
+                  - title: "Figure out which county to file in"
+                    excerpt: "<p>You can file for divorce in the county where either you or your spouse has lived for the past three months. </p><p>This may mean that you could file in more than one county.  </p><a>Check to see where you can file</a>"
+                  - title: "Fill out forms"
+                    excerpt: "Fill out Petition — <a>Marriage/Domestic Partnership (form FL-100)</a>  <p> This form asks for basic information about your marriage and the type of orders you want the court to be able to make about things like spousal support and property.  </p><p><br><br><a>Fill out Summons (Family Law) (Form FL-110)</a> </p><p> This form tells your spouse that you've started a court case and that they have 30 days to respond. </p>"
+                    alert:
+                      type: "warning"
+                      icon: true
+                      text: "ALERT: Read this form carefully. Page 2 lists a number of things you cannot do once you file for divorce and these apply to you as soon as you file this form. These are called Standard Family Law Restraining Orders."
+                      excerpt: "For example, once you file this form, you can’t<ul> <li>Change any insurance beneficiaries</li><li>Give away or hide money</li><li>Take a loan out against property</li><p>This doesn’t include what you may need to do as part of regular business or for the necessities of everyday life.</p><p>These same rules will apply to your spouse once they’re served with these forms.   </p>"
+                  - title: "Figure out if you need the court to decide something right away"
+                    excerpt: "<p>Some courts have additional local forms they require you to use.  </p><p>Contact your court clerk’s office, check your court’s website, or talk to your family law facilitator or self-help center to ask if they have any local forms you need to use.</p>"
+                  - title: "Make copies of your forms"
+                    excerpt: "After you’ve filled out the forms and signed the Petition, make 2 copies of both forms."
+    column_content_right:
+        join():
+          - include():
+              pattern: 'molecules-share'
+              with:
+                share:
+
+          - include():
+              pattern: 'molecules-callout'
+              with:
+                callout:
+                  variant: "block"
+                  content: "In general, after a divorce, you keep your separate property and divide your community property."
+
+switchboard:
+  background_variant: "has-background-color--dark--primary" #has-background-color--dark
+  layout_variant: "next-right-column" #default, #right-column
+  breadcrumbs:
+  headergroup:
+    brow: ''
+    title: 'What is next?'
+    body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
+  items:
+    primary:
+      - brow: 'Go to'
+        title: 'File forms with the court'
+        icon_link: true
+        body: ""
+        url: 'link.pages-judgment-wage-garnishment'
+      - brow: 'Return to'
+        title: 'The Start of Divorce At-a-Glance'
+        icon_link: true
+        body: ""
+        url: 'link.pages-judgment-lien-against-property'
+      -
+      -
+    secondary:

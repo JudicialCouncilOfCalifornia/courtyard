@@ -33876,6 +33876,14 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   background-image: url("../../images/both.svg");
 }
 
+.jcc-timeline-dual__icon.down {
+  background-image: url("../../images/top-bottom.svg");
+}
+
+.jcc-timeline-dual__icon.up {
+  background-image: url("../../images/bottom-top.svg");
+}
+
 .jcc-timeline-dual__top .jcc-timeline-dual__time {
   background-color: #005ea2 ;
   left: 30px;

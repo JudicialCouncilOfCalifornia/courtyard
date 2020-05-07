@@ -1,5 +1,4 @@
 timeline_dual:
-  # background_variant: has-background-color--transparent has-background-color--light--primary has-background-color--dark--primary
   title_bar:
     previous: "Phase 1 <br>Sharing Financial Information"
     title: "Phase 2: Sharing Financial Information"
