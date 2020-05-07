@@ -92,6 +92,7 @@ $(window).on("resize", () => {
       if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
         $(slider).slick(settings(slider));
         initControls(slider);
+        console.log("1");
       }
     });
   }

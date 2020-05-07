@@ -51,58 +51,6 @@ $aspect-width: 16;
 }
 
 // Custom ordered list elements
-@mixin timeline-top-counter() {
-  counter-increment: timeline-counter;
-  position: relative;
-
-  &::before {
-    @include u-font(body, 6);
-    position: absolute;
-    margin-left: -8px;
-    width: 35px;
-    height: 35px;
-    @include u-color("white");
-    @include u-bg(primary);
-    border-radius: 50%;
-    content: counter(timeline-counter);
-    @include u-text(center);
-    display: block;
-    z-index: 5;
-    @include at-media(desktop) {
-      @include u-font(body, 9);
-      position: absolute;
-      top: 42px;
-    }
-  }
-}
-
-// Custom ordered list elements
-@mixin timeline-bottom-counter() {
-  counter-increment: timeline-counter;
-  position: relative;
-
-  &::before {
-    @include u-font(body, 6);
-    position: absolute;
-    margin-left: -8px;
-    width: 35px;
-    height: 35px;
-    @include u-color("white");
-    @include u-bg(accent-warm);
-    border-radius: 50%;
-    content: counter(timeline-counter);
-    @include u-text(center);
-    display: block;
-    z-index: 5;
-    @include at-media(desktop) {
-      @include u-font(body, 9);
-      position: absolute;
-      top: -21px;
-    }
-  }
-}
-
-// Custom ordered list elements
 @mixin custom-counter() {
   counter-increment: step-counter;
   position: relative;

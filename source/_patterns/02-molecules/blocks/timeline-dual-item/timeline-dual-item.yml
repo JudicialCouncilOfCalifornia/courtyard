@@ -1,6 +1,12 @@
 timeline_dual_item:
-  read_more:
-    type: "link"
-    link:
-      label: "Read more link"
-      url: "#"
+  top:
+    number: 1
+    read_more:
+      type: "link"
+      link:
+        label: "Read more link"
+        url: "#"
+  bottom:
+    number: 1
+    deadline: "Deadline: 60 days after filing for divorce"
+  icon: "both"
