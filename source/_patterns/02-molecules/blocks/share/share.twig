@@ -1,0 +1,15 @@
+{% set classes = [
+    'jcc-social-links',
+]|merge(social_links.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+    {% for item in social_links.items %}
+
+    {% if item.url %}
+    <a href="{{ item.url }}" class="jcc-social-links__item">
+      <img src="{{ item.src }}">
+    </a>
+    {% endif %}
+
+    {% endfor %}
+</div>

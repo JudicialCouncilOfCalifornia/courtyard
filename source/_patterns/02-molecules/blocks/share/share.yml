@@ -1,0 +1,11 @@
+social_links:
+  items:
+    -   title: "Print"
+        url: "#"
+        src: ../../images/print.svg
+    -   title: "Email"
+        url: "#"
+        src: ../../images/email.svg
+    -   title: "Text"
+        url: "#"
+        src: ../../images/text.svg

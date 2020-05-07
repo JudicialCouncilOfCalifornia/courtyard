@@ -34325,6 +34325,30 @@ a:visited {
   position: relative ;
 }
 
+.jcc-share {
+  padding-top: 3rem ;
+  padding-bottom: 3rem ;
+}
+
+.jcc-share__item {
+  margin-left: 0.5rem ;
+  margin-right: 0.5rem ;
+}
+
+.jcc-share__item *, .jcc-share__item, .jcc-share__item:visited {
+  color: #919191 ;
+  text-decoration: none ;
+}
+
+.jcc-share__item svg {
+  height: 3rem ;
+  width: 3rem ;
+}
+
+.jcc-share__item svg.ext {
+  display: none;
+}
+
 .jcc-social-links {
   padding-top: 3rem ;
   padding-bottom: 3rem ;
@@ -70668,6 +70692,9 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-postcard--has-background-color--light--secondary,
   .jcc-postcard--has-background-color--dark--secondary {
     padding-top: 1.5rem ;
+  }
+  .jcc-share {
+    padding-bottom: 1.5rem ;
   }
   .jcc-social-links {
     padding-bottom: 1.5rem ;
