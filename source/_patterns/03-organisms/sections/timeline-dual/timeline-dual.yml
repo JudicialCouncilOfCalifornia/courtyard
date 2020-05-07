@@ -1,0 +1,71 @@
+timeline_dual:
+  # background_variant: has-background-color--transparent has-background-color--light--primary has-background-color--dark--primary
+  title_bar:
+    title: "Lorem Ipsum"
+    next: "Phase 1 Sharing Financial Information"
+    previous: "Phase 2 Sharing Financial Information"
+  top:
+    title: "Spouse Initiating Divorce"
+    deadline: "Deadline: 60 days after filing for divorce"
+    items:
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 1"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+        icon: "both"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 2"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 1"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 2"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 1"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 2"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+
+  bottom:
+    title: "Spouse Responding to Divorce"
+    deadline: "Deadline: 60 days after filing for divorce"
+    items:
+      - 
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 3"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 4"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"
+      - read_more:
+          type: "modal"
+          modal:
+            button_label: "Title 1"
+            id: "timeline-full-modal-2"
+            content: "<p>Negotiation Details 2... Modal content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo omnis similique quod quis consectetur quo! Provident ad, consequuntur quibusdam odit saepe ullam veniam error voluptatem ut maxime totam, voluptatum.</p> <a> Example Link</a>"

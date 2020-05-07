@@ -1,0 +1,88 @@
+{% set classes = [
+  'jcc-timeline-dual-section',
+  'jcc-timeline-dual-section--' ~ timeline_dual.background_variant|default('has-background-color--transparent'),
+]|merge(timeline_dual.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if timeline.id %} id="{{ timeline_dual.id }}"{% endif %}>
+  <div class="jcc-timeline-dual-section__container">
+
+    {% if timeline_dual.title_bar %}
+      <div class="jcc-timeline-dual__title-bar">
+        {% if timeline_dual.title_bar.previous %}
+        <a href="{{ timeline_dual.title_bar.previous }}" class="jcc-timeline-dual__title-bar-previous">
+          {{ timeline_dual.title_bar.previous }}
+        </a>
+        {% endif %}
+        {% if timeline_dual.title_bar.title %}
+        <div class="jcc-timeline-dual__title-bar-title">
+          {{ timeline_dual.title_bar.title }}
+        </div>
+        {% endif %}
+        {% if timeline_dual.title_bar.next %}
+        <a href="{{ timeline_dual.title_bar.next }}" class="jcc-timeline-dual__title-bar-next">
+          {{ timeline_dual.title_bar.next }}
+        </a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="jcc-timeline-dual__wrapper">
+      <ul class="jcc-timeline-dual__slider">
+        <div class="jcc-timeline-dual__top">
+        <h6 class="jcc-timeline-dual__title"> {{ timeline_dual.top.title }} </h6>
+        <div class="jcc-timeline-dual__time">{{ timeline_dual.top.deadline}} </div>
+      </div>
+        <ul class="jcc-timeline-dual__top slider" aria-label="timeline" tabindex="0">
+        {% for item in timeline_dual.top.items %}
+          <li>
+            {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {
+              timeline_dual_item: item,
+            } %}
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="jcc-timeline-dual__bottom">
+        <h6 class="jcc-timeline-dual__title"> {{ timeline_dual.bottom.title }} </h6>
+        <div class="jcc-timeline-dual__time">{{ timeline_dual.bottom.deadline}} </div>
+      </div>
+        <div class="jcc-timeline-dual__bottom">
+        {% for item in timeline_dual.bottom.items %}
+          <li>
+            {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {
+              timeline_dual_item: item,
+            } %}
+          </li>
+        {% endfor %}
+      </div>
+      </ul>
+
+      {# @todo: Remove these as variables? #}
+      <button id="scroller--left"  class="jcc-timeline-dual__scroller--left slick-prev">
+        <span class="jcc-timeline-dual__label">{{ "Scroll Left"|t }}</span>
+        <span class="jcc-timeline-dual__scroller-icon">
+          {% include '@atoms/icons/icon.twig' with {
+            icon: timeline_dual.left_icon|default({
+              name: "chevron_left",
+              title: "Left"|t,
+              decorative: true,
+            })
+          } %}
+        </span>
+      </button>
+
+      <button id="scroller--right" class="jcc-timeline-dual__scroller--right is-active slick-next">
+        <span class="jcc-timeline-dual__label">{{ "Scroll Right"|t }}</span>
+        <span class="jcc-timeline-dual__scroller-icon">
+          {% include '@atoms/icons/icon.twig' with {
+            icon: timeline_dual.right_icon|default({
+              name: "chevron_right",
+              title: "Right"|t,
+              decorative: true,
+            })
+          } %}
+        </span>
+      </button>
+    </div>
+
+  </div>
+</div>

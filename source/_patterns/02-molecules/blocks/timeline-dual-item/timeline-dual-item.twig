@@ -1,0 +1,28 @@
+{% set classes = [
+  'jcc-timeline-dual-item',
+  timeline_dual_item.img ? 'jcc-timeline-dual-item--has-icon',
+]|merge(timeline_dual_item.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+
+  {% if timeline_dual_item.excerpt %}
+  <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.excerpt }}</div>
+  {% endif %}
+  {% if timeline_dual_item.icon %}
+  <div class="jcc-timeline-dual-item__icon {{ timeline_dual_item.icon }}"></div>
+  {% endif %}
+
+  {% if timeline_dual_item.read_more %}
+    {% if timeline_dual_item.read_more.type == 'link' %}
+      {% set url_attributes = timeline_dual_item.read_more.link.url_attributes|default(create_attribute()) %}
+      <a href="{{ timeline_dual_item.read_more.link.url }}"{{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
+        {{- timeline_dual_item.read_more.link.label -}}
+      </a>
+
+    {% elseif timeline_dual_item.read_more.type == 'modal' %}
+      {% include '@organisms/sections/modal/modal.twig' with {
+        modal: timeline_dual_item.read_more.modal
+      } %}
+    {% endif %}
+  {% endif %}
+</div>

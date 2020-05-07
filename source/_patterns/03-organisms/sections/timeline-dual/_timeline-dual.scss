@@ -1,0 +1,230 @@
+@import "../../../../../node_modules/slick-carousel/slick/slick.scss";
+
+.jcc-timeline-dual-section {
+  @include section-wrapper;
+  @include u-position(relative);
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
+}
+
+.jcc-timeline-dual__title-bar {
+  @include u-color(primary);
+  @include section-wrapper;
+  @include grid-row;
+  @include u-padding-top(4);
+  &-title {
+    text-align: center;
+    float: none;
+  }
+  &-next {
+    float: right;
+  }
+  &-previous {
+    float: left;
+  }
+}
+
+.jcc-timeline-dual-section__container {
+  @include section-container;
+}
+
+.jcc-timeline-dual__top,
+.jcc-timeline-dual__bottom {
+  width: 100%;
+  display: -webkit-box;
+  flex: 0 0 100%;
+  height: 150px;
+  position: inherit;
+  &:before {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    @include u-bg(primary);
+    z-index: 2;
+    content: "";
+    width: 100%;
+  }
+  &:after {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    @include u-bg(primary-lighter);
+    content: "";
+    z-index: 1;
+    width: 100%;
+  }
+}
+.jcc-timeline-dual__title {
+  @include u-font(body, 7);
+}
+
+.jcc-timeline-dual__time {
+  border-radius: 66px;
+  padding: 6px;
+  padding-left: 40px;
+  margin-right: 30px;
+  color: white;
+  position: relative;
+  height: min-content;
+  width: 184px;
+  @include u-color("white");
+  @include u-font(body, 1);
+  z-index: 4;
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    display: block;
+    background-image: url("../../images/time.svg");
+  }
+}
+
+.jcc-timeline-dual__top {
+  &:after {
+    top: 80px;
+  }
+  &:before {
+    top: 80px;
+  }
+  .jcc-timeline-dual__time {
+    @include u-bg(primary);
+    margin-top: 55px;
+  }
+  .jcc-timeline-dual__title {
+    @include u-color(primary);
+    position: absolute;
+  }
+
+  li {
+    @include timeline-top-counter();
+    @include add-list-reset;
+    margin-top: 20px;
+  }
+  .jcc-timeline-dual-item__icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    background-size: contain;
+    left: -4px;
+    background-repeat: no-repeat;
+    &.both {
+      background-image: url(../../images/both.svg);
+    }
+  }
+}
+
+.jcc-timeline-dual__bottom {
+  &:after {
+    bottom: 120px;
+    @include u-bg(accent-warm-light);
+  }
+  &:before {
+    before: 120px;
+    @include u-bg(accent-warm-dark);
+  }
+  padding-top: 2rem;
+  .jcc-timeline-dual__time {
+    @include u-bg(accent-warm-dark);
+    margin-top: -27px;
+  }
+  .jcc-timeline-dual__title {
+    @include u-color(accent-warm-dark);
+    position: absolute;
+    bottom: 40px;
+  }
+  .jcc-modal__trigger {
+    margin-top: 31px;
+  }
+
+  li {
+    @include timeline-bottom-counter();
+    @include add-list-reset;
+  }
+}
+
+.jcc-timeline-dual__slider {
+  @include unstyled-list();
+
+  @include at-media(tablet-lg) {
+    @include grid-row;
+    @include u-overflow-x(auto);
+  }
+
+  li {
+    @include grid-col(2);
+  }
+
+  .jcc-timeline-dual-item {
+    @include at-media(tablet-lg) {
+      @include u-padding-right(3);
+    }
+  }
+
+  .jcc-timeline-dual-item__media {
+    @include at-media(tablet-lg) {
+      @include u-position(absolute);
+      @include u-top(0);
+    }
+  }
+}
+
+// remove line from last timeline item
+.jcc-timeline-dual:not(.slick-initialized) li:last-of-type .jcc-timeline-dual-item__title:after,
+.slick-slide:last-of-type .jcc-timeline-dual-item__title:after {
+  @include u-width(0);
+}
+
+.jcc-timeline-dual__label {
+  @include sr-only();
+}
+
+.jcc-timeline-dual__scroller--left,
+.jcc-timeline-dual__scroller--right {
+  @include u-position(absolute);
+  @include u-bottom(0);
+  @include u-display(none);
+  top: 105px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  z-index: 10;
+
+  &.is-active {
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+    }
+  }
+}
+
+.jcc-timeline-dual__wrapper {
+  @include u-position(relative);
+}
+
+.jcc-timeline-dual__scroller--left {
+  @include u-left(0);
+}
+.jcc-timeline-dual__scroller--right {
+  @include u-right(0);
+}
+
+.jcc-timeline-dual__scroller-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+
+  svg {
+    display: block;
+    margin: auto;
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: color(ink);
+  }
+}
