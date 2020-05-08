@@ -70,14 +70,14 @@ const settings = slider => {
   return defaultSettings;
 };
 
-$(".slider").each((_, slider) => {
+$(".slider-dual").each((_, slider) => {
   $(slider).slick(settings(slider));
   initControls(slider);
 });
 
 $(window).on("resize", () => {
   if ($(window).width() > 640) {
-    $(".slider").each((_, slider) => {
+    $(".slider-dual").each((_, slider) => {
       if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
         $(slider).slick(settings(slider));
         initControls(slider);
