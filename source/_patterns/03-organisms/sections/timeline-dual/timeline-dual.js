@@ -50,8 +50,8 @@ const settings = slider => {
   const defaultSettings = {
     infinite: false,
     slidesToShow: 4,
-    nextArrow: $("#scroller--right"),
-    prevArrow: $("#scroller--left"),
+    nextArrow: $(slider).siblings(".jcc-timeline-dual__scroller--right"),
+    prevArrow: $(slider).siblings(".jcc-timeline-dual__scroller--left"),
     responsive: [
       {
         breakpoint: 880,
@@ -71,19 +71,8 @@ const settings = slider => {
 };
 
 $(".slider").each((_, slider) => {
-  if (slider.children.length >= 4) {
-    console.log("1");
-    $(slider).slick(settings(slider));
-    initControls(slider);
-  } else {
-    console.log(slider);
-    $(slider)
-      .siblings(".jcc-timeline__scroller--left")
-      .hide();
-    $(slider)
-      .siblings(".jcc-timeline__scroller--right")
-      .hide();
-  }
+  $(slider).slick(settings(slider));
+  initControls(slider);
 });
 
 $(window).on("resize", () => {
@@ -92,7 +81,6 @@ $(window).on("resize", () => {
       if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
         $(slider).slick(settings(slider));
         initControls(slider);
-        console.log("1");
       }
     });
   }

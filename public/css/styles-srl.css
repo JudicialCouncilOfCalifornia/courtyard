@@ -32636,13 +32636,11 @@ h3.jcc-header-group__title {
 }
 
 .jcc-switchboard--next-right-column .jcc-switchboard__columns .jcc-header-group {
-  margin-top: 40px;
   padding-bottom: 0;
 }
 
 .jcc-switchboard--next-right-column .jcc-switchboard__columns .jcc-header-group__title:after {
   left: 0;
-  top: -75px;
 }
 
 .jcc-switchboard--next-right-column .jcc-switchboard__columns .jcc-switchboard__column-left,
@@ -33735,6 +33733,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 .jcc-timeline-dual__wrapper {
   position: relative ;
   margin-top: 60px;
+  display: block;
 }
 
 .jcc-timeline-dual__top-title {
@@ -33760,6 +33759,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 
 .jcc-timeline-dual-item {
   position: relative;
+  height: 130px;
 }
 
 .jcc-timeline-dual-item li {
@@ -33799,21 +33799,20 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   left: 0;
 }
 
-.jcc-timeline-dual__excerpt {
-  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 1.12rem;
-  color: #919191 ;
-  font-style: italic;
-  margin-top: 18px;
-  position: absolute;
-}
-
 .jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
   left: 70px;
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
   right: 70px;
+}
+
+.jcc-timeline-dual__excerpt {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.12rem;
+  color: #919191 ;
+  font-style: italic;
+  position: absolute;
 }
 
 .jcc-timeline-dual__time {
@@ -54036,8 +54035,8 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     width: 100%;
   }
   .jcc-timeline-dual__excerpt {
-    margin-top: 0px;
-    left: unset;
+    margin-top: 18px;
+    left: unset !important;
     position: relative;
     right: unset;
   }
@@ -54070,6 +54069,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
   .jcc-timeline-dual__top .jcc-timeline-dual__number {
     top: 64px;
+    left: 0;
   }
   .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
     top: 20px;
@@ -54106,7 +54106,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
-    width: 25% ;
+    width: 41.66667% ;
   }
   .jcc-timeline-dual__scroller--left.is-active,
   .jcc-timeline-dual__scroller--right.is-active {

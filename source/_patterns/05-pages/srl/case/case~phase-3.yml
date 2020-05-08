@@ -1,7 +1,7 @@
 hero:
   breadcrumbs:
     - label: 'Divorce Without Children'
-      url: 'link.pages-judgment'
+      url: 'link.pages-case'
     - label: 'Phase 3'
   background_variant: "has-background-color--dark"
   brow: ""
@@ -36,40 +36,40 @@ entries:
               type: "link"
               link:
                 label: "Figure out what you agree on"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
           bottom:
             number: 1
             read_more:
               type: "link"
               link:
                 label: "Figure out what you agree on"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
         - top:
             number: 2
             read_more:
               type: "link"
               link:
                 label: "Propose alternatives and negotiate"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
           bottom:
             number: 2
             read_more:
               type: "link"
               link:
                 label: "Propose alternatives and negotiate"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
         - top:
             number: 3
             read_more:
               type: "link"
               link:
                 label: "Reach an agreementor ask the court to decide"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
           bottom:
             number: 3
             read_more:
               type: "link"
               link:
                 label: "Reach an agreementor ask the court to decide"
-                url: "#"
+                url: "link.pages-case-phase-3-serve"
 switchboard:

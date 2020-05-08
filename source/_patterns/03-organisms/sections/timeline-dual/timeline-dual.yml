@@ -1,8 +1,10 @@
 timeline_dual:
   title_bar:
-    previous: "Phase 1 <br>Sharing Financial Information"
+    previous:
+      title: "Phase 1 <br>Sharing Financial Information"
     title: "Phase 2: Sharing Financial Information"
-    next: "Phase 3 <br> Sharing Financial Information"
+    next:
+      title: "Phase 3 <br> Sharing Financial Information"
   top_title: "Spouse Initiating Divorce"
   bottom_title: "Spouse Responding to Divorce"
   items:

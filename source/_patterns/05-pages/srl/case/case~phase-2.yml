@@ -1,7 +1,7 @@
 hero:
   breadcrumbs:
-    - label: 'Divorce Without Children'
-      url: 'link.pages-judgment'
+    - label: 'Divorce without Children'
+      url: 'link.pages-case-phase-2'
     - label: 'Phase 2'
   background_variant: "has-background-color--dark"
   brow: ""
@@ -36,35 +36,35 @@ entries:
               type: "link"
               link:
                 label: "Gather Financial Information"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
           bottom:
             number: 1
             read_more:
               type: "link"
               link:
                 label: "Gather Financial Information"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
         - top:
             number: 2
             read_more:
               type: "link"
               link:
                 label: "Fill out the Financial Disclosures Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
           bottom:
             number: 2
             read_more:
               type: "link"
               link:
                 label: "Fill out the Financial Disclosures Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
         - top:
             number: 3
             read_more:
               type: "link"
               link:
                 label: "Serve the Disclosures Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
           icon: "both"
           bottom:
             number: 3
@@ -72,19 +72,19 @@ entries:
               type: "link"
               link:
                 label: "Serve the Disclosures Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
         - top:
             number: 4
             read_more:
               type: "link"
               link:
                 label: "File Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
           bottom:
             number: 4
             read_more:
               type: "link"
               link:
                 label: "File Form"
-                url: "#"
+                url: "link.pages-case-phase-2-divorce-petition"
 switchboard:
