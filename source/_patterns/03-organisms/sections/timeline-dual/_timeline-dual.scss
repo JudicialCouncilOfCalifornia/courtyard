@@ -70,7 +70,7 @@
   left: 0;
   top: -100px;
   @include at-media(tablet-lg) {
-    top: -63px;
+    top: -73px;
   }
 }
 
@@ -85,7 +85,7 @@
   @include at-media(tablet-lg) {
     right: unset;
     top: unset;
-    bottom: -16px;
+    bottom: -26px;
     text-align: left;
   }
 }
@@ -271,7 +271,7 @@
   .jcc-timeline-dual__number {
     @include at-media(tablet-lg) {
       top: 64px;
-      left: 0;
+      left: 8px;
     }
     left: 30px;
   }
@@ -331,7 +331,7 @@
     @include at-media(tablet-lg) {
       top: 12px;
       right: unset;
-      left: 0;
+      left: 8px;
     }
     right: 30px;
     left: unset;
@@ -349,7 +349,7 @@
   li {
     @include u-width(full);
     @include at-media(tablet-lg) {
-      @include grid-col(5);
+      @include grid-col(3);
     }
   }
 }
@@ -382,13 +382,13 @@
 }
 
 .jcc-timeline-dual__scroller--left {
-  left: 40px;
-  top: 336px;
+  left: 0;
+  top: 356px;
 }
 
 .jcc-timeline-dual__scroller--right {
-  right: 40px;
-  top: 336px;
+  right: 0;
+  top: 356px;
 }
 
 .jcc-timeline-dual__scroller-icon {

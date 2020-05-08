@@ -71,14 +71,23 @@ const settings = slider => {
 };
 
 $(".slider-dual").each((_, slider) => {
-  $(slider).slick(settings(slider));
-  initControls(slider);
+  if (slider.children.length > 4) {
+    $(slider).slick(settings(slider));
+    initControls(slider);
+  } else {
+    $(slider)
+      .siblings(".jcc-timeline-dual__scroller--left")
+      .hide();
+    $(slider)
+      .siblings(".jcc-timeline-dual__scroller--right")
+      .hide();
+  }
 });
 
 $(window).on("resize", () => {
   if ($(window).width() > 640) {
     $(".slider-dual").each((_, slider) => {
-      if (!$(slider).hasClass("slick-initialized")) {
+      if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
         $(slider).slick(settings(slider));
         initControls(slider);
       }

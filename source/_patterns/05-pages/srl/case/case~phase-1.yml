@@ -24,10 +24,6 @@ entries:
       bottom_title: "Spouse Responding to Divorce"
       items:
         - top:
-            deadline: ""
-          bottom:
-            deadline: ""
-        - top:
             number: 1
             read_more:
               type: "link"

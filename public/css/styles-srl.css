@@ -33978,13 +33978,13 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 }
 
 .jcc-timeline-dual__scroller--left {
-  left: 40px;
-  top: 336px;
+  left: 0;
+  top: 356px;
 }
 
 .jcc-timeline-dual__scroller--right {
-  right: 40px;
-  top: 336px;
+  right: 0;
+  top: 356px;
 }
 
 .jcc-timeline-dual__scroller-icon {
@@ -54016,12 +54016,12 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     margin-top: 0px;
   }
   .jcc-timeline-dual__top-title {
-    top: -63px;
+    top: -73px;
   }
   .jcc-timeline-dual__bottom-title {
     right: unset;
     top: unset;
-    bottom: -16px;
+    bottom: -26px;
     text-align: left;
   }
   .jcc-timeline-dual__bottom,
@@ -54078,7 +54078,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
   .jcc-timeline-dual__top .jcc-timeline-dual__number {
     top: 64px;
-    left: 0;
+    left: 8px;
   }
   .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
     top: 20px;
@@ -54101,7 +54101,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-timeline-dual__bottom .jcc-timeline-dual__number {
     top: 12px;
     right: unset;
-    left: 0;
+    left: 8px;
   }
   .jcc-timeline-dual__slider {
     display: -webkit-box;
@@ -54115,7 +54115,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
-    width: 41.66667% ;
+    width: 25% ;
   }
   .jcc-timeline-dual__scroller--left.is-active,
   .jcc-timeline-dual__scroller--right.is-active {
