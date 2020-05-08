@@ -1,0 +1,36 @@
+name: Create build branch from development
+  
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.3'
+    - uses: actions/setup-node@v1
+    - name: Build PatternLab
+      run: |
+        git remote update
+        git fetch
+        git checkout --track origin/build/development
+        git checkout development
+        git branch -d build/development
+        git checkout -b build/development
+        composer install
+        git checkout -- .
+        npm install
+        npm run build
+    - name: Push to build branch
+      run: |
+        git config user.email "github-actions@github.com"
+        git config user.name "Github Actions"
+        sed -i '/public/d' ./.gitignore
+        git add --all
+        git commit -m 'Generated build from development'
+        git push -f origin build/development
