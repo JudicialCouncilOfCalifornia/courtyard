@@ -9,6 +9,10 @@
   @include u-margin-top(0);
   @include u-padding(0);
   @include u-line-height("body", 1);
+  display:none;
+  &.active{
+    display:block;
+  }
 }
 
 .jcc-alert__body.usa-alert--no-icon {

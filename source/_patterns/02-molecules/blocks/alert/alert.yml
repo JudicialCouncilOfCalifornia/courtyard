@@ -15,3 +15,4 @@ alert:
   heading: "Informative status"
   text: "<p>Lorem ipsum dolor sit amet, <a href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod.</p>"
   close: true
+  cookie_disabled: true
