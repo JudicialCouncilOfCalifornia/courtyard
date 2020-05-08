@@ -1,6 +1,6 @@
 let messageContentObject = document.getElementsByClassName("usa-alert__text"),  cookieId;
 if(messageContentObject[0]) {
-  cookieId = stringToHash(messageContentObject[0].innerText);
+  cookieId = "patternlab-alert-hide-" + stringToHash(messageContentObject[0].innerText);
 }
 var alert = document.getElementById("alert-bar");
 
