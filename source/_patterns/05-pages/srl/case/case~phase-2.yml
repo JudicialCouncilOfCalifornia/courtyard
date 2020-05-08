@@ -16,9 +16,13 @@ entries:
   - type: 'dual-timeline'
     timeline_dual:
       title_bar:
-        previous: "Phase 1 Sharing Financial Information"
+        previous:
+          title: "Phase 1 Sharing Financial Information"
+          url: "link.pages-case-phase-1"
         title: "Phase 2: Sharing Financial Information"
-        next: "Phase 3: Make Decisions"
+        next:
+          title: "Phase 3: Make Decisions"
+          url: link.pages-case-phase-3
       top_title: "Spouse Initiating Divorce"
       bottom_title: "Spouse Responding to Divorce"
       items:

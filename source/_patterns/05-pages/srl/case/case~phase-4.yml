@@ -15,7 +15,9 @@ entries:
   - type: 'dual-timeline'
     timeline_dual:
       title_bar:
-        previous: "Phase 3: Reaching and documenting an agreement"
+        previous:
+          title: "Phase 3: Reaching and documenting an agreement"
+          url: "link.pages-case-phase-3"
         title: "Phase 4: Finalizing a Divorce"
         next: ""
       top_title: "Spouse Initiating Divorce"

@@ -1,5 +1,5 @@
 {% set tag = step.tag|default('h3') %}
-
+{% if step %}
 <div class="jcc-step">
 
   {% if step.title %}
@@ -14,6 +14,14 @@
   <div class="jcc-step__block">
     {% include "@molecules/blocks/alert/alert.twig" with {
       alert: step.alert
+    } %}
+  </div>
+  {% endif %}
+
+  {% if step.external_button %}
+  <div class="jcc-step__block">
+    {% include "@atoms/buttons/external-button.twig" with {
+      external_button: step.external_button
     } %}
   </div>
   {% endif %}
@@ -56,3 +64,4 @@
   </div>
   {% endif %}
 </div>
+  {% endif %}

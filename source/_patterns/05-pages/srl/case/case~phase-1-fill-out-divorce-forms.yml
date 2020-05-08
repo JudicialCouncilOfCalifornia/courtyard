@@ -6,7 +6,7 @@ hero:
   brow:
   background_variant: "has-background-color--light--secondary"
   title: 'How to fill out a divorce petition and summons'
-  body: 'To start a divorce, you begin by filling out two court forms: a <strong>Petition and a Summons</strong> <br>In the forms, you’ll tell the court when you married and when you separated and how you want your property divided, whether  spousal support and other issues.  You’ll also use these forms to officially tell your spouse you’ve started a divorce case.<h5> Get familiar with a few key terms</h5><p>The way you fill out these form will impact the outcome of your case, so it’  important to do it correctly. The forms include some terms that may be unfamiliar to you – especially terms for how the court treats property in a divorce. </p><p> It helps if you understand the terms the court uses (for example community property, separate property) before you start to fill out the forms. </p> <a href="">What you need to know about property and divorce</a><a href="">What you need to know about spousal support (alimony) in California</a>'
+  body: 'To start a divorce, you begin by filling out two court forms: a <strong>Petition and a Summons</strong> <br>In the forms, you’ll tell the court when you married and when you separated and how you want your property divided, whether  spousal support and other issues.  You’ll also use these forms to officially tell your spouse you’ve started a divorce case.<h5> Get familiar with a few key terms</h5><p>The way you fill out these form will impact the outcome of your case, so it’  important to do it correctly. The forms include some terms that may be unfamiliar to you – especially terms for how the court treats property in a divorce. </p><p> It helps if you understand the terms the court uses (for example community property, separate property) before you start to fill out the forms. </p> <a href="">What you need to know about property and divorce</a><br><a href="">What you need to know about spousal support (alimony) in California</a>'
   column_content_right: '<strong> Some courts allow you to complete these online. Check your court’s website to see if they offer this service.</strong>'
   column_variant: "has-two-columns-threequarter"
 entries:
@@ -65,9 +65,9 @@ switchboard:
   layout_variant: "next-right-column" #default, #right-column
   breadcrumbs:
   headergroup:
-    brow: ''
+    brow:
     title: 'What is next?'
-    body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
+  body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
   items:
     primary:
       - brow: 'Go to'

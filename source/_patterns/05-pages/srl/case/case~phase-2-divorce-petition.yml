@@ -7,7 +7,6 @@ hero:
   background_variant: "has-background-color--light--secondary"
   title: 'Filing your divorce petition and summons'
   body: 'Once you complete your forms, you need to file them with the court and pay a filing fee of $435-$450. If you are unable to afford this fee, you may apply for a fee waiver.'
-  column_content_right: '<strong> Some courts allow you to complete these online. Check your court’s website to see if they offer this service.</strong>'
   column_variant: "has-two-columns-threequarter"
 entries:
 - type: 'section'
@@ -38,27 +37,28 @@ entries:
                         content: ""
                   - title: "Pay a filing fee"
                     excerpt: "<p>You’ll need to pay a fee of $435-$450 to the clerk when you file your forms.</p><p>If you can’t afford the fee, you can ask the clerk for a fee waiver.  You qualify for a fee waiver if:</p><ul><li>You receive public benefits</li><li>Your income falls below a level classified as low income</li><li>You can’t afford the fee and to meet your basic needs </li></ul>"
-        join():
-          - include():
-              pattern: 'molecules-share'
-              with:
-                share:
+                    read_more:
+                    external_button:
+                      text: 'Learn how to request a fee waiver'
+                      url: "#"
+                      style: 'external'
+    column_content_right:
+      join():
+        - include():
+            pattern: 'molecules-share'
+            with:
+              share:
 
-          - include():
-              pattern: 'molecules-callout'
-              with:
-                callout:
-                  variant: "block"
-                  content: "In general, after a divorce, you keep your separate property and divide your community property."
-
+        - include():
+            pattern: 'molecules-callout'
+            with:
+              callout:
+                variant: "block"
+                content: "In general, after a divorce, you keep your separate property and divide your community property."
 switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-right-column" #default, #right-column
   breadcrumbs:
-  headergroup:
-    brow: ''
-    title: 'What is next?'
-    body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
   items:
     primary:
       - brow: 'Go to'

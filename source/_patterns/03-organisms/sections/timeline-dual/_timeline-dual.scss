@@ -143,6 +143,21 @@
   @include u-color(base);
   font-style: italic;
   margin-top: 18px;
+  position: absolute;
+  @include at-media(tablet-lg) {
+    margin-top: 0px;
+    left: unset;
+    position: relative;
+    right: unset;
+  }
+}
+
+.jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
+  left: 70px;
+}
+
+.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
+  right: 70px;
 }
 
 .jcc-timeline-dual__time {
@@ -255,7 +270,7 @@
     @include at-media(tablet-lg) {
       top: 64px;
     }
-    left: 0px;
+    left: 30px;
   }
 
   .jcc-timeline-dual-item__trigger {
@@ -292,6 +307,7 @@
     @include at-media(tablet-lg) {
       top: 60px;
       right: unset;
+      text-align: left;
     }
     right: 70px;
     text-align: right;
@@ -315,6 +331,7 @@
       left: 0;
     }
     right: 30px;
+    left: unset;
     @include u-bg(accent-warm);
   }
 }
@@ -329,7 +346,7 @@
   li {
     @include u-width(full);
     @include at-media(tablet-lg) {
-      @include grid-col(4);
+      @include grid-col(3);
     }
   }
 }

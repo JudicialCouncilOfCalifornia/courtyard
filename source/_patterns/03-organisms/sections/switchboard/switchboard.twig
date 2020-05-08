@@ -13,13 +13,15 @@
     {% endif %}
       <div class="jcc-switchboard__columns">
         <div class="jcc-switchboard__column-left">
-          {% include '@molecules/text/header-group/header-group.twig' with {
-          headergroup: switchboard.headergroup
-          } %}
+          {% if switchboard.headergroup %}
+            {% include '@molecules/text/header-group/header-group.twig' with {
+            headergroup: switchboard.headergroup
+            } %}
+          {% endif %}
           {% if switchboard.body %}
-          <p class="jcc-switchboard__body">
-            {{ switchboard.body }}
-          </p>
+            <p class="jcc-switchboard__body">
+              {{ switchboard.body }}
+            </p>
           {% endif %}
         </div>
         <div class="jcc-switchboard__column-right">

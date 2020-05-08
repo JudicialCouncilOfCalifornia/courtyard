@@ -71,7 +71,7 @@ const settings = slider => {
 };
 
 $(".slider").each((_, slider) => {
-  if (slider.children.length > 4) {
+  if (slider.children.length >= 4) {
     console.log("1");
     $(slider).slick(settings(slider));
     initControls(slider);

@@ -33805,6 +33805,15 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   color: #919191 ;
   font-style: italic;
   margin-top: 18px;
+  position: absolute;
+}
+
+.jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
+  left: 70px;
+}
+
+.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
+  right: 70px;
 }
 
 .jcc-timeline-dual__time {
@@ -33891,7 +33900,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual__number {
-  left: 0px;
+  left: 30px;
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
@@ -33927,6 +33936,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual__number {
   right: 30px;
+  left: unset;
   background-color: #ffbe2e ;
 }
 
@@ -54025,6 +54035,12 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     height: 20px;
     width: 100%;
   }
+  .jcc-timeline-dual__excerpt {
+    margin-top: 0px;
+    left: unset;
+    position: relative;
+    right: unset;
+  }
   .jcc-timeline-dual__time {
     width: 184px;
   }
@@ -54068,6 +54084,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-timeline-dual__bottom .jcc-timeline-dual-item__trigger {
     top: 60px;
     right: unset;
+    text-align: left;
   }
   .jcc-timeline-dual__bottom .jcc-timeline-dual__time {
     margin-top: 3px;
@@ -54089,7 +54106,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
-    width: 33.33333% ;
+    width: 25% ;
   }
   .jcc-timeline-dual__scroller--left.is-active,
   .jcc-timeline-dual__scroller--right.is-active {

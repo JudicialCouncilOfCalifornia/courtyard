@@ -8,9 +8,9 @@
 
     {% if timeline_dual.title_bar %}
       <div class="jcc-timeline-dual__title-bar">
-          <a href="{{ timeline_dual.title_bar.previous }}" class="jcc-timeline-dual__title-bar-previous">
+          <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
             {% if timeline_dual.title_bar.previous %}
-            {{ timeline_dual.title_bar.previous }}
+            {{ timeline_dual.title_bar.previous.title }}
             {% endif %}
           </a>
           <div class="jcc-timeline-dual__title-bar-title">
@@ -18,9 +18,9 @@
               {{ timeline_dual.title_bar.title }}
             {% endif %}
           </div>
-          <a href="{{ timeline_dual.title_bar.next }}" class="jcc-timeline-dual__title-bar-next">
+          <a href="{{ timeline_dual.title_bar.next.url }}" class="jcc-timeline-dual__title-bar-next">
           {% if timeline_dual.title_bar.next %}
-            {{ timeline_dual.title_bar.next }}
+            {{ timeline_dual.title_bar.next.title }}
           {% endif %}
           </a>
       </div>
@@ -29,7 +29,7 @@
     <div class="jcc-timeline-dual__wrapper">
       <div class="jcc-timeline-dual__top-title">{{ timeline_dual.top_title }}</div>
       <div class="jcc-timeline-dual__bottom-title">{{ timeline_dual.bottom_title }}</div>
-      <ul class="jcc-timeline-dual__slider slider" aria-label="timeline" tabindex="0">
+      <ul class="jcc-timeline-dual__slider slider" aria-label="timeline-dual" tabindex="0">
         {% for item in timeline_dual.items %}
           <li>
             {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {

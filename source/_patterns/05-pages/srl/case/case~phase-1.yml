@@ -1,8 +1,8 @@
 hero:
   breadcrumbs:
     - label: 'Divorce'
-      url: 'link.pages-judgment'
-    - label: 'Wage Garnishment'
+      url: 'link.pages-case'
+    - label: 'Phase 1'
   background_variant: "has-background-color--dark"
   brow: ""
   title: "Phase 1: Starting a Divorce"
@@ -14,9 +14,12 @@ entries:
   - type: 'dual-timeline'
     timeline_dual:
       title_bar:
-        previous: ""
+        previous:
+          title: ""
         title: "Phase 1 <br>Sharing Financial Information"
-        next: "Phase 2: Sharing Financial Information"
+        next:
+          title: "Phase 2: Sharing Financial Information"
+          url: "link.pages-case-phase-2"
       top_title: "Spouse Initiating Divorce"
       bottom_title: "Spouse Responding to Divorce"
       items:
@@ -30,7 +33,7 @@ entries:
               type: "link"
               link:
                 label: "Fill out Forms"
-                url: "#"
+                url: "link.pages-case-phase-1-fill-out-divorce-forms"
           bottom:
             deadline: ""
         - top:
@@ -39,7 +42,7 @@ entries:
               type: "link"
               link:
                 label: "File Forms with Court"
-                url: "#"
+                url: "link.pages-case-phase-1-fill-out-divorce-forms"
           bottom:
             deadline: "Deadline: 30 days after being served"
         - top:
@@ -51,11 +54,12 @@ entries:
                 url: "#"
           icon: "down"
           bottom:
+            number: 1
             read_more:
               type: "link"
               link:
                 label: "Fill out Response Form"
-                url: "#"
+                url: "link.pages-case-phase-1-fill-out-divorce-forms"
         - top:
             number: "wait"
             excerpt: "Wait"
@@ -65,7 +69,7 @@ entries:
               type: "link"
               link:
                 label: "Fill Response with Court"
-                url: "#"
+                url: "link.pages-case-phase-1-fill-out-divorce-forms"
         - top:
             number: 4
             excerpt: "Receive Response If Any"
@@ -75,5 +79,5 @@ entries:
               type: "link"
               link:
                 label: "Serve Response"
-                url: "#"
+                url: "link.pages-case-phase-1-fill-out-divorce-forms"
 switchboard:
