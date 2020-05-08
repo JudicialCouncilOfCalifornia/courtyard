@@ -38897,6 +38897,15 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   fill: #555555;
 }
 
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;

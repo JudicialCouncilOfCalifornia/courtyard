@@ -78,7 +78,7 @@ $(".slider-dual").each((_, slider) => {
 $(window).on("resize", () => {
   if ($(window).width() > 640) {
     $(".slider-dual").each((_, slider) => {
-      if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
+      if (!$(slider).hasClass("slick-initialized")) {
         $(slider).slick(settings(slider));
         initControls(slider);
       }
