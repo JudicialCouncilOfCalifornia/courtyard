@@ -41,8 +41,7 @@
   }
 }
 
-.jcc-steps-section__container,
-.jcc-text-section {
+.jcc-steps-section__container {
   @include section-container;
   .jcc-options__container {
     @include u-padding-left(0);
