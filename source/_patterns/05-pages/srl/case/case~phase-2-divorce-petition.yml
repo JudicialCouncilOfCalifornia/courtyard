@@ -18,6 +18,7 @@ entries:
             pattern: 'organisms-steps'
             with:
               steps:
+                headergroup:
                 items:
                   - title: "Take your forms to the court clerk"
                     excerpt: '<p>Check Find my Court to find the courthouse in your county that accepts divorce filings. Look for the courthouse location that lists “Family” as one of the subjects under  “Matters Served.”</p><p>At the courthouse, you’ll file the forms by giving the original and the 2 copies to the clerk.</p><p>The clerk will give you a case number and stamp the forms</p><p>The court will keep the original and return the copies to you.  One is for you, the other for your spouse.</p> '
@@ -55,22 +56,27 @@ entries:
               callout:
                 variant: "block"
                 content: "In general, after a divorce, you keep your separate property and divide your community property."
+complete:
 switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-right-column" #default, #right-column
   breadcrumbs:
+  headergroup:
+    brow:
+    title: 'What is next?'
+    body: 'Once you have filled out the forms, the next step is to file them with the court and pay a fee.'
   items:
     primary:
       - brow: 'Go to'
         title: 'File forms with the court'
         icon_link: true
         body: ""
-        url: 'link.pages-judgment-wage-garnishment'
+        url: ''
       - brow: 'Return to'
         title: 'The Start of Divorce At-a-Glance'
         icon_link: true
         body: ""
-        url: 'link.pages-judgment-lien-against-property'
+        url: ''
       -
       -
     secondary:

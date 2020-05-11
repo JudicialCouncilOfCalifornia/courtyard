@@ -19,6 +19,7 @@ entries:
             pattern: 'organisms-steps'
             with:
               steps:
+                headergroup:
                 items:
                   - title: "Confirm you can file in California"
                     excerpt: '<p>To file for divorce in California, either you or your spouse has to have lived in California for the past 6 months and in your current California county for at least 3 months.</p><p> This is known as meeting the residency requirement.</p><a>See the exceptions for same-sex couples.</a> '
@@ -60,6 +61,7 @@ entries:
                   variant: "block"
                   content: "In general, after a divorce, you keep your separate property and divide your community property."
 
+complete:
 switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-right-column" #default, #right-column
@@ -67,19 +69,19 @@ switchboard:
   headergroup:
     brow:
     title: 'What is next?'
-  body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
+    body: 'Once you have filled out the forms, the next step is to file them with the court clerk. You will have one copy of the forms served on your spouse after they are stamped by the clerk.'
   items:
     primary:
       - brow: 'Go to'
         title: 'File forms with the court'
         icon_link: true
         body: ""
-        url: 'link.pages-judgment-wage-garnishment'
+        url: ''
       - brow: 'Return to'
         title: 'The Start of Divorce At-a-Glance'
         icon_link: true
         body: ""
-        url: 'link.pages-judgment-lien-against-property'
+        url: ''
       -
       -
     secondary:

@@ -1,6 +1,8 @@
 {% include '@organisms/global/header/header.twig'%}
 {% if hero %}
-  {% include '@molecules/blocks/hero/hero.twig' with { hero: hero } %}
+  {% include '@molecules/blocks/hero/hero.twig' with {
+    hero : hero
+  } %}
 {% endif %}
 
 {% for entry in entries %}
@@ -11,7 +13,7 @@
 
   {% elseif entry.type == 'postcard' %}
     {% include '@molecules/blocks/postcard/postcard.twig' with {
-      postcard: entry.postcard
+      postcard : entry.postcard
     } %}
 
   {% elseif entry.type == 'section' %}
@@ -21,26 +23,33 @@
 
   {% elseif entry.type == 'steps' %}
     {% include '@organisms/sections/steps/steps.twig' with {
-      steps: entry.steps
+      steps : entry.steps
     } %}
 
   {% elseif entry.type == 'card' %}
     {% include '@molecules/blocks/card/card.twig' with {
-      card: entry.card
+      card : entry.card
     } %}
 
   {% elseif entry.type == 'timeline' %}
     {% include '@organisms/sections/timeline/timeline.twig' with {
-      timeline: entry.timeline
+      timeline : entry.timeline
     } %}
 
   {% elseif entry.type == 'dual-timeline' %}
     {% include '@organisms/sections/timeline-dual/timeline-dual.twig' with {
       timeline_dual: entry.timeline_dual
     } %}
+
   {% endif %}
 {% endfor %}
-
-{% include '@organisms/sections/switchboard/switchboard.twig' with {
-  switchboard: switchboard
-} %}
+{% if complete %}
+  {% include '@molecules/blocks/complete/complete.twig' with {
+    complete : complete
+  } %}
+{% endif %}
+{% if switchboard %}
+  {% include '@organisms/sections/switchboard/switchboard.twig' with {
+    switchboard : switchboard
+  } %}
+{% endif %}

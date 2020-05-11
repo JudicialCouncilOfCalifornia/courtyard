@@ -7,80 +7,87 @@ hero:
   background_variant: "has-background-color--light--secondary"
   title: 'How to serve divorce papers using personal service'
   body: 'Once you file the first papers in your divorce case, you must notify your spouse by formally delivering copies of the paperwork. This is called <strong>serving papers</strong>.</p><p>The primary way this is done is called<strong> personal service</strong>. This means another adult, not you, hands them a copy of the filed papers. This person is your <strong>server</strong>.</p><p>Your server must complete a form and file it with the court to prove they delivered the papers.</p>'
-  column_content_right: '<strong> Some courts allow you to complete these online. Check your court’s website to see if they offer this service.</strong>'
+  column_content_right: '<p><strong> There are alternatives to personal service. </strong>There are a few situations when personal service is not allowed, not possible, or requires extra steps. For example, the person is out-of-state, in jail, or you can’t find them. </p><br><a> See guidelines for service in special situations</a>'
   column_variant: "has-two-columns-threequarter"
 entries:
-- type: 'section'
-  text_section:
-    headergroup: "none"
-    column_content_left:
-      join():
-        - include():
-            pattern: 'organisms-steps'
-            with:
-              steps:
-                items:
-                  - title: "Choose a server"
-                    excerpt: "<p>You can't serve papers yourself. Ask another adult – a server – to deliver the papers. </p><p>Your server must be</p> <ul><li>18 or over, and</li><li>Not part of your case</li></ul><p>Your server can be:</p> <ul><li>Someone you know</li><li>The county sheriff (in most, not all, counties)</li><li>A professional process server you hire</li></ul><p>The sheriff charges to serve papers unless you have a fee waiver.</p>"
-                    read_more:
-                  - title: "Figure out when to serve"
-                    excerpt: "<p>There’s no specific deadline to serve the divorce petition, but you can't move your case forward until you serve your spouse.</p><p>Once they are served, they have 30-days to respond. After that, you can move your case forward even if they don’t respond. </p>"
-                  - title: "Fill out forms"
-                    excerpt: "Fill out Petition — <a>Marriage/Domestic Partnership (form FL-100)</a>  <p> This form asks for basic information about your marriage and the type of orders you want the court to be able to make about things like spousal support and property.  </p><p><br><br><a>Fill out Summons (Family Law) (Form FL-110)</a> </p><p> This form tells your spouse that you've started a court case and that they have 30 days to respond. </p>"
-                    alert:
-                      type: "warning"
-                      icon: true
-                      text: "<p>If you’ve already filed a request for order and have a hearing scheduled, you must serve the papers at least 16 court days before the court date, unless the court ordered a different deadline. </p><p>A court day means a day a court is open (Monday through Friday except court holidays).</p>"
-                  - title: "Have your server give the papers to your spouse"
-                    excerpt: "<p>Your server must find the person and hand them these forms:</p> <ul><li>Copies of forms you filed with the court (except any fee waiver forms)</li><li>Blank Response - Marriage/Domestic Partnership (form FL-120) </li><li>Blank response forms if you filed other papers</li></ul><p>Your server should note the address where they gave your spouse or partner  the papers, along with the date and time. The server needs this information to fill out the Proof of Service form.</p>"
-                    read_more:
-                      type: 'toggle'
-                      toggle:
-                        block_variant: true
-                        id: "read-more-block"
-                        title: "What if they don’t take the papers?"
-                        content: "If the other person won’t take the papers, your server may leave them by the person and tell them what they are. For example, your server can leave them on the doorstep and say, 'These are important legal papers for you.'"
-                  - title: "Have your server complete the Proof of Service form"
-                    excerpt: "<p>You can use(form FL-115). <a>Proof of Service of Summons</a></p><p>It helps if you fill in the top part of the form with the case and court information.</p><p>Your server can then fill in the information about how, when, and where they served the papers. <strong>Your server must sign the form.</strong></p>"
-                  - title: "Copy and file the Proof of Service form"
-                    excerpt: "<ul><li>Make a copy of your Proof of Service form.</li><li>File the original and copy with the court where you filed the papers. The court will stamp and return the copy.</li><li>Keep the copy of the Proof of Service form for your records.</li></ul>"
-
-    column_content_right:
+  - type: 'section'
+    text_section:
+      headergroup: "none"
+      column_content_left:
         join():
           - include():
-              pattern: 'molecules-share'
+              pattern: 'organisms-steps'
               with:
-                share:
+                steps:
+                  headergroup:
+                  items:
+                    - title: "Choose a server"
+                      excerpt: "<p>You can't serve papers yourself. Ask another adult – a server – to deliver the papers. </p><p>Your server must be</p> <ul><li>18 or over, and</li><li>Not part of your case</li></ul><p>Your server can be:</p> <ul><li>Someone you know</li><li>The county sheriff (in most, not all, counties)</li><li>A professional process server you hire</li></ul><p>The sheriff charges to serve papers unless you have a fee waiver.</p>"
+                      read_more:
+                    - title: "Figure out when to serve"
+                      excerpt: "<p>There’s no specific deadline to serve the divorce petition, but you can't move your case forward until you serve your spouse.</p><p>Once they are served, they have 30-days to respond. After that, you can move your case forward even if they don’t respond. </p>"
+                    - title: "Fill out forms"
+                      excerpt: "Fill out Petition — <a>Marriage/Domestic Partnership (form FL-100)</a>  <p> This form asks for basic information about your marriage and the type of orders you want the court to be able to make about things like spousal support and property.  </p><p><br><br><a>Fill out Summons (Family Law) (Form FL-110)</a> </p><p> This form tells your spouse that you've started a court case and that they have 30 days to respond. </p>"
+                      alert:
+                        type: "warning"
+                        icon: true
+                        text: "<p>If you’ve already filed a request for order and have a hearing scheduled, you must serve the papers at least 16 court days before the court date, unless the court ordered a different deadline. </p><p>A court day means a day a court is open (Monday through Friday except court holidays).</p>"
+                    - title: "Have your server give the papers to your spouse"
+                      excerpt: "<p>Your server must find the person and hand them these forms:</p> <ul><li>Copies of forms you filed with the court (except any fee waiver forms)</li><li>Blank Response - Marriage/Domestic Partnership (form FL-120) </li><li>Blank response forms if you filed other papers</li></ul><p>Your server should note the address where they gave your spouse or partner  the papers, along with the date and time. The server needs this information to fill out the Proof of Service form.</p>"
+                      read_more:
+                        type: 'toggle'
+                        toggle:
+                          block_variant: true
+                          id: "read-more-block"
+                          title: "What if they don’t take the papers?"
+                          content: "If the other person won’t take the papers, your server may leave them by the person and tell them what they are. For example, your server can leave them on the doorstep and say, 'These are important legal papers for you.'"
+                    - title: "Have your server complete the Proof of Service form"
+                      excerpt: "<p>You can use(form FL-115). <a>Proof of Service of Summons</a></p><p>It helps if you fill in the top part of the form with the case and court information.</p><p>Your server can then fill in the information about how, when, and where they served the papers. <strong>Your server must sign the form.</strong></p>"
+                    - title: "Copy and file the Proof of Service form"
+                      excerpt: "<ul><li>Make a copy of your Proof of Service form.</li><li>File the original and copy with the court where you filed the papers. The court will stamp and return the copy.</li><li>Keep the copy of the Proof of Service form for your records.</li></ul>"
+      column_content_right:
+          join():
+            - include():
+                pattern: 'molecules-share'
+                with:
+                  share:
 
-          - include():
-              pattern: 'molecules-callout'
-              with:
-                callout:
-                  variant: "block"
-                  content: "In general, after a divorce, you keep your separate property and divide your community property."
+            - include():
+                pattern: 'molecules-callout'
+                with:
+                  callout:
+                    variant: "block"
+                    content: "In general, after a divorce, you keep your separate property and divide your community property."
 complete:
   icon: 'check'
-  body: 'Once you've served court papers, you've completed the first phase of your divorce case.'
+  body: 'Once you’ve filed the forms, the next step is to share the forms with your spouse. You need to follow a specific process to do this called “serving papers.”'
+  link_button:
+
 switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next" #default, #right-column
+  breadcrumbs:
   headergroup:
-    brow: 'What is Next'
-    title: 'What can we help you with today?'
-  body: '<p>Once you’ve served the petition and summons forms, your spouse has 30 days to respond. How they respond will determine how you’ll move forward with your case.</p><p>Regardless of how they respond, you’ll need to complete your financial disclosures. </p>'
+    brow: ''
+    title: "What’s next?"
+    body: '<p>Once you’ve served the petition and summons forms, your spouse has 30 days to respond. How they respond will determine how you’ll move forward with your case.</p><p>Regardless of how they respond, you’ll need to complete your financial disclosures. </p><br><br>'
   items:
     primary:
       - brow: 'Go to'
         title: 'See what happens based on the response'
         icon_link: true
         url: ''
+        body:
       - brow: 'Go to'
         title: 'I was told I can’t sell my property'
         body: 'Completing Financial Disclosures'
         icon_link: true
+        body:
         url: ''
       - brow: 'Return to'
         title: 'The start of a divorce at-a-glance '
         icon_link: true
+        body:
         url: ''
+      -
     secondary:

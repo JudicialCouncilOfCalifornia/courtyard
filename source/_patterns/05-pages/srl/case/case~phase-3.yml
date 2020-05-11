@@ -4,6 +4,7 @@ hero:
       url: 'link.pages-case'
     - label: 'Phase 3'
   background_variant: "has-background-color--dark"
+  column_variant: "has-two-columns-threequarter"
   brow: ""
   title: "Phase 3: Reaching and documenting an agreement"
   lead: ""
@@ -72,4 +73,5 @@ entries:
               link:
                 label: "Reach an agreementor ask the court to decide"
                 url: "link.pages-case-phase-3-serve"
+complete:
 switchboard:

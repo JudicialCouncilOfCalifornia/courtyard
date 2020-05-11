@@ -4,11 +4,12 @@ hero:
       url: 'link.pages-case'
     - label: 'Phase 4'
   background_variant: "has-background-color--dark"
+  column_variant: "has-two-columns-threequarter"
   brow: ""
   title: "Phase 4: Finalizing a Divorce"
   lead: ""
   body: "<p>To finish your divorce, you must turn in a set of final forms along with your agreement to the court. </p><p><The court will review these forms to be sure there’s nothing missing. If not, the judge will sign the judgment, the papers will be filed, and your divorce is final./p> <p>The details of this process are slightly different depending on how you and your spouse are working together, or if you’re not.</p>  "
-  column_content_right: "<p> There are alternatives to personal service. There are a few situations when personal service is not allowed, not possible, or requires extra steps. For example, the person is out-of-state, in jail, or you can’t find them. </p><br><br> <a>See guidelines for service in special situations</a>"
+  column_content_right: "<p> There are alternatives to personal service. There are a few situations when personal service is not allowed, not possible, or requires extra steps. For example, the person is out-of-state, in jail, or you can’t find them. </p><br> <a>See guidelines for service in special situations</a>"
 
 
 entries:
@@ -69,4 +70,5 @@ entries:
               link:
                 label: "Receive Final Judgement signed by Judge"
                 url: "#"
+complete:
 switchboard:

@@ -4,6 +4,7 @@ hero:
       url: 'link.pages-case'
     - label: 'Phase 1'
   background_variant: "has-background-color--dark"
+  column_variant: "has-two-columns-threequarter"
   brow: ""
   title: "Phase 1: Starting a Divorce"
   body: "<p>Here's a simplified version of the typical process for starting a divorce. There are many ways this process may be different depending on your situation. For example, it’s possible to get a divorce even if the other spouse doesn’t respond to the divorce papers. </p><p>Select a task from the diagram or from the list below to get step-by-step instructions and also to find out what to do if your situation doesn’t follow the typical path</p>"
@@ -76,4 +77,5 @@ entries:
               link:
                 label: "Serve Response"
                 url: "link.pages-case-phase-1-fill-out-divorce-forms"
+complete:
 switchboard:
