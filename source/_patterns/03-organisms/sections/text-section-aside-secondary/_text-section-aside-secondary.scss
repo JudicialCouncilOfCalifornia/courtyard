@@ -9,7 +9,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
 }
 
-/* remove green horizontal rule if follows certain components */
+/* remove green horizontal rule if follows certain components with colored backgrounds */
 .jcc-hero ~ .jcc-text-section-aside__container,
 .jcc-switchboard ~ .jcc-text-section-aside__container {
   .jcc-text-section-aside {
@@ -20,3 +20,27 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     }
   }
 }
+
+/* BEGIN restore green horizontal rule if follow a hero with white background */
+.jcc-hero--has-background-color--none ~ .jcc-text-section-aside__container {
+  .jcc-text-section-aside {
+    .jcc-text-section-aside__aside {
+      .jcc-card__title::after {
+        @include u-bg("transparent");
+      }
+    }
+  }
+}
+
+.jcc-hero--has-background-color--none ~ .jcc-text-section-aside__container {
+  .jcc-text-section-aside {
+    .jcc-text-section-aside__aside-main {
+      .jcc-card:first-child {
+        .jcc-card__title:first-child::after {
+          @include u-bg("transparent");
+        }
+      }
+    }
+  }
+}
+/* END */

@@ -48,6 +48,10 @@
   }
 }
 
+.jcc-hero--has-background-color--none {
+  @include u-bg("white");
+}
+
 .jcc-hero__container {
   @include grid-container(widescreen);
 
