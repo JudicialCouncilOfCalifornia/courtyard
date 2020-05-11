@@ -26,7 +26,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-text-section-aside {
     .jcc-text-section-aside__aside {
       .jcc-card__title::after {
-        @include u-bg("transparent");
+        @include u-bg("secondary-light");
       }
     }
   }
@@ -37,7 +37,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     .jcc-text-section-aside__aside-main {
       .jcc-card:first-child {
         .jcc-card__title:first-child::after {
-          @include u-bg("transparent");
+          @include u-bg("secondary-light");
         }
       }
     }
