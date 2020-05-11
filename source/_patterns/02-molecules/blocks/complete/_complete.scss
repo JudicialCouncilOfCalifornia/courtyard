@@ -26,6 +26,8 @@
     @include u-padding-bottom(4);
     @include at-media(desktop) {
       @include u-padding-right(4);
+      @include u-padding-bottom(0);
+      @include u-padding-top(2);
     }
   }
 

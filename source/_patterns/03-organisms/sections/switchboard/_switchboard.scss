@@ -90,7 +90,6 @@
   }
   .jcc-header-group__title:after {
     left: 0;
-    top: -75px;
   }
 }
 
@@ -147,12 +146,10 @@
       @include grid-gap;
     }
     .jcc-header-group {
-      margin-top: 40px;
       padding-bottom: 0;
     }
     .jcc-header-group__title:after {
       left: 0;
-      top: -75px;
     }
     .jcc-switchboard__column-left,
     .jcc-switchboard__column-right {

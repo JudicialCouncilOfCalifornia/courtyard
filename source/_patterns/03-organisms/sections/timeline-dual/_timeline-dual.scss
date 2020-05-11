@@ -1,0 +1,419 @@
+@import "../../../../../node_modules/slick-carousel/slick/slick.scss";
+
+.jcc-timeline-dual-section {
+  @include section-wrapper;
+  @include u-position(relative);
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
+}
+
+.jcc-timeline-dual__title-bar {
+  @include u-color(primary);
+  @include section-wrapper;
+  @include grid-row;
+  padding-bottom: 80px;
+  &-previous {
+    float: left;
+    @include grid-col(4);
+    @include u-font(body, 5);
+    text-decoration: none;
+    @include u-color(primary);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 6);
+    }
+  }
+
+  &-title {
+    text-align: center;
+    float: none;
+    @include grid-col(4);
+    @include u-font(body, 6);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 9);
+    }
+  }
+
+  &-next {
+    float: right;
+    text-align: right;
+    @include grid-col(4);
+    @include u-font(body, 5);
+    text-decoration: none;
+    @include u-color(primary);
+    @include at-media(tablet-lg) {
+      @include u-font(body, 6);
+    }
+  }
+}
+
+.jcc-timeline-dual-section__container {
+  @include section-container;
+}
+
+.jcc-timeline-dual__wrapper {
+  @include u-position(relative);
+  margin-top: 60px;
+  display: block;
+  @include at-media(tablet-lg) {
+    margin-top: 0px;
+  }
+}
+
+.jcc-timeline-dual__top-title {
+  @include u-color(primary);
+  position: absolute;
+  @include u-font(body, 7);
+  width: 110px;
+  left: 0;
+  top: -100px;
+  @include at-media(tablet-lg) {
+    top: -73px;
+  }
+}
+
+.jcc-timeline-dual__bottom-title {
+  @include u-color(accent-warm-dark);
+  position: absolute;
+  @include u-font(body, 7);
+  width: 110px;
+  top: -100px;
+  right: 0;
+  text-align: right;
+  @include at-media(tablet-lg) {
+    right: unset;
+    top: unset;
+    bottom: -26px;
+    text-align: left;
+  }
+}
+
+.jcc-timeline-dual-item {
+  position: relative;
+  height: 130px;
+  li {
+    position: relative;
+    display: flex;
+  }
+}
+
+.jcc-timeline-dual__bottom,
+.jcc-timeline-dual__top {
+  position: inherit;
+  @include at-media(tablet-lg) {
+    width: 100%;
+    display: -webkit-box;
+    flex: 0 0 100%;
+    height: 150px;
+  }
+  height: 130px;
+  width: 50%;
+  float: left;
+
+  &:before {
+    position: absolute;
+    @include u-bg(primary);
+    height: 100%;
+    width: 2px;
+    z-index: 3;
+    content: "";
+    left: 0;
+    @include at-media(tablet-lg) {
+      height: 2px;
+      width: 100%;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    @include u-bg(primary-lighter);
+    height: 100%;
+    width: 20px;
+    z-index: 2;
+    content: "";
+    left: 0;
+    @include at-media(tablet-lg) {
+      height: 20px;
+      width: 100%;
+    }
+  }
+}
+
+.jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
+  left: 70px;
+}
+
+.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
+  right: 70px;
+}
+
+.jcc-timeline-dual__excerpt {
+  @include u-font(heading, 7);
+  @include u-color(base);
+  font-style: italic;
+  position: absolute;
+  @include at-media(tablet-lg) {
+    margin-top: 18px;
+    left: unset !important;
+    position: relative;
+    right: unset;
+  }
+}
+
+.jcc-timeline-dual__time {
+  border-radius: 66px;
+  padding: 6px 6px 6px 40px;
+  margin-right: 30px;
+  color: white;
+  position: relative;
+  height: min-content;
+  @include u-color("white");
+  @include u-font(body, 1);
+  z-index: 4;
+  width: 130px;
+  @include at-media(tablet-lg) {
+    width: 184px;
+  }
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    display: block;
+    background-image: url("../../images/time.svg");
+  }
+}
+
+.jcc-timeline-dual__number {
+  @include u-font(body, 6);
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  @include u-color("white");
+  @include u-bg(primary);
+  border-radius: 50%;
+  @include u-text(center);
+  display: block;
+  z-index: 5;
+  left: 30px;
+  &.none {
+    display: none;
+  }
+  &.wait {
+    background-image: url("../../images/time.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @include at-media(tablet-lg) {
+    @include u-font(body, 9);
+    position: absolute;
+    top: -21px;
+    margin-left: -8px;
+    width: 35px;
+    height: 35px;
+    left: 0;
+  }
+}
+
+.jcc-timeline-dual__icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 16px;
+  @include at-media(tablet-lg) {
+    left: 10px;
+    top: 130px;
+  }
+  &.both {
+    background-image: url("../../images/both.svg");
+  }
+  &.down {
+    background-image: url("../../images/top-bottom.svg");
+  }
+  &.up {
+    background-image: url("../../images/bottom-top.svg");
+  }
+}
+
+.jcc-timeline-dual__top {
+  &:after {
+    @include at-media(tablet-lg) {
+      top: 80px;
+    }
+  }
+
+  &:before {
+    @include at-media(tablet-lg) {
+      top: 80px;
+    }
+  }
+
+  .jcc-timeline-dual__time {
+    @include u-bg(primary);
+    @include at-media(tablet-lg) {
+      margin-top: 55px;
+      left: unset;
+    }
+    left: 30px;
+    float: left;
+  }
+
+  .jcc-timeline-dual__number {
+    @include at-media(tablet-lg) {
+      top: 64px;
+      left: 8px;
+    }
+    left: 30px;
+  }
+
+  .jcc-timeline-dual-item__trigger {
+    @include at-media(tablet-lg) {
+      top: 20px;
+      left: 0;
+    }
+    left: 70px;
+    z-index: 4;
+    position: absolute;
+  }
+}
+
+.jcc-timeline-dual__bottom {
+  &:after {
+    @include at-media(tablet-lg) {
+      bottom: 120px;
+    }
+    right: 0;
+    left: unset;
+    @include u-bg(accent-warm-light);
+  }
+
+  &:before {
+    @include at-media(tablet-lg) {
+      bottom: 120px;
+    }
+    right: 0;
+    left: unset;
+    @include u-bg(accent-warm-dark);
+  }
+
+  .jcc-timeline-dual-item__trigger {
+    @include at-media(tablet-lg) {
+      top: 60px;
+      right: unset;
+      text-align: left;
+    }
+    right: 70px;
+    text-align: right;
+    z-index: 4;
+    position: absolute;
+  }
+
+  .jcc-timeline-dual__time {
+    @include u-bg(accent-warm-dark);
+    @include at-media(tablet-lg) {
+      margin-top: 3px;
+    }
+    float: right;
+    left: unset;
+  }
+
+  .jcc-timeline-dual__number {
+    @include at-media(tablet-lg) {
+      top: 12px;
+      right: unset;
+      left: 8px;
+    }
+    right: 30px;
+    left: unset;
+    @include u-bg(accent-warm);
+  }
+}
+
+.jcc-timeline-dual__slider {
+  @include unstyled-list();
+  @include at-media(tablet-lg) {
+    @include grid-row;
+    @include u-overflow-x(auto);
+  }
+
+  li {
+    @include u-width(full);
+    @include at-media(tablet-lg) {
+      @include grid-col(3);
+    }
+  }
+}
+// remove line from last timeline item
+.jcc-timeline-dual:not(.slick-initialized) li:last-of-type .jcc-timeline-dual-item__title:after,
+.slick-slide:last-of-type .jcc-timeline-dual-item__title:after {
+  @include u-width(0);
+}
+
+.jcc-timeline-dual__label {
+  @include sr-only();
+}
+
+.jcc-timeline-dual__scroller--left,
+.jcc-timeline-dual__scroller--right {
+  @include u-position(absolute);
+  @include u-bottom(0);
+  @include u-display(none);
+  top: 108px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  z-index: 10;
+  padding: 0px;
+  transition: all 0.4s;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.4s;
+  }
+
+  &.is-active {
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+    }
+  }
+}
+
+.jcc-timeline-dual__scroller--left {
+  left: 0;
+}
+
+.jcc-timeline-dual__scroller--right {
+  right: 0;
+}
+
+.jcc-timeline-dual__scroller-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+
+  svg {
+    display: block;
+    margin: auto;
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: color(ink);
+  }
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

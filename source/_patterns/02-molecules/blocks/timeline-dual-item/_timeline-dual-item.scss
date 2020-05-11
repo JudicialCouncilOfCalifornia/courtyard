@@ -1,0 +1,17 @@
+.jcc-timeline-dual-item__title {
+  @include responsive-h5();
+  @include u-font-family(sans);
+  @include u-margin-y(1.5);
+  @include u-position(relative);
+}
+
+.jcc-timeline-dual-item__excerpt {
+  @extend .usa-prose;
+  @include t-copy();
+  @include u-line-height(body, 4);
+  @include u-margin-bottom(1.5);
+}
+
+.jcc-timeline-dual-item__media {
+  @include media-icon();
+}

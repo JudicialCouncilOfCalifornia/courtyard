@@ -1,10 +1,10 @@
-{% set classes = [
+{% set stepclasses = [
   'jcc-steps-section',
   'jcc-steps-section--' ~ steps.background_variant|default('has-background-color--transparent'),
-]|merge(steps.classes|default([''])) %}
+]|merge(steps.stepclasses|default([''])) %}
 
 {% if steps.items|length > 0 %}
-  <div class="{{ classes|join(' ')|trim }}"{% if steps.id %} id="{{ steps.id }}"{% endif %}>
+  <div class="{{ stepclasses|join(' ')|trim }}"{% if steps.id %} id="{{ steps.id }}"{% endif %}>
     <div class="jcc-steps-section__container">
 
       {% include '@molecules/text/header-group/header-group.twig' with {

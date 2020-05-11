@@ -1,0 +1,67 @@
+<div class="jcc-timeline-dual-item">
+  {% if timeline_dual_item.top %}
+    <div class="jcc-timeline-dual__top">
+      {% if timeline_dual_item.top.deadline %}
+        <div class="jcc-timeline-dual__time">{{ timeline_dual_item.top.deadline}}</div>
+      {% endif %}
+      {% if timeline_dual_item.top.number %}
+        {% if timeline_dual_item.top.number == "wait" %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.top.number}}"></div>
+        {% else %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.top.number}}">{{ timeline_dual_item.top.number}}</div>
+        {% endif %}
+      {% endif %}
+      {% if timeline_dual_item.top.excerpt %}
+        <div class="jcc-timeline-dual__excerpt">{{ timeline_dual_item.top.excerpt}}</div>
+      {% endif %}
+      {% if timeline_dual_item.top.read_more %}
+        {% if timeline_dual_item.top.read_more.type == 'link' %}
+          {% set url_attributes = timeline_dual_item.read_more.link.url_attributes | default(create_attribute()) %}
+          <a href="{{ timeline_dual_item.top.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
+            {{- timeline_dual_item.top.read_more.link.label -}}
+          </a>
+
+        {% elseif timeline_dual_item.top.read_more.type == 'modal' %}
+          {% include '@organisms/sections/modal/modal.twig' with {
+            modal : timeline_dual_item.top.read_more.modal
+          } %}
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if timeline_dual_item.icon %}
+    <div class="jcc-timeline-dual__icon {{ timeline_dual_item.icon}}"></div>
+  {% endif %}
+
+  {% if timeline_dual_item.bottom %}
+    <div class="jcc-timeline-dual__bottom">
+      {% if timeline_dual_item.bottom.deadline %}
+        <div class="jcc-timeline-dual__time">{{ timeline_dual_item.bottom.deadline}}</div>
+      {% endif %}
+      {% if timeline_dual_item.bottom.number %}
+        {% if timeline_dual_item.bottom.number == "wait" %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}"></div>
+        {% else %}
+          <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}">{{ timeline_dual_item.bottom.number}}</div>
+        {% endif %}
+      {% endif %}
+      {% if timeline_dual_item.bottom.excerpt %}
+        <div class="jcc-timeline-dual__excerpt">{{ timeline_dual_item.bottom.excerpt}}</div>
+      {% endif %}
+      {% if timeline_dual_item.bottom.read_more %}
+        {% if timeline_dual_item.bottom.read_more.type == 'link' %}
+          {% set url_attributes = timeline_dual_item.read_more.link.url_attributes | default(create_attribute()) %}
+          <a href="{{ timeline_dual_item.bottom.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
+            {{- timeline_dual_item.bottom.read_more.link.label -}}
+          </a>
+
+        {% elseif timeline_dual_item.bottom.read_more.type == 'modal' %}
+          {% include '@organisms/sections/modal/modal.twig' with {
+            modal : timeline_dual_item.bottom.read_more.modal
+          } %}
+        {% endif %}
+      {% endif %}
+  </div>
+{% endif %}
+</div>

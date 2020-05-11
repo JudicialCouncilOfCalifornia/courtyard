@@ -34,6 +34,10 @@
 .jcc-hero--has-background-color--dark {
   @include dark-background();
 
+  a {
+    @include dark-background-link();
+  }
+
   .jcc-breadcrumb__item a {
     @include dark-background-link();
   }

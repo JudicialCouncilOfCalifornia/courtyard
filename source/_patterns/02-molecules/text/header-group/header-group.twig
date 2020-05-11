@@ -1,21 +1,24 @@
 {% set tag = headergroup.tag|default('h2') %}
 
-{% if headergroup.brow or headergroup.title or headergroup.lead or headergroup.body %}
-  <header class="jcc-header-group">
-    {% if headergroup.brow %}
-      <p class="jcc-header-group__brow">{{ headergroup.brow }}</p>
-    {% endif %}
+{% if headergroup == "none" %}
+{% else %}
+  {% if headergroup.brow or headergroup.title or headergroup.lead or headergroup.body %}
+    <header class="jcc-header-group">
+      {% if headergroup.brow %}
+        <p class="jcc-header-group__brow">{{ headergroup.brow }}</p>
+      {% endif %}
 
-    {% if headergroup.title %}
-      <{{ tag }} class="jcc-header-group__title">{{ headergroup.title }}</{{ tag }}>
-    {% endif %}
+      {% if headergroup.title %}
+        <{{ tag }} class="jcc-header-group__title">{{ headergroup.title }}</{{ tag }}>
+      {% endif %}
 
-    {% if headergroup.lead %}
-      <div class="jcc-header-group__lead">{{ headergroup.lead }}</div>
-    {% endif %}
+      {% if headergroup.lead %}
+        <div class="jcc-header-group__lead">{{ headergroup.lead }}</div>
+      {% endif %}
 
-    {% if headergroup.body %}
-      <div class="jcc-header-group__body">{{ headergroup.body }}</div>
-    {% endif %}
-  </header>
+      {% if headergroup.body %}
+        <div class="jcc-header-group__body">{{ headergroup.body }}</div>
+      {% endif %}
+    </header>
+  {% endif %}
 {% endif %}

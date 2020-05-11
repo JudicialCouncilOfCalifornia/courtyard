@@ -12,6 +12,13 @@ timeline:
           <li>Unordered list item two, <a href="#">unordered list item two</a>, <strong>bold</strong> text, <em>italic text</em>, and <strong><em>bold italics</em></strong>.</li>
           <li>Unordered list item three.</li>
         </ul>'
+    - title: "Create a settlement strategy"
+      excerpt: '
+        <ul>
+          <li>Unordered list item one.</li>
+          <li>Unordered list item two, <a href="#">unordered list item two</a>, <strong>bold</strong> text, <em>italic text</em>, and <strong><em>bold italics</em></strong>.</li>
+          <li>Unordered list item three.</li>
+        </ul>'
       read_more:
         type: "link"
         link:
