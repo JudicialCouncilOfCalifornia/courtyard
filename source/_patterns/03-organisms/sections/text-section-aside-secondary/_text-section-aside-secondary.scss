@@ -21,7 +21,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
 }
 
-/* BEGIN restore green horizontal rule if follow a hero with white background */
+/* BEGIN restore green horizontal rule if following a hero with white background */
 .jcc-hero--has-background-color--none ~ .jcc-text-section-aside__container {
   .jcc-text-section-aside {
     .jcc-text-section-aside__aside {
@@ -32,12 +32,13 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   }
 }
 
+/* only first card under main column */
 .jcc-hero--has-background-color--none ~ .jcc-text-section-aside__container {
   .jcc-text-section-aside {
     .jcc-text-section-aside__aside-main {
-      .jcc-card:first-child {
-        .jcc-card__title:first-child::after {
-          @include u-bg("secondary-light");
+      .jcc-card:not(:first-child) {
+        .jcc-card__title::after {
+          @include u-bg("transparent");
         }
       }
     }
