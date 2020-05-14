@@ -49,7 +49,7 @@
 }
 
 .jcc-hero--has-background-color--none {
-  @include u-bg("white");
+  @include u-bg("transparent");
 }
 
 .jcc-hero__container {

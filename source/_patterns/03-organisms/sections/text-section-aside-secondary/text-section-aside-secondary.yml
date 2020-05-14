@@ -1,4 +1,5 @@
 text_section_aside_secondary:
+  no_title_decoration: false
   content:
     join():
       - include():
