@@ -33570,6 +33570,45 @@ a:visited {
   font-style: italic ;
 }
 
+.jcc-card.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  position: relative ;
+  margin-bottom: 0.5rem ;
+}
+
+.jcc-card.person .jcc-card__media {
+  height: 7.5rem ;
+  width: 7.5rem ;
+  min-width: 7.5rem ;
+  position: relative ;
+  margin-top: 1rem ;
+  margin-right: 1rem ;
+}
+
+.jcc-card.person .jcc-card__media img {
+  z-index: 2;
+  position: relative ;
+  height: 7.5rem ;
+  width: 7.5rem ;
+}
+
+.jcc-card.person h1.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 2.24rem;
+}
+
+.jcc-card.person h2.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.99rem;
+}
+
+.jcc-card.person h3.jcc-card__title {
+  font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size: 1.74rem;
+}
+
 .jcc-card__brow {
   margin-bottom: 0.75rem ;
 }
@@ -33675,45 +33714,6 @@ a:visited {
       -ms-flex: 0 0 auto ;
           flex: 0 0 auto ;
   width: 100% ;
-}
-
-.jcc-complete .jcc-complete__button {
-  color: #005ea2 ;
-  background-color: white ;
-  border-radius: 0.25rem ;
-  width: 100% ;
-  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.06rem;
-  padding-left: 3.5rem ;
-  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
-          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1) ;
-  padding: 10px 10px 10px 55px;
-  position: relative;
-  display: block;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  cursor: pointer;
-}
-
-.jcc-complete .jcc-complete__button:hover {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  -webkit-box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1) ;
-          box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.1) ;
-}
-
-.jcc-complete .jcc-complete__button::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 30px;
-  display: block;
-  height: 30px;
-  background-image: url("../../images/link.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .jcc-explainer {
@@ -33943,6 +33943,10 @@ a:visited {
 .jcc-hero--has-background-color--dark .jcc-hero__title,
 .jcc-hero--has-background-color--dark .jcc-breadcrumb__item {
   color: white ;
+}
+
+.jcc-hero--has-background-color--none {
+  background-color: transparent ;
 }
 
 .jcc-hero__container {
@@ -37090,8 +37094,7 @@ h3.jcc-header-group__title {
   width: 100% ;
 }
 
-.jcc-steps-section__container,
-.jcc-text-section {
+.jcc-steps-section__container {
   margin-left: auto ;
   margin-right: auto ;
   max-width: 87.5rem ;
@@ -37099,24 +37102,20 @@ h3.jcc-header-group__title {
   padding-right: 1rem ;
 }
 
-.jcc-steps-section__container .jcc-options__container,
-.jcc-text-section .jcc-options__container {
+.jcc-steps-section__container .jcc-options__container {
   padding-left: 0 ;
   margin-left: -6px;
 }
 
-.jcc-steps-section__container .jcc-options__container .jcc-options__item,
-.jcc-text-section .jcc-options__container .jcc-options__item {
+.jcc-steps-section__container .jcc-options__container .jcc-options__item {
   padding-left: 0 ;
 }
 
-.jcc-steps-section__container .jcc-options__container .jcc-option,
-.jcc-text-section .jcc-options__container .jcc-option {
+.jcc-steps-section__container .jcc-options__container .jcc-option {
   padding-left: 0;
 }
 
-.jcc-steps-section__container .jcc-option,
-.jcc-text-section .jcc-option {
+.jcc-steps-section__container .jcc-option {
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -37667,13 +37666,20 @@ h3.jcc-header-group__title {
 }
 
 /* removing excessive white spacing */
-div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside {
+div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-section-aside {
   padding-top: 0  !important;
 }
 
-/* remove green horizontal rule if follows certain components */
-.jcc-hero ~ .jcc-text-section-aside__container .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card__title::after,
-.jcc-switchboard ~ .jcc-text-section-aside__container .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card__title::after {
+.jcc-text-section-aside-secondary__container {
+  /* title decoration for only first card under main column */
+  /* remove title decoration for all cards if specified no_title_decoration = true */
+}
+
+.jcc-text-section-aside-secondary__container .jcc-text-section-aside__aside.jcc-text-section-aside__aside-main .jcc-card:not(:first-child) .jcc-card__title::after {
+  background-color: transparent ;
+}
+
+.jcc-text-section-aside-secondary__container .jcc-text-section-aside__aside.jcc-text-section-aside__aside-no-title-decoration .jcc-card__title::after {
   background-color: transparent ;
 }
 
@@ -69174,6 +69180,18 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.49rem;
   }
+  .jcc-card.person h1.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.98rem;
+  }
+  .jcc-card.person h2.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.49rem;
+  }
+  .jcc-card.person h3.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 2.24rem;
+  }
   .jcc-card__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.49rem;
@@ -69195,23 +69213,18 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .jcc-complete .jcc-complete__body {
     padding-right: 2rem ;
     padding-bottom: 0 ;
-    padding-top: 1rem ;
   }
   .jcc-complete .jcc-complete__left {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
-    width: 58.33333% ;
+    width: 75% ;
   }
   .jcc-complete .jcc-complete__right {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto ;
             flex: 0 0 auto ;
-    width: 33.33333% ;
-  }
-  .jcc-complete .jcc-complete__button {
-    padding: 0.5rem ;
-    padding-left: 3.5rem ;
+    width: 25% ;
   }
   .jcc-hero-img-banner__hero-title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
@@ -69909,17 +69922,14 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
             flex: 0 0 auto ;
     width: 50% ;
   }
-  .jcc-steps-section__container,
-  .jcc-text-section {
+  .jcc-steps-section__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
   }
-  .jcc-steps-section__container .jcc-options__container .jcc-option,
-  .jcc-text-section .jcc-options__container .jcc-option {
+  .jcc-steps-section__container .jcc-options__container .jcc-option {
     padding-left: 1.5rem ;
   }
-  .jcc-steps-section__container .jcc-option,
-  .jcc-text-section .jcc-option {
+  .jcc-steps-section__container .jcc-option {
     padding-left: 0 ;
   }
   .jcc-steps .jcc-step__item::before {
@@ -70046,7 +70056,7 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
     font-size: 1.74rem;
   }
-  .jcc-text-section-aside .jcc-text-section-aside__aside-main {
+  .jcc-text-section-aside-secondary__container .jcc-text-section-aside .jcc-text-section-aside__aside-main {
     -webkit-box-flex: 0  !important;
         -ms-flex: 0 0 auto  !important;
             flex: 0 0 auto  !important;
@@ -70719,6 +70729,18 @@ div[class^="jcc-"] + .jcc-text-section-aside__container .jcc-text-section-aside 
   .t-small {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.81rem;
+  }
+  .jcc-card.person h1.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.99rem;
+  }
+  .jcc-card.person h2.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.74rem;
+  }
+  .jcc-card.person h3.jcc-card__title {
+    font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;
+    font-size: 1.49rem;
   }
   .jcc-card__title {
     font-family: Lora, Georgia, Cambria, Times New Roman, Times, serif;

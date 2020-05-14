@@ -1,5 +1,6 @@
 
 hero:
+complete:
 switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-phase" #default, #right-column
