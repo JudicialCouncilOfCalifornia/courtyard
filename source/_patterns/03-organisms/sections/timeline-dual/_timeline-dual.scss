@@ -15,40 +15,41 @@
   @include section-wrapper;
   @include grid-row;
   padding-bottom: 80px;
+}
 
-  &-previous {
-    float: left;
-    @include grid-col(4);
-    @include u-font(body, 5);
-    text-decoration: none;
-    @include u-color(primary);
-    @include at-media(tablet-lg) {
-      @include u-font(body, 6);
-    }
-  }
+.jcc-timeline-dual__title-bar-previous {
+  @include grid-col(4);
+  @include u-font(body, 5);
+  @include u-color(primary);
+  float: left;
+  text-decoration: none;
 
-  &-title {
-    @include grid-col(4);
+  @include at-media(tablet-lg) {
     @include u-font(body, 6);
-    text-align: center;
-    float: none;
-
-    @include at-media(tablet-lg) {
-      @include u-font(body, 9);
-    }
   }
+}
 
-  &-next {
-    @include grid-col(4);
-    @include u-font(body, 5);
-    float: right;
-    text-align: right;
+.jcc-timeline-dual__title-bar-title {
+  @include grid-col(4);
+  @include u-font(body, 6);
+  text-align: center;
+  float: none;
 
-    text-decoration: none;
-    @include u-color(primary);
-    @include at-media(tablet-lg) {
-      @include u-font(body, 6);
-    }
+  @include at-media(tablet-lg) {
+    @include u-font(body, 9);
+  }
+}
+
+.jcc-timeline-dual__title-bar-next {
+  @include grid-col(4);
+  @include u-font(body, 5);
+  @include u-color(primary);
+  float: right;
+  text-align: right;
+  text-decoration: none;
+
+  @include at-media(tablet-lg) {
+    @include u-font(body, 6);
   }
 }
 
@@ -303,10 +304,10 @@
   }
 
   .jcc-timeline-dual-item__trigger {
+    position: absolute;
     top: 40px;
     left: 30px;
     z-index: 4;
-    position: absolute;
     padding-right: 20px;
 
     @include at-media(tablet-lg) {
@@ -339,11 +340,11 @@
   }
 
   .jcc-timeline-dual-item__trigger {
+    position: absolute;
     right: 30px;
     top: 40px;
     text-align: right;
     z-index: 4;
-    position: absolute;
     padding-left: 20px;
 
     @include at-media(tablet-lg) {

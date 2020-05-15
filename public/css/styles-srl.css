@@ -33708,15 +33708,15 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 .jcc-timeline-dual__title-bar-previous {
-  float: left;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto ;
           flex: 0 0 auto ;
   width: 33.33333% ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99rem;
-  text-decoration: none;
   color: #005ea2 ;
+  float: left;
+  text-decoration: none;
 }
 
 .jcc-timeline-dual__title-bar-title {
@@ -33737,10 +33737,10 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   width: 33.33333% ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.99rem;
+  color: #005ea2 ;
   float: right;
   text-align: right;
   text-decoration: none;
-  color: #005ea2 ;
 }
 
 .jcc-timeline-dual-section__container {
@@ -33928,10 +33928,10 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual-item__trigger {
+  position: absolute;
   top: 40px;
   left: 30px;
   z-index: 4;
-  position: absolute;
   padding-right: 20px;
 }
 
@@ -33948,11 +33948,11 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual-item__trigger {
+  position: absolute;
   right: 30px;
   top: 40px;
   text-align: right;
   z-index: 4;
-  position: absolute;
   padding-left: 20px;
 }
 
