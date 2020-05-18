@@ -30775,6 +30775,10 @@ nav.jcc-primary-nav {
   background-color: #eff6fb ;
 }
 
+.jcc-primary-nav .jcc-primary-nav__sub li .jcc-primary-nav__sub-sub--item a:hover {
+  text-decoration: underline ;
+}
+
 .jcc-primary-nav .jcc-primary-nav__sub li:hover {
   background-color: #73b3e7 ;
 }
@@ -32770,7 +32774,8 @@ h3.jcc-header-group__title {
 
 /* removing excessive white spacing */
 div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-section-aside {
-  padding-top: 0  !important;
+  padding-top: 0 ;
+  padding-bottom: 2rem ;
 }
 
 .jcc-text-section-aside-secondary__container {
@@ -64598,6 +64603,12 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     display: block ;
     width: 100%;
     padding-left: 1.7em;
+    padding-bottom: 1rem ;
+    padding-top: 1rem ;
+    font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.12rem;
+    letter-spacing: 1px;
+    background-color: transparent;
   }
   .jcc-primary-nav .jcc-primary-nav__sub li {
     display: -webkit-inline-box;
@@ -65126,10 +65137,10 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     font-size: 1.74rem;
   }
   .jcc-text-section-aside-secondary__container .jcc-text-section-aside .jcc-text-section-aside__aside-main {
-    -webkit-box-flex: 0  !important;
-        -ms-flex: 0 0 auto  !important;
-            flex: 0 0 auto  !important;
-    width: 66.66667%  !important;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    width: 66.66667% ;
   }
   .jcc-text-section-aside__container {
     padding-left: 2rem ;
