@@ -4,17 +4,19 @@ if(messageContentObject[0]) {
 }
 var alert = document.getElementById("alert-bar");
 
-// Message loads hidden to avoid flash if cookie is found.
-if (!getCookie(cookieId)) {
-  alert.classList.add("active");
-}
+if(alert) {
+  // Message loads hidden to avoid flash if cookie is found.
+  if (!getCookie(cookieId)) {
+    alert.classList.add("active");
+  }
 
-document.getElementById("alert-close").onclick = function alertClose() {
+  document.getElementById("alert-close").onclick = function alertClose() {
     if (alert.classList.contains('active')) {
-      setCookie(cookieId,true,7);
+      setCookie(cookieId, true, 7);
       alert.classList.remove("active");
     }
-};
+  };
+}
 
 // Helper functions
 function setCookie(name,value,days) {
