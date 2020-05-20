@@ -5,7 +5,7 @@ timeline_dual_item:
   # icon: 'both', 'up', or 'down'
   icon: "both"
   top:
-    excerpt: "<div>html string</div>"
+    excerpt: "Plain text" # 45 char max
     deadline: "Deadline: 60 days after filing for divorce"
     # number: integer or 'wait'
     number: 1
@@ -17,7 +17,7 @@ timeline_dual_item:
         url: "#"
       modal:  "<div>html string</div>"
   bottom:
-    excerpt: "<div>html string</div>"
+    excerpt: "Plain text" # 45 char max
     deadline: "Deadline: 60 days after filing for divorce"
       # number: integer or 'wait'
       number: 1
