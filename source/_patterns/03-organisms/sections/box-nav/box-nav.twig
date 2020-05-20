@@ -1,0 +1,14 @@
+<div class="jcc-hero-box-nav">
+  <div class="jcc-hero-box-nav__nav">
+    <div class="jcc-hero-box-nav__block tile-highlight">
+        {% for tile in hero_box_nav.links.highlights %}
+            {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+        {% endfor %}
+    </div>
+    <div class="jcc-hero-box-nav__block tile-button">
+      {% for tile in hero_box_nav.links.buttons %}
+          {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
