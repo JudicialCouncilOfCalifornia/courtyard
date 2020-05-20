@@ -49,8 +49,7 @@
       {% endif %}
       {% if timeline_dual_item.bottom.excerpt %}
         <div class="jcc-timeline-dual__excerpt">{{ timeline_dual_item.bottom.excerpt}}</div>
-      {% endif %}
-      {% if timeline_dual_item.bottom.read_more %}
+      {% elseif timeline_dual_item.bottom.read_more %}
         {% if timeline_dual_item.bottom.read_more.type == 'link' %}
           {% set url_attributes = timeline_dual_item.read_more.link.url_attributes | default(create_attribute()) %}
           <a href="{{ timeline_dual_item.bottom.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
