@@ -33869,7 +33869,7 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   left: 10px;
   position: absolute;
   display: block;
-  background-image: url("../../images/time.svg");
+  background-image: url("../images/time.svg");
 }
 
 .jcc-timeline-dual__number {
@@ -33892,7 +33892,7 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 .jcc-timeline-dual__number.wait {
-  background-image: url("../../images/time.svg");
+  background-image: url("../images/time.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -33911,15 +33911,15 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 .jcc-timeline-dual__icon.both {
-  background-image: url("../../images/both.svg");
+  background-image: url("../images/both.svg");
 }
 
 .jcc-timeline-dual__icon.down {
-  background-image: url("../../images/top-bottom.svg");
+  background-image: url("../images/top-bottom.svg");
 }
 
 .jcc-timeline-dual__icon.up {
-  background-image: url("../../images/bottom-top.svg");
+  background-image: url("../images/bottom-top.svg");
 }
 
 .jcc-timeline-dual__top .jcc-timeline-dual__time {
