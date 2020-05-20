@@ -50,6 +50,7 @@ timeline_dual:
             url: "#"
       icon: "both"
       bottom:
+        excerpt: "booyah"
         number: 3
         read_more:
           type: "link"
