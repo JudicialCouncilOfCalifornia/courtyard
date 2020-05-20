@@ -70139,6 +70139,9 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
+  .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card {
+    margin-top: 3.5rem ;
+  }
   .jcc-text-section-location__container {
     padding-left: 2rem ;
     padding-right: 2rem ;
