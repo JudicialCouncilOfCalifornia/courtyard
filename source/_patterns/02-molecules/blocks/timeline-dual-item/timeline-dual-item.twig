@@ -22,7 +22,9 @@
 
         {% elseif timeline_dual_item.top.read_more.type == 'modal' %}
           {% include '@organisms/sections/modal/modal.twig' with {
-            modal : timeline_dual_item.top.read_more.modal
+            modal: {
+              content: timeline_dual_item.top.read_more.modal
+            }
           } %}
         {% endif %}
       {% endif %}
