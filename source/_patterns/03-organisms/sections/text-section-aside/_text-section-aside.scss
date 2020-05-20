@@ -49,6 +49,12 @@
       @include grid-col(4);
     }
 
+    .jcc-card {
+      @include at-media(desktop) {
+        @include u-margin-top(7);
+      }
+    }
+
     .jcc-card__title {
       @include has-dash-position($dash-color: secondary-light, $dash-position: "above");
       @include u-text(primary-dark);
