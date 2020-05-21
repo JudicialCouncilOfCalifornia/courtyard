@@ -37,10 +37,8 @@ timeline_dual:
       bottom:
         number: 2
         read_more:
-          type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
+          type: "modal"
+          modal: "<div>this is modal</div>"
     - top:
         number: 3
         read_more:
