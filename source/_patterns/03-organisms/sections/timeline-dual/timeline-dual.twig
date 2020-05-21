@@ -3,7 +3,7 @@
   'jcc-timeline-dual-section--' ~ timeline_dual.background_variant|default('has-background-color--transparent'),
 ]|merge(timeline_dual.classes|default([''])) %}
 
-<div class="{{ classes|join(' ')|trim }}" {% if timeline.id %} id="{{ timeline_dual.id }}" {% endif %}>
+<div class="{{ classes|join(' ')|trim }}" {% if timeline_dual.id %} id="{{ timeline_dual.id }}" {% endif %}>
   <div class="jcc-timeline-dual-section__container">
 
     {% if timeline_dual.title_bar %}
