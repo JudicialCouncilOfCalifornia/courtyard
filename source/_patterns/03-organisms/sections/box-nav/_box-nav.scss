@@ -13,6 +13,7 @@
       @include at-media(desktop) {
         @include u-margin-top(0);
       }
+      align-items: stretch;
       .jcc-tile {
         @include u-bg(primary-lighter);
         @include u-text(center);
@@ -26,7 +27,7 @@
         border-radius: 0px;
         transition: 0.4s all;
         @include grid-col(12);
-        width: 100%;
+        height: auto;
         &:hover {
           @include u-border(primary);
           transition: 0.4s border;
