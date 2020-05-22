@@ -10,14 +10,14 @@
 
       @include at-media-max(desktop) {
         @include has-dash-position(
-          $dash-color: secondary-light,
+          $dash-color: "mint-cool-40v",
           $dash-position: above-center,
           $dash-width: 5rem
         );
       }
 
       @include at-media(desktop) {
-        @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
+        @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
       }
     }
   }
@@ -59,7 +59,7 @@
 
       .jcc-tiles-list__date {
         @include u-padding-x(0);
-        @include u-color(secondary-light);
+        @include u-color("mint-cool-40v");
         @include u-display(flex);
         @include u-flex-direction(row);
         @extend .flex-align-center;
@@ -82,7 +82,7 @@
           @include u-width(8);
           border-radius: 50%;
           line-height: 0;
-          @include u-border(secondary-light);
+          @include u-border("mint-cool-40v");
           @include u-position(relative);
           @include u-font-size(ui, 8);
 
@@ -110,6 +110,9 @@
         a {
           @include u-text-decoration(no-underline);
           @include light-background-link();
+          @if $trial {
+            @include jcc-text-color(primary-blue-vivid-dark);
+          }
           &:hover {
             @include u-text-decoration(underline);
           }

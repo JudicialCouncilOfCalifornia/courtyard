@@ -1,0 +1,27 @@
+@import "jcc-theme-variables";
+
+//Core theme palette for mixin and function use
+$palette: (
+  primary-blue-lightest: $jcc-primary-blue-lightest,
+  primary-blue-lighter: $jcc-primary-blue-lighter,
+  primary-blue-light: $jcc-primary-blue-light,
+  primary-blue: $jcc-primary-blue,
+  primary-blue-vivid: $jcc-primary-blue-vivid,
+  primary-blue-vivid-dark: $jcc-primary-blue-vivid-dark,
+  primary-blue-dark: $jcc-primary-blue-dark,
+  primary-blue-darker: $jcc-primary-blue-darker,
+  accent-warm-green-lighter: $jcc-accent-warm-green-lighter,
+  accent-warm-green: $jcc-accent-warm-green,
+  accent-warm-light: $jcc-accent-warm-light,
+  accent-warm: $jcc-accent-warm
+);
+
+//Apply palette colors to text
+@mixin jcc-text-color($token) {
+  $palette-color: map-get($palette, $token);
+  @if (type_of($palette-color) == color) {
+    color: $palette-color;
+  } @else {
+    @include u-text($palette-color);
+  }
+}

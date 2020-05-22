@@ -79,6 +79,9 @@
             a {
               @include u-font-size(body, 10);
               @include light-background-link();
+              @if $trial {
+                @include jcc-text-color(primary-blue-vivid-dark);
+              }
             }
 
             > ul {

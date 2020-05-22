@@ -5,6 +5,9 @@
   a:not(.usa-button) {
     @include u-text-decoration(no-underline);
     @include light-background-link();
+    @if $trial {
+      @include jcc-text-color(primary-blue-vivid-dark);
+    }
     &:hover {
       @include u-text-decoration(underline);
     }
@@ -20,11 +23,11 @@
       @include u-margin-bottom(4);
 
       @include at-media(desktop) {
-        @include has-dash-position($dash-color: secondary-light, $dash-position: left-right);
+        @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
       }
       @include at-media-max(desktop) {
         @include has-dash-position(
-          $dash-color: secondary-light,
+          $dash-color: "mint-cool-40v",
           $dash-position: "above-center",
           $dash-width: 75px
         );
@@ -111,7 +114,7 @@
           svg {
             @include u-height(4);
             @include u-width(4);
-            @include u-color(secondary-light);
+            @include u-color("mint-cool-40v");
           }
         }
       }
