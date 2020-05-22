@@ -7,10 +7,16 @@
   @include responsive-lead();
   @include u-padding-right(1);
   @include u-display(inline);
+  @if $trial {
+    @include jcc-text-color(primary-blue-dark);
+  }
 
   a {
     @include u-text(info-darker);
     text-decoration: none;
+    @if $trial {
+      @include jcc-text-color(primary-blue-light);
+    }
 
     &:after {
       @include u-display(inline-block);

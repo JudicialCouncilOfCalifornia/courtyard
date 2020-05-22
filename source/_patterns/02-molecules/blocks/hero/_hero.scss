@@ -72,7 +72,16 @@
   @include t-copy();
   @include u-text(uppercase);
   @include u-text(ls-3);
+  @if $trial {
+    @include jcc-text-color(accent-warm-green);
+  }
   @include u-margin-top(3);
+}
+
+.jcc-hero--has-background-color--dark {
+  .jcc-hero__brow {
+    @include u-text("white");
+  }
 }
 
 .jcc-hero__title {
@@ -83,6 +92,9 @@
   }
   @include u-line-height("heading", 2);
   @include u-text(primary-darker);
+  @if $trial {
+    @include jcc-text-color(primary-blue-dark);
+  }
   @include u-margin-y(3);
 }
 
