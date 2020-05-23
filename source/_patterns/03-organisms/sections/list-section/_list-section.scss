@@ -43,11 +43,11 @@
         @include u-padding-top(2);
 
         @include at-media(tablet) {
-          @include has-dash-position($dash-color: secondary-light, $dash-position: above);
+          @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: above);
         }
         @include at-media-max(tablet) {
           @include has-dash-position(
-            $dash-color: secondary-light,
+            $dash-color: "mint-cool-40v",
             $dash-position: above,
             $dash-width: 45px
           );
@@ -67,7 +67,7 @@
           @include u-padding-x(0);
           @include u-text(uppercase);
           @include u-font-weight(bold);
-          @include u-text(primary-dark);
+          @include u-text(blue-70v);
           @include u-margin-bottom(1);
           @include u-font(ui, 7);
           color: #012941;
@@ -80,7 +80,7 @@
               @include u-font-size(body, 10);
               @include light-background-link();
               @if $trial {
-                @include jcc-text-color(primary-blue-vivid-dark);
+                @include jcc-text-color(primary-blue-vivid-dark, !important);
               }
             }
 
