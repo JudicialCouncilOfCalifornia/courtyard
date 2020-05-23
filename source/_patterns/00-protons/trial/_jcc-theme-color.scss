@@ -17,11 +17,21 @@ $palette: (
 );
 
 //Apply palette colors to text
-@mixin jcc-text-color($token) {
-  $palette-color: map-get($palette, $token);
-  @if (type_of($palette-color) == color) {
-    color: $palette-color;
-  } @else {
-    @include u-text($palette-color);
+@mixin jcc-text-color($value...) {
+  $important: null;
+  @if has-important($value) {
+    $value: remove($value, "!important");
+    $important: " !important";
+  }
+  @each $this-value in $value {
+    $this-value: smart-quote($this-value);
+    $palette-color: map-get($palette, $this-value);
+    @if ($palette-color) {
+      @if ($important) {
+        @include u-text($palette-color, !important);
+      } @else {
+        @include u-text($palette-color);
+      }
+    }
   }
 }
