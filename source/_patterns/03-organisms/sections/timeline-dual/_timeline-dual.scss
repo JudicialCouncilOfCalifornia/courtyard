@@ -11,27 +11,15 @@
 }
 
 .jcc-timeline-dual__title-bar {
-  @include u-color(primary);
   @include section-wrapper;
   @include grid-row;
   padding-bottom: 80px;
 }
 
-.jcc-timeline-dual__title-bar-previous {
-  @include grid-col(4);
-  @include u-font(body, 5);
-  @include u-color(primary);
-  float: left;
-  text-decoration: none;
-
-  @include at-media(tablet-lg) {
-    @include u-font(body, 6);
-  }
-}
-
 .jcc-timeline-dual__title-bar-title {
   @include grid-col(4);
   @include u-font(body, 6);
+  @include u-color(primary);
   text-align: center;
   float: none;
 
@@ -40,17 +28,27 @@
   }
 }
 
+.jcc-timeline-dual__title-bar-previous,
 .jcc-timeline-dual__title-bar-next {
   @include grid-col(4);
   @include u-font(body, 5);
-  @include u-color(primary);
-  float: right;
-  text-align: right;
-  text-decoration: none;
 
   @include at-media(tablet-lg) {
     @include u-font(body, 6);
   }
+
+  &:hover {
+    @include u-text("cyan-40v");
+  }
+}
+
+.jcc-timeline-dual__title-bar-previous {
+  float: left;
+}
+
+.jcc-timeline-dual__title-bar-next {
+  float: right;
+  text-align: right;
 }
 
 .jcc-timeline-dual-section__container {
@@ -74,6 +72,7 @@
   width: 110px;
   left: 0;
   top: -100px;
+  line-height: 1.35;
 
   @include at-media(tablet-lg) {
     top: -73px;
@@ -158,20 +157,28 @@
 
 .jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
   left: 70px;
+
+  @include at-media(tablet-lg) {
+    top: 5px;
+  }
 }
 
 .jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
   right: 70px;
+
+  @include at-media(tablet-lg) {
+    top: 60px;
+  }
 }
 
-.jcc-timeline-dual__excerpt {
+.jcc-timeline-dual__top .jcc-timeline-dual__excerpt,
+.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
   @include u-font(heading, 7);
   @include u-color(base);
   font-style: italic;
   position: absolute;
 
   @include at-media(tablet-lg) {
-    margin-top: 18px;
     left: unset !important;
     position: relative;
     right: unset;
@@ -303,7 +310,8 @@
     }
   }
 
-  .jcc-timeline-dual-item__trigger {
+  .jcc-timeline-dual-item__trigger,
+  .jcc-modal__trigger {
     position: absolute;
     top: 40px;
     left: 30px;
@@ -339,7 +347,8 @@
     }
   }
 
-  .jcc-timeline-dual-item__trigger {
+  .jcc-timeline-dual-item__trigger,
+  .jcc-modal__trigger {
     position: absolute;
     right: 30px;
     top: 40px;
@@ -356,7 +365,8 @@
   }
 
   .jcc-timeline-dual__time {
-    @include u-bg(accent-warm-dark);
+    @include u-bg(accent-warm);
+    @include u-text(ink);
     float: right;
     left: unset;
 
@@ -367,6 +377,7 @@
 
   .jcc-timeline-dual__number {
     @include u-bg(accent-warm);
+    @include u-text(ink);
     right: 30px;
     left: unset;
 
@@ -429,9 +440,13 @@
   transition: all 0.4s;
 
   &:hover {
+    @include u-bg("primary");
     cursor: pointer;
-    opacity: 0.7;
     transition: all 0.4s;
+
+    svg {
+      fill: color("white");
+    }
   }
 
   &.is-active {
