@@ -365,7 +365,7 @@
   }
 
   .jcc-timeline-dual__time {
-    @include u-bg(accent-warm);
+    @include u-bg(accent-warm-dark);
     @include u-text(ink);
     float: right;
     left: unset;
@@ -376,7 +376,7 @@
   }
 
   .jcc-timeline-dual__number {
-    @include u-bg(accent-warm);
+    @include u-bg(accent-warm-dark);
     @include u-text(ink);
     right: 30px;
     left: unset;
