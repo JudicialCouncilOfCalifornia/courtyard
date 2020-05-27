@@ -1,8 +1,9 @@
 hero:
-  breadcrumbs:
-    - label: 'Phase 2'
-      url: 'link.pages-case-phase-2'
-    - label: 'How to Fill Out Forms'
+  breadcrumb:
+    breadcrumbs:
+      - label: 'Phase 2'
+        url: 'link.pages-case-phase-2'
+      - label: 'How to Fill Out Forms'
   brow:
   background_variant: "has-background-color--light--secondary"
   title: 'Filing your divorce petition and summons'

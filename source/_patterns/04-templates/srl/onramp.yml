@@ -1,9 +1,10 @@
 hero:
   column_variant: "has-two-columns-threequarter"
-  breadcrumbs:
-    - label: "Legal Parentage"
-      url: ''
-    - null
+  breadcrumb:
+    breadcrumbs:
+      - label: "Legal Parentage"
+        url: ''
+      - null
   title: "Form FL-210/FL-200"
   lead: "What do these papers mean?"
   body: "<p>If you received this summons and petition, it means someone has gone to court to establish that you or they are the parent of a child.</p>"

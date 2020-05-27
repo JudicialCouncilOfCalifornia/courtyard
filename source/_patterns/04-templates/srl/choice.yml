@@ -29,10 +29,11 @@ top:
     column_content_right: ''
     background_variant: "has-background-color--light--secondary"
     column_variant: "has-one-column"
-  breadcrumbs:
-    - url: ""
-      label: "Choice"
-      url_attributes: ''
+    breadcrumb:
+      breadcrumbs:
+        - url: ""
+          label: "Choice"
+          url_attributes: ''
 choice_content:
   headergroup:
     title: "What type of service are you interested in?"

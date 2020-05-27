@@ -6,9 +6,9 @@
 
 <div class="{{ classes|join(' ')|trim }}" {% if switchboard.id %} id="{{ switchboard.id }}" {% endif %}>
   <div class="jcc-switchboard__container">
-    {% if switchboard.breadcrumbs %}
+    {% if switchboard.breadcrumb %}
       {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-      breadcrumb: switchboard.breadcrumbs
+      breadcrumb: switchboard.breadcrumb
       } %}
     {% endif %}
       <div class="jcc-switchboard__columns">

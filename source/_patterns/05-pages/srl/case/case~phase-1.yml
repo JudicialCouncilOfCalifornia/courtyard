@@ -1,8 +1,9 @@
 hero:
-  breadcrumbs:
-    - label: 'Divorce'
-      url: 'link.pages-case'
-    - label: 'Phase 1'
+  breadcrumb:
+    breadcrumbs:
+      - label: 'Divorce'
+        url: 'link.pages-case'
+      - label: 'Phase 1'
   background_variant: "has-background-color--dark"
   column_variant: "has-two-columns-threequarter"
   brow: ""

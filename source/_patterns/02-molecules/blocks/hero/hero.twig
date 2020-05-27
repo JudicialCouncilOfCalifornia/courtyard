@@ -21,9 +21,9 @@
     {% endif %}
 
     <div class="jcc-hero__content">
-      {% if hero.breadcrumbs %}
+      {% if hero.breadcrumb %}
         {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-          breadcrumbs: hero.breadcrumbs
+          breadcrumb: hero.breadcrumb
         } %}
       {% endif %}
 

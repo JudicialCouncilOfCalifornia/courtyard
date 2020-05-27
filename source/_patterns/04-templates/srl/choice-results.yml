@@ -2,8 +2,9 @@ top:
   hero:
     background_variant: "has-background-color--light--secondary"
     column_variant: "has-two-columns-threequarter"
-    breadcrumbs:
-      - label: "Choice"
+    breadcrumb:
+      breadcrumbs:
+        - label: "Choice"
     title: "Name Change"
     body:
       join():
