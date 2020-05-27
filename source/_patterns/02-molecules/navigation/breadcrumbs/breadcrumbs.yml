@@ -1,6 +1,10 @@
-breadcrumbs:
-  - url: "#"
-    label: "Debt Collection"
-    url_attributes: ""
-  - label: "Pay in Installments"
-    url_attributes: ""
+# Font styling variants ... font_variant:
+#  - trialcourt
+
+breadcrumb:
+  breadcrumbs:
+    - url: "#"
+      label: "Debt Collection"
+      url_attributes: ""
+    - label: "Pay in Installments"
+      url_attributes: ""

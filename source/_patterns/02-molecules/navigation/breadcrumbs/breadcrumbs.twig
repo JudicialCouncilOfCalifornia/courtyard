@@ -1,7 +1,12 @@
-{% if breadcrumbs|length > 0 %}
-<nav class="jcc-breadcrumbs-nav">
+{% if breadcrumb.breadcrumbs|length > 0 %}
+{% set classes = [
+  'jcc-breadcrumbs-nav',
+  breadcrumb.font_variant ? 'jcc-breadcrumbs-nav--' ~ breadcrumb.font_variant : '',
+]|merge(breadcrumb.classes|default([''])) %}
+
+<nav class="{{ classes|join(' ')|trim }}">
   <ul class="jcc-breadcrumbs">
-    {% for breadcrumb in breadcrumbs %}
+    {% for breadcrumb in breadcrumb.breadcrumbs %}
     {% set url_attributes = breadcrumb.url_attributes ? breadcrumb.url_attributes : create_attribute() %}
     <li class="jcc-breadcrumb__item">
       

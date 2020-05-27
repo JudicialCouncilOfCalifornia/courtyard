@@ -7,21 +7,27 @@
   @include responsive-lead();
   @include u-padding-right(1);
   @include u-display(inline);
-  @if $trial {
-    @include jcc-text-color(primary-blue-dark);
-  }
 
   a {
     @include u-text(info-darker);
     text-decoration: none;
-    @if $trial {
-      @include jcc-text-color(primary-blue-light);
-    }
 
     &:after {
       @include u-display(inline-block);
       content: "/";
       margin-left: 0.6275rem;
+    }
+  }
+}
+
+@if $trial {
+  .jcc-breadcrumbs-nav--trialcourt {
+    .jcc-breadcrumb__item {
+      @include jcc-text-color(primary-blue-dark);
+
+      a {
+        @include jcc-text-color(primary-blue-light);
+      }
     }
   }
 }
