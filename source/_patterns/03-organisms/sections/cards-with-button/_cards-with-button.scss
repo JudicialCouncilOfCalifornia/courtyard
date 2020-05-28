@@ -1,0 +1,179 @@
+.jcc-cards-with-button__container {
+  @include section-wrapper(9);
+  background-color: #f9f9f9;
+
+  a:not(.usa-button) {
+    @include u-text-decoration(no-underline);
+    @include light-background-link();
+    @if $trial {
+      @include jcc-text-color(primary-blue-vivid-dark);
+    }
+    &:hover {
+      @include u-text-decoration(underline);
+    }
+  }
+
+  > .jcc-header-group {
+    @include section-container();
+    @include u-text-align(center);
+    @include u-overflow(hidden);
+
+    .jcc-header-group__title {
+      @include u-font(heading, 12);
+      @include u-margin-bottom(4);
+
+      @include at-media(desktop) {
+        @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
+      }
+      @include at-media-max(desktop) {
+        @include has-dash-position(
+          $dash-color: "mint-cool-40v",
+          $dash-position: "above-right",
+          $dash-width: 75px
+        );
+      }
+    }
+  }
+
+  > ul {
+    @include section-container();
+    @include u-padding(0);
+    @include u-display(flex);
+    @include u-flex-direction(column);
+    justify-content: flex-start;
+    @include u-margin-bottom(0);
+
+    @include at-media(desktop) {
+      @include u-flex-direction(row);
+    }
+
+    > li:nth-child(-n + 3) {
+      @include card-border(
+        $border-color: base-lighter,
+        $bg: "white",
+        $border-width: "05",
+        $shadow: none,
+        $radius: "0"
+      );
+    }
+
+    > li:first-child {
+      @include at-media-max(desktop) {
+        @include u-margin-top(0);
+      }
+    }
+
+    > li:nth-child(2) {
+      @include at-media-max(desktop) {
+        @include u-margin-bottom(0);
+      }
+    }
+
+    > li:last-child {
+      @include u-margin-left(neg-1);
+    }
+
+    > li {
+      @include u-display(block);
+      flex: 1 0;
+      @include u-margin(2);
+      @include u-padding(3);
+      @include u-position(relative);
+
+      .jcc-card__brow {
+        @include u-font(heading, 8);
+        @include u-text(italic);
+      }
+
+      .jcc-card__title {
+        @include u-font(body, 10);
+        @include u-line-height(body, 4);
+        @include u-margin-y(2);
+      }
+
+      > .jcc-cards-with-button__read_more {
+        @extend .usa-prose;
+        @include u-width(full);
+        @include u-text(uppercase);
+        @include u-margin-top(4);
+        @include u-bottom(2);
+
+        @include at-media(desktop) {
+          @include u-position(absolute);
+        }
+
+        .jcc-cards-with-button__read_more_icon {
+          @include u-position(absolute);
+          @include u-bottom(2);
+          right: 40px;
+
+          @include at-media(desktop) {
+            @include u-bottom(neg-1);
+          }
+
+          svg {
+            @include u-height(4);
+            @include u-width(4);
+            @include u-color("mint-cool-40v");
+          }
+        }
+      }
+
+      ul {
+        @include u-padding(0);
+        li {
+          list-style-type: none;
+
+          .jcc-card__brow {
+            @include u-font(heading, 4);
+          }
+
+          .jcc-card__title {
+            @include u-font(body, 8);
+            @include u-margin-y(1);
+          }
+
+          .jcc-card__excerpt,
+          .jcc-cards-with-button__read_more {
+            @include u-display(none);
+          }
+        }
+
+        li:nth-child(n + 4) {
+          @include u-display(none);
+        }
+
+        li:nth-child(-n + 2) {
+          @include u-border-bottom(base-light);
+          @include u-border-width(2px);
+          @include u-margin-bottom(1);
+          @include u-padding-bottom(1);
+        }
+      }
+    }
+  }
+
+  .jcc-cards-with-button__button-container {
+    @include section-container();
+    @include u-text-align(center);
+    @extend .grid-row;
+    @extend .flex-justify-end;
+
+    @include at-media(desktop) {
+      @include u-text-align(left);
+    }
+
+    .jcc-cards-with-button__button {
+      @include u-padding-x(4);
+      @include grid-col(12);
+
+      @include at-media(desktop) {
+        @include grid-col(4);
+      }
+    }
+
+    a.usa-button {
+      @include u-width(auto);
+    }
+  }
+}
