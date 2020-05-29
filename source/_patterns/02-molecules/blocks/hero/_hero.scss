@@ -74,6 +74,10 @@
   @include u-text(ls-3);
   @if $trial {
     @include jcc-text-color(accent-warm-green);
+
+    a {
+      @include jcc-text-color(accent-warm-green);
+    }
   }
   @include u-margin-top(3);
 }
