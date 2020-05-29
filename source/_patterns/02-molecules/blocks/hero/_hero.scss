@@ -76,7 +76,7 @@
     @include jcc-text-color(accent-warm-green);
 
     a {
-      @include jcc-text-color(accent-warm-green);
+      @include jcc-text-color(accent-warm-green, !important);
     }
   }
   @include u-margin-top(3);
