@@ -11,12 +11,15 @@ if (alert) {
     alert.classList.add("active");
   }
 
-  document.getElementById("alert-close").onclick = function alertClose() {
-    if (alert.classList.contains("active")) {
-      setCookie(cookieId, true, 7);
-      alert.classList.remove("active");
-    }
-  };
+  var alert_close = document.getElementById("alert-close");
+  if (alert_close) {
+    alert_close.onclick = function alertClose() {
+      if (alert.classList.contains("active")) {
+        setCookie(cookieId, true, 7);
+        alert.classList.remove("active");
+      }
+    };
+  }
 }
 
 // Helper functions
