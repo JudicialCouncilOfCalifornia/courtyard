@@ -1,4 +1,5 @@
 primary_nav:
+  lowercase_titles: false
   items:
     - name: "Online Services"
       url: "#"

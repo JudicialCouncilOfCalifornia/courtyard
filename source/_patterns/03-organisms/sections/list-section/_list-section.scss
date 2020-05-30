@@ -95,3 +95,25 @@
     }
   }
 }
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-list-section--lowercase-titles {
+  nav {
+    > ul {
+      > li {
+        .menu-item__header {
+          font-size: 1.37rem !important; /* equates to system token 9 ... u-font does not support !important */
+          @include u-text(no-uppercase, ls-1, !important);
+        }
+      }
+    }
+
+    > ul {
+      > li {
+        a {
+          font-size: 1.37rem !important; /* equates to system token 9 ... u-font does not support !important */
+        }
+      }
+    }
+  }
+}

@@ -19,11 +19,23 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
       }
     }
   }
+}
 
-  /* remove title decoration for all cards if specified no_title_decoration = true */
-  .jcc-text-section-aside__aside.jcc-text-section-aside__aside-no-title-decoration {
+/* remove title decoration for all cards if specified no_title_decoration = true */
+.jcc-text-section-aside--no-title-decoration {
+  .jcc-text-section-aside__aside {
     .jcc-card__title::after {
-      @include u-bg("transparent");
+      @include u-bg("transparent", !important);
+    }
+  }
+}
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-text-section-aside--lowercase-titles {
+  .jcc-text-section-aside__aside {
+    .jcc-card__title {
+      font-size: 1.49rem !important; /* equates to system token 10 ... u-font does not support !important */
+      @include u-text(no-uppercase, !important);
     }
   }
 }

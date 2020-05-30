@@ -1,4 +1,5 @@
 list_section:
+  lowercase_titles: false
   menu:
     classes:
     disable_header_link: true
