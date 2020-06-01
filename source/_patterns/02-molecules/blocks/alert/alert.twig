@@ -1,4 +1,4 @@
-<div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon" id="alert-bar">
+<div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon">
   <div class="usa-alert__body jcc-alert__body {% if alert.icon %} {% else %} usa-alert--no-icon     {% endif %}">
     <h4 class="usa-alert__heading jcc-alert__heading">{{ alert.heading|trim }}</h4>
     <div class="usa-alert__text jcc-alert__text">{{ alert.text }}</div>
@@ -8,7 +8,7 @@
       </div>
     {% endif %}
     {% if alert.close %}
-      <div class="jcc-alert__close" id="alert-close"></div>
+      <div class="jcc-alert__close"></div>
     {% endif %}
   </div>
 </div>

@@ -1,26 +1,30 @@
-let messageContentObject = document.getElementsByClassName("usa-alert__text"),
-  cookieId;
-if (messageContentObject[0]) {
-  cookieId = "patternlab-alert-hide-" + stringToHash(messageContentObject[0].innerText);
-}
-var alert = document.getElementById("alert-bar");
+var alerts = document.querySelectorAll( '.jcc-alert:not(.cookie-processed)');
 
-if (alert) {
-  // Message loads hidden to avoid flash if cookie is found.
-  if (!getCookie(cookieId)) {
-    alert.classList.add("active");
-  }
+if (alerts) {
+  for (let alert of alerts) {
+    let messageContentObject = alert.getElementsByClassName("usa-alert__text"),
+        cookieId;
+    if (messageContentObject[0]) {
+      cookieId = "patternlab-alert-hide-" + stringToHash(messageContentObject[0].innerText);
+    }
 
-  var alert_close = document.getElementById("alert-close");
-  if (alert_close) {
-    alert_close.onclick = function alertClose() {
-      if (alert.classList.contains("active")) {
-        setCookie(cookieId, true, 7);
-        alert.classList.remove("active");
+    // Message loads hidden to avoid flash if cookie is found.
+    if (!getCookie(cookieId)) {
+      alert.classList.add("active");
+    }
+    var alert_close = alert.getElementsByClassName("jcc-alert__close");
+    if (alert_close[0]) {
+      alert_close[0].onclick = function alertClose() {
+        if (alert.classList.contains("active")) {
+          setCookie(cookieId, true, 7);
+          alert.classList.remove("active");
+        }
       }
-    };
+    }
+    alert.classList.add("cookie-processed");
   }
 }
+
 
 // Helper functions
 function setCookie(name, value, days) {
