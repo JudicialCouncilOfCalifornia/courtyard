@@ -1,5 +1,7 @@
 {% set classes = [
     'jcc-text-section-aside',
+    text_section_aside_secondary.no_title_decoration ? 'jcc-text-section-aside--no-title-decoration',
+    text_section_aside_secondary.lowercase_titles ? 'jcc-text-section-aside--lowercase-titles'
 ]|merge(text_section_aside_secondary.classes|default([''])) %}
 
 {% if text_section_aside_secondary.content and text_section_aside_secondary.aside %}

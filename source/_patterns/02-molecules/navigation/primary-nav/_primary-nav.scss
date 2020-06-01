@@ -104,7 +104,7 @@ nav.jcc-primary-nav {
       }
       @include u-color("white");
       @include u-font-size("body", 7);
-      text-transform: uppercase;
+      @include u-text(uppercase);
       font-weight: 400;
     }
   }
@@ -294,6 +294,27 @@ nav.jcc-primary-nav {
     }
     .usa-accordion__button[aria-expanded="false"] {
       background-image: url(../images/icomoon/SVG/expand_more_white.svg);
+    }
+  }
+}
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-primary-nav--lowercase-titles {
+  .usa-nav__primary-item {
+    .usa-nav__link {
+      span {
+        text-transform: none;
+      }
+    }
+  }
+  .jcc-primary-nav__sub {
+    li {
+      a {
+        .jcc-primary-nav__sub--title {
+          font-size: 1.37rem !important; /* equates to system token 9 ... u-font does not support !important */
+          @include u-text(no-uppercase, ls-1, !important);
+        }
+      }
     }
   }
 }

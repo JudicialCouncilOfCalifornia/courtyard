@@ -11,6 +11,7 @@
 # - viewport-height
 
 hero:
+  lowercase_brow: false
   brow: "Brow Description" # Not in used by SRL
   title: "Serving your papers"
   lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."

@@ -4,12 +4,12 @@
     {% set column_variant = hero.column_variant|default('has-one-column') %}
 {% endif %}
 
-
 {% set classes = [
   'jcc-hero',
   'jcc-hero--' ~ column_variant|default('has-two-columns-half'),
+  hero.lowercase_brow ? 'jcc-hero--lowercase-brow',
   hero.background_variant ? 'jcc-hero--' ~ hero.background_variant : '',
-  hero.height_variant ? 'jcc-hero--' ~ hero.height_variant : '',
+  hero.height_variant ? 'jcc-hero--' ~ hero.height_variant : ''
 ]|merge(hero.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if hero.id %} id="{{ hero.id }}"{% endif %}>

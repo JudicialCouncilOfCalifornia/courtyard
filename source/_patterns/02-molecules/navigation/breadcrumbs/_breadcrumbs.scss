@@ -15,7 +15,7 @@
     @include u-text(info-darker);
     text-decoration: none;
     @if $trial {
-      @include jcc-text-color(primary-blue-light);
+      @include jcc-text-color(primary-blue-vivid-dark);
     }
 
     &:after {

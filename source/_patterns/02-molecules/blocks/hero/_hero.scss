@@ -74,6 +74,10 @@
   @include u-text(ls-3);
   @if $trial {
     @include jcc-text-color(accent-warm-green);
+
+    a {
+      @include jcc-text-color(accent-warm-green, !important);
+    }
   }
   @include u-margin-top(3);
 }
@@ -189,4 +193,12 @@
 .jcc-hero__body,
 .jcc-hero__column-right {
   @extend .usa-prose;
+}
+
+/* remove uppercase brow if lowercase_brow = true */
+.jcc-hero--lowercase-brow {
+  .jcc-hero__brow {
+    @include u-font(body, 9);
+    @include u-text(no-uppercase, ls-1);
+  }
 }

@@ -30,31 +30,20 @@ timeline_dual:
     - top:
         number: 2
         read_more:
-          type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
+          type: "modal"
+          modal: "<div>this is modal</div>"
       bottom:
         number: 2
         read_more:
           type: "modal"
           modal: "<div>this is modal</div>"
     - top:
-        number: 3
-        read_more:
-          type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
+       excerpt: "booyah"
+       number: 3
       icon: "both"
       bottom:
         excerpt: "booyah"
         number: 3
-        read_more:
-          type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
     - top:
         number: 4
         read_more:

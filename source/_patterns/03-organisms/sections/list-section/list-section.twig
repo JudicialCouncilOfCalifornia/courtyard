@@ -1,6 +1,7 @@
 {% set attributes = create_attribute() %}
 {% set classes = [
     'jcc-list-section',
+    list_section.lowercase_titles ? 'jcc-list-section--lowercase-titles'
 ]|merge(list_section.classes|default([''])) %}
 
 <div{{ attributes.addClass(classes) }}>
