@@ -29162,6 +29162,14 @@ a:visited {
   padding-bottom: 0 ;
 }
 
+/* remove uppercase brow if lowercase_brow = true */
+.jcc-hero--lowercase-brow .jcc-hero__brow {
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.37rem;
+  text-transform: none ;
+  letter-spacing: 0.025em ;
+}
+
 .jcc_link-list-simple-multicolumn {
   margin-left: auto ;
   margin-right: auto ;
@@ -30794,7 +30802,7 @@ nav.jcc-primary-nav {
 .jcc-primary-nav .usa-nav__primary-item .usa-nav__link span {
   color: white ;
   font-size: 1.12rem;
-  text-transform: uppercase;
+  text-transform: uppercase ;
   font-weight: 400;
 }
 
@@ -30961,6 +30969,18 @@ nav.jcc-primary-nav {
 .jcc-primary-nav #js-header_menu--mobile .usa-accordion__button[aria-expanded="false"],
 .jcc-primary-nav #js-header_menu--mobile-2 .usa-accordion__button[aria-expanded="false"] {
   background-image: url(../images/icomoon/SVG/expand_more_white.svg);
+}
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-primary-nav--lowercase-titles .usa-nav__primary-item .usa-nav__link span {
+  text-transform: none;
+}
+
+.jcc-primary-nav--lowercase-titles .jcc-primary-nav__sub li a .jcc-primary-nav__sub--title {
+  font-size: 1.37rem !important;
+  /* equates to system token 9 ... u-font does not support !important */
+  text-transform: none  !important;
+  letter-spacing: 0.025em  !important;
 }
 
 .jcc-address__address {
@@ -32312,6 +32332,19 @@ h3.jcc-header-group__title {
   padding-left: 1.5rem ;
 }
 
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-list-section--lowercase-titles nav > ul > li .menu-item__header {
+  font-size: 1.37rem !important;
+  /* equates to system token 9 ... u-font does not support !important */
+  text-transform: none  !important;
+  letter-spacing: 0.025em  !important;
+}
+
+.jcc-list-section--lowercase-titles nav > ul > li a {
+  font-size: 1.37rem !important;
+  /* equates to system token 9 ... u-font does not support !important */
+}
+
 .jcc-modal__backdrop {
   display: none ;
 }
@@ -33101,15 +33134,22 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 
 .jcc-text-section-aside-secondary__container {
   /* title decoration for only first card under main column */
-  /* remove title decoration for all cards if specified no_title_decoration = true */
 }
 
 .jcc-text-section-aside-secondary__container .jcc-text-section-aside__aside.jcc-text-section-aside__aside-main .jcc-card:not(:first-child) .jcc-card__title::after {
   background-color: transparent ;
 }
 
-.jcc-text-section-aside-secondary__container .jcc-text-section-aside__aside.jcc-text-section-aside__aside-no-title-decoration .jcc-card__title::after {
-  background-color: transparent ;
+/* remove title decoration for all cards if specified no_title_decoration = true */
+.jcc-text-section-aside--no-title-decoration .jcc-text-section-aside__aside .jcc-card__title::after {
+  background-color: transparent  !important;
+}
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-text-section-aside--lowercase-titles .jcc-text-section-aside__aside .jcc-card__title {
+  font-size: 1.49rem !important;
+  /* equates to system token 10 ... u-font does not support !important */
+  text-transform: none  !important;
 }
 
 .jcc-text-section-aside__container {

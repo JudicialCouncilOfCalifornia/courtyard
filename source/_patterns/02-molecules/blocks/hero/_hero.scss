@@ -194,3 +194,11 @@
 .jcc-hero__column-right {
   @extend .usa-prose;
 }
+
+/* remove uppercase brow if lowercase_brow = true */
+.jcc-hero--lowercase-brow {
+  .jcc-hero__brow {
+    @include u-font(body, 9);
+    @include u-text(no-uppercase, ls-1);
+  }
+}
