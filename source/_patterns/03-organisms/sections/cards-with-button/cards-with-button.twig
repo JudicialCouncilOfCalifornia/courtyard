@@ -16,20 +16,22 @@
                     card: card
                 } %}
 
-                {% set url_attributes = card.read_more.url_attributes|default(create_attribute().addClass("usa-link")) %}
-                <div class="jcc-cards-with-button__read_more"><p><a href="{{ card.read_more.url }}"{{ url_attributes }}>
-                            {{- card.read_more.label -}}
+                {% if card.read_more %}
+                    {% set url_attributes = card.read_more.url_attributes|default(create_attribute().addClass("usa-link")) %}
+                    <div class="jcc-cards-with-button__read_more"><p><a href="{{ card.read_more.url }}"{{ url_attributes }}>
+                        {{- card.read_more.label -}}
 
-                            {% set icon = card.read_more.icon|default({
-                                name: "chevron_right",
-                                title: "Read more"|t,
-                                decorative: false,
-                            }) %}
+                        {% set icon = card.read_more.icon|default({
+                            name: "chevron_right",
+                            title: "Read more"|t,
+                            decorative: false,
+                        }) %}
 
-                            <span class="jcc-cards-with-button__read_more_icon">
-                    {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
-                    </span>
-                        </a></p></div>
+                        <span class="jcc-cards-with-button__read_more_icon">
+                        {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                        </span>
+                    </a></p></div>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>
