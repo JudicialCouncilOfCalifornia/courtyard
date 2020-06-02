@@ -35063,6 +35063,7 @@ a:visited {
   font-size: 1.37rem;
   padding-right: 0.5rem ;
   display: inline ;
+  font-size: 1.06rem !important;
   color: #0b4778 ;
 }
 
@@ -37947,12 +37948,17 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   padding-bottom: 2rem ;
 }
 
-.jcc-text-section-aside-secondary__container {
+.jcc-text-section-aside-secondary__container .jcc-text-section-aside {
   /* title decoration for only first card under main column */
+  /* trimming white space from default aside */
 }
 
-.jcc-text-section-aside-secondary__container .jcc-text-section-aside__aside.jcc-text-section-aside__aside-main .jcc-card:not(:first-child) .jcc-card__title::after {
+.jcc-text-section-aside-secondary__container .jcc-text-section-aside .jcc-text-section-aside__aside.jcc-text-section-aside__aside-main .jcc-card:not(:first-child) .jcc-card__title::after {
   background-color: transparent ;
+}
+
+.jcc-text-section-aside-secondary__container .jcc-text-section-aside .jcc-text-section-aside__aside .jcc-card {
+  margin-top: 0 ;
 }
 
 /* remove title decoration for all cards if specified no_title_decoration = true */
