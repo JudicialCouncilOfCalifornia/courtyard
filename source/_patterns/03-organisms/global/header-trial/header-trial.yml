@@ -21,6 +21,7 @@ header_trial:
       search_input:
         form_input_name: "keyword"
   primary_nav:
+    lowercase_titles: true
     items:
       - name: "Online Services"
         url: "#"
