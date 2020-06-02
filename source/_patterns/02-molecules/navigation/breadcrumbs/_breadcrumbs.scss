@@ -8,6 +8,7 @@
   @include u-padding-right(1);
   @include u-display(inline);
   @if $trial {
+    font-size: 1.06rem !important; // !important not supported by mixin
     @include jcc-text-color(primary-blue-dark);
   }
 
