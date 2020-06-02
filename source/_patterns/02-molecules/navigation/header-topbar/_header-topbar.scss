@@ -21,8 +21,8 @@
       @include grid-col(6);
       @include u-position(relative);
       img {
-        @include u-height(10);
-        @include u-margin-top(2);
+        @include u-height(9);
+        @include u-margin-top(3);
       }
     }
   }
