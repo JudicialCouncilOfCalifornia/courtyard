@@ -201,7 +201,7 @@ nav.jcc-primary-nav {
         @include u-font-size("body", 5);
         margin-top: 1em;
         line-height: 1.4em;
-        text-transform: capitalize;
+        text-transform: none;
         letter-spacing: 1px;
       }
     }
