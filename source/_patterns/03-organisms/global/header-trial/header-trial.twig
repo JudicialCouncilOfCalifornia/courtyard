@@ -18,25 +18,13 @@
           logo : header_trial.mobile.logo
         } %}
       </div>
-      {# BEGIN mobile menu & global functions #}
+      {# BEGIN search function #}
       <div class="buttons slicknav">
-        <a id="search" tabindex="0" role="button" aria-label="Open/Close search field" aria-haspopup="true" class="mobile_button search">
+        <a id="search" tabindex="0" role="button" aria-label="Global site search. Open or close field by using ENTER key now." aria-haspopup="true" class="mobile_button search">
           {% include '@atoms/icons/icon.twig' with {
             icon : header_trial.mobile.search
           } %}
         </a>
-
-        <a id="translate" tabindex="0" role="button" aria-label="Open/Close language selection" aria-haspopup="true" class="mobile_button translate">
-          {% include '@atoms/icons/icon.twig' with {
-            icon : header_trial.mobile.globe
-          } %}
-        </a>
-        <span id="mobile-menu" class="mobile_button jcc-primary-nav">
-          <span id="js-header-trial_menu--mobile" class="usa-accordion"></span>
-        </span>
-        {# END #}
-
-        {# BEGIN global function menus #}
         <div id="show-search" class="show-button">
           <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_trial.header_topbar.search.form_action|default('/search') }}">
             {% include '@atoms/forms/search-input.twig' with {
@@ -44,12 +32,24 @@
             }%}
           </form>
         </div>
+        {# END #}
+
+        {# BEGIN translate options #}
+        <a id="translate" tabindex="0" role="button" aria-label="Change language selection. Open or close menu by using ENTER key now." aria-haspopup="true" class="mobile_button translate">
+          {% include '@atoms/icons/icon.twig' with {
+            icon : header_trial.mobile.globe
+          } %}
+        </a>
         <div id="show-translate" class="show-button">
           {% include '@atoms/forms/dropbutton.twig' with {
             dropbutton: header_trial.header_topbar.dropbutton
           } %}
         </div>
         {# END #}
+
+        <span id="mobile-menu" class="mobile_button jcc-primary-nav">
+          <span id="js-header-trial_menu--mobile" class="usa-accordion"></span>
+        </span>
       </div>
     </div>
   </div>

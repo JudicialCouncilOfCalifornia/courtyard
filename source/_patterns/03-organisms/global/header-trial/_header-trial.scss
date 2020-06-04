@@ -37,6 +37,7 @@
     @include grid-col(6);
     @include u-display(block);
     @include u-height(6);
+    @include u-padding-left(1);
     .jcc-logo {
       @include u-width(full);
       img {
@@ -80,6 +81,10 @@
         @include u-height(4);
         @include u-color(primary-dark);
       }
+    }
+    .mobile_button:not(:last-child) {
+      @include u-position(relative);
+      top: -5px;
     }
   }
 

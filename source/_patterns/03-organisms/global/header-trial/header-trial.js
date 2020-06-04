@@ -1,25 +1,27 @@
 require("slicknav/jquery.slicknav");
 
-var mobileMenuID = ".mobile_button";
+var mobileMenuClass = ".mobile_button";
 
-function resetMenus(isMain) {
+// toggle mobile menus/functions closed as needed
+function resetMenus(includeMain) {
   $(".show-button").removeClass("active-menu");
   $(".show-button").hide();
-  if (!isMain) {
+  if (includeMain) {
     $("#slick-menu").slicknav("close");
   }
 }
 
-$(mobileMenuID).on("click keypress", function(e) {
-  var buttonID = $(this).attr("id");
-  var isMobileMenu = $("#" + buttonID).hasClass("jcc-primary-nav");
+// Event handling for menus/functions
+$(mobileMenuClass).on("click keydown", function(e) {
+  var mobileMenuID = $(this).attr("id");
+  var isMobileMenu = $("#" + mobileMenuID).hasClass("jcc-primary-nav");
   if (!isMobileMenu) {
     var toggleMenu = function() {
-      if ($("#show-" + buttonID).hasClass("active-menu")) {
-        resetMenus(false);
+      if ($("#show-" + mobileMenuID).hasClass("active-menu")) {
+        resetMenus(true);
       } else {
-        resetMenus(false);
-        $("#show-" + buttonID)
+        resetMenus(true);
+        $("#show-" + mobileMenuID)
           .toggle()
           .addClass("active-menu");
       }
@@ -29,23 +31,28 @@ $(mobileMenuID).on("click keypress", function(e) {
       case "click":
         toggleMenu();
         break;
-      case "keypress":
+      case "keydown":
         switch (e.keyCode) {
-          //case 9: //tab
-          case 13: //enter - inherits next case function
-          case 32: //space
+          case 13: //enter
             toggleMenu();
-            break;
-          //case 38: //up arrow
-          //case 40: //down arrow
         }
     }
   } else {
+    resetMenus(false);
+  }
+});
+
+// Close menus/functions if click focus is away
+$(document).on("click", function(e) {
+  if (!$(mobileMenuClass).is(":focus") && !$(".slicknav_open").is(":focus")) {
     resetMenus(true);
   }
 });
 
 $(function() {
   $("#js-header-trial_menu--mobile").append($("#js-header_menu--mobile"));
-  $(".slicknav_btn").attr("aria-label", "Main navigation menu");
+  $(".slicknav_btn").attr(
+    "aria-label",
+    "Main navigation menu. Open or close menu by using ENTER key now."
+  );
 });
