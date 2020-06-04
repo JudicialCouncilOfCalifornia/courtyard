@@ -20,31 +20,33 @@
       </div>
 
       <div class="buttons slicknav">
-        <span id="mobile-menu" class="mobile_button jcc-primary-nav">
-          <span id="js-header-trial_menu--mobile" class="mobile_button usa-accordion"></span>
-        </span>
-        <span id="translate" class="mobile_button translate">
-          {% include '@atoms/icons/icon.twig' with {
-            icon : header_trial.mobile.globe
-          } %}
-        </span>
-        <span id="search" class="mobile_button search">
+        <a id="search" tabindex="0" role="button" aria-label="Open/Close search field" aria-haspopup="true" class="mobile_button search">
           {% include '@atoms/icons/icon.twig' with {
             icon : header_trial.mobile.search
           } %}
+        </a>
+        <div id="show-search" class="show-button">
+          <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_trial.header_topbar.search.form_action|default('/search') }}">
+            {% include '@atoms/forms/search-input.twig' with {
+              search_input: header_trial.header_topbar.search.search_input
+            }%}
+          </form>
+        </div>
+
+        <a id="translate" tabindex="0" role="button" aria-label="Open/Close language menu" aria-haspopup="true" class="mobile_button translate">
+          {% include '@atoms/icons/icon.twig' with {
+            icon : header_trial.mobile.globe
+          } %}
+        </a>
+        <div id="show-translate" class="show-button">
+          {% include '@atoms/forms/dropbutton.twig' with {
+            dropbutton: header_trial.header_topbar.dropbutton
+          } %}
+        </div>
+
+        <span id="mobile-menu" class="mobile_button jcc-primary-nav">
+          <span id="js-header-trial_menu--mobile" class="usa-accordion"></span>
         </span>
-      </div>
-      <div id="show-dropbutton" class=" show-button">
-        {% include '@atoms/forms/dropbutton.twig' with {
-          dropbutton: header_trial.header_topbar.dropbutton
-        } %}
-      </div>
-      <div id="show-search" class=" show-button">
-        <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_trial.header_topbar.search.form_action|default('/search') }}">
-        {% include '@atoms/forms/search-input.twig' with {
-          search_input: header_trial.header_topbar.search.search_input
-        }%}
-        </form>
       </div>
     </div>
   </div>
