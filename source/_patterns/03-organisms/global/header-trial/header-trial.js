@@ -2,51 +2,47 @@ require("slicknav/jquery.slicknav");
 
 var mobileMenuID = ".mobile_button";
 
-function resetMenus() {
+function resetMenus(isMain) {
   $(".show-button").removeClass("active-menu");
   $(".show-button").hide();
-  $("#slick-menu").slicknav("close");
+  if (!isMain) {
+    $("#slick-menu").slicknav("close");
+  }
 }
 
-$(mobileMenuID).on("click focus", function() {
+$(mobileMenuID).on("click keypress", function(e) {
   var buttonID = $(this).attr("id");
   var isMobileMenu = $("#" + buttonID).hasClass("jcc-primary-nav");
   if (!isMobileMenu) {
     var toggleMenu = function() {
       if ($("#show-" + buttonID).hasClass("active-menu")) {
-        resetMenus();
+        resetMenus(false);
       } else {
-        resetMenus();
+        resetMenus(false);
         $("#show-" + buttonID)
           .toggle()
           .addClass("active-menu");
       }
     };
 
-    $("#" + buttonID).on({
-      click: function() {
+    switch (e.type) {
+      case "click":
         toggleMenu();
-      },
-      keydown: function(e) {
+        break;
+      case "keypress":
         switch (e.keyCode) {
-          case 9: //tab
-            console.log(e.keyCode);
-            break;
-          case 13: //enter
+          //case 9: //tab
+          case 13: //enter - inherits next case function
           case 32: //space
             toggleMenu();
             break;
-          // 38: //up arrow
+          //case 38: //up arrow
           //case 40: //down arrow
         }
-      }
-    });
+    }
+  } else {
+    resetMenus(true);
   }
-});
-
-$("#mobile-menu").on("click focus", function() {
-  $(".show-button").removeClass("active-menu");
-  $(".show-button").hide();
 });
 
 $(function() {
