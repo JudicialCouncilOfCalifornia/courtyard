@@ -1,4 +1,9 @@
-<div class="jcc-hero-icon-nav">
+{% set classes = [
+  'jcc-hero-icon-nav',
+  hero_icon_nav.style ?: 'jcc-hero-icon-nav-style--default',
+]|merge(hero_icon_nav.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
   {% if hero_icon_nav.hero_img_banner %}
     {% include '@molecules/blocks/hero-img-banner/hero-img-banner.twig' with {
       hero_img_banner: hero_icon_nav.hero_img_banner
