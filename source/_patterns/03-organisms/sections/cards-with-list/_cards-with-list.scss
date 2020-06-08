@@ -133,6 +133,10 @@
             @include u-margin-y(1);
           }
 
+          .jcc-card__excerpt {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
           .jcc-card__excerpt,
           .jcc-cards-with-list__read_more {
             @include u-display(none);

@@ -3,8 +3,9 @@ cards_with_list:
     brow: "Hidden"
     title: "News, Updates & Notices"
   cards:
-    - brow: "Feb 04, 2020"
-      title: "The Superior Court of Alameda County will be closed on Wednesday, February 12, 2020 for Lincoln's Birthday."
+    - brow: "Jun 2, 2020"
+      title: "The Superior Court of San Luis Obispo County announces the resumption of Traffic Court."
+      excerpt: "<p>The San Luis Obispo Superior Court Infraction Arraignment Calendar re-opens June 8, 2020 with some changes. All infraction appearances will be held at the Grover Beach Courthouse until further notice.</p>"
       url: "#"
       read_more:
         label: "Read more"
