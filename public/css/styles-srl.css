@@ -31985,6 +31985,11 @@ h3.jcc-header-group__title {
   margin-top: 0.5rem ;
 }
 
+.jcc-cards-with-list__container > ul > li ul li .jcc-card__excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .jcc-cards-with-list__container > ul > li ul li .jcc-card__excerpt,
 .jcc-cards-with-list__container > ul > li ul li .jcc-cards-with-list__read_more {
   display: none ;
