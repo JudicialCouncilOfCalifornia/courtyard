@@ -153,7 +153,7 @@ const trialCss = () => {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename("stylestrial.min.css"))
+    .pipe(rename("styles-trial.min.css"))
     .pipe(cleanCSS({ compatibility: "ie9" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //
