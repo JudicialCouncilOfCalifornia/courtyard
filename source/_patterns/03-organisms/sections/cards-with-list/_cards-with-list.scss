@@ -92,7 +92,7 @@
       }
 
       .jcc-card__excerpt {
-        @include u-maxh("card");
+        @include u-height("card");
         overflow: hidden;
         text-overflow: ellipsis;
       }
