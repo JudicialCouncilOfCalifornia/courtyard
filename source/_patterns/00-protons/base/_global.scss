@@ -600,3 +600,22 @@ $aspect-width: 16;
     }
   }
 }
+
+@mixin link-hover-slide {
+  transition: 0.6s all ease;
+  &::before {
+    @include u-bg(base-lightest);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.3s ease;
+    width: 0%;
+    height: 100%;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
