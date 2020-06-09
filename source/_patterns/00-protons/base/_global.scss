@@ -578,3 +578,25 @@ $aspect-width: 16;
     }
   }
 }
+
+@mixin link-hover-line($height: 8px, $color: accent-warm) {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $height;
+    transform: scaleX(0);
+    @include u-bg($color);
+
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
