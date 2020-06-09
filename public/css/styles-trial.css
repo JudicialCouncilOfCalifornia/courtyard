@@ -35362,6 +35362,66 @@ a:visited {
   margin-top: 0.5rem ;
 }
 
+.usa-pagination {
+  text-align: center ;
+}
+
+.usa-pagination ol {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  list-style-type: none;
+  padding-left: 0;
+  padding-left: 2rem ;
+}
+
+.usa-pagination ol > li {
+  margin-bottom: 0;
+  max-width: unset;
+}
+
+.usa-pagination li {
+  display: inline ;
+}
+
+.usa-pagination a {
+  padding: 3px 10px;
+  text-decoration: none ;
+}
+
+.usa-pagination a.is-active {
+  background-color: #005ea2 ;
+  border-radius: 100%;
+  color: white ;
+}
+
+.usa-pagination .fa-angle-right {
+  margin-left: 3px;
+}
+
+.jcc-pagination {
+  padding-bottom: 1rem ;
+  padding-top: 1rem ;
+}
+
+.jcc-pagination .jcc-pagination__ellipsis {
+  color: #0076d6 ;
+}
+
+.jcc-pagination a {
+  margin: 0 0.6rem;
+  padding: 0.6rem 0.55rem;
+  font-weight: bold ;
+  color: #0076d6 ;
+}
+
+.jcc-pagination a.single-digit-spacing {
+  padding: 0.6rem 0.86rem;
+}
+
+.jcc-pagination a.is-active {
+  background-color: #0076d6 ;
+}
+
 .slicknav_btn {
   position: relative;
   display: block;
