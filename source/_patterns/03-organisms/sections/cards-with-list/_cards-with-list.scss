@@ -134,6 +134,7 @@
           }
 
           .jcc-card__excerpt {
+            @include u-maxh("card");
             overflow: hidden;
             text-overflow: ellipsis;
           }
