@@ -1,0 +1,101 @@
+.jcc-hero-icon-nav.variant-one {
+  .jcc-hero-img-banner__hero {
+    height: 375px;
+    @include u-padding-x(4);
+    @include u-padding-y(9);
+  }
+
+  .jcc-hero-icon-nav__nav {
+    .jcc-tile {
+      @include u-width(full);
+      @include u-height(10);
+      @include u-radius(0);
+      @include u-padding-y(5);
+      @include u-padding-x(1);
+
+      @include at-media(desktop) {
+        @include u-display(flex);
+        @include u-align-items(align-center);
+        @include u-justify-content(justify-center);
+        @include u-border(0);
+        width: 20%;
+      }
+
+      &__icon {
+        @include u-display(inline-block);
+      }
+      &__title {
+        @include u-display(inline-block);
+        @include u-padding-left(1);
+
+        a {
+          @include u-color(blue-50v);
+          @include u-font(sans, 9);
+        }
+      }
+    }
+  }
+
+  .jcc-hero-icon-nav__block {
+    @include u-display(flex);
+    @include u-flex-direction(row);
+    @include u-justify-content(justify-center);
+    @include u-align-items(align-stretch);
+    @include u-flex(wrap);
+  }
+
+  .tile-icon {
+    @include u-bg(primary-dark);
+    margin-top: -55px;
+    @include u-position(relative);
+    -webkit-box-shadow: 0 -6px 5px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 -6px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -6px 5px 1px rgba(0, 0, 0, 0.1);
+
+    .jcc-tile {
+      @include u-bg(primary-dark);
+      @include u-padding-y(1);
+      @include link-hover-line();
+
+      @include at-media(desktop) {
+        @include u-padding-y(6);
+      }
+
+      &__icon {
+        @include u-bg(primary-lighter);
+        @include u-radius(pill);
+        @include u-padding-x("105");
+        @include u-padding-y(1);
+
+        img {
+          @include u-height(4);
+        }
+      }
+
+      &__title a {
+        @include u-color(primary-lighter);
+      }
+    }
+  }
+
+  .tile-button {
+    @include u-bg(base-lighter);
+    @include u-position(relative);
+    -webkit-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+
+    .jcc-tile {
+      @include u-bg(base-lighter);
+      @include u-padding-y(2);
+      @include u-height(7);
+      @include u-shadow(none);
+      @include link-hover-line($height: 3px);
+      width: 15%;
+
+      &__title a {
+        @include u-font-size(body, 5);
+      }
+    }
+  }
+}

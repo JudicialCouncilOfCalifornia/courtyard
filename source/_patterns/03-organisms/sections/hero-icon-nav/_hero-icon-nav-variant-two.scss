@@ -1,0 +1,101 @@
+.jcc-hero-icon-nav.variant-two {
+  .jcc-hero-img-banner__hero {
+    @include at-media(desktop) {
+      height: 550px;
+      @include u-padding-x(4);
+      @include u-padding-y(9);
+    }
+  }
+
+  .jcc-hero-icon-nav__nav {
+    @include at-media(desktop) {
+      margin-top: -220px;
+    }
+  }
+
+  .jcc-hero-icon-nav__block {
+    @include at-media(desktop) {
+      @include u-display(flex);
+      @include u-flex-direction(row);
+      @include u-justify-content(justify-center);
+    }
+  }
+
+  .tile-icon {
+    .jcc-tile {
+      @include at-media(desktop) {
+        @include u-width(card);
+        @include u-height(15);
+        @include u-text-align(center);
+        @include u-margin-x(3);
+        @include u-position(relative);
+        background-color: rgba(255, 255, 255, 0.85);
+        @include u-radius(0);
+
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        &::after {
+          content: "";
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          opacity: 0;
+          -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        &:hover {
+          -webkit-transform: scale(1.25, 1.25);
+          transform: scale(1.25, 1.25);
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+
+      &__icon {
+        img {
+          @include u-height(4);
+        }
+      }
+
+      &__title {
+        @include at-media(desktop) {
+          @include u-font-size(heading, 5);
+        }
+      }
+    }
+  }
+
+  .tile-button {
+    @include at-media(desktop) {
+      .jcc-tile {
+        @include u-height(8);
+        background-color: transparent;
+        @include u-border(0);
+        @include u-margin-y(1);
+
+        &__title {
+          @include u-font-size(body, 5);
+
+          a {
+            @include u-color(base-lightest);
+            @include u-text-decoration(underline);
+
+            &:hover {
+              @include u-color(accent-warm);
+            }
+          }
+        }
+      }
+    }
+  }
+}
