@@ -1,0 +1,56 @@
+.usa-pagination {
+  @include u-text-align("center");
+
+  ol {
+    @include unstyled-list();
+    @include u-padding-left(4);
+  }
+
+  li {
+    @include u-display("inline");
+  }
+
+  a {
+    padding: 3px 10px;
+    @include u-text-decoration("no-underline");
+
+    &.is-active {
+      @include u-bg("primary");
+      border-radius: 100%;
+      @include u-color("white");
+    }
+  }
+
+  .fa-angle-right {
+    margin-left: 3px;
+  }
+}
+
+.jcc-pagination {
+  @include u-padding-y(2);
+
+  .jcc-pagination__ellipsis {
+    @if $trial {
+      @include jcc-text-color(primary-blue-vivid-dark);
+    }
+  }
+
+  a {
+    margin: 0 0.6rem;
+    padding: 0.6rem 0.55rem;
+    @include u-font-weight("bold");
+    @if $trial {
+      @include jcc-text-color(primary-blue-vivid-dark);
+    }
+
+    &.single-digit-spacing {
+      padding: 0.6rem 0.86rem;
+    }
+
+    &.is-active {
+      @if $trial {
+        @include u-bg($jcc-primary-blue-vivid-dark);
+      }
+    }
+  }
+}
