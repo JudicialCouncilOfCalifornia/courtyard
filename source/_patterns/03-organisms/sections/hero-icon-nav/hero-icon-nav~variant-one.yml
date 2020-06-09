@@ -19,3 +19,10 @@ hero_icon_nav:
       - title: 'Case Information'
         url: '#'
         icon: '../../images/graphics/justice.svg'
+    buttons:
+      - title: 'Tentative Rulings'
+        url: '#'
+      - title: 'Calendar'
+        url: '#'
+      - title: 'Attorney Portal'
+        url: '#'

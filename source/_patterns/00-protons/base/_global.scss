@@ -579,7 +579,7 @@ $aspect-width: 16;
   }
 }
 
-@mixin link-hover-line($height: 8px, $color: accent-warm) {
+@mixin link-hover-line($height: 8px, $color: secondary-light) {
   &:after {
     content: "";
     position: absolute;
