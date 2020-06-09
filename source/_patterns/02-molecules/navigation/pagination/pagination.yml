@@ -1,0 +1,31 @@
+pagination:
+  heading_id: "Pagination"
+  current: 2
+  ellipses_previous: true
+  ellipses_next: true
+  first_text: "« First"
+  first:
+    - href: "#"
+      #attributes: ""
+  previous_text: "‹ Previous"
+  previous:
+    - href: "#"
+      #attributes: ""
+  next_text: "Next ›"
+  next:
+    - href: "#"
+      #attributes: ""
+  last_text: "Last »"
+  last:
+    - href: "#"
+  items:
+    - href: "#"
+      #attributes: ""
+    - href: "#"
+      #attributes: ""
+    - href: "#"
+      #attributes: ""
+    - href: "#"
+      #attributes: ""
+    - href: "#"
+      #attributes: ""
