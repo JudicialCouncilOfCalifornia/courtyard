@@ -27,7 +27,7 @@
 }
 
 .jcc-pagination {
-  @include u-padding-y(2);
+  @include u-padding-y(4);
 
   .jcc-pagination__ellipsis {
     @if $trial {
