@@ -1,0 +1,28 @@
+hero_icon_nav:
+  style: 'variant-three'
+  hero_img_banner:
+    background_img: '../../images/alameda.jpg'
+    brow: 'Welcome to the'
+    title: 'Superior Court of Alameda'
+    subtitle: 'What would you like to do?'
+  links:
+    icons:
+      - title: 'Jury Service'
+        url: '#'
+        icon: '../../images/graphics/people.svg'
+      - title: 'Traffic Tickets'
+        url: '#'
+        icon: '../../images/graphics/car.svg'
+      - title: 'E-filing'
+        url: '#'
+        icon: '../../images/graphics/files.svg'
+      - title: 'Case Information'
+        url: '#'
+        icon: '../../images/graphics/justice.svg'
+    buttons:
+      - title: 'Tentative Rulings'
+        url: '#'
+      - title: 'Calendar'
+        url: '#'
+      - title: 'Attorney Portal'
+        url: '#'
