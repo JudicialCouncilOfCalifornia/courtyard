@@ -33,6 +33,9 @@
       @include at-media(tablet) {
         @include u-flex-direction(row);
       }
+      @include at-media-max(tablet) {
+        max-width: 100%;
+      }
 
       > li {
         flex: 1 0 auto;
@@ -51,6 +54,7 @@
             $dash-position: above,
             $dash-width: 45px
           );
+          width: calc(100% - 3rem);
         }
 
         @include at-media(desktop) {
