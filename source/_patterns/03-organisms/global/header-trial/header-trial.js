@@ -42,10 +42,19 @@ $(mobileMenuClass).on("click keydown", function(e) {
   }
 });
 
-// Close menus/functions if click focus is away
-$(document).on("click", function(e) {
-  if (!$(mobileMenuClass).is(":focus") && !$(".slicknav_open").is(":focus")) {
-    resetMenus(true);
+// Close menus/functions if focus is away from menus
+$(document).on("click keydown", function(e) {
+  switch (e.type) {
+    case "click":
+      if (!$(e.target).closest(".mobile_button, #show-search").length) {
+        resetMenus(true);
+      }
+      break;
+    case "keydown":
+      switch (e.keyCode) {
+        case 27: //escape
+          resetMenus(true);
+      }
   }
 });
 
@@ -53,6 +62,6 @@ $(function() {
   $("#js-header-trial_menu--mobile").append($("#js-header_menu--mobile"));
   $(".slicknav_btn").attr(
     "aria-label",
-    "Main navigation menu. Open or close menu by using ENTER key now."
+    "Main navigation menu. Open or close menu by using ENTER key."
   );
 });
