@@ -1,8 +1,9 @@
 require("slicknav/jquery.slicknav");
 
+var mobileMenuID;
 var mobileMenuClass = ".mobile_button";
 
-// toggle mobile menus/functions closed as needed
+// Toggle mobile features closed as needed
 function resetMenus(includeMain) {
   $(".show-button").removeClass("active-menu");
   $(".show-button").hide();
@@ -11,50 +12,65 @@ function resetMenus(includeMain) {
   }
 }
 
-// Event handling for menus/functions
-$(mobileMenuClass).on("click keydown", function(e) {
-  var mobileMenuID = $(this).attr("id");
-  var isMobileMenu = $("#" + mobileMenuID).hasClass("jcc-primary-nav");
-  if (!isMobileMenu) {
-    var toggleMenu = function() {
-      if ($("#show-" + mobileMenuID).hasClass("active-menu")) {
-        resetMenus(true);
-      } else {
-        resetMenus(true);
-        $("#show-" + mobileMenuID)
-          .toggle()
-          .addClass("active-menu");
-      }
-    };
-
-    switch (e.type) {
-      case "click":
-        toggleMenu();
-        break;
-      case "keydown":
-        switch (e.keyCode) {
-          case 13: //enter
-            toggleMenu();
-        }
-    }
+// Mobile search and translate toggling behaviors
+function toggleMenu(selectedMenu) {
+  if ($("#show-" + selectedMenu).hasClass("active-menu")) {
+    resetMenus(true);
   } else {
-    resetMenus(false);
+    resetMenus(true);
+    $("#show-" + selectedMenu)
+      .toggle()
+      .addClass("active-menu");
+  }
+}
+
+// Check selected mobile feature is main menu
+function isMainMenu(selectedMenu) {
+  var mainMenuCheck = $(selectedMenu).hasClass("jcc-primary-nav");
+  return mainMenuCheck;
+}
+
+// Get id attribute of mobile feature
+function getMobileMenuID(selectedMenu) {
+  var menuID = $(selectedMenu).attr("id");
+  return menuID;
+}
+
+// Main event handling for mobile features consistent with slicknav
+$(mobileMenuClass).on({
+  click: function(e) {
+    if (!isMainMenu(this)) {
+      mobileMenuID = getMobileMenuID(this);
+      toggleMenu(mobileMenuID);
+    } else {
+      resetMenus(false);
+    }
+  },
+  keydown: function(e) {
+    if (e.keyCode == 13) {
+      // enter key
+      if (!isMainMenu(this)) {
+        mobileMenuID = getMobileMenuID(this);
+        toggleMenu(mobileMenuID);
+      } else {
+        resetMenus(false);
+      }
+    }
   }
 });
 
 // Close menus/functions if focus is away from menus
-$(document).on("click keydown", function(e) {
-  switch (e.type) {
-    case "click":
-      if (!$(e.target).closest(".mobile_button, #show-search").length) {
-        resetMenus(true);
-      }
-      break;
-    case "keydown":
-      switch (e.keyCode) {
-        case 27: //escape
-          resetMenus(true);
-      }
+$(document).on({
+  click: function(e) {
+    if (!$(e.target).closest(".mobile_button, #show-search").length) {
+      resetMenus(true);
+    }
+  },
+  keydown: function(e) {
+    if (e.keyCode == 27) {
+      // escape key
+      resetMenus(true);
+    }
   }
 });
 
