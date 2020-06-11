@@ -37014,7 +37014,24 @@ h3.jcc-header-group__title {
   width: 100% ;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-img-banner__hero {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__title {
+  padding-left: 2rem ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-img-banner__hero {
   height: 375px;
   padding-left: 2rem ;
   padding-right: 2rem ;
@@ -37022,7 +37039,7 @@ h3.jcc-header-group__title {
   padding-top: 4.5rem ;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__nav .jcc-tile {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__nav .jcc-tile {
   width: 100% ;
   height: 5rem ;
   border-radius: 0 ;
@@ -37030,24 +37047,30 @@ h3.jcc-header-group__title {
   padding-top: 2.5rem ;
   padding-left: 0.5rem ;
   padding-right: 0.5rem ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__nav .jcc-tile__icon {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__nav .jcc-tile__icon {
   display: inline-block ;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__nav .jcc-tile__title {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__nav .jcc-tile__title {
   display: inline-block ;
   padding-left: 0.5rem ;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__nav .jcc-tile__title a {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__nav .jcc-tile__title a {
   color: #0076d6 ;
   font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.37rem;
 }
 
-.jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__block {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex ;
@@ -37065,7 +37088,7 @@ h3.jcc-header-group__title {
       flex-wrap: wrap ;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon {
   background-color: #0b4778 ;
   margin-top: -55px;
   position: relative ;
@@ -37073,13 +37096,13 @@ h3.jcc-header-group__title {
   box-shadow: 0 -6px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile {
   background-color: #0b4778 ;
   padding-bottom: 0.5rem ;
   padding-top: 0.5rem ;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile:after {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -37096,12 +37119,12 @@ h3.jcc-header-group__title {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile:hover:after {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile:hover:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile__icon {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile__icon {
   background-color: #eff6fb ;
   border-radius: 99rem ;
   padding-left: 0.75rem ;
@@ -37110,32 +37133,31 @@ h3.jcc-header-group__title {
   padding-top: 0.5rem ;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile__icon img {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile__icon img {
   height: 2rem ;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile__title a {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile__title a {
   color: #eff6fb ;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-button {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button {
   background-color: #f3f3f3 ;
   position: relative ;
   -webkit-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
 }
 
-.jcc-hero-icon-nav.variant-one .tile-button .jcc-tile {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button .jcc-tile {
   background-color: #f3f3f3 ;
   padding-bottom: 1rem ;
   padding-top: 1rem ;
   height: 3.5rem ;
   -webkit-box-shadow: none ;
           box-shadow: none ;
-  width: 15%;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-button .jcc-tile:after {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button .jcc-tile:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -37152,17 +37174,45 @@ h3.jcc-header-group__title {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.jcc-hero-icon-nav.variant-one .tile-button .jcc-tile:hover:after {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button .jcc-tile:hover:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.jcc-hero-icon-nav.variant-one .tile-button .jcc-tile__title a {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button .jcc-tile__title a {
   font-size: 0.99rem;
 }
 
-.jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile__icon img {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__title {
+  padding-left: 2rem ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile__icon img {
   height: 2rem ;
+}
+
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile__title {
+  padding-left: 2rem ;
 }
 
 .jcc-hero-icon-nav.jcc-hero-icon-nav-style--default {
@@ -70390,43 +70440,16 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
             flex: 0 0 auto ;
     width: 33.33333% ;
   }
-  .jcc-hero-icon-nav.variant-one .jcc-hero-icon-nav__nav .jcc-tile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex ;
-    -webkit-box-align: center ;
-        -ms-flex-align: center ;
-            align-items: center ;
-    -webkit-box-pack: center ;
-        -ms-flex-pack: center ;
-            justify-content: center ;
-    border-width: 0;
-    border-style: solid;
-    width: 20%;
-  }
-  .jcc-hero-icon-nav.variant-one .tile-icon .jcc-tile {
-    padding-bottom: 3rem ;
-    padding-top: 3rem ;
-  }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-img-banner__hero {
-    height: 420px;
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .jcc-hero-img-banner__hero {
+    height: 500px;
     padding-bottom: 4.5rem ;
     padding-top: 4.5rem ;
     text-align: center ;
   }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-img-banner__hero-brow {
-    display: none ;
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .jcc-hero-icon-nav__nav {
+    margin-top: -165px;
   }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-img-banner__hero-divider {
-    display: none ;
-  }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-img-banner__hero-subtitle {
-    display: none ;
-  }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-icon-nav__nav {
-    margin-top: -200px;
-  }
-  .jcc-hero-icon-nav.variant-three .jcc-hero-icon-nav__block {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .jcc-hero-icon-nav__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -70438,7 +70461,137 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
         -ms-flex-pack: center ;
             justify-content: center ;
   }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile {
+    -webkit-box-pack: center ;
+        -ms-flex-pack: center ;
+            justify-content: center ;
+    width: 17%;
+    height: 5rem ;
+    text-align: center ;
+    margin-left: 0 ;
+    margin-right: 0 ;
+    position: relative ;
+    padding: 0.5rem ;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-width: 0;
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-radius: 0 ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile:last-of-type {
+    border-bottom-right-radius: 99rem ;
+    border-top-right-radius: 99rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile:first-of-type {
+    border-bottom-left-radius: 99rem ;
+    border-top-left-radius: 99rem ;
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__icon {
+    background-color: #f9f9f9 ;
+    border-radius: 99rem ;
+    width: 2.5rem ;
+    height: 2.5rem ;
+    padding: 0.5rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__icon img {
+    height: 1.5rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__title {
+    padding-left: 1rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__title a {
+    color: #1b1b1b ;
+    font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-size: 1.38rem;
+    text-decoration: underline ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-icon .jcc-tile__title a:hover {
+    color: #f9f9f9 ;
+    text-decoration: none ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-button {
+    margin-top: 0.25rem ;
+    margin-bottom: 3rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-button .jcc-tile {
+    height: 2rem ;
+    background-color: transparent;
+    border-width: 0;
+    border-style: solid;
+    margin-top: 1rem ;
+    padding-bottom: 0.25rem ;
+    padding-top: 0.25rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-button .jcc-tile__title {
+    font-size: 0.99rem;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-button .jcc-tile__title a {
+    color: #f9f9f9 ;
+    text-decoration: underline ;
+    font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-size: 1rem;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-four .tile-button .jcc-tile__title a:hover {
+    color: #ffbe2e ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .jcc-hero-icon-nav__nav .jcc-tile {
+    -webkit-box-pack: center ;
+        -ms-flex-pack: center ;
+            justify-content: center ;
+    border-width: 0;
+    border-style: solid;
+    width: 20%;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-icon .jcc-tile {
+    padding-bottom: 3rem ;
+    padding-top: 3rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one .tile-button .jcc-tile {
+    width: 15%;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .jcc-hero-img-banner__hero {
+    height: 420px;
+    padding-bottom: 4.5rem ;
+    padding-top: 4.5rem ;
+    text-align: center ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .jcc-hero-img-banner__hero-divider {
+    display: none ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .jcc-hero-img-banner__hero-subtitle {
+    display: none ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .jcc-hero-icon-nav__nav {
+    margin-top: -200px;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .jcc-hero-icon-nav__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row ;
+            flex-direction: row ;
+    -webkit-box-pack: center ;
+        -ms-flex-pack: center ;
+            justify-content: center ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile {
+    display: block ;
     width: 10rem ;
     height: 7.5rem ;
     text-align: center ;
@@ -70453,7 +70606,7 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     -webkit-transition: 0.6s all ease;
     transition: 0.6s all ease;
   }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile::before {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile::before {
     background-color: #f9f9f9 ;
     content: "";
     position: absolute;
@@ -70465,12 +70618,14 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     width: 0%;
+    height: 0%;
+    border-radius: 0.5rem ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile:hover::before {
+    width: 100%;
     height: 100%;
   }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile:hover::before {
-    width: 100%;
-  }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile__icon {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__icon {
     background-color: #f9f9f9 ;
     border-radius: 99rem ;
     width: 3.5rem ;
@@ -70480,16 +70635,27 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     margin-right: auto ;
     margin-bottom: 0.5rem ;
   }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile__icon img {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__icon img {
     height: 2rem ;
   }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile__title a:hover {
-    color: #1b1b1b ;
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__title {
+    padding-left: 0 ;
+    font-size: 0.99rem;
   }
-  .jcc-hero-icon-nav.variant-three .tile-button {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__title a {
+    color: #f9f9f9 ;
+    font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-size: 1.06rem;
+    text-decoration: underline ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-icon .jcc-tile__title a:hover {
+    color: #1b1b1b ;
+    text-decoration: none ;
+  }
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-button {
     margin-top: 0.25rem ;
   }
-  .jcc-hero-icon-nav.variant-three .tile-button .jcc-tile {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-button .jcc-tile {
     height: 4rem ;
     background-color: transparent;
     border-width: 0;
@@ -70498,29 +70664,29 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     margin-top: 0.5rem ;
     padding-top: 0.25rem ;
   }
-  .jcc-hero-icon-nav.variant-three .tile-button .jcc-tile__title {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-button .jcc-tile__title {
     font-size: 0.99rem;
   }
-  .jcc-hero-icon-nav.variant-three .tile-button .jcc-tile__title a {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-button .jcc-tile__title a {
     color: #f9f9f9 ;
     text-decoration: underline ;
     font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: 1rem;
   }
-  .jcc-hero-icon-nav.variant-three .tile-button .jcc-tile__title a:hover {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-three .tile-button .jcc-tile__title a:hover {
     color: #ffbe2e ;
   }
-  .jcc-hero-icon-nav.variant-two .jcc-hero-img-banner__hero {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .jcc-hero-img-banner__hero {
     height: 550px;
     padding-left: 2rem ;
     padding-right: 2rem ;
     padding-bottom: 4.5rem ;
     padding-top: 4.5rem ;
   }
-  .jcc-hero-icon-nav.variant-two .jcc-hero-icon-nav__nav {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .jcc-hero-icon-nav__nav {
     margin-top: -220px;
   }
-  .jcc-hero-icon-nav.variant-two .jcc-hero-icon-nav__block {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .jcc-hero-icon-nav__block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex ;
@@ -70532,7 +70698,8 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
         -ms-flex-pack: center ;
             justify-content: center ;
   }
-  .jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile {
+    display: block ;
     width: 10rem ;
     height: 7.5rem ;
     text-align: center ;
@@ -70546,7 +70713,7 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
-  .jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile::after {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile::after {
     content: "";
     border-radius: 5px;
     position: absolute;
@@ -70561,17 +70728,18 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
-  .jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile:hover {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile:hover {
     -webkit-transform: scale(1.25, 1.25);
     transform: scale(1.25, 1.25);
   }
-  .jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile:hover::after {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile:hover::after {
     opacity: 1;
   }
-  .jcc-hero-icon-nav.variant-two .tile-icon .jcc-tile__title {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-icon .jcc-tile__title {
+    padding-left: 0 ;
     font-size: 0.99rem;
   }
-  .jcc-hero-icon-nav.variant-two .tile-button .jcc-tile {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-button .jcc-tile {
     height: 4rem ;
     background-color: transparent;
     border-width: 0;
@@ -70579,14 +70747,14 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     margin-bottom: 0.5rem ;
     margin-top: 0.5rem ;
   }
-  .jcc-hero-icon-nav.variant-two .tile-button .jcc-tile__title {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-button .jcc-tile__title {
     font-size: 0.99rem;
   }
-  .jcc-hero-icon-nav.variant-two .tile-button .jcc-tile__title a {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-button .jcc-tile__title a {
     color: #f9f9f9 ;
     text-decoration: underline ;
   }
-  .jcc-hero-icon-nav.variant-two .tile-button .jcc-tile__title a:hover {
+  .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two .tile-button .jcc-tile__title a:hover {
     color: #ffbe2e ;
   }
   .jcc-hero-icon-nav.jcc-hero-icon-nav-style--default .jcc-hero-icon-nav__nav {
@@ -71335,15 +71503,6 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   .jcc-explainers-section--has-three-columns .jcc-explainers > * {
     padding-left: 1rem ;
     padding-right: 1rem ;
-  }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile__title {
-    font-size: 0.99rem;
-  }
-  .jcc-hero-icon-nav.variant-three .tile-icon .jcc-tile__title a {
-    color: #f9f9f9 ;
-    font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    font-size: 1.06rem;
-    text-decoration: underline ;
   }
   .jcc-options {
     margin-left: -1rem ;

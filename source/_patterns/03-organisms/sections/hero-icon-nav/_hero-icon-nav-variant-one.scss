@@ -1,4 +1,4 @@
-.jcc-hero-icon-nav.variant-one {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-one {
   .jcc-hero-img-banner__hero {
     height: 375px;
     @include u-padding-x(4);
@@ -12,10 +12,10 @@
       @include u-radius(0);
       @include u-padding-y(5);
       @include u-padding-x(1);
+      @include u-display(flex);
+      @include u-align-items(align-center);
 
       @include at-media(desktop) {
-        @include u-display(flex);
-        @include u-align-items(align-center);
         @include u-justify-content(justify-center);
         @include u-border(0);
         width: 20%;
@@ -91,7 +91,10 @@
       @include u-height(7);
       @include u-shadow(none);
       @include link-hover-line($height: 3px);
-      width: 15%;
+
+      @include at-media(desktop) {
+        width: 15%;
+      }
 
       &__title a {
         @include u-font-size(body, 5);

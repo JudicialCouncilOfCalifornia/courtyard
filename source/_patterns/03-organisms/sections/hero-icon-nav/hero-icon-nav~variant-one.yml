@@ -1,5 +1,5 @@
 hero_icon_nav:
-  style: 'variant-one'
+  style: 'jcc-hero-icon-nav-style--variant-one'
   hero_img_banner:
     background_img: '../../images/alameda.jpg'
     brow: 'Welcome to the'
