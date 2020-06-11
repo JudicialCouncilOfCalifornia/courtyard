@@ -34,6 +34,12 @@
 nav.jcc-primary-nav {
   text-align: left;
   @include u-bg("base-lightest");
+
+  @include at-media(desktop) {
+    .usa-nav__primary.usa-accordion {
+      @include u-margin-top(0);
+    }
+  }
 }
 
 .jcc-primary-nav__container {
