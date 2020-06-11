@@ -36,7 +36,7 @@
         @include u-position(relative);
         @include u-padding(1);
         @include u-padding-x(2);
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.7);
         transition: all 0.5s ease-in-out;
 
         @include u-border(0);
@@ -52,7 +52,7 @@
         }
 
         &:hover {
-          background-color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.2);
         }
       }
 
@@ -81,7 +81,7 @@
 
         a {
           @include at-media(desktop) {
-            @include u-color(base-lightest);
+            @include u-color(ink);
             @include u-font-family(code);
             @include u-font-size(code, lg);
             @include u-text-decoration(underline);
@@ -89,7 +89,7 @@
 
           &:hover {
             @include at-media(desktop) {
-              @include u-color(ink);
+              @include u-color(base-lightest);
               @include u-text-decoration(no-underline);
             }
           }
@@ -101,6 +101,7 @@
   .tile-button {
     @include at-media(desktop) {
       @include u-margin-top("05");
+      @include u-margin-bottom(6);
     }
 
     .jcc-tile {
