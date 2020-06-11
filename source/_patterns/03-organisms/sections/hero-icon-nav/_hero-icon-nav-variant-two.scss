@@ -1,4 +1,4 @@
-.jcc-hero-icon-nav.variant-two {
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-two {
   .jcc-hero-img-banner__hero {
     @include at-media(desktop) {
       height: 550px;
@@ -23,7 +23,11 @@
 
   .tile-icon {
     .jcc-tile {
+      @include u-display(flex);
+      @include u-flex-direction(row);
+
       @include at-media(desktop) {
+        @include u-display(block);
         @include u-width(card);
         @include u-height(15);
         @include u-text-align(center);
@@ -68,7 +72,10 @@
       }
 
       &__title {
+        @include u-padding-left(4);
+
         @include at-media(desktop) {
+          @include u-padding-left(0);
           @include u-font-size(heading, 5);
         }
       }

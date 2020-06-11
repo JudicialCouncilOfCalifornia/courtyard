@@ -1,6 +1,6 @@
 homepage:
   hero_icon_nav:
-    style: variant-two
+    style: 'jcc-hero-icon-nav-style--variant-two'
     hero_img_banner:
       background_img: '../../images/alameda.jpg'
       brow: 'Welcome to the'

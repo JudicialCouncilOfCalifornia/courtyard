@@ -613,9 +613,11 @@ $aspect-width: 16;
     z-index: -1;
     transition: all 0.3s ease;
     width: 0%;
-    height: 100%;
+    height: 0%;
+    @include u-radius(lg);
   }
   &:hover::before {
     width: 100%;
+    height: 100%;
   }
 }
