@@ -1,0 +1,10 @@
+hero:
+  brow: ""
+  title: ""
+  lead: ""
+  body: ""
+  title_variant: "sr-only"
+headergroup:
+  brow: "Test"
+  title: "What can we help you with today?"
+  lead: "<p>An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"

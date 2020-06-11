@@ -102,6 +102,10 @@
   @include u-margin-y(3);
 }
 
+.jcc-hero__title--sr-only {
+  @include sr-only();
+}
+
 .jcc-hero__brow + .jcc-hero__title {
   @include u-margin-top(0);
 }
