@@ -1,3 +1,4 @@
-label: First
-name: Test
-bordered: true
+checkbox:
+  label: First
+  name: Test
+  style: 'bordered'
