@@ -36,3 +36,16 @@
     outline-offset: 0;
   }
 }
+
+.jcc-checkbox--big {
+  .usa-checkbox__label {
+    @include u-padding-y(2.5);
+    @include u-padding-left(7);
+    @include u-padding-right(4);
+    @include u-font-size("sans", 8);
+
+    &::before {
+      @include u-margin-right(3);
+    }
+  }
+}

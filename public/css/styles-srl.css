@@ -27939,6 +27939,18 @@ through all possible variants
   outline-offset: 0;
 }
 
+.jcc-checkbox--big .usa-checkbox__label {
+  padding-bottom: 1.25rem ;
+  padding-top: 1.25rem ;
+  padding-left: 3.5rem ;
+  padding-right: 2rem ;
+  font-size: 1.24rem;
+}
+
+.jcc-checkbox--big .usa-checkbox__label::before {
+  margin-right: 1.5rem ;
+}
+
 .jcc-dropbutton .usa-accordion__button {
   color: #005ea2 ;
 }
