@@ -476,7 +476,8 @@ $aspect-width: 16;
 @mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below", $dash-width: null) {
   position: relative;
 
-  &:after {
+  &:after,
+  &:before {
     @include u-bg($dash-color);
     content: "";
     height: 3px;
