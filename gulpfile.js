@@ -1,5 +1,5 @@
 // Based on https://github.com/SFDigitalServices/sfgov-pattern-lab/blob/master/gulpfile.babel.js
-const devBuild = process.title == "gulp";
+
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const config = require("./config.json");
@@ -7,6 +7,7 @@ const config = require("./config.json");
 // Include plugins.
 const autoprefix = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
+const cleanCSS = require("gulp-clean-css");
 const concat = require("gulp-concat");
 const glob = require("gulp-sass-glob");
 const mqpacker = require("css-mqpacker");
@@ -22,7 +23,6 @@ const webpack = require("webpack-stream");
 const compiler = require("webpack");
 const uglify = require("gulp-uglify");
 const { exec } = require("child_process");
-const csso = require("gulp-csso");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -73,8 +73,7 @@ const srlCss = () => {
     // Pack media queries
     mqpacker({ sort: true })
   ];
-
-  let css = gulp
+  return gulp
     .src(config.css.srl)
     .pipe(glob())
     .pipe(
@@ -108,13 +107,8 @@ const srlCss = () => {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename("styles-srl.min.css"));
-
-  if (!devBuild) {
-    css.pipe(csso());
-  }
-
-  return css
+    .pipe(rename("styles-srl.min.css"))
+    .pipe(cleanCSS({ compatibility: "ie9" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
@@ -125,8 +119,7 @@ const trialCss = () => {
     // Pack media queries
     mqpacker({ sort: true })
   ];
-
-  let css = gulp
+  return gulp
     .src(config.css.trial)
     .pipe(glob())
     .pipe(
@@ -160,13 +153,8 @@ const trialCss = () => {
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename("styles-trial.min.css"));
-
-  if (!devBuild) {
-    css.pipe(csso());
-  }
-
-  return css
+    .pipe(rename("styles-trial.min.css"))
+    .pipe(cleanCSS({ compatibility: "ie9" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
@@ -179,7 +167,7 @@ const trialCss = () => {
 // needs to be edited to watch for more folders.
 
 const plJs = () => {
-  let js = gulp
+  return gulp
     .src(jsSrc)
     .pipe(
       webpack(
@@ -206,13 +194,9 @@ const plJs = () => {
       })
     )
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(gulp.dest(config.js.dest));
-
-  if (!devBuild) {
-    js.pipe(uglify()).pipe(sourcemaps.write("./"));
-  }
-
-  return js
+    .pipe(gulp.dest(config.js.dest))
+    .pipe(uglify())
+    .pipe(sourcemaps.write("./"))
     .pipe(rename("scripts.min.js"))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.js.dest))
