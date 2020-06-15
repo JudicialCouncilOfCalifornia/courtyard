@@ -1,4 +1,11 @@
-<div class="usa-radio{% if bordered %} jcc-radio--bordered{% endif %}">
-  <input class="usa-radio__input" id="{{ id }}" type="radio" checked name="{{ name }}" value="{{ id }}">
-  <label class="usa-radio__label" for="{{ id }}">{{ label }}</label>
+{% set attributes = radio.attributes ? radio.attributes : create_attribute() %}
+
+{% set classes = [
+  'usa-radio',
+  'jcc-radio--' ~ radio.style|default(''),
+]|merge(radio.classes|default([''])) %}
+
+<div {{attributes.addClass(classes) }}>
+  <input class="usa-radio__input" id="{{ radio.id }}" type="radio" checked name="{{ radio.name }}" value="{{ radio.id }}">
+  <label class="usa-radio__label" for="{{ radio.id }}">{{ radio.label }}</label>
 </div>

@@ -1,8 +1,4 @@
 {% include '@organisms/global/header/header.twig' %}
 {% include '@molecules/blocks/hero/hero.twig' with { hero: hero } %}
-<div class="text-center padding-y-6">
-  {% include '@molecules/text/header-group/header-group.twig' with {
-    headergroup: headergroup
-  } %}
-</div>
+{% include '@organisms/sections/wayfinder-section/wayfinder-section.twig' %}
 {% include '@organisms/global/footer/footer.twig' %}

@@ -5,10 +5,12 @@
     <div class="jcc-form-group__options">
     {% for checkbox in checkbox_group %}
       {% include '@atoms/forms/checkbox.twig' with {
-        label: checkbox.label,
-        id: checkbox.id,
-        name: checkbox.name,
-        style: checkbox.style
+        checkbox: {
+          label: checkbox.label,
+          id: checkbox.id,
+          name: checkbox.name,
+          style: checkbox.style
+        }
       } %}
     {% endfor %}
     </div>

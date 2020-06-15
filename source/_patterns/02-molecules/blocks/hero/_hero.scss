@@ -11,6 +11,12 @@
   @include u-minh("viewport");
 }
 
+.jcc-hero--minimum-height {
+  .jcc-hero__content {
+    @include u-padding-bottom(2);
+  }
+}
+
 .jcc-hero--has-background-image {
   @include u-text("white");
 

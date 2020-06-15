@@ -474,63 +474,51 @@ $aspect-width: 16;
 // Adds decorative dash to headers with positions:
 // below, above, left-right, left, right
 @mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below", $dash-width: null) {
+  position: relative;
+
+  &:after {
+    @include u-bg($dash-color);
+    content: "";
+    height: 3px;
+  }
+
   @if $dash-position == "below" {
-    position: relative;
     padding-bottom: 0.5em;
 
     &:after {
       $dash-width: 3rem !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
-      height: 3px;
       position: absolute;
       bottom: 0;
       left: 0;
     }
   } @else if $dash-position == "below-center" {
-    position: relative;
-    padding-top: 0.8em;
+    padding-bottom: 0.5em;
 
     &:after {
       $dash-width: 100% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
-      height: 3px;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 50%;
       transform: translate(-50%, -50%);
     }
   } @else if $dash-position == "above" {
-    position: relative;
     padding-top: 0.8em;
 
     &:after {
       $dash-width: 100% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
-      height: 3px;
       position: absolute;
       top: 0;
       left: 0;
     }
   } @else if $dash-position == "above-center" {
-    position: relative;
     padding-top: 0.8em;
 
     &:after {
       $dash-width: 100% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
-      height: 3px;
       position: absolute;
       top: 0;
       left: 50%;
@@ -542,11 +530,7 @@ $aspect-width: 16;
     &:after {
       $dash-width: 50% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
       display: inline-block;
-      height: 3px;
       position: relative;
       vertical-align: middle;
     }
@@ -563,15 +547,9 @@ $aspect-width: 16;
     &:before {
       $dash-width: 100% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
       display: inline-block;
-      height: 3px;
       position: relative;
       vertical-align: middle;
-    }
-    &:before {
       left: -0.5em;
       margin-left: -50%;
     }
@@ -580,15 +558,9 @@ $aspect-width: 16;
     &:after {
       $dash-width: 100% !default;
       width: $dash-width;
-
-      @include u-bg($dash-color);
-      content: "";
       display: inline-block;
-      height: 3px;
       position: relative;
       vertical-align: middle;
-    }
-    &:after {
       left: 0.5em;
       margin-right: -50%;
     }
