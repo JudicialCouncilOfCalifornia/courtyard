@@ -11,9 +11,9 @@ public/*
 # In the public directory, track just the compiled asset files
 # because those are being consumed by an external party that does
 # not currently build the pattern library
-!public/css
+!public/css/styles-srl.min.css
 !public/fonts
-!public/js
+!public/js/scripts.min.js
 !public/img
 !public/images
 
