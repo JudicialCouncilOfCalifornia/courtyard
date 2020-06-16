@@ -4,7 +4,7 @@
     @include u-padding-y(1.5);
     @include u-padding-left(6);
     @include u-padding-right(3);
-    border-radius: 25px;
+    border-radius: 2rem;
   }
 
   .usa-radio__input:focus + .usa-radio__label::before {
@@ -44,12 +44,7 @@
 
 .jcc-radio--big {
   .usa-radio__label {
-    @include u-padding-y(2.5);
-    @include u-padding-left(10);
-    @include u-padding-right(4);
     @include u-font-size("sans", 8);
-    text-indent: -3.5rem;
-    border-radius: 35px;
 
     &::before {
       @include u-height(4);
@@ -61,12 +56,23 @@
 
   .usa-radio__label:checked + .usa-radio__label {
   }
+
+  &.jcc-radio--bordered {
+    .usa-radio__label {
+      @include u-border(2px);
+      @include u-padding-y(1.5);
+      @include u-padding-left(6);
+      @include u-padding-right(3);
+      text-indent: -3.5rem;
+      border-radius: 3rem;
+    }
+  }
 }
 
 .jcc-radio--button {
   .usa-radio__label {
     @include u-padding-y(2.5);
-    @include u-padding-x(4);
+    @include u-padding-x(3);
     text-indent: 0;
     text-align: center;
 

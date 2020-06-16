@@ -25,3 +25,16 @@ wayfinder_section:
         </div>
         </fieldset>
       </form>'
+button_pager:
+  previous:
+    text: 'Previous'
+    url: '#'
+    style: ''
+  next:
+    text: ''
+    url: ''
+    style: ''
+  reset:
+    text: "Start Over"
+    url: "#"
+    style: 'unstyled'

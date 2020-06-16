@@ -1,0 +1,10 @@
+legend: Select one
+button_group:
+  - text: One
+    style: primary
+  - text: Two
+    style: primary
+  - text: Three
+    style: primary
+align_variant: inline
+sr_only: true
