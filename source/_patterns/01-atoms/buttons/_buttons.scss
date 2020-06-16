@@ -7,6 +7,12 @@
   }
 }
 
+a.usa-button {
+  &:focus {
+    @include u-text("white");
+  }
+}
+
 .usa-button--big {
   @include u-padding-y(2.5);
   @include u-padding-x(4);

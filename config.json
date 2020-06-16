@@ -10,6 +10,12 @@
       "source/_patterns/*.scss",
       "source/_patterns/**/*.scss",
       "source/css/styles-trial.scss"
+    ],
+    "srlTrial": [
+      "source/_patterns/*.scss",
+      "source/_patterns/**/*.scss",
+      "source/css/styles-srl.scss",
+      "source/css/styles-trial.scss"
     ]
   },
   "fonts": {

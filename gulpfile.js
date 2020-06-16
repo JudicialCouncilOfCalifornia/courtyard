@@ -1,5 +1,6 @@
 // Based on https://github.com/SFDigitalServices/sfgov-pattern-lab/blob/master/gulpfile.babel.js
 
+const devBuild = process.title == "gulp";
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const config = require("./config.json");
@@ -7,7 +8,6 @@ const config = require("./config.json");
 // Include plugins.
 const autoprefix = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
-const cleanCSS = require("gulp-clean-css");
 const concat = require("gulp-concat");
 const glob = require("gulp-sass-glob");
 const mqpacker = require("css-mqpacker");
@@ -23,6 +23,8 @@ const webpack = require("webpack-stream");
 const compiler = require("webpack");
 const uglify = require("gulp-uglify");
 const { exec } = require("child_process");
+const csso = require("gulp-csso");
+const stripCssComments = require("gulp-strip-css-comments");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -68,13 +70,14 @@ const copyIconSprite = () => {
   return gulp.src(config.icons.sprite_src).pipe(gulp.dest(config.icons.sprite_dest));
 };
 
-const srlCss = () => {
+const buildCss = (paths, minFileName) => {
   const plugins = [
     // Pack media queries
     mqpacker({ sort: true })
   ];
-  return gulp
-    .src(config.css.srl)
+
+  let css = gulp
+    .src(paths)
     .pipe(glob())
     .pipe(
       plumber({
@@ -105,59 +108,31 @@ const srlCss = () => {
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
     .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
     .pipe(postcss(plugins))
+    .pipe(stripCssComments())
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename("styles-srl.min.css"))
-    .pipe(cleanCSS({ compatibility: "ie9" }))
+    .pipe(rename(`${minFileName}.min.css`));
+
+  if (!devBuild) {
+    css.pipe(csso());
+  }
+
+  return css
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
 };
 
+const srlCss = () => {
+  return buildCss(config.css.srl, "styles-srl");
+};
+
 const trialCss = () => {
-  const plugins = [
-    // Pack media queries
-    mqpacker({ sort: true })
-  ];
-  return gulp
-    .src(config.css.trial)
-    .pipe(glob())
-    .pipe(
-      plumber({
-        errorHandler: function(error) {
-          notify.onError({
-            title: "Gulp",
-            subtitle: "Failure!",
-            message: "Error: <%= error.message %>",
-            sound: "Beep"
-          })(error);
-          this.emit("end");
-        }
-      })
-    )
-    .pipe(sourcemaps.init({ largeFile: true }))
-    .pipe(
-      sass({
-        outputStyle: "expanded",
-        errLogToConsole: true,
-        includePaths: [
-          config.css.project_scss // pulling all the sass and converts to css
-          // "${uswds}/scss",
-          // "${uswds}/scss/packages",
-        ]
-        // importer: importOnce
-      })
-    )
-    .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
-    .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
-    .pipe(postcss(plugins))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename("styles-trial.min.css"))
-    .pipe(cleanCSS({ compatibility: "ie9" }))
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder)) //
-    .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
+  return buildCss(config.css.trial, "styles-trial");
+};
+
+const allCss = () => {
+  return buildCss(config.css.srlTrial, "styles-all");
 };
 
 // Component JS.
@@ -204,10 +179,9 @@ const plJs = () => {
 };
 
 const watch = cb => {
-  gulp.watch(config.css.src, srlCss);
-  gulp.watch(config.css.trial, trialCss);
+  gulp.watch(config.css.srlTrial, allCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, buildPattern);
+  gulp.watch(config.pattern_lab.src, dev);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
@@ -232,7 +206,8 @@ const serve = cb => {
       ready: (err, bs) => {
         cb();
       }
-    }
+    },
+    reloadDebounce: 200
   });
 };
 
@@ -245,7 +220,6 @@ const build = gulp.series(
   trialCss,
   plJs
 );
-const buildPattern = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plJs);
 const srlbuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, srlCss, plJs);
 const trialbuild = gulp.series(
   plPhp,
@@ -256,7 +230,8 @@ const trialbuild = gulp.series(
   plJs
 );
 
+const dev = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, allCss, plJs);
 exports.build = build;
 exports.trial = gulp.series(trialbuild, serve, trialwatch);
 exports.srl = gulp.series(srlbuild, serve, srlwatch);
-exports.default = gulp.series(build, serve, watch);
+exports.default = gulp.series(dev, serve, watch);

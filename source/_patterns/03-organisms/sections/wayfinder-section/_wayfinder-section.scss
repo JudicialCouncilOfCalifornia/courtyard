@@ -23,6 +23,7 @@
 .jcc-wayfinder-section__container {
   @include u-maxw(tablet-lg);
   @include u-margin-x(auto);
+  @include u-padding-x(3);
 }
 
 .jcc-wayfinder-section__content {
