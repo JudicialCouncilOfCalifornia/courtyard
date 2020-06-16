@@ -24,7 +24,7 @@ const compiler = require("webpack");
 const uglify = require("gulp-uglify");
 const { exec } = require("child_process");
 const csso = require("gulp-csso");
-const stripCssComments = require("gulp-strip-css-comments");
+const strip = require("gulp-strip-comments");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -108,7 +108,7 @@ const buildCss = (paths, minFileName) => {
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
     .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
     .pipe(postcss(plugins))
-    .pipe(stripCssComments())
+    .pipe(strip.text())
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
     .pipe(rename(`${minFileName}.min.css`));
@@ -170,6 +170,7 @@ const plJs = () => {
     )
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(gulp.dest(config.js.dest))
+    .pipe(strip())
     .pipe(uglify())
     .pipe(sourcemaps.write("./"))
     .pipe(rename("scripts.min.js"))
