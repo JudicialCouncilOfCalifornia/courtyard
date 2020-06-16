@@ -10972,12 +10972,10 @@ a.usa-button:focus {
 }
 
 .jcc-radio--big.jcc-radio--bordered .usa-radio__label {
-  border-width: 2px;
-  border-style: solid;
-  padding-bottom: 0.75rem ;
-  padding-top: 0.75rem ;
-  padding-left: 3rem ;
-  padding-right: 1.5rem ;
+  padding-bottom: 1.25rem ;
+  padding-top: 1.25rem ;
+  padding-left: 5rem ;
+  padding-right: 2rem ;
   text-indent: -3.5rem;
   border-radius: 3rem;
 }
