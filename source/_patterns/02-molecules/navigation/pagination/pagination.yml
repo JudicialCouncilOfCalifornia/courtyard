@@ -1,5 +1,6 @@
 pagination:
   heading_id: "Pagination"
+  total_pages: 10
   current: 2
   ellipses_previous: true
   ellipses_next: true
