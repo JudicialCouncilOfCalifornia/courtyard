@@ -1,4 +1,4 @@
-{% set total_pages = pagination.items|length %}
+{% set total_pages = pagination.total_pages %}
 
 <nav class="usa-pagination jcc-pagination" role="navigation" aria-labelledby="{{ pagination.heading_id }}">
   <h4 id="{{ pagination.heading_id }}" class="usa-sr-only">{{ 'Pagination'|t }} ({{ total_pages }} pages of results found)</h4>
@@ -28,7 +28,7 @@
       <li class="jcc-pagination__ellipsis" role="presentation">&hellip;</li>
     {% endif %}
 
-    {# Now generate the actual pager piece. #}
+    {# Generate the scalable pager piece. #}
     {% for key, item in pagination.items %}
       <li class="jcc-pagination__full">
         {% if pagination.current == key %}
@@ -45,11 +45,11 @@
       </li>
     {% endfor %}
 
-    {# Now generate the actual pager piece. #}
+    {# Generate the mobile variant pager piece. #}
     {% for key, item in pagination.items %}
       <li class="jcc-pagination__mobile">
         {% if pagination.current == key %}
-          {{ key }} of {{ total_pages }}
+          {{ pagination.current }} of {{ total_pages }}
         {% endif %}
       </li>
     {% endfor %}
