@@ -59,7 +59,12 @@
 
   a {
     margin: 0 0.6rem;
-    padding: 0.45rem 0.35rem;
+    @include at-media(mobile) {
+      padding: 0.45rem 0rem;
+    }
+    @include at-media(tablet-lg) {
+      padding: 0.45rem 0.35rem;
+    }
     @include u-font-weight("bold");
     @if $trial {
       @include jcc-text-color(primary-blue-vivid-dark);
@@ -73,10 +78,6 @@
 
     &.single-digit-spacing {
       padding: 0.45rem 0.66rem;
-    }
-
-    @include at-media(mobile) {
-      padding: 0.45rem 0rem;
     }
   }
 }
