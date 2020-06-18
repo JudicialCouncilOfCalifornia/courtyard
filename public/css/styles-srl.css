@@ -13655,14 +13655,27 @@ a:visited {
   padding-top: 2rem ;
 }
 
+.jcc-pagination .jcc-pagination__full,
+.jcc-pagination .jcc-pagination__ellipsis,
+.jcc-pagination .jcc-pagination__total-pages {
+  display: none ;
+}
+
+.jcc-pagination .jcc-pagination__mobile {
+  display: inline-block ;
+}
+
+.jcc-pagination ol {
+  padding-left: 0 ;
+}
+
 .jcc-pagination a {
   margin: 0 0.6rem;
-  padding: 0.6rem 0.55rem;
   font-weight: bold ;
 }
 
 .jcc-pagination a.single-digit-spacing {
-  padding: 0.6rem 0.86rem;
+  padding: 0.45rem 0.66rem;
 }
 
 .slicknav_btn {
@@ -18200,6 +18213,12 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 
 .jcc-service__tabs {
   display: none;
+}
+
+@media all and (min-width: 20em) {
+  .jcc-pagination a {
+    padding: 0.45rem 0rem;
+  }
 }
 
 @media all and (min-width: 30em) {
@@ -24043,6 +24062,17 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
 }
 
 @media all and (min-width: 55em) {
+  .jcc-pagination .jcc-pagination__full,
+  .jcc-pagination .jcc-pagination__ellipsis,
+  .jcc-pagination .jcc-pagination__total-pages {
+    display: inline-block ;
+  }
+  .jcc-pagination .jcc-pagination__mobile {
+    display: none ;
+  }
+  .jcc-pagination a {
+    padding: 0.45rem 0.35rem;
+  }
   .jcc-timeline-dual__title-bar-title {
     font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.37rem;
