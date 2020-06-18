@@ -29,28 +29,55 @@
 .jcc-pagination {
   @include u-padding-y(4);
 
+  .jcc-pagination__full,
+  .jcc-pagination__ellipsis,
+  .jcc-pagination__total-pages {
+    @include u-display("none");
+
+    @include at-media(tablet-lg) {
+      @include u-display("inline-block");
+    }
+  }
+
   .jcc-pagination__ellipsis {
     @if $trial {
       @include jcc-text-color(primary-blue-vivid-dark);
     }
   }
 
+  .jcc-pagination__mobile {
+    @include u-display("inline-block");
+
+    @include at-media(tablet-lg) {
+      @include u-display("none");
+    }
+  }
+
+  ol {
+    @include u-padding-left(0);
+  }
+
   a {
     margin: 0 0.6rem;
-    padding: 0.6rem 0.55rem;
+    @include at-media(mobile) {
+      padding: 0.45rem 0rem;
+    }
+    @include at-media(tablet-lg) {
+      padding: 0.45rem 0.35rem;
+    }
     @include u-font-weight("bold");
     @if $trial {
       @include jcc-text-color(primary-blue-vivid-dark);
-    }
-
-    &.single-digit-spacing {
-      padding: 0.6rem 0.86rem;
     }
 
     &.is-active {
       @if $trial {
         @include u-bg($jcc-primary-blue-vivid-dark);
       }
+    }
+
+    &.single-digit-spacing {
+      padding: 0.45rem 0.66rem;
     }
   }
 }

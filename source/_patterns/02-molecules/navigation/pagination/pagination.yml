@@ -1,23 +1,25 @@
 pagination:
   heading_id: "Pagination"
+  total_pages: 10
   current: 2
   ellipses_previous: true
   ellipses_next: true
   first_text: "« First"
   first:
-    - href: "#"
-      #attributes: ""
+    href: "#"
+    #attributes: ""
   previous_text: "‹ Previous"
   previous:
-    - href: "#"
-      #attributes: ""
+    href: "#"
+    #attributes: ""
   next_text: "Next ›"
   next:
-    - href: "#"
-      #attributes: ""
+    href: "#"
+    #attributes: ""
   last_text: "Last »"
   last:
-    - href: "#"
+    href: "#"
+    #attributes: ""
   items:
     - href: "#"
       #attributes: ""
