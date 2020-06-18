@@ -1,0 +1,71 @@
+homepage:
+  hero: 
+    title: "Self-help guide to the California courts"
+    lead: "Resources and information to help you represent yourself in court or work better with a lawyer, including step-by-step guidance for following court procedures and understanding your options."
+  headergroup:
+    brow: ''  
+    title: ''
+  card_section:
+    column_variant: "has-three-columns"
+    border_variant: "has-border"
+    cards:
+      - title: "Take action on my court case"
+        excerpt: '<p>Move your case forward, make a change to a decision, dismiss a case</p> 
+          <p><label class="usa-label sr-only" for="options">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'
+      - title: "Start a court case"
+        excerpt: '<p>Find your case type to get started</p>
+          <p><label class="usa-label sr-only" for="options2">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options2">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'
+      - title: "Get help with papers I was served"
+        excerpt: '<p>Look up by form number and understand your options</p>
+          <p><label class="usa-label sr-only" for="options3">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options3">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'
+      - title: "Get information about a legal matter"
+        excerpt: '<p>Find out what kind of help you can get from the court for a variety of situations</p>
+          <p><label class="usa-label sr-only" for="options">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options4">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'
+      - title: "Look up a court case or citation"
+        excerpt: '<p>Find a traffic ticket or court case using the county courts website</p>
+          <p><label class="usa-label sr-only" for="options5">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options5">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'
+      - title: "Get help from the court"
+        excerpt: '<p>Find In-person self-centers, court interpreters, disability access and more</p>
+          <p><label class="usa-label sr-only" for="options6">Dropdown label</label>
+          <div class="jcc-dropdown">
+          <select class="usa-select" name="options" id="options6">
+            <option value>- Select -</option>
+            <option value="value1">Option A</option>
+            <option value="value2">Option B</option>
+            <option value="value3">Option C</option>
+          </select></div></p>'

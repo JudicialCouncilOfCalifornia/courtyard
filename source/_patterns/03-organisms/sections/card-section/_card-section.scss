@@ -84,3 +84,12 @@
     }
   }
 }
+
+.jcc-cards-section--has-border {
+  .jcc-card {
+    @include u-padding-y(3);
+    @include u-padding-x(4);
+    @include card-border();
+    @include u-text(ink);
+  }
+}
