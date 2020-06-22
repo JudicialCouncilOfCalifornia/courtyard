@@ -1,9 +1,11 @@
 {% set classes = [
   'jcc-primary-nav',
+  primary_nav.contextual_links ? 'contextual-region',
   primary_nav.lowercase_titles ? 'jcc-primary-nav--lowercase-titles'
 ]|merge(primary_nav.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
+  {{ primary_nav.contextual_links }}
   <div id="js-header_menu--mobile" class="usa-accordion"></div>
   <div class="usa-overlay"></div>
   <header class="usa-header usa-header--extended">
