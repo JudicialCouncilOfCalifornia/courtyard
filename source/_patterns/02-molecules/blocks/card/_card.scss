@@ -18,6 +18,11 @@
   }
 }
 
+.jcc-card--has-border {
+  @include u-border(1px, primary-vivid);
+  @include u-padding(3);
+}
+
 .jcc-card__excerpt {
   @extend .usa-prose;
 }
