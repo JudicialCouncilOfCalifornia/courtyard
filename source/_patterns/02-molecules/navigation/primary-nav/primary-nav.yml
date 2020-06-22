@@ -1,4 +1,5 @@
 primary_nav:
+  contextual_links: false
   lowercase_titles: false
   items:
     - name: "Online Services"
