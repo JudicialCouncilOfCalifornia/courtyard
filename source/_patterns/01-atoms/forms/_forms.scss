@@ -16,7 +16,7 @@
   background-size: 2rem auto;
 }
 
-.required::after {
+.form-required::after {
   @include u-text("error");
   content: " *" !important;
   display: inline;
