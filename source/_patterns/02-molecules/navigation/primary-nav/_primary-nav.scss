@@ -282,6 +282,7 @@ nav.jcc-primary-nav {
 
     .slicknav_menu {
       .jcc-primary-nav__sub--item {
+        padding: 0 30px;
         .slicknav_arrow {
           display: none;
         }
@@ -290,7 +291,8 @@ nav.jcc-primary-nav {
           display: block !important;
 
           li {
-            padding: 10px 0;
+            padding: 0 0 20px 0;
+            font-size: 1.12rem;
           }
         }
       }
