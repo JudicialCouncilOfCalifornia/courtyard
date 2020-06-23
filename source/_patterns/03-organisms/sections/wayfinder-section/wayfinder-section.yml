@@ -2,10 +2,9 @@ wayfinder_section:
   headergroup:
     brow: ""  
     title: "What can we help you with today?"
-    lead: "<p>An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"
-  content:
-    '<form class="usa-form jcc-form">
-      <fieldset class="usa-fieldset">
+  content_first: '<p class="jcc-lead">An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>'
+  content_second:
+    '<fieldset class="usa-fieldset">
         <legend class="jcc-form-group__title usa-legend sr-only">Check all that apply</legend>
 
         <div class="jcc-form-group__options">
@@ -23,6 +22,4 @@ wayfinder_section:
     </div>
             </div>
 
-      </fieldset>
-    </form>'
-  
+      </fieldset>'
