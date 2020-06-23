@@ -280,6 +280,24 @@ nav.jcc-primary-nav {
       border-top: 1px solid #7283a0;
     }
 
+    .slicknav_menu {
+      .jcc-primary-nav__sub--item {
+        padding: 0 30px;
+        .slicknav_arrow {
+          display: none;
+        }
+
+        ul.jcc-primary-nav__sub--1 {
+          display: block !important;
+
+          li {
+            padding: 0 0 20px 0;
+            font-size: 1.12rem;
+          }
+        }
+      }
+    }
+
     .slicknav_menu .slicknav_icon-bar {
       display: block;
       width: 27px;
