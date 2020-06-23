@@ -280,6 +280,22 @@ nav.jcc-primary-nav {
       border-top: 1px solid #7283a0;
     }
 
+    .jcc-primary-nav__sub--item{
+      .slicknav_arrow {
+        display: none;
+      }
+      ul.jcc_second_level_item {
+        display: block !important;
+        li {
+          padding: 0;
+          .jcc-primary-nav__sub--title {
+            text-transform: none;
+            padding: 0 0 15px 0;
+          }
+        }
+      }
+    }
+
     .slicknav_menu .slicknav_icon-bar {
       display: block;
       width: 27px;
