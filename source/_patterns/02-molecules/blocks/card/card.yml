@@ -4,3 +4,4 @@ card:
   img:
     src: "../../images/graphics/person.svg"
     alt: "Alt text"
+  contextual_links: FALSE
