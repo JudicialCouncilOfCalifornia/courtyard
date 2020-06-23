@@ -5,7 +5,9 @@
 ]|merge(list_section.classes|default([''])) %}
 
 <div{{ attributes.addClass(classes) }}>
-    <nav>
+    {% set contextual = list_section.menu.contextual_links ? 'contextual-region' : '' %}
+    <nav class="{{ contextual }}">
+        {{ list_section.menu.contextual_links }}
         {% include '@molecules/navigation/menu-links/menu-links.twig' with {
             menu: list_section.menu
         } %}

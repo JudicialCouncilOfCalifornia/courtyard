@@ -1,6 +1,7 @@
 list_section:
   lowercase_titles: false
   menu:
+    contextual_links: false
     classes:
     disable_header_link: true
     items:
