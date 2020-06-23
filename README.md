@@ -24,7 +24,7 @@ As `npm run start` is optimized for local development before making a commit min
 Multiple themes are available for the pattern lab and are being developed over time. These themes are generated into different css sheets to be used in different Drupal instances.
 The major themes are:
 
-1. SRl
+1. SRL
 2. Trial Courts
 
 (to be developed) Trail Courts contain color palette options.
