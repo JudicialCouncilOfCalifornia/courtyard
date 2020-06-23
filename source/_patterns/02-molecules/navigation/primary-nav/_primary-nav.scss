@@ -280,17 +280,32 @@ nav.jcc-primary-nav {
       border-top: 1px solid #7283a0;
     }
 
-    .jcc-primary-nav__sub--item{
-      .slicknav_arrow {
-        display: none;
+    .slicknav_menu {
+      .jcc-primary-nav__sub--item {
+        .slicknav_arrow {
+          display: none;
+        }
+
+        ul.jcc-primary-nav__sub--1 {
+          display: block !important;
+
+          li {
+            padding: 10px 0;
+          }
+        }
       }
-      ul.jcc_second_level_item {
-        display: block !important;
-        li {
-          padding: 0;
-          .jcc-primary-nav__sub--title {
-            text-transform: none;
-            padding: 0 0 15px 0;
+    }
+    .jcc-primary-nav__sub--item {
+      ul.jcc-primary-nav__sub--1 {
+        .jcc-primary-nav__sub--item {
+          @include at-media(desktop) {
+            @include u-display(block);
+            width: 100%;
+            padding-left: 1.7em;
+            @include u-padding-y(2);
+            @include u-font("body", 7);
+            letter-spacing: 1px;
+            background-color: transparent;
           }
         }
       }

@@ -50,7 +50,7 @@
           </a>
         </li>
       {% endif %}
-    {% elseif menu_level == 1 or menu_level == 2 %}
+    {% elseif menu_level == 1 %}
       <li class="jcc-primary-nav__sub--item">
         <a href="{{ item.url }}">
           <div class="jcc-primary-nav__sub--title">
@@ -63,21 +63,16 @@
           {% endif %}
         </a>
         {% if item.sublinks %}
-          {% if not slick %}
-            <ul class="usa-nav__submenu-list jcc-primary-nav__sub--{{ menu_level }}">
-                {{ _self.menu_links(item.sublinks, menu_level + 1, slick) }}
-            </ul>
-          {% elseif slick %}
-            <ul class="jcc_second_level_item">
-              {{ _self.menu_links(item.sublinks, menu_level + 1, slick) }}
-            </ul>
-          {% endif %}
+          <ul class="usa-nav__submenu-list jcc-primary-nav__sub--{{ menu_level }}">
+            {{ _self.menu_links(item.sublinks, menu_level + 1, slick) }}
+          </ul>
         {% endif %}
       </li>
-    {% elseif not slick %}
+    {% elseif not slick or (slick and menu_level == 2)%}
       <li class="jcc-primary-nav__sub-sub--item sub-level-{{ menu_level }}">
         <a href="{{ item.url }}">{% if item.icon %}{{ item.icon }}{% endif %} {{ item.name }}</a>
       </li>
     {% endif %}
   {% endfor %}
 {% endmacro %}
+
