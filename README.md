@@ -82,7 +82,7 @@ You can view a public deployment of the pattern library at https://confident-all
 
 Netlify will also create a preview deployment for each PR created in this repo. To view the preview deployment for a PR, go to the PR and scroll down to the bottom to the checks section. In that section, there is a list item for the deploy preview. Click the "Details" link in that list item to view the deploy preview (see below image).
 
-<img src="./netlify-pr-deploy.png?raw=true" height="300" >
+<img src="./netlify-pr-deploy.png?raw=true" height="300" />
 
 ## Contributing
 
