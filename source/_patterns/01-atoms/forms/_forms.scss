@@ -15,3 +15,11 @@
   height: auto;
   background-size: 2rem auto;
 }
+
+.required::after {
+  @include u-text("error");
+  content: " *" !important;
+  display: inline;
+  font-size: 2rem;
+  background-color: transparent !important;
+}

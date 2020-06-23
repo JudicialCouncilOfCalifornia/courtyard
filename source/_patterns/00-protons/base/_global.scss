@@ -496,7 +496,7 @@ $aspect-width: 16;
   } @else if $dash-position == "below-center" {
     padding-bottom: 0.8em;
 
-    &:after {
+    &:before {
       $dash-width: 100% !default;
       width: $dash-width;
       position: absolute;

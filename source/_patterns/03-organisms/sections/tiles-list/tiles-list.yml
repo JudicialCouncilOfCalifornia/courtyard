@@ -11,6 +11,7 @@ tiles_list:
       img:
         src: "https://placeimg.com/300/200/arch"
         alt: "Alt text"
+      contextual_links: false
     - card:
         title: "Traffic walk-in calendars at the Wiley W. Manuel Courthouse in Oakland will be CLOSED on March 1, 2020"
         excerpt: "Registration for Walk-in Court is on a first come, first serve basis. To ensure registration for that day, it is recommended that you arrive at least 1 hour before registrations begins."
@@ -19,6 +20,7 @@ tiles_list:
       img:
         src: "https://placeimg.com/300/200/arch"
         alt: "Alt text"
+      contextual_links: false
   button:
     text: "Full Calendar"
     url: "#"

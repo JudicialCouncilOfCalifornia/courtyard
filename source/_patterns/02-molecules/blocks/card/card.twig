@@ -1,11 +1,13 @@
 {% set tag = card.tag|default('h3') %}
 {% set classes = [
   'jcc-card',
+  card.contextual_links ? 'contextual-region' : '',
   card.img ? 'jcc-card--has-icon' : '',
   card.variant ? 'jcc-card--' ~ card.variant : '',
 ]|merge(card.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
+  {{ card.contextual_links }}
   {% if card.img %}
     <div class="jcc-card__media">
       {% include '@atoms/image/image.twig' with { image: card.img } %}
