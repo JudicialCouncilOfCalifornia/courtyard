@@ -110,11 +110,9 @@
     @include u-width(full);
   }
 
-  .jcc-text-section {
-    .jcc-text-section__column-left {
-      @include at-media(desktop) {
-        @include grid-col(8);
-      }
+  .jcc-text-section__column-left {
+    @include at-media(desktop) {
+      @include grid-col(8);
     }
   }
 
