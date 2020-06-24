@@ -1,7 +1,8 @@
 .usa-pagination {
   @include u-text-align("center");
+  margin: 0;
 
-  ol {
+  ul.pager__items {
     @include unstyled-list();
     @include u-padding-left(4);
   }
@@ -10,7 +11,7 @@
     @include u-display("inline");
   }
 
-  a {
+  li.pager__item a {
     padding: 3px 10px;
     @include u-text-decoration("no-underline");
 
@@ -29,9 +30,9 @@
 .jcc-pagination {
   @include u-padding-y(4);
 
-  .jcc-pagination__full,
-  .jcc-pagination__ellipsis,
-  .jcc-pagination__total-pages {
+  li.pager__item.jcc-pagination__full,
+  li.pager__item.jcc-pagination__ellipsis,
+  li.pager__item.jcc-pagination__total-pages {
     @include u-display("none");
 
     @include at-media(tablet-lg) {
@@ -39,13 +40,13 @@
     }
   }
 
-  .jcc-pagination__ellipsis {
+  li.pager__item.jcc-pagination__ellipsis {
     @if $trial {
       @include jcc-text-color(primary-blue-vivid-dark);
     }
   }
 
-  .jcc-pagination__mobile {
+  li.pager__item.jcc-pagination__mobile {
     @include u-display("inline-block");
 
     @include at-media(tablet-lg) {
@@ -53,11 +54,11 @@
     }
   }
 
-  ol {
+  ul.pager__items {
     @include u-padding-left(0);
   }
 
-  a {
+  li.pager__item a {
     margin: 0 0.6rem;
     @include at-media(mobile) {
       padding: 0.45rem 0rem;
