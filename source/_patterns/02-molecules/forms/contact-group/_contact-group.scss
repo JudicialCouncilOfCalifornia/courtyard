@@ -20,6 +20,10 @@
     @include u-width("auto");
     height: 2.5rem;
   }
+
+  .usa-error-message {
+    @include u-width("full");
+  }
 }
 
 .jcc-contact-group__container {
