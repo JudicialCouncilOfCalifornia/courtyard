@@ -7,11 +7,7 @@
   @include u-position(relative);
   @include u-text(left);
   transition: all 0.4s;
-  &:hover {
-    box-shadow: none;
-    cursor: pointer;
-    transition: all 0.4s;
-  }
+
   &__icon-link {
     @include u-display(block);
     @include u-width(5);
@@ -22,6 +18,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/switchboard-icon.svg);
+  }
+}
+
+.jcc-tile--hover {
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.4s;
   }
 }
 

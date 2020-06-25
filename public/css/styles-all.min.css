@@ -13924,14 +13924,6 @@ a:visited {
   transition: all 0.4s;
 }
 
-.jcc-tile:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  cursor: pointer;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
 .jcc-tile__icon-link {
   display: block ;
   width: 2.5rem ;
@@ -13942,6 +13934,14 @@ a:visited {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/switchboard-icon.svg);
+}
+
+.jcc-tile--hover:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .jcc-tile__brow {
