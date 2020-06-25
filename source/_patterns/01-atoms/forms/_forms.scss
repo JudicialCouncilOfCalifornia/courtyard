@@ -5,17 +5,6 @@
   @include u-border(2px);
 }
 
-.usa-select {
-  background-image: url(../images/icomoon/svg/expand_more.svg);
-  background-size: 1.5rem auto;
-}
-
-.jcc-select--big {
-  @include u-padding(2.5);
-  height: auto;
-  background-size: 2rem auto;
-}
-
 .form-required::after {
   @include u-text("error");
   content: " *" !important;

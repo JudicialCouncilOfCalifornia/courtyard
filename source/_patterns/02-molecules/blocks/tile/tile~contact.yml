@@ -1,0 +1,13 @@
+tile:
+  brow:
+  title: 'Come back to this page later'
+  icon_link: false
+  url: '#'
+  body: '<div class="jcc-contact-group">
+    <div class="jcc-contact-group__container">
+    <label class="usa-label" for="input-type-text">Enter your email of phone number</label>
+    <input class="usa-input " id="input-type-text" name="input-type-text" type="text">
+    <button  class="usa-button usa-button--accent-warm">Send Link</button>
+    <span class="jcc-contact-group__helper">We will only use this email or phone number to send this link</span>
+    </div>
+    </div>'

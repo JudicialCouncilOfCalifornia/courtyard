@@ -1,0 +1,27 @@
+switchboard:
+  background_variant: "has-background-color--dark--primary" #has-background-color--dark
+  layout_variant: "next-right-column" #default, #right-column
+  headergroup:
+    brow: 'Next Steps'
+    title: 'What can we help you with today?'
+  body: 'Once you’ve served the petition and summons forms, your spouse has 30 days to respond. How they respond will determine how you’ll move forward with your case.'
+  items:
+    primary:
+      - brow:
+        title: 'Come back to this page later'
+        icon_link: false
+        url: '#'
+        body: '<div class="jcc-contact-group">
+          <div class="jcc-contact-group__container">
+          <label class="usa-label" for="input-type-text">Enter your email of phone number</label>
+          <input class="usa-input " id="input-type-text" name="input-type-text" type="text">
+          <button  class="usa-button usa-button--accent-warm">Send Link</button>
+          <span class="jcc-contact-group__helper">We will only use this email or phone number to send this link</span>
+          </div>
+          </div>'
+      - brow: 'Lien Against Property'
+        title: 'I was told I can’t sell my property'
+        icon_link: true
+        url: 'link.pages-judgment-lien-against-property'
+      - 
+    secondary:
