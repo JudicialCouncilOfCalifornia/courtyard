@@ -1,6 +1,7 @@
 side_nav:
   aria_label: "Table of Contents"
-  title: "Side nav"
+  theme_classes: "pager mobile"
+  header: "Side Nav"
   items:
     - title: "Home"
       url: "#"
