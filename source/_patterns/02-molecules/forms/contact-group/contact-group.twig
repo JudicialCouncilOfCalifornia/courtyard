@@ -1,0 +1,18 @@
+<div class="jcc-contact-group">
+  <div class="jcc-contact-group__container">
+    <label class="usa-label" for="input-type-text">{{ contact_group.label }}</label>
+    <input class="usa-input {% if contact_group.error %}usa-input--error{% endif %}" id="input-type-text" name="input-type-text" type="text">
+    {% include '@atoms/buttons/button.twig' with { 
+      button: {
+        text: contact_group.button.text,
+        style: contact_group.button.style
+      }
+    } %}
+    {% if contact_group.error %}
+    <span class="usa-error-message">{{ contact_group.error }}</span>
+    {% endif %}
+    {% if contact_group.helper %}
+    <span class="jcc-contact-group__helper">{{ contact_group.helper }}</span>
+    {% endif %} 
+  </div>
+</div>
