@@ -29,11 +29,13 @@
             {% if switchboard.items.primary %}
               <ul class="jcc-switchboard__tiles">
                 {% for tile in switchboard.items.primary %}
+                  {% if tile.title %}
                   <li class="jcc-switchboard__tile">
                     {% include '@molecules/blocks/tile/tile.twig' with {
                       tile : tile
                     } %}
                   </li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {% endif %}
@@ -41,11 +43,13 @@
             {% if switchboard.items.secondary %}
               <ul class="jcc-switchboard__tiles jcc-switchboard__tiles-secondary">
                 {% for tile in switchboard.items.secondary %}
+                  {% if tile.title %}
                   <li class="jcc-switchboard__tile">
                     {% include '@molecules/blocks/tile/tile.twig' with {
                       tile : tile
                     } %}
                   </li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {% endif %}
