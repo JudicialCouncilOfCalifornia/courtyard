@@ -19,12 +19,14 @@
   }
 }
 
-.usa-form.jcc-form--block {
-  .usa-button {
-    @include u-display(block);
-    @include u-width(full);
-    @include u-margin-top(0);
-    @include u-margin-bottom(1);
+.jcc-form {
+  .jcc-form-group__options {
+    .usa-button {
+      @include u-display(block);
+      @include u-width(full);
+      @include u-margin-top(0);
+      @include u-margin-bottom(1);
+    }
   }
 }
 
