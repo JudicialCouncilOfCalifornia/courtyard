@@ -2,10 +2,9 @@ wayfinder_section:
   headergroup:
     brow: ""  
     title: "What can we help you with today?"
-    lead: "<p>An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"
-  content:
-    '<form class="usa-form jcc-form">
-      <fieldset class="usa-fieldset">
+  content_first: "<p class="jcc-lead">An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"
+  content_second:
+    '<fieldset class="usa-fieldset">
         <legend class="jcc-form-group__title usa-legend sr-only">Check all that apply</legend>
         <div class="jcc-form-group__options">
         <div  class="usa-radio jcc-radio--bordered jcc-radio--big jcc-radio--secondary jcc-radio--button">
@@ -23,8 +22,7 @@ wayfinder_section:
           <label class="usa-radio__label" for="12">One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.</label>
         </div>
         </div>
-        </fieldset>
-      </form>'
+        </fieldset>'
 button_pager:
   previous:
     text: 'Previous'
