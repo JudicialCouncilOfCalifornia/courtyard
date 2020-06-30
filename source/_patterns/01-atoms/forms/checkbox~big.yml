@@ -1,4 +1,4 @@
 checkbox:
   label: First
   name: Test
-  style: 'big'
+  style: ['big']
