@@ -60,7 +60,8 @@ video {
   @include u-padding(0);
 }
 
-a {
+a,
+.usa-form a.usa-button--unstyled {
   @include u-text("blue-cool-50v");
 
   &:hover {
