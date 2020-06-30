@@ -84,8 +84,51 @@ Netlify will also create a preview deployment for each PR created in this repo. 
 
 <img src="./netlify-pr-deploy.png?raw=true" height="300" />
 
+### Courtyard Artifact
+
+Commits to the courtyard project main branch also trigger a build and deployment to the courtyard-artifact. This is a light weight composer package that can be included in Drupal or other PHP based projects.
+
+*See Drupal/PHP Integration below, for more information.*
+
 ## Contributing
 
 ### Code Style
 
 We use the automatic code formatter Prettier. If you use an IDE such as Sublime Text, VSCode, or similar, you can likely add a Prettier extension that will autoformat your files using Prettier rules on file save. If you're not using an IDE that integrates with it, you should run `npx prettier --write [filepath]` on all added or changed files before you submit a pull request.
+
+
+## Drupal/PHP Integration
+
+Drupal or other PHP based projects should use: `composer require judicialcouncil/courtyard-artifact`
+
+https://packagist.org/packages/judicialcouncil/courtyard-artifact
+
+The courtyard-artifact package is designated type: drupal-library. You can set library path in your composer.json like the following for a drupal project:
+
+```
+"extra": {
+    "installer-paths": {
+        "web/core": [
+            "type:drupal-core"
+        ],
+        "web/libraries/{$name}": [
+            "type:drupal-library"
+        ]
+    }
+}
+```
+** Adapt for other types of PHP projects.
+
+If you need to sync local changes to courtyard to your project library for development purposes, the following bash aliases might be helpful to add to your .bashrc or .bash_profile. Update path variables as needed.
+
+```
+path_courtyard="~/Sites/courtyard"
+path_project_library="~/Sites/trialcourt"
+alias ctbuild="(cd $path_courtyard && npm run build)"
+alias ctsync="ctbuild && rsync -KPar --delete --force --include=/{'public/***','source/***'} --exclude='*' $path_courtyard/ $path_project_library/web/libraries/courtyard-artifact"
+alias ctrestore="(cd $path_trialcourt && rm -rf web/libraries/courtyard-artifact && composer install)"
+```
+
+ - `ctbuild` - Build courtyard assets.
+ - `ctsync` - Build assets and sync to project library.
+ - `ctrestore` - Remove synced dev changes and reinstall courtyard-artifact.
