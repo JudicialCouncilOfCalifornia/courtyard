@@ -31,3 +31,13 @@
   @include u-margin-bottom(4);
   @extend .usa-prose;
 }
+
+.jcc-modal {
+  .jcc-wayfinder-section {
+    @include u-padding-y(0);
+
+    @include at-media(desktop) {
+      @include section-wrapper;
+    }
+  }
+}

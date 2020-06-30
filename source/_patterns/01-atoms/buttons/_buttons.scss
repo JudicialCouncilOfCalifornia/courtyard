@@ -16,8 +16,8 @@
   @include big-button-style;
 }
 
-.usa-button--big--tablet {
-  @include at-media(tablet) {
+.usa-button--big--desktop {
+  @include at-media(desktop) {
     @include big-button-style;
   }
 }
