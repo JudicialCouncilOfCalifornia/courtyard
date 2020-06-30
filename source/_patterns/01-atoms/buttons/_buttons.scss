@@ -43,7 +43,7 @@
   }
 }
 
-.usa-button--hollow {
+.usa-button--outline {
   @include u-text(ink);
   @include u-text("normal");
   background-color: transparent;
@@ -54,6 +54,7 @@
 
     &:hover,
     &.usa-button--hover {
+      @include u-text("white");
       @include u-bg(primary);
     }
   }
@@ -63,6 +64,7 @@
 
     &:hover,
     &.usa-button--hover {
+      @include u-text("white");
       @include u-bg(secondary);
     }
   }
@@ -72,6 +74,7 @@
 
     &:hover,
     &.usa-button--hover {
+      @include u-text("white");
       @include u-bg(accent-warm);
     }
   }

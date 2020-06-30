@@ -2,7 +2,7 @@
 
 {% set classes = [
   'usa-radio',
-  'jcc-radio--' ~ radio.style|default(''),
+  radio.style|map(s =>  'jcc-radio--' ~ s)|join(' '),
 ]|merge(radio.classes|default([''])) %}
 
 <div {{attributes.addClass(classes) }}>
