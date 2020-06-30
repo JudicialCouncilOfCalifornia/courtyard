@@ -3,12 +3,14 @@
     <legend class="jcc-form-group__title usa-legend{% if sr_only %} sr-only{% endif %}">{{ legend }}</legend>
 
     <div class="jcc-form-group__options">
-    {% for item in checkbox_group %}
+    {% for checkbox in checkbox_group %}
       {% include '@atoms/forms/checkbox.twig' with {
-        label: item.label,
-        id: item.id,
-        name: item.name,
-        bordered: item.bordered
+        checkbox: {
+          label: checkbox.label,
+          id: checkbox.id,
+          name: checkbox.name,
+          style: checkbox.style
+        }
       } %}
     {% endfor %}
     </div>

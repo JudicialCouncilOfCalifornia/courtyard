@@ -1,0 +1,23 @@
+<div class="jcc-button-pager">
+  {% if button_pager.previous.text or button_pager.next.text %}
+  <div class="jcc-button-pager_progress">
+    {% if button_pager.previous.text %}
+      {% include "@atoms/buttons/link-button.twig" with {
+        link_button: button_pager.previous
+      } %}
+    {% endif %}
+    {% if button_pager.next.text %}
+      {% include "@atoms/buttons/link-button.twig" with {
+        link_button: button_pager.next
+      } %}
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if button_pager.reset %}
+  <div class="jcc-button-pager_reset">
+    {% include "@atoms/buttons/link-button.twig" with {
+      link_button: button_pager.reset
+    } %}
+  </div>
+  {% endif %}
+</div>

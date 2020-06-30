@@ -1,0 +1,18 @@
+<div class="jcc-wayfinder-section"{% if wayfinder_section.id %} id="{{ wayfinder_section.id }}"{% endif %}>
+  <div class="jcc-wayfinder-section__container">
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      headergroup: wayfinder_section.headergroup
+    } %}
+
+    {% if wayfinder_section.content %}
+      <div class="jcc-wayfinder-section__content">
+        {{ wayfinder_section.content }}
+      </div>
+    {% endif %}
+    <div class="jcc-wayfinder-section__pager">
+      {% include '@molecules/navigation/button-pager/button-pager.twig'with {
+        button_pager: button_pager
+      } %}
+    </div>
+  </div>
+</div>

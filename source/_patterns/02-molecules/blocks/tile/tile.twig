@@ -1,7 +1,7 @@
 {% set tag = tile.tag|default('h3') %}
 {% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
 
-<div class="jcc-tile">
+<div class="jcc-tile{% if tile.url %} jcc-tile--hover{% endif %}">
   {% if tile.icon %}
     <div class="jcc-tile__icon">
       <img src="{{ tile.icon }}">
@@ -14,7 +14,7 @@
 
   {% if tile.title %}
     <{{ tag }} class="jcc-tile__title">
-      <a href="{{ tile.url }}"{{ url_attributes }}>{{ tile.title }}</a>
+      {% if tile.url %}<a href="{{ tile.url }}"{{ url_attributes }}>{% endif %}{{ tile.title }}{% if tile.url %}</a>{% endif %}
     </{{ tag }}>
   {% endif %}
   {% if tile.body %}

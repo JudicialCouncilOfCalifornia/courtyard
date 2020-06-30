@@ -1,0 +1,29 @@
+wayfinder_section:
+  headergroup:
+    brow: ""  
+    title: "What can we help you with today?"
+    lead: "<p>An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"
+  content:
+    '<form class="usa-form jcc-form jcc-form--block">
+      <fieldset class="usa-fieldset">
+      <legend class="jcc-form-group__title usa-legend sr-only">Select one</legend>
+      <div class="jcc-form-group__options">
+      <button class="usa-button usa-button--secondary usa-button--big usa-button--round usa-button--hollow">This change of name is being requested to escape domestic violence.</button>
+      <button class="usa-button usa-button--secondary usa-button--big usa-button--round usa-button--hollow">One or more adults is restoring a former name during or following a divorce in California.</button>
+      <button class="usa-button usa-button--secondary usa-button--big usa-button--round usa-button--hollow">One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.</button>
+      </div>
+      </fieldset>
+      </form>'
+button_pager:
+  previous:
+    text: 'Previous'
+    url: '#'
+    style: ''
+  next:
+    text: ''
+    url: ''
+    style: ''
+  reset:
+    text: "Start Over"
+    url: "#"
+    style: 'unstyled'

@@ -11,7 +11,9 @@
 
     <ul class="jcc-tiles-list">
     {% for tile in tiles_list.tiles %}
-        <li class="jcc-tiles-list__tile">
+        {% set contextual = tile.contextual_links ? 'contextual-region' : false %}
+        <li class="jcc-tiles-list__tile {{ contextual }}">
+            {{ tile.contextual_links }}
             <div class="jcc-tiles-list__date">
                 <div class="jcc-tiles-list__date-month">{{ tile.date|date('M') }}</div>
                 <div class="jcc-tiles-list__date-day">

@@ -1,0 +1,40 @@
+wayfinder_section:
+  headergroup:
+    brow: ""  
+    title: "What can we help you with today?"
+    lead: "<p>An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>"
+  content:
+    '<form class="usa-form jcc-form">
+      <fieldset class="usa-fieldset">
+        <legend class="jcc-form-group__title usa-legend sr-only">Check all that apply</legend>
+        <div class="jcc-form-group__options">
+        <div  class="usa-radio jcc-radio--bordered jcc-radio--big jcc-radio--secondary jcc-radio--button">
+          <input class="usa-radio__input" id="10" type="radio" checked name="Gamma" value="10">
+          <label class="usa-radio__label" for="10">This change of name is being requested to escape domestic violence.</label>
+        </div>
+              
+        <div  class="usa-radio jcc-radio--bordered jcc-radio--big jcc-radio--secondary jcc-radio--button">
+          <input class="usa-radio__input" id="11" type="radio" checked name="Gamma" value="11">
+          <label class="usa-radio__label" for="11">One or more adults is restoring a former name during or following a divorce in California.</label>
+        </div>        
+
+        <div  class="usa-radio jcc-radio--bordered jcc-radio--big jcc-radio--secondary jcc-radio--button">
+          <input class="usa-radio__input" id="12" type="radio" checked name="Gamma" value="12">
+          <label class="usa-radio__label" for="12">One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.</label>
+        </div>
+        </div>
+        </fieldset>
+      </form>'
+button_pager:
+  previous:
+    text: 'Previous'
+    url: '#'
+    style: ''
+  next:
+    text: ''
+    url: ''
+    style: ''
+  reset:
+    text: "Start Over"
+    url: "#"
+    style: 'unstyled'

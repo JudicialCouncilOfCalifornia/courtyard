@@ -11,6 +11,12 @@
   @include u-minh("viewport");
 }
 
+.jcc-hero--minimum-height {
+  .jcc-hero__content {
+    @include u-padding-bottom(2);
+  }
+}
+
 .jcc-hero--has-background-image {
   @include u-text("white");
 
@@ -100,6 +106,10 @@
     @include jcc-text-color(primary-blue-dark);
   }
   @include u-margin-y(3);
+}
+
+.jcc-hero__title--sr-only {
+  @include sr-only();
 }
 
 .jcc-hero__brow + .jcc-hero__title {

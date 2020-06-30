@@ -1,4 +1,5 @@
 hero_icon_nav:
+  contextual_links: FALSE
   style:
   hero_img_banner:
     background_img: '../../images/alameda.jpg'

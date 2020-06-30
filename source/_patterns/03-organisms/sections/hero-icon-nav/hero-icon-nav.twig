@@ -9,7 +9,9 @@
       hero_img_banner: hero_icon_nav.hero_img_banner
     } %}
   {% endif %}
-  <div class="jcc-hero-icon-nav__nav">
+  {% set contextual = hero_icon_nav.contextual_links ? 'contextual-region' : '' %}
+  <div class="jcc-hero-icon-nav__nav {{ contextual }}">
+    {{ hero_icon_nav.contextual_links }}
     <div class="jcc-hero-icon-nav__block tile-icon">
         {% for tile in hero_icon_nav.links.icons %}
             {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
