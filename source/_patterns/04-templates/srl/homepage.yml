@@ -10,6 +10,7 @@ homepage:
     border_variant: "has-border"
     cards:
       - title: "Take action on my court case"
+        id: "read-more-1"
         excerpt: '<p>Move your case forward, make a change to a decision, dismiss a case</p> 
           <p><label class="usa-label sr-only" for="options">Dropdown label</label>
           <select class="usa-select" name="options" id="options">
@@ -40,6 +41,7 @@ homepage:
             <option value="value8">Respond to a motion</option>
           </select><p/>'
       - title: "Start a court case"
+        id: "read-more-2"
         excerpt: '<p>Find your case type to get started</p>
           <p><label class="usa-label sr-only" for="options2">Dropdown label</label>
           <select class="usa-select" name="options" id="options">
@@ -58,10 +60,12 @@ homepage:
             <option value="value12">Debt</option>
           </select></p>'
       - title: "Get help with papers I was served"
+        id: "read-more-3"
         excerpt: '<p>Look up by form number and understand your options</p>
           <p><label class="usa-label sr-only" for="input-type-text">Input Label</label>
           <input class="usa-input" id="input-type-text" name="input-type-text" type="text" placeholder="Enter Form Number"></p>'
       - title: "Get information about a legal matter"
+        id: "read-more-4"
         excerpt: '<p>Find out what kind of help you can get from the court for a variety of situations</p>
           <p><label class="usa-label sr-only" for="options3">Dropdown label</label>
           <select class="usa-select" name="options" id="options3">
@@ -76,6 +80,7 @@ homepage:
             <option value="value8">Traffic</option>
           </select></p>'
       - title: "Look up a court case or citation"
+        id: "read-more-5"
         excerpt: '<p>Find a traffic ticket or court case using the county courts website</p>
           <p><label class="usa-label sr-only" for="options5">Dropdown label</label>
           <select class="usa-select" name="options" id="options5">
@@ -106,5 +111,6 @@ homepage:
             <option value="value24">Merced</option>
           </select></p>'
       - title: "Get help from the court"
+        id: "read-more-6"
         excerpt: '<p>Find In-person self-centers, court interpreters, disability access and more</p>
           <p><a href="#">Court Resources</a></p>'

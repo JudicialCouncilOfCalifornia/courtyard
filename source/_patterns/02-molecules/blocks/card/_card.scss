@@ -26,3 +26,11 @@
 .jcc-card__excerpt {
   @extend .usa-prose;
 }
+
+.jcc-card__excerpt[aria-hidden="true"] {
+  @include u-display(none);
+
+  @include at-media(tablet) {
+    @include u-display(block);
+  }
+}
