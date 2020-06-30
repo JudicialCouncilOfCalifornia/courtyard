@@ -1,10 +1,10 @@
 .jcc-wayfinder-section {
   @include section-wrapper;
-  text-align: center;
 
   .jcc-header-group__title {
     @include u-text(primary-dark);
     @include has-dash-position($dash-position: below-center, $dash-width: 3rem);
+    text-align: center;
   }
 
   .jcc-header-group__lead {
@@ -30,8 +30,4 @@
   @include u-line-height(body, 4);
   @include u-margin-bottom(4);
   @extend .usa-prose;
-
-  .jcc-form {
-    text-align: left;
-  }
 }
