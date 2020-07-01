@@ -1,8 +1,16 @@
 link_list:
-  list_icons: true
   header: "Link List Simple"
+  files_list: true
   items:
     - url_title: "Form EJ-160"
       url: "#"
     - url_title: "Form EJ-165"
+      url: "#"
+    - url_title: "Form EJ-170"
+      url: "#"
+    - url_title: "Form EJ-175"
+      url: "#"
+    - url_title: "Form EJ-180"
+      url: "#"
+    - url_title: "Form EJ-185"
       url: "#"
