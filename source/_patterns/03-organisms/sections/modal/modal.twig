@@ -29,10 +29,12 @@
       {{ modal.content }}
     </div>
 
+    {% if modal.footer_button %}
     <footer class="jcc-modal__footer">
       <button class="usa-button" type="button" data-a11y-dialog-hide="{{ modal.id }}" aria-label="{{ 'Close this dialog window'|t }}">
         {{ 'Done'|t }}
       </button>
     </footer>
+    {% endif %}
   </dialog>
 </div>

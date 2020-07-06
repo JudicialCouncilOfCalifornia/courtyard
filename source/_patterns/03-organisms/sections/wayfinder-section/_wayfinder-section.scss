@@ -1,14 +1,24 @@
 .jcc-wayfinder-section {
   @include section-wrapper;
-  text-align: center;
 
   .jcc-header-group__title {
     @include u-text(primary-dark);
     @include has-dash-position($dash-position: below-center, $dash-width: 3rem);
+    @include u-font(heading, 11); // 32
+    text-align: center;
+
+    @include at-media(desktop) {
+      @include u-font(heading, 14); // 40
+    }
   }
 
-  .jcc-header-group__lead {
+  .jcc-lead {
+    @include u-font(body, 7); // 22
     text-align: left;
+
+    @include at-media(desktop) {
+      @include u-font(body, 10); // 24
+    }
   }
 
   .jcc-header-group {
@@ -28,10 +38,20 @@
 
 .jcc-wayfinder-section__content {
   @include u-line-height(body, 4);
-  @include u-margin-bottom(4);
+  @include u-margin-bottom(1);
   @extend .usa-prose;
 
-  .jcc-form {
-    text-align: left;
+  @include at-media(desktop) {
+    @include u-margin-bottom(4);
+  }
+}
+
+.jcc-modal {
+  .jcc-wayfinder-section {
+    @include u-padding-y(0);
+
+    @include at-media(desktop) {
+      @include section-wrapper;
+    }
   }
 }

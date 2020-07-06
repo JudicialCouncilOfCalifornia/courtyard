@@ -1,0 +1,29 @@
+modal:
+  id: "jcc-modal"
+  button_label: "Open Dialog Window"
+  footer_button: false
+  content: 
+    '<div class="jcc-wayfinder-section">
+      <div class="jcc-wayfinder-section__container">
+        <form class="usa-form jcc-form">
+          <header class="jcc-header-group">
+            <h2 class="jcc-header-group__title required">What can we help you with today?</h2>
+          </header>
+          <div class="jcc-wayfinder-section__content">
+            <p class="jcc-lead">An elder abuse restraining order can be requested by, or on behalf of, an adult who is 65 or older, or an adult who has a physical or mental limitation that makes it difficult to carry out normal activities or protect their rights.</p>
+            <fieldset class="usa-fieldset"> <legend class="jcc-form-group__title usa-legend sr-only">Check all that apply</legend> <div class="jcc-form-group__options"> <div class="usa-checkbox jcc-checkbox--bordered jcc-checkbox--big jcc-checkbox--secondary"> <input class="usa-checkbox__input" id="checkbox-339006455" type="checkbox" name="Alpha" value="checkbox-339006455"> <label class="usa-checkbox__label" for="checkbox-339006455">This change of name is being requested to escape domestic violence.</label> </div> <div class="usa-checkbox jcc-checkbox--bordered jcc-checkbox--big jcc-checkbox--secondary"> <input class="usa-checkbox__input" id="checkbox-1613126821" type="checkbox" name="Alpha" value="checkbox-1613126821"> <label class="usa-checkbox__label" for="checkbox-1613126821">One or more adults is restoring a former name during or following a divorce in California.</label> </div> <div class="usa-checkbox jcc-checkbox--bordered jcc-checkbox--big jcc-checkbox--secondary"> <input class="usa-checkbox__input" id="checkbox-604819299" type="checkbox" name="Alpha" value="checkbox-604819299"> <label class="usa-checkbox__label" for="checkbox-604819299">One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.</label> </div> </div> </fieldset>
+            </div>
+            <div class="jcc-wayfinder-section__pager">
+            <div class="jcc-button-pager">
+            <div class="jcc-button-pager_progress">
+              <a class="usa-button usa-button--primary" href="#">Back</a>
+              <a class="usa-button usa-button--primary" href="#">Next</a>
+            </div>
+            <div class="jcc-button-pager_reset">
+              <a class="usa-button usa-button--primary usa-button--unstyled" href="#">Start Over</a>
+            </div>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>'
