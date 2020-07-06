@@ -28,7 +28,7 @@
     &::before {
       @include u-bg("white");
       box-shadow: 0 0 0 2px $jcc-cyan;
-      background-image: url("../images/collect-dark.svg");
+      background-image: url("../images/graphics/collect-dark.svg");
       background-size: 1rem auto;
     }
   }

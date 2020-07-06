@@ -210,7 +210,7 @@
     left: 10px;
     position: absolute;
     display: block;
-    background-image: url("../images/time.svg");
+    background-image: url("../images/graphics/time.svg");
   }
 }
 
@@ -232,7 +232,7 @@
   }
 
   &.wait {
-    background-image: url("../images/time.svg");
+    background-image: url("../images/graphics/time.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -265,15 +265,15 @@
   }
 
   &.both {
-    background-image: url("../images/both.svg");
+    background-image: url("../images/graphics/both.svg");
   }
 
   &.down {
-    background-image: url("../images/top-bottom.svg");
+    background-image: url("../images/graphics/top-bottom.svg");
   }
 
   &.up {
-    background-image: url("../images/bottom-top.svg");
+    background-image: url("../images/graphics/bottom-top.svg");
   }
 }
 

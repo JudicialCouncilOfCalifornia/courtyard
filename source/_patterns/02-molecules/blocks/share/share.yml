@@ -2,10 +2,10 @@ social_links:
   items:
     -   title: "Print"
         url: "#"
-        src: ../../images/print.svg
+        src: ../../images/graphics/print.svg
     -   title: "Email"
         url: "#"
-        src: ../../images/email.svg
+        src: ../../images/graphics/email.svg
     -   title: "Text"
         url: "#"
-        src: ../../images/text.svg
+        src: ../../images/graphics/text.svg

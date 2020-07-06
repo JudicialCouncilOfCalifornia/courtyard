@@ -1,7 +1,7 @@
 hero_icon_nav:
   style: 'jcc-hero-icon-nav-style--variant-two'
   hero_img_banner:
-    background_img: '../../images/alameda.jpg'
+    background_img: '../../images/photos/alameda.jpg'
     brow: 'Welcome to the'
     title: 'Superior Court of Alameda'
     subtitle: 'What would you like to do?'
