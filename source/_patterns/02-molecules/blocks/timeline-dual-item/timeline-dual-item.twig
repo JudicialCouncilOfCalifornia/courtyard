@@ -41,7 +41,7 @@
         <div class="jcc-timeline-dual__time">{{ timeline_dual_item.bottom.deadline}}</div>
       {% endif %}
       {% if timeline_dual_item.bottom.number %}
-        {% if timeline_dual_item.bottom.number == "wait" %}
+        {% if timeline_dual_item.bottom.number == "wait" or timeline_dual_item.bottom.number == "line" %}
           <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}"></div>
         {% else %}
           <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}">{{ timeline_dual_item.bottom.number}}</div>
