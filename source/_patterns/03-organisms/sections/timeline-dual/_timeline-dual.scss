@@ -227,7 +227,8 @@
   z-index: 5;
   left: 30px;
 
-  &.none {
+  &.none,
+  &.line {
     display: none;
   }
 

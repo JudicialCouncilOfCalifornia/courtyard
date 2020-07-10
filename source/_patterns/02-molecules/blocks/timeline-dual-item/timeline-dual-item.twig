@@ -22,9 +22,7 @@
 
         {% elseif timeline_dual_item.top.read_more.type == 'modal' %}
           {% include '@organisms/sections/modal/modal.twig' with {
-            modal: {
-              content: timeline_dual_item.top.read_more.modal
-            }
+            modal: timeline_dual_item.top.read_more.modal
           } %}
         {% endif %}
       {% endif %}
@@ -41,7 +39,7 @@
         <div class="jcc-timeline-dual__time">{{ timeline_dual_item.bottom.deadline}}</div>
       {% endif %}
       {% if timeline_dual_item.bottom.number %}
-        {% if timeline_dual_item.bottom.number == "wait" %}
+        {% if timeline_dual_item.bottom.number == "wait" or timeline_dual_item.bottom.number == "line" %}
           <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}"></div>
         {% else %}
           <div class="jcc-timeline-dual__number {{ timeline_dual_item.bottom.number}}">{{ timeline_dual_item.bottom.number}}</div>
@@ -58,7 +56,7 @@
 
         {% elseif timeline_dual_item.bottom.read_more.type == 'modal' %}
           {% include '@organisms/sections/modal/modal.twig' with {
-            modal : timeline_dual_item.bottom.read_more.modal
+            modal: timeline_dual_item.bottom.read_more.modal
           } %}
         {% endif %}
       {% endif %}

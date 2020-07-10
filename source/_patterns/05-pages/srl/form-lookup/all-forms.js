@@ -3,8 +3,6 @@ import _ from "underscore";
 let formResults = document.querySelector(".form-results");
 
 async function init() {
-  console.log("all-forms init");
-
   let render = () => {
     formResults.innerHTML = forms.map(form => formResult(form)).join("\n");
   };

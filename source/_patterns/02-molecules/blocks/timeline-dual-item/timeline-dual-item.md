@@ -15,7 +15,8 @@ timeline_dual_item:
       link:
         label: "Read more link"
         url: "#"
-      modal:  "<div>html string</div>"
+      modal:
+        content: "<div>html string</div>"
   bottom:
     excerpt: "Plain text" # 45 char max
     deadline: "Deadline: 60 days after filing for divorce"
@@ -27,5 +28,6 @@ timeline_dual_item:
         link:
           label: "Read more link"
           url: "#"
-        modal:  "<div>html string</div>"
+        modal:
+          content: "<div>html string</div>"
 ```
