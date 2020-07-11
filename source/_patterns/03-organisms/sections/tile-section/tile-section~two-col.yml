@@ -1,0 +1,15 @@
+tile_section:
+  column_variant: "has-two-columns"
+  tiles:
+    - brow: 'Go to'
+      title: 'Prepare the claim of exemption'
+      icon_link: true
+      url: '#'
+    - brow: 'Wage Garnishment'
+      title: 'Someone took money from my paycheck'
+      icon_link: true
+      url: '#'
+    - brow: 'File claim'
+      title: "Some file the claim of exemption with the sheriff"
+      icon_link: true
+      url: '#'

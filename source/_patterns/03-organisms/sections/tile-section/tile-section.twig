@@ -1,0 +1,24 @@
+{% set classes = [
+  'jcc-tiles-section',
+  'jcc-tiles-section--' ~ tile_section.column_variant|default('has-two-columns'),
+]|merge(tile_section.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if tile_section.id %} id="{{ tile_section.id }}"{% endif %}>
+  <div class="jcc-tiles__container">
+    {% if tile_section.headergroup %}
+      {% include '@molecules/text/header-group/header-group.twig' with {
+        headergroup: tile_section.headergroup
+    } %}
+    {% endif %}
+
+    <ul class="jcc-tiles">
+      {% for tile in tile_section.tiles %}
+        <li class="jcc-tiles__item">
+          {% include '@molecules/blocks/tile/tile.twig' with {
+            tile: tile
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
