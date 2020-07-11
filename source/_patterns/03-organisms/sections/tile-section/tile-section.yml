@@ -1,0 +1,8 @@
+tile_section:
+  column_variant: "has-one-columns"
+  tiles:
+    -
+      brow: 'Go to'
+      title: 'Prepare the claim of exemption'
+      icon_link: true
+      url: '#'

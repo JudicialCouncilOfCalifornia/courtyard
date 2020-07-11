@@ -1,0 +1,58 @@
+.jcc-tiles-section {
+  @include section-wrapper;
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+  }
+
+  .jcc-header-group__title {
+    @include u-text(primary-dark);
+    @include has-dash();
+  }
+}
+
+.jcc-tiles__container {
+  @include section-container;
+}
+
+.jcc-tiles {
+  @include unstyled-list();
+  @include at-media(desktop) {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-tiles__item {
+    @include u-margin-bottom(3);
+  }
+}
+
+.jcc-tiles-section--has-two-columns,
+.jcc-tiles-section--has-three-columns {
+  .jcc-tiles {
+    @include at-media(desktop) {
+      @include grid-row;
+      @include grid-gap;
+    }
+  }
+}
+
+.jcc-tiles-section--has-two-columns {
+  .jcc-tiles__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-tiles-section--has-three-columns {
+  .jcc-tiles__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(4);
+    }
+  }
+}
