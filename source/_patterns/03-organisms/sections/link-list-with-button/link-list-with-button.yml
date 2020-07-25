@@ -1,5 +1,7 @@
-link_list:
-  header: "Link List Simple"
+link_list_with_button:
+  headergroup:
+    brow: "Hidden"
+    title: "Link List with Button"
   files_list: true
   items:
     - url_title: "Form EJ-160"

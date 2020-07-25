@@ -21,3 +21,20 @@
 .jcc-card__excerpt {
   @extend .usa-prose;
 }
+
+.jcc-card__img {
+  height: 200px;
+  overflow: hidden;
+
+  img {
+    min-width: 100%;
+  }
+}
+
+@include at-media(tablet) {
+  .jcc-cards__highlight {
+    .jcc-card__img {
+      height: 300px;
+    }
+  }
+}
