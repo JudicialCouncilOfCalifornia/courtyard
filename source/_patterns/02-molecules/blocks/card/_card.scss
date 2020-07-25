@@ -31,10 +31,22 @@
   }
 }
 
+.jcc-card__vid {
+  .media-oembed-content {
+    height: 200px;
+  }
+}
+
 @include at-media(tablet) {
   .jcc-cards__highlight {
     .jcc-card__img {
       height: 300px;
+    }
+
+    .jcc-card__vid {
+      .media-oembed-content {
+        min-height: 300px;
+      }
     }
   }
 }

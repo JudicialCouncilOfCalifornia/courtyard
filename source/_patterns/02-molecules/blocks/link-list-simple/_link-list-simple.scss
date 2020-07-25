@@ -44,7 +44,7 @@
 .jcc-link-list__button-container {
   @include u-position(relative);
   @include u-left(neg-3);
-  @include u-margin-top(4);
+  @include u-margin-top(2);
   @include u-text-align(center);
 
   @include at-media(desktop) {
