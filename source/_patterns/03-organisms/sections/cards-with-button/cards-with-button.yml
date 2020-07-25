@@ -1,4 +1,5 @@
 cards_with_button:
+  highlight_first: false
   headergroup:
     brow: "Hidden"
     title: "Locations"

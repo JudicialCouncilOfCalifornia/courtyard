@@ -62,4 +62,16 @@
   {% else %}
     {{ lists.list_links(link_list.items, link_list.files_list) }}
   {% endif %}
+
+  {% if link_list.button %}
+    <div class="jcc-link-list__button-container">
+      <div class="jcc-link-list__button">
+        {% if link_list.button %}
+          {% include "@atoms/buttons/link-button.twig" with {
+            link_button: link_list.button
+          } only %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
 </div>
