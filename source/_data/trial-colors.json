@@ -2,7 +2,7 @@
   "theme_color": [
     {
       "label": "base-lightest",
-      "color": "#F9F9F9"
+      "color": "#000000"
     },
     {
       "label": "base-lighter",
@@ -50,11 +50,11 @@
     },
     {
       "label": "primary-dark",
-      "color": "#0B4778"
+      "color": "#1a4480"
     },
     {
       "label": "primary-darker",
-      "color": "#1F303E"
+      "color": "#162e51"
     },
     {
       "label": "secondary-lighter",
@@ -62,19 +62,19 @@
     },
     {
       "label": "secondary-light",
-      "color": "#449DAC"
+      "color": "#4F9E99"
     },
     {
       "label": "secondary",
-      "color": "#168092"
+      "color": "#008480"
     },
     {
       "label": "secondary-dark",
-      "color": "#2A646D"
+      "color": "#0f6460"
     },
     {
       "label": "secondary-darker",
-      "color": "#2C4A4E"
+      "color": "#0b4b3f"
     },
     {
       "label": "accent-warm-light",
