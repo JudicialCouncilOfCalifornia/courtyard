@@ -2,7 +2,7 @@
 
 {% set classes = [
   'usa-checkbox',
-  'jcc-checkbox--' ~ checkbox.style|default(''),
+  checkbox.style|map(s =>  'jcc-checkbox--' ~ s)|join(' '),
 ]|merge(checkbox.classes|default([''])) %}
 
 <div {{attributes.addClass(classes) }}>

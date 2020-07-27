@@ -2,12 +2,15 @@ homepage:
   hero: 
     title: "Self-help guide to the California courts"
     lead: "Resources and information to help you represent yourself in court or work better with a lawyer, including step-by-step guidance for following court procedures and understanding your options."
-  headergroup:
-    brow: ''  
-    title: ''
+    inset_variant: "inset-bottom"
+    background_variant: "has-background-color--dark"
   card_section:
+    headergroup:
+      brow: ''  
+      title: 'What would you like to do?'
     column_variant: "has-three-columns"
     border_variant: "has-border"
+    offset_variant: "offset-up"
     cards:
       - title: "Take action on my court case"
         id: "read-more-1"

@@ -7,9 +7,9 @@ wayfinder_section:
     '<fieldset class="usa-fieldset">
       <legend class="jcc-form-group__title usa-legend sr-only">Select one</legend>
       <div class="jcc-form-group__options">
-      <button class="usa-button usa-button--secondary usa-button--big--tablet usa-button--round usa-button--hollow">This change of name is being requested to escape domestic violence.</button>
-      <button class="usa-button usa-button--secondary usa-button--big--tablet usa-button--round usa-button--hollow">One or more adults is restoring a former name during or following a divorce in California.</button>
-      <button class="usa-button usa-button--secondary usa-button--big--tablet usa-button--round usa-button--hollow">One or more of the persons above are changing their name to conform to their gender identity and asking that the court affirm their gender and issue a new birth certificate.</button>
+      <button class="usa-button usa-button--secondary usa-button--big--desktop usa-button--round usa-button--outline">This change of name is being requested to escape domestic violence.</button>
+      <button class="usa-button usa-button--secondary usa-button--big--desktop usa-button--round usa-button--outline">One or more adults is restoring a former name during or following a divorce in California.</button>
+      <button class="usa-button usa-button--secondary usa-button--big--desktop usa-button--round usa-button--outline">One or more of the persons above are changing their name to conform to their gender identity and asking that the court affirm their gender and issue a new birth certificate.</button>
       </div>
       </fieldset>'
 button_pager:

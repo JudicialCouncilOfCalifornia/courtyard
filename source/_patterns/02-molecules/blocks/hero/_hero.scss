@@ -37,6 +37,12 @@
   }
 }
 
+.jcc-hero--inset-bottom {
+  @include at-media(desktop) {
+    padding-bottom: 10rem;
+  }
+}
+
 .jcc-hero--has-background-color--dark {
   @include dark-background();
 

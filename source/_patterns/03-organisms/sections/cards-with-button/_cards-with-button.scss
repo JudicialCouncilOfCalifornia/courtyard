@@ -5,6 +5,7 @@
   a:not(.usa-button) {
     @include u-text-decoration(no-underline);
     @include light-background-link();
+
     @if $trial {
       @include jcc-text-color(primary-blue-vivid-dark);
     }
@@ -25,6 +26,7 @@
       @include at-media(desktop) {
         @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
       }
+
       @include at-media-max(desktop) {
         @include has-dash-position(
           $dash-color: "mint-cool-40v",
@@ -40,8 +42,8 @@
     @include u-padding(0);
     @include u-display(flex);
     @include u-flex-direction(column);
-    justify-content: flex-start;
     @include u-margin-bottom(0);
+    justify-content: flex-start;
 
     @include at-media(desktop) {
       @include u-flex-direction(row);
@@ -174,6 +176,13 @@
 
     a.usa-button {
       @include u-width(auto);
+    }
+  }
+
+  .jcc-cards__highlight,
+  .jcc-cards__highlight + ul {
+    > li:last-child {
+      @include u-margin-left(2);
     }
   }
 }

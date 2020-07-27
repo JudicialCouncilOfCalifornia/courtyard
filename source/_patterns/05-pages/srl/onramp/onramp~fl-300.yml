@@ -28,7 +28,7 @@ entries:
         body: "<p>The date, time, and place is on the first page.</p><p><a href=\"#\">Need more time to respond or can't attend the hearing</a></p>"
 
       img:
-        src: "/images/onramp-fl-300-hearing-date-and-time.png"
+        src: "/images/photos/onramp-fl-300-hearing-date-and-time.png"
         alt: "Hearing date and time"
 
   - type: "postcard"
@@ -39,7 +39,7 @@ entries:
         lead: ""
         body: "<p>The topic of the request is checked on the first page. Exactly what the person wants the Court to decide and why are on Pages 2-4 and any attachments.</p><p>If \"Change\" is checked it means that there's already an order about this issue and the other party wants that changed.</p> <p>If \"Temporary emergency orders\" is checked it means the other party asked the court to decide something urgent before the hearing. If the Court agreed, item 7 at the bottom of Page 1 will be checked and the orders will be attached. These orders are temporary. They only last until the hearing. You must follow these orders.</p>"
       img:
-        src: "/images/onramp-fl-300-what-the-other-party-is-asking.png"
+        src: "/images/photos/onramp-fl-300-what-the-other-party-is-asking.png"
         alt: "What the other party is asking the court to decide"
 
   - type: "postcard"
@@ -49,7 +49,7 @@ entries:
         lead: ""
         body: '<p>Sometimes the Court makes orders about what one or both sides must do before the hearing. For example, if the hearing is about child custody and visitation, the Court may order you to attend mediation. You must follow any orders listed.</p>'
       img:
-        src: "/images/onramp-fl-300-orders-made-before-the-hearing.png"
+        src: "/images/photos/onramp-fl-300-orders-made-before-the-hearing.png"
         alt: "Orders made before the hearing"
 
   - type: "section"
@@ -78,7 +78,7 @@ entries:
             <li>Attend the hearing. If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
         img:
-          src: "../../images/court.svg"
+          src: "../../images/graphics/court.svg"
           alt: "Alt text"
       - title: "If You Agree"
         excerpt: "
@@ -88,7 +88,7 @@ entries:
             <li>Attend the hearing. If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
           </ul>"
         img:
-          src: "../../images/court.svg"
+          src: "../../images/graphics/court.svg"
           alt: "Alt text"
 
   - type: "section"

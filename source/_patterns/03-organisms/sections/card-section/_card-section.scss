@@ -39,6 +39,25 @@
   }
 }
 
+.jcc-cards-section--offset-up {
+  @include at-media(desktop) {
+    margin-top: -12rem;
+
+    .jcc-header-group__title {
+      @include u-text("white");
+      @include u-text("italic");
+
+      &:after {
+        background-color: transparent;
+      }
+    }
+
+    .jcc-cards {
+      @include u-position("relative");
+    }
+  }
+}
+
 .jcc-cards__container {
   @include section-container;
 }

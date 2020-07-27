@@ -1,0 +1,86 @@
+.jcc-hero--cards {
+  .jcc-hero {
+    @include u-bg("primary-dark");
+
+    @include at-media(desktop) {
+      padding-bottom: 12rem;
+    }
+  }
+
+  .jcc-cards-section {
+    @include at-media(desktop) {
+      margin-top: -14rem;
+
+      .jcc-header-group__title {
+        @include responsive-h3();
+        @include u-text("white");
+        @include u-text("italic");
+        padding-bottom: 0;
+
+        &:after {
+          background-color: transparent;
+        }
+      }
+
+      .jcc-cards {
+        @include u-position("relative");
+
+        .jcc-cards__item {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .jcc-card {
+    @include u-border(2px, "ink");
+    box-shadow: none;
+
+    @include at-media(desktop) {
+      display: flex;
+      height: calc(100% + 1rem);
+      flex-flow: column nowrap;
+    }
+  }
+
+  .jcc-card__title {
+    margin: 0;
+  }
+
+  .jcc-card__content {
+    margin-top: 0.5rem;
+  }
+
+  .jcc-card__body,
+  .jcc-card__content {
+    @include at-media(desktop) {
+      display: flex;
+      height: calc(100% + 1rem);
+      flex-flow: column nowrap;
+    }
+  }
+
+  .jcc-card__footer {
+    padding-top: 0.5rem;
+
+    @include at-media(desktop) {
+      margin-top: auto;
+      padding-top: 0;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    select,
+    .usa-select,
+    input,
+    .usa-input {
+      @include u-margin-y(0);
+    }
+  }
+}

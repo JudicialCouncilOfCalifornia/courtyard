@@ -15,6 +15,16 @@
   {% endif %}
 
   <div class="jcc-card__body">
+    {% if card.excerpt_img %}
+      <div class="jcc-card__img">
+        {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+      </div>
+    {% endif %}
+    {% if card.excerpt_vid %}
+      <div class="jcc-card__vid">
+        {{ card.excerpt_vid }}
+      </div>
+    {% endif %}
     {% if card.brow %}
       <div class="jcc-card__brow">{{ card.brow }}</div>
     {% endif %}
@@ -27,8 +37,13 @@
         {{ card.title }}
       {% endif %}
     </{{ tag }}>
-    {% if card.excerpt %}
-      <div class="jcc-card__excerpt"{% if card.id %} id="{{ card.id }}{% endif %}">{{ card.excerpt }}</div>
-    {% endif %}
+    {% if card.id %}<div class="jcc-card__content" id="{{ card.id }}">{% endif %}
+      {% if card.excerpt %}
+        <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
+      {% endif %}
+      {% if card.footer %}
+        <div class="jcc-card__footer">{{ card.footer }}</div>
+      {% endif %}
+    {% if card.id %}</div>{% endif %}
   </div>
 </div>

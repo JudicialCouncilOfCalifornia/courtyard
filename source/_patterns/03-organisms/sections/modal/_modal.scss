@@ -84,27 +84,12 @@
 
 .jcc-modal .jcc-modal__dialog .jcc-modal__content {
   @extend .usa-prose;
-  a {
-    @include u-text("blue-cool-50v");
-
-    &:hover {
-      @include u-text("blue-cool-40v");
-    }
-
-    &:active,
-    &:focus {
-      @include u-text("blue-cool-40v");
-    }
-
-    &:visited {
-      @include u-text("cyan-40v");
-    }
-  }
 }
 
 .jcc-modal__trigger {
   @include button-unstyled;
   @include u-font-size(sans, md);
+  cursor: pointer;
 }
 
 .jcc-modal__dialog {

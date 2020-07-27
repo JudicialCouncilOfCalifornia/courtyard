@@ -2,7 +2,7 @@ hero_icon_nav:
   contextual_links: FALSE
   style:
   hero_img_banner:
-    background_img: '../../images/alameda.jpg'
+    background_img: '../../images/photos/alameda.jpg'
     brow: 'Welcome to the'
     title: 'Superior Court of Alameda'
     subtitle: 'What would you like to do?'

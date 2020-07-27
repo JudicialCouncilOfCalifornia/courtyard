@@ -25,12 +25,10 @@ if (themeSwitcher) {
   if (theme == "srl") {
     document.getElementById("trial").disabled = true;
     themeSwitcher.value = theme;
-    console.log(theme);
   }
 
   if (theme == "trial-court") {
     document.getElementById("trial").disabled = false;
     themeSwitcher.value = theme;
-    console.log(theme);
   }
 }

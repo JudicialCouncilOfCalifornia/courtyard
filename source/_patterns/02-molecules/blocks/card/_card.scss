@@ -27,10 +27,39 @@
   @extend .usa-prose;
 }
 
-.jcc-card__excerpt[aria-hidden="true"] {
+.jcc-card__content[aria-hidden="true"] {
   @include u-display(none);
 
   @include at-media(tablet) {
     @include u-display(block);
+  }
+}
+
+.jcc-card__img {
+  height: 200px;
+  overflow: hidden;
+
+  img {
+    min-width: 100%;
+  }
+}
+
+.jcc-card__vid {
+  .media-oembed-content {
+    height: 200px;
+  }
+}
+
+@include at-media(tablet) {
+  .jcc-cards__highlight {
+    .jcc-card__img {
+      height: 300px;
+    }
+
+    .jcc-card__vid {
+      .media-oembed-content {
+        min-height: 300px;
+      }
+    }
   }
 }

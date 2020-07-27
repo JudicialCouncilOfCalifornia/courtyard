@@ -1,6 +1,16 @@
 side_nav:
   aria_label: "Table of Contents"
-  theme_classes: "pager mobile"
+  theme_classes:
+  #expand_icon:
+  #  name: "add"
+  #  width: "width-3"
+  #  height: "height-3"
+  #collapse_icon:
+  #  name: "remove"
+  #  width: "width-3"
+  #  height: "height-3"
+  #alt_expand_icon: "fas fa-chevron-down"
+  #alt_collapse_icon: "fas fa-chevron-up"
   header: "Side Nav"
   items:
     - title: "Home"
