@@ -5,12 +5,12 @@ var theme = localStorage["theme"] || "srl";
 var toggle = (selector, display = null) => {
   Array.from(document.getElementsByClassName(selector)).forEach(element => {
     if (display) {
-      element.style.display = display
+      element.style.display = display;
     } else {
-      element.style.display = element.style.display == "none" ? "block" : "none"
+      element.style.display = element.style.display == "none" ? "block" : "none";
     }
   });
-}
+};
 
 if (themeSwitcher) {
   themeSwitcher.addEventListener("change", function() {
