@@ -1,5 +1,6 @@
 tile_section:
   column_variant: "has-one-columns"
+  emphasis_variant: ""
   tiles:
     -
       brow: 'Go to'

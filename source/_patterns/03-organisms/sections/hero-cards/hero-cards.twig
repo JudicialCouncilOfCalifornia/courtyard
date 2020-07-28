@@ -1,7 +1,12 @@
-<div class="jcc-hero--cards">
-  {% include '@molecules/blocks/hero/hero.twig' with { hero: homepage.hero } %}
+{% set classes = [
+  'jcc-hero--cards',
+  'jcc-hero--cards--' ~ hero_cards.background_variant|default('has-background-color--transparent')
+]|merge(tile_section.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% include '@molecules/blocks/hero/hero.twig' with { hero: hero_cards.hero } %}
   {% include '@organisms/sections/card-section/card-section.twig' with { 
-    headergroup: homepage.headergroup,
-    card_section: homepage.card_section 
+    headergroup: hero_cards.headergroup,
+    card_section: hero_cards.card_section 
   } %}
 </div>
