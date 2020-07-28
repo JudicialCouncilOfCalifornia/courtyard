@@ -1,0 +1,112 @@
+<a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
+
+<div class="jcc-header-hat">
+  <div class="jcc-header-hat__container">
+    <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
+  </div>
+</div>
+
+<header class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
+  {% if header_base.basic %}<div class="usa-nav-container">{% endif %}
+    
+    <div class="usa-navbar">
+      
+      <div class="usa-logo" id="basic-logo">
+        <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">{{ header_base.title }}</a></em>
+      </div>
+
+      <button class="usa-menu-btn">Menu</button>
+
+    </div>
+
+    <nav aria-label="Primary navigation" class="usa-nav">
+      
+      {% if header_base.extended %}<div class="usa-nav__inner">{% endif %}
+
+      <button class="usa-nav__close"><img src="../../img/close.svg" role="img" alt="close"></button>
+      
+      <ul class="usa-nav__primary usa-accordion">
+        
+        <li class="usa-nav__primary-item">
+          <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="basic-nav-section-one"><span>Current section</span></button>
+          <ul id="basic-nav-section-one" class="usa-nav__submenu">
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link" href="#"><span>Simple link</span></a>
+        </li>
+
+      </ul>
+
+      {% if header_base.extended %}<div class="usa-nav__secondary">{% endif %}
+      <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_base.search.form_action|default('/search') }}">
+        {% include '@atoms/forms/search-input.twig' with {
+          search_input: header_base.search.search_input
+        }%}
+      </form>
+      {% if header_base.extended %}</div>{% endif %}
+      {% if header_base.extended %}</div>{% endif %}
+
+    </nav>
+
+  {% if header_base.basic %}</div>{% endif %}
+</header>
+
+{# 
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="basic-logo">
+        <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">Project title</a></em>
+      </div>
+      
+      <button class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button class="usa-nav__close"><img src="/assets/img/close.svg" role="img" alt="close"></button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="basic-nav-section-one"><span>Current section</span></button>
+          <ul id="basic-nav-section-one" class="usa-nav__submenu">
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="basic-nav-section-two"><span>Section</span></button>
+          <ul id="basic-nav-section-two" class="usa-nav__submenu">
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="#" class=""> Navigation link</a>
+            </li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a class="usa-nav__link" href="javascript:void(0)"><span>Simple link</span></a>
+        </li>
+      </ul>
+      <form class="usa-search usa-search--small " role="search">
+        <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
+        <input class="usa-input" id="basic-search-field-small" type="search" name="search">
+        <button class="usa-button" type="submit"><span class="usa-sr-only">Search</span></button>
+      </form>
+    </nav>
+  </div>
+</header> #}

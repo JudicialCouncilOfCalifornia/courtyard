@@ -1,0 +1,12 @@
+header_base:
+  basic: false
+  extended: true
+  skip: 'Skip to main content'
+  hat:
+    title: 'California Courts'
+    url: '#'
+  title: 'Alameda Superior Court'
+  search:
+    form_action: "/search"
+    search_input:
+      form_input_name: "keyword"

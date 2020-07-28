@@ -5,9 +5,12 @@
   @include u-width("full");
 
   .usa-input {
-    @include u-border(0);
-    @include u-bg(primary-lighter);
     @include u-margin-top(0);
+
+    @if ($trial) {
+      @include u-border(0);
+      @include u-bg(primary-lighter);
+    }
   }
 
   button {

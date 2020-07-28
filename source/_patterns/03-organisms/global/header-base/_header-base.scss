@@ -1,0 +1,106 @@
+.jcc-header--base {
+  @include u-border-top("05", accent-warm);
+  @include u-border-bottom(1px, base-light);
+
+  @include at-media(desktop) {
+  }
+
+  .usa-logo {
+    @include u-display(flex);
+
+    @include at-media(desktop) {
+      @include u-margin(0);
+      height: 5.625rem;
+    }
+  }
+
+  .usa-logo__text {
+    @include u-text(normal);
+    @include u-font-family(serif);
+  }
+
+  .usa-logo__text {
+    align-self: center;
+  }
+
+  .usa-nav {
+    align-self: center;
+  }
+
+  .usa-nav-container {
+    @include at-media(desktop) {
+      @include u-maxw(widescreen);
+    }
+  }
+
+  .usa-nav__primary button,
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    @include u-text(primary, normal);
+    @include u-font(sans, 6);
+    @include u-font-family(sans);
+
+    @include at-media(desktop) {
+      height: 5.625rem;
+    }
+  }
+
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    @include u-display(flex);
+
+    span {
+      @include u-display(inline-block);
+      align-self: center;
+    }
+  }
+
+  &.usa-header--basic .usa-current::after,
+  &.usa-header--basic .usa-nav__link:hover::after,
+  &.usa-header--extended .usa-current::after,
+  &.usa-header--extended .usa-nav__link:hover::after {
+    @include at-media(desktop) {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.usa-header--extended {
+    .usa-navbar,
+    .usa-nav__inner {
+      @include at-media(desktop) {
+        @include u-maxw(widescreen);
+      }
+    }
+  }
+
+  .usa-nav__secondary {
+    @include at-media(desktop) {
+      bottom: 7rem;
+    }
+  }
+}
+
+.jcc-header-hat {
+  @include u-padding-y(1);
+  @include u-text("white");
+  @include u-bg(primary-darker);
+}
+
+.jcc-header-hat__logo {
+  @include u-text("white", no-italic);
+  @include u-font-family(serif);
+
+  a {
+    @include u-text("white", no-underline, no-italic);
+  }
+}
+
+.jcc-header-hat__container {
+  @include u-maxw(widescreen);
+  @include u-display(flex);
+  @include u-padding-x(2);
+  @include u-margin-x(auto);
+
+  @include at-media(desktop) {
+    @include u-padding-x(4);
+  }
+}
