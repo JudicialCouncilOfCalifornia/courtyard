@@ -1,8 +1,17 @@
 header_base:
-  basic: true
-  extended: false
+  height_variant: 'basic'
   skip: 'Skip to main content'
   hat:
-    title: 'California Courts'
+    title: 'Judicial Branch of California'
     url: '#'
   title: 'Alameda Superior Court'
+  secondary_nav:
+    items:
+      - name: "Supreme Court"
+        url: "#"
+      - name: "Courts of Appeal"
+        url: "#"
+      - name: "Superior Courts"
+        url: "#"
+      - name: "Newsroom"
+        url: "#"

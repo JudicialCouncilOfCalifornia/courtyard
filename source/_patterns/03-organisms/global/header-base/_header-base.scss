@@ -32,7 +32,7 @@
 
   .usa-nav__primary button,
   .usa-nav__primary > .usa-nav__primary-item > a {
-    @include u-text(primary, normal);
+    @include u-text(normal);
     @include u-font(sans, 6);
     @include u-font-family(sans);
 
@@ -57,6 +57,20 @@
     @include at-media(desktop) {
       left: 0;
       right: 0;
+    }
+  }
+
+  &.usa-header--basic {
+    .usa-nav {
+      @include at-media(desktop) {
+        position: relative;
+      }
+    }
+
+    .jcc-nav-secondary__menu {
+      @include at-media(desktop) {
+        top: -2.25rem;
+      }
     }
   }
 
@@ -117,14 +131,26 @@
 }
 
 .jcc-nav-secondary__menu {
+  @include at-media-max(desktop) {
+    display: inline-block;
+  }
+
   @include at-media(desktop) {
     position: absolute;
     top: -7.75rem;
     right: 2rem;
   }
 
+  .jcc-inline-nav__item {
+    @include u-margin-right(4);
+
+    &:last-child {
+      @include u-margin-right(0);
+    }
+  }
+
   a {
-    @include u-font(sans, 6);
+    @include u-font(sans, 5);
     @include u-text(no-underline);
 
     @include at-media(desktop) {
@@ -133,28 +159,72 @@
   }
 }
 
-// .jcc-header-hat__menu {
-//   @include at-media(desktop) {
-//     @include u-maxw(widescreen);
-//     @include u-margin-x(auto);
-//     @include u-padding-x(4);
-//   }
+// Mobile Nav
+.usa-nav {
+  @include at-media-max(desktop) {
+    width: 100%;
+    top: 43px;
+  }
+}
 
-//   a {
-//     @include u-font(sans, 6);
-//     @include u-text("white", no-underline);
-//   }
-// }
+.jcc-nav-secondary__menu {
+  @include at-media-max(desktop) {
+    order: 2;
+  }
 
-// .jcc-header-hat__nav {
-//   @include at-media(desktop) {
-//     width: 100%;
-//   }
-// }
+  .jcc-inline-nav {
+    @include at-media-max(desktop) {
+      flex-wrap: wrap;
+    }
 
-// .jcc-header-hat__nav {
-//   @include at-media-max(desktop) {
-//     position: absolute;
-//     bottom: 0;
-//   }
-// }
+    li {
+      @include at-media-max(desktop) {
+        width: 50%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Theme
+.jcc-header--base {
+  .usa-logo a {
+    @include u-text(primary-dark);
+  }
+
+  .usa-nav__primary button,
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    @include u-text(primary);
+  }
+
+  &.usa-header--extended .usa-nav {
+    @include u-bg(primary-lighter);
+  }
+
+  .usa-nav__secondary .usa-accordion__button {
+    @include u-bg(primary-lighter);
+  }
+
+  &.jcc-header--inverted {
+    &.usa-header {
+      @include u-bg(primary-darker);
+    }
+
+    .usa-logo a {
+      @include u-text("white");
+    }
+
+    .usa-nav__primary button,
+    .usa-nav__primary > .usa-nav__primary-item > a {
+      @include u-text("white");
+    }
+
+    &.usa-header--extended .usa-nav {
+      @include u-bg(primary-dark);
+    }
+
+    .usa-nav__primary button[aria-expanded="false"] {
+      background-image: url(../img/angle-arrow-down-white.svg);
+    }
+  }
+}

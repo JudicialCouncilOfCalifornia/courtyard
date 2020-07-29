@@ -1,3 +1,10 @@
+{% set classes = [
+  'usa-header',
+  'jcc-header--base',
+  'usa-header--' ~ header_base.height_variant|default('basic'),
+  'jcc-header--' ~ header_base.background_variant|default(''),
+]|merge(text_section.classes|default([''])) %}
+
 <a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
 
 <header class="jcc-header--outer">
@@ -8,8 +15,8 @@
     </div>
   </div>
 
-  <div class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
-    {% if header_base.basic %}<div class="usa-nav-container">{% endif %}
+  <div class="{{ classes|join(' ')|trim }}">
+    {% if header_base.height_variant == 'basic' %}<div class="usa-nav-container">{% endif %}
       
       <div class="usa-navbar">
         
@@ -23,83 +30,25 @@
 
       <nav aria-label="Primary navigation" class="usa-nav">
         
-        {% if header_base.extended %}<div class="usa-nav__inner">{% endif %}
+        {% if header_base.height_variant == 'extended' %}<div class="usa-nav__inner">{% endif %}
 
         <button class="usa-nav__close"><img src="../../img/close.svg" role="img" alt="close"></button>
         
         {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
 
-        {% if header_base.extended %}
+        {% if header_base.height_variant == 'extended' %}
         {% include '@molecules/navigation/nav-secondary-base/nav-secondary-base.twig' %}
         {% endif %}
         <nav class="jcc-nav-secondary__menu">
-        {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+        {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
+            inline_nav : header_base.secondary_nav
+        } %}
         </nav>
-        {% if header_base.extended %}</div>{% endif %}
+        {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
       </nav>
 
-    {% if header_base.basic %}</div>{% endif %}
+    {% if header_base.height_variant == 'basic' %}</div>{% endif %}
   </div>
 
-{#   <div class="jcc-header-hat__nav">
-    <nav class="jcc-header-hat__menu">
-    {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
-    </nav>
-  </div> #}
 <header>
-
-{# 
-<a class="usa-skipnav" href="#main-content">Skip to main content</a>
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo" id="basic-logo">
-        <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">Project title</a></em>
-      </div>
-      
-      <button class="usa-menu-btn">Menu</button>
-    </div>
-    <nav aria-label="Primary navigation" class="usa-nav">
-      <button class="usa-nav__close"><img src="/assets/img/close.svg" role="img" alt="close"></button>
-      <ul class="usa-nav__primary usa-accordion">
-        <li class="usa-nav__primary-item">
-          <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="basic-nav-section-one"><span>Current section</span></button>
-          <ul id="basic-nav-section-one" class="usa-nav__submenu">
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-          </ul>
-        </li>
-        <li class="usa-nav__primary-item">
-          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="basic-nav-section-two"><span>Section</span></button>
-          <ul id="basic-nav-section-two" class="usa-nav__submenu">
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-          </ul>
-        </li>
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link" href="javascript:void(0)"><span>Simple link</span></a>
-        </li>
-      </ul>
-      <form class="usa-search usa-search--small " role="search">
-        <label class="usa-sr-only" for="basic-search-field-small">Search small</label>
-        <input class="usa-input" id="basic-search-field-small" type="search" name="search">
-        <button class="usa-button" type="submit"><span class="usa-sr-only">Search</span></button>
-      </form>
-    </nav>
-  </div>
-</header> #}
