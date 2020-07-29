@@ -3,6 +3,7 @@
 .usa-input,
 .usa-textarea {
   @include u-border(2px);
+  height: 3.25rem;
 }
 
 .form-required::after {

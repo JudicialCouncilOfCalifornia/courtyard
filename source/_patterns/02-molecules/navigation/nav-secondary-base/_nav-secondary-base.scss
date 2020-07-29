@@ -1,0 +1,16 @@
+.usa-nav__secondary {
+  @include u-display(flex);
+  @include u-flex("justify-end");
+
+  .usa-accordion {
+    width: auto;
+  }
+
+  .usa-accordion li {
+  }
+
+  .usa-accordion__button {
+    @include u-padding-y(0);
+    height: 3.25rem;
+  }
+}

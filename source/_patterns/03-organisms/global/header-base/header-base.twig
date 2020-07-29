@@ -1,12 +1,18 @@
 <a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
 
+<header class="jcc-header--outer">
+
 <div class="jcc-header-hat">
   <div class="jcc-header-hat__container">
     <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
+
+    <nav class="jcc-header-hat__menu">
+    {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+    </nav>
   </div>
 </div>
 
-<header class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
+<div class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
   {% if header_base.basic %}<div class="usa-nav-container">{% endif %}
     
     <div class="usa-navbar">
@@ -25,36 +31,18 @@
 
       <button class="usa-nav__close"><img src="../../img/close.svg" role="img" alt="close"></button>
       
-      <ul class="usa-nav__primary usa-accordion">
-        
-        <li class="usa-nav__primary-item">
-          <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="basic-nav-section-one"><span>Current section</span></button>
-          <ul id="basic-nav-section-one" class="usa-nav__submenu">
-            <li class="usa-nav__submenu-item">
-              <a href="#" class=""> Navigation link</a>
-            </li>
-          </ul>
-        </li>
+      {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
 
-        <li class="usa-nav__primary-item">
-          <a class="usa-nav__link" href="#"><span>Simple link</span></a>
-        </li>
-
-      </ul>
-
-      {% if header_base.extended %}<div class="usa-nav__secondary">{% endif %}
-      <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_base.search.form_action|default('/search') }}">
-        {% include '@atoms/forms/search-input.twig' with {
-          search_input: header_base.search.search_input
-        }%}
-      </form>
-      {% if header_base.extended %}</div>{% endif %}
+      {% if header_base.extended %}
+      {% include '@molecules/navigation/nav-secondary-base/nav-secondary-base.twig' %}
+      {% endif %}
       {% if header_base.extended %}</div>{% endif %}
 
     </nav>
 
   {% if header_base.basic %}</div>{% endif %}
-</header>
+</div>
+<header>
 
 {# 
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>

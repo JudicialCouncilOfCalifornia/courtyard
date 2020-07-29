@@ -1,8 +1,7 @@
 .jcc-inline-nav {
   @include add-list-reset;
   @include u-display(flex);
-  @include u-margin-y(1);
-  @include u-margin-x(0);
+  @include u-margin(0);
 }
 
 .jcc-inline-nav__item {

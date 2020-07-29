@@ -16,7 +16,7 @@
   button {
     @include u-position("absolute");
     @include u-right(1);
-    @include u-top(1);
+    @include u-top(1.5);
     @include u-border(0);
     @include u-bg("transparent");
 

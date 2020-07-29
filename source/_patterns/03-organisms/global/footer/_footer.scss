@@ -1,6 +1,6 @@
 .jcc-footer,
 .jcc-footer_menu,
-.jcc-inline-nav__item a {
+.jcc-footer .jcc-inline-nav__item a {
   @include u-text("base-lightest");
 }
 
@@ -32,6 +32,7 @@
 .jcc-footer_menu {
   @include u-display(block);
   @include grid-col(12);
+  @include u-margin-y(1);
 
   @include at-media(desktop) {
     @include grid-col;

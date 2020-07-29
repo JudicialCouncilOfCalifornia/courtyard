@@ -2,9 +2,6 @@
   @include u-border-top("05", accent-warm);
   @include u-border-bottom(1px, base-light);
 
-  @include at-media(desktop) {
-  }
-
   .usa-logo {
     @include u-display(flex);
 
@@ -70,6 +67,12 @@
         @include u-maxw(widescreen);
       }
     }
+
+    .usa-nav__link {
+      @include at-media(desktop) {
+        @include u-padding-y(0);
+      }
+    }
   }
 
   .usa-nav__secondary {
@@ -99,8 +102,16 @@
   @include u-display(flex);
   @include u-padding-x(2);
   @include u-margin-x(auto);
+  @include u-flex("justify");
 
   @include at-media(desktop) {
     @include u-padding-x(4);
+  }
+}
+
+.jcc-header-hat__menu {
+  a {
+    @include u-font(sans, 6);
+    @include u-text("white", no-underline);
   }
 }
