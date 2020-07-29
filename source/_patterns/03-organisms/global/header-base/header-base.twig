@@ -2,46 +2,51 @@
 
 <header class="jcc-header--outer">
 
-<div class="jcc-header-hat">
-  <div class="jcc-header-hat__container">
-    <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
+  <div class="jcc-header-hat">
+    <div class="jcc-header-hat__container">
+      <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
+    </div>
+  </div>
 
+  <div class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
+    {% if header_base.basic %}<div class="usa-nav-container">{% endif %}
+      
+      <div class="usa-navbar">
+        
+        <div class="usa-logo" id="basic-logo">
+          <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">{{ header_base.title }}</a></em>
+        </div>
+
+        <button class="usa-menu-btn">Menu</button>
+
+      </div>
+
+      <nav aria-label="Primary navigation" class="usa-nav">
+        
+        {% if header_base.extended %}<div class="usa-nav__inner">{% endif %}
+
+        <button class="usa-nav__close"><img src="../../img/close.svg" role="img" alt="close"></button>
+        
+        {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
+
+        {% if header_base.extended %}
+        {% include '@molecules/navigation/nav-secondary-base/nav-secondary-base.twig' %}
+        {% endif %}
+        <nav class="jcc-nav-secondary__menu">
+        {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
+        </nav>
+        {% if header_base.extended %}</div>{% endif %}
+
+      </nav>
+
+    {% if header_base.basic %}</div>{% endif %}
+  </div>
+
+{#   <div class="jcc-header-hat__nav">
     <nav class="jcc-header-hat__menu">
     {% include '@molecules/navigation/inline-nav/inline-nav.twig' %}
     </nav>
-  </div>
-</div>
-
-<div class="jcc-header--base usa-header {% if header_base.basic %}usa-header--basic{% endif %}{% if header_base.extended %} usa-header--extended{% endif %}">
-  {% if header_base.basic %}<div class="usa-nav-container">{% endif %}
-    
-    <div class="usa-navbar">
-      
-      <div class="usa-logo" id="basic-logo">
-        <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">{{ header_base.title }}</a></em>
-      </div>
-
-      <button class="usa-menu-btn">Menu</button>
-
-    </div>
-
-    <nav aria-label="Primary navigation" class="usa-nav">
-      
-      {% if header_base.extended %}<div class="usa-nav__inner">{% endif %}
-
-      <button class="usa-nav__close"><img src="../../img/close.svg" role="img" alt="close"></button>
-      
-      {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
-
-      {% if header_base.extended %}
-      {% include '@molecules/navigation/nav-secondary-base/nav-secondary-base.twig' %}
-      {% endif %}
-      {% if header_base.extended %}</div>{% endif %}
-
-    </nav>
-
-  {% if header_base.basic %}</div>{% endif %}
-</div>
+  </div> #}
 <header>
 
 {# 
