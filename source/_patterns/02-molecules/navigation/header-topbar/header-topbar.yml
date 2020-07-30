@@ -1,6 +1,6 @@
 header_topbar:
   logo:
-    src: "../../images/logo/jcc-logo-long.png"
+    src: "../../images/logos/jcc-logo-long.png"
     alt: "trial"
   home_url: "#"
   dropbutton:

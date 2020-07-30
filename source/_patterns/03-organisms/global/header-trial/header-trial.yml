@@ -117,7 +117,7 @@ header_trial:
             url: "#"
   mobile:
     logo:
-      src: "../../images/logo/jcc-logo-long.png"
+      src: "../../images/logos/jcc-logo-long.png"
       alt: "trial"
     globe:
       name: "globe"
