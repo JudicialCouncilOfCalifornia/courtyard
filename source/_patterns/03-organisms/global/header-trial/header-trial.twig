@@ -3,8 +3,7 @@
     <div class="desktop">
 
       {% include '@molecules/navigation/header-topbar/header-topbar.twig' with {
-        header_topbar: header_trial.header_topbar,
-        hide_translation: header_trial.hide_translation
+        header_topbar: header_trial.header_topbar
       } %}
       {% include '@molecules/navigation/primary-nav/primary-nav.twig' with {
         primary_nav: header_trial.primary_nav
@@ -36,7 +35,7 @@
         {# END #}
 
         {# BEGIN translate options #}
-        {% if header_trial.hide_translation == 0 %}
+        {% if not header_trial.header_topbar.hide_translation == 1 %}
           <a id="translate" tabindex="0" role="button" aria-label="Change language selection. Open or close menu by using ENTER key now." aria-haspopup="true" class="mobile_button translate">
             {% include '@atoms/icons/icon.twig' with {
               icon : header_trial.mobile.globe
