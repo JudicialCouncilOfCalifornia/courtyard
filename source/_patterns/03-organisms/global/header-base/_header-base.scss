@@ -83,8 +83,8 @@
     @include u-display(block);
 
     &:hover {
-      @include u-padding(2.5);
       @include u-text(no-underline);
+      @include u-padding(2.5);
     }
   }
 
@@ -445,9 +445,17 @@
       @include u-bg(primary);
       @include u-text("white");
 
+      @include at-media(desktop) {
+        @include u-bg(primary-darker);
+      }
+
       &:hover {
         @include u-bg(primary-dark);
         @include u-text("white");
+
+        @include at-media(desktop) {
+          @include u-bg(primary-dark);
+        }
       }
     }
   }
