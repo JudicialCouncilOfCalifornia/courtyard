@@ -5,6 +5,14 @@ header_base:
     title: 'Judicial Branch of California'
     url: '#'
   title: 'Alameda Superior Court'
+  menu_icon:
+    name: 'menu'
+    title: "Menu"
+    decorative: false
+  close_icon:
+    name: 'close'
+    title: "close"
+    decorative: false
   secondary_nav:
     items:
       - name: "Supreme Court"
@@ -15,3 +23,22 @@ header_base:
         url: "#"
       - name: "Newsroom"
         url: "#"
+  nav_secondary:
+    search:
+      form_action: "/search"
+      search_input:
+        form_input_name: "keyword"
+    accordion_button:
+      id: 'extended-nav-section-two'
+      icon:
+        name: "translate"
+        title: "Translate"
+        decorative: true
+      label: "Translate"
+      links:
+        - title: "English"
+          href: "#"
+        - title: "Spanish"
+          href: "#"
+        - title: "Vietnamese"
+          href: "#"
