@@ -1,7 +1,7 @@
 header_trial:
   header_topbar:
     logo:
-      src: "../../images/logos/jcc-logo-long.png"
+      src: "../../images/jcc-logo-long.png"
       alt: "trial"
     dropbutton:
       icon:
@@ -127,3 +127,4 @@ header_trial:
       name: "search"
       title: "Search"
       decorative: true
+  hide_translation: 1
