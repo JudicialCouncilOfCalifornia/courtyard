@@ -6,7 +6,6 @@
 ]|merge(text_section.classes|default([''])) %}
 
 <a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
-
 <div class="jcc-header-hat">
   <div class="jcc-header-hat__container">
     <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
@@ -28,25 +27,27 @@
         } %}
       </button>
 
-    </div>
-
-    <nav aria-label="Primary navigation" class="usa-nav">
-      
-      {% if header_base.height_variant == 'extended' %}<div class="usa-nav__inner">{% endif %}
-
       <button class="usa-nav__close">
         {% include '@atoms/icons/icon.twig' with {
           icon: header_base.close_icon
         } %}
       </button>
-      
-      {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
 
+    </div>
+
+    <nav aria-label="Primary navigation" class="usa-nav">
+      
+      {% if header_base.height_variant == 'extended' %}<div class="usa-nav__inner">{% endif %}
+      
+      {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' with {
+          primary_nav: header_base.primary_nav
+      } %}
       {% if header_base.height_variant == 'extended' %}<div class="usa-nav__secondary">{% endif %}
       
-
+      {% if header_base.nav_secondary.accordion_button or header_base.nav_secondary.search %}
       <div class="jcc-nav-secondary__group">
         
+        {% if header_base.nav_secondary.accordion_button %}
         <ul class="jcc-translate usa-accordion">
           <li>
             <button class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-two">
@@ -64,22 +65,28 @@
             </ul>
           </li>
         </ul>
+        {% endif %}
 
+        {% if header_base.nav_secondary.search %}
         <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ nav_secondary.search.form_action|default('/search') }}">
           {% include '@atoms/forms/search-input.twig' with {
             search_input: header_base.nav_secondary.search.search_input
           }%}
         </form>
+        {% endif %}
       
       </div>
+      {% endif %}
       
       {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
+      {% if header_base.secondary_nav %}
       <nav class="jcc-nav-secondary__menu">
       {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
-          inline_nav : header_base.secondary_nav
+        inline_nav : header_base.secondary_nav
       } %}
       </nav>
+      {% endif %}
       {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
     </nav>

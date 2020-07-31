@@ -23,6 +23,8 @@ header_base:
         url: "#"
       - name: "Newsroom"
         url: "#"
+  primary_nav:
+    nav_variant: 'simple'
   nav_secondary:
     search:
       form_action: "/search"

@@ -1,6 +1,7 @@
 $jcc-nav-link-height: 5.625rem;
 $jcc-nav-input-height: 3.25rem;
-$jcc-nav-icon-size: 3.75rem;
+$jcc-navbar-height: 3.75rem;
+$jcc-nav-icon-size: 2.5rem;
 
 // Header Hat
 .jcc-header-hat {
@@ -62,12 +63,12 @@ $jcc-nav-icon-size: 3.75rem;
   .usa-nav__close,
   .usa-menu-btn {
     @include u-text(primary); // theme
-    width: $jcc-nav-icon-size;
-    height: $jcc-nav-icon-size;
+    width: $jcc-navbar-height;
+    height: $jcc-navbar-height;
 
     .icon {
-      width: 2rem;
-      height: 2rem;
+      width: $jcc-nav-icon-size;
+      height: $jcc-nav-icon-size;
     }
   }
 
@@ -77,9 +78,10 @@ $jcc-nav-icon-size: 3.75rem;
 
   .usa-nav__close {
     @include u-bg("white"); // theme
-    margin: 0;
-    position: absolute;
-    top: -3.75rem;
+    @include u-margin(0);
+    @include u-position(absolute);
+    @include u-display(none);
+    top: auto;
     right: 0;
     z-index: 10;
   }
@@ -89,9 +91,8 @@ $jcc-nav-icon-size: 3.75rem;
     align-self: center;
 
     @include at-media-max(desktop) {
-      width: 100%;
-      padding: 0;
-      overflow: visible;
+      @include u-width(full);
+      @include u-padding(0);
     }
 
     &.is-visible {
@@ -103,16 +104,22 @@ $jcc-nav-icon-size: 3.75rem;
   }
 
   .usa-navbar {
-    border: 0;
+    @include u-border(0);
 
     @include at-media-max(desktop) {
-      height: $jcc-nav-icon-size;
+      height: $jcc-navbar-height;
     }
   }
 
   .usa-nav-container {
     @include at-media(desktop) {
       @include u-maxw(widescreen);
+    }
+  }
+
+  .jcc-nav-secondary__group {
+    .usa-nav__link:hover::after {
+      height: 0;
     }
   }
 
@@ -130,19 +137,13 @@ $jcc-nav-icon-size: 3.75rem;
   &.usa-header--basic {
     .usa-nav {
       @include at-media(desktop) {
-        position: relative;
+        @include u-position(relative);
       }
     }
 
     .jcc-nav-secondary__menu {
       @include at-media(desktop) {
-        top: -2.25rem;
-      }
-    }
-
-    .jcc-nav-secondary__group {
-      .usa-nav__link:hover::after {
-        height: 0;
+        top: -2.025rem;
       }
     }
   }
@@ -151,7 +152,7 @@ $jcc-nav-icon-size: 3.75rem;
   &.usa-header--extended {
     .usa-nav {
       @include u-bg(primary-lighter); // theme
-      border: 0;
+      @include u-border(0);
     }
 
     .usa-navbar,
@@ -167,7 +168,14 @@ $jcc-nav-icon-size: 3.75rem;
       }
     }
 
-    .usa-nav__secondary {
+    .usa-nav__submenu.usa-megamenu {
+      @include u-padding-left(0);
+    }
+
+    .jcc-nav-secondary__menu {
+      @include at-media(desktop) {
+        right: 2rem;
+      }
     }
   }
 
@@ -202,5 +210,11 @@ $jcc-nav-icon-size: 3.75rem;
     @include at-media-max(desktop) {
       top: 36px;
     }
+  }
+}
+
+.usa-js-mobile-nav--active {
+  .jcc-header-base .usa-nav__close {
+    @include u-display(block);
   }
 }

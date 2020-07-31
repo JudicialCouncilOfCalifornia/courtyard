@@ -1,11 +1,12 @@
 $jcc-nav-link-height: 5.625rem;
+$jcc-nav-link-padding: 2.5;
 $jcc-nav-input-height: 3.25rem;
 
 .jcc-header-base {
   // nav primary
   .usa-nav__primary {
     @include at-media-max(desktop) {
-      margin: 0;
+      @include u-margin(0);
     }
 
     .usa-nav__primary-item {
@@ -15,15 +16,14 @@ $jcc-nav-input-height: 3.25rem;
     }
 
     a {
-      @include u-padding(2.5);
+      @include u-padding($jcc-nav-link-padding);
     }
 
     button,
     > .usa-nav__primary-item > a {
-      @include u-padding(2.5);
+      @include u-padding($jcc-nav-link-padding);
       @include u-text(semibold);
       @include u-font(sans, 6);
-      @include u-font-family(sans);
       @include u-text(primary); // theme
 
       @include at-media-max(desktop) {
@@ -91,7 +91,7 @@ $jcc-nav-input-height: 3.25rem;
 
       a {
         @include u-text(no-underline);
-        @include u-padding(2.5);
+        @include u-padding($jcc-nav-link-padding);
         @include u-display(block);
         @include u-bg(primary); // theme
         @include u-text("white"); // theme
@@ -102,7 +102,7 @@ $jcc-nav-input-height: 3.25rem;
 
         &:hover {
           @include u-text(no-underline);
-          @include u-padding(2.5);
+          @include u-padding($jcc-nav-link-padding);
           @include u-bg(primary-dark); // theme
           @include u-text("white"); // theme
 
@@ -113,8 +113,26 @@ $jcc-nav-input-height: 3.25rem;
       }
 
       & + * {
-        margin-top: 0;
+        @include u-margin-top(0);
       }
+    }
+  }
+
+  .usa-megamenu.usa-nav__submenu {
+    @include at-media(desktop) {
+      @include u-padding-y(2);
+    }
+
+    .usa-nav__submenu-item {
+      @include at-media(desktop) {
+        @include u-border-top(0);
+      }
+    }
+  }
+
+  .usa-megamenu .grid-row {
+    @include at-media-max(desktop) {
+      @include u-display(block);
     }
   }
 
@@ -123,7 +141,7 @@ $jcc-nav-input-height: 3.25rem;
     @include u-display(block);
 
     @include at-media-max(desktop) {
-      margin: 0;
+      @include u-margin(0);
     }
 
     @include at-media(desktop) {
@@ -139,7 +157,7 @@ $jcc-nav-input-height: 3.25rem;
 
       @include at-media-max(desktop) {
         @include u-border-y(1px, base-light);
-        @include u-padding(2.5);
+        @include u-padding($jcc-nav-link-padding);
       }
     }
 
@@ -166,7 +184,7 @@ $jcc-nav-input-height: 3.25rem;
     .usa-nav__submenu-item a {
       @include at-media-max(desktop) {
         @include u-display(block);
-        @include u-padding(2.5);
+        @include u-padding($jcc-nav-link-padding);
       }
     }
   }
@@ -175,14 +193,14 @@ $jcc-nav-input-height: 3.25rem;
     @include u-bg(primary-darker);
 
     @include at-media-max(desktop) {
-      display: block;
+      @include u-display(block);
       order: 2;
     }
 
     @include at-media(desktop) {
-      position: absolute;
+      @include u-position(absolute);
       top: -7.75rem;
-      right: 2rem;
+      right: 0;
     }
 
     a {
@@ -192,7 +210,7 @@ $jcc-nav-input-height: 3.25rem;
 
       @include at-media-max(desktop) {
         @include u-display(block);
-        @include u-padding(2.5);
+        @include u-padding($jcc-nav-link-padding);
       }
 
       @include at-media(desktop) {
@@ -205,19 +223,16 @@ $jcc-nav-input-height: 3.25rem;
         flex-wrap: wrap;
       }
 
-      li {
+      .jcc-inline-nav__item {
+        @include u-margin-right(4);
         @include at-media-max(desktop) {
+          @include u-margin(0);
           width: 50%;
-          margin: 0;
         }
-      }
-    }
 
-    .jcc-inline-nav__item {
-      @include u-margin-right(4);
-
-      &:last-child {
-        @include u-margin-right(0);
+        &:last-child {
+          @include u-margin-right(0);
+        }
       }
     }
   }
@@ -233,7 +248,7 @@ $jcc-nav-input-height: 3.25rem;
     }
 
     .usa-accordion {
-      width: auto;
+      @include u-width(auto);
 
       @include at-media(desktop) {
         @include u-margin-right(1);
@@ -316,6 +331,17 @@ $jcc-nav-input-height: 3.25rem;
 
     .usa-nav__submenu .usa-nav__submenu-item a {
       @include u-bg(primary);
+    }
+
+    .usa-nav__submenu.usa-megamenu {
+      @include at-media(desktop) {
+        @include u-bg(primary);
+      }
+
+      &:before,
+      &:after {
+        @include u-bg(primary);
+      }
     }
 
     .jcc-nav-secondary__group .usa-input {
