@@ -1,0 +1,351 @@
+$jcc-nav-link-height: 5.625rem;
+$jcc-nav-input-height: 3.25rem;
+
+.jcc-header-base {
+  // nav primary
+  .usa-nav__primary {
+    @include at-media-max(desktop) {
+      margin: 0;
+    }
+
+    .usa-nav__primary-item {
+      @include at-media-max(desktop) {
+        @include u-border-top(1px, base-light); // theme
+      }
+    }
+
+    a {
+      @include u-padding(2.5);
+    }
+
+    button,
+    > .usa-nav__primary-item > a {
+      @include u-padding(2.5);
+      @include u-text(semibold);
+      @include u-font(sans, 6);
+      @include u-font-family(sans);
+      @include u-text(primary); // theme
+
+      @include at-media-max(desktop) {
+        @include u-bg(primary-lighter); // theme
+      }
+
+      @include at-media(desktop) {
+        height: $jcc-nav-link-height;
+      }
+    }
+
+    button[aria-expanded="true"],
+    button[aria-expanded="false"] {
+      background-size: 0.75rem;
+
+      @include at-media-max(desktop) {
+        background-position: right 1.5rem center;
+        background-size: 1rem;
+      }
+    }
+
+    button[aria-expanded="true"] {
+      background-image: url(../img/angle-arrow-up-white.svg); // theme
+
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-up-primary.svg);
+      }
+    }
+
+    button[aria-expanded="false"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-down-primary.svg);
+      }
+    }
+
+    > .usa-nav__primary-item > a {
+      @include u-display(flex);
+
+      span {
+        @include u-display(inline-block);
+        align-self: center;
+      }
+    }
+
+    .usa-current::after {
+      @include at-media-max(desktop) {
+        left: 0.025rem;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  // nav submenu
+  .usa-nav__submenu {
+    @include u-padding(0);
+
+    .usa-nav__submenu-item {
+      @include u-font(sans, 6);
+      @include u-border-top(1px, primary-darker); // theme
+
+      @include at-media(desktop) {
+        @include u-border-top(1px, primary-dark); // theme
+      }
+
+      a {
+        @include u-text(no-underline);
+        @include u-padding(2.5);
+        @include u-display(block);
+        @include u-bg(primary); // theme
+        @include u-text("white"); // theme
+
+        @include at-media(desktop) {
+          @include u-bg(primary-darker); // theme
+        }
+
+        &:hover {
+          @include u-text(no-underline);
+          @include u-padding(2.5);
+          @include u-bg(primary-dark); // theme
+          @include u-text("white"); // theme
+
+          @include at-media(desktop) {
+            @include u-bg(primary-dark); // theme
+          }
+        }
+      }
+
+      & + * {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // nav secondary
+  .usa-nav__secondary {
+    @include u-display(block);
+
+    @include at-media-max(desktop) {
+      margin: 0;
+    }
+
+    @include at-media(desktop) {
+      @include u-display(flex);
+      @include u-flex("justify-end");
+      bottom: 7rem;
+    }
+  }
+
+  .jcc-nav-secondary__group {
+    .usa-accordion__button {
+      @include u-bg(primary-lighter);
+
+      @include at-media-max(desktop) {
+        @include u-border-y(1px, base-light);
+        @include u-padding(2.5);
+      }
+    }
+
+    .usa-accordion__button[aria-expanded="true"],
+    .usa-accordion__button[aria-expanded="false"] {
+      @include at-media-max(desktop) {
+        background-size: 1rem;
+        background-position: right 1.5rem center;
+      }
+    }
+
+    .usa-accordion__button[aria-expanded="true"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-up-white.svg);
+      }
+    }
+
+    .usa-accordion__button[aria-expanded="false"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-down-white.svg);
+      }
+    }
+
+    .usa-nav__submenu-item a {
+      @include at-media-max(desktop) {
+        @include u-display(block);
+        @include u-padding(2.5);
+      }
+    }
+  }
+
+  .jcc-nav-secondary__menu {
+    @include u-bg(primary-darker);
+
+    @include at-media-max(desktop) {
+      display: block;
+      order: 2;
+    }
+
+    @include at-media(desktop) {
+      position: absolute;
+      top: -7.75rem;
+      right: 2rem;
+    }
+
+    a {
+      @include u-text("white"); // theme
+      @include u-font(sans, 5);
+      @include u-text(no-underline);
+
+      @include at-media-max(desktop) {
+        @include u-display(block);
+        @include u-padding(2.5);
+      }
+
+      @include at-media(desktop) {
+        @include u-text("white");
+      }
+    }
+
+    .jcc-inline-nav {
+      @include at-media-max(desktop) {
+        flex-wrap: wrap;
+      }
+
+      li {
+        @include at-media-max(desktop) {
+          width: 50%;
+          margin: 0;
+        }
+      }
+    }
+
+    .jcc-inline-nav__item {
+      @include u-margin-right(4);
+
+      &:last-child {
+        @include u-margin-right(0);
+      }
+    }
+  }
+
+  .jcc-nav-secondary__group {
+    @include at-media-max(desktop) {
+      @include u-bg(primary-lighter); // theme
+      order: 2;
+    }
+
+    @include at-media(desktop) {
+      @include u-display(flex);
+    }
+
+    .usa-accordion {
+      width: auto;
+
+      @include at-media(desktop) {
+        @include u-margin-right(1);
+      }
+    }
+
+    .usa-accordion__button {
+      @include u-padding-y(0);
+      @include u-text(semibold);
+      @include u-bg(primary-lighter);
+
+      @include at-media-max(desktop) {
+        @include u-border-y(1px, base-light);
+      }
+
+      @include at-media(desktop) {
+        height: $jcc-nav-input-height;
+      }
+
+      .usa-nav__link:hover::after {
+        height: 0;
+      }
+    }
+
+    .usa-accordion__button[aria-expanded="true"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-up-primary.svg); // thenme
+      }
+    }
+
+    .usa-accordion__button[aria-expanded="false"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-down-primary.svg); // thenme
+      }
+    }
+
+    .jcc-form {
+      @include at-media-max(desktop) {
+        @include u-margin-y(2);
+      }
+    }
+
+    .jcc-fieldset-search {
+      @include at-media-max(desktop) {
+        @include u-margin-x(auto);
+      }
+    }
+  }
+
+  // theme
+  &.jcc-header--inverted {
+    .usa-nav__primary-item {
+      @include at-media-max(desktop) {
+        @include u-border-top(1px, primary-darker);
+      }
+    }
+
+    .usa-nav__primary button,
+    .usa-nav__primary > .usa-nav__primary-item > a {
+      @include u-text("white");
+      @include u-bg(primary-darker);
+    }
+
+    &.usa-header--extended {
+      .usa-nav__primary button,
+      .usa-nav__primary > .usa-nav__primary-item > a {
+        @include u-bg(primary-dark);
+      }
+    }
+
+    .usa-nav__primary button[aria-expanded="false"] {
+      background-image: url(../img/angle-arrow-down-white.svg);
+    }
+
+    .usa-nav__primary button[aria-expanded="true"] {
+      @include at-media(desktop) {
+        @include u-bg(primary);
+      }
+    }
+
+    .usa-nav__submenu .usa-nav__submenu-item a {
+      @include u-bg(primary);
+    }
+
+    .jcc-nav-secondary__group .usa-input {
+      border-color: transparent;
+    }
+
+    .jcc-nav-secondary__group .usa-accordion__button {
+      @include at-media-max(desktop) {
+        @include u-bg(primary-dark);
+        @include u-text("white");
+        @include u-border-y(1px, primary-darker);
+      }
+    }
+
+    .jcc-nav-secondary__group .usa-accordion__button[aria-expanded="true"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-up-white.svg); // thenme
+      }
+    }
+
+    .jcc-nav-secondary__group .usa-accordion__button[aria-expanded="false"] {
+      @include at-media-max(desktop) {
+        background-image: url(../img/angle-arrow-down-white.svg); // thenme
+      }
+    }
+
+    .jcc-nav-secondary__group {
+      @include at-media-max(desktop) {
+        @include u-bg(primary-dark);
+      }
+    }
+  }
+}

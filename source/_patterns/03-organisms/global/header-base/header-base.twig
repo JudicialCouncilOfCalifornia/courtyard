@@ -43,8 +43,11 @@
       {% include '@molecules/navigation/nav-primary-base/nav-primary-base.twig' %}
 
       {% if header_base.height_variant == 'extended' %}<div class="usa-nav__secondary">{% endif %}
+      
+
       <div class="jcc-nav-secondary__group">
-        <ul class="usa-accordion">
+        
+        <ul class="jcc-translate usa-accordion">
           <li>
             <button class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-two">
               <span class="usa-accordion-button__icon">
@@ -67,7 +70,9 @@
             search_input: header_base.nav_secondary.search.search_input
           }%}
         </form>
+      
       </div>
+      
       {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
       <nav class="jcc-nav-secondary__menu">
