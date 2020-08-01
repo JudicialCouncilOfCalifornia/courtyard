@@ -1,3 +1,5 @@
+{% set card_template = card_section.card_template|default('@molecules/blocks/card/card.twig') %}
+
 {% set classes = [
   'jcc-cards-section',
   'jcc-cards-section--' ~ card_section.background_variant|default('has-background-color--transparent'),
@@ -17,7 +19,7 @@
     <ul class="jcc-cards">
       {% for card in card_section.cards %}
         <li class="jcc-cards__item">
-          {% include '@molecules/blocks/card/card.twig' with {
+          {% include card_template with {
             card: card
           } %}
         </li>
