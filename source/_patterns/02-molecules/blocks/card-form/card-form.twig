@@ -1,0 +1,24 @@
+{% set classes = [
+  'jcc-card-form'
+]|merge(card.classes|default([''])) %}
+
+{# Create the select menu #}
+{% set jump_menu %}
+  {% include '@molecules/navigation/jump-menu/jump-menu.twig' with {
+    jump_menu: {
+      label: card.menu_label,
+      items: card.menu_items,
+      default_option: card.menu_default_option
+    }
+  } %}
+{% endset %}
+
+{# Menu goes into card footer area #}
+{% set card = card|merge({
+  classes: classes,
+  footer: jump_menu
+}) %}
+
+{% include '@molecules/blocks/card/card.twig' with {
+  card: card
+} %}
