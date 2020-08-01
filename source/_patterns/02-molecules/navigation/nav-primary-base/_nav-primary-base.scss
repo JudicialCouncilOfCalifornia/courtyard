@@ -257,7 +257,7 @@ $jcc-nav-input-height: 3.25rem;
 
     .usa-accordion__button {
       @include u-padding-y(0);
-      @include u-text(semibold);
+      @include u-text(semibold, primary);
       @include u-bg(primary-lighter);
 
       @include at-media-max(desktop) {
@@ -266,6 +266,13 @@ $jcc-nav-input-height: 3.25rem;
 
       @include at-media(desktop) {
         height: $jcc-nav-input-height;
+      }
+
+      &:hover {
+        @include at-media(desktop) {
+          @include u-bg(primary);
+          @include u-text("white");
+        }
       }
 
       .usa-nav__link:hover::after {
@@ -310,6 +317,10 @@ $jcc-nav-input-height: 3.25rem;
     .usa-nav__primary > .usa-nav__primary-item > a {
       @include u-text("white");
       @include u-bg(primary-darker);
+
+      @include at-media-max(desktop) {
+        @include u-bg(primary-dark);
+      }
     }
 
     &.usa-header--extended {
@@ -321,6 +332,10 @@ $jcc-nav-input-height: 3.25rem;
 
     .usa-nav__primary button[aria-expanded="false"] {
       background-image: url(../img/angle-arrow-down-white.svg);
+    }
+
+    .usa-nav__primary button[aria-expanded="true"] {
+      background-image: url(../img/angle-arrow-up-white.svg);
     }
 
     .usa-nav__primary button[aria-expanded="true"] {
