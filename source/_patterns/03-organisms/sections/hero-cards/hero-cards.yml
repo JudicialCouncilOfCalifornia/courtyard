@@ -1,123 +1,106 @@
 hero_cards:
-  hero: 
+  hero:
     title: "Self-help guide to the California courts"
     lead: "Resources and information to help you represent yourself in court or work better with a lawyer, including step-by-step guidance for following court procedures and understanding your options."
     background_variant: "has-background-color--dark"
   card_section:
     headergroup:
-      brow: ''  
+      brow: ''
       title: 'What would you like to do?'
     column_variant: "has-three-columns"
     border_variant: "has-border"
+    card_template: '@molecules/blocks/card-form/card-form.twig'
     cards:
       - title: "Take action on my court case"
         id: "read-more-1"
         excerpt: '<p>Move your case forward make a change to a decision dismiss a case</p>'
-        footer: '<p><label class="usa-label sr-only" for="options">Dropdown label</label>
-          <select class="usa-select" name="options" id="options">
-            <option value>Select your case type</option>
-            <option value="value1">Divorce or Separation</option>
-            <option value="value2">Name or Gender Change</option>
-            <option value="value3">Restraining Order</option>
-            <option value="value4">Small Claims Lawsuit</option>
-            <option value="value5">Eviction</option>
-            <option value="value6">Child Custody or Support</option>
-            <option value="value7">Spousal Support</option>
-            <option value="value8">Conservatorship of an adult</option>
-            <option value="value9">Guardianship of a child</option>
-            <option value="value10">Paternity</option>
-            <option value="value11">Traffic</option>
-            <option value="value12">Debt</option>
-          </select>
-          </p>
-          <p class="jcc-inline-input"><label class="usa-label sr-only" for="options">Dropdown label</label>
-          <select class="usa-select" name="options" id="options">
-            <option value>Action you want to do</option>
-            <option value="value1">Dismiss</option>
-            <option value="value2">Ask for a hearing or trial</option>
-            <option value="value3">Reschedule a hearing or trial</option>
-            <option value="value4">Change an order</option>
-            <option value="value5">Enforce an order</option>
-            <option value="value6">Serve someone papers</option>
-            <option value="value7">File a motion</option>
-            <option value="value8">Respond to a motion</option>
-          </select>
-          <button class="usa-button usa-button--accent-warm">Go</button></p>'
+        menu_label: 'The label'
+        menu_items:
+          - name: "Item #1 in Card #1"
+            url: "#"
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
       - title: "Start a court case"
         id: "read-more-2"
         excerpt: '<p>Find your case type to get started</p>'
-        footer: '<p class="jcc-inline-input"><label class="usa-label sr-only" for="options2">Dropdown label</label>
-          <select class="usa-select" name="options" id="options">
-            <option value>Select your case type</option>
-            <option value="value1">Divorce or Separation</option>
-            <option value="value2">Name or Gender Change</option>
-            <option value="value3">Restraining Order</option>
-            <option value="value4">Small Claims Lawsuit</option>
-            <option value="value5">Eviction</option>
-            <option value="value6">Child Custody or Support</option>
-            <option value="value7">Spousal Support</option>
-            <option value="value8">Conservatorship of an adult</option>
-            <option value="value9">Guardianship of a child</option>
-            <option value="value10">Paternity</option>
-            <option value="value11">Traffic</option>
-            <option value="value12">Debt</option>
-          </select>
-          <button class="usa-button usa-button--accent-warm">Go</button></p>'
+        menu_label: 'The label'
+        menu_default_option: 'Options:'
+        menu_items:
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
       - title: "Get help with papers I was served"
         id: "read-more-3"
         excerpt: '<p>Look up by form number and understand your options</p>'
-        footer: '<p class="jcc-inline-input"><label class="usa-label sr-only" for="input-type-text">Input Label</label>
-          <input class="usa-input" id="input-type-text" name="input-type-text" type="text" placeholder="Enter Form Number">
-          <button class="usa-button usa-button--accent-warm">Go</button></p>'
+        menu_label: 'The label'
+        menu_items:
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
       - title: "Get information about a legal matter"
         id: "read-more-4"
         excerpt: '<p>Find out what kind of help you can get from the court for a variety of situations</p>'
-        footer: '<p class="jcc-inline-input"><label class="usa-label sr-only" for="options3">Dropdown label</label>
-          <select class="usa-select" name="options" id="options3">
-            <option value>Browse Topics</option>
-            <option value="value1">Housing</option>
-            <option value="value2">Money & Debt</option>
-            <option value="value3">Families & Children</option>
-            <option value="value4">Abuse & Harassment</option>
-            <option value="value5">Elder Issues</option>
-            <option value="value6">Wills & Estates</option>
-            <option value="value7">Lawsuits</option>
-            <option value="value8">Traffic</option>
-          </select>
-          <button class="usa-button usa-button--accent-warm">Go</button></p>'
+        menu_label: 'The label'
+        menu_items:
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
       - title: "Look up a court case or citation"
         id: "read-more-5"
         excerpt: '<p>Find a traffic ticket or court case using the county courts website</p>'
-        footer: '<p class="jcc-inline-input"><label class="usa-label sr-only" for="options5">Dropdown label</label>
-          <select class="usa-select" name="options" id="options5">
-            <option value>Choose County</option>
-            <option value="value1">Alameda</option>
-            <option value="value2">Alpine</option>
-            <option value="value3">Amador</option>
-            <option value="value4">Butte</option>
-            <option value="value5">Calaveras</option>
-            <option value="value6">Colusa</option>
-            <option value="value7">Contra Costa</option>
-            <option value="value8">Del Norte</option>
-            <option value="value9">El Dorado</option>
-            <option value="value10">Fresno</option>
-            <option value="value11">Glenn</option>
-            <option value="value12">Humboldt</option>
-            <option value="value13">Imperial</option>
-            <option value="value14">Inyo</option>
-            <option value="value15">Kern</option>
-            <option value="value16">Kings</option>
-            <option value="value17">Lake</option>
-            <option value="value18">Lassen</option>
-            <option value="value19">Los Angeles</option>
-            <option value="value20">Madera</option>
-            <option value="value21">Marin</option>
-            <option value="value22">Mariposa</option>
-            <option value="value23">Mendocino</option>
-            <option value="value24">Merced</option>
-          </select>
-          <button class="usa-button usa-button--accent-warm">Go</button></p>'
+        menu_label: 'The label'
+        menu_items:
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
       - title: "Get help from the court"
         id: "read-more-6"
         excerpt: '<p>Find In-person self-centers, court interpreters, disability access and more</p>'
-        footer: '<p><a href="#">Court Resources</a></p>'
+        menu_label: 'The label'
+        menu_items:
+          - name: "Who sent me these papers?"
+            url: "#"
+          - name: "What does this petition say?"
+            url: "#"
+          - name: "What do I need to do?"
+            url: "#"
+          - name: "What is legal parentage all about?"
+            url: "#"
+          - name: "Additional Sections"
+            url: "#"
