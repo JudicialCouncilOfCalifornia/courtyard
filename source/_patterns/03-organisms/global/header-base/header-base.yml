@@ -5,6 +5,8 @@ header_base:
     title: 'Judicial Branch of California'
     url: '#'
   title: 'Alameda Superior Court'
+  hat_logo: 'jcc-logo-branch-text-white.svg' 
+  logo: ''
   menu_icon:
     name: 'menu'
     title: "Menu"

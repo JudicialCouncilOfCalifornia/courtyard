@@ -8,7 +8,12 @@
 <a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
 <div class="jcc-header-hat">
   <div class="jcc-header-hat__container">
-    <em class="jcc-header-hat__logo"><a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">{{ header_base.hat.title }}</a></em>
+    <div class="jcc-hat-logo">
+      <a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">
+        {% if header_base.hat_logo %}<span class="jcc-header-hat-logo__graphic"><img src="../../images/logos/{{ header_base.hat_logo }}" alt="{{ header_base.title }}" /></span>{% endif %}
+        <em class="jcc-header-hat-logo__text{% if header_base.hat_logo %} usa-sr-only{% endif %}">{{ header_base.hat.title }}</em>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -18,7 +23,10 @@
     <div class="usa-navbar">
       
       <div class="usa-logo" id="basic-logo">
-        <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">{{ header_base.title }}</a></em>
+        <a href="/" title="Home" aria-label="Home">
+          {% if header_base.logo %}<span class="usa-logo__graphic"><img src="{{ header_base.logo }}" alt="{{ header_base.title }}" /></span>{% endif %}
+          <em class="usa-logo__text{% if header_base.logo %} usa-sr-only{% endif %}">{{ header_base.title }}</em>
+        </a>
       </div>
 
       <button class="usa-menu-btn usa-button--unstyled">

@@ -1,8 +1,11 @@
 .jcc-fieldset-search {
-  @include u-position("relative");
   @include u-maxw("mobile-lg");
   @include u-minw(15);
   @include u-width("full");
+
+  .usa-fieldset {
+    @include u-position("relative");
+  }
 
   .usa-input {
     @include u-margin-top(0);

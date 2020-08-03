@@ -152,12 +152,46 @@ $jcc-nav-input-height: 3.25rem;
   }
 
   .jcc-nav-secondary__group {
+    @include at-media-max(desktop) {
+      @include u-bg(primary-lighter); // theme
+      order: 2;
+    }
+
+    @include at-media(desktop) {
+      @include u-display(flex);
+    }
+
+    .usa-accordion {
+      @include u-width(auto);
+
+      @include at-media(desktop) {
+        @include u-margin-right(1);
+      }
+    }
+
     .usa-accordion__button {
       @include u-bg(primary-lighter);
+      @include u-padding-y(0);
+      @include u-text(semibold, primary);
+
+      &:hover {
+        @include at-media(desktop) {
+          @include u-bg(primary);
+          @include u-text("white");
+        }
+      }
+
+      @include at-media(desktop) {
+        height: $jcc-nav-input-height;
+      }
 
       @include at-media-max(desktop) {
         @include u-border-y(1px, base-light);
         @include u-padding($jcc-nav-link-padding);
+      }
+
+      .usa-nav__link:hover::after {
+        height: 0;
       }
     }
 
@@ -171,13 +205,18 @@ $jcc-nav-input-height: 3.25rem;
 
     .usa-accordion__button[aria-expanded="true"] {
       @include at-media-max(desktop) {
-        background-image: url(../img/angle-arrow-up-white.svg);
+        background-image: url(../img/angle-arrow-up-primary.svg); // thenme
+      }
+
+      @include at-media(desktop) {
+        @include u-bg(primary-darker);
+        @include u-text("white");
       }
     }
 
     .usa-accordion__button[aria-expanded="false"] {
       @include at-media-max(desktop) {
-        background-image: url(../img/angle-arrow-down-white.svg);
+        background-image: url(../img/angle-arrow-down-primary.svg); // thenme
       }
     }
 
@@ -185,6 +224,19 @@ $jcc-nav-input-height: 3.25rem;
       @include at-media-max(desktop) {
         @include u-display(block);
         @include u-padding($jcc-nav-link-padding);
+      }
+    }
+
+    .jcc-form {
+      @include at-media-max(desktop) {
+        @include u-margin-y(2);
+      }
+    }
+
+    .jcc-fieldset-search {
+      @include at-media-max(desktop) {
+        @include u-margin-x(auto);
+        @include u-padding-x(2);
       }
     }
   }
@@ -199,23 +251,8 @@ $jcc-nav-input-height: 3.25rem;
 
     @include at-media(desktop) {
       @include u-position(absolute);
-      top: -7.75rem;
+      top: -7.6rem;
       right: 0;
-    }
-
-    a {
-      @include u-text("white"); // theme
-      @include u-font(sans, 5);
-      @include u-text(no-underline);
-
-      @include at-media-max(desktop) {
-        @include u-display(block);
-        @include u-padding($jcc-nav-link-padding);
-      }
-
-      @include at-media(desktop) {
-        @include u-text("white");
-      }
     }
 
     .jcc-inline-nav {
@@ -235,97 +272,31 @@ $jcc-nav-input-height: 3.25rem;
         }
       }
     }
-  }
 
-  .jcc-nav-secondary__group {
-    @include at-media-max(desktop) {
-      @include u-bg(primary-lighter); // theme
-      order: 2;
-    }
-
-    @include at-media(desktop) {
-      @include u-display(flex);
-    }
-
-    .usa-accordion {
-      @include u-width(auto);
-
-      @include at-media(desktop) {
-        @include u-margin-right(1);
-      }
-    }
-
-    .usa-accordion__button {
-      @include u-padding-y(0);
-      @include u-text(semibold, primary);
-      @include u-bg(primary-lighter);
+    a {
+      @include u-text("white"); // theme
+      @include u-font(sans, 5);
+      @include u-text(no-underline);
 
       @include at-media-max(desktop) {
-        @include u-border-y(1px, base-light);
+        @include u-display(block);
+        @include u-padding($jcc-nav-link-padding);
       }
 
       @include at-media(desktop) {
-        height: $jcc-nav-input-height;
-      }
-
-      &:hover {
-        @include at-media(desktop) {
-          @include u-bg(primary);
-          @include u-text("white");
-        }
-      }
-
-      .usa-nav__link:hover::after {
-        height: 0;
-      }
-    }
-
-    .usa-accordion__button[aria-expanded="true"] {
-      @include at-media-max(desktop) {
-        background-image: url(../img/angle-arrow-up-primary.svg); // thenme
-      }
-    }
-
-    .usa-accordion__button[aria-expanded="false"] {
-      @include at-media-max(desktop) {
-        background-image: url(../img/angle-arrow-down-primary.svg); // thenme
-      }
-    }
-
-    .jcc-form {
-      @include at-media-max(desktop) {
-        @include u-margin-y(2);
-      }
-    }
-
-    .jcc-fieldset-search {
-      @include at-media-max(desktop) {
-        @include u-margin-x(auto);
+        @include u-text("white");
       }
     }
   }
 
   // theme
   &.jcc-header--inverted {
-    .usa-nav__primary-item {
-      @include at-media-max(desktop) {
-        @include u-border-top(1px, primary-darker);
-      }
-    }
-
     .usa-nav__primary button,
     .usa-nav__primary > .usa-nav__primary-item > a {
       @include u-text("white");
       @include u-bg(primary-darker);
 
       @include at-media-max(desktop) {
-        @include u-bg(primary-dark);
-      }
-    }
-
-    &.usa-header--extended {
-      .usa-nav__primary button,
-      .usa-nav__primary > .usa-nav__primary-item > a {
         @include u-bg(primary-dark);
       }
     }
@@ -341,6 +312,26 @@ $jcc-nav-input-height: 3.25rem;
     .usa-nav__primary button[aria-expanded="true"] {
       @include at-media(desktop) {
         @include u-bg(primary);
+      }
+    }
+
+    .usa-nav__primary {
+      .usa-current::after,
+      .usa-nav__link:hover::after {
+        @include u-bg(primary-light);
+      }
+    }
+
+    &.usa-header--extended {
+      .usa-nav__primary button,
+      .usa-nav__primary > .usa-nav__primary-item > a {
+        @include u-bg(primary-dark);
+      }
+    }
+
+    .usa-nav__primary-item {
+      @include at-media-max(desktop) {
+        @include u-border-top(1px, primary-darker);
       }
     }
 
@@ -374,6 +365,11 @@ $jcc-nav-input-height: 3.25rem;
     .jcc-nav-secondary__group .usa-accordion__button[aria-expanded="true"] {
       @include at-media-max(desktop) {
         background-image: url(../img/angle-arrow-up-white.svg); // thenme
+      }
+
+      @include at-media(desktop) {
+        @include u-bg(primary);
+        @include u-text("white");
       }
     }
 

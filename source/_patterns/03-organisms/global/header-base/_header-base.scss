@@ -11,13 +11,15 @@ $jcc-nav-icon-size: 2.5rem;
   height: 2.5rem;
 }
 
-.jcc-header-hat__logo {
-  @include u-text("white", no-italic);
-  @include u-font-family(serif);
-
+.jcc-header-hat-logo {
   a {
     @include u-text("white", no-underline, no-italic);
   }
+}
+
+.jcc-header-hat-logo__text {
+  @include u-text("white", no-italic);
+  @include u-font-family(serif);
 }
 
 .jcc-header-hat__container {
@@ -38,15 +40,14 @@ $jcc-nav-icon-size: 2.5rem;
 
   // logo
   .usa-logo {
-    @include u-display(flex);
-
     @include at-media(desktop) {
       @include u-margin(0);
-      height: $jcc-nav-link-height;
     }
 
     a {
-      @include u-text(primary-dark); // theme
+      @include u-text(primary-dark);
+      @include u-display(flex); // theme
+      height: $jcc-nav-link-height;
     }
   }
 
@@ -217,6 +218,7 @@ $jcc-nav-icon-size: 2.5rem;
   }
 }
 
+// close button override
 .usa-js-mobile-nav--active {
   .jcc-header-base .usa-nav__close {
     @include u-display(block);
