@@ -176,4 +176,11 @@
       @include u-width(auto);
     }
   }
+
+  .jcc-cards__highlight,
+  .jcc-cards__highlight + ul {
+    > li:last-child {
+      @include u-margin-left(2);
+    }
+  }
 }

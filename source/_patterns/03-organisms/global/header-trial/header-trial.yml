@@ -1,7 +1,7 @@
 header_trial:
   header_topbar:
     logo:
-      src: "../../images/logos/jcc-logo-long.png"
+      src: "../../images/jcc-logo-long.png"
       alt: "trial"
     dropbutton:
       icon:
@@ -20,6 +20,7 @@ header_trial:
       form_action: "/search"
       search_input:
         form_input_name: "keyword"
+    hide_translation: 0
   primary_nav:
     lowercase_titles: true
     items:
