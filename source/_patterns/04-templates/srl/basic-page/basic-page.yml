@@ -28,7 +28,7 @@ basic_page:
           url: "#"
         - name: "Superior Courts"
           url: "#"
-        - name: "Newsroom"
+        - name: "Judicial Council"
           url: "#"
     primary_nav:
       nav_variant: 'simple'

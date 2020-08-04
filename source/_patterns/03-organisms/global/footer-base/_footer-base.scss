@@ -37,6 +37,10 @@
     @include at-media-max(desktop) {
       @include u-margin-bottom(4);
     }
+
+    .usa-logo__text {
+      @include u-text(normal);
+    }
   }
 
   .usa-footer__social-links {

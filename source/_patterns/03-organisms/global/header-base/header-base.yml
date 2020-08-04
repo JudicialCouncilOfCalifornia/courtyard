@@ -7,9 +7,7 @@ header_base:
       url: '#'
     logo: 'jcc-logo-branch-text-white.svg' 
   title: 'Alameda Superior Court'
-  logo: 
-    mobile: ''
-    desktop: ''
+  logo: ''
   menu_icon:
     name: 'menu'
     title: "Menu"
@@ -26,7 +24,7 @@ header_base:
         url: "#"
       - name: "Superior Courts"
         url: "#"
-      - name: "Newsroom"
+      - name: "Judicial Council"
         url: "#"
   primary_nav:
     nav_variant: 'simple'
