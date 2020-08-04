@@ -12,19 +12,19 @@
     <nav class="usa-footer__nav" aria-label="Footer navigation">
       <ul class="grid-row grid-gap">
         <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">Primary link</a>
+          <a class="usa-footer__primary-link" href="#">Primary link</a>
         </li>
         <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">Primary link</a>
+          <a class="usa-footer__primary-link" href="#">Primary link</a>
         </li>
         <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">Primary link</a>
+          <a class="usa-footer__primary-link" href="#">Primary link</a>
         </li>
         <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">Primary link</a>
+          <a class="usa-footer__primary-link" href="#">Primary link</a>
         </li>
         <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">Primary link</a>
+          <a class="usa-footer__primary-link" href="#">Primary link</a>
         </li>
       </ul>
     </nav>
@@ -79,14 +79,17 @@
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-          {% if footer_base.logo %}
+        <div class="usa-footer__logo grid-row grid-col-11 desktop:grid-col-6 desktop:grid-gap-2">
+          {% if footer_base.seal %}
           <div class="mobile-lg:grid-col-auto">
-            <img class="usa-footer__logo-img" src="/assets/img/logo-img.png" alt="">
+            <img class="usa-footer__logo-img" src="../../images/logos/{{ footer_base.seal }}" alt="">
           </div>
           {% endif %}
           <div class="mobile-lg:grid-col-auto">
-            <h3 class="usa-footer__logo-heading">Name of Agency</h3>
+            <h3 class="usa-footer__logo-heading">
+              {% if footer_base.logo %}<span class="usa-logo__graphic"><img src="../../images/logos/{{ footer_base.logo }}" alt="{{ footer_base.title }}" /></span>{% endif %}
+              <span class="usa-logo__text{% if footer_base.logo %} usa-sr-only{% endif %}">{{ footer_base.title }}</span>
+            </h3>  
           </div>
         </div>
         <div class="usa-footer__contact-links grid-col-12 desktop:grid-col-6">

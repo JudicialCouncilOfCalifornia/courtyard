@@ -16,7 +16,11 @@
 
   .usa-footer__primary-link {
     @include u-text(primary, normal);
-    @include u-font(sans, 7);
+    @include u-font(sans, 6);
+
+    @include at-media(desktop) {
+      @include u-font(sans, 7);
+    }
   }
 
   .usa-footer__secondary-section {

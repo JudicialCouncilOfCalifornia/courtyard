@@ -1,5 +1,7 @@
 footer_base:
   logo: ''
+  title: 'Self-Help Center'
+  seal: ''
   height_variant: 'simple'
   background_variant: 'default'
   social_links:

@@ -16,7 +16,10 @@ $jcc-nav-icon-size: 2.5rem;
     a {
       @include u-text(primary-dark);
       @include u-display(flex); // theme
-      height: $jcc-nav-link-height;
+
+      @include at-media(desktop) {
+        height: $jcc-nav-link-height;
+      }
     }
   }
 
@@ -27,6 +30,33 @@ $jcc-nav-icon-size: 2.5rem;
 
     @include at-media-max(desktop) {
       @include u-font(serif, 7);
+    }
+  }
+
+  .usa-logo__graphic--mobile,
+  .usa-logo__graphic--desktop {
+    align-self: center;
+
+    img {
+      @include at-media-max(desktop) {
+        height: 2rem;
+      }
+    }
+  }
+
+  .usa-logo__graphic--mobile {
+    @include u-display(block);
+
+    @include at-media(desktop) {
+      @include u-display(none);
+    }
+  }
+
+  .usa-logo__graphic--desktop {
+    @include u-display(none);
+
+    @include at-media(desktop) {
+      @include u-display(block);
     }
   }
 
@@ -62,6 +92,7 @@ $jcc-nav-icon-size: 2.5rem;
 
   // nav layout
   .usa-nav {
+    background-color: transparent;
     align-self: center;
 
     @include at-media-max(desktop) {
@@ -182,7 +213,13 @@ $jcc-nav-icon-size: 2.5rem;
 .jcc-all {
   .jcc-header-base .usa-nav {
     @include at-media-max(desktop) {
-      top: 36px;
+      top: 2.25rem;
+    }
+  }
+
+  .usa-overlay {
+    @include at-media-max(desktop) {
+      top: 8.75rem;
     }
   }
 }
@@ -195,5 +232,12 @@ $jcc-nav-icon-size: 2.5rem;
     @include at-media(desktop) {
       @include u-display(none);
     }
+  }
+}
+
+// overlay offset
+.usa-overlay {
+  @include at-media-max(desktop) {
+    top: 6.5rem;
   }
 }
