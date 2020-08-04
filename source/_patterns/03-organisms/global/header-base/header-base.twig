@@ -2,19 +2,14 @@
   'usa-header',
   'jcc-header-base',
   'usa-header--' ~ header_base.height_variant|default('basic'),
-  'jcc-header--' ~ header_base.background_variant|default(''),
+  'jcc-header--' ~ header_base.background_variant|default('default'),
 ]|merge(text_section.classes|default([''])) %}
 
 <a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
 <div class="jcc-header-hat">
-  <div class="jcc-header-hat__container">
-    <div class="jcc-hat-logo">
-      <a href="{{ header_base.hat.url }}" title="{{ header_base.hat.title }}" aria-label="{{ header_base.hat.title }}">
-        {% if header_base.hat_logo %}<span class="jcc-header-hat-logo__graphic"><img src="../../images/logos/{{ header_base.hat_logo }}" alt="{{ header_base.title }}" /></span>{% endif %}
-        <em class="jcc-header-hat-logo__text{% if header_base.hat_logo %} usa-sr-only{% endif %}">{{ header_base.hat.title }}</em>
-      </a>
-    </div>
-  </div>
+  {% include '@molecules/navigation/global-bar/global-bar.twig' with {
+    global_bar: header_base.global_bar
+  } %}
 </div>
 
 <header class="{{ classes|join(' ')|trim }}">

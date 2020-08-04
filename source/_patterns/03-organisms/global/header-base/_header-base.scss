@@ -3,37 +3,6 @@ $jcc-nav-input-height: 3.25rem;
 $jcc-navbar-height: 3.75rem;
 $jcc-nav-icon-size: 2.5rem;
 
-// Header Hat
-.jcc-header-hat {
-  @include u-padding-y(1);
-  @include u-text("white");
-  @include u-bg(primary-darker);
-  height: 2.5rem;
-}
-
-.jcc-header-hat-logo {
-  a {
-    @include u-text("white", no-underline, no-italic);
-  }
-}
-
-.jcc-header-hat-logo__text {
-  @include u-text("white", no-italic);
-  @include u-font-family(serif);
-}
-
-.jcc-header-hat__container {
-  @include u-maxw(widescreen);
-  @include u-display(flex);
-  @include u-padding-x(2);
-  @include u-margin-x(auto);
-  @include u-flex("justify");
-
-  @include at-media(desktop) {
-    @include u-padding-x(4);
-  }
-}
-
 // Header
 .jcc-header-base {
   @include u-border-top("05", accent-warm);

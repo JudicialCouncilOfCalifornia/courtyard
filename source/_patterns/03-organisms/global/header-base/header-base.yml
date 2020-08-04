@@ -1,11 +1,12 @@
 header_base:
   height_variant: 'basic'
   skip: 'Skip to main content'
-  hat:
-    title: 'Judicial Branch of California'
-    url: '#'
+  global_bar:
+    logo_text:
+      title: 'Judicial Branch of California'
+      url: '#'
+    logo: 'jcc-logo-branch-text-white.svg' 
   title: 'Alameda Superior Court'
-  hat_logo: 'jcc-logo-branch-text-white.svg' 
   logo: ''
   menu_icon:
     name: 'menu'
