@@ -20,3 +20,4 @@ header_topbar:
     form_action: "/search"
     search_input:
       form_input_name: "keyword"
+  hide_translation: 0

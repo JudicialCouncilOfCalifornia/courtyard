@@ -1,0 +1,16 @@
+<div class="jcc-global-bar">
+  <div class="jcc-global-bar__container">
+    <div class="jcc-global-bar-logo">
+      <a href="{{ global_bar.logo_text.url }}" title="{{ global_bar.logo_text.title }}" aria-label="{{ global_bar.logo_text.title }}">
+        {% if global_bar.logo %}<span class="jcc-global-bar-logo__graphic"><img src="../../images/logos/{{ global_bar.logo }}" alt="{{ global_bar.logo_text.title }}" /></span>{% endif %}
+        <em class="jcc-global-bar-logo__text{% if global_bar.logo %} usa-sr-only{% endif %}">{{ global_bar.logo_text.title }}</em>
+      </a>
+    </div>
+
+    <nav class="jcc-global__menu">
+      {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
+        inline_nav : global_bar.secondary_nav
+      } %}
+    </nav>
+  </div>
+</div>

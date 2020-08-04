@@ -8,27 +8,28 @@
 
     {% if timeline_dual.title_bar %}
       <div class="jcc-timeline-dual__title-bar">
-          <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
-            {% if timeline_dual.title_bar.previous %}
+        <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
+          {% if timeline_dual.title_bar.previous %}
             {{ timeline_dual.title_bar.previous.title }}
-            {% endif %}
-          </a>
-          <div class="jcc-timeline-dual__title-bar-title">
-            {% if timeline_dual.title_bar.title %}
-              {{ timeline_dual.title_bar.title }}
-            {% endif %}
-          </div>
-          <a href="{{ timeline_dual.title_bar.next.url }}" class="jcc-timeline-dual__title-bar-next">
+          {% endif %}
+        </a>
+        <div class="jcc-timeline-dual__title-bar-title">
+          {% if timeline_dual.title_bar.title %}
+            {{ timeline_dual.title_bar.title }}
+          {% endif %}
+        </div>
+        <a href="{{ timeline_dual.title_bar.next.url }}" class="jcc-timeline-dual__title-bar-next">
           {% if timeline_dual.title_bar.next %}
             {{ timeline_dual.title_bar.next.title }}
           {% endif %}
-          </a>
+        </a>
       </div>
     {% endif %}
 
     <div class="jcc-timeline-dual__wrapper">
       <div class="jcc-timeline-dual__top-title">{{ timeline_dual.top_title }}</div>
       <div class="jcc-timeline-dual__bottom-title">{{ timeline_dual.bottom_title }}</div>
+
       <ul class="jcc-timeline-dual__slider slider-dual" aria-label="timeline-dual" tabindex="0">
         {% for item in timeline_dual.items %}
           <li>
@@ -38,6 +39,7 @@
           </li>
         {% endfor %}
       </ul>
+
       <button id="scroller--left" class="jcc-timeline-dual__scroller--left slick-prev">
         <span class="jcc-timeline-dual__label">{{ "Scroll Left"|t }}</span>
         <span class="jcc-timeline-dual__scroller-icon">
@@ -64,9 +66,6 @@
         </span>
       </button>
     </div>
-
-    </div>
-    {# @todo: Remove these as variables? #}
 
   </div>
 </div>

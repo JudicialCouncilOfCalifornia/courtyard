@@ -1,0 +1,37 @@
+footer_base:
+  logo: ''
+  height_variant: 'simple'
+  background_variant: 'default'
+  social_links:
+    items:
+      - icon:
+          name: "youtube"
+          title: "Youtube"
+          decorative: false
+        title: "Youtube"
+        url: "#"
+      - icon:
+          name: "facebook2"
+          title: "Facebook"
+          decorative: false
+        title: "Facebook"
+        url: "#"
+      - icon:
+          name: "twitter"
+          title: "Twitter"
+          decorative: false
+        title: "Twitter"
+        url: "#"
+  global_bar:
+    logo_text:
+      title: 'Judicial Branch of California'
+      url: '#'
+    logo: 'jcc-logo-branch-text-white.svg' 
+    secondary_nav:
+      items:
+        - name: "Contact Us"
+          url: "#"
+        - name: "Terms of Use"
+          url: "#"
+        - name: "Privacy Policy"
+          url: "#"

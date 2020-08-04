@@ -1,0 +1,73 @@
+{% if primary_nav.nav_variant == 'simple' %}
+<ul class="usa-nav__primary usa-accordion">
+
+  <li class="usa-nav__primary-item">
+    <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="basic-nav-section-one"><span>Current section</span></button>
+    <ul id="basic-nav-section-one" class="usa-nav__submenu">
+      <li class="usa-nav__submenu-item">
+        <a href="#" class=""> Navigation link</a>
+      </li>
+      <li class="usa-nav__submenu-item">
+        <a href="#" class=""> Navigation link</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="usa-nav__primary-item">
+    <a class="usa-nav__link" href="#"><span>Simple link</span></a>
+  </li>
+</ul>
+{% endif %}
+
+{% if primary_nav.nav_variant == 'mega' %}
+<ul class="usa-nav__primary usa-accordion">
+  <li class="usa-nav__primary-item">
+    <button class="usa-accordion__button usa-nav__link usa-current" aria-expanded="false" aria-controls="extended-mega-nav-section-one"><span>Current section</span></button>
+    <div id="extended-mega-nav-section-one" class="usa-nav__submenu usa-megamenu">  <div class="grid-row grid-gap-2">
+      <div class="usa-col">
+        <ul class="usa-nav__submenu-list">
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+        </ul>
+      </div>
+      <div class="usa-col">
+        <ul class="usa-nav__submenu-list">
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">A very long navigation link that goes onto two lines</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+        </ul>
+      </div>
+      <div class="usa-col">
+        <ul class="usa-nav__submenu-list">
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+          <li class="usa-nav__submenu-item">
+            <a href="#" class="">Navigation link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </li>
+  <li class="usa-nav__primary-item">
+    <a class="usa-nav__link" href="#"><span>Simple link</span></a>
+  </li>
+</ul>
+{% endif %}

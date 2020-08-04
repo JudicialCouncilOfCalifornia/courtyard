@@ -1,0 +1,4 @@
+header_base:
+  height_variant: 'extended'
+  primary_nav:
+    nav_variant: 'mega'

@@ -1,4 +1,54 @@
 homepage_srl:
+  header_base:
+    height_variant: 'basic'
+    background_variant: 'inverted'
+    skip: 'Skip to main content'
+    global_bar:
+      logo_text:
+        title: 'Judicial Branch of California'
+        url: '#'
+      logo: 'jcc-logo-branch-text-white.svg' 
+    title: 'Self-Help Center'
+    logo: ''
+    menu_icon:
+      name: 'menu'
+      title: "Menu"
+      decorative: false
+    close_icon:
+      name: 'close'
+      title: "close"
+      decorative: false
+    secondary_nav:
+      items:
+        - name: "Supreme Court"
+          url: "#"
+        - name: "Courts of Appeal"
+          url: "#"
+        - name: "Superior Courts"
+          url: "#"
+        - name: "Newsroom"
+          url: "#"
+    primary_nav:
+      nav_variant: 'simple'
+    nav_secondary:
+      search:
+        form_action: "/search"
+        search_input:
+          form_input_name: "keyword"
+      accordion_button:
+        id: 'extended-nav-section-two'
+        icon:
+          name: "translate"
+          title: "Translate"
+          decorative: true
+        label: "Translate"
+        links:
+          - title: "English"
+            href: "#"
+          - title: "Spanish"
+            href: "#"
+          - title: "Vietnamese"
+            href: "#"
   hero_cards:
     hero: 
       title: "Self-help guide to the California courts"
@@ -150,3 +200,40 @@ homepage_srl:
         text: 'Search'
         style: 'primary'
       helper: ''
+  footer_base:
+    logo: ''
+    height_variant: 'simple'
+    background_variant: 'inverted'
+    social_links:
+      items:
+        - icon:
+            name: "youtube"
+            title: "Youtube"
+            decorative: false
+          title: "Youtube"
+          url: "#"
+        - icon:
+            name: "facebook2"
+            title: "Facebook"
+            decorative: false
+          title: "Facebook"
+          url: "#"
+        - icon:
+            name: "twitter"
+            title: "Twitter"
+            decorative: false
+          title: "Twitter"
+          url: "#"
+    global_bar:
+      logo_text:
+        title: 'Judicial Branch of California'
+        url: '#'
+      logo: 'jcc-logo-branch-text-white.svg' 
+      secondary_nav:
+        items:
+          - name: "Contact Us"
+            url: "#"
+          - name: "Terms of Use"
+            url: "#"
+          - name: "Privacy Policy"
+            url: "#"

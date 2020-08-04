@@ -1,3 +1,6 @@
+{% include '@organisms/global/header-base/header-base.twig' with { 
+  header_base: homepage_srl.header_base
+} %}
 {% include '@organisms/sections/hero-cards/hero-cards.twig' with { 
   hero: homepage_srl.hero_cards.hero,
   card_section: homepage_srl.hero_cards.card_section 
@@ -7,4 +10,7 @@
 } %}
 {% include '@organisms/sections/locate-section/locate-section.twig' with { 
   locate_section: homepage_srl.locate_section
+} %}
+{% include '@organisms/global/footer-base/footer-base.twig' with { 
+  footer_base: homepage_srl.footer_base
 } %}

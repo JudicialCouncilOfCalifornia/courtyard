@@ -57,3 +57,24 @@
     @include u-line-height(heading, 2);
   }
 }
+
+.usa-accordion__button--has-icon {
+  @include u-display(flex);
+  @include u-flex("row", "align-center");
+
+  .icon {
+    @include u-height(2.5);
+    @include u-width(2.5);
+    @include u-margin-right(1);
+  }
+
+  .label {
+    margin-top: -3px;
+  }
+}
+
+.usa-accordion__button--no-toggle,
+.usa-accordion__button--no-toggle[aria-expanded="false"] {
+  @include u-padding-right(2);
+  background-image: none;
+}
