@@ -3,6 +3,6 @@ $(".jcc-jump-menu button").on("click", function() {
     .prev()
     .val();
   if (url) {
-    window.location.replace(url);
+    window.location.href = url;
   }
 });
