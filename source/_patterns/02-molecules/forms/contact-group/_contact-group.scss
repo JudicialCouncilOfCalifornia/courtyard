@@ -13,7 +13,8 @@
     flex: 1;
   }
 
-  button {
+  button,
+  input[type="submit"] {
     @include u-margin(0);
     @include u-padding-y(0);
     @include u-padding-x(2);

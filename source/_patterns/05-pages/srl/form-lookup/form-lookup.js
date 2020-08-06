@@ -5,8 +5,6 @@ let formResults = document.querySelector(".jcc-forms-filter__form-results");
 let searchInput = document.querySelector("#jcc-forms-filter__input");
 
 async function init() {
-  console.log("form-lookup init");
-
   let render = () => {
     let currentInput = searchInput.value;
     let matchingGuides = guides.filter(guide => {

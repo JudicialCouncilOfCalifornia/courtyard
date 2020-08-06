@@ -41,15 +41,15 @@ choice_content:
     tag: "h4"
   checkbox_group:
     - label: This change of name is being requested to escape domestic violence.
-      id: "80"
+      id: "180"
       name: Alpha
       bordered: true
     - label: One or more adults is restoring a former name during or following a divorce in California.
-      id: "81"
+      id: "181"
       name: Alpha
       bordered: true
     - label: One or more of the persons above are changing their name to conform to their gender identity, and asking that the court affirm their gender and issue a new birth certificate.
-      id: "82"
+      id: "182"
       name: Alpha
       bordered: true
   align_variant: ''

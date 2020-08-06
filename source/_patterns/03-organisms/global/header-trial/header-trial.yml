@@ -20,6 +20,7 @@ header_trial:
       form_action: "/search"
       search_input:
         form_input_name: "keyword"
+    hide_translation: 0
   primary_nav:
     lowercase_titles: true
     items:
@@ -117,7 +118,7 @@ header_trial:
             url: "#"
   mobile:
     logo:
-      src: "../../images/jcc-logo-long.png"
+      src: "../../images/logos/jcc-logo-long.png"
       alt: "trial"
     globe:
       name: "globe"

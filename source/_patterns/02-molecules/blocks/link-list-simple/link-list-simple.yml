@@ -14,3 +14,7 @@ link_list:
       url: "#"
     - url_title: "Form EJ-185"
       url: "#"
+  button:
+    text: "View All Links"
+    url: "#"
+    style: 'primary'
