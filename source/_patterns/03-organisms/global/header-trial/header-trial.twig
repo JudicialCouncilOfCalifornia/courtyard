@@ -35,16 +35,18 @@
         {# END #}
 
         {# BEGIN translate options #}
-        <a id="translate" tabindex="0" role="button" aria-label="Change language selection. Open or close menu by using ENTER key now." aria-haspopup="true" class="mobile_button translate">
-          {% include '@atoms/icons/icon.twig' with {
-            icon : header_trial.mobile.globe
-          } %}
-        </a>
-        <div id="show-translate" class="show-button">
-          {% include '@atoms/forms/dropbutton.twig' with {
-            dropbutton: header_trial.header_topbar.dropbutton
-          } %}
-        </div>
+        {% if not header_trial.header_topbar.hide_translation == 1 %}
+          <a id="translate" tabindex="0" role="button" aria-label="Change language selection. Open or close menu by using ENTER key now." aria-haspopup="true" class="mobile_button translate">
+            {% include '@atoms/icons/icon.twig' with {
+              icon : header_trial.mobile.globe
+            } %}
+          </a>
+          <div id="show-translate" class="show-button">
+            {% include '@atoms/forms/dropbutton.twig' with {
+              dropbutton: header_trial.header_topbar.dropbutton
+            } %}
+          </div>
+        {% endif %}
         {# END #}
 
         <span id="mobile-menu" class="mobile_button jcc-primary-nav">
