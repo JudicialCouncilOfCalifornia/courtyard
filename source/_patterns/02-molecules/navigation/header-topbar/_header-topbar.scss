@@ -13,7 +13,7 @@
     @include u-minh(card);
     padding-top: 0;
     padding-bottom: 0;
-    &.translate-disabled{
+    &.translate-disabled {
       form {
         @include at-media(desktop) {
           @include grid-col(6);

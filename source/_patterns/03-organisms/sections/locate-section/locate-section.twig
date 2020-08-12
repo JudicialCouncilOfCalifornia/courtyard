@@ -1,0 +1,27 @@
+{% set classes = [
+  'jcc-locate-section',
+  'jcc-locate-section--' ~ locate_section.background_variant|default('has-background-color--transparent')
+]|merge(locate_section.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if locate_section.id %} id="{{ locate-section.id }}"{% endif %}>
+  <div class="jcc-locate-section__container">
+    <div class="jcc-locate-section__row">
+      <div class="jcc-locate-section__content">
+        {% if locate_section.headergroup %}
+          {% include '@molecules/text/header-group/header-group.twig' with {
+            headergroup: locate_section.headergroup
+        } %}
+        {% endif %}
+
+        {% if locate_section.search_group %}
+          {% include '@molecules/forms/search-group/search-group.twig' with {
+            search_group: locate_section.search_group
+        } %}
+        {% endif %}
+      </div>
+      <div class="jcc-locate-section__media">
+
+      </div>
+    </div>
+  </div>
+</div>

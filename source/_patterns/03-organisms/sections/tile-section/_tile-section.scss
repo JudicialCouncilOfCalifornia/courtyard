@@ -56,3 +56,23 @@
     }
   }
 }
+
+.jcc-tiles-section--has-four-columns {
+  .jcc-tiles__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(3);
+    }
+  }
+}
+
+.jcc-tiles-section--has-emphasis {
+  .jcc-tile {
+    @include u-bg(primary-lighter);
+  }
+
+  .jcc-tile__title {
+    @include u-font-family(sans);
+  }
+}

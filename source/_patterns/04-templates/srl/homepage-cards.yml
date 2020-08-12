@@ -1,0 +1,197 @@
+homepage_srl:
+  hero_cards:
+    hero:
+      title: "Self-help guide to the California courts"
+      lead: "Resources and information to help you represent yourself in court or work better with a lawyer, including step-by-step guidance for following court procedures and understanding your options."
+      background_variant: "has-background-color--dark"
+    card_section:
+      headergroup:
+        brow: ''
+        title: 'What would you like to do?'
+      column_variant: "has-three-columns"
+      border_variant: "has-border"
+      card_template: '@molecules/blocks/card-form/card-form.twig'
+      cards:
+        - title: "Take action on my court case"
+          id: "read-more-1"
+          excerpt: '<p>Move your case forward make a change to a decision dismiss a case</p>'
+          menu_label: 'The label'
+          menu_default_option: 'Options:'
+          menu_items:
+            - name: "Divorce or Separation"
+              url: "value1"
+            - name: "Name or Gender Change"
+              url: "value2"
+            - name: "Restraining Order"
+              url: "value3"
+            - name: "Small Claims Lawsuit"
+              url: "value4"
+            - name: "Eviction"
+              url: "value5"
+            - name: "Child Custody or Support"
+              url: "value6"
+            - name: "Spousal Support"
+              url: "value7"
+            - name: "Conservatorship of an adult"
+              url: "value8"
+            - name: "Guardianship of a child"
+              url: "value9"
+            - name: "Paternity"
+              url: "value10"
+            - name: "Traffic"
+              url: "value11"
+            - name: "Debt"
+              url: "value12"
+        - title: "Start a court case"
+          id: "read-more-2"
+          excerpt: '<p>Find your case type to get started</p>'
+          menu_default_option: 'Available options:'
+          menu_items:
+            - name: "Divorce or Separation"
+              url: "value1"
+            - name: "Name or Gender Change"
+              url: "value2"
+            - name: "Restraining Order"
+              url: "value3"
+            - name: "Small Claims Lawsuit"
+              url: "value4"
+            - name: "Eviction"
+              url: "value5"
+            - name: "Child Custody or Support"
+              url: "value6"
+            - name: "Spousal Support"
+              url: "value7"
+            - name: "Conservatorship of an adult"
+              url: "value8"
+            - name: "Guardianship of a child"
+              url: "value9"
+            - name: "Paternity"
+              url: "value10"
+            - name: "Traffic"
+              url: "value11"
+            - name: "Debt"
+              url: "value12"
+        - title: "Get help with papers I was served"
+          id: "read-more-3"
+          excerpt: '<p>Look up by form number and understand your options</p>'
+          menu_items:
+            - name: "Housing"
+              url: "value1"
+            - name: "Money & Debt"
+              url: "value2"
+            - name: "Families & Children"
+              url: "value3"
+            - name: "Abuse & Harassment"
+              url: "value4"
+            - name: "Elder Issues"
+              url: "value5"
+            - name: "Wills & Estates"
+              url: "value6"
+            - name: "Lawsuits"
+              url: "value7"
+            - name: "Traffic"
+              url: "value8"
+        - title: "Get information about a legal matter"
+          id: "read-more-4"
+          excerpt: '<p>Find out what kind of help you can get from the court for a variety of situations</p>'
+          menu_items:
+            - name: "Divorce or Separation"
+              url: "value1"
+            - name: "Name or Gender Change"
+              url: "value2"
+            - name: "Restraining Order"
+              url: "value3"
+            - name: "Small Claims Lawsuit"
+              url: "value4"
+            - name: "Eviction"
+              url: "value5"
+            - name: "Child Custody or Support"
+              url: "value6"
+            - name: "Spousal Support"
+              url: "value7"
+            - name: "Conservatorship of an adult"
+              url: "value8"
+            - name: "Guardianship of a child"
+              url: "value9"
+            - name: "Paternity"
+              url: "value10"
+            - name: "Traffic"
+              url: "value11"
+            - name: "Debt"
+              url: "value12"
+        - title: "Look up a court case or citation"
+          id: "read-more-5"
+          excerpt: '<p>Find a traffic ticket or court case using the county courts website</p>'
+          menu_items:
+            - name: "Housing"
+              url: "value1"
+            - name: "Money & Debt"
+              url: "value2"
+            - name: "Families & Children"
+              url: "value3"
+            - name: "Abuse & Harassment"
+              url: "value4"
+            - name: "Elder Issues"
+              url: "value5"
+            - name: "Wills & Estates"
+              url: "value6"
+            - name: "Lawsuits"
+              url: "value7"
+            - name: "Traffic"
+              url: "value8"
+        - title: "Get help from the court"
+          id: "read-more-6"
+          excerpt: '<p>Find In-person self-centers, court interpreters, disability access and more</p>'
+          menu_items:
+            - name: "Divorce or Separation"
+              url: "value1"
+            - name: "Name or Gender Change"
+              url: "value2"
+            - name: "Restraining Order"
+              url: "value3"
+            - name: "Small Claims Lawsuit"
+              url: "value4"
+            - name: "Eviction"
+              url: "value5"
+            - name: "Child Custody or Support"
+              url: "value6"
+            - name: "Spousal Support"
+              url: "value7"
+            - name: "Conservatorship of an adult"
+              url: "value8"
+            - name: "Guardianship of a child"
+              url: "value9"
+            - name: "Paternity"
+              url: "value10"
+            - name: "Traffic"
+              url: "value11"
+            - name: "Debt"
+              url: "value12"
+  tile_section:
+    headergroup:
+      brow: ''
+      title: 'More information'
+    column_variant: "has-four-columns"
+    emphasis_variant: "has-emphasis"
+    tiles:
+        - title: "Find a low-cost lawyer"
+          url: '#'
+        - title: "Find a court form"
+          url: '#'
+        - title: "Find out about jury duty or serving as a witness"
+          url: '#'
+        - title: "Find other information about the California Courts"
+          url: '#'
+  locate_section:
+    background_variant: 'has-background-color--light'
+    headergroup:
+      brow: ''
+      title: 'Self-Help Locations'
+      lead: "The Self-Help Center/Family Law Facilitator's Office provides legal information and resources to self-represented court customers."
+      body: 'Assistance may be in the form of walk in services, workshops, referrals and/or telephonic assistance.'
+    search_group:
+      label: 'Enter city, county or Zipcode'
+      button:
+        text: 'Search'
+        style: 'primary'
+      helper: ''

@@ -1,0 +1,25 @@
+{% set default_option = jump_menu.default_option|default('Action you want to do') %}
+
+{% set classes = [
+  'jcc-jump-menu',
+  'jcc-inline-input',
+]|merge(jump_menu.classes|default([''])) %}
+
+{% if jump_menu.items|length > 0 %}
+  <div class="{{ classes|join(' ')|trim }}">
+    {% if jump_menu.label %}
+      <label class="usa-label sr-only" for="options">{{ jump_menu.label }}</label>
+    {% endif %}
+
+    <select class="usa-select" name="options" id="options">
+      <option value>{{ default_option }}</option>
+      {% for item in jump_menu.items %}
+        {% if item.name and item.url %}
+          <option value="{{ item.url }}">{{ item.name }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+
+    <button class="usa-button usa-button--accent-warm">Go</button>
+  </div>
+{% endif %}
