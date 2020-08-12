@@ -27,7 +27,33 @@ header_base:
       - name: "Judicial Council"
         url: "#"
   primary_nav:
-    nav_variant: 'simple'
+    mega: false
+    links:
+      - text: Current section 2
+        is_current: true
+        id: nav-section-one
+        links: &subnav_links
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+            is_current: false
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: A very long navigation link that goes onto two lines
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+      - text: Simple link 1
+        href: "#"
   nav_secondary:
     search:
       form_action: "/search"

@@ -1,5 +1,3 @@
 header_base:
   height_variant: 'extended'
   background_variant: 'inverted'
-  basic: false
-  extended: true

@@ -1,3 +1,3 @@
 header_base:
   primary_nav:
-    nav_variant: 'mega'
+    mega: true
