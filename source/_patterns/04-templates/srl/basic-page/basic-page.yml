@@ -31,7 +31,7 @@ basic_page:
         - name: "Judicial Council"
           url: "#"
     primary_nav:
-      nav_variant: 'simple'
+      mega: false
     nav_secondary:
       search:
         form_action: "/search"

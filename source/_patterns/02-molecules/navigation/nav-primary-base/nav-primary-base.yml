@@ -4,7 +4,7 @@ primary_nav:
     - text: Current section 2
       is_current: true
       id: nav-section-one
-      links: &subnav_links
+      links:
         - text: Navigation link 1
           href: "#"
         - text: Navigation link 2

@@ -155,6 +155,8 @@
 
     @include at-media(desktop) {
       @include u-display(flex);
+      height: $jcc-nav-link-height;
+      align-items: center;
     }
 
     .usa-accordion {

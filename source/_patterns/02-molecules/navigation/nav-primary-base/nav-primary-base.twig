@@ -1,3 +1,4 @@
+{% if primary_nav.links %}
 <ul class="usa-nav__primary usa-accordion">
   {% for link in primary_nav.links %}
     <li class="usa-nav__primary-item">
@@ -32,3 +33,4 @@
     </li>
   {% endfor %}
 </ul>
+{% endif %}
