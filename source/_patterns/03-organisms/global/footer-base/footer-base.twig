@@ -9,17 +9,6 @@
   
   {% if footer_base.links %} 
   <div class="usa-footer__primary-section">
-  {% if footer_base.height_variant == 'simple' %} 
-    <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <ul class="grid-row grid-gap">
-        {% for link in footer_base.links %}
-        <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="#">{{ link.text }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {% endif %}
 
   {% if footer_base.height_variant == 'big' %}
     <div class="grid-container">
@@ -47,6 +36,19 @@
       </div>
     </div>
   {% endif %}
+
+  {% if footer_base.height_variant == 'simple' %} 
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        {% for link in footer_base.links %}
+        <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+
   </div>
   {% endif %}
 

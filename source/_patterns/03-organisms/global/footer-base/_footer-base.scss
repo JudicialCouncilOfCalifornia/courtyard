@@ -43,11 +43,19 @@
     }
   }
 
+  .usa-footer__contact-links {
+    @include at-media(desktop) {
+      @include u-display(flex);
+      align-items: center;
+    }
+  }
+
   .usa-footer__social-links {
     @include u-padding-bottom(0);
 
     @include at-media(desktop) {
       @include u-display(flex);
+      @include u-width(full);
     }
   }
 

@@ -1,5 +1,5 @@
 primary_nav:
-  mega: mega
+  mega: false
   links:
     - text: Current section 2
       is_current: true

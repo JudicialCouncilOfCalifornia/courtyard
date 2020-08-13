@@ -5,30 +5,11 @@ footer_base:
   height_variant: 'simple'
   background_variant: 'default'
   links:
-    - text: Nested section 1
-      links:
-        - text: Navigation link 1
-          href: "#"
-        - text: Navigation link 2
-          href: "#"
-        - text: Navigation link 3
-          href: "#"
-        - text: Navigation link 4
-          href: "#"
-        - text: A very long navigation link that goes onto two lines
-          href: "#"
-          href: "#"
-    - text: Nested section 2
-      links:
-        - text: Navigation link 5
-          href: "#"
-        - text: Navigation link 6
-          href: "#"
-        - text: Navigation link 7
-          href: "#"
-        - text: Navigation link 8
-          href: "#"
     - text: Simple link 1
+      href: "#"
+    - text: Simple link 2
+      href: "#"
+    - text: Simple link 3
       href: "#"
   social_links:
     items:
