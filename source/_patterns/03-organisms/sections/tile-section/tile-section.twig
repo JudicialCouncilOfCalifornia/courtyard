@@ -1,6 +1,8 @@
 {% set classes = [
   'jcc-tiles-section',
+  'jcc-text-section--' ~ text_section.background_variant|default('has-background-color--transparent'),
   'jcc-tiles-section--' ~ tile_section.column_variant|default('has-two-columns'),
+  'jcc-tiles-section--' ~ tile_section.emphasis_variant|default(''),
 ]|merge(tile_section.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if tile_section.id %} id="{{ tile_section.id }}"{% endif %}>

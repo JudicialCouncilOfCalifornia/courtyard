@@ -18,8 +18,21 @@
   }
 }
 
+.jcc-card--has-border {
+  @include u-border(1px, primary-vivid);
+  @include u-padding(3);
+}
+
 .jcc-card__excerpt {
   @extend .usa-prose;
+}
+
+.jcc-card__content[aria-hidden="true"] {
+  @include u-display(none);
+
+  @include at-media(tablet) {
+    @include u-display(block);
+  }
 }
 
 .jcc-card__img {

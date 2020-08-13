@@ -29,17 +29,21 @@
       <div class="jcc-card__brow">{{ card.brow }}</div>
     {% endif %}
     <{{ tag }} class="jcc-card__title">
-      {%  if card.url %}
+      {% if card.url %}
         <a class="usa-link" href="{{ card.url }}">{{ card.title }}</a>
+      {% elseif card.id %}
+        <span data-a11y-toggle="{{ card.id }}">{{ card.title }}</span>
       {% else %}
         {{ card.title }}
       {% endif %}
     </{{ tag }}>
-    {% if card.excerpt %}
-      <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
-    {% endif %}
-    {% if card.footer %}
-      <div class="jcc-card__footer">{{ card.brow }}</div>
-    {% endif %}
+    {% if card.id %}<div class="jcc-card__content" id="{{ card.id }}">{% endif %}
+      {% if card.excerpt %}
+        <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
+      {% endif %}
+      {% if card.footer %}
+        <div class="jcc-card__footer">{{ card.footer }}</div>
+      {% endif %}
+    {% if card.id %}</div>{% endif %}
   </div>
 </div>

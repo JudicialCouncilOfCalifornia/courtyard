@@ -8,3 +8,11 @@
   + [class*="--has-background-color--dark--secondary"] {
   padding-top: units(0);
 }
+
+.jcc-section-wrapper {
+  @include section-wrapper;
+}
+
+.jcc-section__container {
+  @include section-container;
+}

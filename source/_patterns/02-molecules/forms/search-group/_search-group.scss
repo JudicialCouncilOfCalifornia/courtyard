@@ -1,4 +1,4 @@
-.jcc-contact-group {
+.jcc-search-group {
   label {
     @include u-margin(0);
     @include u-margin-bottom(1);
@@ -25,13 +25,13 @@
   }
 }
 
-.jcc-contact-group__container {
+.jcc-search-group__container {
   @include u-display("flex");
   @include u-flex("wrap");
   @include u-position("relative");
 }
 
-.jcc-contact-group__helper {
+.jcc-search-group__helper {
   @include u-text("gray-50");
   @include u-font-size("body", "3xs");
   @include u-margin-top(1);

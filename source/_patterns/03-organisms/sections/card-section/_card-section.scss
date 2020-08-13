@@ -39,6 +39,25 @@
   }
 }
 
+.jcc-cards-section--offset-up {
+  @include at-media(desktop) {
+    margin-top: -12rem;
+
+    .jcc-header-group__title {
+      @include u-text("white");
+      @include u-text("italic");
+
+      &:after {
+        background-color: transparent;
+      }
+    }
+
+    .jcc-cards {
+      @include u-position("relative");
+    }
+  }
+}
+
 .jcc-cards__container {
   @include section-container;
 }
@@ -56,7 +75,8 @@
 }
 
 .jcc-cards-section--has-two-columns,
-.jcc-cards-section--has-three-columns {
+.jcc-cards-section--has-three-columns,
+.jcc-cards-section--has-four-columns {
   .jcc-cards {
     @include at-media(desktop) {
       @include grid-row;
@@ -82,5 +102,24 @@
     @include at-media(desktop) {
       @include grid-col(4);
     }
+  }
+}
+
+.jcc-cards-section--has-four-columns {
+  .jcc-cards__item {
+    @include u-width(full);
+
+    @include at-media(desktop) {
+      @include grid-col(3);
+    }
+  }
+}
+
+.jcc-cards-section--has-border {
+  .jcc-card {
+    @include u-padding-y(3);
+    @include u-padding-x(4);
+    @include card-border();
+    @include u-text(ink);
   }
 }
