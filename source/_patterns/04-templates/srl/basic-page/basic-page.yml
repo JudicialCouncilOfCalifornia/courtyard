@@ -1,17 +1,161 @@
-hero:
-  column_variant: 'has-two-columns-threequarter'
-  title: 'Motion to pay judgment in installments'
-  lead: 'In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay.'
-  body: ''
-  breadcrumbs:
-    - label: 'Debt Collection'
-    - label: 'Pay in Installments'
-
-steps:
-  headergroup:
-    brow: ''
-    title: "Steps to pay in installments"
-    lead: ''
-
-switchboard:
-  background_variant: 'has-background-color--dark'
+basic_page:
+  header_base:
+    height_variant: 'basic'
+    background_variant: 'inverted'
+    skip: 'Skip to main content'
+    global_bar:
+      logo_text:
+        title: 'Judicial Branch of California'
+        url: '#'
+      logo: 'jcc-logo-branch-text-white.svg' 
+    title: 'Self-Help Center'
+    logo: 
+      mobile: 'jcc-logo-self-help-short-white.svg' 
+      desktop: 'jcc-logo-self-help-white.svg' 
+    menu_icon:
+      name: 'menu'
+      title: "Menu"
+      decorative: false
+    close_icon:
+      name: 'close'
+      title: "close"
+      decorative: false
+    secondary_nav:
+      items:
+        - name: "Supreme Court"
+          url: "#"
+        - name: "Courts of Appeal"
+          url: "#"
+        - name: "Superior Courts"
+          url: "#"
+        - name: "Judicial Council"
+          url: "#"
+    primary_nav:
+      mega: false
+    nav_secondary:
+      search:
+        form_action: "/search"
+        search_input:
+          form_input_name: "keyword"
+      accordion_button:
+        id: 'extended-nav-section-two'
+        icon:
+          name: "translate"
+          title: "Translate"
+          decorative: true
+        label: "Translate"
+        links:
+          - title: "English"
+            href: "#"
+          - title: "Spanish"
+            href: "#"
+          - title: "Vietnamese"
+            href: "#"
+  hero:
+    column_variant: 'has-two-columns-threequarter'
+    title: 'Motion to pay judgment in installments'
+    lead: 'In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay.'
+    body: ''
+    breadcrumbs:
+      - label: 'Debt Collection'
+      - label: 'Pay in Installments'
+  steps:
+    headergroup:
+      title: "Lorem ipsum"
+      lead: "Nullam at semper mauris, at rhoncus purus."
+    items:
+      - title: "Prepare the claim of exemption"
+        excerpt: '
+          <p><strong>Complete Claim of Exemption Forms</strong></p>
+          <ol start="1">
+            <li><p>Claim of Exemption (form WG-006) and a </p></li>
+            <li><p>Financial Statement (form WG-007).</p></li>
+          </ol>
+          <p>Use a guided interview to complete these forms online or use follow these instructions.</p>
+          <p><strong>Submit the Claim of Exemption Forms</strong></p>
+          <ul>
+            <li><p>Make 2 copies of your completed forms.</p></li>
+            <li><p>Keep one copy for yourself.</p></li>
+            <li><p>Take or mail the originals and one copy to the Levying Officer identified in the upper right-hand corner of the Earnings Withholding Order (form WG-002). This is usually the sheriff. It may or may not be your local sheriff.</p></li>
+          </ul>
+          <p>The sheriff keeps the original and sends a copy to the debt collector.</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: "steps-target-1"
+            title: "What is a judgment"
+            content: "<p>If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.</p>"
+      - title: "File the claim of exemption with the sheriff"
+        excerpt: "File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail"
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: "steps-target-2"
+            title: "Read more"
+            content: "Read more content"
+      - title: "Wait to see if the claim of exemption is opposed"
+        excerpt: "The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned."
+  switchboard:
+    background_variant: "has-background-color--dark--primary"
+    headergroup:
+      brow: 'Next Steps'
+      title: 'What can we help you with today?'
+    items:
+      primary:
+        - brow: 'Wage Garnishment'
+          title: 'Someone took money from my paycheck'
+          url: 'link.pages-judgment-wage-garnishment'
+        - brow: 'Lien Against Property'
+          title: 'I was told I can’t sell my property'
+          url: 'link.pages-judgment-lien-against-property'
+        - brow: 'Bank Levy'
+          title: 'Someone tried to take money from my bank account'
+          url: 'link.pages-judgment-bank-levy'
+      secondary:
+        - brow: 'General Information'
+          title: 'I want to find out more about Debt Collection'
+          url: 'link.pages-judgment-general-information'
+        - brow: 'Negotiating a Settlement'
+          title: 'I want to talk with someone and work something out'
+          url: 'link.pages-judgment-negotiating-a-settlement'
+        - brow: 'Pay in Installments'
+          title: 'I don’t have all the money but can pay over time'
+          url: 'link.pages-judgment-pay-in-installments'
+  footer_base:
+    logo: 'jcc-logo-self-help-long-white.svg'
+    title: 'Self-Help Center'
+    height_variant: 'simple'
+    background_variant: 'inverted'
+    social_links:
+      items:
+        - icon:
+            name: "youtube"
+            title: "Youtube"
+            decorative: false
+          title: "Youtube"
+          url: "#"
+        - icon:
+            name: "facebook2"
+            title: "Facebook"
+            decorative: false
+          title: "Facebook"
+          url: "#"
+        - icon:
+            name: "twitter"
+            title: "Twitter"
+            decorative: false
+          title: "Twitter"
+          url: "#"
+    global_bar:
+      logo_text:
+        title: 'Judicial Branch of California'
+        url: '#'
+      logo: 'jcc-logo-branch-text-white.svg' 
+      secondary_nav:
+        items:
+          - name: "Contact Us"
+            url: "#"
+          - name: "Terms of Use"
+            url: "#"
+          - name: "Privacy Policy"
+            url: "#"

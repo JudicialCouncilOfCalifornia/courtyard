@@ -1,3 +1,14 @@
+// Base Navigation
+$jcc-nav-link-height: 5.625rem;
+$jcc-nav-input-height: 3.25rem;
+$jcc-nav-icon-size: 2.5rem;
+$jcc-nav-link-padding: 2.5;
+$jcc-nav-input-height: 3.25rem;
+
+// Base Header
+$jcc-navbar-height: 3.75rem;
+$jcc-navbar-offset: 6.5rem;
+
 // Section vertical rhythm and centered block
 
 @mixin section-wrapper($padding-size: 6) {

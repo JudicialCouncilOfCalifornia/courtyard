@@ -1,0 +1,13 @@
+global_bar:
+  logo_text:
+    title: 'Judicial Branch of California'
+    url: '#'
+  logo: 'jcc-logo-branch-text-white.svg' 
+  secondary_nav:
+    items:
+      - name: "Contact Us"
+        url: "#"
+      - name: "Terms of Use"
+        url: "#"
+      - name: "Privacy Policy"
+        url: "#"

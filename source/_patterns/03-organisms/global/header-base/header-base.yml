@@ -1,0 +1,75 @@
+header_base:
+  height_variant: 'basic'
+  skip: 'Skip to main content'
+  global_bar:
+    logo_text:
+      title: 'Judicial Branch of California'
+      url: '#'
+    logo: 'jcc-logo-branch-text-white.svg' 
+  title: 'Alameda Superior Court'
+  logo: ''
+  menu_icon:
+    name: 'menu'
+    title: "Menu"
+    decorative: false
+  close_icon:
+    name: 'close'
+    title: "close"
+    decorative: false
+  secondary_nav:
+    items:
+      - name: "Supreme Court"
+        url: "#"
+      - name: "Courts of Appeal"
+        url: "#"
+      - name: "Superior Courts"
+        url: "#"
+      - name: "Judicial Council"
+        url: "#"
+  primary_nav:
+    mega: false
+    links:
+      - text: Current section 2
+        is_current: true
+        id: nav-section-one
+        links: &subnav_links
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+            is_current: false
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: A very long navigation link that goes onto two lines
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+          - text: Navigation link
+            href: "#"
+      - text: Simple link 1
+        href: "#"
+  nav_secondary:
+    search:
+      form_action: "/search"
+      search_input:
+        form_input_name: "keyword"
+    accordion_button:
+      id: 'extended-nav-section-two'
+      icon:
+        name: "translate"
+        title: "Translate"
+        decorative: true
+      label: "Translate"
+      links:
+        - title: "English"
+          href: "#"
+        - title: "Spanish"
+          href: "#"
+        - title: "Vietnamese"
+          href: "#"
