@@ -1,0 +1,37 @@
+location:
+  brow: "Solano County"
+  title: "Solano Legal Access Center (SLAC) and Family Law Facility"
+  address: "Hall of Justice, 2nd floor<br>600 Union Avenue, Fairfield CA 94533 "
+  phone:
+    title: "(415) 123-4567"
+    url: "tel:415-123-4567"
+  website:
+    title: "Solano Legal Access Center (SLAC) and Family Law Facility"
+    url: "#"
+  tags_label: "Matters Served"
+  tags:
+    -
+      text: "Family"
+    -
+      text: "Criminal"
+    -
+      text: "Probate"
+    -
+      text: "Traffic"
+    -
+      text: "Small claims"
+  hours_label: "Hours"
+  hours:
+    -
+      label: "Building"
+      details: "M-F: 8:00AM - 5:00PM"
+    -
+      label: "Clerks"
+      details: "M-F: 8:00AM - 3:00PM"
+    -
+      label: "Self Help"
+      details: "M, Tu, Thu, F: 8:15AM - 12:00PM<br>W: N/A"
+  map:
+    src: "https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg"
+    alt: "Solano County map"
+  directions_title: "Get Directions"

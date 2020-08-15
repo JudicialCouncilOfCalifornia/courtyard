@@ -1,0 +1,101 @@
+{% set classes = [
+  'jcc-location',
+  location.contextual_links ? 'contextual-region' : '',
+]|merge(location.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-location__content-first">
+    {% if location.map %}
+      <div class="jcc-location__map" style="background-image:url({{ location.map.src }})">
+        {# {% include '@atoms/image/image.twig' with { image:  } %} #}
+      </div>
+    {% endif %}
+
+    {% if location.address and location.directions_title %}
+      <div class="jcc-location__directions">
+        {% set address = location.address|replace({'<br>': ' '})|trim %}
+        {% include '@atoms/buttons/link-button.twig' with {
+          link_button: {
+            style: 'accent-warm',
+            text: location.directions_title,
+            url: 'https://maps.google.com/?q=' ~ address,
+          }
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="jcc-location__content-second">
+    {% if location.brow %}
+      <div class="jcc-location__brow">{{ location.brow }}</div>
+    {% endif %}
+
+    <h5 class="jcc-location__title">
+      {% if location.url %}
+        <a class="usa-link" href="{{ location.url }}">{{ location.title }}</a>
+      {% elseif location.id %}
+        <span data-a11y-toggle="{{ location.id }}">{{ location.title }}</span>
+      {% else %}
+        {{ location.title }}
+      {% endif %}
+    </h5>
+
+    <div class="jcc-location__inner-content">
+      <div class="jcc-location__inner-content-first">
+        {% if location.address %}
+          <div class="jcc-location__address">
+            {{ location.address }}
+          </div>
+        {% endif %}
+
+        {% if location.phone %}
+          <div class="jcc-location__phone">
+            <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.title }}</a>
+          </div>
+        {% endif %}
+
+        {% if location.website %}
+          <div class="jcc-location__website">
+            <a class="usa-link usa-link--external " href="{{ location.website.url }}">{{ location.website.title }}</a>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="jcc-location__inner-content-second">
+        {% if location.tags %}
+          <div class="jcc-location__tags">
+            {% if location.tags_label %}
+              <h6 class="jcc-location__tags-label">
+                {{ location.tags_label }}:
+              </h6>
+            {% endif %}
+
+            {% for tag in location.tags %}
+              {% include '@atoms/tag/tag.twig' with { tag: tag } %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if location.hours %}
+      <div class="jcc-location__hours">
+        <h6 class="jcc-location__hours-label">
+          {{ location.hours_label }}:
+        </h6>
+        <div class="jcc-location__hours-items">
+          {% for item in location.hours %}
+            <div class="jcc-location__hours-item">
+              <div class="jcc-location__hours-item-label">
+                {{ item.label }}
+              </div>
+              <div class="jcc-location__hours-item-details">
+                {{ item.details }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
