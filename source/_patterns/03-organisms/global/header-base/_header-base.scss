@@ -172,6 +172,14 @@
       @include u-padding-left(0);
     }
 
+    .usa-nav__secondary {
+      .jcc-nav-secondary__group {
+        @include at-media(desktop) {
+          height: auto;
+        }
+      }
+    }
+
     .jcc-nav-secondary__menu {
       @include at-media(desktop) {
         right: 2rem;

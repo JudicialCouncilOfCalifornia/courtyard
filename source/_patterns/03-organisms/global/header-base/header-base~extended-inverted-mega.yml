@@ -3,3 +3,9 @@ header_base:
   background_variant: 'inverted'
   primary_nav:
     mega: true
+    links:
+      - text: Current section 2
+        id: nav-section-three
+  nav_secondary:
+    accordion_button:
+      id: 'extended-nav-section-four'

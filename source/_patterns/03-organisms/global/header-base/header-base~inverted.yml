@@ -1,2 +1,9 @@
 header_base:
   background_variant: 'inverted'
+  primary_nav:
+    links:
+      - text: Current section 2
+        id: nav-section-thirteen
+  nav_secondary:
+    accordion_button:
+      id: 'extended-nav-section-fourteen'

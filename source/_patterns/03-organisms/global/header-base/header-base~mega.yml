@@ -1,3 +1,9 @@
 header_base:
   primary_nav:
     mega: true
+    links:
+      - text: Current section 2
+        id: nav-section-fifteen
+  nav_secondary:
+    accordion_button:
+      id: 'extended-nav-section-sixteen'
