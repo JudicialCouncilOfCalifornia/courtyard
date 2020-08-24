@@ -244,3 +244,11 @@
     top: $jcc-navbar-offset;
   }
 }
+
+.usa-skipnav {
+  @include u-display(none);
+
+  &:focus {
+    @include u-display(block);
+  }
+}
