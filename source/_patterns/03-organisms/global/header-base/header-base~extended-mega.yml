@@ -2,3 +2,9 @@ header_base:
   height_variant: 'extended'
   primary_nav:
     mega: true
+    links:
+      - text: Current section 2
+        id: nav-section-seven
+  nav_secondary:
+    accordion_button:
+      id: 'extended-nav-section-eight'
