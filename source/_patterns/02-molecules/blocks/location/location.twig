@@ -13,7 +13,7 @@
 
     {% if location.address and location.directions_title %}
       <div class="jcc-location__directions">
-        {% set address = location.address|replace({'<br>': ' '})|trim %}
+        {% set address = location.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
         {% include '@atoms/buttons/link-button.twig' with {
           link_button: {
             style: 'accent-warm',
@@ -83,7 +83,7 @@
         <h6 class="jcc-location__hours-label">
           {{ location.hours_label }}:
         </h6>
-        <div class="jcc-location__hours-items">
+        <div class="jcc-location__hours-items" data-quantity="{{ location.hours|length }}">
           {% for item in location.hours %}
             <div class="jcc-location__hours-item">
               <div class="jcc-location__hours-item-label">

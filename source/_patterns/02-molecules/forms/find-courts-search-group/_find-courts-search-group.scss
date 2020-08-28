@@ -1,0 +1,66 @@
+.jcc-find-courts-search-group {
+  label {
+    @include u-margin(0);
+    @include u-margin-bottom(1);
+    @include u-width("full");
+    @include u-maxw("none");
+    @include u-color("primary-dark");
+    @include u-text("italic");
+    font-size: 20px;
+  }
+
+  input {
+    @include u-margin(0);
+    @include u-margin-right(1);
+    @include u-float("left");
+    flex: 1;
+  }
+
+  button,
+  input[type="submit"] {
+    @include u-margin(0);
+    @include u-padding-x(2);
+    @include u-width("auto");
+  }
+
+  .usa-error-message {
+    @include u-width("full");
+  }
+}
+
+.jcc-find-courts-search-group__container {
+  @include u-display("flex");
+  @include u-flex("wrap");
+  @include u-position("relative");
+}
+
+.jcc-find-courts-search-group__helper {
+  @include u-text("gray-50");
+  @include u-font-size("body", "3xs");
+  @include u-margin-top(1);
+  @include u-width("full");
+}
+
+//
+// Drupal specific styles:
+
+.jcc-find-courts-search-group {
+  .usa-form {
+    @include u-width("full");
+  }
+
+  .form-item-id {
+    @include u-display("none");
+  }
+
+  .form--inline {
+    @extend .jcc-find-courts-search-group__container;
+    @include u-maxw("tablet");
+    @include u-flex("align-end");
+  }
+
+  .form-item {
+    @include u-margin-right(1);
+    flex-grow: 2;
+  }
+}

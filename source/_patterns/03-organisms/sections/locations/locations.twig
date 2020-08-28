@@ -1,0 +1,15 @@
+{% set classes = [
+  'jcc-locations',
+]|merge(locations.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if locations.items %}
+    <div class="jcc-locations__items">
+      {% for item in locations.items %}
+        <div class="jcc-locations__item">
+          {% include '@molecules/blocks/location/location.twig' with { location: item } %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

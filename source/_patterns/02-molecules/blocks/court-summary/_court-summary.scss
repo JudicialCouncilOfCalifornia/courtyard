@@ -1,0 +1,35 @@
+.jcc-court-summary {
+  @include section-wrapper;
+  @include u-bg("base-lightest");
+}
+
+.jcc-court-summary__inner {
+  @include section-container;
+  @include grid-row;
+}
+
+.jcc-court-summary__title {
+  @include u-margin-bottom(4);
+  @include u-color("primary-darker");
+  font-size: 32px;
+}
+
+.jcc-court-summary__link {
+  @include u-margin-bottom(2);
+}
+
+.jcc-court-summary__primary {
+  @include at-media("desktop") {
+    @include grid-col(8);
+  }
+}
+
+.jcc-court-summary__secondary {
+  @include at-media-max("desktop") {
+    @include u-margin-top(2);
+  }
+
+  @include at-media("desktop") {
+    @include grid-col(4);
+  }
+}

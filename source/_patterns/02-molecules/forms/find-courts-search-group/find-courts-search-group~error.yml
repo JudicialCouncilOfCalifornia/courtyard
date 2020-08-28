@@ -1,0 +1,5 @@
+find_courts_search_group:
+  label: Enter city, county, or zipcode
+  button:
+    text: Search
+  error: Please fix

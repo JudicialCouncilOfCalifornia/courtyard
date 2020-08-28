@@ -6,6 +6,10 @@
 }
 
 .jcc-location__content-first {
+  @include u-maxw("mobile-lg");
+  @include u-margin-x("auto");
+  @include u-margin-bottom("2");
+
   @include at-media("desktop") {
     @include grid-col(3);
     @include u-order(2);
@@ -94,8 +98,13 @@
 }
 
 .jcc-location__hours-item {
-  @include grid-col(4);
   @include u-margin-bottom("2");
+
+  @include at-media("tablet-lg") {
+    [data-quantity="3"] & {
+      @include grid-col(4);
+    }
+  }
 }
 
 .jcc-location__map {

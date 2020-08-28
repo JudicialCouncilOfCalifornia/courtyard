@@ -1,0 +1,62 @@
+{% set classes = [
+  'jcc-court-summary',
+]|merge(court_summary.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-court-summary__inner">
+    <div class="jcc-court-summary__primary">
+      {% if court_summary.title %}
+        <h2 class="jcc-court-summary__title">
+          {{ court_summary.title }}
+        </h2>
+      {% endif %}
+
+      {% if court_summary.quantity %}
+        <p class="jcc-court-summary__quantity jcc-lead">
+          {{ court_summary.quantity }}
+        </p>
+      {% endif %}
+
+      {% if court_summary.body %}
+        <div class="jcc-court-summary__body jcc-lead">
+          {{ court_summary.body }}
+        </div>
+      {% endif %}
+
+      {% if court_summary.links %}
+        <div class="jcc-court-summary__links">
+          {% for link in court_summary.links %}
+            <div class="jcc-court-summary__link">
+              <a class="usa-link usa-link--external " href="{{ link.url }}">{{ link.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if court_summary.checkbox %}
+        <div class="jcc-court-summary__checkbox">
+          {% include '@atoms/forms/checkbox.twig' with {
+            checkbox: {
+              label: court_summary.checkbox.label,
+              name: 'self-help-only',
+              style: []
+            }
+          } only %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="jcc-court-summary__secondary">
+      {% if court_summary.read_more %}
+        {% include '@molecules/interactive/read-more/read-more.twig' with {
+          read_more: {
+            id: 'read-more',
+            block_variant: true,
+            title: court_summary.read_more.title,
+            content: court_summary.read_more.content
+          }
+        } %}
+      {% endif %}
+    </div>
+  </div>
+</div>
