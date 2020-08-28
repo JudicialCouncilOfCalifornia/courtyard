@@ -27,7 +27,7 @@
                 {% include '@molecules/blocks/card/card.twig' with {
                     card: tile.card
                 } %}
-                {% if tile.img.src %}
+                {% if tile.img %}
                     <div class="jcc-tiles-list__image">
                         {% include '@atoms/image/image.twig' with { image: tile.img } %}
                     </div>
