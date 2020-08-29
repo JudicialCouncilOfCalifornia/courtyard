@@ -4,6 +4,9 @@
     @include u-margin-bottom(1);
     @include u-width("full");
     @include u-maxw("none");
+    @include u-color("primary-dark");
+    @include u-text("italic");
+    font-size: 20px;
   }
 
   input {
@@ -36,4 +39,28 @@
   @include u-font-size("body", "3xs");
   @include u-margin-top(1);
   @include u-width("full");
+}
+
+//
+// Drupal specific styles:
+
+.jcc-search-group {
+  .usa-form {
+    @include u-width("full");
+  }
+
+  .form-item-id {
+    @include u-display("none");
+  }
+
+  .form--inline {
+    @extend .jcc-search-group__container;
+    @include u-maxw("tablet");
+    @include u-flex("align-end");
+  }
+
+  .form-item {
+    @include u-margin-right(1);
+    flex-grow: 2;
+  }
 }

@@ -11,8 +11,8 @@ hero:
   lead: "The Self-Help Center/Family Law Facilitator's Office provides legal information and resources to self-represented court customers. Assistance may be in the form of walk in services, workshops, referrals and/or telephonic assistance."
   body: ""
   column_content_right: '
-    <div class="jcc-find-courts-search-group">
-      <div class="jcc-find-courts-search-group__container">
+    <div class="jcc-search-group">
+      <div class="jcc-search-group__container">
         <label class="usa-label" for="input-type-text">Enter city, county, or zipcode</label>
         <input class="usa-input" id="input-type-text" name="input-type-text" type="text">
         <button class="usa-button usa-button--primary">Search</button>
