@@ -14,8 +14,9 @@
   font-size: 32px;
 }
 
-.jcc-court-summary__link {
-  @include u-margin-bottom(2);
+.jcc-court-summary__link,
+.jcc-court-summary__checkbox {
+  @include u-margin-y(2);
 }
 
 .jcc-court-summary__primary {
