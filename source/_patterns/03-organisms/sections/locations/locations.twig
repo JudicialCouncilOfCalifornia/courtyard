@@ -1,8 +1,11 @@
+{% set layout = locations.layout|default('full') %}
+
 {% set classes = [
   'jcc-locations',
+  'jcc-locations--' ~ layout,
 ]|merge(locations.classes|default([''])) %}
 
-<div class="{{ classes|join(' ')|trim }}">
+<div class="{{ classes|join(' ')|trim }}" data-quantity="{{ locations.items|length }}">
   {% if locations.items %}
     <div class="jcc-locations__items">
       {% for item in locations.items %}

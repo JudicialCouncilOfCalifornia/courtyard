@@ -5,40 +5,83 @@
   }
 }
 
-.jcc-location__content-first {
-  @include u-maxw("mobile-lg");
-  @include u-margin-x("auto");
-  @include u-margin-bottom("2");
+.jcc-location--full {
+  .jcc-location__content-first {
+    @include u-maxw("mobile-lg");
+    @include u-margin-x("auto");
+    @include u-margin-bottom("2");
 
-  @include at-media("desktop") {
-    @include grid-col(3);
-    @include u-order(2);
+    @include at-media("desktop") {
+      @include grid-col(3);
+      @include u-order(2);
+    }
+  }
+
+  .jcc-location__content-second {
+    @include at-media("desktop") {
+      @include grid-col(9);
+      @include u-order(1);
+    }
+  }
+
+  .jcc-location__inner-content {
+    @include at-media("desktop-lg") {
+      @include grid-row;
+      @include grid-gap(4);
+    }
+  }
+
+  .jcc-location__inner-content-first {
+    @include at-media("desktop-lg") {
+      @include grid-col(8);
+    }
+  }
+
+  .jcc-location__inner-content-second {
+    @include at-media("desktop-lg") {
+      @include grid-col(4);
+    }
+  }
+
+  .jcc-location__title {
+    @include u-color("primary-dark");
   }
 }
 
-.jcc-location__content-second {
-  @include at-media("desktop") {
-    @include grid-col(9);
-    @include u-order(1);
-  }
-}
+.jcc-location--mini {
+  .jcc-location__content-first {
+    @include u-maxw("mobile-lg");
+    @include u-margin-x("auto");
+    @include u-margin-bottom("2");
 
-.jcc-location__inner-content {
-  @include at-media("desktop-lg") {
-    @include grid-row;
-    @include grid-gap(4);
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-order(2);
+    }
   }
-}
 
-.jcc-location__inner-content-first {
-  @include at-media("desktop-lg") {
-    @include grid-col(8);
+  .jcc-location__content-second {
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-order(1);
+    }
   }
-}
 
-.jcc-location__inner-content-second {
-  @include at-media("desktop-lg") {
-    @include grid-col(4);
+  .jcc-location__brow {
+    @include u-margin-bottom(1);
+  }
+
+  .jcc-location__title {
+    @include u-color("primary-darker");
+    font-size: 18px;
+  }
+
+  .jcc-location__hours-item {
+    @include u-margin-bottom(0);
+  }
+
+  .jcc-location__hours-item-label {
+    @include u-font-weight("bold");
   }
 }
 
@@ -46,12 +89,8 @@
   @include u-color("base-dark");
 }
 
-.jcc-location__title {
-  @include u-color("primary-dark");
-}
-
 .jcc-location__address {
-  @include u-margin-bottom("1.5");
+  @include u-margin-bottom("2");
   @include u-color("primary-darker");
 }
 
@@ -69,12 +108,6 @@
 
 .jcc-location__website {
   @include u-margin-bottom("2");
-
-  .usa-link--external::after {
-    @include u-width("2");
-    @include u-height("2");
-    @include u-margin-bottom("neg-2px");
-  }
 }
 
 .jcc-location__tags-label,

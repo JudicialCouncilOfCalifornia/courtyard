@@ -1,100 +1,163 @@
+{% set layout = location.layout|default('full') %}
+
 {% set classes = [
   'jcc-location',
+  'jcc-location--' ~ layout,
   location.has_selfhelp_hours == 'yes' ? 'has-selfhelp',
   location.contextual_links ? 'contextual-region' : '',
 ]|merge(location.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
-  <div class="jcc-location__content-first">
-    {% if location.map %}
-      <div class="jcc-location__map" style="background-image:url({{ location.map.src }})"></div>
-    {% endif %}
 
-    {% if location.address and location.directions_title %}
-      <div class="jcc-location__directions">
-        {% set address = location.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
-        {% include '@atoms/buttons/link-button.twig' with {
-          link_button: {
-            style: 'accent-warm',
-            text: location.directions_title,
-            url: 'https://maps.google.com/?q=' ~ address,
-          }
-        } only %}
-      </div>
-    {% endif %}
-  </div>
-
-  <div class="jcc-location__content-second">
-    {% if location.brow %}
-      <div class="jcc-location__brow">{{ location.brow }}</div>
-    {% endif %}
-
-    <h5 class="jcc-location__title">
-      {% if location.url %}
-        <a class="usa-link" href="{{ location.url }}">{{ location.title }}</a>
-      {% elseif location.id %}
-        <span data-a11y-toggle="{{ location.id }}">{{ location.title }}</span>
-      {% else %}
-        {{ location.title }}
+  {% if layout == 'full' %}
+    <div class="jcc-location__content-first">
+      {% if location.map %}
+        <div class="jcc-location__map" style="background-image:url({{ location.map.src }})"></div>
       {% endif %}
-    </h5>
 
-    <div class="jcc-location__inner-content">
-      <div class="jcc-location__inner-content-first">
-        {% if location.address %}
-          <div class="jcc-location__address">
-            {{ location.address }}
-          </div>
-        {% endif %}
-
-        {% if location.phone %}
-          <div class="jcc-location__phone">
-            <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.title }}</a>
-          </div>
-        {% endif %}
-
-        {% if location.website %}
-          <div class="jcc-location__website">
-            <a class="usa-link usa-link--external " href="{{ location.website.url }}">{{ location.website.title }}</a>
-          </div>
-        {% endif %}
-      </div>
-
-      <div class="jcc-location__inner-content-second">
-        {% if location.tags %}
-          <div class="jcc-location__tags">
-            {% if location.tags_label %}
-              <h6 class="jcc-location__tags-label">
-                {{ location.tags_label }}:
-              </h6>
-            {% endif %}
-
-            {% for tag in location.tags %}
-              {% include '@atoms/tag/tag.twig' with { tag: tag } %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
+      {% if location.address and location.directions_title %}
+        <div class="jcc-location__directions">
+          {% set address = location.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
+          {% include '@atoms/buttons/link-button.twig' with {
+            link_button: {
+              style: 'accent-warm',
+              text: location.directions_title,
+              url: 'https://maps.google.com/?q=' ~ address,
+            }
+          } only %}
+        </div>
+      {% endif %}
     </div>
 
-    {% if location.hours %}
-      <div class="jcc-location__hours">
-        <h6 class="jcc-location__hours-label">
-          {{ location.hours_label }}:
-        </h6>
-        <div class="jcc-location__hours-items" data-quantity="{{ location.hours|length }}">
-          {% for item in location.hours %}
-            <div class="jcc-location__hours-item">
-              <div class="jcc-location__hours-item-label">
-                {{ item.label }}
-              </div>
-              <div class="jcc-location__hours-item-details">
-                {{ item.details }}
-              </div>
+    <div class="jcc-location__content-second">
+      {% if location.brow %}
+        <div class="jcc-location__brow">{{ location.brow }}</div>
+      {% endif %}
+
+      <h5 class="jcc-location__title">
+        {% if location.url %}
+          <a class="usa-link" href="{{ location.url }}">{{ location.title }}</a>
+        {% else %}
+          {{ location.title }}
+        {% endif %}
+      </h5>
+
+      <div class="jcc-location__inner-content">
+        <div class="jcc-location__inner-content-first">
+          {% if location.address %}
+            <div class="jcc-location__address">
+              {{ location.address }}
             </div>
-          {% endfor %}
+          {% endif %}
+
+          {% if location.phone %}
+            <div class="jcc-location__phone">
+              <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.title }}</a>
+            </div>
+          {% endif %}
+
+          {% if location.website %}
+            <div class="jcc-location__website">
+              <a class="usa-link usa-link--external " href="{{ location.website.url }}">{{ location.website.title }}</a>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="jcc-location__inner-content-second">
+          {% if location.tags %}
+            <div class="jcc-location__tags">
+              {% if location.tags_label %}
+                <h6 class="jcc-location__tags-label">
+                  {{ location.tags_label }}:
+                </h6>
+              {% endif %}
+
+              {% for tag in location.tags %}
+                {% include '@atoms/tag/tag.twig' with { tag: tag } %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       </div>
-    {% endif %}
-  </div>
+
+      {% if location.hours %}
+        <div class="jcc-location__hours">
+          <h6 class="jcc-location__hours-label">
+            {{ location.hours_label }}:
+          </h6>
+          <div class="jcc-location__hours-items" data-quantity="{{ location.hours|length }}">
+            {% for item in location.hours %}
+              <div class="jcc-location__hours-item">
+                <div class="jcc-location__hours-item-label">
+                  {{ item.label }}
+                </div>
+                <div class="jcc-location__hours-item-details">
+                  {{ item.details }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+  {% elseif layout == 'mini' %}
+    <div class="jcc-location__content-first">
+      {% if location.map %}
+        <div class="jcc-location__map" style="background-image:url({{ location.map.src }})"></div>
+      {% endif %}
+    </div>
+    <div class="jcc-location__content-second">
+      {% if location.brow %}
+        <div class="jcc-location__brow">{{ location.brow }}</div>
+      {% endif %}
+
+      <h6 class="jcc-location__title">
+        {% if location.url %}
+          <a class="usa-link" href="{{ location.url }}">{{ location.title }}</a>
+        {% else %}
+          {{ location.title }}
+        {% endif %}
+      </h6>
+
+      <div class="jcc-location__address">
+        {{ location.address }}
+        <br>
+        {% set address = location.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
+        <a class="usa-link usa-link--external" href="https://maps.google.com/?q={{ address }}">{{ location.directions_title }}</a>
+      </div>
+
+      {% if location.hours %}
+        <div class="jcc-location__hours">
+          <div class="jcc-location__hours-items" data-quantity="{{ location.hours|length }}">
+            {% for item in location.hours %}
+              {% if item.details %}
+                <div class="jcc-location__hours-item">
+                  <div class="jcc-location__hours-item-label">
+                    {{ item.label ~ ' Office Hours'|t }}
+                  </div>
+                  <div class="jcc-location__hours-item-details">
+                    {{ item.details }}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if location.phone %}
+        <div class="jcc-location__phone">
+          <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.title }}</a>
+        </div>
+      {% endif %}
+
+      {% if location.website %}
+        <div class="jcc-location__website">
+          <a class="usa-link usa-link--external" href="{{ location.website.url }}">{{ location.website.title }}</a>
+        </div>
+      {% endif %}
+    </div>
+
+  {% endif %}
 </div>
