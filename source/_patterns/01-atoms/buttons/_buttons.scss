@@ -41,6 +41,11 @@
     @include u-text(gray-90);
     background-color: color(accent-warm-darker);
   }
+
+  &:visited,
+  &:focus {
+    @include u-text(ink);
+  }
 }
 
 .usa-button--outline {
