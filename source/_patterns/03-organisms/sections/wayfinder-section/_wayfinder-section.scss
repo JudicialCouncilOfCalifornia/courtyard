@@ -28,6 +28,26 @@
   .jcc-header-group__body {
     text-align: left;
   }
+
+  a.usa-button {
+    @include u-text("white");
+    text-decoration: none;
+
+    &:hover,
+    &:visited {
+      @include u-text("white");
+    }
+
+    &:focus {
+      @include u-text("white");
+    }
+
+    &.usa-button--unstyled {
+      &:focus {
+        @include u-text("blue-cool-40v");
+      }
+    }
+  }
 }
 
 .jcc-wayfinder-section__container {

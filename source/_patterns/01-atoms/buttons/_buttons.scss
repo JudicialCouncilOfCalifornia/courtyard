@@ -131,27 +131,3 @@
   @include u-color(primary);
   @include u-text("italic");
 }
-
-.usa-form {
-  a.usa-button {
-    @include u-text("white");
-    text-decoration: none;
-
-    &:hover,
-    &:visited {
-      @include u-text("white");
-    }
-  }
-}
-
-a.usa-button {
-  &:focus {
-    @include u-text("white");
-  }
-
-  &.usa-button--unstyled {
-    &:focus {
-      @include u-text("blue-cool-40v");
-    }
-  }
-}
