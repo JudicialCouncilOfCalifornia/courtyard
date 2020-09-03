@@ -1,0 +1,13 @@
+{% if hero %}
+  {% include '@molecules/blocks/hero/hero.twig' with { hero: hero } %}
+{% endif %}
+
+{% if court_summary %}
+  {% include '@molecules/blocks/court-summary/court-summary.twig' with {
+    court_summary: court_summary
+  } %}
+{% endif %}
+
+{% include '@organisms/sections/locations/locations.twig' with {
+  locations: locations
+} %}

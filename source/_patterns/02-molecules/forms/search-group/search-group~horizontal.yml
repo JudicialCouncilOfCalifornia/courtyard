@@ -1,0 +1,8 @@
+search_group:
+  orientation: 'horizontal'
+  title: 'Find a self help center'
+  label: ''
+  placeholder: 'Enter city or zipcode'
+  button:
+    text: Search
+  helper: ''

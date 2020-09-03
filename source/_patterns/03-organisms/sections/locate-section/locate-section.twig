@@ -18,9 +18,15 @@
             search_group: locate_section.search_group
         } %}
         {% endif %}
+
+        {% if locate_section.footer %}
+          <div class="jcc-locate-section__footer">
+            {{ locate_section.footer }}
+          </div>
+        {% endif %}
       </div>
       <div class="jcc-locate-section__media">
-
+        <img src="{{ locate_section.image.src }}" alt="{{ locate_section.image.alt }}">
       </div>
     </div>
   </div>

@@ -39,6 +39,10 @@
   }
 }
 
+.jcc-locate-section__footer {
+  @include u-margin-top(6);
+}
+
 .jcc-locate-section__row {
   @include at-media(desktop) {
     @include grid-row;
