@@ -17,14 +17,13 @@
           text: search_group.button.text,
         }
       } %}
-
-      {% if search_group.error %}
-        <span class="usa-error-message">{{ search_group.error }}</span>
-      {% endif %}
-
-      {% if search_group.helper %}
-        <span class="jcc-search-group__helper">{{ search_group.helper }}</span>
-      {% endif %}
     </div>
+
+    {% if search_group.error %}
+      <span class="usa-error-message">{{ search_group.error }}</span>
+    {% endif %}
+    {% if search_group.helper %}
+      <span class="jcc-search-group__helper">{{ search_group.helper }}</span>
+    {% endif %}
   </form>
 </div>
