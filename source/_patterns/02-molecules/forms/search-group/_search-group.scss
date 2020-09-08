@@ -26,6 +26,11 @@
 }
 
 .jcc-search-group--vertical {
+  .jcc-search-group__container {
+    @include u-display("flex");
+    @include u-flex("wrap");
+  }
+
   label {
     @include u-margin(0);
     @include u-margin-bottom(1);
