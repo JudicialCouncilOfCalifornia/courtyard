@@ -136,3 +136,18 @@
   @include u-color(primary);
   @include u-text("italic");
 }
+
+.usa-button--back {
+  @include u-display("inline-flex");
+  @include u-align-items("align-center");
+  @include u-padding-y(1);
+  @include u-padding-right(3);
+  @include u-padding-left(0.5);
+
+  svg {
+    @include u-position("relative");
+    right: -4px;
+    width: 36px;
+    height: 36px;
+  }
+}

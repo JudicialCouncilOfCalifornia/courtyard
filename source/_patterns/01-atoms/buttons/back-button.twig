@@ -1,0 +1,17 @@
+{% set classes = [
+  'usa-button',
+  'usa-button--accent-warm',
+  'usa-button--back',
+  back_button.style ? 'usa-button--' ~ back_button.style,
+]|merge(back_button.classes|default([''])) %}
+
+<a class="{{ classes|join(' ')|trim }}" href="#">
+  {% include '@atoms/icons/icon.twig' with {
+    icon: {
+      name: 'chevron_left',
+      decorative: true,
+      color: 'text-ink'
+    }
+  } %}
+  {{- back_button.text|default('Back') -}}
+</a>
