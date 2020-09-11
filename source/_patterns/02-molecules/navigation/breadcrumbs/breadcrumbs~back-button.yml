@@ -1,4 +1,5 @@
 breadcrumbs:
+  show_back_button: true
   items:
     - url: "#"
       label: "Debt Collection"
