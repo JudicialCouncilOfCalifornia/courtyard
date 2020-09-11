@@ -3,6 +3,7 @@
 {% set classes = [
   'usa-accordion',
   accordion.full ? 'usa-accordion--full' : '',
+  accordion.container ? 'usa-accordion--container' : '',
 ]|merge(accordion.classes|default([])) %}
 
 <div class="{{ classes|join(' ')|trim }}">

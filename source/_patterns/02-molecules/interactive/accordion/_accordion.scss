@@ -22,6 +22,10 @@
   }
 }
 
+.usa-accordion--container {
+  @include section-container;
+}
+
 .jcc-accordion__content-container {
   .usa-accordion__content {
     @include section-container;
