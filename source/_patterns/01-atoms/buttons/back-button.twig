@@ -5,7 +5,7 @@
   back_button.style ? 'usa-button--' ~ back_button.style,
 ]|merge(back_button.classes|default([''])) %}
 
-<a class="{{ classes|join(' ')|trim }}" href="#">
+<a class="{{ classes|join(' ')|trim }}" href="{{ back_button.url|default('javascript:history.back()') }}">
   {% include '@atoms/icons/icon.twig' with {
     icon: {
       name: 'chevron_left',
