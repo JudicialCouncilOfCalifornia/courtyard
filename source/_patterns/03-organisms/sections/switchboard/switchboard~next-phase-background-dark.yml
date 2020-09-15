@@ -2,11 +2,12 @@ switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-phase" #default, #right-column
   breadcrumbs:
-    - url: "#"
-      label: "Debt Collection"
-      url_attributes: ""
-    - label: "Pay in Installments"
-      url_attributes: ""
+    items:
+      - url: "#"
+        label: "Debt Collection"
+        url_attributes: ""
+      - label: "Pay in Installments"
+        url_attributes: ""
   headergroup:
     brow: 'Next Steps'
     title: 'What can we help you with today?'

@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Home'
-      url: '#'
-    - label: 'Property Law'
+    items:
+      - label: 'Home'
+        url: '#'
+      - label: 'Property Law'
   title: 'What to know about property law if you’re getting a divorce'
   lead: 'When you divorce, the court has to formally approve how you’ll divide your property and debts'
   column_variant: 'has-two-columns-threequarter'

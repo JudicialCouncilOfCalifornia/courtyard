@@ -2,10 +2,11 @@ hero:
   background_variant: "has-background-color--light--secondary"
   column_variant: "has-one-column"
   breadcrumbs:
-    - url: "#"
-      label: "Self Help"
-    - url: ""
-      label: "Find the Right Court"
+    items:
+      - url: "#"
+        label: "Self Help"
+      - url: ""
+        label: "Find the Right Court"
   brow: ""
   title: "Find the Right Court"
   lead: "Search a zipcode or city to find a courthouse in your jurisdiction"

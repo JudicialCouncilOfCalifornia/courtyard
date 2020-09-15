@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Divorce'
-      url: 'link.pages-judgment'
-    - label: 'Wage Garnishment'
+    items:
+      - label: 'Divorce'
+        url: 'link.pages-judgment'
+      - label: 'Wage Garnishment'
   title: 'Divorce Test'
   lead: ''
   body: ''

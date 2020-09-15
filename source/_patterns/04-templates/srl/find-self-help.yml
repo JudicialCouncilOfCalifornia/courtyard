@@ -2,10 +2,11 @@ hero:
   background_variant: "has-background-color--light--secondary"
   column_variant: "has-one-column"
   breadcrumbs:
-    - url: "#"
-      label: "Self Help"
-    - url: ""
-      label: "Find Your Self Help Center"
+    items:
+      - url: "#"
+        label: "Self Help"
+      - url: ""
+        label: "Find Your Self Help Center"
   brow: ""
   title: "Find Your Self Help Center"
   lead: "The Self-Help Center/Family Law Facilitator's Office provides legal information and resources to self-represented court customers. Assistance may be in the form of walk in services, workshops, referrals and/or telephonic assistance."
