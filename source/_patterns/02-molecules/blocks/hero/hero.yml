@@ -19,7 +19,8 @@ hero:
   title_variant: ""
   inset_variant: ""
   breadcrumbs:
-    - url: "#"
-      label: "Home"
-    - url: ""
-      label: "Wage Garnishment"
+    items:
+      - url: "#"
+        label: "Home"
+      - url: ""
+        label: "Wage Garnishment"

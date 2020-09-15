@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Phase 1'
-      url: 'link.pages-case-phase-1'
-    - label: 'How to Fill Out Forms'
+    items:
+      - label: 'Phase 1'
+        url: 'link.pages-case-phase-1'
+      - label: 'How to Fill Out Forms'
   brow:
   background_variant: "has-background-color--light--secondary"
   title: 'How to fill out a divorce petition and summons'

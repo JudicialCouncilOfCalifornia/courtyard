@@ -5,11 +5,12 @@ switchboard:
   background_variant: "has-background-color--dark--primary" #has-background-color--dark
   layout_variant: "next-phase" #default, #right-column
   breadcrumbs:
-    - url: "#"
-      label: "Divorce"
-      url_attributes: ""
-    - label: "Divorce Without Children"
-      url_attributes: ""
+    items:
+      - url: "#"
+        label: "Divorce"
+        url_attributes: ""
+      - label: "Divorce Without Children"
+        url_attributes: ""
   headergroup:
     title: 'The process for divorce for couples without children?'
     body: 'Getting a divorce takes a minimum of 6 months and involves 3 major phases. The main steps are the same for couples who are married and for those who have domestic partnerships.<br><br>Select any phase to see more details and get step-by-step instructions.'

@@ -2,7 +2,8 @@ top:
   hero:
     column_variant: 'has-one-column'
     breadcrumbs:
-      - label: 'Experiment'
+      items:
+        - label: 'Experiment'
     title: 'Stacked Sections Autospacing'
     lead: 'Automate removal of extra spacing when sections of the same background color are stacked.'
 

@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Divorce without Children'
-      url: 'link.pages-case'
-    - label: 'Phase 4'
+    items:
+      - label: 'Divorce without Children'
+        url: 'link.pages-case'
+      - label: 'Phase 4'
   background_variant: "has-background-color--dark"
   column_variant: "has-two-columns-threequarter"
   brow: ""

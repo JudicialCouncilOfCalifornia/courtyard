@@ -1,3 +1,14 @@
+.jcc-breadcrumbs-nav {
+  &.has-back-button {
+    @include u-display("flex");
+    @include u-align-items("align-center");
+
+    .usa-button--back {
+      @include u-margin-right(3);
+    }
+  }
+}
+
 .jcc-breadcrumbs {
   @include add-list-reset;
   @include u-text(base-dark);

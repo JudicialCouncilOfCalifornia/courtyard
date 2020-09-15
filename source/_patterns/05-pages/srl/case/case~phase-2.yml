@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Divorce without Children'
-      url: 'link.pages-case-phase-2'
-    - label: 'Phase 2'
+    items:
+      - label: 'Divorce without Children'
+        url: 'link.pages-case-phase-2'
+      - label: 'Phase 2'
   background_variant: "has-background-color--dark"
   brow: ""
   title: "Phase 2: Sharing Financial Information"

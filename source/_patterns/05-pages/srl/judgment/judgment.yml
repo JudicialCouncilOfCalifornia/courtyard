@@ -1,8 +1,9 @@
 hero:
   column_variant: 'has-two-columns-threequarter'
   breadcrumbs:
-    - url: ''
-      label: "Debt Collection"
+    items:
+      - url: ''
+        label: "Debt Collection"
   title: 'After a Judgment in a Debt Collection Case'
   lead: 'If a judgment is entered against you, it is only the first step the debt collector must go through in seeking to collect a judgment. If you face a collection on a judgment, remember:'
   body: ''

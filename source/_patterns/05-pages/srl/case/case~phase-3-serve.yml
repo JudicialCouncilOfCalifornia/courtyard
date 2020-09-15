@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Phase 3'
-      url: 'link.pages-case-phase-3'
-    - label: 'Serving divorce papers'
+    items:
+      - label: 'Phase 3'
+        url: 'link.pages-case-phase-3'
+      - label: 'Serving divorce papers'
   brow:
   background_variant: "has-background-color--light--secondary"
   title: 'How to serve divorce papers using personal service'

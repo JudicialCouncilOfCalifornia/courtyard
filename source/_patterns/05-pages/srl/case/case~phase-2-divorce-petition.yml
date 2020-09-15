@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Phase 2'
-      url: 'link.pages-case-phase-2'
-    - label: 'How to Fill Out Forms'
+    items:
+      - label: 'Phase 2'
+        url: 'link.pages-case-phase-2'
+      - label: 'How to Fill Out Forms'
   brow:
   background_variant: "has-background-color--light--secondary"
   title: 'Filing your divorce petition and summons'
@@ -22,13 +23,6 @@ entries:
                 items:
                   - title: "Take your forms to the court clerk"
                     excerpt: '<p>Check Find my Court to find the courthouse in your county that accepts divorce filings. Look for the courthouse location that lists “Family” as one of the subjects under  “Matters Served.”</p><p>At the courthouse, you’ll file the forms by giving the original and the 2 copies to the clerk.</p><p>The clerk will give you a case number and stamp the forms</p><p>The court will keep the original and return the copies to you.  One is for you, the other for your spouse.</p> '
-                    read_more:
-                      type: 'toggle'
-                      toggle:
-                        block_variant: true
-                        id: "read-more-block"
-                        title: "Can I file my forms by mail?"
-                        content: "Answer: Yes. Once you find the right courthouse, send your original and 2 copies to the attention of the clerk. You need to include the filing fee and a self-addressed, stamped envelope so the clerk can mail your copies back to you. If you do not include a self-addressed, stamped envelope you will have to go to the courthouse to pick up your copies. "
                     read_more:
                       type: 'toggle'
                       toggle:

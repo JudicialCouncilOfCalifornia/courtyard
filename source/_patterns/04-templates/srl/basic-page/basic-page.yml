@@ -7,11 +7,11 @@ basic_page:
       logo_text:
         title: 'Judicial Branch of California'
         url: '#'
-      logo: 'jcc-logo-branch-text-white.svg' 
+      logo: 'jcc-logo-branch-text-white.svg'
     title: 'Self-Help Center'
-    logo: 
-      mobile: 'jcc-logo-self-help-short-white.svg' 
-      desktop: 'jcc-logo-self-help-white.svg' 
+    logo:
+      mobile: 'jcc-logo-self-help-short-white.svg'
+      desktop: 'jcc-logo-self-help-white.svg'
     menu_icon:
       name: 'menu'
       title: "Menu"
@@ -57,8 +57,11 @@ basic_page:
     lead: 'In limited cases (cases where under $25,000 is claimed), you have the opportunity to ask the court to order that the judgment be paid in monthly installments based upon your ability to pay.'
     body: ''
     breadcrumbs:
-      - label: 'Debt Collection'
-      - label: 'Pay in Installments'
+      show_back_button: true
+      items:
+        - label: 'Debt Collection'
+          url: '#'
+        - label: 'Pay in Installments'
   steps:
     headergroup:
       title: "Lorem ipsum"
@@ -150,7 +153,7 @@ basic_page:
       logo_text:
         title: 'Judicial Branch of California'
         url: '#'
-      logo: 'jcc-logo-branch-text-white.svg' 
+      logo: 'jcc-logo-branch-text-white.svg'
       secondary_nav:
         items:
           - name: "Contact Us"

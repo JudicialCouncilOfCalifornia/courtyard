@@ -1,8 +1,9 @@
 hero:
   breadcrumbs:
-    - label: 'Debt Collection'
-      url: 'link.pages-judgment'
-    - label: 'General Information'
+    items:
+      - label: 'Debt Collection'
+        url: 'link.pages-judgment'
+      - label: 'General Information'
   title: 'General information about judgments, collection, and your options'
   lead: 'A judgment is an order stating that you owe the debt collector the amount on the judgment.'
   body: ''

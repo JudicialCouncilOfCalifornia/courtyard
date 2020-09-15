@@ -2,9 +2,10 @@ hero:
   background_variant: "has-background-color--light--secondary"
   column_variant: "has-two-columns-threequarter" # has-one-column has-two-columns-half has-two-columns-threequarter
   breadcrumbs:
-    - url: ""
-      label: "Choice"
-    - null # Overrides "Wage Garnishment" from hero.yml.
+    items:
+      - url: ""
+        label: "Choice"
+      - null # Overrides "Wage Garnishment" from hero.yml.
   title: "Name Change"
   lead: ""
   body: '<div class="summary-results">

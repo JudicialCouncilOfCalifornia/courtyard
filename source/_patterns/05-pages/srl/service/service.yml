@@ -2,7 +2,8 @@ top:
   hero:
     column_variant: 'has-one-column'
     breadcrumbs:
-      - label: 'Service'
+      items:
+        - label: 'Service'
     title: 'Serving your papers'
     lead: 'For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made.'
     body: ''
