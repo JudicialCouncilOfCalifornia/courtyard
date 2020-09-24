@@ -29,7 +29,7 @@
   @include u-flex("row");
 }
 
-.jcc-footer_menu {
+.jcc-footer__menu {
   @include u-display(block);
   @include grid-col(12);
   @include u-margin-y(1);
@@ -47,6 +47,11 @@
 
   @include at-media(desktop) {
     @include grid-col;
+  }
+}
+
+.jcc-footer__menu ~ .jcc-footer__copyright {
+  @include at-media(desktop) {
     @include u-text("right");
   }
 }
