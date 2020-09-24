@@ -1,7 +1,7 @@
 {% set tag = tile.tag|default('h3') %}
 {% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
 
-<div class="jcc-tile{% if tile.url %} jcc-tile--hover{% endif %}">
+<div class="jcc-tile{% if tile.url %} jcc-tile--hover{% endif %}{% if tile.link_label %} jcc-tile--with-button{% endif %}">
   {% if tile.icon %}
     <div class="jcc-tile__icon">
       <img src="{{ tile.icon }}">
@@ -17,7 +17,11 @@
       {% if tile.url %}<a href="{{ tile.url }}"{{ url_attributes }}>{% endif %}{{ tile.title }}{% if tile.url %}</a>{% endif %}
     </{{ tag }}>
   {% endif %}
-  
+
+  {% if tile.link_label %}
+      {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
+  {% endif %}
+
   {% if tile.body %}
     <p class="jcc-tile__body">{{ tile.body }}</p>
   {% endif %}
