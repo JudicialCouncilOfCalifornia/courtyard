@@ -1,0 +1,27 @@
+// Between-width media query
+@mixin at-media-between($min, $max) {
+  $quoted-min: smart-quote($min);
+  $quoted-max: smart-quote($max);
+  $our-breakpoints: map-deep-get($system-properties, breakpoints, standard);
+  @if map-has-key($our-breakpoints, $quoted-min) {
+    @if $theme-respect-user-font-size {
+      $min: rem-to-user-em(map-get($our-breakpoints, $quoted-min)) - 0.01em;
+    } @else {
+      $min: rem-to-px(map-get($our-breakpoints, $quoted-min)) - 1px;
+    }
+  } @else {
+    @warn '`#{$min}` is not a valid USWDS project breakpoint. Valid values: #{map-keys($our-breakpoints)}';
+  }
+  @if map-has-key($our-breakpoints, $quoted-max) {
+    @if $theme-respect-user-font-size {
+      $max: rem-to-user-em(map-get($our-breakpoints, $quoted-max)) - 0.01em;
+    } @else {
+      $max: rem-to-px(map-get($our-breakpoints, $quoted-max)) - 1px;
+    }
+  } @else {
+    @warn '`#{$max}` is not a valid USWDS project breakpoint. Valid values: #{map-keys($our-breakpoints)}';
+  }
+  @media all and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}

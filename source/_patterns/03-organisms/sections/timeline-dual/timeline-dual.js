@@ -1,96 +1,73 @@
-require("slick-carousel");
+$(".jcc-timeline-dual__slider-wrapper").each(function() {
+  const $wrapper = $(this);
+  const $scroller = $wrapper.find(".jcc-timeline-dual__slider-scroller");
+  const $slider = $wrapper.find(".jcc-timeline-dual__slider");
 
-const initControls = slider => {
-  $(slider).on("keydown", e => {
-    switch (e.which) {
-      case 37: // left
-        $(e.currentTarget).slick("slickPrev");
-        break;
-      case 39: // right
-        $(e.currentTarget).slick("slickNext");
-        break;
-      default:
-        return;
-    }
-    e.preventDefault();
-  });
-  // Hide slide left on init
-  $(slider)
-    .siblings(".jcc-timeline-dual__scroller--left")
-    .hide();
-  $(slider).on("afterChange", (e, slick, direction) => {
-    const sliderPerView = Math.ceil(slick.listWidth / slick.slideWidth);
-    if (direction === 0) {
-      $(e.currentTarget)
-        .siblings(".jcc-timeline-dual__scroller--left")
-        .hide();
-      if (slick.slideCount > sliderPerView) {
-        $(e.currentTarget)
-          .siblings(".jcc-timeline-dual__scroller--right")
-          .show();
-      }
+  const $leftButton = $wrapper.find(".scroll-button--left");
+  const $rightButton = $wrapper.find(".scroll-button--right");
+
+  /**
+   * Hide or show buttons based on scroll position.
+   */
+  function setVisibility() {
+    const scrollerWidth = $scroller.width();
+    const sliderWidth = $slider.width();
+    const scrollLeft = $scroller.scrollLeft();
+
+    if (scrollLeft == 0) {
+      $leftButton.addClass("hidden");
     } else {
-      if (sliderPerView + direction === slick.slideCount) {
-        $(e.currentTarget)
-          .siblings(".jcc-timeline-dual__scroller--right")
-          .hide();
-      } else {
-        $(e.currentTarget)
-          .siblings(".jcc-timeline-dual__scroller--right")
-          .show();
-      }
-      $(e.currentTarget)
-        .siblings(".jcc-timeline-dual__scroller--left")
-        .show();
+      $leftButton.removeClass("hidden");
     }
-  });
-};
 
-const settings = slider => {
-  const defaultSettings = {
-    infinite: false,
-    slidesToShow: 4,
-    nextArrow: $(slider).siblings(".jcc-timeline-dual__scroller--right"),
-    prevArrow: $(slider).siblings(".jcc-timeline-dual__scroller--left"),
-    responsive: [
+    if (Math.ceil(scrollLeft + scrollerWidth) >= sliderWidth) {
+      $rightButton.addClass("hidden");
+    } else {
+      $rightButton.removeClass("hidden");
+    }
+  }
+
+  /**
+   * Move the inner scroll left/right.
+   */
+  function doScroll(direction) {
+    const scrollDuration = 300;
+    const scrollDistance = $wrapper.width() / 3;
+    const left = $scroller.scrollLeft();
+    let distance = 0;
+
+    if (direction == "left") {
+      distance = left - scrollDistance;
+    } else {
+      // Right
+      distance = left + scrollDistance;
+    }
+
+    $scroller.animate(
       {
-        breakpoint: 880,
-        arrows: true,
-        settings: {
-          slidesToShow: 4,
-          dots: false
-        }
+        scrollLeft: distance
       },
-      {
-        breakpoint: 880,
-        settings: "unslick"
-      }
-    ]
-  };
-  return defaultSettings;
-};
-
-$(".slider-dual").each((_, slider) => {
-  if (slider.children.length > 4) {
-    $(slider).slick(settings(slider));
-    initControls(slider);
-  } else {
-    $(slider)
-      .siblings(".jcc-timeline-dual__scroller--left")
-      .hide();
-    $(slider)
-      .siblings(".jcc-timeline-dual__scroller--right")
-      .hide();
+      scrollDuration,
+      setVisibility
+    );
   }
-});
 
-$(window).on("resize", () => {
-  if ($(window).width() > 640) {
-    $(".slider-dual").each((_, slider) => {
-      if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
-        $(slider).slick(settings(slider));
-        initControls(slider);
-      }
-    });
-  }
+  /**
+   * Events.
+   */
+  $(window).on("load", function() {
+    setVisibility();
+  });
+  $(window).on("resize", function() {
+    setVisibility();
+  });
+  $scroller.on("scroll", function() {
+    setVisibility();
+  });
+  $leftButton.on("click", function() {
+    doScroll("left");
+  });
+  $rightButton.on("click", function() {
+    doScroll("right");
+  });
 });
