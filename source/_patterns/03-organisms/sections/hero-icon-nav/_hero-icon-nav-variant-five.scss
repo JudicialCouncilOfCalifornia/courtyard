@@ -12,6 +12,13 @@
     }
   }
 
+  .jcc-hero-img-banner__hero-brow,
+  .jcc-hero-img-banner__hero-title,
+  .jcc-hero-img-banner__hero-subtitle{
+    max-width: 800px;
+    margin: auto;
+  }
+
   .jcc-hero-icon-nav__nav {
     @include at-media(desktop) {
       margin-top: -80px;

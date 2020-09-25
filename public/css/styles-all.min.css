@@ -17629,6 +17629,13 @@ h3.jcc-header-group__title {
   display: none;
 }
 
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-five .jcc-hero-img-banner__hero-brow,
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-five .jcc-hero-img-banner__hero-title,
+.jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-five .jcc-hero-img-banner__hero-subtitle {
+  max-width: 800px;
+  margin: auto;
+}
+
 .jcc-hero-icon-nav.jcc-hero-icon-nav-style--variant-five .tile-icon .jcc-tile {
   display: -webkit-box;
   display: -ms-flexbox;
