@@ -14,9 +14,11 @@
   <div class="mobile">
     <div class="jcc--header__mobile-container">
       <div class="jcc-header__logo">
+        <a href="{{ header_trial.header_topbar.home_url|default('/') }}">
         {% include '@atoms/icons/logo.twig' with {
           logo : header_trial.mobile.logo
         } %}
+        </a>
       </div>
       {# BEGIN search function #}
       <div class="buttons slicknav">
