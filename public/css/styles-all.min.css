@@ -15393,18 +15393,14 @@ a:visited,
   margin-top: 0;
   list-style-type: none;
   padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex ;
   margin: 0 ;
 }
 
 .jcc-inline-nav__item {
   display: block ;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto ;
-          flex: 0 0 auto ;
   margin-right: 1rem ;
+  margin-bottom: 1rem ;
+  white-space: nowrap ;
 }
 
 .jcc-inline-nav__item:last-child {
@@ -16203,6 +16199,17 @@ h3.jcc-header-group__title {
   padding-top: 0.5rem ;
 }
 
+.jcc-footer-base .jcc-footer-global-wrapper .jcc-footer-global-copyright,
+.jcc-footer-base .jcc-footer-global-wrapper .jcc-global__menu {
+  display: inline-block;
+}
+
+.jcc-footer-base .jcc-footer-global-wrapper .jcc-footer-global-copyright {
+  margin-left: 2rem ;
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.06rem;
+}
+
 .jcc-footer-base .grid-container {
   max-width: 87.5rem ;
 }
@@ -16442,7 +16449,7 @@ h3.jcc-header-group__title {
           flex-direction: row ;
 }
 
-.jcc-footer_menu {
+.jcc-footer__menu {
   display: block ;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto ;
@@ -16616,6 +16623,19 @@ h3.jcc-header-group__title {
   padding-left: 0 ;
 }
 
+.jcc-header-base.usa-header--extended .usa-logo__graphic--mobile,
+.jcc-header-base.usa-header--extended .usa-logo__graphic--desktop {
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  height: 100%;
+}
+
+.jcc-header-base.usa-header--extended .usa-logo__graphic--mobile img,
+.jcc-header-base.usa-header--extended .usa-logo__graphic--desktop img {
+  max-height: 100%;
+}
+
 .jcc-header-base.jcc-header--inverted.usa-header {
   background-color: #162e51 ;
 }
@@ -16635,6 +16655,10 @@ h3.jcc-header-group__title {
 
 .jcc-header-base.jcc-header--inverted.usa-header--extended .usa-nav {
   background-color: #1a4480 ;
+}
+
+.jcc-header-base.usa-header--extended .usa-nav .usa-nav__secondary {
+  bottom: 6rem;
 }
 
 .usa-js-mobile-nav--active .jcc-header-base .usa-nav__close {
@@ -23735,6 +23759,9 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   .mobile-lg\:padding-left-0 {
     padding-left: 0 !important;
   }
+  .jcc-inline-nav__item {
+    display: inline-block ;
+  }
 }
 
 @media all and (min-width: 40em) {
@@ -30636,6 +30663,17 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     width: 8.33333% ;
     margin-top: 26px;
   }
+  .jcc-inline-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+  }
+  .jcc-inline-nav__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto ;
+            flex: 0 0 auto ;
+    margin-bottom: 0 ;
+  }
   .jcc-header-base .usa-nav__primary button,
   .jcc-header-base .usa-nav__primary > .usa-nav__primary-item > a {
     height: 5.625rem;
@@ -30883,7 +30921,7 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
     padding-left: 1rem ;
     padding-right: 1rem ;
   }
-  .jcc-footer_menu {
+  .jcc-footer__menu {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 0px;
             flex: 1 0 0 ;
@@ -30894,6 +30932,8 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
         -ms-flex: 1 0 0px;
             flex: 1 0 0 ;
     width: auto ;
+  }
+  .jcc-footer__menu ~ .jcc-footer__copyright {
     text-align: right ;
   }
   .jcc-footer__container {
@@ -33382,6 +33422,13 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   .jcc-header-base.jcc-header--inverted .jcc-nav-secondary__group {
     background-color: #1a4480 ;
   }
+  .jcc-footer-base .jcc-footer-global-wrapper .jcc-footer-global-copyright,
+  .jcc-footer-base .jcc-footer-global-wrapper .jcc-global__menu {
+    display: block;
+  }
+  .jcc-footer-base .jcc-footer-global-wrapper .jcc-footer-global-copyright {
+    margin-left: 1rem ;
+  }
   .jcc-footer-base .usa-footer__logo-heading {
     margin-bottom: 2rem ;
   }
@@ -33410,6 +33457,10 @@ div[class^="jcc-"] + .jcc-text-section-aside-secondary__container .jcc-text-sect
   }
   .jcc-header-base .usa-navbar {
     height: 3.75rem;
+  }
+  .jcc-header-base.usa-header--extended .usa-logo__graphic--mobile img,
+  .jcc-header-base.usa-header--extended .usa-logo__graphic--desktop img {
+    height: 3rem;
   }
   .jcc-all .jcc-header-base .usa-nav {
     top: 2.25rem;

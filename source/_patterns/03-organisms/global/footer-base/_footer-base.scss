@@ -11,6 +11,7 @@
     }
     .jcc-footer-global-copyright{
       @include u-margin-left(4);
+      @include u-font(sans, 6);
     }
     @include at-media-max(desktop) {
       .jcc-footer-global-copyright,
