@@ -177,6 +177,18 @@
         right: 2rem;
       }
     }
+    .usa-logo__graphic--mobile,
+    .usa-logo__graphic--desktop {
+      align-self: center;
+      position: relative;
+      height: 100%;
+      img {
+        max-height: 100%;
+        @include at-media-max(desktop) {
+          height: 3rem;
+        }
+      }
+    }
   }
 
   // invert
