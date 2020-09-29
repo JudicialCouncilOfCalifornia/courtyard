@@ -28,7 +28,7 @@
             {% endif %}
           </{% if primary_nav.mega %}div{% else %}ul{% endif %}>
         {% else %}
-        <a class="usa-nav__link" href="#"><span>{{ link.text }}</span></a>
+        <a class="usa-nav__link" href="{{ link.href }}"><span>{{ link.text }}</span></a>
       {% endif %}
     </li>
   {% endfor %}

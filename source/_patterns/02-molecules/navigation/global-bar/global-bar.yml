@@ -11,3 +11,4 @@ global_bar:
         url: "#"
       - name: "Privacy Policy"
         url: "#"
+is_footer: false
