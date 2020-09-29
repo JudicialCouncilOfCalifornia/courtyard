@@ -55,7 +55,11 @@
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="usa-footer__logo grid-row grid-col-11 desktop:grid-col-6 desktop:grid-gap-2">
+        {% if footer_base.social_links %}
+          <div class="usa-footer__logo grid-row grid-col-11 desktop:grid-col-6 desktop:grid-gap-2">
+        {% else %}
+            <div class="usa-footer__logo grid-row grid-col-12 desktop:grid-col-12">
+        {% endif %}
           {% if footer_base.seal %}
           <div class="mobile-lg:grid-col-auto">
             <img class="usa-footer__logo-img" src="{{ footer_base.seal }}" alt="">
@@ -68,13 +72,15 @@
             </h3>  
           </div>
         </div>
-        <div class="usa-footer__contact-links grid-col-12 desktop:grid-col-6">
-          <div class="usa-footer__social-links">
-            {% include '@molecules/blocks/social-links/social-links.twig' with {
-              social_links: footer_base.social_links
-            } %}
+        {% if footer_base.social_links %}
+          <div class="usa-footer__contact-links grid-col-12 desktop:grid-col-6">
+            <div class="usa-footer__social-links">
+              {% include '@molecules/blocks/social-links/social-links.twig' with {
+                social_links: footer_base.social_links
+              } %}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
     </div>
   </div>
