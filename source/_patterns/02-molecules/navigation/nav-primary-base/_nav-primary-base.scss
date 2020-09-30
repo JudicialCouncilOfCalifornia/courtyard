@@ -18,7 +18,7 @@
     button,
     > .usa-nav__primary-item > a {
       @include u-padding($jcc-nav-link-padding);
-      @include u-text(semibold);
+      @include u-text(normal);
       @include u-font(sans, 6);
       @include u-text(primary); // theme
 
