@@ -27,44 +27,36 @@
     {% endif %}
 
     <div class="jcc-timeline-dual__wrapper">
-      <div class="jcc-timeline-dual__top-title">{{ timeline_dual.top_title }}</div>
-      <div class="jcc-timeline-dual__bottom-title">{{ timeline_dual.bottom_title }}</div>
+      <div class="jcc-timeline-dual__titles">
+        <div class="jcc-timeline-dual__top-title">{{ timeline_dual.top_title }}</div>
+        <div class="jcc-timeline-dual__bottom-title">{{ timeline_dual.bottom_title }}</div>
+      </div>
 
-      <ul class="jcc-timeline-dual__slider slider-dual" aria-label="timeline-dual" tabindex="0">
-        {% for item in timeline_dual.items %}
-          <li>
-            {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {
-              timeline_dual_item: item,
-            } %}
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="jcc-timeline-dual__slider-wrapper">
+        <div class="jcc-timeline-dual__slider-scroller">
+          <div class="jcc-timeline-dual__slider" aria-label="timeline-dual" tabindex="0">
+            {% for item in timeline_dual.items %}
+              {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {
+                timeline_dual_item: item,
+              } %}
+            {% endfor %}
+          </div>
+        </div>
 
-      <button id="scroller--left" class="jcc-timeline-dual__scroller--left slick-prev">
-        <span class="jcc-timeline-dual__label">{{ "Scroll Left"|t }}</span>
-        <span class="jcc-timeline-dual__scroller-icon">
-          {% include '@atoms/icons/icon.twig' with {
-            icon : timeline_dual.left_icon | default({
-              name: "chevron_left",
-              title: "Left" | t,
-              decorative: true
-            })
-          } %}
-        </span>
-      </button>
+        {% include '@atoms/buttons/scroll-button.twig' with {
+          scroll_button: {
+            direction: 'left',
+            classes: ['hidden'],
+          }
+        } %}
 
-      <button id="scroller--right" class="jcc-timeline-dual__scroller--right is-active slick-next">
-        <span class="jcc-timeline-dual__label">{{ "Scroll Right"|t }}</span>
-        <span class="jcc-timeline-dual__scroller-icon">
-          {% include '@atoms/icons/icon.twig' with {
-            icon : timeline_dual.right_icon | default({
-              name: "chevron_right",
-              title: "Right" | t,
-              decorative: true
-            })
-          } %}
-        </span>
-      </button>
+        {% include '@atoms/buttons/scroll-button.twig' with {
+          scroll_button: {
+            direction: 'right',
+            classes: ['hidden'],
+          }
+        } %}
+      </div>
     </div>
 
   </div>

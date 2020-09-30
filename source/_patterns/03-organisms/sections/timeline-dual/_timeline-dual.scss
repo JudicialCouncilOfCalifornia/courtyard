@@ -1,5 +1,3 @@
-@import "../../../../../node_modules/slick-carousel/slick/slick.scss";
-
 .jcc-timeline-dual-section {
   @include section-wrapper;
   @include u-position(relative);
@@ -57,432 +55,195 @@
 
 .jcc-timeline-dual__wrapper {
   @include u-position(relative);
-  margin-top: 60px;
   display: block;
 
+  @include at-media-max(tablet-lg) {
+    margin-top: 60px;
+  }
+
   @include at-media(tablet-lg) {
-    margin-top: 0px;
+    display: flex;
+  }
+}
+
+.jcc-timeline-dual__titles {
+  @include at-media-max(tablet-lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  @include at-media(tablet-lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 343px; // 150px + 43px + 150px
+    min-width: 145px;
   }
 }
 
 .jcc-timeline-dual__top-title {
   @include u-color(primary);
   @include u-font(body, 7);
-  position: absolute;
-  width: 110px;
-  left: 0;
-  top: -100px;
-  line-height: 1.35;
+  line-height: 1.3;
+
+  @include at-media-max(mobile-lg) {
+    width: 30%;
+  }
+
+  @include at-media-max(mobile) {
+    width: 40%;
+  }
+
+  @include at-media(mobile-lg) {
+    width: 23%;
+  }
 
   @include at-media(tablet-lg) {
-    top: -73px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    height: 150px;
+    padding-bottom: 50px;
+  }
+
+  // Large/light bar
+  &::before {
+    @include u-position("absolute");
+    @include u-bg(primary-lighter);
+    left: 0;
+    content: "";
+
+    @include at-media(tablet-lg) {
+      width: 100%;
+      height: 28px;
+      bottom: 0;
+    }
+  }
+
+  // Thin/dark bar
+  &::after {
+    @include u-position("absolute");
+    @include u-bg(primary);
+    left: 0;
+    content: "";
+
+    @include at-media(tablet-lg) {
+      width: 100%;
+      height: 2px;
+      bottom: 28px;
+    }
   }
 }
 
 .jcc-timeline-dual__bottom-title {
   @include u-color(accent-warm-dark);
   @include u-font(body, 7);
-  position: absolute;
-  width: 110px;
-  top: -100px;
-  right: 0;
+  line-height: 1.3;
   text-align: right;
 
+  @include at-media-max(mobile-lg) {
+    width: 30%;
+  }
+
+  @include at-media-max(mobile) {
+    width: 40%;
+  }
+
+  @include at-media(mobile-lg) {
+    width: 23%;
+  }
+
   @include at-media(tablet-lg) {
-    right: unset;
-    top: unset;
-    bottom: -26px;
+    position: relative;
+    width: auto;
+    height: 150px;
+    padding-top: 50px;
     text-align: left;
   }
-}
 
-.jcc-timeline-dual-item {
-  position: relative;
-  height: 130px;
-
-  li {
-    position: relative;
-    display: flex;
-  }
-}
-
-.jcc-timeline-dual-item__trigger {
-  line-height: 1.35;
-}
-
-.jcc-timeline-dual__bottom,
-.jcc-timeline-dual__top {
-  position: inherit;
-  height: 130px;
-  width: 50%;
-  float: left;
-
-  @include at-media(tablet-lg) {
-    width: 100%;
-    display: -webkit-box;
-    flex: 0 0 100%;
-    height: 150px;
-  }
-
-  &:before {
-    @include u-bg(primary);
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    z-index: 3;
-    content: "";
-    left: 0;
-
-    @include at-media(tablet-lg) {
-      height: 2px;
-      width: 100%;
-    }
-  }
-
-  &:after {
-    @include u-bg(primary-lighter);
-    position: absolute;
-    height: 100%;
-    width: 20px;
-    z-index: 2;
-    content: "";
-    left: 0;
-
-    @include at-media(tablet-lg) {
-      height: 20px;
-      width: 100%;
-    }
-  }
-}
-
-.jcc-timeline-dual__top .jcc-timeline-dual__excerpt {
-  left: 70px;
-
-  @include at-media(tablet-lg) {
-    top: 5px;
-  }
-}
-
-.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
-  right: 70px;
-
-  @include at-media(tablet-lg) {
-    top: 60px;
-  }
-}
-
-.jcc-timeline-dual__top .jcc-timeline-dual__excerpt,
-.jcc-timeline-dual__bottom .jcc-timeline-dual__excerpt {
-  @include u-font(heading, 7);
-  @include u-color(base);
-  font-style: italic;
-  position: absolute;
-
-  @include at-media(tablet-lg) {
-    left: unset !important;
-    position: relative;
-    right: unset;
-  }
-}
-
-.jcc-timeline-dual__time {
-  @include u-color("white");
-  @include u-font(body, 1);
-  border-radius: 20px;
-  padding: 6px 6px 6px 40px;
-  margin-right: 30px;
-  color: white;
-  position: relative;
-  height: min-content;
-  z-index: 4;
-  width: 130px;
-
-  @include at-media(tablet-lg) {
-    width: 184px;
-    border-radius: 66px;
-  }
-
-  &:before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    top: 10px;
-    left: 10px;
-    position: absolute;
-    display: block;
-    background-image: url("../images/graphics/time.svg");
-  }
-}
-
-.jcc-timeline-dual__number {
-  @include u-font(body, 6);
-  @include u-color("white");
-  @include u-bg(primary);
-  @include u-text(center);
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: block;
-  z-index: 5;
-  left: 30px;
-
-  &.none,
-  &.line {
-    display: none;
-  }
-
-  &.wait {
-    background-image: url("../images/graphics/time.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  @include at-media(tablet-lg) {
-    @include u-font(body, 9);
-    position: absolute;
-    top: -21px;
-    margin-left: -8px;
-    width: 35px;
-    height: 35px;
-    left: 0;
-  }
-}
-
-.jcc-timeline-dual__icon {
-  width: 30px;
-  height: 30px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 45px;
-
-  @include at-media(tablet-lg) {
-    left: 20px;
-    top: 130px;
-  }
-
-  &.both {
-    background-image: url("../images/graphics/both.svg");
-  }
-
-  &.down {
-    background-image: url("../images/graphics/top-bottom.svg");
-  }
-
-  &.up {
-    background-image: url("../images/graphics/bottom-top.svg");
-  }
-}
-
-.jcc-timeline-dual__top {
-  &:after {
-    @include at-media(tablet-lg) {
-      top: 80px;
-    }
-  }
-
-  &:before {
-    @include at-media(tablet-lg) {
-      top: 80px;
-    }
-  }
-
-  .jcc-timeline-dual__time {
-    @include u-bg(primary);
-    left: 30px;
-    float: left;
-
-    @include at-media(tablet-lg) {
-      margin-top: 55px;
-      left: unset;
-    }
-  }
-
-  .jcc-timeline-dual__number {
-    left: 30px;
-
-    @include at-media(tablet-lg) {
-      top: 64px;
-      left: 8px;
-    }
-  }
-
-  .jcc-timeline-dual-item__trigger,
-  .jcc-modal__trigger {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    z-index: 4;
-    padding-right: 20px;
-
-    @include at-media(tablet-lg) {
-      top: 10px;
-      left: 0;
-      padding-right: 0;
-    }
-  }
-}
-
-.jcc-timeline-dual__bottom {
-  &:after {
+  // Large/light bar
+  &::before {
+    @include u-position("absolute");
     @include u-bg(accent-warm-light);
     right: 0;
-    left: unset;
+    content: "";
 
     @include at-media(tablet-lg) {
-      bottom: 120px;
+      width: 100%;
+      height: 28px;
+      top: 0;
     }
   }
 
-  &:before {
+  // Thin/dark bar
+  &::after {
+    @include u-position("absolute");
     @include u-bg(accent-warm-dark);
     right: 0;
-    left: unset;
+    content: "";
 
     @include at-media(tablet-lg) {
-      bottom: 120px;
+      width: 100%;
+      height: 2px;
+      top: 28px;
     }
   }
+}
 
-  .jcc-timeline-dual-item__trigger,
-  .jcc-modal__trigger {
-    position: absolute;
-    right: 30px;
-    top: 40px;
-    text-align: right;
-    z-index: 4;
-    padding-left: 20px;
-
-    @include at-media(tablet-lg) {
-      top: 60px;
-      right: unset;
-      text-align: left;
-      padding-left: 0;
-    }
+.jcc-timeline-dual__slider-wrapper {
+  @include at-media(tablet-lg) {
+    position: relative;
+    overflow: hidden;
   }
+}
 
-  .jcc-timeline-dual__time {
-    @include u-bg(accent-warm-dark);
-    @include u-text(ink);
-    float: right;
-    left: unset;
-
-    @include at-media(tablet-lg) {
-      margin-top: 3px;
-    }
-  }
-
-  .jcc-timeline-dual__number {
-    @include u-bg(accent-warm-dark);
-    @include u-text(ink);
-    right: 30px;
-    left: unset;
-
-    @include at-media(tablet-lg) {
-      top: 12px;
-      right: unset;
-      left: 8px;
-    }
+.jcc-timeline-dual__slider-scroller {
+  @include at-media(tablet-lg) {
+    margin-bottom: -30px; // Hide scrollbar
+    overflow-x: auto;
   }
 }
 
 .jcc-timeline-dual__slider {
-  @include unstyled-list();
-
   @include at-media(tablet-lg) {
-    @include grid-row;
-    @include u-overflow-x(auto);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-bottom: 30px; // Hide scrollbar
   }
 
-  li {
-    @include u-width(full);
-
-    @include at-media(tablet-lg) {
-      @include grid-col(3);
-    }
+  &:focus {
+    outline: none;
   }
 }
 
-// remove line from last timeline item
-.slick-slide:last-of-type .jcc-timeline-dual__top:before,
-.slick-slide:last-of-type .jcc-timeline-dual__top:after,
-.slick-slide:last-of-type .jcc-timeline-dual__bottom:before,
-.slick-slide:last-of-type .jcc-timeline-dual__bottom:after,
-.jcc-timeline-dual__slider:not(.slick-initialized) li:last-of-type .jcc-timeline-dual__top:before,
-.jcc-timeline-dual__slider:not(.slick-initialized) li:last-of-type .jcc-timeline-dual__top:after,
-.jcc-timeline-dual__slider:not(.slick-initialized)
-  li:last-of-type
-  .jcc-timeline-dual__bottom:before,
-.jcc-timeline-dual__slider:not(.slick-initialized)
-  li:last-of-type
-  .jcc-timeline-dual__bottom:after {
-  @include u-width(0);
-}
+.scroll-button {
+  .jcc-timeline-dual__slider-wrapper & {
+    position: absolute;
+    top: 120px;
+    height: 103px;
+    z-index: 15;
 
-.jcc-timeline-dual__label {
-  @include sr-only();
-}
-
-.jcc-timeline-dual__scroller--left,
-.jcc-timeline-dual__scroller--right {
-  @include u-position(absolute);
-  @include u-bottom(0);
-  @include u-display(none);
-  top: 108px;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  z-index: 10;
-  padding: 0px;
-  transition: all 0.4s;
-
-  &:hover {
-    @include u-bg("primary");
-    cursor: pointer;
-    transition: all 0.4s;
-
-    svg {
-      fill: color("white");
+    @include at-media-max(tablet-lg) {
+      display: none;
     }
   }
 
-  &.is-active {
-    @include at-media(tablet-lg) {
-      @include u-display(block);
-    }
+  &.hidden {
+    display: none;
   }
 }
 
-.jcc-timeline-dual__scroller--left {
-  left: 0;
-}
-
-.jcc-timeline-dual__scroller--right {
-  right: 0;
-}
-
-.jcc-timeline-dual__scroller-icon {
-  height: 1.75rem;
-  width: 1.75rem;
-
-  svg {
-    display: block;
-    margin: auto;
-    height: 1.75rem;
-    width: 1.75rem;
-    fill: color(ink);
+.scroll-button--left {
+  .jcc-timeline-dual__slider-wrapper & {
+    left: 0;
   }
 }
 
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.scroll-button--right {
+  .jcc-timeline-dual__slider-wrapper & {
+    right: 0;
+  }
 }

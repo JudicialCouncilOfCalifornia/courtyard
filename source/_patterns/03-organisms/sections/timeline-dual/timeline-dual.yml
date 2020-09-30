@@ -24,9 +24,9 @@ timeline_dual:
         number: 1
         read_more:
           type: "link"
-          link:
-            label: "Read more link"
-            url: "#"
+          modal:
+            button_label: "Label #2"
+            content: "<div>this is modal #2</div>"
     - top:
         number: 2
         read_more:
@@ -38,9 +38,9 @@ timeline_dual:
         number: 2
         read_more:
           type: "modal"
-          modal:
-            button_label: "Custom modal label #2"
-            content: "<div>this is modal #2</div>"
+          link:
+            label: "Read more link"
+            url: "#"
     - top:
         excerpt: "booyah"
         number: 3
