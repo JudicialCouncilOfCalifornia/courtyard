@@ -1,11 +1,18 @@
 social_links:
   items:
-    -   title: "Print"
-        url: "#"
-        src: ../../images/graphics/print.svg
-    -   title: "Email"
-        url: "#"
-        src: ../../images/graphics/email.svg
-    -   title: "Text"
-        url: "#"
-        src: ../../images/graphics/text.svg
+    - id: "print"
+      title: "Print"
+      src: ../../images/graphics/print.svg
+      label: "Print current page"
+    - id: "email"
+      title: "Email"
+      src: ../../images/graphics/email.svg
+      label: "Email page to yourself"
+      uses_modal: true
+      modal_content: "Email link to me"
+    - id: "text"
+      title: "Text"
+      src: ../../images/graphics/text.svg
+      label: "Text page to yourself"
+      uses_modal: true
+      modal_content: "Text link to me"
