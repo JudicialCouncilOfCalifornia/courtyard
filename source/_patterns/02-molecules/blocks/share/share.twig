@@ -1,15 +1,30 @@
 {% set classes = [
-    'jcc-share',
+  'jcc-share',
 ]|merge(social_links.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
-    {% for item in social_links.items %}
-
-    {% if item.url %}
-    <a href="{{ item.url }}" class="jcc-share__item">
+  {% for item in social_links.items %}
+    <a id="{{ item.id }}"
+       class="jcc-share__item usa-button usa-button--unstyled"
+       aria-label="{{ item.label }}"
+       {% if item.url %} href="item.url"
+       {% endif %}{% if item.uses_modal %} data-a11y-toggle="{{ item.id }}"{% endif %}
+    >
       <img src="{{ item.src }}">
     </a>
+    {% if item.uses_modal %}
+      <div class="jcc-modal__dialog js-dialog-window jcc-share__content" id="{{ item.id }}">
+        <button class="jcc-modal__close-button usa-button--unstyled"
+                type="button"
+                data-a11y-toggle="{{ item.id }}"
+                aria-label="Close this {{ item.id }} dialog"
+        >
+          <svg class="icon icon-close " role="img" title="Close"><use class="" xlink:href="#i-close"></use></svg>
+        </button>
+        <div class="jcc-modal__content">
+          {{ item.modal_content }}
+        </div>
+      </div>
     {% endif %}
-
-    {% endfor %}
+  {% endfor %}
 </div>
