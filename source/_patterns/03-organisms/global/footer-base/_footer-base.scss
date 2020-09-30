@@ -4,6 +4,25 @@
       @include u-maxw(widescreen);
     }
   }
+  .jcc-footer-global-wrapper {
+    .jcc-footer-global-copyright,
+    .jcc-global__menu {
+      display: inline-block;
+    }
+    .jcc-footer-global-copyright {
+      @include u-margin-left(4);
+      @include u-font(sans, 6);
+    }
+    @include at-media-max(desktop) {
+      .jcc-footer-global-copyright,
+      .jcc-global__menu {
+        display: block;
+      }
+      .jcc-footer-global-copyright {
+        @include u-margin-left(2);
+      }
+    }
+  }
 
   .grid-container {
     @include u-maxw(widescreen);
