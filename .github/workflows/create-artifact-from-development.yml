@@ -28,7 +28,7 @@ jobs:
         token: ${{ secrets.CourtyardArtifactToken }}
     - run: cp -R public/* artifact/public/.
     - run: cp -R source/_patterns/* artifact/source/_patterns/.
-    - run: cp -R node_modules/uswds/src/stylesheets/core/* artifact/source/uswds/core/.
+    - run: cp -R node_modules/uswds/src/stylesheets/* artifact/source/uswds/.
     - name: Commit to repository
       env:
         TOKEN_API: ${{ secrets.TOKEN_API }}
