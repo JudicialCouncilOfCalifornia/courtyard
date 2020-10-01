@@ -229,10 +229,19 @@
     @include at-media-max(tablet-lg) {
       display: none;
     }
-  }
 
-  &.hidden {
-    display: none;
+    &.hidden {
+      display: none;
+    }
+
+    .top-only & {
+      height: 30px;
+    }
+
+    .bottom-only & {
+      top: 0;
+      height: 30px;
+    }
   }
 }
 
