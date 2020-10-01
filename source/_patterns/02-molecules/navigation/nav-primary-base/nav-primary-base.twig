@@ -4,7 +4,7 @@
     <li class="usa-nav__primary-item">
       {% if link.links %}
         <button class="usa-accordion__button usa-nav__link{% if link.is_current %} usa-current{% endif %}" aria-expanded="false" aria-controls="{{ link.id }}"><span>{{ link.text }}</span></button>
-          <{% if primary_nav.mega %}div{% else %}ul{% endif %} id="{{ link.id }}" class="usa-nav__submenu{% if primary_nav.mega %} usa-megamenu{% endif %}">
+          <{% if primary_nav.mega %}div{% else %}ul{% endif %} id="{{ link.id }}" class="usa-nav__submenu{% if primary_nav.mega %} usa-megamenu{% endif %}" hidden>
             {% if primary_nav.mega == false %}
               {% for child in link.links %}
                 <li class="usa-nav__submenu-item">
