@@ -8,7 +8,18 @@
             {% if primary_nav.mega == false %}
               {% for child in link.links %}
                 <li class="usa-nav__submenu-item">
-                  <a href="{{ child.href }}" class="{% if child.is_current %} usa-current{% endif %}"> {{ child.text }}</a>
+                    {% if child.links %}
+                        <span class="usa-nav__submenu_label">{{ child.text }}</span>
+                        <ul class="usa-nav__submenu-list">
+                            {% for sub_child in child.links %}
+                                <li class="usa-nav__submenu-item">
+                                    <a href="{{ sub_child.href }}" class="{% if sub_child.is_current %} usa-current{% endif %}">{{ sub_child.text }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <a href="{{ child.href }}" class="{% if child.is_current %} usa-current{% endif %}">{{ child.text }}</a>
+                    {% endif %}
                 </li>
               {% endfor %}
             {% else %}
@@ -18,7 +29,18 @@
                     <ul class="usa-nav__submenu-list">
                       {% for child in group %}
                         <li class="usa-nav__submenu-item">
-                          <a href="{{ child.href }}" class="{% if child.is_current %} usa-current{% endif %}">{{ child.text }}</a>
+                          {% if child.links %}
+                              <span class="usa-nav__submenu_label">{{ child.text }}</span>
+                            <ul class="usa-nav__submenu-list">
+                              {% for sub_child in child.links %}
+                                <li class="usa-nav__submenu-item">
+                                  <a href="{{ sub_child.href }}" class="{% if sub_child.is_current %} usa-current{% endif %}">{{ sub_child.text }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          {% else %}
+                            <a href="{{ child.href }}" class="{% if child.is_current %} usa-current{% endif %}">{{ child.text }}</a>
+                          {% endif %}
                         </li>
                       {% endfor %}
                     </ul>
