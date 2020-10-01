@@ -2,6 +2,7 @@
   @include section-wrapper;
 
   &__item {
+    @include u-width(auto);
     @include u-margin-x(1);
 
     *,
@@ -30,6 +31,7 @@
 
   .jcc-share__content {
     @include u-position(absolute);
+    @include u-z(top);
     @include u-margin-left(2);
     @include u-margin-right(2);
 
