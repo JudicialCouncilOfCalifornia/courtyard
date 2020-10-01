@@ -2,25 +2,23 @@
   {% if timeline_dual_item.top %}
     <div class="jcc-timeline-dual-item__top">
       {% if timeline_dual_item.top.deadline %}
-        <div class="jcc-timeline-dual-item__time">{{ timeline_dual_item.top.deadline}}</div>
+        <div class="jcc-timeline-dual-item__time">{{ timeline_dual_item.top.deadline }}</div>
       {% else %}
         <div class="jcc-timeline-dual-item__top-inner">
-          {% if timeline_dual_item.top.number %}
-            <div class="jcc-timeline-dual-item__number">
-              <div class="jcc-timeline-dual-item__number-inner {{ timeline_dual_item.top.number }}">
-                {% if timeline_dual_item.top.number == "wait" or timeline_dual_item.top.number == "line" %}
-                  {# Empty #}
-                {% else %}
-                  {{ timeline_dual_item.top.number}}
-                {% endif %}
-              </div>
+          <div class="jcc-timeline-dual-item__number">
+            <div class="jcc-timeline-dual-item__number-inner {{ timeline_dual_item.top.number|default('line') }}">
+              {% if timeline_dual_item.top.number == "wait" %}
+                {# Empty #}
+              {% else %}
+                {{ timeline_dual_item.top.number }}
+              {% endif %}
             </div>
-          {% endif %}
+          </div>
 
           {% if timeline_dual_item.top.excerpt %}
-            <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.top.excerpt}}</div>
+            <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.top.excerpt }}</div>
           {% elseif timeline_dual_item.top.read_more.link.url %}
-            {% set url_attributes = timeline_dual_item.read_more.link.url_attributes | default(create_attribute()) %}
+            {% set url_attributes = timeline_dual_item.read_more.link.url_attributes|default(create_attribute()) %}
             <a href="{{ timeline_dual_item.top.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
               {{- timeline_dual_item.top.read_more.link.label -}}
             </a>
@@ -41,25 +39,23 @@
   {% if timeline_dual_item.bottom %}
     <div class="jcc-timeline-dual-item__bottom">
       {% if timeline_dual_item.bottom.deadline %}
-        <div class="jcc-timeline-dual-item__time">{{ timeline_dual_item.bottom.deadline}}</div>
+        <div class="jcc-timeline-dual-item__time">{{ timeline_dual_item.bottom.deadline }}</div>
       {% else %}
         <div class="jcc-timeline-dual-item__bottom-inner">
-          {% if timeline_dual_item.bottom.number %}
-            <div class="jcc-timeline-dual-item__number">
-              <div class="jcc-timeline-dual-item__number-inner {{ timeline_dual_item.bottom.number }}">
-                {% if timeline_dual_item.bottom.number == "wait" or timeline_dual_item.bottom.number == "line" %}
-                  {# Empty #}
-                {% else %}
-                  {{ timeline_dual_item.bottom.number}}
-                {% endif %}
-              </div>
+          <div class="jcc-timeline-dual-item__number">
+            <div class="jcc-timeline-dual-item__number-inner {{ timeline_dual_item.bottom.number|default('line') }}">
+              {% if timeline_dual_item.bottom.number == "wait" %}
+                {# Empty #}
+              {% else %}
+                {{ timeline_dual_item.bottom.number }}
+              {% endif %}
             </div>
-          {% endif %}
+          </div>
 
           {% if timeline_dual_item.bottom.excerpt %}
-            <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.bottom.excerpt}}</div>
+            <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.bottom.excerpt }}</div>
           {% elseif timeline_dual_item.bottom.read_more.link.url %}
-            {% set url_attributes = timeline_dual_item.read_more.link.url_attributes | default(create_attribute()) %}
+            {% set url_attributes = timeline_dual_item.read_more.link.url_attributes|default(create_attribute()) %}
             <a href="{{ timeline_dual_item.bottom.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
               {{- timeline_dual_item.bottom.read_more.link.label -}}
             </a>
