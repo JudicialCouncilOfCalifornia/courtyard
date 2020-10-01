@@ -7,8 +7,8 @@
     <a id="{{ item.id }}"
        class="jcc-share__item usa-button usa-button--unstyled"
        aria-label="{{ item.label }}"
-       {% if item.url %} href="item.url"
-       {% endif %}{% if item.uses_modal %} data-a11y-toggle="{{ item.id }}"{% endif %}
+       {% if item.url %} href="item.url"{% endif %}
+       {% if item.uses_modal %} data-a11y-toggle="{{ item.id }}"{% endif %}
     >
       <img src="{{ item.src }}">
     </a>
