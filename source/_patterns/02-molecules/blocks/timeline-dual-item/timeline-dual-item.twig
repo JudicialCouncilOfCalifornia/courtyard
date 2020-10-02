@@ -15,14 +15,14 @@
             </div>
           </div>
 
-          {% if timeline_dual_item.top.excerpt %}
+          {% if timeline_dual_item.top.excerpt|trim %}
             <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.top.excerpt }}</div>
-          {% elseif timeline_dual_item.top.read_more.link.url %}
+          {% elseif timeline_dual_item.top.read_more.link.url|trim %}
             {% set url_attributes = timeline_dual_item.read_more.link.url_attributes|default(create_attribute()) %}
             <a href="{{ timeline_dual_item.top.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
               {{- timeline_dual_item.top.read_more.link.label -}}
             </a>
-          {% elseif timeline_dual_item.top.read_more.modal %}
+          {% elseif timeline_dual_item.top.read_more.modal.content|trim %}
             {% include '@organisms/sections/modal/modal.twig' with {
               modal: timeline_dual_item.top.read_more.modal
             } %}
@@ -52,14 +52,14 @@
             </div>
           </div>
 
-          {% if timeline_dual_item.bottom.excerpt %}
+          {% if timeline_dual_item.bottom.excerpt|trim %}
             <div class="jcc-timeline-dual-item__excerpt">{{ timeline_dual_item.bottom.excerpt }}</div>
-          {% elseif timeline_dual_item.bottom.read_more.link.url %}
+          {% elseif timeline_dual_item.bottom.read_more.link.url|trim %}
             {% set url_attributes = timeline_dual_item.read_more.link.url_attributes|default(create_attribute()) %}
             <a href="{{ timeline_dual_item.bottom.read_more.link.url }}" {{ url_attributes.addClass('jcc-timeline-dual-item__trigger') }}>
               {{- timeline_dual_item.bottom.read_more.link.label -}}
             </a>
-          {% elseif timeline_dual_item.bottom.read_more.modal %}
+          {% elseif timeline_dual_item.bottom.read_more.modal.content|trim %}
             {% include '@organisms/sections/modal/modal.twig' with {
               modal: timeline_dual_item.bottom.read_more.modal
             } %}

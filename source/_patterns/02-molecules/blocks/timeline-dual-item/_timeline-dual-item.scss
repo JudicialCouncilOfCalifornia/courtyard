@@ -88,8 +88,20 @@
     bottom: 14px;
   }
 
-  .jcc-modal__trigger,
-  .jcc-timeline-dual-item__excerpt,
+  .jcc-modal__trigger {
+    @include at-media(tablet-lg) {
+      position: relative;
+      bottom: 9px;
+    }
+  }
+
+  .jcc-timeline-dual-item__excerpt {
+    @include at-media(tablet-lg) {
+      position: relative;
+      bottom: 8px;
+    }
+  }
+
   .jcc-timeline-dual-item__trigger {
     @include at-media(tablet-lg) {
       position: relative;
@@ -182,6 +194,23 @@
 
     @include at-media(tablet-lg) {
       position: relative;
+    }
+  }
+
+  .jcc-modal__trigger {
+    @include at-media(tablet-lg) {
+      top: 10px;
+    }
+  }
+
+  .jcc-timeline-dual-item__excerpt {
+    @include at-media(tablet-lg) {
+      top: 11px;
+    }
+  }
+
+  .jcc-timeline-dual-item__trigger {
+    @include at-media(tablet-lg) {
       top: 7px;
     }
   }

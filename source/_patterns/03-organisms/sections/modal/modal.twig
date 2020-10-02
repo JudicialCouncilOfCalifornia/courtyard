@@ -7,7 +7,7 @@
 {% set randomId = modal.id ?: random() %}
 
 <button class="jcc-modal__trigger {{ modal.parent_component_class }}" data-a11y-dialog-show="{{ randomId }}">
-  {{ modal.button_label ?? 'Read more'|t }}
+  {{ modal.button_label ?: 'Read more'|t }}
 </button>
 
 <div class="{{ classes|join(' ')|trim }}" id="{{ randomId }}">
