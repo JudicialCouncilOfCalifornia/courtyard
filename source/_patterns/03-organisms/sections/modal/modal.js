@@ -8,6 +8,16 @@ $(".jcc-modal").each(function() {
   new A11yDialog(this);
 });
 
+// Reset modals on close
+$(".jcc-modal__close-reset, .jcc-modal__backdrop").on("click tap", function() {
+  $(".jcc-modal").attr("aria-hidden", "true"); // Prevent sibling modals from appearing on close action ... limitation with a11y
+  $(".jcc-modal .usa-alert, .jcc-modal .form-item--error-message").remove(); // Clear alert messages
+  // Reset forms
+  $(".jcc-modal input[type='text'], .jcc-modal input[type='email']").each(function() {
+    this.value = "";
+  });
+});
+
 // var dialog = document.querySelector("dialog");
 // dialogPolyfill.registerDialog(dialog);
 // // Now dialog acts like a native <dialog>.

@@ -1,0 +1,25 @@
+{% set classes = [
+  'jcc-share',
+]|merge(social_links.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% for item in social_links.items %}
+    {% if not item.uses_modal %}
+      {% if not item.custom_link %}
+        <a id="{{ item.id }}"
+           class="jcc-share__item usa-button usa-button--unstyled"
+           aria-label="{{ item.aria_label }}"
+           {% if item.url %} href="{{ item.url }}"{% endif %}
+        >
+          <img src="{{ item.image_src }}">
+        </a>
+      {% else %}
+        {{ item.custom_link|raw }}
+      {% endif %}
+    {% else %}
+      {% include '@organisms/sections/modal/modal.twig' with {
+        modal: item
+      } %}
+    {% endif %}
+  {% endfor %}
+</div>

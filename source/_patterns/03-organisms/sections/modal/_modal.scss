@@ -1,6 +1,6 @@
-// Disables non-native backdrop
-.jcc-modal__backdrop {
-  @include u-display(none);
+.jcc-modal {
+  @include u-position(fixed);
+  @include u-z(top);
 }
 
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
@@ -36,15 +36,20 @@
 
 .jcc-modal__dialog {
   // Structural Attributes
+  @include u-position(fixed);
+  @include u-margin-x(2);
   @include u-padding-y(6);
   @include u-padding-x(2);
-  @include u-margin-x(auto);
-  @include u-position(relative);
+  top: 30%;
   box-sizing: border-box;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  min-height: 80%;
-  width: 90%;
+  width: 53%;
+  @include at-media(tablet) {
+    width: 90%;
+  }
+  @include at-media(desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
   max-width: 70rem;
 
   dialog::backdrop {
@@ -89,6 +94,7 @@
 }
 
 .jcc-modal__trigger {
+  @include u-margin-x(1, !important);
   @include button-unstyled;
   @include u-font-size(sans, md);
   cursor: pointer;

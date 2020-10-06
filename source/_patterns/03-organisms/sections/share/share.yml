@@ -1,0 +1,20 @@
+social_links:
+  items:
+    - id: "print"
+      button_label: "Print"
+      image_src: ../../images/graphics/print.svg
+      aria_label: "Print current page"
+    - id: "email"
+      button_label: "Email"
+      image_src: ../../images/graphics/email.svg
+      aria_label: "Email page to yourself"
+      uses_modal: true
+      content: "Email link to me"
+    - id: "text"
+      button_label: "Text"
+      image_src: ../../images/graphics/text.svg
+      aria_label: "Text page to yourself"
+      uses_modal: true
+      content: "Text link to me"
+    #- id: "special"
+    #  custom_link: '<button class="jcc-modal__trigger " data-a11y-dialog-show="email"><img src="../../images/graphics/text.svg" alt="0"></button>'
