@@ -5,9 +5,8 @@
 ]|merge(modal.classes|default([''])) %}
 
 {% set randomId = modal.id ?: random() %}
-{% set modalTarget = modal.target ?: randomId %}
 
-<button class="jcc-modal__trigger {{ modal.parent_component_class }}" data-a11y-dialog-show="{{ modalTarget }}">
+<button class="jcc-modal__trigger {{ modal.parent_component_class }}" data-a11y-dialog-show="{{ randomId }}">
   {% if modal.image_src %}
     <img src="{{ item.image_src }}" alt="{{ modal.aria-label }}">
   {% else %}
@@ -15,7 +14,7 @@
   {% endif %}
 </button>
 
-<div id="{{ randomId }}" class="{{ classes|join(' ')|trim }}" id="{{ randomId }}" aria-hidden="true">
+<div id="{{ randomId }}" class="{{ classes|join(' ')|trim }}" aria-hidden="true">
   <div class="jcc-modal__backdrop" tabindex="-1" data-a11y-dialog-hide=""></div>
   {# @todo: aria-labelledby usage is incorrect, headergroup data is not
   available, and this will fail WCAG because of id="jcc-dialog-window". Not sure
