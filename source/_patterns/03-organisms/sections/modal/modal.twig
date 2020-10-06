@@ -11,7 +11,7 @@
   {% if modal.image_src %}
     <img src="{{ item.image_src }}" alt="{{ modal.aria-label }}">
   {% else %}
-    {{ modal.button_label ?? 'Read more'|t }}
+    {{ modal.button_label ?: 'Read more'|t }}
   {% endif %}
 </button>
 
