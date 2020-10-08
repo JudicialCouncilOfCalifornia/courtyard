@@ -119,6 +119,30 @@ a,
   h6 {
     text-transform: none;
   }
+
+  .h-responsive-h1 {
+    @extend .h-responsive-h1;
+  }
+
+  .h-responsive-h2 {
+    @extend .h-responsive-h2;
+  }
+
+  .h-responsive-h3 {
+    @extend .h-responsive-h3;
+  }
+
+  .h-responsive-h4 {
+    @extend .h-responsive-h4;
+  }
+
+  .h-responsive-h5 {
+    @extend .h-responsive-h5;
+  }
+
+  .h-responsive-h6 {
+    @extend .h-responsive-h6;
+  }
 }
 
 .h-dash {
