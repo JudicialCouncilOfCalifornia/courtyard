@@ -98,13 +98,17 @@ $aspect-width: 16;
   &:after {
     content: "";
     display: block;
-    width: 100%;
+    width: 88%;
     position: absolute;
     z-index: 1;
     height: 3px;
     top: 1.625rem;
     left: 3.5rem;
     background-color: color(accent-warm-dark);
+
+    @include at-media(tablet) {
+      width: 92%;
+    }
 
     @include at-media(desktop) {
       top: 2.5rem;
