@@ -1,23 +1,25 @@
 {% set classes = [
   'jcc-modal',
+  modal.overlay_mode ? 'jcc-modal--overlay',
   modal.background_variant ? 'jcc-modal--' ~ modal.background_variant,
   modal.size_variant ? 'jcc-modal--' ~ modal.size_variant,
 ]|merge(modal.classes|default([''])) %}
 
 {% set randomId = modal.id ?: random() %}
 
-<button class="jcc-modal__trigger {{ modal.parent_component_class }}" data-a11y-dialog-show="{{ randomId }}">
-  {{ modal.button_label ?: 'Read more'|t }}
-</button>
+{% if modal.custom_button %}
+  {{ modal.custom_button }}
+{% else %}
+  <button class="jcc-modal__trigger {{ modal.parent_component_class }}" data-a11y-dialog-show="{{ randomId }}">
+    {{ modal.button_label ?: 'Read more'|t }}
+  </button>
+{% endif %}
 
 <div class="{{ classes|join(' ')|trim }}" id="{{ randomId }}">
-  <div class="jcc-modal__backdrop" tabindex="-1" data-a11y-dialog-hide="jcc-modal"></div>
+  <div class="jcc-modal__backdrop{% if modal.overlay_mode %} jcc-modal__backdrop--overlay{% endif %}" tabindex="-1"></div>
 
-  {# @todo: aria-labelledby usage is incorrect, headergroup data is not
-  available, and this will fail WCAG because of id="jcc-dialog-window". Not sure
-  if we need this id here, will need to follow up. #}
-  <dialog class="jcc-modal__dialog js-dialog-window" id="jcc-dialog-window" aria-labelledby="{{ headergroup.title }}" title="{{ headergroup.title }}">
-    <button class="jcc-modal__close-button usa-button--unstyled" type="button" data-a11y-dialog-hide="{{ randomId }}" aria-label="{{ 'Close this dialog window'|t }}">
+  <dialog class="jcc-modal__dialog{% if modal.overlay_mode %} jcc-modal__dialog--overlay{% endif %} js-dialog-window" id="jcc-dialog-window" aria-label="{{ randomId }} dialog window">
+    <button class="jcc-modal__close-button usa-button--unstyled jcc-modal__close-reset" type="button" data-a11y-dialog-hide="{{ randomId }}" aria-label="{{ 'Close this dialog window'|t }}">
       {% include '@atoms/icons/icon.twig' with {
         icon: {
           name: "close",
@@ -33,7 +35,7 @@
 
     {% if modal.footer_button %}
     <footer class="jcc-modal__footer">
-      <button class="usa-button" type="button" data-a11y-dialog-hide="{{ randomId }}" aria-label="{{ 'Close this dialog window'|t }}">
+      <button class="usa-button jcc-modal__close-reset" type="button" data-a11y-dialog-hide="{{ randomId }}" aria-label="{{ 'Close this dialog window'|t }}">
         {{ 'Done'|t }}
       </button>
     </footer>

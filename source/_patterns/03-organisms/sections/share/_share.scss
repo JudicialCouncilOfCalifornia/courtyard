@@ -1,0 +1,54 @@
+.jcc-share {
+  @include section-wrapper;
+
+  &__item {
+    @include u-width(auto);
+    @include u-margin-x(1);
+
+    *,
+    &,
+    &:visited {
+      @include u-color(base);
+      @include u-text-decoration(no-underline);
+    }
+
+    svg {
+      @include u-height(6);
+      @include u-width(6);
+    }
+
+    svg.ext {
+      display: none;
+    }
+  }
+
+  &__button {
+    @include u-margin-x(1);
+    @include u-padding(0);
+    @include u-bg("transparent");
+    @include u-border(0);
+    @include u-cursor(pointer);
+
+    span {
+      @include u-display(inline-block);
+      height: 4.1rem;
+      width: 4.1rem;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  }
+
+  &__print {
+    background-image: url("../images/graphics/print.svg");
+  }
+
+  &__email {
+    position: relative;
+    top: 2px;
+    background-image: url("../images/graphics/email.svg");
+  }
+
+  &__text {
+    background-image: url("../images/graphics/text.svg");
+  }
+}

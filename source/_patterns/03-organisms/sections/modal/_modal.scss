@@ -1,6 +1,18 @@
-// Disables non-native backdrop
+// Disables non-native backdrop by default
 .jcc-modal__backdrop {
   @include u-display(none);
+
+  &--overlay {
+    @include u-display(block);
+  }
+}
+
+.jcc-modal {
+  &--overlay {
+    @include u-position(absolute);
+    @include u-z(top);
+    width: 100%;
+  }
 }
 
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
@@ -47,6 +59,26 @@
   width: 90%;
   max-width: 70rem;
 
+  &--overlay {
+    @include u-position(fixed);
+    top: 30%;
+    min-height: unset;
+
+    // Adjust for Edge
+    @supports (-ms-ime-align: auto) {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @include at-media(desktop) {
+      @supports (-ms-ime-align: auto) {
+        width: 53%;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+    }
+  }
+
   dialog::backdrop {
     /* native */
     background-color: white;
@@ -91,7 +123,8 @@
 .jcc-modal__trigger {
   @include button-unstyled;
   @include u-font-size(sans, md);
-  cursor: pointer;
+  @include u-margin-x(1);
+  @include u-cursor(pointer);
 }
 
 .jcc-modal__dialog {
