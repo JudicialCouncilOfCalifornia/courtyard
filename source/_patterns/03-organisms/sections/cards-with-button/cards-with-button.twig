@@ -1,5 +1,10 @@
 {% set classes = [
-  'jcc-cards-with-button__container',
+  'jcc-cards-with-button__container'
+]|merge(cards_with_button.classes|default([''])) %}
+
+{% set highlight_classes = [
+  cards_with_button.highlight_first ? 'jcc-cards-with-button__highlight' : '',
+  cards_with_button.highlight_variant ? 'jcc-cards-with-button__highlight--' ~ cards_with_button.highlight_variant : '',
 ]|merge(cards_with_button.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if cards_with_button.id %} id="{{ cards_with_button.id }}"{% endif %}>
@@ -9,7 +14,7 @@
     } %}
   {% endif %}
 
-  <ul class="jcc-cards-with-button {% if cards_with_button.highlight_first %}jcc-cards__highlight{% endif %}">
+  <ul class="jcc-cards-with-button {{ highlight_classes|join(' ')|trim }}">
     {% for card in cards_with_button.cards %}
       <li class="jcc-cards-with-button__item">
         {% include '@molecules/blocks/card/card.twig' with {

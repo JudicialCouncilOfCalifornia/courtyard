@@ -1,3 +1,7 @@
+.jcc-card {
+  max-width: 60rem;
+}
+
 .jcc-card__brow {
   @include u-margin-bottom(1.5);
 }
@@ -36,30 +40,9 @@
 }
 
 .jcc-card__img {
-  height: 200px;
-  overflow: hidden;
-
-  img {
-    min-width: 100%;
-  }
+  @include aspect-ratio(16, 9);
 }
 
 .jcc-card__vid {
-  .media-oembed-content {
-    height: 200px;
-  }
-}
-
-@include at-media(tablet) {
-  .jcc-cards__highlight {
-    .jcc-card__img {
-      height: 300px;
-    }
-
-    .jcc-card__vid {
-      .media-oembed-content {
-        min-height: 300px;
-      }
-    }
-  }
+  @include aspect-ratio(16, 9);
 }
