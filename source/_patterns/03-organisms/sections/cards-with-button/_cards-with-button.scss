@@ -191,14 +191,4 @@
       @include u-margin-bottom(0);
     }
   }
-
-  .jcc-cards-with-button__highlight--large {
-    .jcc-cards-with-button__item:first-child {
-      .jcc-card__img {
-        img {
-          height: 113%;
-        }
-      }
-    }
-  }
 }
