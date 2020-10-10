@@ -1,0 +1,48 @@
+{% set default_option = cascading_jump_menu.default_option|default('Action you want to do') %}
+
+{% set classes = [
+  'jcc-cascading-jump-menu',
+]|merge(cascading_jump_menu.classes|default([''])) %}
+
+{% if cascading_jump_menu.items|length > 0 %}
+  {# Create json for the javascript that creates/manages the 2 dropdowns #}
+  {% set json = [] %}
+  {% for group in cascading_jump_menu.items %}
+    {% set group_items = [] %}
+    {% for group_item in group.items %}
+      {% set group_items = group_items|merge([{
+        name: group_item.name,
+        url: group_item.url,
+      }]) %}
+    {% endfor %}
+
+    {% set json = json|merge({
+      (group.name): {
+        default_option: group.default_option|default('Action you want to do'),
+        items: group_items,
+      }
+    }) %}
+  {% endfor %}
+
+
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-cascading-jump-menu__form">
+      {% if cascading_jump_menu.label %}
+        <label class="usa-label sr-only" for="options">{{ cascading_jump_menu.label }}</label>
+      {% endif %}
+
+      <select class="usa-select jcc-cascading-jump-menu__parent">
+        <option value="">{{ default_option }}</option>
+        {% for group in cascading_jump_menu.items %}
+          <option>{{ group.name }}</option>
+        {% endfor %}
+      </select>
+
+      <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled">
+      </select>
+    </div>
+
+    <input type="hidden" name="data" class="cascading-jump-menu__data" value="{{ json|json_encode|e('html') }}"/>
+    <button class="usa-button usa-button--accent-warm">Go</button>
+  </div>
+{% endif %}
