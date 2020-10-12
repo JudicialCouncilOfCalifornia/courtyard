@@ -44,5 +44,9 @@
     .usa-input {
       @include u-margin-y(0);
     }
+
+    .usa-button {
+      @include u-padding-x(2);
+    }
   }
 }
