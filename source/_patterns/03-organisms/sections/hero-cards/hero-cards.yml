@@ -32,6 +32,7 @@ hero_cards:
         id: "read-more-2"
         excerpt: '<p>Find your case type to get started</p>'
         menu_label: 'The label'
+        menu_type: 'single'
         menu_default_option: 'Options:'
         menu_items:
           - name: "Who sent me these papers?"
@@ -48,17 +49,46 @@ hero_cards:
         id: "read-more-3"
         excerpt: '<p>Look up by form number and understand your options</p>'
         menu_label: 'The label'
+        menu_type: 'cascading'
+        menu_default_option: 'Select your case type'
         menu_items:
-          - name: "Who sent me these papers?"
-            url: "#"
-          - name: "What does this petition say?"
-            url: "#"
-          - name: "What do I need to do?"
-            url: "#"
-          - name: "What is legal parentage all about?"
-            url: "#"
-          - name: "Additional Sections"
-            url: "#"
+          - name: "Choice #1"
+            items:
+              - name: "1- Who sent me these papers?"
+                url: "#"
+              - name: "1- What does this petition say?"
+                url: "#"
+              - name: "1- What do I need to do?"
+                url: "#"
+              - name: "1- What is legal parentage all about?"
+                url: "#"
+              - name: "1- Additional Sections"
+                url: "#"
+          - name: "Choice #2"
+            default_option: "Choose something to do"
+            items:
+              - name: "2- Who sent me these papers?"
+                url: "#"
+              - name: "2- What does this petition say?"
+                url: "#"
+              - name: "2- What do I need to do?"
+                url: "#"
+              - name: "2- What is legal parentage all about?"
+                url: "#"
+              - name: "2- Additional Sections"
+                url: "#"
+          - name: "Choice #3"
+            items:
+              - name: "3- Who sent me these papers?"
+                url: "#"
+              - name: "3- What does this petition say?"
+                url: "#"
+              - name: "3- What do I need to do?"
+                url: "#"
+              - name: "3- What is legal parentage all about?"
+                url: "#"
+              - name: "3- Additional Sections"
+                url: "#"
       - title: "Get information about a legal matter"
         id: "read-more-4"
         excerpt: '<p>Find out what kind of help you can get from the court for a variety of situations</p>'
