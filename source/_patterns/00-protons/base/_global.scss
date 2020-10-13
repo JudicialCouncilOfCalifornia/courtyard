@@ -61,6 +61,25 @@ $aspect-width: 16;
   padding-bottom: percentage($height/$width);
 }
 
+// Element aspect ratio utility
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    @include u-display(block);
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    @include u-position(absolute);
+    @include u-top(0);
+    @include u-left(0);
+    @include u-right(0);
+    @include u-bottom(0);
+    @include u-overflow(hidden);
+  }
+}
+
 // Custom ordered list elements
 @mixin custom-counter() {
   counter-increment: step-counter;

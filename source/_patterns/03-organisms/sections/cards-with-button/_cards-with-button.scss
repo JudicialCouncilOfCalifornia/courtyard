@@ -179,10 +179,16 @@
     }
   }
 
-  .jcc-cards__highlight,
-  .jcc-cards__highlight + ul {
+  .jcc-cards-with-button__highlight,
+  .jcc-cards-with-button__highlight + ul {
     > li:last-child {
       @include u-margin-left(2);
+    }
+  }
+
+  .jcc-cards-with-button__highlight {
+    .jcc-cards-with-button__item {
+      @include u-margin-bottom(0);
     }
   }
 }
