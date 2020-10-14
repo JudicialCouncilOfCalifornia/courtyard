@@ -55,4 +55,10 @@
       </div>
     </div>
   </div>
+
+  {% if hero.banner_image %}
+    <div class="jcc-hero__banner" style="background-image:url({{ hero.banner_image }})">
+      {# <img src="{{ hero.banner_image }}" > #}
+    </div>
+  {% endif %}
 </div>
