@@ -7,6 +7,18 @@
     }
   }
 
+  .jcc-hero__title {
+    @include u-margin-top(0);
+  }
+
+  .jcc-hero--has-two-columns-threequarter {
+    .jcc-hero__column-left {
+      @include at-media(tablet-lg) {
+        @include u-padding-right(15);
+      }
+    }
+  }
+
   .jcc-cards-section {
     @include at-media(desktop) {
       margin-top: -14rem;
