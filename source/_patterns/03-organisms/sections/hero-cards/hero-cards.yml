@@ -4,7 +4,7 @@ hero_cards:
     lead: "Resources and information to help you represent yourself in court or work better with a lawyer, including step-by-step guidance for following court procedures and understanding your options."
     background_variant: "has-background-color--dark"
     # column_content_right: "<img src='../../../../images/task-documentation.png' >"
-    column_content_right: "<img src='http://placeimg.com/700/500/nature'>"
+    column_content_right: "<img src='https://placeimg.com/700/500/nature'>"
     column_variant: "has-two-columns-threequarter"
   card_section:
     headergroup:
