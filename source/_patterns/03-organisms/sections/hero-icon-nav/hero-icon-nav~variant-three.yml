@@ -19,6 +19,7 @@ hero_icon_nav:
       - title: 'Case Information'
         url: '#'
         icon: '../../images/graphics/justice.svg'
+        link_label: ''
     buttons:
       - title: 'Tentative Rulings'
         url: '#'
