@@ -76,18 +76,17 @@ switchboard:
     primary:
       - brow: 'Go to'
         title: 'See what happens based on the response'
-        icon_link: true
+        embellishment: 'icon-top-right'
         url: ''
         body:
       - brow: 'Go to'
         title: 'I was told I can’t sell my property'
         body: 'Completing Financial Disclosures'
-        icon_link: true
-        body:
+        embellishment: 'icon-top-right'
         url: ''
       - brow: 'Return to'
         title: 'The start of a divorce at-a-glance '
-        icon_link: true
+        embellishment: 'icon-top-right'
         body:
         url: ''
       -

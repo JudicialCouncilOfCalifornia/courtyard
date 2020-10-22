@@ -18,22 +18,22 @@ switchboard:
     primary:
       - brow: 'Phase 1'
         title: 'Start a divorce case'
-        icon_link: true
+        embellishment: 'icon-bottom-left'
         body: 'One spouse files papers to start the case and officially lets the other spouse know.'
         url: 'link.pages-case-phase-1'
       - brow: 'Phase 2'
         title: 'Share Financial Information'
-        icon_link: true
+        embellishment: 'icon-bottom-left'
         body: 'Both spouses complete and exchange financial information documents.'
         url: 'link.pages-case-phase-2'
       - brow: 'Phase 3'
         title: 'Make decisions'
-        icon_link: true
+        embellishment: 'icon-bottom-left'
         body: 'The couple makes decisions about how to split property or debts and spousal support  It often takes longer than 6-months to figure this out.'
         url: 'link.pages-case-phase-3'
       - brow: 'Phase 4'
         title: 'Finalize the divorce'
         body: 'Once all these issues are decided, you submit final paperwork to the court and your divorce will become final.'
-        icon_link: true
+        embellishment: 'icon-bottom-left'
         url: 'link.pages-case-phase-4'
     secondary:

@@ -5,5 +5,5 @@ tile_section:
     -
       brow: 'Go to'
       title: 'Prepare the claim of exemption'
-      icon_link: true
+      embellishment: 'icon-top-right'
       url: '#'
