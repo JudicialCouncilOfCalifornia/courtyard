@@ -1,7 +1,7 @@
 tile:
   brow:
   title: 'Come back to this page later'
-  icon_link: false
+  embellishment: 'none'
   url:
   body: '<div class="jcc-contact-group">
     <div class="jcc-contact-group__container">

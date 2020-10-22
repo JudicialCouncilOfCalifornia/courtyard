@@ -9,8 +9,8 @@ switchboard:
     primary:
       - brow:
         title: 'Come back to this page later'
-        icon_link: false
-        url: 
+        embellishment: 'none'
+        url:
         body: '<div class="jcc-contact-group">
           <div class="jcc-contact-group__container">
           <label class="usa-label" for="input-type-text">Enter your email of phone number</label>
@@ -21,7 +21,7 @@ switchboard:
           </div>'
       - brow: 'Lien Against Property'
         title: 'I was told I can’t sell my property'
-        icon_link: true
+        embellishment: 'icon-top-right'
         url: 'link.pages-judgment-lien-against-property'
-      - 
+      -
     secondary:

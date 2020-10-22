@@ -9,10 +9,10 @@ switchboard:
     primary:
       - brow: 'Wage Garnishment'
         title: 'Someone took money from my paycheck'
-        icon_link: true
+        embellishment: 'icon-top-right'
         url: 'link.pages-judgment-wage-garnishment'
       - brow: 'Lien Against Property'
         title: 'I was told I can’t sell my property'
-        icon_link: true
+        embellishment: 'icon-top-right'
         url: 'link.pages-judgment-lien-against-property'
     secondary:

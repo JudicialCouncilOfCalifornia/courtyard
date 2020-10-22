@@ -16,22 +16,22 @@ switchboard:
     primary:
       - brow: 'Wage Garnishment'
         title: 'Someone took money from my paycheck'
-        icon_link: true
         body: 'Regardless of how they respond, you’ll need to complete your financial disclosures. '
         url: 'link.pages-judgment-wage-garnishment'
+        embellishment: 'icon-bottom-left'
       - brow: 'Lien Against Property'
         title: 'I was told I can’t sell my property'
         body: 'Regardless of how they respond, you’ll need to complete your financial disclosures. '
-        icon_link: true
         url: 'link.pages-judgment-lien-against-property'
+        embellishment: 'icon-bottom-left'
       - brow: 'Wage Garnishment'
         title: 'Someone took money from my paycheck'
-        icon_link: true
         body: 'Regardless of how they respond, you’ll need to complete your financial disclosures. '
         url: 'link.pages-judgment-wage-garnishment'
+        embellishment: 'icon-bottom-left'
       - brow: 'Lien Against Property'
         title: 'I was told I can’t sell my property'
         body: 'Regardless of how they respond, you’ll need to complete your financial disclosures. '
-        icon_link: true
         url: 'link.pages-judgment-lien-against-property'
+        embellishment: 'icon-bottom-left'
     secondary:

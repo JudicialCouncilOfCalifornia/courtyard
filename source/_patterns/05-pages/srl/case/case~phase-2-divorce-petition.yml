@@ -63,12 +63,12 @@ switchboard:
     primary:
       - brow: 'Go to'
         title: 'File forms with the court'
-        icon_link: true
+        embellishment: 'icon-top-right'
         body: ""
         url: ''
       - brow: 'Return to'
         title: 'The Start of Divorce At-a-Glance'
-        icon_link: true
+        embellishment: 'icon-top-right'
         body: ""
         url: ''
       -

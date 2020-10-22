@@ -116,24 +116,6 @@
           @include grid-row;
           @include grid-gap;
         }
-        .jcc-tile {
-          @include at-media(desktop) {
-            padding-bottom: 4em;
-          }
-          position: relative;
-          .jcc-tile__title {
-            @include u-font(body, 8);
-            @include u-margin-bottom(2);
-          }
-          .jcc-tile__icon-link {
-            @include at-media(desktop) {
-              top: unset;
-              @include u-bottom(2);
-              @include u-left(2);
-            }
-            transform: rotate(90deg);
-          }
-        }
       }
     }
   }
@@ -179,17 +161,4 @@
 
 .jcc-switchboard__tiles {
   @include add-list-reset;
-}
-
-.jcc-tile {
-  @include u-border(1px, base-light);
-  @include u-bg("white");
-  @include u-height(full);
-}
-
-.jcc-switchboard__tiles--secondary {
-  .jcc-tile {
-    @include u-border(1px, base-light);
-    @include u-bg(base-lightest);
-  }
 }

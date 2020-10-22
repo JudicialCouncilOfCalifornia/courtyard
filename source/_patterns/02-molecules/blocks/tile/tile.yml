@@ -1,6 +1,6 @@
 tile:
   brow: "Wage Garnishment"
   title: 'Someone took money from my paycheck'
-  icon_link: true
+  embellishment: 'icon-top-right'
   link_label: ''
   url: '#'

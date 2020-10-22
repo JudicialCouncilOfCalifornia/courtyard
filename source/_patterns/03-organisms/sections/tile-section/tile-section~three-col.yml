@@ -3,13 +3,13 @@ tile_section:
   tiles:
     - brow: 'Go to'
       title: 'Prepare the claim of exemption'
-      icon_link: true
+      embellishment: 'icon-top-right'
       url: '#'
     - brow: 'Wage Garnishment'
       title: 'Someone took money from my paycheck'
-      icon_link: true
+      embellishment: 'icon-top-right'
       url: '#'
     - brow: 'File claim'
       title: "Some file the claim of exemption with the sheriff"
-      icon_link: true
+      embellishment: 'icon-top-right'
       url: '#'
