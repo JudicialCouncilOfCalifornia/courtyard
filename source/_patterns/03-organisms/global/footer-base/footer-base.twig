@@ -23,7 +23,7 @@
                   {% if link.links %}
                   <ul class="usa-list usa-list--unstyled">
                     {% for child in link.links %}
-                    <li class="usa-footer__secondary-link"><a href="#">{{ child.text }}</a></li>
+                    <li class="usa-footer__secondary-link"><a href="{{ child.href }}">{{ child.text }}</a></li>
                     {% endfor %}
                   </ul>
                   {% endif %}
