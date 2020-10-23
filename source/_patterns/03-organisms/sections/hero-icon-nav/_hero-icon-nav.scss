@@ -1,5 +1,8 @@
+.jcc-hero-icon-nav {
+  @include u-margin-bottom(8);
+}
+
 .jcc-hero-icon-nav.jcc-hero-icon-nav-style--default {
-  @include u-padding-bottom(8);
   .jcc-hero-img-banner__hero {
     @include u-text-align(left);
     color: color("white");
@@ -7,7 +10,6 @@
       display: none;
     }
     @include at-media(desktop) {
-      height: 550px;
       @include u-padding-x(4);
       @include u-padding-y(9);
     }
