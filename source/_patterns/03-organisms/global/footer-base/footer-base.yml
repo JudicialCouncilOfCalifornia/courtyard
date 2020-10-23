@@ -11,6 +11,7 @@ footer_base:
       href: "#"
     - text: Simple link 3
       href: "#"
+  secondary_menu_cols: '3'
   social_links:
     items:
       - icon:
@@ -35,7 +36,7 @@ footer_base:
     logo_text:
       title: 'Judicial Branch of California'
       url: '#'
-    logo: 'jcc-logo-branch-text-white.svg' 
+    logo: 'jcc-logo-branch-text-white.svg'
     secondary_nav:
       items:
         - name: "Contact Us"
