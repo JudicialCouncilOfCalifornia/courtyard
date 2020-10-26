@@ -4,7 +4,8 @@ card:
   img: null
   menu_label: 'The label'
   menu_type: 'cascading'
-  menu_default_option: 'Select your case type'
+  menu_default_option: 'Parent options'
+  menu_default_child_option: 'Child options'
   menu_items:
     - name: "Choice #1"
       items:

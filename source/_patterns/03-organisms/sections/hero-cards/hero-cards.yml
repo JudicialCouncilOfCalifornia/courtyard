@@ -68,7 +68,7 @@ hero_cards:
               - name: "1- Additional Sections"
                 url: "#"
           - name: "Choice #2"
-            default_option: "Choose something to do"
+            default_option: "Choose something else to do"
             items:
               - name: "2- Who sent me these papers?"
                 url: "#"

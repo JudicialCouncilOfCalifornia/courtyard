@@ -8,8 +8,9 @@
     {% include '@molecules/navigation/cascading-jump-menu/cascading-jump-menu.twig' with {
       cascading_jump_menu: {
         label: card.menu_label,
-        items: card.menu_items,
-        default_option: card.menu_default_option
+        groups: card.menu_items,
+        default_option: card.menu_default_option,
+        default_child_option: card.menu_default_child_option
       }
     } %}
   {% else %}

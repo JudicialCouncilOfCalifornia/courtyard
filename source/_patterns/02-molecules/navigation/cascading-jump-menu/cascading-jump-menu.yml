@@ -1,7 +1,8 @@
 cascading_jump_menu:
   label: "Common Questions"
   default_option: "Select your case type"
-  items:
+  default_child_option: "Select your parent case type!"
+  groups:
     - name: "Choice #1"
       items:
         - name: "1- Who sent me these papers?"

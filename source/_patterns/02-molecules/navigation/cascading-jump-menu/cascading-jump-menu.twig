@@ -1,28 +1,34 @@
-{% set default_option = cascading_jump_menu.default_option|default('Action you want to do') %}
+{% set default_option = cascading_jump_menu.default_option|default('Choose action') %}
+{% set default_child_option = cascading_jump_menu.default_child_option|default('Choose case type') %}
 
 {% set classes = [
   'jcc-cascading-jump-menu',
 ]|merge(cascading_jump_menu.classes|default([''])) %}
 
-{% if cascading_jump_menu.items|length > 0 %}
+{% if cascading_jump_menu.groups|length > 0 %}
   {# Create json for the javascript that creates/manages the 2 dropdowns #}
-  {% set json = [] %}
-  {% for group in cascading_jump_menu.items %}
-    {% set group_items = [] %}
-    {% for group_item in group.items %}
-      {% set group_items = group_items|merge([{
-        name: group_item.name,
-        url: group_item.url,
+  {% set groups = [] %}
+  {% for group in cascading_jump_menu.groups %}
+    {% set child_items = [] %}
+    {% for child_item in group.items %}
+      {% set child_items = child_items|merge([{
+        name: child_item.name,
+        url: child_item.url,
       }]) %}
     {% endfor %}
 
-    {% set json = json|merge({
+    {% set groups = groups|merge({
       (group.name): {
-        default_option: group.default_option|default('Action you want to do'),
-        items: group_items,
+        default_option: group.default_option|default(default_child_option),
+        items: child_items,
       }
     }) %}
   {% endfor %}
+  {% set json = {
+    default_option: default_option,
+    default_child_option: default_child_option,
+    groups: groups
+   } %}
 
 
   <div class="{{ classes|join(' ')|trim }}">
@@ -33,12 +39,13 @@
 
       <select class="usa-select jcc-cascading-jump-menu__parent">
         <option value="">{{ default_option }}</option>
-        {% for group in cascading_jump_menu.items %}
+        {% for group in cascading_jump_menu.groups %}
           <option>{{ group.name }}</option>
         {% endfor %}
       </select>
 
       <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled">
+        <option value="">{{ default_child_option }}</option>
       </select>
     </div>
 
