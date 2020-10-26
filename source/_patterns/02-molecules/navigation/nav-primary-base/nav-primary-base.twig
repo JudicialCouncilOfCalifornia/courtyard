@@ -36,7 +36,13 @@
                                     {% for child in group %}
                                         <li class="usa-nav__submenu-item">
                                             {% if child.links %}
-                                                <span class="usa-nav__submenu_label">{{ child.text }}</span>
+                                                {% if child.href %}
+                                                    <a class="usa-nav__submenu_label" href="{{ child.href }}">
+                                                        <span>{{ child.text }}</span>
+                                                    </a>
+                                                {% else %}
+                                                    <span class="usa-nav__submenu_label">{{ child.text }}</span>
+                                                {% endif %}
                                                 <ul class="usa-nav__submenu-list">
                                                     {% for sub_child in child.links %}
                                                         <li class="usa-nav__submenu-item">
