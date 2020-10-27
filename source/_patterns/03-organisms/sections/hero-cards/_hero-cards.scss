@@ -11,6 +11,12 @@
     }
   }
 
+  .jcc-hero--has-two-columns-threequarter {
+    @include at-media(desktop) {
+      padding-bottom: 12rem;
+    }
+  }
+
   .jcc-hero__title {
     @include u-margin-top(0);
   }
