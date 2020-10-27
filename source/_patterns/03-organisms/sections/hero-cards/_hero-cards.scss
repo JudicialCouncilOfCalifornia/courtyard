@@ -1,9 +1,13 @@
 .jcc-hero--cards {
   .jcc-hero {
     @include u-bg("primary-dark");
+  }
 
-    @include at-media(desktop) {
-      padding-bottom: 12rem;
+  .jcc-hero--has-banner-image-half {
+    .jcc-hero__container {
+      @include at-media(desktop) {
+        padding-bottom: 12rem;
+      }
     }
   }
 

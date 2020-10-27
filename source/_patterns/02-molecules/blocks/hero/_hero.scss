@@ -147,27 +147,24 @@
     $col-width: (get-uswds-value(width, desktop) - 8rem) / 3;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(
-        0,
-        $col-width
-      ) minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
+      minmax(0, 1fr);
     grid-template-areas: "out-left col-one col-two col-three out-right";
   }
 
   @include at-media(desktop-lg) {
     $col-width: (get-uswds-value(width, desktop-lg) - 8rem) / 3;
-    grid-template-columns: minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(
-        0,
-        $col-width
-      ) minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
+      minmax(0, 1fr);
   }
 
   @include at-media(widescreen) {
     $col-width: (get-uswds-value(width, widescreen) - 8rem) / 3;
-    grid-template-columns: minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(
-        0,
-        $col-width
-      ) minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
+      minmax(0, 1fr);
   }
 
   .jcc-hero__lead,
@@ -189,6 +186,46 @@
 
   .jcc-hero__banner {
     grid-column-start: col-three;
+    grid-column-end: out-right-end;
+    // background-image: url(http://placeimg.com/700/500/nature);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 100%;
+  }
+}
+
+.jcc-hero--has-banner-image-half {
+  @include at-media(desktop) {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 0 repeat(2, minmax(0, 50%)) 0;
+    grid-template-areas: "out-left col-one col-two out-right";
+  }
+
+  @include at-media(widescreen) {
+    $col-width: (get-uswds-value(width, widescreen) - 6rem) / 2;
+    grid-template-columns: minmax(0, 1fr) repeat(2, minmax(0, $col-width)) minmax(0, 1fr);
+  }
+
+  .jcc-hero__lead,
+  .jcc-hero__body,
+  .jcc-hero__body > *,
+  .jcc-hero__column-left,
+  .jcc-hero__column-right {
+    @include u-maxw(full);
+  }
+
+  .jcc-hero__container {
+    @include at-media(desktop) {
+      @include u-padding-left(0);
+      @include u-padding-right(0);
+      grid-column-start: col-one;
+      grid-column-end: col-one;
+    }
+  }
+
+  .jcc-hero__banner {
+    grid-column-start: col-two;
     grid-column-end: out-right-end;
     // background-image: url(http://placeimg.com/700/500/nature);
     background-repeat: no-repeat;
