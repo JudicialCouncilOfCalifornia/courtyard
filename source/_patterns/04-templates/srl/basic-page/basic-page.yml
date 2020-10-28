@@ -7,7 +7,7 @@ basic_page:
       logo_text:
         title: 'Judicial Branch of California'
         url: '#'
-      logo: 'jcc-logo-branch-text-white.svg'
+      logo: '../../images/logos/jcc-logo-branch-text-white.svg'
     title: 'Self-Help Center'
     logo:
       mobile: 'jcc-logo-self-help-short-white.svg'
@@ -153,7 +153,7 @@ basic_page:
       logo_text:
         title: 'Judicial Branch of California'
         url: '#'
-      logo: 'jcc-logo-branch-text-white.svg'
+      logo: '../../images/logos/jcc-logo-branch-text-white.svg'
       secondary_nav:
         items:
           - name: "Contact Us"
