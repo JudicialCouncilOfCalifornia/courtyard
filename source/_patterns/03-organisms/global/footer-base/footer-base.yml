@@ -36,7 +36,7 @@ footer_base:
     logo_text:
       title: 'Judicial Branch of California'
       url: '#'
-    logo: 'jcc-logo-branch-text-white.svg'
+    logo: '../../images/logos/jcc-logo-branch-text-white.svg'
     secondary_nav:
       items:
         - name: "Contact Us"
