@@ -123,6 +123,10 @@
     }
   }
 
+  &.usa-header {
+    z-index: unset;
+  }
+
   // basic
   &.usa-header--basic .usa-current::after,
   &.usa-header--basic .usa-nav__link:hover::after,
