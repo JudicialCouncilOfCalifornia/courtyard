@@ -7,7 +7,12 @@
   tile.embellishment ? 'jcc-tile--embellishment jcc-tile--embellishment--' ~ tile.embellishment,
 ]|merge(tile.classes|default([''])) %}
 
-<div class="{{ classes|join(' ')|trim }}">
+{% if tile.url %}
+  <a class="{{ classes|join(' ')|trim }}" href="{{ tile.url }}">
+{% else %}
+  <div class="{{ classes|join(' ')|trim }}">
+{% endif %}
+
   <div class="jcc-tile__content">
     {% if tile.icon %}
       <div class="jcc-tile__icon">
@@ -20,9 +25,7 @@
     {% endif %}
 
     {% if tile.title %}
-      <{{ tag }} class="jcc-tile__title">
-        {% if tile.url %}<a href="{{ tile.url }}"{{ url_attributes }}>{% endif %}{{ tile.title }}{% if tile.url %}</a>{% endif %}
-      </{{ tag }}>
+      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
     {% endif %}
 
     {% if tile.link_label %}
@@ -37,4 +40,9 @@
   {% if tile.embellishment != 'none' %}
     <div class="jcc-tile__embellishment"></div>
   {% endif %}
-</div>
+
+{% if tile.url %}
+  </a>
+{% else %}
+  </div>
+{% endif %}
