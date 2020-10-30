@@ -98,6 +98,7 @@
 
 .jcc-tile__brow {
   @include u-margin-bottom(1.5);
+  @include u-color(base-darkest);
 }
 
 .jcc-tile__title {
@@ -108,6 +109,7 @@
 
 .jcc-tile__body {
   @include u-font(body, 4);
+  @include u-color(base-darkest);
   margin-top: 1em;
 }
 
