@@ -40,6 +40,7 @@
     .jcc-tile {
       @include u-display(flex);
       @include u-flex-direction(row);
+      @include u-padding-x(2);
 
       &.jcc-tile--with-button {
         @include u-flex-direction(column);
@@ -52,8 +53,8 @@
 
       @include at-media(desktop) {
         @include u-flex-direction(column);
-        @include u-width(card);
-        @include u-height(card);
+        width: 11rem;
+        height: 11rem;
         @include u-text-align(center);
         @include u-margin-x(3);
         @include u-position(relative);
@@ -95,7 +96,6 @@
         .jcc-tile__title {
           order: 1;
           @include u-padding-bottom(1);
-          @include u-text-align(left);
           a {
             @include u-color(ink);
           }
@@ -119,10 +119,11 @@
 
       &__title {
         @include u-padding-left(4);
+        @include u-line-height(body, 2);
 
         @include at-media(desktop) {
           @include u-padding-left(0);
-          @include u-font-size(heading, 5);
+          @include u-font(body, lg);
         }
       }
     }
@@ -138,7 +139,7 @@
         box-shadow: none;
 
         &__title {
-          @include u-font-size(body, 5);
+          @include u-font(body, lg);
 
           a {
             @include u-color(ink);
