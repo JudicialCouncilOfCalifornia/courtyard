@@ -4,17 +4,17 @@ social_links:
         name: "youtube"
         title: "Youtube"
         decorative: false
-      title: "Youtube"
+      title: "Youtube social media channel"
       url: "#"
     - icon:
         name: "facebook2"
         title: "Facebook"
         decorative: false
-      title: "Facebook"
+      title: "Facebook social media channel"
       url: "#"
     - icon:
         name: "twitter"
         title: "Twitter"
         decorative: false
-      title: "Twitter"
+      title: "Twitter social media channel"
       url: "#"
