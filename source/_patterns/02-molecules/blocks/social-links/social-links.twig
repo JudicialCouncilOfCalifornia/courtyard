@@ -1,17 +1,17 @@
 {% set classes = [
-    'jcc-social-links',
+  'jcc-social-links',
 ]|merge(social_links.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
-    {% for item in social_links.items %}
+  {% for item in social_links.items %}
 
     {% if item.url %}
-    <a href="{{ item.url }}" class="jcc-social-links__item">
-    {% if item.icon %}
-        {% include '@atoms/icons/icon.twig' with  { icon: item.icon } %}
-    {% endif %}
-    </a>
+      <a href="{{ item.url }}" class="jcc-social-links__item" aria-label="{{ item.title }}">
+        {% if item.icon %}
+          {% include '@atoms/icons/icon.twig' with  { icon: item.icon } %}
+        {% endif %}
+      </a>
     {% endif %}
 
-    {% endfor %}
+  {% endfor %}
 </div>
