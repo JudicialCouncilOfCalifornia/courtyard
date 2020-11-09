@@ -119,11 +119,12 @@
 
       &__title {
         @include u-padding-left(4);
+        @include u-font(body, lg);
+        @include u-text(normal);
         @include u-line-height(body, 2);
 
         @include at-media(desktop) {
           @include u-padding-left(0);
-          @include u-font(body, lg);
         }
       }
     }
@@ -140,6 +141,7 @@
 
         &__title {
           @include u-font(body, lg);
+          @include u-text(normal);
 
           a {
             @include u-color(ink);
