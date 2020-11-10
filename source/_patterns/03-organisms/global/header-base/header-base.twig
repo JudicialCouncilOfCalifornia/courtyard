@@ -26,13 +26,13 @@
         </a>
       </div>
 
-      <button class="usa-menu-btn usa-button--unstyled" aria-label="{{ header_base.menu_icon.title }}">
+      <button class="usa-menu-btn usa-button--unstyled" aria-label="{{ header_base.menu_icon.title|default('Main navigation') }}">
         {% include '@atoms/icons/icon.twig' with {
           icon: header_base.menu_icon
         } %}
       </button>
 
-      <button class="usa-nav__close" aria-label="{{ header_base.close_icon.title }}">
+      <button class="usa-nav__close" aria-label="{{ header_base.close_icon.title|default('Close main navigation') }}">
         {% include '@atoms/icons/icon.twig' with {
           icon: header_base.close_icon
         } %}

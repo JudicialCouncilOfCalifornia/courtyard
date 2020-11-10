@@ -77,7 +77,6 @@ header_base:
       form_action: "/search"
       search_input:
         form_input_name: "keyword"
-        title: "Search this site"
     accordion_button:
       id: 'extended-nav-section-two'
       icon:
