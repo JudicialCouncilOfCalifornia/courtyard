@@ -10,11 +10,11 @@ header_base:
   logo: ''
   menu_icon:
     name: 'menu'
-    title: "Menu"
+    title: "Main navigation"
     decorative: false
   close_icon:
     name: 'close'
-    title: "close"
+    title: "Close main navigation"
     decorative: false
   secondary_nav:
     items:
@@ -77,6 +77,7 @@ header_base:
       form_action: "/search"
       search_input:
         form_input_name: "keyword"
+        title: "Search this site"
     accordion_button:
       id: 'extended-nav-section-two'
       icon:
