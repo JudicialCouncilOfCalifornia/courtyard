@@ -134,7 +134,7 @@
   @include u-margin-bottom("2");
 
   @include at-media("tablet-lg") {
-    [data-quantity="3"] & {
+    [data-quantity="3"] > & {
       @include grid-col(4);
     }
   }
