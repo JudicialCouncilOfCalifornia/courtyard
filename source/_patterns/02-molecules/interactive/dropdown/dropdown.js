@@ -1,9 +1,9 @@
 import easydropdown from "easydropdown";
 
-const selectElements = document.querySelectorAll(".jcc-dropdown select:not([multiple])");
+const selectElements = $(".jcc-dropdown select:not([multiple])");
 
 if (selectElements) {
-  selectElements.forEach(select => {
+  $(selectElements).each(function(idx, select) {
     const edd = easydropdown(select);
   });
 }
