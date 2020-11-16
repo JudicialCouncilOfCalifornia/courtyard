@@ -1,7 +1,7 @@
 require("slick-carousel");
 
-const initControls = slider => {
-  $(slider).on("keydown", e => {
+function initControls(slider) {
+  $(slider).on("keydown", function(e) {
     switch (e.which) {
       case 37: // left
         $(e.currentTarget).slick("slickPrev");
@@ -18,7 +18,7 @@ const initControls = slider => {
   $(slider)
     .siblings(".jcc-timeline__scroller--left")
     .hide();
-  $(slider).on("afterChange", (e, slick, direction) => {
+  $(slider).on("afterChange", function(e, slick, direction) {
     const sliderPerView = Math.ceil(slick.listWidth / slick.slideWidth);
     if (direction === 0) {
       $(e.currentTarget)
@@ -44,9 +44,9 @@ const initControls = slider => {
         .show();
     }
   });
-};
+}
 
-const settings = slider => {
+function settings(slider) {
   const defaultSettings = {
     infinite: false,
     slidesToShow: 4,
@@ -68,9 +68,9 @@ const settings = slider => {
     ]
   };
   return defaultSettings;
-};
+}
 
-$(".slider").each((_, slider) => {
+$(".slider").each(function(_, slider) {
   if (slider.children.length > 4) {
     $(slider).slick(settings(slider));
     initControls(slider);
@@ -84,9 +84,9 @@ $(".slider").each((_, slider) => {
   }
 });
 
-$(window).on("resize", () => {
+$(window).on("resize", function() {
   if ($(window).width() > 640) {
-    $(".slider").each((_, slider) => {
+    $(".slider").each(function(_, slider) {
       if (!$(slider).hasClass("slick-initialized") && slider.children.length > 4) {
         $(slider).slick(settings(slider));
         initControls(slider);

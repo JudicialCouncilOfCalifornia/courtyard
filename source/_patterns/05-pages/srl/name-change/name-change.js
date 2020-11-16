@@ -1,4 +1,4 @@
-$(".jcc-hero__questions input").on("click", evt => {
+$(".jcc-hero__questions input").on("click", function(evt) {
   var section = $("section[data-checkbox-id='" + evt.currentTarget.id + "']");
   section.toggle();
   section.data("selected", !section.data("selected"));
@@ -11,11 +11,11 @@ $(".jcc-hero__questions input").on("click", evt => {
   }
 });
 
-$(".jcc-hero__options button").on("click", evt => {
+$(".jcc-hero__options button").on("click", function(el) {
   $(".jcc-hero__questions").hide();
   $(".jcc-hero__options").hide();
   var questions = $(".jcc-hero__questions input:checked")
-    .map((_, el) => {
+    .map(function(_, el) {
       return $(el)
         .siblings("label")
         .text();
@@ -24,7 +24,7 @@ $(".jcc-hero__options button").on("click", evt => {
     .join(", ");
   $(".jcc-hero__picked-questions").html(questions);
   var answers = $(".jcc-hero__options input:checked")
-    .map((_, el) => {
+    .map(function(_, el) {
       return $(el)
         .siblings("label")
         .text();
@@ -34,7 +34,7 @@ $(".jcc-hero__options button").on("click", evt => {
   $(".jcc-hero__answers").html(answers);
   $(".jcc-hero__results").show();
 });
-$(".jcc-hero__results button:contains('Edit')").on("click", evt => {
+$(".jcc-hero__results button:contains('Edit')").on("click", function() {
   $(".jcc-hero__results").hide();
   $(".jcc-hero__questions").show();
   $(".jcc-hero__options").show();

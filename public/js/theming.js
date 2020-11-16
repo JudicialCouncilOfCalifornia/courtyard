@@ -1,9 +1,8 @@
-var themeSwitcher = document.querySelector(".jcc-themebar__switcher");
-
+var themeSwitcher = $(".jcc-themebar__switcher");
 var theme = localStorage["theme"] || "srl";
 
-var toggle = (selector, display = null) => {
-  Array.from(document.getElementsByClassName(selector)).forEach(element => {
+var toggle = function(selector, display) {
+  $(selector).each(function(idx, element) {
     if (display) {
       element.style.display = display;
     } else {
@@ -13,7 +12,7 @@ var toggle = (selector, display = null) => {
 };
 
 if (themeSwitcher) {
-  themeSwitcher.addEventListener("change", function() {
+  $(themeSwitcher).change(function() {
     var themeName = this.value;
     console.log("name: " + themeName);
     document.body.className = "";
