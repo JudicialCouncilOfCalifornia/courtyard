@@ -2,7 +2,8 @@ import A11yDialog from "a11y-dialog";
 
 var modals = $(".jcc-modal");
 
-if (modals) {
+if (modals.length > 0) {
+  console.log(modals);
   // import dialogPolyfill from "dialog-polyfill";
 
   // Get the dialog element (with the accessor method you want)
@@ -10,6 +11,11 @@ if (modals) {
 
   $(".jcc-modal").each(function() {
     new A11yDialog(this);
+  });
+
+  // Always position modal overlays last to avoid render conflicts esp for Edge
+  $("document").ready(function() {
+    $(".jcc-modal--overlay").appendTo("body");
   });
 
   // WORKAROUND: Suppress close function for IE 11 if multiple modals without background overlays are displayed
@@ -23,8 +29,7 @@ if (modals) {
     }
   }
 
-  // Modal overlay resets on close
-  $(".jcc-modal__close-reset").on("click tap", function() {
+  function resetModals() {
     // Prevent sibling modals from appearing on close action ... limitation on certain browsers
     if (
       /Fire/.test(navigator.userAgent) ||
@@ -40,11 +45,16 @@ if (modals) {
     $(".jcc-modal input[type='text'], .jcc-modal input[type='email']").each(function() {
       this.value = "";
     });
+  }
+
+  // Modal overlay resets on close
+  $(".jcc-modal__close-reset").on("click tap", function() {
+    resetModals();
   });
 
-  // Always position modal overlays last to avoid render conflicts esp for Edge
-  $("document").ready(function() {
-    $(".jcc-modal--overlay").appendTo("body");
+  // Keyboard interaction support
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) resetModals(); // esc
   });
 
   // var dialog = document.querySelector("dialog");

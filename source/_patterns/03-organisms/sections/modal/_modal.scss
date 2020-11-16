@@ -9,9 +9,14 @@
 
 .jcc-modal {
   &--overlay {
-    @include u-position(absolute);
+    @include u-position(fixed);
     @include u-z(top);
     width: 100%;
+    top: 30%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @include u-position(absolute);
+    }
   }
 }
 
