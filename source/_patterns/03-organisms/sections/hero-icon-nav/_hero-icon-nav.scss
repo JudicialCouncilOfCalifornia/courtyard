@@ -96,9 +96,6 @@
         .jcc-tile__title {
           order: 1;
           @include u-padding-bottom(1);
-          a {
-            @include u-color(ink);
-          }
         }
         button {
           order: 3;
@@ -121,7 +118,8 @@
         @include u-padding-left(4);
         @include u-font(body, lg);
         @include u-text(normal);
-        @include u-line-height(body, 2);
+        @include u-text-decoration(no-underline);
+        @include u-line-height(body, 1);
 
         @include at-media(desktop) {
           @include u-padding-left(0);
@@ -142,15 +140,7 @@
         &__title {
           @include u-font(body, lg);
           @include u-text(normal);
-
-          a {
-            @include u-color(ink);
-            @include u-text-decoration(underline);
-
-            &:hover {
-              @include u-color(accent-warm);
-            }
-          }
+          @include u-text-decoration(underline);
         }
       }
     }

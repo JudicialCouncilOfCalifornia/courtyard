@@ -92,14 +92,11 @@
 
         &__title {
           @include u-font-size(body, 5);
+          @include u-color(base-lightest);
+          @include u-text-decoration(underline);
 
-          a {
-            @include u-color(base-lightest);
-            @include u-text-decoration(underline);
-
-            &:hover {
-              @include u-color(accent-warm);
-            }
+          &:hover {
+            @include u-color(accent-warm);
           }
         }
       }

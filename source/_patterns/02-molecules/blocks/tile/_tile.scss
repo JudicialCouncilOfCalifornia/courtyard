@@ -38,8 +38,9 @@
     }
 
     .jcc-tile__title {
-      @include u-font(body, 8);
+      @include u-font-size("heading", 9);
       @include u-margin-bottom(2);
+      @include u-font-weight(normal);
     }
 
     .jcc-tile__embellishment {
@@ -102,9 +103,10 @@
 }
 
 .jcc-tile__title {
-  @include responsive-h5($responsive-font-family: heading);
+  @include u-font-size("heading", 9);
   @include u-line-height("heading", 3);
   @include u-color(primary-dark);
+  @include u-font-weight(normal);
 }
 
 .jcc-tile__body {

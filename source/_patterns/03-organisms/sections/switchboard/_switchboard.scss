@@ -20,6 +20,11 @@
   .jcc-switchboard__body {
     @include u-margin-bottom(4);
   }
+
+  .jcc-tile__title {
+    @include u-font-family(serif);
+    @include u-font-size("heading", 10);
+  }
 }
 
 .jcc-switchboard--has-background-color--light,

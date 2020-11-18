@@ -57,6 +57,7 @@
       }
 
       &__icon {
+        @include u-display(inline-block);
         @include at-media(desktop) {
           @include u-bg(base-lightest);
           @include u-radius(pill);
@@ -73,9 +74,13 @@
       }
 
       &__title {
+        @include u-display(inline-block);
+        @include u-position(relative);
+        @include u-bottom(3);
         @include u-padding-left(4);
 
         @include at-media(desktop) {
+          @include u-bottom(1);
           @include u-padding-left(2);
         }
 
@@ -118,18 +123,16 @@
           @include u-font-size(body, 5);
         }
 
-        a {
-          @include at-media(desktop) {
-            @include u-color(base-lightest);
-            @include u-text-decoration(underline);
-            @include u-font-family(code);
-            @include u-font-size(code, sm);
-          }
+        @include at-media(desktop) {
+          @include u-color(base-lightest);
+          @include u-text-decoration(underline);
+          @include u-font-family(code);
+          @include u-font-size(code, sm);
+        }
 
-          &:hover {
-            @include at-media(desktop) {
-              @include u-color(accent-warm);
-            }
+        &:hover {
+          @include at-media(desktop) {
+            @include u-color(accent-warm);
           }
         }
       }
