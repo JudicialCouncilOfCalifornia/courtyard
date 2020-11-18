@@ -24,6 +24,12 @@
 
   .jcc-tiles__item {
     @include u-margin-bottom(3);
+
+    .jcc-tile {
+      &__title {
+        @include u-color(primary-vivid);
+      }
+    }
   }
 }
 
