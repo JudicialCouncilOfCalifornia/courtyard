@@ -32,10 +32,6 @@
           @include u-border(primary);
           transition: 0.4s border;
         }
-        .jcc-tile__title a {
-          @include u-color(primary);
-          @include u-font(sans, 9);
-        }
         .jcc-tile__brow {
           text-transform: uppercase;
         }
@@ -46,6 +42,11 @@
         @include at-media(desktop) {
           @include grid-col(6);
           width: 48%;
+        }
+
+        &__title {
+          @include u-color(primary);
+          @include u-font(sans, 9);
         }
       }
       &.tile-box {

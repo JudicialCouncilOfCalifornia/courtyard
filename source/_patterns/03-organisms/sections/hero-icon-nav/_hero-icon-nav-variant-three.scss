@@ -48,7 +48,9 @@
       }
 
       &__icon {
+        @include u-display(inline-block);
         @include at-media(desktop) {
+          @include u-display(block);
           @include u-bg(base-lightest);
           @include u-radius(pill);
           @include u-width(7);
@@ -66,26 +68,32 @@
       }
 
       &__title {
+        @include u-display(inline-block);
+        @include u-position(relative);
+        @include u-bottom(2);
         @include u-padding-left(4);
 
         @include at-media(desktop) {
+          @include u-display(block);
+          @include u-position(relative);
+          @include u-bottom(0);
           @include u-padding-left(0);
           @include u-font-size(heading, 5);
         }
 
-        a {
-          @include at-media(desktop) {
-            @include u-color(base-lightest);
-            @include u-font-family(code);
-            @include u-font-size(code, md);
-            @include u-text-decoration(underline);
-          }
+        @include at-media(desktop) {
+          @include u-color(base-lightest);
+          @include u-font-family(code);
+          @include u-font-size(code, md);
+          @include u-text-decoration(underline);
+        }
+      }
 
-          &:hover {
-            @include at-media(desktop) {
-              @include u-color(ink);
-              @include u-text-decoration(no-underline);
-            }
+      &:hover {
+        h3 {
+          @include at-media(desktop) {
+            @include u-color(ink);
+            @include u-text-decoration(no-underline);
           }
         }
       }
@@ -111,18 +119,16 @@
           @include u-font-size(body, 5);
         }
 
-        a {
-          @include at-media(desktop) {
-            @include u-color(base-lightest);
-            @include u-text-decoration(underline);
-            @include u-font-family(code);
-            @include u-font-size(code, sm);
-          }
+        @include at-media(desktop) {
+          @include u-color(base-lightest);
+          @include u-text-decoration(underline);
+          @include u-font-family(code);
+          @include u-font-size(code, sm);
+        }
 
-          &:hover {
-            @include at-media(desktop) {
-              @include u-color(accent-warm);
-            }
+        &:hover {
+          @include at-media(desktop) {
+            @include u-color(accent-warm);
           }
         }
       }
