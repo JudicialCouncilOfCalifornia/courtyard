@@ -1,10 +1,6 @@
 .jcc-hero {
   @include u-position(relative);
   @include u-bg(primary-lighter);
-
-  .jcc-breadcrumbs-nav {
-    @include u-display(flex);
-  }
 }
 
 .jcc-hero--viewport-height {
@@ -77,6 +73,16 @@
   @include u-padding-bottom(6);
   @include u-line-height("body", 6);
   @include u-position(relative);
+
+  @if $srl {
+    @include at-media-max(tablet-lg) {
+      @include u-padding-top(4);
+    }
+
+    @include at-media(tablet-lg) {
+      @include u-padding-top(6);
+    }
+  }
 }
 
 .jcc-hero__brow {

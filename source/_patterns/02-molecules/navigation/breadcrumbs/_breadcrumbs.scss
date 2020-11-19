@@ -5,6 +5,21 @@
 
     .usa-button--back {
       @include u-margin-right(3);
+      flex-basis: 0;
+    }
+
+    .jcc-breadcrumb__item {
+      font-size: 18px;
+
+      @include at-media(tablet-lg) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &.hide-mobile {
+    @include at-media-max(tablet-lg) {
+      display: none;
     }
   }
 }
@@ -12,28 +27,36 @@
 .jcc-breadcrumbs {
   @include add-list-reset;
   @include u-text(base-dark);
+  @include u-line-height("sans", 2);
 }
 
 .jcc-breadcrumb__item {
-  @include responsive-lead();
   @include u-padding-right(1);
   @include u-display(inline);
+  font-size: 1.06rem;
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include u-display(inline-block);
+    content: "/";
+    margin-left: 0.6275rem;
+  }
+
   @if $trial {
-    font-size: 1.06rem !important; // !important not supported by mixin
     @include u-color(primary-dark);
   }
 
   a {
     @include u-text(info-darker);
     text-decoration: none;
+
     @if $trial {
       @include u-color(blue-50v);
-    }
-
-    &:after {
-      @include u-display(inline-block);
-      content: "/";
-      margin-left: 0.6275rem;
     }
   }
 }

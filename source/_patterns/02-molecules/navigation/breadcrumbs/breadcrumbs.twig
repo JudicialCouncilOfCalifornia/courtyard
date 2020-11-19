@@ -1,6 +1,7 @@
 {% set classes = [
   'jcc-breadcrumbs-nav',
   breadcrumbs.show_back_button ? 'has-back-button',
+  breadcrumbs.show_mobile ? 'show-mobile' : 'hide-mobile',
 ]|merge(breadcrumbs.classes|default([''])) %}
 
 {% if breadcrumbs.items|length > 0 %}
