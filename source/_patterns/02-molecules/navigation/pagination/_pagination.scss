@@ -42,7 +42,7 @@
 
   li.pager__item.jcc-pagination__ellipsis {
     @if $trial {
-      @include jcc-text-color(primary-blue-vivid-dark);
+      @include u-color(blue-50v);
     }
   }
 
@@ -68,12 +68,12 @@
     }
     @include u-font-weight("bold");
     @if $trial {
-      @include jcc-text-color(primary-blue-vivid-dark);
+      @include u-color(blue-50v);
     }
 
     &.is-active {
       @if $trial {
-        @include u-bg($jcc-primary-blue-vivid-dark);
+        @include u-bg(blue-50v);
       }
     }
 

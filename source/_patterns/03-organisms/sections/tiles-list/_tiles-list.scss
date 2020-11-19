@@ -114,7 +114,7 @@
           @include u-text-decoration(no-underline);
           @include light-background-link();
           @if $trial {
-            @include jcc-text-color(primary-blue-vivid-dark);
+            @include u-color(blue-50v);
           }
           &:hover {
             @include u-text-decoration(underline);

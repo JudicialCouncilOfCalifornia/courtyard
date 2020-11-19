@@ -84,12 +84,10 @@
   @include t-copy();
   @include u-text(uppercase);
   @include u-text(ls-3);
-  @if $trial {
-    @include jcc-text-color(accent-warm-green);
+  @include u-color(secondary);
 
-    a {
-      @include jcc-text-color(accent-warm-green, !important);
-    }
+  a {
+    @include u-color(secondary, !important);
   }
   @include u-margin-top(3);
 }
@@ -109,7 +107,7 @@
   @include u-line-height("heading", 2);
   @include u-text(primary-darker);
   @if $trial {
-    @include jcc-text-color(primary-blue-dark);
+    @include u-color(primary-dark);
   }
   @include u-margin-y(3);
 }

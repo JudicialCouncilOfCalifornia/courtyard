@@ -8,7 +8,7 @@
 
     .jcc-link-list__icon {
       .icon {
-        @include jcc-text-color(primary-blue);
+        @include u-color(primary);
       }
     }
   }
