@@ -105,7 +105,7 @@ nav.jcc-primary-nav {
       @include at-media(desktop) {
         @include u-color(primary);
         @if $trial {
-          @include jcc-text-color(primary-blue-vivid-dark);
+          @include u-color(blue-50v);
         }
       }
       @include u-color("white");

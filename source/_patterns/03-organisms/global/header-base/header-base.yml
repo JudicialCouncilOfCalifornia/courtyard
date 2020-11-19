@@ -10,11 +10,9 @@ header_base:
   logo: ''
   menu_icon:
     name: 'menu'
-    title: "Main navigation"
     decorative: false
   close_icon:
     name: 'close'
-    title: "Close main navigation"
     decorative: false
   secondary_nav:
     items:

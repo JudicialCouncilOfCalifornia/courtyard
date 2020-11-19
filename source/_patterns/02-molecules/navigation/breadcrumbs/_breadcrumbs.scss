@@ -20,14 +20,14 @@
   @include u-display(inline);
   @if $trial {
     font-size: 1.06rem !important; // !important not supported by mixin
-    @include jcc-text-color(primary-blue-dark);
+    @include u-color(primary-dark);
   }
 
   a {
     @include u-text(info-darker);
     text-decoration: none;
     @if $trial {
-      @include jcc-text-color(primary-blue-vivid-dark);
+      @include u-color(blue-50v);
     }
 
     &:after {

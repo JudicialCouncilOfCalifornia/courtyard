@@ -26,13 +26,13 @@
         </a>
       </div>
 
-      <button class="usa-menu-btn usa-button--unstyled" aria-label="{{ header_base.menu_icon.title|default('Main navigation') }}">
+      <button class="usa-menu-btn usa-button--unstyled" aria-label="Open main navigation for mobile devices">
         {% include '@atoms/icons/icon.twig' with {
           icon: header_base.menu_icon
         } %}
       </button>
 
-      <button class="usa-nav__close" aria-label="{{ header_base.close_icon.title|default('Close main navigation') }}">
+      <button class="usa-nav__close" aria-label="Close main navigation for mobile devices">
         {% include '@atoms/icons/icon.twig' with {
           icon: header_base.close_icon
         } %}
@@ -40,7 +40,7 @@
 
     </div>
 
-    <nav aria-label="Primary navigation" class="usa-nav">
+    <nav aria-label="Main navigation" class="usa-nav">
       
       {% if header_base.height_variant == 'extended' %}<div class="usa-nav__inner">{% endif %}
       
