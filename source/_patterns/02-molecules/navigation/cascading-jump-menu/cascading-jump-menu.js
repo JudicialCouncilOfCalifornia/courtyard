@@ -10,8 +10,7 @@ $(".jcc-cascading-jump-menu").each(function() {
   // Default 'child' option to use when no 'parent' option selected
   const child_default_option = "<option value=''>" + data.default_child_option + "</option>";
 
-  $parent.on("change", function() {
-    const groupName = $(this).val();
+  function updateCascade(groupName) {
     let options = "";
     if (groupName) {
       const groupItems = data.groups[groupName].items;
@@ -34,6 +33,16 @@ $(".jcc-cascading-jump-menu").each(function() {
     } else {
       $child.attr("disabled", "disabled");
     }
+  }
+
+  $parent.on("change", function() {
+    const groupName = $(this).val();
+    updateCascade(groupName);
+  });
+
+  $(window).on("pageshow", function() {
+    const groupName = $parent.val();
+    updateCascade(groupName);
   });
 });
 
