@@ -8,10 +8,10 @@
 {% if jump_menu.items|length > 0 %}
   <div class="{{ classes|join(' ')|trim }}">
     {% if jump_menu.label %}
-      <label class="usa-label sr-only" for="options">{{ jump_menu.label }}</label>
+      <label class="usa-label sr-only" for="{{ jump_menu.id }}-options">{{ jump_menu.label }}</label>
     {% endif %}
 
-    <select class="usa-select" name="options" id="options">
+    <select class="usa-select" name="{{ jump_menu.id }}-options" id="{{ jump_menu.id }}-options">
       <option value>{{ default_option }}</option>
       {% for item in jump_menu.items %}
         {% if item.name and item.url %}
@@ -20,6 +20,6 @@
       {% endfor %}
     </select>
 
-    <button class="usa-button usa-button--accent-warm">Go</button>
+    <button class="usa-button usa-button--accent-warm {{ jump_menu.id }}-submit">Go</button>
   </div>
 {% endif %}

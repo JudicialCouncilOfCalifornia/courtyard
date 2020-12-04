@@ -7,6 +7,7 @@
   {% if card.menu_type == 'cascading' %}
     {% include '@molecules/navigation/cascading-jump-menu/cascading-jump-menu.twig' with {
       cascading_jump_menu: {
+        id: card.id,
         label: card.menu_label,
         groups: card.menu_items,
         default_option: card.menu_default_option,
@@ -16,6 +17,7 @@
   {% else %}
     {% include '@molecules/navigation/jump-menu/jump-menu.twig' with {
       jump_menu: {
+        id: card.id,
         label: card.menu_label,
         items: card.menu_items,
         default_option: card.menu_default_option

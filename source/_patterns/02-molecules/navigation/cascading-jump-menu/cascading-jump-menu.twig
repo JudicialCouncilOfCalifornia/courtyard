@@ -34,22 +34,22 @@
   <div class="{{ classes|join(' ')|trim }}">
     <div class="jcc-cascading-jump-menu__form">
       {% if cascading_jump_menu.label %}
-        <label class="usa-label sr-only" for="options">{{ cascading_jump_menu.label }}</label>
+        <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-parent-options">{{ cascading_jump_menu.label }}</label>
       {% endif %}
 
-      <select class="usa-select jcc-cascading-jump-menu__parent">
+      <select class="usa-select jcc-cascading-jump-menu__parent" name="{{ cascading_jump_menu.id }}-parent-options" id="{{ cascading_jump_menu.id }}-parent-options">
         <option value="">{{ default_option }}</option>
         {% for group in cascading_jump_menu.groups %}
           <option>{{ group.name }}</option>
         {% endfor %}
       </select>
 
-      <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled">
+      <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled" name="{{ cascading_jump_menu.id }}-child-options" id="{{ cascading_jump_menu.id }}-child-options">
         <option value="">{{ default_child_option }}</option>
       </select>
     </div>
 
     <input type="hidden" name="data" class="cascading-jump-menu__data" value="{{ json|json_encode|e('html') }}"/>
-    <button class="usa-button usa-button--accent-warm">Go</button>
+    <button class="usa-button usa-button--accent-warm {{ cascading_jump_menu.id }}-submit">Go</button>
   </div>
 {% endif %}
