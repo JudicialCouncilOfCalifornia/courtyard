@@ -148,27 +148,13 @@
 
 .jcc-hero--has-banner-image {
   @include at-media(desktop) {
-    $col-width: (get-uswds-value(width, desktop) - 8rem) / 3;
+    $col-width: (get-uswds-value(width, widescreen) - 8rem) / 3;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns:
       minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
       minmax(0, 1fr);
     grid-template-areas: "out-left col-one col-two col-three out-right";
-  }
-
-  @include at-media(desktop-lg) {
-    $col-width: (get-uswds-value(width, desktop-lg) - 8rem) / 3;
-    grid-template-columns:
-      minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
-      minmax(0, 1fr);
-  }
-
-  @include at-media(widescreen) {
-    $col-width: (get-uswds-value(width, widescreen) - 8rem) / 3;
-    grid-template-columns:
-      minmax(0, 1fr) minmax(0, $col-width) minmax(0, $col-width) minmax(0, $col-width)
-      minmax(0, 1fr);
   }
 
   .jcc-hero__lead,
@@ -181,6 +167,7 @@
 
   .jcc-hero__container {
     @include at-media(desktop) {
+      @include u-margin-left(0);
       @include u-padding-left(0);
       @include u-padding-right(0);
       grid-column-start: col-one;
@@ -191,7 +178,6 @@
   .jcc-hero__banner {
     grid-column-start: col-three;
     grid-column-end: out-right-end;
-    // background-image: url(http://placeimg.com/700/500/nature);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: auto 100%;
@@ -221,6 +207,7 @@
 
   .jcc-hero__container {
     @include at-media(desktop) {
+      @include u-margin-left(0);
       @include u-padding-left(0);
       @include u-padding-right(0);
       grid-column-start: col-one;

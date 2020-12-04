@@ -6,6 +6,8 @@
 # - has-one-column
 # - has-two-columns-half
 # - has-two-columns-threequarter
+# - has-banner-image
+# - has-banner-image-half
 #
 # Height variants
 # - viewport-height
