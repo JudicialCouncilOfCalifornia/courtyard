@@ -93,7 +93,6 @@
   background-size: 1.6rem;
   background-repeat: no-repeat;
   background-position: 10px 13px !important;
-  @include u-cursor("pointer");
 }
 
 .usa-alert .usa-alert__body .jcc-alert__heading {
@@ -128,6 +127,7 @@
   @include u-position("absolute");
   @include u-top(1);
   @include u-right(0);
+  @include u-cursor("pointer");
   width: 20px;
   height: 20px;
   margin-top: 3px;
