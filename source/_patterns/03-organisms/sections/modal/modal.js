@@ -41,7 +41,7 @@ if (modals.length > 0) {
     }
     // Clear alert messages
     $(
-      ".jcc-modal .usa-alert[role='alert'], .jcc-modal .usa-alert[role='alert'], .jcc-modal .form-item--error-message"
+      ".jcc-modal .usa-alert[role='alert'], .jcc-modal .usa-alert[role='status'], .jcc-modal .form-item--error-message"
     ).remove();
     // Reset forms
     $(".jcc-modal input[type='text'], .jcc-modal input[type='email']").each(function() {
