@@ -40,7 +40,7 @@ if (modals.length > 0) {
       $(".jcc-modal--overlay").attr("aria-hidden", "true");
     }
     // Clear alert messages
-    $(".jcc-modal .usa-alert, .jcc-modal .form-item--error-message").remove();
+    $(".jcc-modal .usa-alert[role='alert'], .jcc-modal .form-item--error-message").remove();
     // Reset forms
     $(".jcc-modal input[type='text'], .jcc-modal input[type='email']").each(function() {
       this.value = "";
