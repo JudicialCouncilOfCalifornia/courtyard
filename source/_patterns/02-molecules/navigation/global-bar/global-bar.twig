@@ -16,7 +16,7 @@
 
     {% if is_footer %}
       <div class="jcc-footer-global-wrapper">
-        <nav class="jcc-global__menu">
+        <nav class="jcc-global__menu" aria-label="Web policies and usage menu">
           {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
             inline_nav : global_bar.secondary_nav
           } %}
@@ -27,7 +27,7 @@
         </div>
       </div>
     {% else %}
-      <nav class="jcc-global__menu">
+      <nav class="jcc-global__menu" aria-label="Other branch sites">
         {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
           inline_nav : global_bar.secondary_nav
         } %}
