@@ -144,12 +144,6 @@
         @include u-position(relative);
       }
     }
-
-    .jcc-nav-secondary__menu {
-      @include at-media(desktop) {
-        top: -2.025rem;
-      }
-    }
   }
 
   // extended
