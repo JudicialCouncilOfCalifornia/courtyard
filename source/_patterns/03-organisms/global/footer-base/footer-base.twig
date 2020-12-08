@@ -14,7 +14,7 @@
         <div class="grid-container">
           <div class="grid-row grid-gap">
             <div class="tablet:grid-col-8">
-              <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <nav class="usa-footer__nav" aria-label="{{ footer_base.aria_label|default('Footer navigation') }}">
                 <div class="grid-row grid-gap-4">
                   {% for link in footer_base.links %}
                     <div class="mobile-lg:grid-col-6 desktop:grid-col-{{ footer_base.secondary_menu_cols }}">
@@ -38,7 +38,7 @@
       {% endif %}
 
       {% if footer_base.height_variant == 'simple' %}
-        <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <nav class="usa-footer__nav" aria-label="{{ footer_base.aria_label|default('Footer navigation') }}">
           <ul class="grid-row grid-gap">
             {% for link in footer_base.links %}
               <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content">
