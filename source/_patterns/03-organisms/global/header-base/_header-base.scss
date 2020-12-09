@@ -1,3 +1,14 @@
+// Hat
+.jcc-header-hat {
+  .jcc-global__menu {
+    @include u-display(none);
+
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+    }
+  }
+}
+
 // Header
 .jcc-header-base {
   @include u-border-top("05", accent-warm);
