@@ -6,6 +6,16 @@ header_base:
       title: 'Judicial Branch of California'
       url: '#'
     logo: '../../images/logos/jcc-logo-branch-text-white.svg'
+    secondary_nav:
+      items:
+        - name: "Supreme Court"
+          url: "#"
+        - name: "Courts of Appeal"
+          url: "#"
+        - name: "Superior Courts"
+          url: "#"
+        - name: "Judicial Council"
+          url: "#"
   title: 'Alameda Superior Court'
   logo: ''
   menu_icon:
@@ -14,16 +24,6 @@ header_base:
   close_icon:
     name: 'close'
     decorative: false
-  secondary_nav:
-    items:
-      - name: "Supreme Court"
-        url: "#"
-      - name: "Courts of Appeal"
-        url: "#"
-      - name: "Superior Courts"
-        url: "#"
-      - name: "Judicial Council"
-        url: "#"
   primary_nav:
     mega: false
     links:
