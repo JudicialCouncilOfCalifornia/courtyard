@@ -27,7 +27,6 @@
       &__title {
         @include u-display(inline-block);
         @include u-padding-left(1);
-        @include u-color(blue-50v);
         @include u-font(sans, 9);
       }
     }

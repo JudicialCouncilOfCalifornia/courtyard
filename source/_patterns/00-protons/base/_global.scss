@@ -656,3 +656,8 @@ $aspect-width: 16;
     border-radius: 3rem;
   }
 }
+
+@mixin jcc-button-unstyled {
+  @include button-unstyled;
+  @include u-text("blue-cool-60v");
+}

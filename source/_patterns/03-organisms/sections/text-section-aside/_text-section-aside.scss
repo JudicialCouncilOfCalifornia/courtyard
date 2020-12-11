@@ -57,7 +57,6 @@
 
     .jcc-card__title {
       @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: "above");
-      @include u-text(blue-70v);
       text-transform: uppercase;
       @include u-font(ui, 8);
       @include u-padding-top(4);
