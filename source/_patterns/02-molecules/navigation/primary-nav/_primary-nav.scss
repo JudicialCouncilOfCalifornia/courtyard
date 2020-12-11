@@ -104,9 +104,6 @@ nav.jcc-primary-nav {
     span {
       @include at-media(desktop) {
         @include u-color(primary);
-        @if $trial {
-          @include u-color(blue-50v);
-        }
       }
       @include u-color("white");
       @include u-font-size("body", 7);

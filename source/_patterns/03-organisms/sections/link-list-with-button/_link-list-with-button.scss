@@ -9,11 +9,11 @@
       @include u-margin-bottom(4);
 
       @include at-media(desktop) {
-        @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
+        @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: left-right);
       }
       @include at-media-max(desktop) {
         @include has-dash-position(
-          $dash-color: "mint-cool-40v",
+          $dash-color: "mint-cool-50v",
           $dash-position: "above-right",
           $dash-width: 75px
         );
