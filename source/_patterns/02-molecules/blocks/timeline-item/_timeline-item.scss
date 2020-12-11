@@ -4,6 +4,7 @@
 .jcc-timeline-item__title {
   @include responsive-h5();
   @include u-font-family(sans);
+  @include u-font-weight(normal);
   @include u-margin-y(1.5);
   @include u-position(relative);
 }

@@ -91,6 +91,7 @@
   @include u-padding-right(5);
   @include u-font-size(body, 7);
   @include u-font-weight(normal);
+  @include u-text("white", !important);
   @include u-radius("pill");
   @include u-bg(secondary);
   position: relative;

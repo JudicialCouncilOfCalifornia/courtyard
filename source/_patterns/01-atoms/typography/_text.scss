@@ -61,20 +61,22 @@ video {
 }
 
 a,
-.usa-form a.usa-button--unstyled {
-  @include u-text("blue-cool-50v");
+.usa-alert__text a,
+.usa-form a.usa-button--unstyled,
+a.usa-link {
+  @include u-text("blue-cool-60v");
 
   &:hover {
-    @include u-text("cyan-40v");
+    @include u-text("cyan-60v");
   }
 
   &:active,
   &:focus {
-    @include u-text("blue-cool-40v");
+    @include u-text("blue-cool-50v");
   }
 
   &:visited {
-    @include u-text("blue-cool-50v");
+    @include u-text("blue-cool-60v");
   }
 }
 
@@ -142,6 +144,10 @@ a,
 
   .h-responsive-h6 {
     @extend .h-responsive-h6;
+  }
+
+  a {
+    @include u-text("blue-cool-60v");
   }
 }
 

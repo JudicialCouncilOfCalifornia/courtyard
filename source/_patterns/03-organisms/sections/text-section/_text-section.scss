@@ -56,6 +56,7 @@
     @include u-margin-bottom(0);
     h3 {
       @include u-font(heading, 11);
+      @include u-font-weight(normal);
     }
   }
 
@@ -76,6 +77,13 @@
 
   & .jcc-option-list {
     @include u-margin-bottom(5);
+  }
+}
+
+.jcc-text-section__column-right {
+  h3 {
+    @include u-font-family(serif);
+    @include u-font-weight(normal);
   }
 }
 
