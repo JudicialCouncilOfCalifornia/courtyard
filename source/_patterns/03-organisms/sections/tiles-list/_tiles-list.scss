@@ -10,14 +10,14 @@
 
       @include at-media-max(desktop) {
         @include has-dash-position(
-          $dash-color: "mint-cool-40v",
+          $dash-color: "mint-cool-50v",
           $dash-position: above-center,
           $dash-width: 5rem
         );
       }
 
       @include at-media(desktop) {
-        @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: left-right);
+        @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: left-right);
       }
     }
   }
@@ -61,7 +61,7 @@
         @include u-padding(2);
         @include u-padding-top(0);
         @include u-padding-x(2);
-        @include u-color("mint-cool-40v");
+        @include u-color("mint-cool-50v");
         @include u-display(flex);
         @include u-flex-direction(row);
         @extend .flex-align-center;
@@ -85,7 +85,7 @@
           @include u-width(8);
           border-radius: 50%;
           line-height: 0;
-          @include u-border("mint-cool-40v");
+          @include u-border("mint-cool-50v");
           @include u-position(relative);
           @include u-font-size(ui, 8);
 
@@ -113,9 +113,6 @@
         a {
           @include u-text-decoration(no-underline);
           @include light-background-link();
-          @if $trial {
-            @include u-color(blue-50v);
-          }
           &:hover {
             @include u-text-decoration(underline);
           }

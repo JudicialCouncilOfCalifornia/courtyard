@@ -46,11 +46,11 @@
         @include u-padding-top(2);
 
         @include at-media(tablet) {
-          @include has-dash-position($dash-color: "mint-cool-40v", $dash-position: above);
+          @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: above);
         }
         @include at-media-max(tablet) {
           @include has-dash-position(
-            $dash-color: "mint-cool-40v",
+            $dash-color: "mint-cool-50v",
             $dash-position: above,
             $dash-width: 45px
           );
@@ -83,9 +83,6 @@
             a {
               @include u-font-size(body, 10);
               @include light-background-link();
-              @if $trial {
-                @include u-color(blue-50v, !important);
-              }
             }
 
             > ul {

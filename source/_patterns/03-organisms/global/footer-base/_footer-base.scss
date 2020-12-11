@@ -48,6 +48,7 @@
 
   .usa-footer__secondary-link a {
     @include u-font(sans, 6);
+    @include u-color(blue-cool-60v);
   }
 
   .usa-footer__logo-heading {

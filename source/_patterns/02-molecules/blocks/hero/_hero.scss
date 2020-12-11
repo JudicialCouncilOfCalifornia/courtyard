@@ -90,7 +90,7 @@
   @include t-copy();
   @include u-text(uppercase);
   @include u-text(ls-3);
-  @include u-color(secondary);
+  @include u-color(mint-cool-60v);
 
   a {
     @include u-color(secondary, !important);
@@ -130,6 +130,10 @@
   @include responsive-lead();
   @include u-margin-bottom(2);
   @include u-line-height(body, 3);
+
+  a {
+    @include u-color(blue-cool-60v);
+  }
 }
 
 .jcc-hero--has-one-column {
