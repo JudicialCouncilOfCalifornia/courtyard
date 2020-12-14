@@ -60,7 +60,7 @@ video {
   @include u-padding(0);
 }
 
-a,
+a:not(.usa-button),
 .usa-alert__text a,
 .usa-form a.usa-button--unstyled,
 a.usa-link,
