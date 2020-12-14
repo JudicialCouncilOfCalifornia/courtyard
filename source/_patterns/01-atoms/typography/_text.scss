@@ -63,7 +63,8 @@ video {
 a,
 .usa-alert__text a,
 .usa-form a.usa-button--unstyled,
-a.usa-link {
+a.usa-link,
+.usa-footer__secondary-link a {
   @include u-text("blue-cool-60v");
 
   &:hover {

@@ -6,7 +6,6 @@
     @include u-text-decoration(no-underline);
     @include light-background-link();
 
-    @include u-color(blue-50v);
     &:hover {
       @include u-text-decoration(underline);
     }
