@@ -99,7 +99,7 @@
   @include u-display("inline");
   @include u-margin-bottom(0);
   @include u-font("sans", "md");
-  @include u-text("bold");
+  @include u-text("bold", "black");
 }
 
 .jcc-alert__text {

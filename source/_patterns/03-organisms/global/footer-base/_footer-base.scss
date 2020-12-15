@@ -156,6 +156,10 @@
       @include u-text("white");
     }
 
+    .usa-footer__logo-heading {
+      @include u-text("white");
+    }
+
     .usa-footer__secondary-link a {
       @include u-text("white");
     }

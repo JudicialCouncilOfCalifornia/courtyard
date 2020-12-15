@@ -40,7 +40,7 @@
 
     </div>
 
-    <nav aria-label="Main navigation" class="usa-nav">
+    <nav class="usa-nav" aria-label="Main menu">
       
       {% if header_base.height_variant == 'extended' %}<div class="usa-nav__inner">{% endif %}
       
@@ -85,13 +85,6 @@
       
       {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
-      {% if header_base.secondary_nav %}
-      <nav class="jcc-nav-secondary__menu">
-      {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
-        inline_nav : header_base.secondary_nav
-      } %}
-      </nav>
-      {% endif %}
       {% if header_base.height_variant == 'extended' %}</div>{% endif %}
 
     </nav>

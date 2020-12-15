@@ -90,7 +90,7 @@
   @include t-copy();
   @include u-text(uppercase);
   @include u-text(ls-3);
-  @include u-color(secondary);
+  @include u-color(mint-cool-60v);
 
   a {
     @include u-color(secondary, !important);

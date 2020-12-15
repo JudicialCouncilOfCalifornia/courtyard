@@ -14,7 +14,7 @@
 }
 
 .jcc-read-more__trigger {
-  @include button-unstyled;
+  @include jcc-button-unstyled;
   @include u-font-size(sans, md);
   text-decoration: none;
   vertical-align: bottom; // Temporary Styles for icon

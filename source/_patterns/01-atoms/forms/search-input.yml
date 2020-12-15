@@ -1,3 +1,2 @@
 search_input:
-  placeholder: "Search"
   form_input_name: "search-type-text"

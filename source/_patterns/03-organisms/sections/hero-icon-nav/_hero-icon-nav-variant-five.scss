@@ -34,7 +34,6 @@
           transition: 0.4s border;
         }
         .jcc-tile__title {
-          @include u-color(blue-50v);
           @include u-font(sans, 9);
         }
       }

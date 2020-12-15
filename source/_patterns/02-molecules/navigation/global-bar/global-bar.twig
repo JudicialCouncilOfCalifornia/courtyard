@@ -1,7 +1,7 @@
-{% set aria__banner_label = 'Judicial Branch of California branding and links to key branch sites. Skip this banner to the current site.' %}
+{% set aria__banner_label = 'Judicial Branch of California branding.  Skip this banner to the current site.' %}
 {% set aria__logo_label = 'Judicial Branch logo linked to its site' %}
 {% if is_footer %}
-  {% set aria__banner_label = 'Judicial Branch branding repeated in the footer with additional branch links. You have reached the bottom of the page.' %}
+  {% set aria__banner_label = 'Judicial Branch branding repeated in the footer. You have reached the bottom of the page.' %}
   {% set aria__logo_label = 'Judicial Branch logo repeated in the footer and linked to its site' %}
 {% endif %}
 
@@ -16,7 +16,7 @@
 
     {% if is_footer %}
       <div class="jcc-footer-global-wrapper">
-        <nav class="jcc-global__menu">
+        <nav class="jcc-global__menu" aria-label="Web policies and usage menu">
           {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
             inline_nav : global_bar.secondary_nav
           } %}
@@ -27,7 +27,7 @@
         </div>
       </div>
     {% else %}
-      <nav class="jcc-global__menu">
+      <nav class="jcc-global__menu" aria-label="Other branch sites">
         {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
           inline_nav : global_bar.secondary_nav
         } %}

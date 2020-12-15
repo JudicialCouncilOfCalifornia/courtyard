@@ -16,7 +16,7 @@
     @include u-text-decoration("no-underline");
 
     &.is-active {
-      @include u-bg("primary");
+      @include u-bg("blue-cool-50v");
       border-radius: 100%;
       @include u-color("white");
     }
@@ -37,12 +37,6 @@
 
     @include at-media(tablet-lg) {
       @include u-display("inline-block");
-    }
-  }
-
-  li.pager__item.jcc-pagination__ellipsis {
-    @if $trial {
-      @include u-color(blue-50v);
     }
   }
 
@@ -67,15 +61,6 @@
       padding: 0.45rem 0.35rem;
     }
     @include u-font-weight("bold");
-    @if $trial {
-      @include u-color(blue-50v);
-    }
-
-    &.is-active {
-      @if $trial {
-        @include u-bg(blue-50v);
-      }
-    }
 
     &.single-digit-spacing {
       padding: 0.45rem 0.66rem;

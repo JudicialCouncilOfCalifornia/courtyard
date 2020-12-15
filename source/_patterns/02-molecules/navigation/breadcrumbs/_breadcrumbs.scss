@@ -54,9 +54,5 @@
   a {
     @include u-text(info-darker);
     text-decoration: none;
-
-    @if $trial {
-      @include u-color(blue-50v);
-    }
   }
 }

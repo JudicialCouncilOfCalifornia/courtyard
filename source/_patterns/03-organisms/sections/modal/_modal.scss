@@ -111,7 +111,7 @@
 }
 
 .jcc-modal__trigger {
-  @include button-unstyled;
+  @include jcc-button-unstyled;
   @include u-font-size(sans, md);
   @include u-margin-x(1);
   @include u-cursor(pointer);
