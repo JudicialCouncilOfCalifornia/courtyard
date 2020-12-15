@@ -60,7 +60,7 @@ video {
   @include u-padding(0);
 }
 
-a:not(.usa-button),
+a,
 .usa-alert__text a,
 .usa-form a.usa-button--unstyled,
 a.usa-link,
@@ -145,10 +145,6 @@ a.usa-link,
 
   .h-responsive-h6 {
     @extend .h-responsive-h6;
-  }
-
-  a {
-    @include u-text("blue-cool-60v");
   }
 }
 
