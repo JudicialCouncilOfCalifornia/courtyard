@@ -5,7 +5,9 @@
   'jcc-header--' ~ header_base.background_variant|default('default'),
 ]|merge(text_section.classes|default([''])) %}
 
-<a class="usa-skipnav" href="#main-content">{{ header_base.skip }}</a>
+{% if header_base.skip %}
+  <a class="usa-skipnav" href="{{ header_base.skip.url }}">{{ header_base.skip.text }}</a>
+{% endif %}
 <div class="usa-overlay"></div>
 <div class="jcc-header-hat">
   {% include '@molecules/navigation/global-bar/global-bar.twig' with {

@@ -1,6 +1,8 @@
 header_base:
   height_variant: 'basic'
-  skip: 'Skip to main content'
+  skip:
+    url: '#main-content'
+    text: 'Skip to main content'
   global_bar:
     logo_text:
       title: 'Judicial Branch of California'
