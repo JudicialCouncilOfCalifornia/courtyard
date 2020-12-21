@@ -28,7 +28,7 @@
 
 {% set tag = side_nav.tag|default('h2') %}
 
-<nav role="navigation" aria-label="{{ side_nav.aria_label }}">
+<nav aria-label="{{ side_nav.aria_label }}">
   <{{ tag }} class="jcc-sidenav__title">{{ side_nav.header }}</{{ tag }}>
   {{ sidenav.sidenav_links(side_nav.items, attributes, sidenav_classes|join(' ')|trim, 0, active_trail, side_nav.expand_icon, side_nav.collapse_icon, side_nav.alt_collapse_icon, side_nav.alt_expand_icon) }}
 </nav>

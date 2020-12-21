@@ -1,6 +1,6 @@
 {% set total_pages = pagination.total_pages %}
 
-<nav class="usa-pagination jcc-pagination pager" role="navigation" aria-labelledby="{{ pagination.heading_id }}">
+<nav class="usa-pagination jcc-pagination pager" aria-labelledby="{{ pagination.heading_id }}">
   <h4 id="{{ pagination.heading_id }}" class="usa-sr-only">{{ 'Pagination'|t }} ({{ total_pages }} pages of results found)</h4>
   <ul class="pager__items js-pager__items">
     {# Print first item if we are not on the first page. #}
