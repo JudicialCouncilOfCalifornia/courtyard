@@ -15,8 +15,13 @@
     padding: 3px 10px;
     @include u-text-decoration("no-underline");
 
+    &:hover {
+      @include u-text("cyan-60v");
+      @include u-text-decoration("underline");
+    }
+
     &.is-active {
-      @include u-bg("blue-cool-50v");
+      @include u-bg("blue-cool-60v");
       border-radius: 100%;
       @include u-color("white");
     }

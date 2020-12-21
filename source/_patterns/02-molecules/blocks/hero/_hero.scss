@@ -93,7 +93,11 @@
   @include u-color(mint-cool-60v);
 
   a {
-    @include u-color(secondary, !important);
+    @include u-color(mint-cool-60v);
+
+    &:hover {
+      @include u-color(mint-cool-70v);
+    }
   }
   @include u-margin-top(3);
 }
