@@ -396,12 +396,12 @@ $aspect-width: 16;
   @include u-text(info-darker);
 
   &:hover {
-    @include u-text(info-dark);
+    @include u-text("cyan-60v");
   }
 
   &:active,
   &:focus {
-    @include u-text(info-dark);
+    @include u-text("cyan-60v");
   }
 
   &:visited {
