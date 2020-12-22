@@ -5,5 +5,7 @@ card:
   excerpt_img:
     src: "https://placeimg.com/900/600/arch"
     alt: "Alt text"
-  img:
+  # option to not make image clickable
+  excerpt_img_only: TRUE
+  img: # suppressing icon use for demo
   contextual_links: FALSE
