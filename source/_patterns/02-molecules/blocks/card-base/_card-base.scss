@@ -1,0 +1,105 @@
+.jcc-card-base {
+  .usa-card__container {
+    border-color: #e6e6e6;
+  }
+}
+
+.jcc-card-base--borderless {
+  .usa-card__container {
+    @include u-border(0);
+  }
+}
+
+.jcc-card-base--elevated:not(.jcc-card-base--borderless) {
+  .usa-card__container {
+    @include u-shadow(2);
+  }
+}
+
+.jcc-card-base--icon {
+  .usa-card__header {
+    @include u-margin-left(0);
+    @include u-padding-top(1);
+  }
+  .usa-card__media {
+    @include u-margin-left(3);
+  }
+  .usa-card__img {
+    @include u-position(relative);
+    @include u-width(6);
+    @include u-height(6);
+    @include u-minw(6);
+    @include u-margin-right(3);
+    background-color: transparent;
+
+    &::before {
+      @include u-display(block);
+      @include u-position(absolute);
+      @include u-top(1);
+      @include u-left(1);
+      @include u-width(5);
+      @include u-height(5);
+      @include u-bg(gold-5v);
+      border-radius: 50%;
+      content: "";
+    }
+  }
+
+  img {
+    @include u-position(relative);
+    @include u-width(4);
+    @include u-height(4);
+    z-index: 2;
+  }
+
+  &.usa-card--flag {
+    .usa-card__header {
+      @include u-padding-top(2);
+    }
+    .usa-card__media {
+      @include u-width(8);
+      @include u-margin-left(0);
+    }
+
+    &:not(.usa-card--media-right) {
+      .usa-card__header,
+      .usa-card__body,
+      .usa-card__footer {
+        @include u-margin-left(5, !important);
+      }
+      .usa-card__img {
+        @include u-margin-right(3);
+      }
+    }
+  }
+
+  &.usa-card--media-right {
+    .usa-card__header,
+    .usa-card__body,
+    .usa-card__footer {
+      @include u-margin-right(5, !important);
+    }
+    .usa-card__img {
+      @include u-margin-left(2);
+      @include u-margin-right(0);
+    }
+  }
+}
+
+.jcc-card-base--action-card {
+  a {
+    color: inherit;
+    @include u-text("no-underline");
+  }
+}
+
+.jcc-card-base--demo {
+  @include grid-col(3);
+
+  &.usa-card--flag:not(.jcc-card-base--icon) {
+    @include grid-col(6);
+  }
+  &.usa-card--media-right:not(.jcc-card-base--icon) {
+    @include grid-col(6);
+  }
+}

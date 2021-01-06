@@ -1,0 +1,11 @@
+card_base:
+  borderless: true
+  brow:
+  body: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>"
+  media_style: "icon"
+  media:
+    src: "../../images/graphics/person.svg"
+    alt: "Alt text"
+  footer:
+    button:
+      style: "unstyled"

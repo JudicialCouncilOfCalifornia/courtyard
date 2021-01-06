@@ -5,6 +5,6 @@
   'usa-button--' ~ button.style|default('primary'),
 ]|merge(button.classes|default([''])) %}
 
-<button {{attributes.addClass(classes) }}>
+<button {{ attributes.addClass(classes) }}{% if button.action %} onclick="{{ button.action }}"{% endif %}>
   {{- button.text -}}
 </button>
