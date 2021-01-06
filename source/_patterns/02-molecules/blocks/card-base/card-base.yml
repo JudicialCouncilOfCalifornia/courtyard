@@ -1,0 +1,21 @@
+card_base:
+  theme: "demo" #set optionally set theme set, "demo" used for library molecule demonstration
+  borderless: #set true if removing border lines
+  elevated: #set true to add optional drop shadow
+  flag_position: #set "left" or "right" optional positioning
+  action_style: # set "card|media|title" if action is not using footer button, media will also set title link
+  action_url: href="https://www.courts.ca.gov" #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
+  action_label: #set custom description if not using footer button (default is "Read more about {{ title }}"
+  brow: "Category"
+  title: "Card with media"
+  body: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis dolores molestias! Quas quisquam a officia eos.</p>"
+  media_style: #set "icon" if not photo
+  media:
+    src: "https://placeimg.com/900/600/arch"
+    alt: "A placeholder image"
+  footer:
+    button:
+      style: #set uswds supported button styles if not primary default (e.g. "unstyled")
+      action: location.href='https://www.courts.ca.gov' #set onclick if using footer button
+      text: "Read More"
+
