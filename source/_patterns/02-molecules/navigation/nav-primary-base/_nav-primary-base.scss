@@ -85,7 +85,7 @@
         @include u-border-top(1px, primary-dark); // theme
       }
 
-      .usa-nav__submenu-list a{
+      .usa-nav__submenu-list a {
         @include u-border-left(2, primary-dark);
       }
 
@@ -101,7 +101,8 @@
           @include u-bg(primary-darker); // theme
         }
       }
-      a{
+      a {
+        &.usa-current,
         &:hover {
           @include u-text(no-underline);
           @include u-padding($jcc-nav-link-padding);
