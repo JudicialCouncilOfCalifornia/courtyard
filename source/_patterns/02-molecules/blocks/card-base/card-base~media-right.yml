@@ -1,4 +1,4 @@
 card_base:
-  theme: "demo"
+  width: 6
   flag_position: "right"
 

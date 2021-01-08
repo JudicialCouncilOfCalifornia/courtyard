@@ -1,0 +1,13 @@
+.jcc-shadow {
+  @include u-shadow(2);
+}
+
+.jcc-borderless {
+  @include u-border(0);
+  @include u-radius(0);
+  @include u-shadow(none);
+
+  .usa-card__img {
+    @include u-radius(0);
+  }
+}

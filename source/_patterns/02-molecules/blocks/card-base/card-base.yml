@@ -1,10 +1,13 @@
 card_base:
-  theme: "demo" #set optionally set theme set, "demo" used for library molecule demonstration
+  theme: #set optionally set non-library themes or for library demo purposes
+  width: #set card width size in USWDS increments (1-12) if not using default 3
   borderless: #set true if removing border lines
   elevated: #set true to add optional drop shadow
-  flag_position: #set "left" or "right" optional positioning
-  action_style: # set "card|media|title" if action is not using footer button, media will also set title link
-  action_url: href="https://www.courts.ca.gov" #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
+  flag_position: #set "left|right" optional positioning
+  heading_tag: #adjust if not using default "h2" heading
+  heading_style: #set "sans" to override default component serif heading styling
+  action_style: #set "card|media|title" if action is not using footer button, media will also set title link
+  action_url: #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
   action_label: #set custom description if not using footer button (default is "Read more about {{ title }}"
   brow: "Category"
   title: "Card with media"
@@ -18,4 +21,3 @@ card_base:
       style: #set uswds supported button styles if not primary default (e.g. "unstyled")
       action: location.href='https://www.courts.ca.gov' #set onclick if using footer button
       text: "Read More"
-

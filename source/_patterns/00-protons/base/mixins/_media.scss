@@ -1,0 +1,37 @@
+// Interim Judicial icon styling variant
+@mixin media-icon(
+  $icon-size: 2rem,
+  $icon-container-size: 2.5rem,
+  $icon-circle-size: 2.5rem,
+  $icon-circle-bg: "gold-5v"
+) {
+  height: $icon-container-size;
+  width: $icon-container-size;
+  min-width: $icon-container-size;
+  position: relative;
+
+  img {
+    z-index: 2;
+    position: relative;
+    height: $icon-size;
+    width: $icon-size;
+  }
+
+  svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    @include u-bg($icon-circle-bg);
+    content: "";
+    display: block;
+    border-radius: 50%;
+    height: $icon-circle-size;
+    width: $icon-circle-size;
+    left: 0.5rem;
+    top: 0.5rem;
+    position: absolute;
+  }
+}
