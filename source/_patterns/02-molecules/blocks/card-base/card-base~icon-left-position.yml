@@ -1,4 +1,4 @@
-card_base:
+card:
   borderless: true
   flag_position: "left"
   brow:

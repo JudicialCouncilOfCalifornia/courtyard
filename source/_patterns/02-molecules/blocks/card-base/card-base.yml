@@ -1,4 +1,4 @@
-card_base:
+card:
   brow: "Category" #optional meta subheading
   title: "Card with media"
   body: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis dolores molestias! Quas quisquam a officia eos.</p>"
