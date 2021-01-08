@@ -1,0 +1,15 @@
+.jcc-image--media-icon {
+  height: $jcc-icon-media-container-size;
+  width: $jcc-icon-media-container-size;
+  min-width: $jcc-icon-media-container-size;
+
+  img {
+    height: $jcc-icon-media-size;
+    width: $jcc-icon-media-size;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

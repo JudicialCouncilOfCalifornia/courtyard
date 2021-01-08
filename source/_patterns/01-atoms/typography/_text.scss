@@ -153,7 +153,8 @@ a.usa-link,
 }
 
 .jcc-brow {
-  @include u-font(heading, 4);
+  @include u-margin-bottom(2);
+  @include u-font(sans, 6);
 }
 
 .jcc-title {
