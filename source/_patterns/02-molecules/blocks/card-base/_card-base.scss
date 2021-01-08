@@ -7,6 +7,7 @@
     h2,
     h3 {
       @include u-font(heading, 11);
+      @include u-font-weight(normal);
 
       &.jcc-card__heading--sans {
         @include u-font(sans, 11);

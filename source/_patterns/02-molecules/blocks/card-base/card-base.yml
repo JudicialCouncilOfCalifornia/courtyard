@@ -12,7 +12,7 @@ card:
       text: "Read More"
   aria_label: #set custom description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
   # Variants
-  width: #card width size in USWDS increments (1-12) if not using default 3
+  width: #card width size in USWDS grid increments (1-12) if not using default 4
   heading_tag: #adjust if not using default "h2" heading
   heading_style: #set "sans" to switch from serif without relying on additional classes
   media_style: #set "icon" if using symbol over a photo/illustration
