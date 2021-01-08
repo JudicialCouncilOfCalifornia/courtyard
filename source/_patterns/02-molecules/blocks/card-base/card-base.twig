@@ -2,11 +2,11 @@
   'usa-card',
   card.flag_position == 'left' ? 'usa-card--flag' : '',
   card.flag_position == 'right' ? 'usa-card--flag usa-card--media-right' : '',
-  card.width ? 'grid-col-' ~ card.width : 'grid-col-3',
+  card.width ? 'grid-col-' ~ card.width : 'grid-col-4',
   'jcc-card',
   card.media_style ? 'jcc-card--' ~ card.media_style : '',
   card.theme ? card.theme : '',
-]|merge(classes|default([''])) %}
+]|merge(card.classes|default([''])) %}
 
 {% set container_classes = [
   card.borderless ? 'jcc-borderless' : '',

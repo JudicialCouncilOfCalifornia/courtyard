@@ -1,0 +1,21 @@
+card_section:
+  headergroup:
+    brow: "Category"
+    title: "Heading"
+    lead: "Nullam at semper mauris, at rhoncus purus."
+  cards:
+    - brow: "Category"
+      title: "Prepare the claim of exemption"
+      body: "<p>Prepare a Claim of Exemption (Enforcement of Judgment) (form EJ-160) and if based on financial need, Financial Statement (form EJ-165)</p>"
+      heading_tag: h3
+      elevated: true
+    - brow: "Category"
+      title: "File the claim of exemption with the sheriff"
+      body: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+      heading_tag: h3
+      elevated: true
+    - brow: "Category"
+      title: "A third card example"
+      body: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis dolores molestias! Quas quisquam a officia eos.</p>"
+      heading_tag: h3
+      elevated: true
