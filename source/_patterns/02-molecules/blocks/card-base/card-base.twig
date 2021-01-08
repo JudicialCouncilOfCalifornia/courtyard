@@ -16,7 +16,7 @@
 {% set tag = card_base.heading_tag|default('h2') %}
 
 {% set aria_label %}
-  Read more about {% if card_base.action_label %}{{ card_base.action_label }}{% elseif card_base.title %}{{ card_base.title }}{% else %} this subject{% endif %}
+  {% if card_base.aria_label %}{{ card_base.aria_label }}{% else %}Read more about {{ card_base.title }}{% endif %}
 {% endset %}
 
 <div class="{{ classes|join(' ')|trim }}">
