@@ -1,23 +1,24 @@
 card_base:
-  theme: #set optionally set non-library themes or for library demo purposes
-  width: #set card width size in USWDS increments (1-12) if not using default 3
-  borderless: #set true if removing border lines
-  elevated: #set true to add optional drop shadow
-  flag_position: #set "left|right" optional positioning
-  heading_tag: #adjust if not using default "h2" heading
-  heading_style: #set "sans" to override default component serif heading styling
-  action_style: #set "card|media|title" if action is not using footer button, media will also set title link
-  action_url: #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
-  action_label: #set custom description if not using footer button (default is "Read more about {{ title }}"
-  brow: "Category"
+  brow: "Category" #optional meta subheading
   title: "Card with media"
   body: "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae. Excepturi nobis dolores molestias! Quas quisquam a officia eos.</p>"
-  media_style: #set "icon" if not photo
   media:
     src: "https://placeimg.com/900/600/arch"
     alt: "A placeholder image"
   footer:
     button:
-      style: #set uswds supported button styles if not primary default (e.g. "unstyled")
-      action: location.href='https://www.courts.ca.gov' #set onclick if using footer button
+      style: #optional button styles if not primary default (e.g. "unstyled")
+      action: location.href='https://www.courts.ca.gov' #optional onclick handler for footer button
       text: "Read More"
+  aria_label: #set custom description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
+  # Variants
+  width: #card width size in USWDS increments (1-12) if not using default 3
+  heading_tag: #adjust if not using default "h2" heading
+  heading_style: #set "sans" to switch from serif without relying on additional classes
+  media_style: #set "icon" if using symbol over a photo/illustration
+  action_style: #set "card|media|title" if not using footer button, media will also set title link
+  action_url: #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
+  flag_position: #set "left|right" optional media positioning
+  borderless: #set true if removing border lines
+  elevated: #set true to add optional drop shadow
+  theme: #support for additional classes or for library demo purposes
