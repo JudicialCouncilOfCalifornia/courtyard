@@ -1,4 +1,4 @@
-card_base:
+card:
   action_style: media
   action_url: href="https://www.courts.ca.gov" #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
   media:

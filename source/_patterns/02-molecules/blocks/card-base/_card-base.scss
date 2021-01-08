@@ -1,4 +1,4 @@
-.jcc-card-base {
+.jcc-card {
   .usa-card__container {
     border-color: #e6e6e6;
   }
@@ -8,7 +8,7 @@
     h3 {
       @include u-font(heading, 11);
 
-      &.jcc-card-base__heading--sans {
+      &.jcc-card__heading--sans {
         @include u-font(sans, 11);
       }
     }
@@ -29,7 +29,7 @@
   }
 }
 
-.jcc-card-base--icon {
+.jcc-card--icon {
   .usa-card__header,
   .usa-card__body,
   .usa-card__footer {
@@ -73,7 +73,7 @@
   }
 }
 
-.jcc-card-base--action-card {
+.jcc-card--action-card {
   a {
     color: inherit;
     @include u-text("no-underline");
