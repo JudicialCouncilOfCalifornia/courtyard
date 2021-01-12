@@ -1,5 +1,22 @@
 .jcc-cards {
   .jcc-header-group {
-    @include u-margin-bottom(4);
+    max-width: 60rem;
+  }
+
+  &.jcc-cards--centered {
+    .jcc-header-group,
+    .jcc-card {
+      @include u-margin-x(auto);
+    }
+  }
+
+  &.jcc-background--dark {
+    .jcc-cards__row {
+      @include u-text(gray-90);
+
+      a {
+        @include u-text(blue-cool-60v);
+      }
+    }
   }
 }

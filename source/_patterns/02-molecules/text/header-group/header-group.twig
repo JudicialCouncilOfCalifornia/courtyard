@@ -3,7 +3,7 @@
 {% if headergroup == "none" %}
 {% else %}
   {% if headergroup.brow or headergroup.title or headergroup.lead or headergroup.body %}
-    <header class="jcc-header-group">
+    <header class="jcc-header-group {{ headergroup.layout ? headergroup.layout : '' }}">
       {% if headergroup.brow %}
         <p class="jcc-header-group__brow">{{ headergroup.brow }}</p>
       {% endif %}

@@ -2,16 +2,16 @@
   'usa-card',
   card.flag_position == 'left' ? 'usa-card--flag' : '',
   card.flag_position == 'right' ? 'usa-card--flag usa-card--media-right' : '',
-  card.width ? 'grid-col-' ~ card.width : 'grid-col-4',
+  card.width ? 'desktop:grid-col-' ~ card.width : 'desktop:grid-col-4',
   'jcc-card',
   card.media_style ? 'jcc-card--' ~ card.media_style : '',
   card.theme ? card.theme : '',
 ]|merge(card.classes|default([''])) %}
 
 {% set container_classes = [
-  card.borderless ? 'jcc-borderless' : '',
+  card.borderless ? 'jcc-border--borderless' : '',
   card.elevated ? 'jcc-shadow' : '',
-]|merge(container_classes|default([''])) %}
+]|merge(card.container_classes|default([''])) %}
 
 {% set tag = card.heading_tag|default('h2') %}
 
@@ -20,8 +20,8 @@
 {% endset %}
 
 <div class="{{ classes|join(' ')|trim }}">
-  {% if card.action_style == 'card' %}
-    <a {{ card.action_url }} class="jcc-card--action-card" aria_label="{{aria_label|spaceless}}">
+  {% if card.action.style == 'card' %}
+    <a href="{{ card.action.url }}" class="jcc-card--action-card" aria_label="{{aria_label|spaceless}}">
   {% endif %}
   <div class="usa-card__container {{ container_classes|join(' ')|trim }}">
     {% if card.title %}
@@ -30,11 +30,11 @@
           <div class="jcc-brow">{{ card.brow }}</div>
         {% endif %}
         <{{ tag }} class="usa-card__heading {{ card.heading_style ? 'jcc-card__heading--' ~ card.heading_style : '' }}">
-          {% if card.action_style == 'title' or card.action_style == 'media' %}
-            <a {{ card.action_url }} aria_label="{{aria_label|spaceless}}">
+          {% if card.action.style == 'title' or card.action.style == 'media' %}
+            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
           {% endif %}
             {{ card.title }}
-          {% if card.action_style == 'title' or card.action_style == 'media' %}
+          {% if card.action.style == 'title' or card.action.style == 'media' %}
             </a>
           {% endif %}
         </{{ tag }}>
@@ -42,12 +42,12 @@
     {% endif %}
     {% if card.media %}
       <div class="usa-card__media">
-        <div class="usa-card__img {{ card.media_style ? 'jcc-image--media-' ~ card.media_style : '' }}">
-          {% if card.action_style == 'media' %}
-            <a {{ card.action_url }} aria_label="{{aria_label|spaceless}}">
+        <div class="usa-card__img">
+          {% if card.action.style == 'media' %}
+            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
           {% endif %}
             {% include '@atoms/image/image.twig' with { image: card.media } %}
-          {% if card.action_style == 'media' %}
+          {% if card.action.style == 'media' %}
             </a>
           {% endif %}
         </div>
@@ -58,7 +58,7 @@
         {{ card.body }}
       </div>
     {% endif %}
-    {% if card.footer and card.action_style == '' %}
+    {% if card.footer and card.action.style == '' %}
       <div class="usa-card__footer">
         {% include '@atoms/buttons/button.twig' with {
           button: {
@@ -71,7 +71,7 @@
       </div>
     {% endif %}
   </div>
-  {% if card.action_style == 'card' %}
+  {% if card.action.style == 'card' %}
     </a>
   {% endif %}
 </div>
