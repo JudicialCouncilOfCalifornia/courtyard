@@ -1,6 +1,7 @@
 card:
-  action_style: media
-  action_url: href="https://www.courts.ca.gov" #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
+  action:
+    style: "media"
+    url: href="https://www.courts.ca.gov"
   media:
     src: "https://placeimg.com/900/600/arch"
     alt: "A placeholder image"

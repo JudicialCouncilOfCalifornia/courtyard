@@ -7,18 +7,19 @@ card:
     alt: "A placeholder image"
   footer:
     button:
-      style: #optional button styles if not primary default (e.g. "unstyled")
+      style: #"unstyled" ... plain text alternative or any appropriate USWDS styling, default is "primary"
       action: location.href='https://www.courts.ca.gov' #optional onclick handler for footer button
       text: "Read More"
-  aria_label: #set custom description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
+  aria_label: #custom action description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
   # Variants
-  width: #card width size in USWDS grid increments (1-12) if not using default 4
-  heading_tag: #adjust if not using default "h2" heading
-  heading_style: #set "sans" to switch from serif without relying on additional classes
-  media_style: #set "icon" if using symbol over a photo/illustration
-  action_style: #set "card|media|title" if not using footer button, media will also set title link
-  action_url: #set attributes if not using footer button (e.g. href="https://www.courts.ca.gov")
-  flag_position: #set "left|right" optional media positioning
-  borderless: #set true if removing border lines
-  elevated: #set true to add optional drop shadow
+  width: #1-12 ... card width size in USWDS grid increments, default is 4 (3 column widths)
+  heading_tag: #"h2|h3" ... adjusts heading tag, default is "h2"
+  heading_style: #"serif|sans" ... adjusts heading style without additional classes, default is "serif"
+  media_style: #"icon" ... symbol micro-theme for image, default support is 16x9 cropped photo
+  action:
+    style: #"card|media|title" ... alternatives to footer button, media will also set title link
+    url: #link attribute (e.g. "https://www.courts.ca.gov")
+  flag_position: #"left|right" ... optional media positioning
+  borderless: #"true|false" ... removes border with general adjustments, default is "false"
+  elevated: #"true|false" ... optional drop shadow, default is "false"
   theme: #support for additional classes or for library demo purposes

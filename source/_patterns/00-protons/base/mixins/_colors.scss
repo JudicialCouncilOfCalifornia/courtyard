@@ -1,0 +1,8 @@
+@mixin background-color($background-color: primary, $background-text-color: "white") {
+  @include u-bg($background-color);
+  @include u-text($background-text-color);
+
+  a {
+    @include dark-background-link();
+  }
+}
