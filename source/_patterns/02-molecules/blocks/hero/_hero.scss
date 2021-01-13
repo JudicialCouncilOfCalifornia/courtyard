@@ -21,45 +21,6 @@
   }
 }
 
-.jcc-hero--has-background-color--light,
-.jcc-hero--has-background-color--dark {
-}
-
-.jcc-hero--has-background-color--light {
-  @include light-background($light-background-color: secondary-lighter);
-
-  .jcc-breadcrumb__item a {
-    @include light-background-link();
-  }
-}
-
-.jcc-hero--inset-bottom {
-  @include at-media(desktop) {
-    padding-bottom: 10rem;
-  }
-}
-
-.jcc-hero--has-background-color--dark {
-  @include dark-background();
-
-  a {
-    @include dark-background-link();
-  }
-
-  .jcc-breadcrumb__item a {
-    @include dark-background-link();
-  }
-
-  .jcc-hero__title,
-  .jcc-breadcrumb__item {
-    @include dark-background-text();
-  }
-}
-
-.jcc-hero--has-background-color--none {
-  @include u-bg("transparent");
-}
-
 .jcc-hero__container {
   @include grid-container(widescreen);
 
@@ -102,12 +63,6 @@
   @include u-margin-top(3);
 }
 
-.jcc-hero--has-background-color--dark {
-  .jcc-hero__brow {
-    @include u-text("white");
-  }
-}
-
 .jcc-hero__title {
   @include u-font(heading, 14); // 40
 
@@ -148,6 +103,45 @@
   .jcc-hero__column-left {
     @include u-margin-bottom(4);
   }
+}
+
+.jcc-hero--has-background-color--light,
+.jcc-hero--has-background-color--dark {
+}
+
+.jcc-hero--has-background-color--light {
+  @include light-background($light-background-color: secondary-lighter);
+
+  .jcc-breadcrumb__item a {
+    @include light-background-link();
+  }
+}
+
+.jcc-hero--inset-bottom {
+  @include at-media(desktop) {
+    padding-bottom: 10rem;
+  }
+}
+
+.jcc-hero--has-background-color--dark {
+  @include dark-background();
+
+  a {
+    @include dark-background-link();
+  }
+
+  .jcc-breadcrumb__item a {
+    @include dark-background-link();
+  }
+
+  .jcc-hero__title,
+  .jcc-breadcrumb__item {
+    @include dark-background-text();
+  }
+}
+
+.jcc-hero--has-background-color--none {
+  @include u-bg("transparent");
 }
 
 .jcc-hero--has-banner-image {

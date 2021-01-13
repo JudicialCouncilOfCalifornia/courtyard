@@ -383,11 +383,12 @@ $aspect-width: 16;
   @include u-text("white");
 
   .jcc-header-group__title,
-  .jcc-title {
+  .jcc-title,
+  .jcc-hero__brow {
     @include u-text("white");
   }
 
-  > a {
+  a {
     @include dark-background-link();
   }
 }
