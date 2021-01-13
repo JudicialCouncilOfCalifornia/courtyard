@@ -42,7 +42,7 @@
     {% endif %}
     {% if card.media %}
       <div class="usa-card__media">
-        <div class="usa-card__img">
+        <div class="usa-card__img {{ card.media_style ? 'jcc-image--media-' ~ card.media_style : '' }}">
           {% if card.action.style == 'media' %}
             <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
           {% endif %}
