@@ -15,7 +15,7 @@
 
 <div class="{{ classes|join(' ')|trim }}"{% if hero.id %} id="{{ hero.id }}"{% endif %}>
   <div class="jcc-hero__container">
-    {% if hero.img %}
+    {% if hero.background_variant == 'has-background-image' and hero.img %}
       <div class="jcc-hero__media">
         {% include '@atoms/image/image.twig' with { image: hero.img } %}
       </div>
