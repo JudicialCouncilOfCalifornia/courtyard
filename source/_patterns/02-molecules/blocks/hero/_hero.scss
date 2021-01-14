@@ -13,14 +13,6 @@
   }
 }
 
-.jcc-hero--has-background-image {
-  @include u-text("white");
-
-  .jcc-hero__media {
-    @include cover-image();
-  }
-}
-
 .jcc-hero__container {
   @include grid-container(widescreen);
 
@@ -137,6 +129,14 @@
   .jcc-hero__title,
   .jcc-breadcrumb__item {
     @include dark-background-text();
+  }
+}
+
+.jcc-hero--has-background-image {
+  @extend .jcc-hero--has-background-color--dark;
+
+  .jcc-hero__media {
+    @include cover-image();
   }
 }
 
