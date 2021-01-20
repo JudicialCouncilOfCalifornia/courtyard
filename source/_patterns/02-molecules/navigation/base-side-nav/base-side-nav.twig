@@ -1,0 +1,114 @@
+{#
+/**
+ * @file
+ * Available variables typically provided from Drupal book navigation:
+ * - items: A nested list of side navigation items. Each side navigation item contains:
+ *   - attributes: HTML attributes for the side navigation item.
+ *   - below: The side navigation item child items.
+ *   - title: The side navigation link title.
+ *   - url: The side navigation link URL, instance of \Drupal\Core\Url.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     side navigation tree.
+ *   - is_collapsed: TRUE if the link has children within the current side navigation tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ * - active_trail: active trail
+ */
+#}
+{% set basesidenav_classes = [
+  'jcc-basesidenav',
+  base_side_nav.theme_classes ? base_side_nav.theme_classes
+]|merge(base_side_nav.sidenav_classes|default([''])) %}
+
+{% import _self as basesidenav %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+{% set tag = base_side_nav.tag|default('h2') %}
+
+<nav aria-label="{{ base_side_nav.aria_label }}" class="base-side-nav-variant-{{ base_side_nav.type }}">
+  <{{ tag }} class="jcc-basesidenav__title">{{ base_side_nav.header }}</{{ tag }}>
+  {{ basesidenav.basesidenav_links(base_side_nav.items, attributes, basesidenav_classes|join(' ')|trim, 0, active_trail, base_side_nav.expand_icon, base_side_nav.collapse_icon, base_side_nav.alt_collapse_icon, base_side_nav.alt_expand_icon) }}
+</nav>
+
+{% macro basesidenav_links(items, attributes, basesidenav_classes, menu_level, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) %}
+  {% import _self as basesidenav %}
+  {% if items %}
+    {% if menu_level == 0 %}
+        {% for item in items %}
+            {% set link_classes = {
+                'class' : [
+                    item.in_active_trail ? 'usa-current',
+                ]
+            } %}
+            <ul class="usa-sidenav {{ basesidenav_classes }}">
+                <li class="usa-sidenav__item jcc-sidenav__item-home">{{ link(item.title, item.url, link_classes) }}</li>
+
+                {% if item.below %}
+                    {{ basesidenav.basesidenav_links(item.below, attributes, basesidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+                {% endif %}
+            </ul>
+        {% endfor %}
+    {% else %}
+        {% if menu_level > 0 %}
+            <ul class="usa-basesidenav_sublist menu-level-{{ menu_level }}">
+        {% endif %}
+            {% for item in items %}
+              {% set classes = [
+                'usa-basesidenav__item',
+                item.in_active_trail ? 'jcc-current__container',
+              ] %}
+              {% set link_classes = {
+                'class' : [
+                  item.in_active_trail ? 'usa-current',
+                  menu_level == 1 and item.original_link.has_children ? 'jcc-haschildren'
+                ]
+              } %}
+              <li class="{{ classes|join(' ')|trim }}">
+                {% if item.below %}
+                  {{ link(item.title, item.url, link_classes) }}
+
+                  {% if menu_level == 1 and item.original_link.has_children %}
+                    {% if alt_collapse_icon %}
+                      <i class="icon icon-alt {{ alt_collapse_icon }}"></i>
+                    {% else %}
+                      {% set icon = collapse_icon|default({
+                        name: "expand_less",
+                        title: "Showing subpages"|t,
+                        decorative: true,
+                        width: "width-3",
+                        height: "height-3"
+                      }) %}
+                      {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                    {% endif %}
+                  {% endif %}
+
+                  {{ basesidenav.basesidenav_links(item.below, attributes, basesidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+                {% else %}
+                  {{ link(item.title, item.url, link_classes) }}
+
+                  {% if menu_level == 1 and item.original_link.has_children %}
+                    {% if alt_expand_icon %}
+                      <i class="icon icon-alt {{ alt_expand_icon }}"></i>
+                    {% else %}
+                        {% set icon = expand_icon|default({
+                          name: "expand_more",
+                          title: "Show subpages"|t,
+                          decorative: true,
+                          width: "width-3",
+                          height: "height-3"
+                        }) %}
+                      {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+              </li>
+            {% endfor %}
+        {% if menu_level > 0 %}
+            </ul>
+        {% endif %}
+    {% endif %}
+  {% endif %}
+{% endmacro %}

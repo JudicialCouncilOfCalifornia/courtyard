@@ -1,0 +1,49 @@
+# Type variants
+#  - light
+#  - tint
+#  - primary-tint
+#  - dark
+base_side_nav:
+  type: "primary-tint"
+  aria_label: "Table of Contents"
+  theme_classes:
+  #expand_icon:
+  #  name: "add"
+  #  width: "width-3"
+  #  height: "height-3"
+  #collapse_icon:
+  #  name: "remove"
+  #  width: "width-3"
+  #  height: "height-3"
+  #alt_expand_icon: "fas fa-chevron-down"
+  #alt_collapse_icon: "fas fa-chevron-up"
+  header: "Base Side Nav"
+  items:
+    - title: "Item"
+      url: "#"
+    - title: "Current item"
+      original_link:
+        has_children: true
+      url: "#"
+      in_active_trail: true
+      below:
+        - title: "L2 item"
+          url: "#"
+          original_link:
+            has_children: true
+        - title: "L2 current item"
+          url: "#"
+          original_link:
+            has_children: true
+          in_active_trail: true
+          below:
+            - title: "L3 item"
+              url: "#"
+            - title: "L3 current item"
+              url: "#"
+              below:
+                - title: "L4 item"
+                  url: "#"
+                  in_active_trail: true
+                - title: "L4 item"
+                  url: "#"
