@@ -15,7 +15,7 @@
   </button>
 {% endif %}
 
-<div class="{{ classes|join(' ')|trim }}" id="{{ randomId }}">
+<div class="{{ classes|join(' ')|trim }}" id="{{ randomId }}" aria-hidden="true">
   <div class="jcc-modal__backdrop{% if modal.overlay_mode %} jcc-modal__backdrop--overlay{% endif %}" tabindex="-1"></div>
 
   <dialog class="jcc-modal__dialog{% if modal.overlay_mode %} jcc-modal__dialog--overlay{% endif %} js-dialog-window" id="jcc-dialog-window" aria-label="{{ randomId }} dialog window">
