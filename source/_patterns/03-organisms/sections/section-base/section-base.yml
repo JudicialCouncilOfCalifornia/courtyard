@@ -1,0 +1,34 @@
+section_base:
+  scheme: local # local, professional
+  layout: default # default, center
+  background: light # light, dark
+  headergroup:
+    brow: 'Category'
+    title: 'A longer header to test'
+    lead: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet purus arcu, eget tincidunt odio laoreet ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>'
+    body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla convallis sit amet turpis vehicula blandit. Cras iaculis sit amet mauris at sollicitudin. Suspendisse placerat dolor erat, vel egestas elit condimentum eu. In lacinia dignissim vestibulum. Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>'
+  aside:
+    content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla convallis sit amet turpis vehicula blandit. Cras iaculis sit amet mauris at sollicitudin. Suspendisse placerat dolor erat, vel egestas elit condimentum eu. In lacinia dignissim vestibulum. Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget.'
+  secondary:
+    content: |
+      <h3>Next Heading</h3>
+      <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <h4>More Headings</h4>
+      <p>Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla convallis sit amet turpis vehicula blandit. Cras iaculis sit amet mauris at sollicitudin. Suspendisse placerat dolor erat, vel egestas elit condimentum eu. In lacinia dignissim vestibulum. Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget.</p>
+      <p>In general, after a divorce, you keep your separate property and divide your community property.</p>
+
+      <ul>
+        <li>So here is the first item in this list.</li>
+        <li>In this example we're keeping the items short.</li>
+        <li>Later, we'll use longer, more complex list items.</li>
+      </ul>
+
+      <h5>Even More Headings</h5>
+      <ul>
+        <li>I often do this thing where list items have headings.</li>
+        <li>Since this is a list, I need at least two items.</li>
+        <li>It's not a bad idea to add a third item either.</li>
+      </ul>
+
+      <a href="http://www.example.com">Morbi bibendumc</a>

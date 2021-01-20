@@ -1,0 +1,32 @@
+{% set classes = [
+    'jcc-section-base',
+    'jcc-section-base__background--' ~ section_base.background|default('light'),
+    'jcc-section-base__layout--' ~ section_base.layout|default('default'),
+]|merge(section_base.classes|default([''])) %}
+
+{% if section_base.secondary.content %}
+    {% set secondary_content = '<div class="jcc-section-base__secondary-content">' ~ section_base.secondary.content ~ '</div>' %}
+{% endif %}
+
+<div class="jcc-scheme-{{ section_base.scheme|default('simple') }}">
+<div class="{{ classes|join(' ')|trim }}"{% if text_section.id %} id="{{ text_section.id }}"{% endif %}>
+    <div class="jcc-section-base__container">
+        {% include '@molecules/text/header-group/header-group.twig' with {
+            headergroup: {
+                brow: section_base.headergroup.brow,
+                lead: section_base.headergroup.lead,
+                title: section_base.headergroup.title,
+                body: section_base.headergroup.body ~ secondary_content
+            }
+        } %}
+
+        {% if section_base.aside.content %}
+        <div class="jcc-section-base__aside">
+            <div class="jcc-section-base__aside-content">
+            {{ section_base.aside.content }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+</div>

@@ -1,0 +1,58 @@
+// BASE PROPERTIES
+
+.jcc-section-base {
+  $theme-font-role-heading: "" !default;
+  $theme-lead-font-family: "" !default;
+  $theme-jcc-section-background: "" !default;
+  $theme-jcc-reverse-background-color: "" !default;
+  $theme-link-reverse-color: "" !default;
+  $theme-link-reverse-hover-color: "" !default;
+  $theme-link-reverse-active-color: "" !default;
+  $theme-jcc-reverse-dash-color: "" !default;
+
+  &__container {
+    @include section-container;
+    @include grid-row;
+  }
+
+  .jcc-header-group {
+    @include u-padding-bottom(4);
+
+    @include at-media(desktop) {
+      @include grid-col(8);
+    }
+
+    &__title {
+      @include u-text(primary-dark);
+    }
+
+    &__body {
+      @extend .usa-prose;
+
+      & > * {
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  &__aside {
+    @extend .usa-prose;
+
+    &-content > * {
+      max-width: 100% !important;
+    }
+
+    @include at-media(desktop) {
+      @include grid-col(4);
+      @include u-padding-top(10);
+      @include u-padding-x(4);
+    }
+  }
+
+  &__secondary-content {
+    margin-top: 2rem !important;
+    @include u-padding-top(4);
+    @include u-border-top(1px);
+    @include u-border-color(base);
+  }
+}

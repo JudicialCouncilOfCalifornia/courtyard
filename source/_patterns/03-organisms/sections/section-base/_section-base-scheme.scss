@@ -1,0 +1,41 @@
+// SCHEME PROPERTIES
+
+$schemes: (
+  local: (
+    dash-color: "gold-30v",
+    dash-position: "below",
+    aside-callout: "block"
+  ),
+  simple: (
+    dash-color: "mint-cool-50v",
+    dash-position: "right",
+    aside-callout: "italic"
+  )
+);
+
+// Generate a style for each scheme
+
+@each $scheme, $map in $schemes {
+  $theme-jcc-dash-color: map-get($map, dash-color);
+  $theme-jcc-dash-position: map-get($map, dash-position);
+  $theme-jcc-aside-callout: map-get($map, aside-callout);
+
+  .jcc-scheme-#{$scheme} {
+    .jcc-section-base {
+      .jcc-header-group {
+        &__title {
+          @include has-dash-position(
+            $dash-color: $theme-jcc-dash-color,
+            $dash-position: $theme-jcc-dash-position
+          );
+        }
+      }
+
+      &__aside {
+        &-content {
+          @extend .jcc-callout__#{$theme-jcc-aside-callout};
+        }
+      }
+    }
+  }
+}
