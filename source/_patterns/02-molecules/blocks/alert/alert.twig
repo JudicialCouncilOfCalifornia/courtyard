@@ -1,6 +1,9 @@
-<div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon" role="{{ alert.type|trim }}" >
+{% set tag = alert.tag|default('h3') %}
+
+<div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon">
   <div class="usa-alert__body jcc-alert__body {% if alert.icon %} {% else %}usa-alert--no-icon{% endif %}">
-    <h3 class="usa-alert__heading jcc-alert__heading">{{ alert.heading|trim }}</h3>
+    <span class="usa-sr-only">{{ alert.type|trim }} alert banner:</span>
+    <{{ tag }} class="usa-alert__heading jcc-alert__heading">{{ alert.heading|trim }}</{{ tag }}>
     <div class="usa-alert__text jcc-alert__text">{{ alert.text }}</div>
     {% if alert.button %}
       <div class="jcc-alert__action">
