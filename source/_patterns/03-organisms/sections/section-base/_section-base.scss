@@ -1,18 +1,51 @@
 // BASE PROPERTIES
 
 .jcc-section-base {
-  $theme-font-role-heading: "" !default;
-  $theme-lead-font-family: "" !default;
-  $theme-jcc-section-background: "" !default;
-  $theme-jcc-reverse-background-color: "" !default;
-  $theme-link-reverse-color: "" !default;
-  $theme-link-reverse-hover-color: "" !default;
-  $theme-link-reverse-active-color: "" !default;
-  $theme-jcc-reverse-dash-color: "" !default;
+  $theme-font-role-heading: "heading";
+  $theme-lead-font-family: "body";
+  $theme-jcc-section-background: "white";
+  $theme-jcc-reverse-background-color: "primary-dark";
+  $theme-link-reverse-color: "accent-warm-light";
+  $theme-link-reverse-hover-color: "accent-warm";
+  $theme-link-reverse-active-color: "accent-warm";
+  $theme-jcc-reverse-dash-color: "accent-warm";
+
+  // *********************************************************
+
+  @include section-wrapper;
+
+  &.jcc-section-base__background--light {
+    @include u-bg($theme-jcc-section-background);
+  }
+  &.jcc-section-base__background--dark {
+    @include dark-background($theme-jcc-reverse-background-color);
+
+    a {
+      @include dark-background-link(
+        $dark-background-link-color: $theme-link-reverse-color,
+        $dark-background-link-color-hover: $theme-link-reverse-hover-color,
+        $dark-background-link-color-active: $theme-link-reverse-active-color,
+        $dark-background-link-color-visited: $theme-jcc-reverse-dash-color
+      );
+    }
+  }
+
+  &.jcc-section-base__layout--center {
+    @include u-text-align(center);
+    .jcc-header-group {
+      @include grid-col(12);
+    }
+    .jcc-section-base__aside {
+      @include grid-col(12);
+      @include u-padding-top(0);
+      @include u-padding-x(1);
+    }
+  }
 
   &__container {
     @include section-container;
     @include grid-row;
+    @include clearfix;
   }
 
   .jcc-header-group {
@@ -23,7 +56,13 @@
     }
 
     &__title {
+      @include responsive-h2($theme-font-role-heading);
       @include u-text(primary-dark);
+      @include u-text(italic);
+    }
+
+    &__lead {
+      @include responsive-lead($theme-lead-font-family);
     }
 
     &__body {
@@ -35,8 +74,21 @@
     }
   }
 
+  &__container:nth-child(2) {
+    .jcc-header-group {
+      @include u-border-top(1px);
+      @include u-border-color(base-light);
+      @include u-padding-top(4);
+    }
+  }
+
   &__aside {
     @extend .usa-prose;
+
+    &-content {
+      @include u-font-family(serif);
+      @include u-text(italic);
+    }
 
     &-content > * {
       max-width: 100% !important;
@@ -47,12 +99,5 @@
       @include u-padding-top(10);
       @include u-padding-x(4);
     }
-  }
-
-  &__secondary-content {
-    margin-top: 2rem !important;
-    @include u-padding-top(4);
-    @include u-border-top(1px);
-    @include u-border-color(base);
   }
 }

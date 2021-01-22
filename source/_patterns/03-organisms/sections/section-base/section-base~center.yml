@@ -1,6 +1,6 @@
 section_base:
   scheme: local # local, professional
-  layout: default # default, center
+  layout: center # default, center
   background: light # light, dark
   sections:
     - headergroup:
