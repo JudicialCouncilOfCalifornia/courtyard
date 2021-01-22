@@ -15,26 +15,26 @@
  * - active_trail: active trail
  */
 #}
-{% set basesidenav_classes = [
-  'jcc-basesidenav',
-  base_side_nav.theme_classes ? base_side_nav.theme_classes
-]|merge(base_side_nav.sidenav_classes|default([''])) %}
+{% set sidenavbase_classes = [
+  'jcc-sidenavbase',
+  side_nav_base.theme_classes ? side_nav_base.theme_classes
+]|merge(side_nav_base.sidenav_classes|default([''])) %}
 
-{% import _self as basesidenav %}
+{% import _self as sidenavbase %}
 {#
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 
-{% set tag = base_side_nav.tag|default('h2') %}
+{% set tag = side_nav_base.tag|default('h2') %}
 
-<nav aria-label="{{ base_side_nav.aria_label }}" class="base-side-nav-variant-{{ base_side_nav.type }}">
-  <{{ tag }} class="jcc-basesidenav__title">{{ base_side_nav.header }}</{{ tag }}>
-  {{ basesidenav.basesidenav_links(base_side_nav.items, attributes, basesidenav_classes|join(' ')|trim, 0, active_trail, base_side_nav.expand_icon, base_side_nav.collapse_icon, base_side_nav.alt_collapse_icon, base_side_nav.alt_expand_icon) }}
+<nav aria-label="{{ side_nav_base.aria_label }}" class="side-nav-base-scheme-{{ side_nav_base.scheme }}">
+  <{{ tag }} class="jcc-sidenavbase__title">{{ side_nav_base.header }}</{{ tag }}>
+  {{ sidenavbase.sidenavbase_links(side_nav_base.items, attributes, sidenavbase_classes|join(' ')|trim, 0, active_trail, side_nav_base.expand_icon, side_nav_base.collapse_icon, side_nav_base.alt_collapse_icon, side_nav_base.alt_expand_icon) }}
 </nav>
 
-{% macro basesidenav_links(items, attributes, basesidenav_classes, menu_level, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) %}
-  {% import _self as basesidenav %}
+{% macro sidenavbase_links(items, attributes, sidenavbase_classes, menu_level, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) %}
+  {% import _self as sidenavbase %}
   {% if items %}
     {% if menu_level == 0 %}
         {% for item in items %}
@@ -43,21 +43,21 @@
                     item.in_active_trail ? 'usa-current',
                 ]
             } %}
-            <ul class="usa-sidenav {{ basesidenav_classes }}">
+            <ul class="usa-sidenav {{ sidenavbase_classes }}">
                 <li class="usa-sidenav__item jcc-sidenav__item-home">{{ link(item.title, item.url, link_classes) }}</li>
 
                 {% if item.below %}
-                    {{ basesidenav.basesidenav_links(item.below, attributes, basesidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+                    {{ sidenavbase.sidenavbase_links(item.below, attributes, sidenavbase_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
                 {% endif %}
             </ul>
         {% endfor %}
     {% else %}
         {% if menu_level > 0 %}
-            <ul class="usa-basesidenav_sublist menu-level-{{ menu_level }}">
+            <ul class="usa-sidenavbase_sublist menu-level-{{ menu_level }}">
         {% endif %}
             {% for item in items %}
               {% set classes = [
-                'usa-basesidenav__item',
+                'usa-sidenavbase__item',
                 item.in_active_trail ? 'jcc-current__container',
               ] %}
               {% set link_classes = {
@@ -85,7 +85,7 @@
                     {% endif %}
                   {% endif %}
 
-                  {{ basesidenav.basesidenav_links(item.below, attributes, basesidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+                  {{ sidenavbase.sidenavbase_links(item.below, attributes, sidenavbase_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
                 {% else %}
                   {{ link(item.title, item.url, link_classes) }}
 

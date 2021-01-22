@@ -6,12 +6,12 @@
   @include u-shadow(3);
 
   .usa-sidenav,
-  .usa-basesidenav{
+  .usa-sidenavbase{
     @include u-border-bottom(0);
   }
 
   .usa-sidenav__item,
-  .usa-basesidenav__item{
+  .usa-sidenavbase__item{
     &:last-of-type {
       @include u-border-bottom(0);
 

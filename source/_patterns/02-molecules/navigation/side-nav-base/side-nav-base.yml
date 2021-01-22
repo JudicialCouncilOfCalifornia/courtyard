@@ -1,10 +1,5 @@
-# Type variants
-#  - light
-#  - tint
-#  - primary-tint
-#  - dark
-base_side_nav:
-  type: "primary-tint"
+side_nav_base:
+  scheme: "light" # light, tint primary-tint, dark
   aria_label: "Table of Contents"
   theme_classes:
   #expand_icon:
@@ -17,7 +12,7 @@ base_side_nav:
   #  height: "height-3"
   #alt_expand_icon: "fas fa-chevron-down"
   #alt_collapse_icon: "fas fa-chevron-up"
-  header: "Base Side Nav"
+  header: "Side Nav Base"
   items:
     - title: "Item"
       url: "#"
