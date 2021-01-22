@@ -1,0 +1,38 @@
+.jcc-sidenavbase {
+  border-bottom: 0;
+  .jcc-haschildren {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+  }
+  .usa-sidenavbase__item,
+  .usa-sidenav__item{
+    list-style:none;
+  }
+  a{
+    &.usa-current{
+      font-weight: normal;
+      &:after {
+        top: 0;
+        bottom: 0;
+        border-radius: 0;
+      }
+    }
+  }
+  .usa-sidenavbase_sublist{
+    padding-left: 0;
+    &.menu-level-1 > li > a {
+      padding-left: 2rem;
+    }
+    .menu-level-2 > li > a {
+      padding-left: 3rem;
+    }
+    .menu-level-3 > li > a {
+      padding-left: 4rem;
+    }
+    .menu-level-4 > li > a {
+      padding-left: 5rem;
+    }
+    a.usa-current:after {
+      display: none !important
+    }
+  }
+}

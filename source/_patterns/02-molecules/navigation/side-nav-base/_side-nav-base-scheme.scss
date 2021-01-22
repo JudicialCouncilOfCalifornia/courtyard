@@ -1,0 +1,142 @@
+// SCHEME PROPERTIES
+
+$schemes: (
+  light: (
+          border-top-color: color($theme-color-base-light),
+          bg-color-lvl-0 : #ffffff,
+          bg-color-lvl-1: color("gray-2"),
+          bg-color-lvl-2: color("gray-4"),
+          bg-color-lvl-3: color("gray-5"),
+          bg-color-lvl-4: color("gray-10"),
+          link-color: color($theme-color-base-ink),
+          link-sublist-color: color($theme-color-base-ink),
+          link-after-color: color($theme-color-primary),
+          link-hover-bg-color: color("gray-4"),
+          link-current-color: color($theme-color-primary),
+          link-sublist-current-color: color($theme-color-primary),
+          link-sublist-hover-bg-color: color("gray-4"),
+          link-sublist-hover-color: color($theme-color-base-ink),
+          icon-fill: color($theme-color-base-ink),
+  ),
+  tint: (
+          border-top-color: color($theme-color-base-light),
+          bg-color-lvl-0 : #ffffff,
+          bg-color-lvl-1: color('gray-4'),
+          bg-color-lvl-2: color($theme-color-primary-lighter),
+          bg-color-lvl-3: color('blue-10'),
+          bg-color-lvl-4: color("gray-10"), // Needs value?
+          link-color: color($theme-color-base-ink),
+          link-sublist-color: color($theme-color-base-ink),
+          link-after-color: color($theme-color-primary),
+          link-hover-bg-color: color("gray-4"),
+          link-current-color: color($theme-color-primary),
+          link-sublist-current-color: color($theme-color-primary),
+          link-sublist-hover-bg-color: color("gray-4"),
+          link-sublist-hover-color: color($theme-color-base-ink),
+          icon-fill: color($theme-color-base-ink),
+  ),
+  primary-tint :(
+          border-top-color: color($theme-color-base-light),
+          bg-color-lvl-0 : color($theme-color-primary-lighter),
+          bg-color-lvl-1: color($theme-color-primary-vivid),
+          bg-color-lvl-2: color($theme-color-primary),
+          bg-color-lvl-3: color($theme-color-primary-dark),
+          bg-color-lvl-4: color($theme-color-primary-darker),
+          link-color: color($theme-color-base-ink),
+          link-sublist-color: #ffffff,
+          link-after-color: color($theme-color-primary),
+          link-hover-bg-color: color("gray-4"),
+          link-current-color: color($theme-color-primary),
+          link-sublist-current-color: color($theme-color-accent-warm-light),
+          link-sublist-hover-bg-color: color("gray-4"),
+          link-sublist-hover-color: color($theme-color-primary),
+          icon-fill: #ffffff,
+  ),
+  dark:(
+          border-top-color: color($theme-color-base-light),
+          bg-color-lvl-0 : color($theme-color-base-darkest),
+          bg-color-lvl-1: color($theme-color-primary-darker),
+          bg-color-lvl-2: color($theme-color-primary-dark),
+          bg-color-lvl-3: color($theme-color-primary-vivid),
+          bg-color-lvl-4: color($theme-color-primary),
+          link-color: #ffffff,
+          link-sublist-color: #ffffff,
+          link-after-color: color($theme-color-accent-warm-light),
+          link-hover-bg-color: color($theme-color-base-ink),
+          link-current-color: color($theme-color-accent-warm-light),
+          link-sublist-current-color: color($theme-color-accent-warm-light),
+          link-sublist-hover-bg-color: color($theme-color-base-ink),
+          link-sublist-hover-color: #ffffff,
+          icon-fill: #ffffff,
+  )
+);
+
+// Generate a style for each scheme
+@each $scheme, $map in $schemes {
+  $theme-jcc-border-top-color: map-get($map, border-top-color);
+  $theme-jcc-bg-color-lvl-0: map-get($map, bg-color-lvl-0);
+  $theme-jcc-bg-color-lvl-1: map-get($map, bg-color-lvl-1);
+  $theme-jcc-bg-color-lvl-2: map-get($map, bg-color-lvl-2);
+  $theme-jcc-bg-color-lvl-3: map-get($map, bg-color-lvl-3);
+  $theme-jcc-bg-color-lvl-4: map-get($map, bg-color-lvl-4);
+  $theme-jcc-link-color: map-get($map, link-color);
+  $theme-jcc-link-sublist-color: map-get($map, link-sublist-color);
+  $theme-jcc-link-after-color: map-get($map, link-after-color);
+  $theme-jcc-link-hover-bg-color: map-get($map, link-hover-bg-color);
+  $theme-jcc-link-current-color: map-get($map, link-current-color);
+  $theme-jcc-link-sublist-current-color: map-get($map, link-sublist-current-color);
+  $theme-jcc-link-sublist-hover-bg-color: map-get($map, link-sublist-hover-bg-color);
+  $theme-jcc-link-sublist-hover-color: map-get($map, link-sublist-hover-color);
+  $theme-jcc-icon-fill: map-get($map, icon-fill);
+
+  .side-nav-base-scheme-#{$scheme}{
+    .jcc-sidenavbase {
+      background-color: $theme-jcc-bg-color-lvl-0;
+      .usa-sidenavbase_sublist {
+        &.menu-level-1 {
+          background-color: $theme-jcc-bg-color-lvl-1;
+        }
+        .menu-level-2 {
+          background-color: $theme-jcc-bg-color-lvl-2;
+        }
+        .menu-level-3 {
+          background-color: $theme-jcc-bg-color-lvl-3;
+        }
+        .menu-level-4 {
+          background-color: $theme-jcc-bg-color-lvl-4;
+        }
+      }
+      a {
+        color: $theme-jcc-link-color;
+        &.usa-current{
+          color: $theme-jcc-link-current-color;
+          &:after {
+            background-color: $theme-jcc-link-after-color;
+          }
+        }
+        &:hover {
+          background-color: $theme-jcc-link-hover-bg-color;
+        }
+      }
+      .usa-sidenavbase_sublist{
+        a {
+          color: $theme-jcc-link-sublist-color;
+          &.usa-current{
+            color: $theme-jcc-link-sublist-current-color;
+          }
+          &:hover {
+            background-color: $theme-jcc-link-sublist-hover-bg-color;
+            color: $theme-jcc-link-sublist-hover-color;
+          }
+        }
+      }
+      .icon {
+        fill: $theme-jcc-icon-fill;
+      }
+      .usa-sidenavbase__item,
+      .usa-sidenav__item{
+        border-top: 1px solid $theme-jcc-border-top-color;
+      }
+    }
+  }
+}
