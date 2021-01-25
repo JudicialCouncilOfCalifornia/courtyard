@@ -39,10 +39,11 @@
   }
 }
 
-.jcc-card__img {
-  @include aspect-ratio(16, 9);
-}
+.jcc-card__media {
+  @include add-aspect("16x9");
 
-.jcc-card__vid {
-  @include aspect-ratio(16, 9);
+  img {
+    @include u-maxw("none");
+    @include u-width("full");
+  }
 }
