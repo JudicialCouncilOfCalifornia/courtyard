@@ -15,36 +15,33 @@
   {% endif %}
 
   <div class="jcc-card__body">
-    {% if card.excerpt_img %}
-      <div class="jcc-card__img">
+    {% if card.excerpt_img or card.excerpt_vid %}
+      <div class="jcc-card__media">
         <div class="content">
-          {% if card.url and not card.excerpt_img_only %}
-            <a class="usa-link" href="{{ card.url }}">
+          {% if card.excerpt_img %}
+            {% if card.url and not card.excerpt_img_only %}
+              <a class="usa-link" href="{{ card.url }}">
+                {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+              </a>
+            {% elseif card.id %}
+              <span data-a11y-toggle="{{ card.id }}">
+                {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+              </span>
+            {% else %}
               {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
-            </a>
-          {% elseif card.id %}
-            <span data-a11y-toggle="{{ card.id }}">
-              {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
-            </span>
-          {% else %}
-            {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
-    {% if card.excerpt_vid %}
-      <div class="jcc-card__vid">
-        <div class="content">
-          {% if card.url %}
-            <a class="usa-link" href="{{ card.url }}">
+            {% endif %}
+          {% elseif card.excerpt_vid %}
+            {% if card.url %}
+              <a class="usa-link" href="{{ card.url }}">
+                {{ card.excerpt_vid }}
+              </a>
+            {% elseif card.id %}
+              <span data-a11y-toggle="{{ card.id }}">
+                {{ card.excerpt_vid }}
+              </span>
+            {% else %}
               {{ card.excerpt_vid }}
-            </a>
-          {% elseif card.id %}
-            <span data-a11y-toggle="{{ card.id }}">
-              {{ card.excerpt_vid }}
-            </span>
-          {% else %}
-            {{ card.excerpt_vid }}
+            {% endif %}
           {% endif %}
         </div>
       </div>
