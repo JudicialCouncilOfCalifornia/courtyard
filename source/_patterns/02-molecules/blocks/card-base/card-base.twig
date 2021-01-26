@@ -58,12 +58,12 @@
         {{ card.body }}
       </div>
     {% endif %}
-    {% if card.footer and card.action.style == '' %}
+    {% if card.action.style == 'footer' %}
       <div class="usa-card__footer">
-        {% include '@atoms/buttons/button.twig' with {
-          button: {
+        {% include '@atoms/buttons/link-button.twig' with {
+          link_button: {
             style: card.footer.button.style,
-            action: card.footer.button.action,
+            url: card.action.url,
             text: card.footer.button.text,
             aria_label: aria_label|spaceless,
           }

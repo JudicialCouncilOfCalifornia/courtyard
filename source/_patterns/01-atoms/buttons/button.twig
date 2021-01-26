@@ -5,6 +5,6 @@
   'usa-button--' ~ button.style|default('primary'),
 ]|merge(button.classes|default([''])) %}
 
-<button {{ attributes.addClass(classes) }} {% if button.aria_label %}aria_label="{{ button.aria_label }}"{% endif %}{% if button.action %} onclick="{{ button.action }}"{% endif %}>
+<button {{ attributes.addClass(classes) }} {% if button.aria_label %}aria_label="{{ button.aria_label }}"{% endif %}{% if button.action %}{% endif %}>
   {{- button.text -}}
 </button>

@@ -7,9 +7,9 @@ card:
     alt: "A placeholder image"
   footer:
     button:
-      style: #"unstyled" ... plain text alternative or any appropriate USWDS styling, default is "primary"
-      action: location.href='https://www.courts.ca.gov' #optional onclick handler for footer button
+      style: #"primary|secondary|unstyled" ... plain text alternative or any appropriate USWDS styling, default is "primary"
       text: "Read More"
+      #url is provided through action variant variable
   aria_label: #custom action description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
   # Variants
   width: #1-12 ... card width size in USWDS grid increments, default is 4 (3 column widths)
@@ -17,8 +17,8 @@ card:
   heading_style: #"serif|sans" ... adjusts heading style without additional classes, default is "serif"
   media_style: #"icon" ... symbol micro-theme for image, default support is 16x9 cropped photo
   action:
-    style: #"card|media|title" ... alternatives to footer button, media will also set title link
-    url: #link attribute (e.g. "https://www.courts.ca.gov")
+    style: "footer" #"footer|card|media|title" ... clickable action or else do not specify
+    url: "https://www.courts.ca.gov" #link attribute
   flag_position: #"left|right" ... optional media positioning
   borderless: #"true|false" ... removes border with general adjustments, default is "false"
   elevated: #"true|false" ... optional drop shadow, default is "false"
