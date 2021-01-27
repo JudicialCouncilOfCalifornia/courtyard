@@ -333,7 +333,9 @@ $aspect-width: 16;
 
 @mixin dark-background-link(
   $dark-background-link-color: accent-warm-light,
-  $dark-background-link-color-hover: accent-warm
+  $dark-background-link-color-hover: accent-warm,
+  $dark-background-link-color-active: accent-warm,
+  $dark-background-link-color-visited: accent-warm
 ) {
   @include u-text($dark-background-link-color);
 
@@ -343,7 +345,7 @@ $aspect-width: 16;
 
   &:active,
   &:focus {
-    @include u-text($dark-background-link-color-hover);
+    @include u-text($dark-background-link-color-active);
   }
 
   &:visited {

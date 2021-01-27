@@ -1,0 +1,87 @@
+// SCHEME PROPERTIES
+
+$schemes: (
+  simple: (
+    dash-color: "gold-30v",
+    dash-position: "below",
+    dash-width: 3rem,
+    aside-callout: "block",
+    aside-callout-reverse-color: "primary"
+  ),
+  local: (
+    dash-color: "mint-cool-50v",
+    dash-position: "left-right",
+    dash-width: null,
+    aside-callout: "italic",
+    aside-callout-reverse-color: "white"
+  )
+);
+
+// Generate a style for each scheme
+
+@each $scheme, $map in $schemes {
+  $theme-jcc-dash-color: map-get($map, dash-color);
+  $theme-jcc-dash-position: map-get($map, dash-position);
+  $theme-jcc-dash-width: map-get($map, dash-width);
+  $theme-jcc-aside-callout: map-get($map, aside-callout);
+  $theme-jcc-aside-callout-reverse-color: map-get($map, aside-callout-reverse-color);
+  $theme-link-reverse-color: "accent-warm-light" !default;
+  $theme-link-reverse-hover-color: "accent-warm" !default;
+  $theme-link-reverse-active-color: "accent-warm" !default;
+  $theme-jcc-reverse-dash-color: "accent-warm" !default;
+
+  .jcc-scheme-#{$scheme} {
+    .jcc-section-base {
+      &__container:first-child {
+        .jcc-header-group {
+          &__title {
+            @include u-text(no-italic);
+            @include has-dash-position(
+              $dash-color: $theme-jcc-dash-color,
+              $dash-position: $theme-jcc-dash-position,
+              $dash-width: $theme-jcc-dash-width
+            );
+          }
+        }
+
+        .jcc-section-base__aside {
+          &-content {
+            @include u-text(no-italic);
+            @extend .jcc-callout__#{$theme-jcc-aside-callout};
+          }
+        }
+      }
+
+      &.jcc-section-base__background--dark
+        .jcc-section-base__container:first-child
+        .jcc-section-base__aside-content {
+        @include u-text($theme-jcc-aside-callout-reverse-color);
+        a {
+          @include dark-background-link(
+            $dark-background-link-color: $theme-link-reverse-color,
+            $dark-background-link-color-hover: $theme-link-reverse-hover-color,
+            $dark-background-link-color-active: $theme-link-reverse-active-color,
+            $dark-background-link-color-visited: $theme-jcc-reverse-dash-color
+          );
+        }
+      }
+      &.jcc-section-base__layout--center .jcc-section-base__container:first-child {
+        .jcc-header-group {
+          &__title {
+            @if $scheme == simple {
+              $theme-jcc-dash-position: "below-center";
+              &:after {
+                all: unset;
+              }
+            }
+            @include has-dash-position(
+              $dash-color: $theme-jcc-dash-color,
+              $dash-position: $theme-jcc-dash-position,
+              $dash-width: $theme-jcc-dash-width
+            );
+          }
+        }
+      }
+    }
+  }
+}

@@ -50,5 +50,30 @@ if (themeSwitcher.length > 0) {
       toggle("sg-colors-srl", "none");
       themeSwitcher.value = theme;
     }
+
+    $(document).ready(function() {
+      var current_scheme = $("div[class*='jcc-scheme-']")
+        .first()
+        .attr("class")
+        .replace("jcc-scheme-", "");
+      $(".jcc-themebar__scheme").each(function() {
+        if ($(this).data("scheme") == current_scheme) {
+          $(this).css("color", "white");
+        }
+      });
+    });
+    $(".jcc-themebar__scheme").on("click", function() {
+      var scheme = $(this).data("scheme");
+      $(this).css("color", "white");
+      $(this)
+        .siblings()
+        .css("color", "#808080");
+      $("div[class*='jcc-scheme-']").each(function() {
+        var current_class = $(this).attr("class");
+        $(this)
+          .removeClass(current_class)
+          .addClass("jcc-scheme-" + scheme);
+      });
+    });
   }
 }

@@ -1,0 +1,26 @@
+section_base:
+  scheme: local # local, professional
+  layout: center # default, center
+  background: light # light, dark
+  sections:
+    - headergroup:
+        brow: 'Category'
+        title: 'A longer header to test'
+        lead: |
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet purus arcu, eget tincidunt odio
+          laoreet ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        body: |
+          <p>Pellentesque habitant morbi <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis
+          egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+          Nulla convallis sit amet turpis vehicula blandit. Cras iaculis sit amet mauris at sollicitudin.
+          Suspendisse placerat dolor erat, vel egestas elit condimentum eu. In lacinia dignissim vestibulum.
+          Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis.
+          Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper
+          auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget.
+          Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper.
+          Vivamus consectetur pulvinar molestie.</p>
+      aside:
+        content: |
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+          Nulla convallis sit amet turpis vehicula blandit.'
