@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Available variables typically provided from Drupal book navigation:
+ * TODO: POPULATE VARS (+BASE SIDE NAV)
+ */
+#}
+{% set stepindicatorbase_classes = [
+  'jcc-stepindicatorbase',
+    step_indicator_base.theme_classes ? step_indicator_base.theme_classes
+]|merge(step_indicator_base.stepindicator_classes|default([''])) %}
+
+{% set current_item = 0 %}
+
+{% import _self as stepindicatorbase %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+{% set tag = side_nav_base.tag|default('h2') %}
+
+<nav aria-label="{{ step_indicator_base.aria_label }}" class="side-nav-base-scheme-{{ step_indicator_base.scheme }}">
+  <{{ tag }} class="jcc-stepindicatorbase__title">{{ step_indicator_base.header }}</{{ tag }}>
+  {{ stepindicatorbase.stepindicatorbase_links(step_indicator_base.items, attributes, stepindicatorbase_classes|join(' ')|trim, 0, active_trail, current_item) }}
+</nav>
+
+{% macro stepindicatorbase_links(items, attributes, stepindicatorbase_classes, menu_level, active_trail, current_item) %}
+  {% import _self as stepindicatorbase %}
+  {% if items %}
+      <div class="jcc-step-indicator-base usa-step-indicator" aria-label="progress">
+          <ol class="usa-step-indicator__segments">
+              {% for key, item in items %}
+                  {% set elem_status_class =  "" %}
+                  {% if item.status %}
+                      {% set elem_status_class =  "usa-step-indicator__segment--#{item.status}" %}
+                      {% if item.status == "current" %}
+                          {% set current_item = key %}
+                      {% endif %}
+                  {% endif %}
+                  <li class="usa-step-indicator__segment {{ elem_status_class }}">
+                      <span class="usa-step-indicator__segment-label">{{ item.label }}<span class="usa-sr-only">{{ item.status }}</span></span>
+                  </li>
+              {% endfor %}
+          </ol>
+          <div class="usa-step-indicator__header">
+              <h2 class="usa-step-indicator__heading">
+                  <span class="usa-step-indicator__heading-counter">
+                    <span class="usa-sr-only">Step</span>
+                    <span class="usa-step-indicator__current-step">{{ current_item + 1}}</span>
+                    <span class="usa-step-indicator__total-steps">of {{ items|length }}</span>
+                  </span>
+                  <span class="usa-step-indicator__heading-text">{{ items[current_item].label }}</span>
+              </h2>
+          </div>
+      </div>
+
+  {% endif %}
+{% endmacro %}
