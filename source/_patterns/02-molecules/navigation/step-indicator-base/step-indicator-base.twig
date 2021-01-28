@@ -6,7 +6,9 @@
  */
 #}
 {% set stepindicatorbase_classes = [
-  'jcc-stepindicatorbase',
+    'jcc-step-indicator-base',
+    'usa-step-indicator',
+    step_indicator_base.counters ? 'usa-step-indicator--counters',
     step_indicator_base.theme_classes ? step_indicator_base.theme_classes
 ]|merge(step_indicator_base.stepindicator_classes|default([''])) %}
 
@@ -22,24 +24,29 @@
 
 <nav aria-label="{{ step_indicator_base.aria_label }}" class="side-nav-base-scheme-{{ step_indicator_base.scheme }}">
   <{{ tag }} class="jcc-stepindicatorbase__title">{{ step_indicator_base.header }}</{{ tag }}>
-  {{ stepindicatorbase.stepindicatorbase_links(step_indicator_base.items, attributes, stepindicatorbase_classes|join(' ')|trim, 0, active_trail, current_item) }}
+  {{ stepindicatorbase.stepindicatorbase_links(step_indicator_base.items, attributes, stepindicatorbase_classes|join(' ')|trim, 0, active_trail, current_item, step_indicator_base.alignment, step_indicator_base.labels) }}
 </nav>
 
-{% macro stepindicatorbase_links(items, attributes, stepindicatorbase_classes, menu_level, active_trail, current_item) %}
+{% macro stepindicatorbase_links(items, attributes, stepindicatorbase_classes, menu_level, active_trail, current_item, alignment, labels) %}
   {% import _self as stepindicatorbase %}
   {% if items %}
-      <div class="jcc-step-indicator-base usa-step-indicator" aria-label="progress">
+      {% if alignment %}
+          {% set alignment_class =  "item-alignment-#{alignment}"  %}
+      {% endif %}
+      <div class="{{ stepindicatorbase_classes }}" aria-label="progress">
           <ol class="usa-step-indicator__segments">
               {% for key, item in items %}
-                  {% set elem_status_class =  "" %}
+                  {% set elem_status_class =  "usa-step-indicator__segment" %}
                   {% if item.status %}
-                      {% set elem_status_class =  "usa-step-indicator__segment--#{item.status}" %}
+                      {% set elem_status_class =  "usa-step-indicator__segment usa-step-indicator__segment--#{item.status}" %}
                       {% if item.status == "current" %}
                           {% set current_item = key %}
                       {% endif %}
                   {% endif %}
-                  <li class="usa-step-indicator__segment {{ elem_status_class }}">
-                      <span class="usa-step-indicator__segment-label">{{ item.label }}<span class="usa-sr-only">{{ item.status }}</span></span>
+                  <li class="{{ elem_status_class }} alignment_class">
+                      {% if labels == "show" %}
+                          <span class="usa-step-indicator__segment-label">{{ item.label }}<span class="usa-sr-only">{{ item.status }}</span></span>
+                      {% endif %}
                   </li>
               {% endfor %}
           </ol>
