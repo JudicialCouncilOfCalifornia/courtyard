@@ -8,11 +8,18 @@
 {% set stepindicatorbase_classes = [
     'jcc-step-indicator-base',
     'usa-step-indicator',
-    step_indicator_base.counters ? 'usa-step-indicator--counters',
-    step_indicator_base.theme_classes ? step_indicator_base.theme_classes
+    step_indicator_base.centered_layout ? 'usa-step-indicator--center'
 ]|merge(step_indicator_base.stepindicator_classes|default([''])) %}
 
 {% set current_item = 0 %}
+
+{% if step_indicator_base.theme_classes.counters %}
+    {% if step_indicator_base.theme_classes.counter_size == "small" %}
+        {% set stepindicatorbase_classes = stepindicatorbase_classes|merge(["usa-step-indicator--counters-sm"]) %}
+    {% else %}
+        {% set stepindicatorbase_classes = stepindicatorbase_classes|merge(["usa-step-indicator--counters"]) %}
+    {% endif %}
+{% endif %}
 
 {% import _self as stepindicatorbase %}
 {#
@@ -20,11 +27,11 @@
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 
-{% set tag = side_nav_base.tag|default('h2') %}
+{% set tag = step_indicator_base.tag|default('h2') %}
 
-<nav aria-label="{{ step_indicator_base.aria_label }}" class="side-nav-base-scheme-{{ step_indicator_base.scheme }}">
+<nav aria-label="{{ step_indicator_base.aria_label }}" class="step-indicator-base-scheme-{{ step_indicator_base.scheme }}">
   <{{ tag }} class="jcc-stepindicatorbase__title">{{ step_indicator_base.header }}</{{ tag }}>
-  {{ stepindicatorbase.stepindicatorbase_links(step_indicator_base.items, attributes, stepindicatorbase_classes|join(' ')|trim, 0, active_trail, current_item, step_indicator_base.alignment, step_indicator_base.labels) }}
+  {{ stepindicatorbase.stepindicatorbase_links(step_indicator_base.items, attributes, stepindicatorbase_classes|join(' ')|trim, 0, active_trail, current_item, step_indicator_base.theme_classes.alignment, step_indicator_base.theme_classes.labels) }}
 </nav>
 
 {% macro stepindicatorbase_links(items, attributes, stepindicatorbase_classes, menu_level, active_trail, current_item, alignment, labels) %}
