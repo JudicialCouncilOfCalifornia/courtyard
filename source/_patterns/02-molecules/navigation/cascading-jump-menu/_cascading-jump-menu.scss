@@ -4,15 +4,20 @@
   @include u-align-items("align-end");
 
   .jcc-cascading-jump-menu__form {
-    @include u-margin-right(1);
     @include u-flex(1);
+
+    @include at-media(mobile-lg) {
+      @include u-margin-right(1);
+    }
 
     .usa-select {
       @include u-maxw(none);
       @include u-margin-bottom(1);
 
       &:last-child {
-        @include u-margin-bottom(0);
+        @include at-media(mobile-lg) {
+          @include u-margin-bottom(0);
+        }
       }
     }
   }
