@@ -1,0 +1,76 @@
+{% set card_classes = [
+  'usa-card',
+  card.flag_position == 'left' ? 'usa-card--flag' : '',
+  card.flag_position == 'right' ? 'usa-card--flag usa-card--media-right' : '',
+  card.width ? 'desktop:grid-col-' ~ card.width : 'desktop:grid-col-4',
+  'jcc-card',
+  card.media_style ? 'jcc-card--' ~ card.media_style : '',
+  card.theme ? card.theme : '',
+]|merge(card.card_classes|default([''])) %}
+
+{% set container_classes = [
+  card.borderless ? 'jcc-border--borderless' : '',
+  card.elevated ? 'jcc-shadow' : '',
+]|merge(card.container_classes|default([''])) %}
+
+{% set tag = card.heading_tag|default('h2') %}
+
+{% set aria_label %}
+  {% if card.aria_label %}{{ card.aria_label }}{% else %}Read more about {{ card.title }}{% endif %}
+{% endset %}
+
+<div class="{{ card_classes|join(' ')|trim }} jcc-scheme-simple">
+  {% if card.action.style == 'card' %}
+    <a href="{{ card.action.url }}" class="jcc-card--action-card" aria_label="{{aria_label|spaceless}}">
+  {% endif %}
+  <div class="usa-card__container {{ container_classes|join(' ')|trim }}">
+    {% if card.title %}
+      <header class="usa-card__header">
+        {% if card.brow %}
+          <div class="jcc-brow">{{ card.brow }}</div>
+        {% endif %}
+        <{{ tag }} class="usa-card__heading {{ card.heading_style ? 'jcc-card__heading--' ~ card.heading_style : '' }}">
+          {% if card.action.style == 'title' or card.action.style == 'media' %}
+            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
+          {% endif %}
+            {{ card.title }}
+          {% if card.action.style == 'title' or card.action.style == 'media' %}
+            </a>
+          {% endif %}
+        </{{ tag }}>
+      </header>
+    {% endif %}
+    {% if card.media %}
+      <div class="usa-card__media">
+        <div class="usa-card__img {{ card.media_style ? 'jcc-image--media-' ~ card.media_style : '' }}">
+          {% if card.action.style == 'media' %}
+            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
+          {% endif %}
+            {% include '@atoms/image/image.twig' with { image: card.media } %}
+          {% if card.action.style == 'media' %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    {% if card.body %}
+      <div class="usa-card__body">
+        {{ card.body }}
+      </div>
+    {% endif %}
+    {% if card.action.style == 'footer' %}
+      <div class="usa-card__footer">
+        {% include '@atoms/buttons/link-button.twig' with {
+          link_button: {
+            style: card.footer.button.style,
+            url: card.action.url,
+            text: card.footer.button.text,
+          }
+        } %}
+      </div>
+    {% endif %}
+  </div>
+  {% if card.action.style == 'card' %}
+    </a>
+  {% endif %}
+</div>

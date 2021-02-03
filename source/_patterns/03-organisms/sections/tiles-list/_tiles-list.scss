@@ -11,7 +11,7 @@
       @include at-media-max(desktop) {
         @include has-dash-position(
           $dash-color: "mint-cool-50v",
-          $dash-position: above-center,
+          $dash-position: below-center,
           $dash-width: 5rem
         );
       }

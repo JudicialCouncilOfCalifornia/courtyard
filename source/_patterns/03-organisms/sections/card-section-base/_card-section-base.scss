@@ -1,0 +1,27 @@
+.jcc-cards {
+  .jcc-header-group {
+    max-width: 60rem;
+  }
+
+  &.jcc-cards--centered {
+    .jcc-header-group,
+    .jcc-card {
+      @include u-margin-x(auto);
+    }
+  }
+
+  &.jcc-cards-background--dark {
+    @include background-color();
+
+    .jcc-cards__row {
+      @include u-text(gray-90);
+
+      a,
+      a:visited,
+      a:active,
+      a:focus {
+        @include u-text(blue-cool-60v);
+      }
+    }
+  }
+}
