@@ -1,0 +1,87 @@
+@mixin background-color(
+  $background-color: primary,
+  $background-text-color: "white",
+  $background-link-color: "accent-warm-light",
+  $background-link-color-hover: "accent-warm",
+  $background-link-color-active: "accent-warm"
+) {
+  @include u-bg($background-color);
+  @include u-text($background-text-color);
+
+  a {
+    @include dark-background-link(
+      $dark-background-link-color: $background-link-color,
+      $dark-background-link-color-hover: $background-link-color-hover,
+      $dark-background-link-color-active: $background-link-color-active
+    );
+  }
+}
+
+@mixin dark-background-link(
+  $dark-background-link-color: accent-warm-light,
+  $dark-background-link-color-hover: accent-warm,
+  $dark-background-link-color-active: accent-warm
+) {
+  @include u-text($dark-background-link-color);
+
+  &:hover {
+    @include u-text($dark-background-link-color-hover);
+  }
+
+  &:active,
+  &:focus {
+    @include u-text($dark-background-link-color-active);
+  }
+
+  &:visited {
+    @include u-text($dark-background-link-color-active);
+  }
+}
+
+@mixin dark-background-text() {
+  @include u-text("white");
+}
+
+@mixin dark-background-link-button($dark-background-link-color: accent-warm-light) {
+  @include u-text($dark-background-link-color);
+}
+
+@mixin dark-background($dark-background-color: primary) {
+  @include u-bg($dark-background-color);
+  @include u-text("white");
+
+  .jcc-header-group__title,
+  .jcc-title,
+  .jcc-hero__brow {
+    @include u-text("white");
+  }
+
+  a {
+    @include dark-background-link();
+  }
+}
+
+@mixin light-background-link() {
+  @include u-text(info-darker);
+
+  &:hover {
+    @include u-text("cyan-60v");
+  }
+
+  &:active,
+  &:focus {
+    @include u-text("cyan-60v");
+  }
+
+  &:visited {
+    @include u-text(info-darker);
+  }
+}
+
+@mixin light-background($light-background-color: secondary-lighter) {
+  @include u-bg($light-background-color);
+
+  > a {
+    @include light-background-link();
+  }
+}

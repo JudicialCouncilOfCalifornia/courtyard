@@ -1,0 +1,83 @@
+// SCHEME PROPERTIES
+
+$schemes: (
+  simple: (
+    card-border-color: "gray-10",
+    card-border-radius: "lg",
+    card-border-width: 2px,
+    card-flag-minwidth: 15rem,
+    card-flag-image-width: 15rem,
+    card-font-family: (
+      "Lato",
+      sans-serif
+    )
+  ),
+  professional: (
+    card-border-color: "gray-10",
+    card-border-radius: "lg",
+    card-border-width: 2px,
+    card-flag-minwidth: 15rem,
+    card-flag-image-width: 15rem,
+    card-font-family: (
+      "Lato",
+      sans-serif
+    )
+  )
+);
+
+// Generate a style for each scheme
+
+@each $scheme, $map in $schemes {
+  $theme-card-border-color: map-get($map, card-border-color);
+  $theme-card-border-radius: map-get($map, card-border-radius);
+  $theme-card-border-width: map-get($map, card-border-width);
+  $theme-card-flag-image-width: map-get($map, card-flag-image-width);
+  $theme-card-font-family: map-get($map, card-font-family);
+
+  .jcc-scheme-#{$scheme} {
+    &.jcc-card {
+      &:not(.jcc-card--icon) {
+        .usa-card__container {
+          @include u-border($theme-card-border-width, $theme-card-border-color);
+          @include u-radius($theme-card-border-radius);
+
+          .usa-card__media {
+            @include u-radius-top($theme-card-border-radius);
+          }
+        }
+      }
+
+      &.usa-card--flag {
+        .usa-card__header,
+        .usa-card__body,
+        .usa-card__footer {
+          margin-left: $theme-card-flag-image-width;
+        }
+
+        .usa-card__media {
+          @include u-radius(0, !important);
+          @include u-radius-left($theme-card-border-radius);
+          width: $theme-card-flag-image-width;
+        }
+
+        &.usa-card--media-right {
+          .usa-card__header,
+          .usa-card__body,
+          .usa-card__footer {
+            @include u-margin-left(0);
+            margin-right: $theme-card-flag-image-width;
+          }
+
+          .usa-card__media {
+            @include u-radius(0, !important);
+            @include u-radius-right($theme-card-border-radius);
+          }
+        }
+      }
+
+      .usa-card__container {
+        font-family: $theme-card-font-family;
+      }
+    }
+  }
+}

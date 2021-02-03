@@ -5,7 +5,7 @@ $trial: true;
 // -------------------------------------
 // Import individual theme settings
 @import "../_patterns/00-protons/base/global";
-@import "../_patterns/00-protons/base/mixins";
+@import "../_patterns/00-protons/base/mixins/*.scss";
 @import "../_patterns/00-protons/trial/global-trial";
 
 // -------------------------------------

@@ -1,0 +1,8 @@
+card:
+  action:
+    style: "media"
+    url: href="https://www.courts.ca.gov"
+  media:
+    src: "https://placeimg.com/900/600/arch"
+    alt: "A placeholder image"
+

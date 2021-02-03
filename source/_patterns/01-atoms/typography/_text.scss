@@ -152,6 +152,11 @@ a.usa-link,
   @include has-dash();
 }
 
+.jcc-brow {
+  @include u-margin-bottom(2);
+  @include u-font(sans, 6);
+}
+
 .jcc-title {
   @include u-text(primary-dark);
   @include has-dash();

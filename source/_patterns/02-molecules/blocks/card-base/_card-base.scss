@@ -1,0 +1,87 @@
+.jcc-card {
+  .usa-card__header {
+    h2,
+    h3 {
+      @include u-font(heading, 11);
+      @include u-font-weight(normal);
+
+      &.jcc-card__heading--sans {
+        @include u-font(sans, 11);
+      }
+    }
+
+    a {
+      @include u-text("no-underline");
+
+      &:hover {
+        @include u-text("underline");
+      }
+    }
+  }
+
+  &:not(.usa-card--flag) {
+    .usa-card__media {
+      @include add-aspect("16x9");
+    }
+  }
+}
+
+.jcc-card--icon {
+  .usa-card__container {
+    @include u-padding-x(2);
+    @include u-padding-top(2);
+  }
+
+  .usa-card__header,
+  .usa-card__body,
+  .usa-card__footer {
+    @include u-padding-left(0, !important);
+  }
+  .usa-card__header {
+    @include u-padding-top(1);
+  }
+  .usa-card__media {
+    @include u-height(auto, !important);
+    @include u-overflow(auto, !important);
+    @include u-padding(0, !important);
+  }
+
+  &.usa-card--flag {
+    .usa-card__header,
+    .usa-card__body,
+    .usa-card__footer {
+      @include u-margin-left(5, !important);
+      @include u-padding-left(2, !important);
+    }
+
+    .usa-card__media {
+      @include u-width(5, !important);
+      @include u-margin-top(2);
+      @include u-margin-left(2);
+      @include u-padding-top(1);
+    }
+
+    &.usa-card--media-right {
+      .usa-card__header,
+      .usa-card__body,
+      .usa-card__footer {
+        @include u-margin-left(0, !important);
+        @include u-margin-right(5, !important);
+        @include u-padding-left(0, !important);
+        @include u-padding-right(2);
+      }
+
+      .usa-card__media {
+        @include u-margin-left(0);
+        @include u-margin-right(2);
+      }
+    }
+  }
+}
+
+.jcc-card--action-card {
+  a {
+    color: inherit;
+    @include u-text("no-underline");
+  }
+}
