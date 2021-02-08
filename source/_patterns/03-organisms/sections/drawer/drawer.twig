@@ -1,0 +1,12 @@
+<div class="jcc-drawer" visible="visible">
+  <div class="jcc-drawer__inner">
+    {% if drawer.feedback %}
+      {% include '@molecules/blocks/feedback/feedback.twig' with {
+        feedback: drawer.feedback
+      } %}
+    {% endif %}
+    {% if drawer.chatbot %}
+      {% include '@molecules/blocks/chatbot/chatbot.twig' %}
+    {% endif %}
+  </div>
+</div>

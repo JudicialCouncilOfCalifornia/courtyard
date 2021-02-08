@@ -1,0 +1,8 @@
+drawer:
+  feedback:
+    id: "feedback-id"
+    button:
+      title: "Was this helpful?"
+    form:
+      children: "Form Goes Here from Drawer"
+  chatbot: true

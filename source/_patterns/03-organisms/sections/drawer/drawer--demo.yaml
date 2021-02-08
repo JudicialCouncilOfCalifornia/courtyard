@@ -1,0 +1,9 @@
+drawer:
+  feedback:
+    id: "feedback-id"
+    button:
+      title: "Was this helpful?"
+    form:
+      attributes: "class='webform drawer'"
+      children: "Form Goes Here"
+  chatbot: true
