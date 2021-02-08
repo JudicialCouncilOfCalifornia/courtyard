@@ -5,6 +5,7 @@
   justify-content: flex-end;
   padding: units(2.5);
   z-index: z("top");
+  transition: opacity 1s;
 
   // Visibility controlled by js on scroll.
   &:not([visible]) {
@@ -13,9 +14,8 @@
 
   &[visible] {
     opacity: 1;
-    transition: opacity 1s;
-    transition-delay: 1s;
   }
+
   // Space and wrap drawer items gracefully.
   &__inner {
     display: flex;

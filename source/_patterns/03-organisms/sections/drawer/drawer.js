@@ -4,19 +4,13 @@ const $feedback_trigger = $('[data-feedback^="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $drawer = $(".jcc-drawer");
 const $feedback_dialog = $('[data-feedback="dialog"]');
-// Disable initial visibility with js for graceful degredation.
-$drawer.removeAttr("visible");
 
-const isScrolledToBottom = ($scrollPosition, $windowHeight, $footPosition) => {
-  const $windowHeightHalf = $windowHeight / 2;
-  const $scrollDiff = $scrollPosition + $windowHeight - $windowHeightHalf;
-  const $pageHeightHalf = $footPosition / 2;
-  return $scrollDiff >= $pageHeightHalf;
+const isScrolledToBottom = ($offset = 0) => {
+  return $window.scrollTop() + $window.height() + $offset >= $(document).height();
 };
 
-const pageIsShorterThanWindow = ($scrollPosition, $windowHeight, $footPosition) => {
-  const $scrollDiff = $footPosition - $windowHeight;
-  return $scrollDiff > $scrollPosition;
+const pageIsShorterThanWindow = ($offset = 0) => {
+  return $(document).height() - $offset <= $window.height();
 };
 
 const isSmallScreen = () => {
@@ -24,15 +18,16 @@ const isSmallScreen = () => {
   return mql.matches ? true : false;
 };
 
+// Disable initial visibility with js for graceful degredation.
+if (!pageIsShorterThanWindow()) {
+  $drawer.removeAttr("visible");
+}
+
 // Scroll.
 $window.on("scroll", function() {
-  const $scrollPosition = $window.scrollTop();
-  const $windowHeight = $window.height();
-  const $footPosition = $("footer").offset().top;
-  if (
-    (isScrolledToBottom($scrollPosition, $windowHeight, $footPosition) && isSmallScreen()) ||
-    isSmallScreen() == false
-  ) {
+  const $drawerHeight = $drawer.height();
+
+  if ((isScrolledToBottom($drawerHeight) && isSmallScreen()) || isSmallScreen() == false) {
     $drawer.attr("visible", "visible");
   } else {
     $drawer.removeAttr("visible");
