@@ -1,6 +1,7 @@
 # Background variants
-#  - has-background-color--dark
-#  - has-background-color--light--secondary
+# - has-background-color--dark
+# - has-background-color--light--secondary
+# - has-background-image
 #
 # Column variants
 # - has-one-column
@@ -13,6 +14,8 @@
 # - viewport-height
 
 hero:
+  background-variant: ""
+  background_parallax: #set 'true' to apply parallax effect to has-background-image variant
   lowercase_brow: false
   brow: "Brow Description" # Not in used by SRL
   title: "Serving your papers"
