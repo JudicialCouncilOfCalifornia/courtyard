@@ -1,5 +1,4 @@
 // Elements.
-const $window = $(window);
 const $feedback_trigger = $('[data-feedback^="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $feedback_dialog = $('[data-feedback="dialog"]');

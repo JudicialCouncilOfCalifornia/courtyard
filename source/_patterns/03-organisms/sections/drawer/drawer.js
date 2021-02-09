@@ -6,7 +6,10 @@ const $drawer = $(".jcc-drawer");
 const $feedback_dialog = $('[data-feedback="dialog"]');
 
 const isScrolledToBottom = ($offset = 0) => {
-  return $window.scrollTop() + $window.height() + $offset >= $(document).height();
+  // Bottom is the bottom of the drawer's previous sibling.
+  const $bottom = $drawer.prev().offset().top + $drawer.prev().height();
+  // Scroll past the bottom to the offset, if any.
+  return $window.scrollTop() + $window.height() - $offset >= $bottom;
 };
 
 const pageIsShorterThanWindow = ($offset = 0) => {
@@ -25,9 +28,7 @@ if (!pageIsShorterThanWindow()) {
 
 // Scroll.
 $window.on("scroll", function() {
-  const $drawerHeight = $drawer.height();
-
-  if ((isScrolledToBottom($drawerHeight) && isSmallScreen()) || isSmallScreen() == false) {
+  if ((isScrolledToBottom($drawer.height() / 2) && isSmallScreen()) || isSmallScreen() == false) {
     $drawer.attr("visible", "visible");
   } else {
     $drawer.removeAttr("visible");
