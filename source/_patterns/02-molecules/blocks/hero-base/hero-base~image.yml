@@ -1,0 +1,25 @@
+# layout variants
+# - two-columns (default)
+# - three-columns
+# - center
+#
+# Background variants
+#  - light (default)
+#  - dark
+#
+# Image position variants
+#  - right (default)
+#  - background
+
+hero_base:
+  scheme: "local" # local, professional
+  layout_variant: "two-columns" # two-columns, three-columns, center
+  background_variant: "light" # light, dark
+  image_variant: "right" # right, background
+  brow: "Category"
+  title: "Serving your papers"
+  heading_tag: "H2"
+  lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
+  img:
+    src: "../../images/photos/alameda.jpg"
+    alt: "alt text image"

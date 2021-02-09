@@ -1,0 +1,83 @@
+{% set classes = [
+    'jcc-hero-base',
+    'jcc-hero-base--has-' ~ hero_base.layout_variant|default('two-columns'),
+    hero_base.background_variant ? 'jcc-hero-base--' ~ hero_base.background_variant : '',
+    hero_base.image_variant ? 'jcc-hero-base--has-banner-image-' ~ hero_base.image_variant : ''
+]|merge(hero_base.classes|default([''])) %}
+
+{% set heading_tag = hero_base.heading_tag|default('H2') %}
+
+{% if hero_base.button.style == 'inverse' %}
+    {% set button_style = 'inverse usa-button--outline' %}
+{% else %}
+    {% set button_style = hero_base.button.style|default('primary') %}
+{% endif %}
+
+<div class="jcc-scheme-{{ hero_base.scheme|default('simple') }}">
+    <div class="{{ classes|join(' ')|trim }}"{% if hero_base.id %} id="{{ hero_base.id }}"{% endif %}>
+        <div class="jcc-hero-base__container">
+            {% if hero_base.img %}
+                <div class="jcc-hero-base__banner-{{ hero_base.image_variant }}" style="background-image:url({{ hero_base.img.src }})">
+                    <img src="{{ hero_base.img.src }}" alt="{{ hero_base.img.alt }}">
+                </div>
+            {% endif %}
+            <div class="jcc-hero-base__content">
+                {% if hero_base.breadcrumbs %}
+                    {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
+                        breadcrumbs: hero_base.breadcrumbs
+                    } %}
+                {% endif %}
+
+                {% if hero_base.layout_variant != 'center' %}
+                    <div class="jcc-hero-base__columns">
+                        <div class="jcc-hero-base__column-left">
+                {% endif %}
+
+                {% if hero_base.brow %}
+                    <p class="jcc-hero-base__brow">{{ hero_base.brow }}</p>
+                {% endif %}
+
+                <{{ heading_tag }} class="jcc-hero-base__title{% if hero_base.title_variant %} jcc-hero-base__title--{{ hero_base.title_variant }}{% endif %}">
+                    {{- hero_base.title -}}
+                </{{ heading_tag }}>
+
+                {% if hero_base.lead %}
+                    <div class="jcc-hero-base__lead">{{ hero_base.lead }}</div>
+                {% endif %}
+
+                {% if hero_base.body %}
+                    <div class="jcc-hero-base__body">{{ hero_base.body }}</div>
+                {% endif %}
+
+                {% if not hero_base.secondary_body and hero_base.button %}
+                    {% set button = hero_base.button|merge({
+                        style: button_style
+                    }) %}
+
+                    {% include '@atoms/buttons/link-button.twig' with {
+                        link_button: button
+                    } only %}
+                {% endif %}
+                {% if hero_base.layout_variant != 'center' %}
+                    </div>
+                {% endif %}
+                {% if hero_base.secondary_body %}
+                    <div class="jcc-hero-base__column-right">
+                        {{ hero_base.secondary_body }}
+                        {% if hero_base.button %}
+                            {% set button = hero_base.button|merge({
+                                style: button_style
+                            }) %}
+
+                            {% include '@atoms/buttons/link-button.twig' with {
+                                link_button: button
+                            } only %}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% if hero_base.layout_variant != 'center' %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
