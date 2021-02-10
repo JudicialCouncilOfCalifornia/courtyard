@@ -159,6 +159,9 @@
       img {
         position: absolute;
         height: 150%;
+        @include at-media(tablet-lg) {
+          height: auto;
+        }
       }
     }
   }
