@@ -17,7 +17,7 @@ const pageIsShorterThanWindow = ($offset = 0) => {
 };
 
 const isSmallScreen = () => {
-  const mql = window.matchMedia("(max-width: 40em)");
+  const mql = window.matchMedia("(max-width: 1199px)");
   return mql.matches ? true : false;
 };
 
@@ -32,6 +32,18 @@ $window.on("scroll", function() {
     $drawer.attr("visible", "visible");
   } else {
     $drawer.removeAttr("visible");
+  }
+  // Prevent obscuring content behind drawer.
+  if (isScrolledToBottom()) {
+    $drawer.css("padding-bottom", "1.25rem");
+
+    if (isSmallScreen()) {
+      $drawer.css("height", "auto");
+      $(".jcc-drawer__inner").css("height", "auto");
+    }
+  } else {
+    $drawer.css("height", "0").css("padding-bottom", "0");
+    $(".jcc-drawer__inner").css("height", "0");
   }
 });
 
