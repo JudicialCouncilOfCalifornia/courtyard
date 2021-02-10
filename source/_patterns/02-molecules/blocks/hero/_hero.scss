@@ -136,17 +136,21 @@
   @extend .jcc-hero--has-background-color--dark;
 
   .jcc-hero__media {
-    @include cover-image();
+    @include u-display(none);
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+      @include cover-image();
 
-    &::after {
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+      &::after {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+      }
     }
   }
 
@@ -154,7 +158,10 @@
     .jcc-hero__media {
       img {
         position: absolute;
-        height: auto;
+        height: 150%;
+        @include at-media(tablet-lg) {
+          height: auto;
+        }
       }
     }
   }
