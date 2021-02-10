@@ -159,7 +159,7 @@
       img {
         position: absolute;
         height: 150%;
-        @include at-media(tablet-lg) {
+        @include at-media(desktop) {
           height: auto;
         }
       }
