@@ -159,7 +159,7 @@
       img {
         position: absolute;
         height: 150%;
-        @include at-media(desktop) {
+        @media only screen and (min-width: 1281px) {
           height: auto;
         }
       }
