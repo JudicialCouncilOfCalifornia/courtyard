@@ -1,0 +1,30 @@
+.jcc-drawer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: units(2.5);
+  z-index: z("top");
+  transition: opacity 1s;
+
+  // Visibility controlled by js on scroll.
+  &:not([visible]) {
+    opacity: 0;
+  }
+
+  &[visible] {
+    opacity: 1;
+  }
+
+  // Space and wrap drawer items gracefully.
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin: -#{units(1)};
+
+    > * {
+      margin: units(1);
+    }
+  }
+}
