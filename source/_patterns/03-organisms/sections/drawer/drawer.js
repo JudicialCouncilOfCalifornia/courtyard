@@ -28,6 +28,10 @@ if (!pageIsShorterThanWindow()) {
 
 // Scroll.
 $window.on("scroll", function() {
+  if ($drawer.length == 0) {
+    return;
+  }
+
   if ((isScrolledToBottom($drawer.height() / 2) && isSmallScreen()) || isSmallScreen() == false) {
     $drawer.attr("visible", "visible");
   } else {
