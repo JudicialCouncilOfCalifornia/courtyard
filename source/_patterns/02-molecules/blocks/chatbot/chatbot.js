@@ -17,13 +17,17 @@ var deviceWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
 var deviceHeight = window.innerHeight > 0 ? window.innerHeight : screen.height;
 var frameWidth = deviceWidth < 420 ? deviceWidth - 20 : 440;
 var frameHeight = deviceHeight < 830 ? deviceHeight - 50 : 750;
+const chatbot = document.getElementById("jcc-chatbot");
 
 document.addEventListener("DOMContentLoaded", function() {
   (function() {
     var div = document.createElement("div");
-    document.getElementById("jcc-chatbot").appendChild(div);
-    div.outerHTML =
-      "<iframe class='iframeBot' id='iframeBot' width='140px' height='60px' style='border-radius: 20px; border: 0; background: unset; z-index: 2000;' src='https://bot.vcsc.courts.ca.gov/chat.html'></iframe>";
+
+    if (chatbot) {
+      chatbot.appendChild(div);
+      div.outerHTML =
+        "<iframe class='iframeBot' id='iframeBot' width='140px' height='60px' style='border-radius: 20px; border: 0; background: unset; z-index: 2000;' src='https://bot.vcsc.courts.ca.gov/chat.html'></iframe>";
+    }
   })();
 
   // Custom events dispatch on open/close so elements outside of iframe
