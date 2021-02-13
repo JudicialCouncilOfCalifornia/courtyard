@@ -5,7 +5,9 @@
     "build": "gulp build",
     "trial": "gulp trial",
     "srl": "gulp srl",
-    "start": "gulp"
+    "start": "gulp",
+    "pretty-quick": "pretty-quick",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -55,10 +57,5 @@
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }
