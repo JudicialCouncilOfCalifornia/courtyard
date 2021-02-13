@@ -71,11 +71,6 @@ const copyIconSprite = () => {
 };
 
 const buildCss = (paths, minFileName) => {
-  const plugins = [
-    // Pack media queries
-    mqpacker({ sort: true })
-  ];
-
   let css = gulp
     .src(paths)
     .pipe(glob())
@@ -107,7 +102,6 @@ const buildCss = (paths, minFileName) => {
     )
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
     .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
-    .pipe(postcss(plugins))
     .pipe(strip.text())
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(config.css.public_folder)) //writing source map
