@@ -9,8 +9,8 @@
   {% endif %}
   {% set contextual = hero_icon_nav.contextual_links ? 'contextual-region' : '' %}
   <div class="jcc-hero-icon-nav__nav grid-row padding-x-0 {{ contextual }}">
-    {{ hero_icon_nav.contextual_links }}
     <div class="jcc-hero-icon-nav__block jcc-hero-icon-nav__block--cards tablet:grid-col-6">
+      {{ hero_icon_nav.contextual_links }}
       {% include '@organisms/sections/card-section-base/card-section-base.twig' with {
         card_section: {
           theme: hero_icon_nav.card_section.theme,

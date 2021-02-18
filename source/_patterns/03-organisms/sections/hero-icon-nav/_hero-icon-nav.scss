@@ -20,11 +20,16 @@
       @include u-color("primary");
       @include has-dash-position($dash-position: "below-center", $dash-width: 6rem);
     }
+
+    &__title {
+      @include u-color("black");
+    }
   }
 }
 
 .jcc-hero-icon-nav__nav {
   @include grid-container(desktop);
+  max-width: 83.5rem;
 
   a {
     @include u-text-decoration("no-underline");
@@ -37,7 +42,7 @@
   }
 
   .jcc-card {
-    height: 12rem;
+    height: 15rem;
 
     &:nth-child(1) {
       .usa-card__container {
@@ -60,9 +65,17 @@
       }
     }
 
+    .jcc-image--media-icon {
+      img {
+        @include u-width(9);
+        @include u-height(9);
+      }
+    }
+
     h2,
     h3 {
-      @include u-font("sans", 8);
+      @include u-font("sans", 10);
+      @include u-font-weight("bold");
     }
   }
 
@@ -70,16 +83,21 @@
     &__media {
       @include u-position("relative");
       @include u-margin-x("auto");
-      bottom: -25%;
+      bottom: -22%;
     }
 
     &__header {
       @include u-position("relative");
       @include u-padding-x(2, !important);
       @include u-text-align("center");
-      bottom: -30%;
+      bottom: -27%;
     }
   }
+}
+
+.jcc-image--media-icon {
+  @include u-width(9);
+  @include u-height(9);
 }
 
 .jcc-hero-icon-nav__block--image {
@@ -87,7 +105,7 @@
   @include at-media("tablet") {
     @include u-display("block");
     @include u-overflow("hidden");
-    height: 24rem;
+    height: 30rem;
 
     img {
       @include u-width("full");
