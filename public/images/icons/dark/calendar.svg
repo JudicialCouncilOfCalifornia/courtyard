@@ -1,0 +1,19 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M77 31H3V79H65L77 67V31Z" stroke="#1B1B1B" stroke-width="2"/>
+<path d="M78 66H64V80L78 66Z" fill="#1B1B1B"/>
+<rect x="3" y="25" width="74" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<circle cx="16" cy="55" r="2" fill="#1B1B1B"/>
+<circle cx="16" cy="67" r="2" fill="#1B1B1B"/>
+<circle cx="28" cy="43" r="2" fill="#1B1B1B"/>
+<circle cx="28" cy="55" r="2" fill="#1B1B1B"/>
+<circle cx="28" cy="67" r="2" fill="#1B1B1B"/>
+<circle cx="40" cy="43" r="2" fill="#1B1B1B"/>
+<circle cx="52" cy="43" r="2" fill="#1B1B1B"/>
+<circle cx="52" cy="55" r="2" fill="#1B1B1B"/>
+<circle cx="64" cy="43" r="2" fill="#1B1B1B"/>
+<circle cx="64" cy="55" r="2" fill="#1B1B1B"/>
+<circle cx="40" cy="55" r="4" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="17" y="1" width="6" height="18" rx="3" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="57" y="1" width="6" height="18" rx="3" stroke="#1B1B1B" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 9V16C17 17.6569 18.3431 19 20 19C21.6569 19 23 17.6569 23 16V9H57V16C57 17.6569 58.3431 19 60 19C61.6569 19 63 17.6569 63 16V9H78V24H2V9H17Z" fill="#1B1B1B"/>
+</svg>
