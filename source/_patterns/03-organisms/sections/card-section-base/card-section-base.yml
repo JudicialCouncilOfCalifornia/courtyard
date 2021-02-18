@@ -36,4 +36,6 @@ card_section:
         url: https://www.courts.ca.gov
       elevated: true
   # Variants
+  max: #1-n ... limit the number of cards to display
   background: #'dark' ... inverts background color
+  theme: #support for additional classes or for library demo purposes

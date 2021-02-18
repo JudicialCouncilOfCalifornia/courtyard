@@ -1,9 +1,9 @@
 @mixin background-color(
   $background-color: primary,
   $background-text-color: "white",
-  $background-link-color: "accent-warm-light",
-  $background-link-color-hover: "accent-warm",
-  $background-link-color-active: "accent-warm"
+  $background-link-color: "white",
+  $background-link-color-hover: "white",
+  $background-link-color-active: "white"
 ) {
   @include u-bg($background-color);
   @include u-text($background-text-color);

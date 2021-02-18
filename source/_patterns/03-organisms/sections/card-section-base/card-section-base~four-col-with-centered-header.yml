@@ -3,13 +3,13 @@ card_section:
     layout:
       alignment: 'center'
   cards:
-    - width: 3
-    - width: 3
-    - width: 3
+    - width: 'desktop:grid-col-3'
+    - width: 'desktop:grid-col-3'
+    - width: 'desktop:grid-col-3'
     - brow: 'Category'
       title: 'A fourth card example'
       body: '<p>Integer vitae justo eget magna fermentum iaculis eu non diam. In nulla posuere sollicitudin aliquam ultrices sagittis orci a.</p>'
-      width: 3
+      width: 'desktop:grid-col-3'
       heading_tag: 'h3'
       action:
         style: 'title'

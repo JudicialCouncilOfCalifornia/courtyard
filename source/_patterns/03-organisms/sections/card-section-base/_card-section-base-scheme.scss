@@ -71,7 +71,7 @@ $schemes: (
             @include has-dash-position(
               $dash-color: $theme-jcc-dash-color,
               $dash-position: "below-center",
-              $dash-width: "3rem"
+              $dash-width: 3rem
             );
           }
         }
@@ -101,7 +101,7 @@ $schemes: (
               @include has-dash-position(
                 $dash-color: $theme-jcc-reverse-dash-color,
                 $dash-position: "below-center",
-                $dash-width: "3rem"
+                $dash-width: 3rem
               );
             }
           }
