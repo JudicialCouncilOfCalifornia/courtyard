@@ -2,7 +2,7 @@
   'usa-card',
   card.flag_position == 'left' ? 'usa-card--flag' : '',
   card.flag_position == 'right' ? 'usa-card--flag usa-card--media-right' : '',
-  card.width ? 'desktop:grid-col-' ~ card.width : 'desktop:grid-col-4',
+  card.width ? card.width : 'desktop:grid-col-4',
   'jcc-card',
   card.media_style ? 'jcc-card--' ~ card.media_style : '',
   card.theme ? card.theme : '',
@@ -19,7 +19,7 @@
   {% if card.aria_label %}{{ card.aria_label }}{% else %}Read more about {{ card.title }}{% endif %}
 {% endset %}
 
-<div class="{{ card_classes|join(' ')|trim }} jcc-scheme-simple">
+<div class="{{ card_classes|join(' ')|trim }}">
   {% if card.action.style == 'card' %}
     <a href="{{ card.action.url }}" class="jcc-card--action-card" aria_label="{{aria_label|spaceless}}">
   {% endif %}

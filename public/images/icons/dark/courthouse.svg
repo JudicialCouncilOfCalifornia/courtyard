@@ -1,0 +1,28 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect x="1" y="73" width="78" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="1" y="14" width="78" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<path d="M3 8L40 1L77 8V14H3V8Z" stroke="#1B1B1B" stroke-width="2"/>
+<path d="M7 26V67H13M19 26V67H13M13 67V26" stroke="#1B1B1B" stroke-width="2"/>
+<path d="M34 26V67H40M46 26V67H40M40 67V26" stroke="#1B1B1B" stroke-width="2"/>
+<path d="M61 26V67H67M73 26V67H67M67 67V26" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="4" y="67" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="4" y="20" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="31" y="67" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="31" y="20" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="58" y="67" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="58" y="20" width="18" height="6" stroke="#1B1B1B" stroke-width="2"/>
+<rect x="6" y="62" width="14" height="4" fill="#1B1B1B"/>
+<rect x="4" y="10" width="72" height="3" fill="#1B1B1B"/>
+<rect x="33" y="62" width="14" height="4" fill="#1B1B1B"/>
+<rect x="60" y="62" width="14" height="4" fill="#1B1B1B"/>
+<path d="M20 35V25H17.8125H8.625H6V29L20 35Z" fill="#1B1B1B"/>
+<path d="M47 35V25H44.8125H35.625H33V29L47 35Z" fill="#1B1B1B"/>
+<path d="M74 35V25H71.8125H62.625H60V29L74 35Z" fill="#1B1B1B"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="80" height="80" fill="white"/>
+</clipPath>
+</defs>
+</svg>

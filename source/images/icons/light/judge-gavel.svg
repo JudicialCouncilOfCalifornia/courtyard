@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="55.4468" y="8.07129" width="22" height="26" transform="rotate(45 55.4468 8.07129)" fill="white"/>
+<rect x="48.376" y="1" width="6" height="26" rx="2" transform="rotate(45 48.376 1)" fill="white"/>
+<rect x="73.8315" y="26.4558" width="6" height="26" rx="2" transform="rotate(45 73.8315 26.4558)" fill="white"/>
+<rect x="49.9111" y="5.94971" width="6" height="21" transform="rotate(45 49.9111 5.94971)" stroke="white" stroke-width="2"/>
+<rect x="68.2959" y="24.3345" width="6" height="21" transform="rotate(45 68.2959 24.3345)" stroke="white" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M38.4765 34.9414L44.1334 40.5983L18.1471 66.5845L12.4903 60.9277L38.4765 34.9414ZM8.81277 63.75L7.82614 62.7634C7.04509 61.9823 5.77876 61.9823 4.99771 62.7634L2.4144 65.3467C1.63335 66.1277 1.63335 67.3941 2.4144 68.1751L10.8997 76.6604C11.6807 77.4414 12.9471 77.4414 13.7281 76.6604L16.3114 74.0771C17.0925 73.296 17.0925 72.0297 16.3114 71.2487L15.3011 70.2383L15.301 70.2384L8.81269 63.7501L8.81277 63.75Z" fill="white"/>
+<rect x="45" y="64" width="30" height="6" fill="white"/>
+<rect x="41" y="72" width="38" height="6" fill="white"/>
+</svg>

@@ -1,32 +1,46 @@
 hero_icon_nav:
   contextual_links: FALSE
   style:
-  hero_img_banner:
-    background_img: '../../images/photos/alameda.jpg'
+  hero_banner:
     brow: 'Welcome to the'
     title: 'Superior Court of Alameda'
     subtitle: 'What would you like to do?'
-  links:
-    icons:
+  media:
+    src: '../../images/photos/alameda.jpg'
+    alt: 'Alameda Superior courthouse photo'
+  card_section:
+    theme: 'jcc-cards--tiles'
+    max: 4
+    cards:
       - title: 'Jury Service'
-        url: '#'
-        icon: '../../images/graphics/people.svg'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/jury.svg'
+        width: 'grid-col-6'
       - title: 'Traffic Tickets'
-        url: '#'
-        icon: '../../images/graphics/car.svg'
-        link_label: ''
-      - title: 'E-filing'
-        url: '#'
-        icon: '../../images/graphics/files.svg'
-        link_label: ''
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/paper-traffic-ticket.svg'
+        width: 'grid-col-6'
       - title: 'Case Information'
-        url: '#'
-        icon: ''
-        link_label: 'login'
-    buttons:
-      - title: 'Tentative Rulings'
-        url: '#'
-      - title: 'Calendar'
-        url: '#'
-      - title: 'Attorney Portal'
-        url: '#'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/magnifying-glass-research.svg'
+        width: 'grid-col-6'
+      - title: 'Pay Fines & Fees'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/hand-pay-a-fee.svg'
+        width: 'grid-col-6'

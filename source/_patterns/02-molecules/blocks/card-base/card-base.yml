@@ -12,7 +12,7 @@ card:
       #url is provided through action variant variable
   aria_label: #custom action description if insufficient context for screen readers (defaults to "Read more about {{ title }}" if title provided)
   # Variants
-  width: #1-12 ... card width size in USWDS grid increments, default is 4 (3 column widths)
+  width: 'desktop:grid-col-4' #card width size in USWDS grid increments, default is desktop:grid-col-4 (3 column widths at desktop real estate)
   heading_tag: #"h2|h3" ... adjusts heading tag, default is "h2"
   heading_style: #"serif|sans" ... adjusts heading style without additional classes, default is "serif"
   media_style: #"icon" ... symbol micro-theme for image, default support is 16x9 cropped photo

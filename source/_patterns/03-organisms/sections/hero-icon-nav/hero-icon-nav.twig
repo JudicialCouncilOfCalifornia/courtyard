@@ -4,23 +4,23 @@
 ]|merge(hero_icon_nav.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
-  {% if hero_icon_nav.hero_img_banner %}
-    {% include '@molecules/blocks/hero-img-banner/hero-img-banner.twig' with {
-      hero_img_banner: hero_icon_nav.hero_img_banner
-    } %}
+  {% if hero_icon_nav.hero_banner %}
+    {% include '@molecules/blocks/hero/hero.twig' with { hero: hero_icon_nav.hero_banner } %}
   {% endif %}
   {% set contextual = hero_icon_nav.contextual_links ? 'contextual-region' : '' %}
-  <div class="jcc-hero-icon-nav__nav {{ contextual }}">
-    {{ hero_icon_nav.contextual_links }}
-    <div class="jcc-hero-icon-nav__block tile-icon">
-        {% for tile in hero_icon_nav.links.icons %}
-            {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
-        {% endfor %}
+  <div class="jcc-hero-icon-nav__nav grid-row padding-x-0 {{ contextual }}">
+    <div class="jcc-hero-icon-nav__block jcc-hero-icon-nav__block--cards tablet:grid-col-6">
+      {{ hero_icon_nav.contextual_links }}
+      {% include '@organisms/sections/card-section-base/card-section-base.twig' with {
+        card_section: {
+          theme: hero_icon_nav.card_section.theme,
+          max: hero_icon_nav.card_section.max,
+          cards: hero_icon_nav.card_section.cards,
+        }
+      } %}
     </div>
-    <div class="jcc-hero-icon-nav__block tile-button">
-      {% for tile in hero_icon_nav.links.buttons %}
-          {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
-      {% endfor %}
+    <div class="jcc-hero-icon-nav__block jcc-hero-icon-nav__block--image tablet:grid-col-6">
+      {% include '@atoms/image/image.twig' with { image: hero_icon_nav.media } %}
     </div>
   </div>
 </div>
