@@ -1,6 +1,0 @@
-modal:
-  overlay_mode: true
-  id: "jcc-modal"
-  button_label: "Open Dialog Window"
-  content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia corporis, sed culpa, nam earum repellat nemo dolor, alias doloribus cupiditate aliquid. Dolores nobis perferendis molestias atque autem placeat quam ipsum.</p>"
-  footer_button: true

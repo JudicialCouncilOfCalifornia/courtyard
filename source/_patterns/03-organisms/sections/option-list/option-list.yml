@@ -1,9 +1,0 @@
-# column_variant: has-one-column
-
-option_list:
-  column_variant: has-two-columns
-  options:
-    - title: "If you're suing a person (or people)"
-      content: 'Serve each person you are suing.'
-    - title: "If you're suing a business or government"
-      content: 'Business or agencies have a specific person you must serve, not just any employee. Follow these guidelines to make sure you are serving the right person.'
