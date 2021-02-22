@@ -26,7 +26,7 @@
       } %}
     {% endif %}
 
-    <div class="jcc-cards__row grid-row padding-x-0">
+    <div class="jcc-cards__row grid-row">
       {% if card_section.max %}
         {% for card in card_section.cards|slice(0, card_section.max) %}
           {% include card_template with {
