@@ -1,5 +1,5 @@
 .jcc-hero-icon-nav {
-  @include u-margin-bottom(8);
+  @include u-margin-bottom(4);
 
   .jcc-hero {
     @include u-bg("transparent");
@@ -36,13 +36,26 @@
   }
 
   .jcc-cards__container {
-    @include at-media-max("tablet-lg") {
+    @include at-media("tablet-lg") {
       @include u-padding-x(0);
     }
   }
 
   .jcc-card {
-    height: 15rem;
+    height: 10rem;
+    @include at-media("tablet") {
+      height: 15rem;
+    }
+    @include at-media("tablet-lg") {
+      width: 49%;
+    }
+
+    .usa-card__container {
+      @include u-padding-y(5);
+      @include at-media("tablet") {
+        @include u-padding-y(7);
+      }
+    }
 
     &:nth-child(1) {
       .usa-card__container {
@@ -67,42 +80,50 @@
 
     .jcc-image--media-icon {
       img {
-        @include u-width(9);
-        @include u-height(9);
+        @include at-media("tablet") {
+          @include u-width(8);
+          @include u-height(8);
+        }
       }
     }
 
     h2,
     h3 {
-      @include u-font("sans", 10);
+      @include u-font("sans", 5);
       @include u-font-weight("bold");
+
+      @include at-media("tablet") {
+        @include u-font("sans", 10);
+      }
     }
   }
 
   .usa-card {
     &__media {
-      @include u-position("relative");
       @include u-margin-x("auto");
-      bottom: -22%;
     }
 
     &__header {
-      @include u-position("relative");
-      @include u-padding-x(2, !important);
+      @include u-padding-x(0, !important);
       @include u-text-align("center");
-      bottom: -27%;
+      @include at-media("tablet") {
+        @include u-padding-top(3);
+        @include u-padding-x(2, !important);
+      }
     }
   }
 }
 
 .jcc-image--media-icon {
-  @include u-width(9);
-  @include u-height(9);
+  @include at-media("tablet") {
+    @include u-width(8);
+    @include u-height(8);
+  }
 }
 
 .jcc-hero-icon-nav__block--image {
   @include u-display("none");
-  @include at-media("tablet") {
+  @include at-media("tablet-lg") {
     @include u-display("block");
     @include u-overflow("hidden");
     height: 30rem;
