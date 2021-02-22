@@ -12,5 +12,5 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/sleepingmonk/artifact-test/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{ secrets.TEST_ARTIFACT_WORKFLOW_TOKEN }} \
+          -u ${{ secrets.CourtyardArtifactToken }} \
           --data '{"event_type": "trigger-build", "client_payload": {}}'
