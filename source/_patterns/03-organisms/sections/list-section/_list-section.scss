@@ -1,0 +1,120 @@
+.jcc-list-section {
+  @include section-wrapper(9);
+  background-color: #f9f9f9;
+
+  nav {
+    @include section-container();
+
+    ul {
+      list-style: none;
+      @include u-padding-left(0);
+
+      a {
+        @include u-display(block);
+        @include u-padding-y(2);
+        @include u-padding-x(0);
+      }
+    }
+
+    > ul {
+      list-style: none;
+      @include u-padding-left(0);
+      flex-wrap: wrap;
+      @include u-display(flex);
+      @include u-justify-content(justify-start);
+      @include u-flex-direction(column);
+      @include u-margin-bottom(neg-3);
+      @include u-margin-x(neg-3);
+
+      @include at-media(desktop) {
+        @include u-flex-direction(row);
+      }
+
+      @include at-media(tablet) {
+        @include u-flex-direction(row);
+      }
+      @include at-media-max(tablet) {
+        max-width: 100%;
+      }
+
+      > li {
+        flex: 1 0 auto;
+        @include u-width(full);
+        @include u-margin-top(0);
+        @include u-margin-bottom(4);
+        @include u-margin-x(3);
+        @include u-padding-top(2);
+
+        @include at-media(tablet) {
+          @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: above);
+        }
+        @include at-media-max(tablet) {
+          @include has-dash-position(
+            $dash-color: "mint-cool-50v",
+            $dash-position: above,
+            $dash-width: 45px
+          );
+          width: calc(100% - 3rem);
+        }
+
+        @include at-media(desktop) {
+          max-width: 27%;
+        }
+
+        @include at-media(tablet) {
+          max-width: 44%;
+        }
+
+        .menu-item__header {
+          @include u-display(block);
+          @include u-padding-y(1);
+          @include u-padding-x(0);
+          @include u-text(uppercase);
+          @include u-font-weight(bold);
+          @include u-text(blue-70v);
+          @include u-margin-bottom(1);
+          @include u-font(ui, 7);
+          color: #012941;
+          letter-spacing: 3px;
+        }
+
+        > ul {
+          > li {
+            a {
+              @include u-font-size(body, 10);
+              @include light-background-link();
+            }
+
+            > ul {
+              > li {
+                @include u-padding-left(3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* remove uppercase titles if lowercase_titles = true */
+.jcc-list-section--lowercase-titles {
+  nav {
+    > ul {
+      > li {
+        .menu-item__header {
+          font-size: 1.37rem !important; /* equates to system token 9 ... u-font does not support !important */
+          @include u-text(no-uppercase, ls-1, !important);
+        }
+      }
+    }
+
+    > ul {
+      > li {
+        a {
+          font-size: 1.37rem !important; /* equates to system token 9 ... u-font does not support !important */
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+dropbutton:
+  icon:
+    name: "globe-2"
+    title: "Translate"
+    decorative: true
+  label: "Translate"
+  links:
+    - title: "English"
+      href: "#"
+    - title: "Spanish"
+      href: "#"
+    - title: "Vietnamese"
+      href: "#"

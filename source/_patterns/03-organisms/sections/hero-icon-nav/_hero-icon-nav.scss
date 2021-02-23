@@ -1,0 +1,144 @@
+.jcc-hero-icon-nav {
+  @include u-margin-bottom(4);
+
+  .jcc-hero {
+    @include u-bg("transparent");
+
+    &__column-left {
+      @include u-maxw("full");
+      @include u-text-align("center");
+    }
+
+    &__content {
+      @include u-padding-bottom(5);
+    }
+
+    &__brow {
+      @include u-margin-bottom(2);
+      @include u-font-size("body", 11);
+      @include u-font-weight("bold");
+      @include u-color("primary");
+      @include has-dash-position($dash-position: "below-center", $dash-width: 6rem);
+    }
+
+    &__title {
+      @include u-color("black");
+    }
+  }
+
+  .jcc-hero__content {
+    @include u-padding-top(4);
+  }
+}
+
+.jcc-hero-icon-nav__nav {
+  @include grid-container(desktop);
+  max-width: 83.5rem;
+
+  a {
+    @include u-text-decoration("no-underline");
+  }
+
+  .jcc-cards__container {
+    @include at-media("tablet-lg") {
+      @include u-padding-x(0);
+    }
+  }
+
+  .jcc-card {
+    height: 10rem;
+    @include at-media("tablet") {
+      height: 15rem;
+    }
+    @include at-media("tablet-lg") {
+      width: 49.4%;
+    }
+
+    .usa-card__container {
+      @include u-padding-y(4);
+      @include at-media("tablet") {
+        @include u-padding-y(7);
+      }
+    }
+
+    &:nth-child(1) {
+      .usa-card__container {
+        @include u-bg("mint-cool-50v");
+      }
+    }
+    &:nth-child(2) {
+      .usa-card__container {
+        @include u-bg("blue-70v");
+      }
+    }
+    &:nth-child(3) {
+      .usa-card__container {
+        @include u-bg("blue-50");
+      }
+    }
+    &:nth-child(4) {
+      .usa-card__container {
+        @include u-bg("blue-warm-80v");
+      }
+    }
+
+    .jcc-image--media-icon {
+      img {
+        @include at-media("tablet") {
+          @include u-width(8);
+          @include u-height(8);
+        }
+      }
+    }
+
+    h2,
+    h3 {
+      @include u-font("sans", 5);
+      @include u-font-weight("bold");
+      @include at-media("tablet") {
+        @include u-font("sans", 8);
+      }
+      @media only screen and (min-width: 1200px) {
+        @include u-font("sans", 10);
+      }
+    }
+  }
+
+  .usa-card {
+    &__media {
+      @include u-margin-x("auto");
+    }
+
+    &__header {
+      @include u-padding-x(0, !important);
+      @include u-text-align("center");
+      @include at-media("tablet") {
+        @include u-padding-top(3);
+        @include u-padding-x(2, !important);
+      }
+    }
+  }
+}
+
+.jcc-image--media-icon {
+  @include at-media("tablet") {
+    @include u-width(8);
+    @include u-height(8);
+  }
+}
+
+.jcc-hero-icon-nav__block--image {
+  @include u-display("none");
+  @include at-media("tablet-lg") {
+    @include u-display("block");
+    @include u-overflow("hidden");
+    height: 30rem;
+
+    img {
+      @include u-width("full");
+      @include u-height("full");
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+}

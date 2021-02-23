@@ -1,0 +1,78 @@
+{% set classes = [
+  'jcc-primary-nav',
+  primary_nav.contextual_links ? 'contextual-region',
+  primary_nav.lowercase_titles ? 'jcc-primary-nav--lowercase-titles'
+]|merge(primary_nav.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {{ primary_nav.contextual_links }}
+  <div id="js-header_menu--mobile" class="usa-accordion"></div>
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--extended">
+    <nav aria-label="Primary navigation" class="usa-nav jcc-primary-nav">
+      <div class="jcc-primary-nav__container">
+        <button class="usa-nav__close"><img src="../../img/close.svg" alt="close"></button>
+        <ul id="slick-menu" class="usa-nav__primary usa-accordion">
+          {{ _self.menu_links(primary_nav.items, 0, true) }}
+        </ul>
+        <ul class="usa-nav__primary usa-accordion">
+          {{ _self.menu_links(primary_nav.items, 0, false) }}
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
+
+{% macro menu_links(items, menu_level, slick) %}
+  {% for item in items %}
+    {% if menu_level == 0 %}
+      {% if item.sublinks %}
+        <li class="usa-nav__primary-item jcc-primary-nav__top_link">
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-mega-nav-section-{{ item|length }}">
+            <span>{% if item.icon %}{{ item.icon }}{% endif %} {{ item.name }}</span>
+          </button>
+            <div id="extended-mega-nav-section-{{ item|length }}" class="usa-nav__submenu usa-megamenu ">
+              <div class="grid-row grid-gap-4">
+                <div class="usa-col">
+                  <ul class="usa-nav__submenu-list jcc-primary-nav__sub">
+                      {{ _self.menu_links(item.sublinks, menu_level + 1, slick) }}
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </li>
+      {% else %}
+        <li class=" usa-nav__primary-item">
+          <a class="jcc-primary-nav__top_link" href="{{ item.url }}">
+            <button class="usa-nav__link jcc-primary-nav__button-single" tabindex="-1">
+              <span>{% if item.icon %}{{ item.icon }}{% endif %} {{ item.name }}</span>
+            </button>
+          </a>
+        </li>
+      {% endif %}
+    {% elseif menu_level == 1 %}
+      <li class="jcc-primary-nav__sub--item">
+        <a href="{{ item.url }}">
+          <div class="jcc-primary-nav__sub--title">
+            {% if item.icon %}{{ item.icon }}{% endif %} {{ item.name }}
+          </div>
+          {% if item.description %}
+            <div class="jcc-primary-nav__sub--description">
+              {{ item.description }}
+            </div>
+          {% endif %}
+        </a>
+        {% if item.sublinks %}
+          <ul class="usa-nav__submenu-list jcc-primary-nav__sub--{{ menu_level }}">
+            {{ _self.menu_links(item.sublinks, menu_level + 1, slick) }}
+          </ul>
+        {% endif %}
+      </li>
+    {% elseif not slick or (slick and menu_level == 2)%}
+      <li class="jcc-primary-nav__sub-sub--item sub-level-{{ menu_level }}">
+        <a href="{{ item.url }}">{% if item.icon %}{{ item.icon }}{% endif %} {{ item.name }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+

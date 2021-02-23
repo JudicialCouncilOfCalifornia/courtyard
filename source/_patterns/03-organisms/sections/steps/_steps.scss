@@ -36,6 +36,10 @@
   }
 }
 
+.jcc-step__block {
+  @include u-margin-bottom(5);
+}
+
 .jcc-steps-section--has-background-color--light,
 .jcc-steps-section--has-background-color--light--primary {
   @include light-background($light-background-color: primary-lighter);
@@ -49,8 +53,10 @@
   }
 }
 
-.jcc-steps-section__container {
-  @include section-container;
+.jcc-read-more--block {
+  .jcc-read-more__trigger {
+    width: fit-content;
+  }
 }
 
 .jcc-steps {

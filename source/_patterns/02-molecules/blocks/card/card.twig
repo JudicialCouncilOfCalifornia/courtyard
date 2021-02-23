@@ -1,11 +1,13 @@
 {% set tag = card.tag|default('h3') %}
 {% set classes = [
   'jcc-card',
+  card.contextual_links ? 'contextual-region' : '',
   card.img ? 'jcc-card--has-icon' : '',
   card.variant ? 'jcc-card--' ~ card.variant : '',
 ]|merge(card.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
+  {{ card.contextual_links }}
   {% if card.img %}
     <div class="jcc-card__media">
       {% include '@atoms/image/image.twig' with { image: card.img } %}
@@ -13,9 +15,58 @@
   {% endif %}
 
   <div class="jcc-card__body">
-    <{{ tag }} class="jcc-card__title">{{ card.title }}</{{ tag }}>
-    {% if card.excerpt %}
-      <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
+    {% if card.excerpt_img or card.excerpt_vid %}
+      <div class="jcc-card__excerpt-media">
+        <div class="content">
+          {% if card.excerpt_img %}
+            {% if card.url and not card.excerpt_img_only %}
+              <a class="usa-link" href="{{ card.url }}">
+                {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+              </a>
+            {% elseif card.id %}
+              <span data-a11y-toggle="{{ card.id }}">
+                {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+              </span>
+            {% else %}
+              {% include '@atoms/image/image.twig' with { image: card.excerpt_img } %}
+            {% endif %}
+          {% elseif card.excerpt_vid %}
+            {% if card.url %}
+              <a class="usa-link" href="{{ card.url }}">
+                {{ card.excerpt_vid }}
+              </a>
+            {% elseif card.id %}
+              <span data-a11y-toggle="{{ card.id }}">
+                {{ card.excerpt_vid }}
+              </span>
+            {% else %}
+              {{ card.excerpt_vid }}
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
     {% endif %}
+    {% if card.brow %}
+      <div class="jcc-card__brow">{{ card.brow }}</div>
+    {% endif %}
+    {% if card.title %}
+      <{{ tag }} class="jcc-card__title">
+        {% if card.url %}
+          <a class="usa-link" href="{{ card.url }}">{{ card.title }}</a>
+        {% elseif card.id %}
+          <span data-a11y-toggle="{{ card.id }}">{{ card.title }}</span>
+        {% else %}
+          {{ card.title }}
+        {% endif %}
+      </{{ tag }}>
+    {% endif %}
+    {% if card.id %}<div class="jcc-card__content" id="{{ card.id }}">{% endif %}
+      {% if card.excerpt %}
+        <div class="jcc-card__excerpt">{{ card.excerpt }}</div>
+      {% endif %}
+      {% if card.footer %}
+        <div class="jcc-card__footer">{{ card.footer }}</div>
+      {% endif %}
+    {% if card.id %}</div>{% endif %}
   </div>
 </div>

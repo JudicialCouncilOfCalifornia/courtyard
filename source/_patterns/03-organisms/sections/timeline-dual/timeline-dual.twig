@@ -1,0 +1,81 @@
+{% set has_top_row = false %}
+{% set has_bottom_row = false %}
+{% for item in timeline_dual.items %}
+  {% if item.top %}
+    {% set has_top_row = true %}
+  {% endif %}
+  {% if item.bottom %}
+    {% set has_bottom_row = true %}
+  {% endif %}
+{% endfor %}
+
+
+{% set classes = [
+  'jcc-timeline-dual-section',
+  'jcc-timeline-dual-section--' ~ timeline_dual.background_variant|default('has-background-color--transparent'),
+  has_top_row and not has_bottom_row ? 'top-only',
+  has_bottom_row and not has_top_row ? 'bottom-only',
+]|merge(timeline_dual.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}" {% if timeline_dual.id %} id="{{ timeline_dual.id }}" {% endif %}>
+  <div class="jcc-timeline-dual-section__container">
+
+    {% if timeline_dual.title_bar %}
+      <div class="jcc-timeline-dual__title-bar">
+        <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
+          {% if timeline_dual.title_bar.previous %}
+            {{ timeline_dual.title_bar.previous.title }}
+          {% endif %}
+        </a>
+        <div class="jcc-timeline-dual__title-bar-title">
+          {% if timeline_dual.title_bar.title %}
+            {{ timeline_dual.title_bar.title }}
+          {% endif %}
+        </div>
+        <a href="{{ timeline_dual.title_bar.next.url }}" class="jcc-timeline-dual__title-bar-next">
+          {% if timeline_dual.title_bar.next %}
+            {{ timeline_dual.title_bar.next.title }}
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="jcc-timeline-dual__wrapper">
+      <div class="jcc-timeline-dual__slider-wrapper">
+        <div class="jcc-timeline-dual__slider-scroller">
+          <div class="jcc-timeline-dual__slider" aria-label="timeline-dual" tabindex="0">
+            <div class="jcc-timeline-dual__titles">
+              {% if has_top_row %}
+                <div class="jcc-timeline-dual__top-title">{{ timeline_dual.top_title }}</div>
+              {% endif %}
+              {% if has_bottom_row %}
+                <div class="jcc-timeline-dual__bottom-title">{{ timeline_dual.bottom_title }}</div>
+              {% endif %}
+            </div>
+
+            {% for item in timeline_dual.items %}
+              {% include '@molecules/blocks/timeline-dual-item/timeline-dual-item.twig' with {
+                timeline_dual_item: item,
+              } %}
+            {% endfor %}
+          </div>
+        </div>
+
+        {% include '@atoms/buttons/scroll-button.twig' with {
+          scroll_button: {
+            direction: 'left',
+            classes: ['hidden'],
+          }
+        } %}
+
+        {% include '@atoms/buttons/scroll-button.twig' with {
+          scroll_button: {
+            direction: 'right',
+            classes: ['hidden'],
+          }
+        } %}
+      </div>
+    </div>
+
+  </div>
+</div>

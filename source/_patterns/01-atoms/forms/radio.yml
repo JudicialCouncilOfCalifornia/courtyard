@@ -1,4 +1,5 @@
-label: First
-id: Nine
-name: Sample
-bordered: false
+radio:
+  label: First
+  id: Nine
+  name: Sample
+  style: ''

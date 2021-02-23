@@ -1,0 +1,46 @@
+hero_icon_nav:
+  contextual_links: FALSE
+  style:
+  hero_banner:
+    brow: 'Welcome to the'
+    title: 'Superior Court of Alameda'
+    subtitle: 'What would you like to do?'
+  media:
+    src: '../../images/photos/alameda.jpg'
+    alt: 'Alameda Superior courthouse photo'
+  card_section:
+    theme: 'jcc-cards--tiles'
+    max: 4
+    cards:
+      - title: 'Jury Service'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/jury.svg'
+        width: 'grid-col-6'
+      - title: 'Traffic Tickets'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/paper-traffic-ticket.svg'
+        width: 'grid-col-6'
+      - title: 'Case Information'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/magnifying-glass-research.svg'
+        width: 'grid-col-6'
+      - title: 'Pay Fines & Fees'
+        action:
+          style: 'card'
+          url: '#'
+        media_style: "icon"
+        media:
+          src: '../../images/icons/light/hand-pay-a-fee.svg'
+        width: 'grid-col-6'

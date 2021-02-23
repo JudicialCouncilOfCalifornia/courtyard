@@ -3,13 +3,13 @@ checkbox_group:
   - label: Self (adult)
     id: "90"
     name: Beta
-    bordered: true
+    style: [bordered]
   - label: Spouse (adult)
     id: "91"
     name: Beta
-    bordered: true
+    style: [bordered]
   - label: One or more minor child
     id: "92"
     name: Beta
-    bordered: true
+    style: [bordered]
 align_variant: inline

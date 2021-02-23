@@ -1,0 +1,5 @@
+text_section:
+  background_variant: "has-background-color--light--secondary"
+  column_content_right:
+    include():
+      pattern: 'molecules-datefinder'

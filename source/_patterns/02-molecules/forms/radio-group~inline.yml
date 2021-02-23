@@ -3,13 +3,14 @@ radio_group:
   - label: Self (adult)
     id: "15"
     name: Delta
-    bordered: true
+    style: [bordered]
   - label: Spouse (adult)
     id: "16"
     name: Delta
-    bordered: true
+    sstyle: [bordered]
   - label: One or more minor child
     id: "17"
     name: Delta
-    bordered: true
+    style: [bordered]
 align_variant: inline
+sr_only: true

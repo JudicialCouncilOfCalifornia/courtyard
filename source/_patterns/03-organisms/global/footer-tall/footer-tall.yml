@@ -1,0 +1,37 @@
+footer_tall:
+  site_name: "Superior Court of Alameda"
+  social_links:
+    items:
+      - icon:
+          name: "youtube"
+          title: "Youtube"
+          decorative: false
+        title: "Youtube"
+        url: "#"
+      - icon:
+          name: "facebook2"
+          title: "Facebook"
+          decorative: false
+        title: "Facebook"
+        url: "#"
+      - icon:
+          name: "twitter"
+          title: "Twitter"
+          decorative: false
+        title: "Twitter"
+        url: "#"
+      - icon:
+          name: "rss2"
+          title: "RSS"
+          decorative: false
+        title: "RSS"
+        url: "#"
+  links:
+    patternlab: true
+    inline_nav:
+      items:
+        - name: "Privacy Policy"
+          url: "https://www.courts.ca.gov/11530.htm"
+        - name: "Terms & Conditions"
+          url: "https://www.courts.ca.gov/11529.htm"
+    content: "Raw content alternative to inline_nav component."

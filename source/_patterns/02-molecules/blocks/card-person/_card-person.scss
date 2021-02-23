@@ -1,0 +1,33 @@
+.jcc-card.person {
+  @include u-display(flex);
+  @include u-position(relative);
+  @include u-margin-bottom(1);
+}
+
+.jcc-card.person .jcc-card__media {
+  @include u-height(15);
+  @include u-width(15);
+  @include u-minw(15);
+  @include u-position(relative);
+  @include u-margin-top(2);
+  @include u-margin-right(2);
+}
+
+.jcc-card.person .jcc-card__media img {
+  z-index: 2;
+  @include u-position(relative);
+  @include u-height(15);
+  @include u-width(15);
+}
+
+.jcc-card.person h1.jcc-card__title {
+  @include responsive-h1();
+}
+
+.jcc-card.person h2.jcc-card__title {
+  @include responsive-h2();
+}
+
+.jcc-card.person h3.jcc-card__title {
+  @include responsive-h3();
+}

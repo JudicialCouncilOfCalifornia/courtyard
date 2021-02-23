@@ -1,0 +1,61 @@
+.jcc-cards {
+  .jcc-header-group {
+    max-width: 60rem;
+  }
+
+  &.jcc-cards--centered {
+    .jcc-header-group,
+    .jcc-card {
+      @include u-margin-x(auto);
+    }
+
+    .jcc-header-group {
+      @include u-margin-x("auto");
+    }
+  }
+
+  &.jcc-cards-background--dark {
+    @include background-color();
+
+    .jcc-cards__row {
+      @include u-text(gray-90);
+
+      a,
+      a:visited,
+      a:active,
+      a:focus {
+        @include u-text(blue-cool-60v);
+      }
+    }
+  }
+
+  &--tiles {
+    .jcc-card {
+      @include u-margin-bottom(0, !important);
+
+      &:nth-child(odd) {
+        .usa-card__container {
+          @include background-color($background-color: "blue-70v");
+        }
+      }
+      &:nth-child(even) {
+        .usa-card__container {
+          @include background-color($background-color: "blue-50");
+        }
+      }
+
+      h2 a,
+      h3 a {
+        @include u-text-decoration("underline");
+      }
+    }
+
+    .usa-card {
+      &__container {
+        @extend .jcc-border--borderless;
+        @include u-margin(0);
+        @include u-padding-y(2);
+      }
+    }
+  }
+}

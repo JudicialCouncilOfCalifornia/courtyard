@@ -1,0 +1,8 @@
+#column_variant: "has-one-column"
+explainer_section:
+  column_variant: "has-two-columns"
+  explainers:
+    - brow: "Wage Garnishment"
+      content: 'Someone took money from my paycheck'
+    - brow: "Wage Garnishment"
+      content: 'If you bought a car with money that only you earned while married, the car is community property even though the money used to pay for it was earned by one spouse and not the other.'

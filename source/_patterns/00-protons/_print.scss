@@ -52,6 +52,23 @@
     display: block;
   }
 
+  .jcc-switchboard,
+  .jcc-jump-nav {
+    display: none;
+  }
+
+  .usa-accordion [hidden] {
+    display: block !important;
+  }
+
+  .jcc-read-more [aria-hidden="true"] {
+    display: block !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
   .hide-for-print {
     display: none !important;
   }

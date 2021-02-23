@@ -1,20 +1,24 @@
 {% set tag = accordion.tag|default('h2') %}
+{% set expand_first = accordion.expand_first|default('yes') %}
 {% set classes = [
   'usa-accordion',
   accordion.full ? 'usa-accordion--full' : '',
+  accordion.container ? 'usa-accordion--container' : '',
 ]|merge(accordion.classes|default([])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
   {% for item in accordion.items %}
-    {% set expanded = loop.first ? 'true' : 'false' %}
     {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
-
     {% set item_title %}
       {# Use `tag` to pass the accurate heading level to maintain the document outline #}
       <{{ tag }} class="usa-accordion__heading">
-        <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
-          {{- item.title -}}
-        </button>
+      {% if loop.first and expand_first == "yes" %}
+        <button class="usa-accordion__button" aria-expanded="true" aria-controls="{{ id }}">
+      {% else %}
+        <button class="usa-accordion__button" aria-expanded="false" aria-controls="{{ id }}">
+      {% endif %}
+      {{- item.title -}}
+      </button>
       </{{ tag }}>
     {% endset %}
 

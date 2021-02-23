@@ -5,11 +5,13 @@
   @include u-radius(lg);
   @include u-shadow(3);
 
-  .usa-sidenav {
+  .usa-sidenav,
+  .usa-sidenavbase{
     @include u-border-bottom(0);
   }
 
-  .usa-sidenav__item {
+  .usa-sidenav__item,
+  .usa-sidenavbase__item{
     &:last-of-type {
       @include u-border-bottom(0);
 

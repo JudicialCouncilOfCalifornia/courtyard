@@ -1,0 +1,52 @@
+.jcc-complete {
+  @include u-bg(secondary);
+  @include u-padding(4);
+  @include u-color("white");
+
+  .jcc-complete__row {
+    @include grid-row;
+    @include grid-gap;
+  }
+
+  .jcc-complete__icon {
+    @include grid-col(2);
+    height: 60px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include at-media(desktop) {
+      @include grid-col(1);
+    }
+
+    &.check {
+      background-image: url("../images/graphics/check.png");
+    }
+  }
+
+  .jcc-complete__body {
+    @include u-padding-bottom(4);
+
+    @include at-media(desktop) {
+      @include u-padding-right(4);
+      @include u-padding-bottom(0);
+    }
+  }
+
+  .jcc-complete__left {
+    @include grid-col(10);
+
+    @include at-media(desktop) {
+      @include grid-col(9);
+    }
+  }
+
+  .jcc-complete__right {
+    @include grid-col(12);
+
+    @include at-media(desktop) {
+      @include grid-col(3);
+    }
+  }
+}

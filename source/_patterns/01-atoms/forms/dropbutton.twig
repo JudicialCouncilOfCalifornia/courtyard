@@ -1,0 +1,23 @@
+<div class="jcc-dropbutton">
+  <div class="usa-nav__inner">
+    <ul class="usa-nav__primary usa-accordion">
+      <li class="usa-nav__primary-item">
+        <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-two">
+          <div class="jcc-dropbutton__inner display-flex flex-row flex-align-center">
+            <span class="padding-right-05">
+              {% include '@atoms/icons/icon.twig' with {
+                icon: dropbutton.icon
+              } %}
+            </span>
+            <span class="label">{{ dropbutton.label }}</span>
+          </div>
+        </button>
+        <ul id="extended-nav-section-two" class="usa-nav__submenu" hidden="">
+          {% for link in dropbutton.links %}
+            <li class="usa-nav__submenu-item"><a href="{{ link.href }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

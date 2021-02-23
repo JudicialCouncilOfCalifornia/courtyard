@@ -1,5 +1,12 @@
-<div class="usa-checkbox{% if bordered %} jcc-checkbox--bordered{% endif %}">
+{% set attributes = checkbox.attributes ? checkbox.attributes : create_attribute() %}
+
+{% set classes = [
+  'usa-checkbox',
+  checkbox.style|map(s =>  'jcc-checkbox--' ~ s)|join(' '),
+]|merge(checkbox.classes|default([''])) %}
+
+<div {{attributes.addClass(classes) }}>
   {% set id = 'checkbox-' ~ random() %}
-  <input class="usa-checkbox__input" id="{{ id }}" type="checkbox" name="{{ name }}" value="{{ id }}">
-  <label class="usa-checkbox__label" for="{{ id }}">{{ label }}</label>
+  <input class="usa-checkbox__input" id="{{ id }}" type="checkbox" name="{{ checkbox.name }}" value="{{ id }}">
+  <label class="usa-checkbox__label" for="{{ id }}">{{ checkbox.label }}</label>
 </div>

@@ -1,14 +1,48 @@
 {% set tag = tile.tag|default('h3') %}
 {% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
+{% set classes = [
+  'jcc-tile',
+  tile.url ? 'jcc-tile--hover',
+  tile.link_label ? 'jcc-tile--with-button',
+  tile.embellishment ? 'jcc-tile--embellishment jcc-tile--embellishment--' ~ tile.embellishment,
+]|merge(tile.classes|default([''])) %}
 
-<div class="jcc-tile">
-  {% if tile.brow %}
-    <p class="jcc-tile__brow">{{ tile.brow }}</p>
+{% if tile.url %}
+  <a class="{{ classes|join(' ')|trim }}" href="{{ tile.url }}">
+{% else %}
+  <div class="{{ classes|join(' ')|trim }}">
+{% endif %}
+
+  <div class="jcc-tile__content">
+    {% if tile.icon %}
+      <div class="jcc-tile__icon">
+        <img src="{{ tile.icon }}">
+      </div>
+    {% endif %}
+
+    {% if tile.brow %}
+      <p class="jcc-tile__brow">{{ tile.brow }}</p>
+    {% endif %}
+
+    {% if tile.title %}
+      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+    {% endif %}
+
+    {% if tile.link_label %}
+      {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
+    {% endif %}
+
+    {% if tile.body %}
+      <p class="jcc-tile__body">{{ tile.body }}</p>
+    {% endif %}
+  </div>
+
+  {% if tile.embellishment != 'none' %}
+    <div class="jcc-tile__embellishment"></div>
   {% endif %}
 
-  {% if tile.title %}
-    <{{ tag }} class="jcc-tile__title">
-      <a href="{{ tile.url }}"{{ url_attributes }}>{{ tile.title }}</a>
-    </{{ tag }}>
-  {% endif %}
-</div>
+{% if tile.url %}
+  </a>
+{% else %}
+  </div>
+{% endif %}

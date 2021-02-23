@@ -1,0 +1,35 @@
+.jcc-cascading-jump-menu {
+  @include u-display("flex");
+  @include u-flex("wrap");
+  @include u-align-items("align-end");
+
+  .jcc-cascading-jump-menu__form {
+    @include u-flex(1);
+
+    @include at-media(mobile-lg) {
+      @include u-margin-right(1);
+    }
+
+    .usa-select {
+      @include u-maxw(none);
+      @include u-margin-bottom(1);
+
+      &:last-child {
+        @include at-media(mobile-lg) {
+          @include u-margin-bottom(0);
+        }
+      }
+    }
+  }
+
+  .usa-button {
+    @include u-margin-right(0);
+  }
+}
+
+.jcc-cascading-jump-menu__child {
+  &:disabled {
+    @include u-bg(disabled-light);
+    @include u-cursor(not-allowed);
+  }
+}

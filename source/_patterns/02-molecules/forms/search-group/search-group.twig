@@ -1,0 +1,29 @@
+{% set classes = [
+  'jcc-search-group',
+  'jcc-search-group--' ~ search_group.orientation|default('vertical'),
+]|merge(search_group.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if search_group.title %}
+    <h5 class="jcc-search-group__title">{{ search_group.title }}</h5>
+  {% endif %}
+
+  <form action="{{ search_group.url }}">
+    <div class="jcc-search-group__container">
+      <label class="usa-label" for="input-type-text">{{ search_group.label }}</label>
+      <input class="usa-input {% if search_group.error %}usa-input--error{% endif %}" id="input-type-text" name="{{ search_group.attribute }}" type="text" placeholder="{{ search_group.placeholder }}">
+      {% include '@atoms/buttons/button.twig' with {
+        button: {
+          text: search_group.button.text,
+        }
+      } %}
+    </div>
+
+    {% if search_group.error %}
+      <span class="usa-error-message">{{ search_group.error }}</span>
+    {% endif %}
+    {% if search_group.helper %}
+      <span class="jcc-search-group__helper">{{ search_group.helper }}</span>
+    {% endif %}
+  </form>
+</div>

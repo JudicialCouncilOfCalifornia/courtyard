@@ -1,0 +1,547 @@
+// Base Navigation
+$jcc-nav-link-height: 5.625rem;
+$jcc-nav-input-height: 3.25rem;
+$jcc-nav-icon-size: 2.5rem;
+$jcc-nav-link-padding: 2.5;
+$jcc-nav-input-height: 3.25rem;
+
+// Base Header
+$jcc-navbar-height: 3.75rem;
+$jcc-navbar-offset: 6.5rem;
+
+// Base Icon Media
+$jcc-icon-media-container-size: 2.5rem;
+$jcc-icon-media-size: 2.5rem;
+
+// Section vertical rhythm and centered block
+@mixin section-wrapper($padding-size: 6) {
+  @include u-padding-top($padding-size);
+  @include u-padding-bottom($padding-size);
+
+  @media print {
+    @include u-padding-bottom(3);
+  }
+}
+
+@mixin section-wrapper-bg {
+  @include u-padding-top(6);
+  @include u-padding-bottom(6);
+
+  @media print {
+    @include u-padding-top(3);
+  }
+}
+
+@mixin section-container {
+  @include grid-container(widescreen);
+}
+
+// Cover image with bleed
+@mixin cover-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img,
+  picture {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// Responsive embed container
+$aspect-height: 9;
+$aspect-width: 16;
+
+@mixin embed-container($height, $width) {
+  padding-bottom: percentage($height/$width);
+}
+
+// Custom ordered list elements
+@mixin custom-counter() {
+  counter-increment: step-counter;
+  position: relative;
+
+  &::before {
+    @include u-font(heading, 11);
+    padding: 0.625rem;
+    background-color: color("white");
+    border: 3px solid color("gold-30v");
+    border-radius: 50%;
+    color: color("primary");
+    content: counter(step-counter);
+    height: 3.5rem;
+    line-height: 1.25;
+    text-align: center;
+    width: 3.5rem;
+    display: block;
+    z-index: 2;
+
+    @include at-media(desktop) {
+      @include u-font(heading, 14);
+      position: absolute;
+      top: -7px;
+      right: 0;
+      bottom: 0;
+      left: -7px;
+      height: 4.6875rem;
+      width: 4.6875rem;
+    }
+  }
+}
+
+@mixin custom-counter-line() {
+  &:after {
+    content: "";
+    display: block;
+    width: 88%;
+    position: absolute;
+    z-index: 1;
+    height: 3px;
+    top: 1.625rem;
+    left: 3.5rem;
+    background-color: color(accent-warm-dark);
+
+    @include at-media(tablet) {
+      width: 92%;
+    }
+
+    @include at-media(desktop) {
+      top: 2.5rem;
+      left: 1.875rem;
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  &:last-of-type {
+    @include at-media(desktop) {
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}
+
+// Timeline elements
+@mixin timeline-dot($timeline-dot-bg: primary, $timeline-dot-border: primary) {
+  &:before {
+    position: absolute;
+    top: -1.425rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: color($timeline-dot-bg);
+    border: 2px solid color($timeline-dot-border);
+    border-radius: 50%;
+    content: "";
+    height: 1rem;
+    line-height: 1;
+    text-align: center;
+    width: 1rem;
+    z-index: 2;
+  }
+}
+
+@mixin timeline-line($timeline-line-border: primary) {
+  &:after {
+    position: absolute;
+    top: -1rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    content: "";
+    display: block;
+    width: calc(100% + 1.5rem);
+    height: 1px;
+    border: 1px solid color($timeline-line-border);
+    z-index: 1;
+  }
+}
+
+// Unstyled list helper
+@mixin unstyled-list() {
+  @include u-margin-y(0);
+  list-style-type: none;
+  padding-left: 0;
+
+  > li {
+    margin-bottom: 0;
+  }
+}
+
+@mixin first-last-spacing() {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Aria hidden helper
+@mixin accessibly-hidden() {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+// Screen reader only helper
+@mixin sr-only() {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Print
+@mixin print-hidden() {
+  @include grid-media($media-print) {
+    display: none !important;
+  }
+}
+
+// Type
+@mixin responsive-h-mega($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 13); // 36
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 15); // 48
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 12); // 32
+  }
+}
+
+@mixin responsive-h1($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 12); // 32
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 14); // 40
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 11); // 28
+  }
+}
+
+@mixin responsive-h2($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 11); // 28
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 13); // 36
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 10);
+  }
+}
+
+@mixin responsive-h3($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 10);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 11);
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 9);
+  }
+}
+
+@mixin responsive-h4($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 9);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 8); // 18
+  }
+}
+
+@mixin responsive-h5($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 8);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 9); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 7); // 18
+  }
+}
+
+@mixin responsive-h6($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 7);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 8); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 6);
+  }
+}
+
+@mixin responsive-lead($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 9); // 22
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 6); // 18
+  }
+}
+
+@mixin t-intro($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 7); // 18
+
+  @media print {
+    @include u-font($responsive-font-family, 5); // 16
+  }
+}
+
+@mixin t-copy() {
+  @include u-font(body, 5); // 16
+
+  @media print {
+    @include u-font(body, 4); // 16
+  }
+}
+
+@mixin t-small() {
+  @include u-font(body, 4); // 16
+
+  @media print {
+    @include u-font(body, 2);
+  }
+}
+@mixin body-prose() {
+  ul {
+    @include u-line-height(body, 2);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@mixin card-border(
+  $border-color: base-light,
+  $bg: "white",
+  $border-width: 1px,
+  $shadow: 3,
+  $radius: lg
+) {
+  @include u-bg($bg);
+  @include u-border($border-width);
+  @include u-border($border-color);
+  @include u-radius($radius);
+  @include u-shadow($shadow);
+}
+
+// Adds decorative dash to headers
+@mixin has-dash($dash-color: "gold-30v") {
+  position: relative;
+  padding-bottom: 0.5em;
+
+  &:after {
+    background-color: color($dash-color);
+    content: "";
+    height: 3px;
+    width: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin centerer() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Reset grid-col() styles (use with CSS Grid).
+@mixin grid-col-reset() {
+  flex: unset;
+  margin-left: unset;
+  margin-right: unset;
+  padding-left: unset;
+  padding-right: unset;
+  width: unset;
+}
+
+// Adds decorative dash to headers with positions:
+// below, above, left-right, left, right
+@mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below", $dash-width: null) {
+  position: relative;
+
+  &:after,
+  &:before {
+    @include u-bg($dash-color);
+    content: "";
+    height: 3px;
+  }
+
+  @if $dash-position == "below" {
+    padding-bottom: 0.5em;
+
+    &:after {
+      $dash-width: 3rem !default;
+      width: $dash-width;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  } @else if $dash-position == "below-center" {
+    padding-bottom: 0.8em;
+
+    &:after {
+      $dash-width: 100% !default;
+      width: $dash-width;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  } @else if $dash-position == "above" {
+    padding-top: 0.8em;
+
+    &:after {
+      $dash-width: 100% !default;
+      width: $dash-width;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  } @else if $dash-position == "above-center" {
+    padding-top: 0.8em;
+
+    &:before {
+      $dash-width: 100% !default;
+      width: $dash-width;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  } @else if $dash-position == "left-right" {
+    @include u-overflow(hidden);
+    &:before,
+    &:after {
+      $dash-width: 50% !default;
+      width: $dash-width;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+    }
+    &:before {
+      left: -0.5em;
+      margin-left: -50%;
+    }
+    &:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  } @else if $dash-position == "left" {
+    @include u-overflow(hidden);
+    &:before {
+      $dash-width: 100% !default;
+      width: $dash-width;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      left: -0.5em;
+      margin-left: -50%;
+    }
+  } @else if $dash-position == "right" {
+    @include u-overflow(hidden);
+    &:after {
+      $dash-width: 100% !default;
+      width: $dash-width;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+}
+
+@mixin link-hover-line($height: 8px, $color: secondary-light) {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $height;
+    transform: scaleX(0);
+    @include u-bg($color);
+
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@mixin link-hover-slide {
+  transition: 0.6s all ease;
+  &::before {
+    @include u-bg(base-lightest);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.3s ease;
+    width: 0%;
+    height: 0%;
+    @include u-radius(lg);
+  }
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin big-button-style {
+  @include u-padding-y(2.5);
+  @include u-padding-x(4);
+  @include u-font-size(body, 8);
+  @include u-radius(0);
+  @include u-line-height("sans", 2);
+
+  &.usa-button--round {
+    border-radius: 3rem;
+  }
+}
+
+@mixin jcc-button-unstyled {
+  @include button-unstyled;
+  @include u-text("blue-cool-60v");
+}

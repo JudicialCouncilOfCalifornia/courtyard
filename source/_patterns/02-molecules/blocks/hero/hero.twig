@@ -1,20 +1,22 @@
-
 {% if hero.column_content_right %}
-    {% set column_variant = hero.column_variant|default('has-two-columns-half') %}
-  {% else %}
-    {% set column_variant = hero.column_variant|default('has-one-column') %}
+  {% set column_variant = hero.column_variant|default('has-two-columns-half') %}
+{% else %}
+  {% set column_variant = hero.column_variant|default('has-one-column') %}
 {% endif %}
-
 
 {% set classes = [
   'jcc-hero',
   'jcc-hero--' ~ column_variant|default('has-two-columns-half'),
+  hero.lowercase_brow ? 'jcc-hero--lowercase-brow',
   hero.background_variant ? 'jcc-hero--' ~ hero.background_variant : '',
+  hero.background_parallax ? 'jcc-hero--background-parallax' : '',
+  hero.height_variant ? 'jcc-hero--' ~ hero.height_variant : '',
+  hero.inset_variant ? 'jcc-hero--' ~ hero.inset_variant : ''
 ]|merge(hero.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if hero.id %} id="{{ hero.id }}"{% endif %}>
   <div class="jcc-hero__container">
-    {% if hero.img %}
+    {% if ('has-background-image' in hero.background_variant) and hero.img %}
       <div class="jcc-hero__media">
         {% include '@atoms/image/image.twig' with { image: hero.img } %}
       </div>
@@ -29,6 +31,10 @@
 
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">
+          {% if hero.brow %}
+            <p class="jcc-hero__brow">{{ hero.brow }}</p>
+          {% endif %}
+
           <h1 class="jcc-hero__title{% if hero.title_variant %} jcc-hero__title--{{ hero.title_variant }}{% endif %}">
             {{- hero.title -}}
           </h1>
@@ -38,7 +44,7 @@
           {% endif %}
 
           {% if hero.body %}
-          <div class="jcc-hero__body">{{ hero.body }}</div>
+            <div class="jcc-hero__body">{{ hero.body }}</div>
           {% endif %}
         </div>
 
@@ -50,4 +56,10 @@
       </div>
     </div>
   </div>
+
+  {% if hero.banner_image %}
+    <div class="jcc-hero__banner" style="background-image:url({{ hero.banner_image }})">
+      {# <img src="{{ hero.banner_image }}" > #}
+    </div>
+  {% endif %}
 </div>

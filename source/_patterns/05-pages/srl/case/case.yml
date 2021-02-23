@@ -1,0 +1,39 @@
+
+hero:
+complete:
+switchboard:
+  background_variant: "has-background-color--dark--primary" #has-background-color--dark
+  layout_variant: "next-phase" #default, #right-column
+  breadcrumbs:
+    items:
+      - url: "#"
+        label: "Divorce"
+        url_attributes: ""
+      - label: "Divorce Without Children"
+        url_attributes: ""
+  headergroup:
+    title: 'The process for divorce for couples without children?'
+    body: 'Getting a divorce takes a minimum of 6 months and involves 3 major phases. The main steps are the same for couples who are married and for those who have domestic partnerships.<br><br>Select any phase to see more details and get step-by-step instructions.'
+  items:
+    primary:
+      - brow: 'Phase 1'
+        title: 'Start a divorce case'
+        embellishment: 'icon-bottom-left'
+        body: 'One spouse files papers to start the case and officially lets the other spouse know.'
+        url: 'link.pages-case-phase-1'
+      - brow: 'Phase 2'
+        title: 'Share Financial Information'
+        embellishment: 'icon-bottom-left'
+        body: 'Both spouses complete and exchange financial information documents.'
+        url: 'link.pages-case-phase-2'
+      - brow: 'Phase 3'
+        title: 'Make decisions'
+        embellishment: 'icon-bottom-left'
+        body: 'The couple makes decisions about how to split property or debts and spousal support  It often takes longer than 6-months to figure this out.'
+        url: 'link.pages-case-phase-3'
+      - brow: 'Phase 4'
+        title: 'Finalize the divorce'
+        body: 'Once all these issues are decided, you submit final paperwork to the court and your divorce will become final.'
+        embellishment: 'icon-bottom-left'
+        url: 'link.pages-case-phase-4'
+    secondary:

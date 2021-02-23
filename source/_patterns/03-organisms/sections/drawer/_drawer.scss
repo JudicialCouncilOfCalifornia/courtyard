@@ -1,0 +1,42 @@
+.jcc-drawer {
+  position: sticky;
+  bottom: units(2.5);
+  padding: 0 units(2.5);
+  z-index: z("top");
+  transition: opacity 1s;
+
+  // Visibility controlled by js on scroll.
+  &:not([visible]) {
+    opacity: 0;
+  }
+
+  &[visible] {
+    opacity: 1;
+  }
+
+  // Space and wrap drawer items gracefully.
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 -#{units(1)};
+
+    > * {
+      margin: units(2.5) units(1);
+    }
+  }
+
+  // Don't obscure content with invisible div.
+  @include at-media(desktop-lg) {
+    height: 0;
+
+    .jcc-drawer__inner {
+      height: 0;
+
+      > * {
+        transform: translateY(calc(-100% - #{units(2.5)}));
+      }
+    }
+  }
+}

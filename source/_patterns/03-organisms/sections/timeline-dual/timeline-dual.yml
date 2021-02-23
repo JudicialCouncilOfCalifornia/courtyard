@@ -1,0 +1,69 @@
+timeline_dual:
+  title_bar:
+    previous:
+      title: "Phase 1 <br>Sharing Financial Information"
+    title: "Phase 2: Sharing Financial Information"
+    next:
+      title: "Phase 3 <br> Sharing Financial Information"
+  top_title: "Spouse Initiating Divorce"
+  bottom_title: "Spouse Responding to Divorce"
+  items:
+    - top:
+        deadline: "Deadline: 60 days after filing for divorce"
+      bottom:
+        deadline: "Deadline: 60 days after filing for divorce"
+    - top:
+        number: 1
+        read_more:
+          type: "link"
+          link:
+            label: "Read more link"
+            url: "#"
+      icon: "both"
+      bottom:
+        number: 1
+        read_more:
+          type: "link"
+          modal:
+            button_label: "Label #2"
+            content: "<div>this is modal #2</div>"
+    - top:
+        number: 2
+        read_more:
+          type: "modal"
+          modal:
+            button_label: "Custom modal label #1"
+            content: "<div>this is modal #1</div>"
+      bottom:
+        number: 2
+        read_more:
+          type: "modal"
+          link:
+            label: "Read more link"
+            url: "#"
+    - top:
+        excerpt: "booyah"
+        number: 3
+      icon: "both"
+      bottom:
+        excerpt: "booyah is too short an excerpt"
+        number: 3
+    - top:
+        number: 4
+        read_more:
+          type: "link"
+          link:
+            label: "Read more link"
+            url: "#"
+      bottom:
+        number: "line"
+    - top:
+        number: "wait"
+        excerpt: "Wait"
+      bottom:
+        number: 5
+        read_more:
+          type: "link"
+          link:
+            label: "Read more link"
+            url: "#"

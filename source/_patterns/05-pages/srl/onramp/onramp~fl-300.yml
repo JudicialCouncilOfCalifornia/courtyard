@@ -1,0 +1,110 @@
+hero:
+  column_variant: "has-two-columns-threequarter"
+  breadcrumbs:
+    items:
+      - label: "Request for Order"
+        url: ''
+      - null
+  title: "Form FL-300"
+  lead: "What do these papers mean?"
+  body: '<p>The other party in your family law case is asking the court to make a decision. The court set a date to hear from both sides <strong>(a "hearing")</strong> before it makes a decision.</p>'
+  column_content_right:
+    include():
+      pattern: molecules-jump-nav
+      with:
+        jump_nav:
+          items:
+            - name: "Hearing Date and Time"
+            - name: "What the Other Party is Asking the Court to Decide"
+            - name: "Orders Made Before the Hearing"
+            - name: "What You Can Do"
+            - null
+
+entries:
+  - type: "postcard"
+    postcard:
+      headergroup:
+        title: "Hearing Date and Time"
+        lead: ""
+        body: "<p>The date, time, and place is on the first page.</p><p><a href=\"#\">Need more time to respond or can't attend the hearing</a></p>"
+
+      img:
+        src: "/images/photos/onramp-fl-300-hearing-date-and-time.png"
+        alt: "Hearing date and time"
+
+  - type: "postcard"
+    postcard:
+      background_variant: "has-background-color--light--secondary"
+      headergroup:
+        title: "What the Other Party is Asking the Court to Decide"
+        lead: ""
+        body: "<p>The topic of the request is checked on the first page. Exactly what the person wants the Court to decide and why are on Pages 2-4 and any attachments.</p><p>If \"Change\" is checked it means that there's already an order about this issue and the other party wants that changed.</p> <p>If \"Temporary emergency orders\" is checked it means the other party asked the court to decide something urgent before the hearing. If the Court agreed, item 7 at the bottom of Page 1 will be checked and the orders will be attached. These orders are temporary. They only last until the hearing. You must follow these orders.</p>"
+      img:
+        src: "/images/photos/onramp-fl-300-what-the-other-party-is-asking.png"
+        alt: "What the other party is asking the court to decide"
+
+  - type: "postcard"
+    postcard:
+      headergroup:
+        title: "Orders Made Before the Hearing"
+        lead: ""
+        body: '<p>Sometimes the Court makes orders about what one or both sides must do before the hearing. For example, if the hearing is about child custody and visitation, the Court may order you to attend mediation. You must follow any orders listed.</p>'
+      img:
+        src: "/images/photos/onramp-fl-300-orders-made-before-the-hearing.png"
+        alt: "Orders made before the hearing"
+
+  - type: "section"
+    text_section:
+      background_variant: "has-background-color--light--secondary"
+      column_variant: "has-two-columns-threequarter"
+      headergroup:
+        title: "What you can do"
+      column_content_left: "<p>No matter what you decide to do, right now you need to:</p><ul><li>follow any orders in or attached to the Request for Order</li><li>go to mediation, if ordered in item 6 on Page 1</li></ul> <p><strong>You have options to respond.</strong> If you don't respond, the Court will decide without your input.</p><p>There's generally no cost to respond. If this is the first time you are filing papers in the case, there may be a fee. If you can't afford the fee, you can ask for a fee waiver.</p>"
+
+  - type: "section"
+    text_section:
+      column_variant: "has-two-columns-threequarter"
+      headergroup:
+        lead: "If You Can Reach an Agreement"
+      column_content_left: "<p>Unless there is a restraining order, contact the other side to see if you can agree. If you do, you can submit a signed written agreement to the Court and request to cancel the hearing.</p>"
+
+  - type: "card-section"
+    card_section:
+      column_variant: "has-two-columns"
+      cards:
+      - title: "If You Disagree"
+        excerpt: "<ul>
+            <li>Complete, file, and serve Responsive Declaration to Request for Orders (Form Fl-320) to let the Court that know you disagree and why.</li>
+            <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
+            <li>Attend the hearing. If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
+          </ul>"
+        img:
+          src: "../../images/graphics/court.svg"
+          alt: "Alt text"
+      - title: "If You Agree"
+        excerpt: "
+          <ul>
+            <li>Complete, file, and serve Responsive Declaration to Request for Orders (Form Fl-320) to let the Court know you agree and why.</li>
+            <li>This must be filed and served at least 9 court days before the hearing unless item 5 on Page 1 says otherwise.</li>
+            <li>Attend the hearing. If you didn’t file a Responsive Declaration, the Court may not listen to your input.</li>
+          </ul>"
+        img:
+          src: "../../images/graphics/court.svg"
+          alt: "Alt text"
+
+  - type: "section"
+    text_section:
+      # Note: This overrides templats/onramp.yml, clashing w/Addition Information section.
+      background_variant: ""
+      headergroup:
+        title: ""
+        lead: "Ask for something not in the Request"
+        body: ""
+      column_content_left: "<p>At the hearing, the Court will only make decisions about the issues listed in the Request for Order (FL-300). If you want the Court to decide about something else, you must file your own Request for Order (Fl-300).</p>"
+
+  - type: "section"
+    text_section:
+      background_variant: "has-background-color--dark--secondary"
+      headergroup:
+        title: "Additional Fields"
+        lead: "<p>Check your document to see if the following fields were selected and if so find out about each of those sections.</p>"

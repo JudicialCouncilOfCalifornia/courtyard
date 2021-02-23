@@ -1,34 +1,118 @@
 .jcc-tile {
   @include u-radius(lg);
-  @include u-border(1px, primary-vivid);
+  @include u-border(1px, base-light);
+  @include u-bg("white");
+  @include u-height(full);
   @include u-padding(3);
   @include u-text(base-darkest);
-  @include u-shadow(2);
+  @include u-shadow(5);
   @include u-position(relative);
+  @include u-display(block);
   @include u-text(left);
+  @include u-color(base-darkest);
+  transition: all 0.4s;
+  text-decoration: none;
+
+  &--embellishment {
+    .jcc-tile__embellishment {
+      @include u-display(block);
+      @include u-position(absolute);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &--embellishment--icon-top-right {
+    .jcc-tile__embellishment {
+      @include u-width(5);
+      @include u-height(5);
+      @include u-top(1.5);
+      @include u-right(1.5);
+      background-image: url(../images/graphics/switchboard-icon.svg);
+    }
+  }
+
+  &--embellishment--icon-bottom-left {
+    @include at-media(desktop) {
+      padding-bottom: 4em;
+    }
+
+    .jcc-tile__title {
+      @include u-font-size("heading", 9);
+      @include u-margin-bottom(2);
+      @include u-font-weight(normal);
+    }
+
+    .jcc-tile__embellishment {
+      @include u-width(5);
+      @include u-height(5);
+      background-image: url(../images/graphics/switchboard-icon.svg);
+      transform: rotate(90deg);
+
+      @include at-media-max(desktop) {
+        @include u-top(1.5);
+        @include u-right(1.5);
+      }
+
+      @include at-media(desktop) {
+        @include u-bottom(2);
+        @include u-left(2);
+      }
+    }
+  }
+
+  &--embellishment--arrow-left {
+    @include u-padding-left(15);
+
+    .jcc-tile__embellishment {
+      @include u-width(9);
+      @include u-height(9);
+      @include u-left("205");
+      top: 50%;
+      background-image: url(../images/graphics/switchboard-arrow.svg);
+      transform: translateY(-50%);
+    }
+  }
+
+  &--embellishment--arrow-right {
+    @include u-padding-right(15);
+
+    .jcc-tile__embellishment {
+      @include u-width(9);
+      @include u-height(9);
+      @include u-right("205");
+      top: 50%;
+      background-image: url(../images/graphics/switchboard-arrow.svg);
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.jcc-tile--hover {
+  &:hover {
+    @include u-color(base-darkest);
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
 }
 
 .jcc-tile__brow {
   @include u-margin-bottom(1.5);
+  @include u-color(base-darkest);
 }
 
 .jcc-tile__title {
-  @include responsive-h5($responsive-font-family: heading);
+  @include u-font-size("heading", 9);
   @include u-line-height("heading", 3);
+  @include u-color(primary-dark);
+  @include u-font-weight(normal);
+}
 
-  a {
-    @include u-text(primary-dark);
-    text-decoration: none;
-
-    &::after {
-      content: "";
-      @include u-position(absolute);
-      @include u-left(0);
-      @include u-top(0);
-      @include u-right(0);
-      @include u-bottom(0);
-    }
-  }
+.jcc-tile__body {
+  @include u-font(body, 4);
+  @include u-color(base-darkest);
+  margin-top: 1em;
 }
 
 .jcc-tile.is-secondary {

@@ -1,0 +1,37 @@
+{% set aria__banner_label = 'Judicial Branch of California branding.  Skip this banner to the current site.' %}
+{% set aria__logo_label = 'Judicial Branch logo linked to its site' %}
+{% if is_footer %}
+  {% set aria__banner_label = 'Judicial Branch branding repeated in the footer. You have reached the bottom of the page.' %}
+  {% set aria__logo_label = 'Judicial Branch logo repeated in the footer and linked to its site' %}
+{% endif %}
+
+<div class="jcc-global-bar" role="region" aria-label="{{ global_bar.aria_label|default(aria__banner_label) }}">
+  <div class="jcc-global-bar__container">
+    <div class="jcc-global-bar-logo">
+      <a href="{{ global_bar.logo_text.url }}" title="{{ global_bar.logo_text.title }}" aria-label="{{ global_bar.logo_text.aria_label|default(aria__logo_label) }}">
+        {% if global_bar.logo %}<span class="jcc-global-bar-logo__graphic"><img src="{{ global_bar.logo }}" alt="{{ global_bar.logo_text.title }} branding {{ is_footer ? ' for footer' : '' }}" /></span>{% endif %}
+        <em class="jcc-global-bar-logo__text{% if global_bar.logo %} usa-sr-only{% endif %}">{{ global_bar.logo_text.title }}</em>
+      </a>
+    </div>
+
+    {% if is_footer %}
+      <div class="jcc-footer-global-wrapper">
+        <nav class="jcc-global__menu" aria-label="Web policies and usage menu">
+          {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
+            inline_nav : global_bar.secondary_nav
+          } %}
+        </nav>
+        <div class="jcc-footer-global-copyright">
+          &copy;
+          {{ "now"|date("Y") }}
+        </div>
+      </div>
+    {% else %}
+      <nav class="jcc-global__menu" aria-label="Other branch sites">
+        {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
+          inline_nav : global_bar.secondary_nav
+        } %}
+      </nav>
+    {% endif %}
+  </div>
+</div>

@@ -1,4 +1,5 @@
-label: First
-id: Ten
-name: Sample
-bordered: true
+radio:
+  label: First
+  id: Ten
+  name: Sample
+  style: ['bordered']

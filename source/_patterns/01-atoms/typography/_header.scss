@@ -1,6 +1,5 @@
 h1,
-h2,
-h3 {
+h2 {
   @include u-font-family(serif);
   @include u-text(normal);
   @include u-line-height("heading", 2);

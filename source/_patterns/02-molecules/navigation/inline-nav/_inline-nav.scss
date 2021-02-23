@@ -1,0 +1,25 @@
+.jcc-inline-nav {
+  @include add-list-reset;
+  @include at-media(desktop) {
+    @include u-display(flex);
+  }
+  @include u-margin(0);
+}
+
+.jcc-inline-nav__item {
+  @include u-display(block);
+  @include at-media(mobile-lg) {
+    @include u-display(inline-block);
+  }
+  @include u-margin-right(2);
+  @include u-margin-bottom(2);
+  @include at-media(desktop) {
+    @include u-flex("auto");
+    @include u-margin-bottom(0);
+  }
+  @include u-text(no-wrap);
+}
+
+.jcc-inline-nav__item:last-child {
+  @include u-margin-right(0);
+}

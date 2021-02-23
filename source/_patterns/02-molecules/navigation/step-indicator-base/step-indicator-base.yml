@@ -1,0 +1,21 @@
+step_indicator_base:
+  scheme: "sans" # sans , serif , simple
+  aria_label: "Step indicator"
+  theme_classes:
+    labels: true # true, false
+    counters: "show" # show, hide
+    counter_size: "default" # default, small
+    centered_layout: false # false, true
+    alignment: "default" # default, center
+  items:
+    - label: "Personal information"
+      status: "complete" #complete, current, false
+    - label: "Household status"
+      status: "complete"
+    - label: "Supporting documents"
+      status: "current"
+    - label: "Signature"
+      status: false
+    - label: "Review and submit"
+      status: false
+

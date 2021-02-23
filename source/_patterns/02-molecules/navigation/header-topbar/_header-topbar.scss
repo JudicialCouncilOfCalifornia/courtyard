@@ -1,0 +1,55 @@
+.jcc-header--topbar {
+  @include u-bg("white");
+  @include u-position(relative);
+  z-index: 10;
+}
+
+.jcc-header__container--topbar {
+  @include at-media(desktop) {
+    @include grid-container(widescreen);
+    @include clearfix;
+    @include grid-row;
+    @include u-flex;
+    @include u-minh(card);
+    padding-top: 0;
+    padding-bottom: 0;
+    &.translate-disabled {
+      form {
+        @include at-media(desktop) {
+          @include grid-col(6);
+          .jcc-fieldset-search {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  @include u-minh(15);
+
+  .jcc-header__logo--topbar {
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-position(relative);
+      img {
+        @include u-height(9);
+        @include u-margin-top(3);
+      }
+    }
+  }
+
+  form {
+    @include at-media(desktop) {
+      @include u-position(relative);
+      @include grid-col(5);
+      margin-top: 35px;
+    }
+  }
+
+  .jcc-dropbutton {
+    @include at-media(desktop) {
+      @include u-position(relative);
+      @include grid-col(1);
+      margin-top: 26px;
+    }
+  }
+}

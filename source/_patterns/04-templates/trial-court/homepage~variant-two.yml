@@ -1,0 +1,76 @@
+homepage:
+  hero_icon_nav:
+    style: 'jcc-hero-icon-nav-style--variant-two'
+    hero_img_banner:
+      background_img: '../../images/photos/alameda.jpg'
+      brow: 'Welcome to the'
+      title: 'Superior Court of Alameda'
+      subtitle: 'What would you like to do?'
+    links:
+      icons:
+        - title: 'Jury Service'
+          url: '#'
+          icon: '../../images/graphics/people.svg'
+        - title: 'Traffic Tickets'
+          url: '#'
+          icon: '../../images/graphics/car.svg'
+        - title: 'E-filing'
+          url: '#'
+          icon: '../../images/graphics/files.svg'
+        - title: 'Case Information'
+          url: '#'
+          icon: '../../images/graphics/justice.svg'
+      buttons:
+        - title: 'Tentative Rulings'
+          url: '#'
+        - title: 'Calendar'
+          url: '#'
+        - title: 'Attorney Portal'
+          url: '#'
+  cards_with_list:
+    headergroup:
+      title: "Location Placeholder"
+    cards:
+      - brow: "Feb 04, 2020"
+        title: "The Superior Court of Alameda County will be closed on Wednesday, February 12, 2020 for Lincoln's Birthday."
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+      - brow: "Jan 20, 2020"
+        title: "Juror Eligibility Changes"
+        excerpt: "<p>Per CA SB 310, effective January 1, 2020, some persons with prior felony convictions will be eligible for jury service.</p>"
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+      - brow: "Dec 04, 2019"
+        title: "The Court's Local Rules and General Directives have been updated"
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+      - brow: "Nov 20, 2019"
+        title: "The Superior Court of Alameda County announces the opening of a new, limited jurisdiction civil department."
+        excerpt: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+      - brow: "Nov 04, 2019"
+        title: "Invitation to Comment on Proposed Court Budget Fiscal Year 2019-2020"
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+      - brow: "Oct 20, 2019"
+        title: "File the claim of exemption with the sheriff"
+        excerpt: "<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>"
+        url: "#"
+        read_more:
+          label: "Read more"
+          url: "#"
+    button:
+      text: "More News"
+      url: "#"
+      style: 'primary'

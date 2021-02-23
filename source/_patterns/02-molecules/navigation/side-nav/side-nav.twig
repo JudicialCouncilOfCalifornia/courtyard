@@ -1,43 +1,116 @@
+{#
+/**
+ * @file
+ * Available variables typically provided from Drupal book navigation:
+ * - items: A nested list of side navigation items. Each side navigation item contains:
+ *   - attributes: HTML attributes for the side navigation item.
+ *   - below: The side navigation item child items.
+ *   - title: The side navigation link title.
+ *   - url: The side navigation link URL, instance of \Drupal\Core\Url.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     side navigation tree.
+ *   - is_collapsed: TRUE if the link has children within the current side navigation tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ * - active_trail: active trail
+ */
+#}
+{% set sidenav_classes = [
+  'jcc-sidenav',
+  side_nav.theme_classes ? side_nav.theme_classes
+]|merge(side_nav.sidenav_classes|default([''])) %}
+
+{% import _self as sidenav %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
 {% set tag = side_nav.tag|default('h2') %}
 
-{% set classes = [
-  'jcc-sidenav',
-]|merge(side_nav.classes|default([''])) %}
+<nav aria-label="{{ side_nav.aria_label }}">
+  <{{ tag }} class="jcc-sidenav__title">{{ side_nav.header }}</{{ tag }}>
+  {{ sidenav.sidenav_links(side_nav.items, attributes, sidenav_classes|join(' ')|trim, 0, active_trail, side_nav.expand_icon, side_nav.collapse_icon, side_nav.alt_collapse_icon, side_nav.alt_expand_icon) }}
+</nav>
 
-{% if side_nav|length > 0 %}
-  <div class="{{ classes|join(' ')|trim }}">
-    <nav>
-      <{{ tag }} class="jcc-sidenav__title">{{ side_nav.title }}</{{ tag }}>
-      <ul class="usa-sidenav">
-        {# Level one #}
-        {% for item in side_nav.items %}
-          <li class="usa-sidenav__item">
-            <a href="{{ item.url }}">{{ item.name }}</a>
+{% macro sidenav_links(items, attributes, sidenav_classes, menu_level, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) %}
+  {% import _self as sidenav %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {% for item in items %}
+        {% set link_classes = {
+          'class' : [
+            'text-uppercase',
+            'text-bold',
+            item.in_active_trail ? 'usa-current',
+          ]
+        } %}
+        <ul class="usa-sidenav {{ sidenav_classes }}">
+          <li class="usa-sidenav__item jcc-sidenav__item-home">{{ link(item.title, item.url, link_classes) }}</li>
 
-            {# Level two #}
-            {% if item.children|length > 0 %}
-              <ul class="usa-sidenav__sublist">
-                {% for child in item.children %}
-                  <li class="usa-sidenav__item">
-                    <a href="{{ child.url }}">{{ child.name }}</a>
+          {% if item.below %}
+            {{ sidenav.sidenav_links(item.below, attributes, sidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+          {% endif %}
+        </ul>
+      {% endfor %}
+    {% else %}
+      {% if menu_level > 1 %}
+      <ul class="usa-sidenav__sublist">
+      {% endif %}
+        {% for item in items %}
+          {% set classes = [
+            'usa-sidenav__item',
+            item.in_active_trail ? 'jcc-current__container',
+          ] %}
+          {% set link_classes = {
+            'class' : [
+              item.in_active_trail ? 'usa-current',
+              menu_level == 1 and item.original_link.has_children ? 'jcc-haschildren'
+            ]
+          } %}
+          <li class="{{ classes|join(' ')|trim }}">
+            {% if item.below %}
+              {{ link(item.title, item.url, link_classes) }}
 
-                    {# Level three #}
-                    {% if child.children|length > 0 %}
-                      <ul class="usa-sidenav__sublist">
-                        {% for grandchild in child.children %}
-                          <li class="usa-sidenav__item">
-                            <a href="{{ grandchild.url }}">{{ grandchild.name }}</a>
-                          </li>
-                        {% endfor %}
-                      </ul> {# Level three #}
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul> {# Level two #}
+              {% if menu_level == 1 and item.original_link.has_children %}
+                {% if alt_collapse_icon %}
+                  <i class="icon icon-alt {{ alt_collapse_icon }}"></i>
+                {% else %}
+                  {% set icon = collapse_icon|default({
+                    name: "expand_less",
+                    title: "Showing subpages"|t,
+                    decorative: true,
+                    width: "width-3",
+                    height: "height-3"
+                  }) %}
+                  {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                {% endif %}
+              {% endif %}
+
+              {{ sidenav.sidenav_links(item.below, attributes, sidenav_classes, menu_level + 1, active_trail, expand_icon, collapse_icon, alt_collapse_icon, alt_expand_icon) }}
+            {% else %}
+              {{ link(item.title, item.url, link_classes) }}
+
+              {% if menu_level == 1 and item.original_link.has_children %}
+                {% if alt_expand_icon %}
+                  <i class="icon icon-alt {{ alt_expand_icon }}"></i>
+                {% else %}
+                    {% set icon = expand_icon|default({
+                      name: "expand_more",
+                      title: "Show subpages"|t,
+                      decorative: true,
+                      width: "width-3",
+                      height: "height-3"
+                    }) %}
+                  {% include '@atoms/icons/icon.twig' with  { icon: icon } %}
+                {% endif %}
+              {% endif %}
             {% endif %}
           </li>
         {% endfor %}
-      </ul> {# Level three #}
-    </nav>
-  </div>
-{% endif %}
+      {% if menu_level > 1 %}
+      </ul>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endmacro %}

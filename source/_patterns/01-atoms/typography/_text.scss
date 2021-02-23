@@ -60,20 +60,24 @@ video {
   @include u-padding(0);
 }
 
-a {
-  @include u-text("blue-cool-50v");
+a,
+.usa-alert__text a,
+.usa-form a.usa-button--unstyled,
+a.usa-link,
+.usa-footer__secondary-link a {
+  @include u-text("blue-cool-60v");
 
   &:hover {
-    @include u-text("cyan-40v");
+    @include u-text("cyan-60v");
   }
 
   &:active,
   &:focus {
-    @include u-text("blue-cool-40v");
+    @include u-text("cyan-60v");
   }
 
   &:visited {
-    @include u-text("blue-cool-50v");
+    @include u-text("blue-cool-60v");
   }
 }
 
@@ -103,11 +107,11 @@ a {
   }
 
   h1,
-  h2,
-  h3 {
+  h2 {
     @include u-text(normal);
   }
 
+  h3,
   h4,
   h5,
   h6 {
@@ -118,10 +122,39 @@ a {
   h6 {
     text-transform: none;
   }
+
+  .h-responsive-h1 {
+    @extend .h-responsive-h1;
+  }
+
+  .h-responsive-h2 {
+    @extend .h-responsive-h2;
+  }
+
+  .h-responsive-h3 {
+    @extend .h-responsive-h3;
+  }
+
+  .h-responsive-h4 {
+    @extend .h-responsive-h4;
+  }
+
+  .h-responsive-h5 {
+    @extend .h-responsive-h5;
+  }
+
+  .h-responsive-h6 {
+    @extend .h-responsive-h6;
+  }
 }
 
 .h-dash {
   @include has-dash();
+}
+
+.jcc-brow {
+  @include u-margin-bottom(2);
+  @include u-font(sans, 6);
 }
 
 .jcc-title {

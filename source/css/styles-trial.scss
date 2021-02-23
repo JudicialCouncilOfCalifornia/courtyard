@@ -1,0 +1,93 @@
+// setting these change how components will be shown
+$srl: false;
+$trial: true;
+
+// -------------------------------------
+// Import individual theme settings
+@import "../_patterns/00-protons/base/global";
+@import "../_patterns/00-protons/base/mixins/*.scss";
+@import "../_patterns/00-protons/trial/global-trial";
+
+// -------------------------------------
+// Import individual USWDS modules...
+
+// Required
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/packages/required";
+
+// Variables
+// @import 'core/system-tokens';
+
+// Global
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/packages/global";
+
+// Base
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/base/body";
+@import "../../node_modules/uswds/src/stylesheets/base/accessibility";
+
+// Elements
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/elements/buttons";
+@import "../../node_modules/uswds/src/stylesheets/elements/embed";
+@import "../../node_modules/uswds/src/stylesheets/elements/figure";
+@import "../../node_modules/uswds/src/stylesheets/elements/form-controls/all";
+@import "../../node_modules/uswds/src/stylesheets/elements/layout-grid";
+@import "../../node_modules/uswds/src/stylesheets/elements/table";
+@import "../../node_modules/uswds/src/stylesheets/elements/tags";
+@import "../../node_modules/uswds/src/stylesheets/elements/typography/content";
+@import "../../node_modules/uswds/src/stylesheets/elements/typography/links";
+@import "../../node_modules/uswds/src/stylesheets/elements/typography/list";
+@import "../../node_modules/uswds/src/stylesheets/elements/typography/prose";
+
+// Components
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/components/accordions";
+@import "../../node_modules/uswds/src/stylesheets/components/alerts";
+@import "../../node_modules/uswds/src/stylesheets/components/banner";
+@import "../../node_modules/uswds/src/stylesheets/components/card";
+@import "../../node_modules/uswds/src/stylesheets/components/checklist";
+@import "../../node_modules/uswds/src/stylesheets/components/footer";
+@import "../../node_modules/uswds/src/stylesheets/components/forms";
+@import "../../node_modules/uswds/src/stylesheets/components/graphic-list";
+@import "../../node_modules/uswds/src/stylesheets/components/header";
+@import "../../node_modules/uswds/src/stylesheets/components/hero";
+@import "../../node_modules/uswds/src/stylesheets/components/layout";
+@import "../../node_modules/uswds/src/stylesheets/components/media-block";
+@import "../../node_modules/uswds/src/stylesheets/components/megamenu";
+@import "../../node_modules/uswds/src/stylesheets/components/nav-container";
+@import "../../node_modules/uswds/src/stylesheets/components/navbar";
+@import "../../node_modules/uswds/src/stylesheets/components/navigation";
+@import "../../node_modules/uswds/src/stylesheets/components/search";
+@import "../../node_modules/uswds/src/stylesheets/components/section";
+@import "../../node_modules/uswds/src/stylesheets/components/sidenav";
+@import "../../node_modules/uswds/src/stylesheets/components/skipnav";
+@import "../../node_modules/uswds/src/stylesheets/components/step-indicator";
+
+// Utilities
+// -------------------------------------
+@import "../../node_modules/uswds/src/stylesheets/utilities/utility-fonts";
+@import "../../node_modules/uswds/src/stylesheets/utilities/palettes/all";
+@import "../../node_modules/uswds/src/stylesheets/utilities/rules/all";
+@import "../../node_modules/uswds/src/stylesheets/utilities/rules/package";
+@import "../../node_modules/uswds/src/stylesheets/core/mixins/_utility-builder.scss";
+
+@include render-utilities-in($utilities-package);
+
+// -------------------------------------
+// ...or import all USWDS modules
+
+// @import '../../node_modules/uswds/src/stylesheets/uswds';
+
+// -------------------------------------
+// Import theme custom styles
+
+// Styles inside patterns.
+// -------------------------------------
+@import "../_patterns/01-atoms/**/*.scss";
+@import "../_patterns/02-molecules/**/*.scss";
+@import "../_patterns/03-organisms/**/*.scss";
+@import "../_patterns/04-templates/**/*.scss";
+@import "../_patterns/05-pages/**/*.scss";
+@import "../_patterns/00-protons/print";

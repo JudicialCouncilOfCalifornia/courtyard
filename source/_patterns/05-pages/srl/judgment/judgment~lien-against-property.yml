@@ -1,0 +1,21 @@
+hero:
+  breadcrumbs:
+    items:
+      - label: 'Debt Collection'
+        url: 'link.pages-judgment'
+      - label: 'Lien Against Property'
+  title: 'Liens against real property'
+  lead: 'A lien is the result of the judgment being recorded with the Clerk Recorder for the county.'
+  body: ''
+  column_content_right: ''
+
+entries:
+  - type: 'section'
+    text_section:
+      headergroup: ''
+      column_content_left: '
+        <p class="jcc-lead">This lien will prevent you from buying, selling, or refinancing any land until the lien is cleared. Liens are on a county-by-county basis, so having a lien in one county does not affect your property in another.</p>
+        <p>To clear the lien, you must either pay the judgment in full or negotiate a settlement with the debt collector.</p>'
+
+switchboard:
+  background_variant: 'has-background-color--dark--primary'

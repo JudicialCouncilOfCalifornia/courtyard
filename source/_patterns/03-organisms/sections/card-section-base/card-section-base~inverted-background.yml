@@ -1,0 +1,5 @@
+card_section:
+  background: 'dark'
+  headergroup:
+    layout:
+      spacing: 'margin-y-4'

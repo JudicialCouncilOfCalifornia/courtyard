@@ -1,0 +1,12 @@
+{% set icon = {
+    name: "search",
+    title: "Search"|t,
+    decorative: true,
+} %}
+
+<div class="jcc-fieldset-search">
+  <fieldset class="usa-fieldset">
+    <input type="text" placeholder="{{ search_input.placeholder }}" class="usa-input" id={{'search-type-text--' ~ random()}} name="{{ search_input.form_input_name }}" title="{{ search_input.placeholder|default('Search this site') }}" />
+    <button type="submit" aria-label="{{ search_input.title|default('Submit your search') }}">{% include '@atoms/icons/icon.twig' with { icon: icon } %}</button>
+  </fieldset>
+</div>

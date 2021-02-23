@@ -1,0 +1,54 @@
+name: Create artifact from development
+
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target_repo: [ "JudicialCouncilOfCalifornia/courtyard-artifact" ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.3'
+    - run: composer install
+    - run: git checkout -- .
+    - uses: actions/setup-node@v1
+    - run: npm install
+    - run: npm run build
+    - uses: actions/checkout@v2
+      with:
+        repository: ${{ matrix.target_repo }}
+        path: artifact
+        token: ${{ secrets.CourtyardArtifactToken }}
+    - run: cp -R public/* artifact/public/.
+    - run: cp -R source/_patterns/* artifact/source/_patterns/.
+    - run: cp -R node_modules/uswds/src/stylesheets/* artifact/source/uswds/.
+    - name: Commit to repository
+      env:
+        TOKEN_API: ${{ secrets.TOKEN_API }}
+        COMMIT_MSG: |
+          Artifact generated from development
+      run: |
+        # Hard-code user configuration
+        git config user.email "github-actions@github.com"
+        git config user.name "Github Actions"
+        git add --all
+        git commit -m "${COMMIT_MSG}"
+        git push origin master
+        git fetch origin --tags
+        VERSION=`git tag -l --sort=v:refname | tail -1`
+        VERSION_BITS=(${VERSION//./ })
+        VNUM1=${VERSION_BITS[0]}
+        VNUM2=${VERSION_BITS[1]}
+        VNUM3=${VERSION_BITS[2]}
+        VNUM3=$((VNUM3+1))
+        NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
+        git tag -a $NEW_TAG -m "Autotag $NEW_TAG created by github-actions"
+        git push --tags
+      working-directory: artifact

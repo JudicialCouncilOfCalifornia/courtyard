@@ -1,0 +1,30 @@
+.jcc-link-list-with-button__container {
+  > .jcc-header-group {
+    @include section-container();
+    @include u-text-align(center);
+    @include u-overflow(hidden);
+
+    .jcc-header-group__title {
+      @include u-font(heading, 12);
+      @include u-margin-bottom(4);
+
+      @include at-media(desktop) {
+        @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: left-right);
+      }
+      @include at-media-max(desktop) {
+        @include has-dash-position(
+          $dash-color: "mint-cool-50v",
+          $dash-position: "above-right",
+          $dash-width: 75px
+        );
+      }
+    }
+  }
+
+  > div {
+    @include section-container();
+    max-width: 83.5rem;
+    @include u-padding(0);
+    @include u-margin-bottom(0);
+  }
+}

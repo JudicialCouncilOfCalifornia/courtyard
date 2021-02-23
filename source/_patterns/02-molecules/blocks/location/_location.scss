@@ -1,0 +1,162 @@
+.jcc-location {
+  @include at-media("desktop") {
+    @include grid-row;
+    @include grid-gap(6);
+  }
+}
+
+.jcc-location--full {
+  .jcc-location__content-first {
+    @include u-maxw("mobile-lg");
+    @include u-margin-x("auto");
+    @include u-margin-bottom("2");
+
+    @include at-media("desktop") {
+      @include grid-col(3);
+      @include u-order(2);
+    }
+  }
+
+  .jcc-location__content-second {
+    @include at-media("desktop") {
+      @include grid-col(9);
+      @include u-order(1);
+    }
+  }
+
+  .jcc-location__inner-content {
+    @include at-media("desktop-lg") {
+      @include grid-row;
+      @include grid-gap(4);
+    }
+  }
+
+  .jcc-location__inner-content-first {
+    @include at-media("desktop-lg") {
+      @include grid-col(8);
+    }
+  }
+
+  .jcc-location__inner-content-second {
+    @include at-media("desktop-lg") {
+      @include grid-col(4);
+    }
+  }
+
+  .jcc-location__title {
+    @include u-color("primary-dark");
+  }
+}
+
+.jcc-location--mini {
+  .jcc-location__content-first {
+    @include u-maxw("mobile-lg");
+    @include u-margin-x("auto");
+    @include u-margin-bottom("2");
+
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-order(2);
+    }
+  }
+
+  .jcc-location__content-second {
+    @include at-media("desktop") {
+      @include grid-col(6);
+      @include u-order(1);
+    }
+  }
+
+  .jcc-location__brow {
+    @include u-margin-bottom(1);
+  }
+
+  .jcc-location__title {
+    @include u-color("primary-darker");
+    font-size: 18px;
+  }
+
+  .jcc-location__hours-item {
+    @include u-margin-bottom(0);
+  }
+
+  .jcc-location__hours-item-label {
+    @include u-font-weight("bold");
+  }
+}
+
+.jcc-location__brow {
+  @include u-color("base-dark");
+}
+
+.jcc-location__address {
+  @include u-margin-bottom("2");
+  @include u-color("primary-darker");
+}
+
+.jcc-location__phone {
+  @include u-margin-bottom("2");
+
+  a {
+    @include u-text("no-underline");
+
+    &:hover {
+      @include u-text(underline);
+    }
+  }
+}
+
+.jcc-location__website {
+  @include u-margin-bottom("2");
+}
+
+.jcc-location__tags-label,
+.jcc-location__hours-label {
+  @include u-margin-bottom("0.5");
+  @include u-color("primary-darker");
+  font-size: 18px;
+}
+
+.jcc-location__tags {
+  @include u-margin-bottom("4");
+}
+
+.jcc-location__hours-item-label {
+  @include u-color("primary-darker");
+}
+
+.jcc-location__hours-items {
+  @include grid-row;
+  @include grid-gap(4);
+}
+
+.jcc-location__hours-item {
+  @include u-margin-bottom("2");
+
+  @include at-media("tablet-lg") {
+    [data-quantity="3"] > & {
+      @include grid-col(4);
+    }
+  }
+}
+
+.jcc-location__map {
+  @include u-width(full);
+  background-position: center center;
+  background-size: cover;
+
+  &::after {
+    @include u-display("block");
+    padding-bottom: 100%;
+    content: "";
+  }
+}
+
+.jcc-location__directions {
+  a,
+  a:visited {
+    @include u-justify-content("justify-center");
+    @include u-width("full");
+    @include u-color(primary-darker);
+  }
+}

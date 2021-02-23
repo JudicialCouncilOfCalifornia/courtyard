@@ -1,0 +1,127 @@
+top:
+  hero:
+    column_variant: 'has-one-column'
+    breadcrumbs:
+      items:
+        - label: 'Experiment'
+    title: 'Stacked Sections Autospacing'
+    lead: 'Automate removal of extra spacing when sections of the same background color are stacked.'
+
+entries:
+  - type: 'section'
+    text_section:
+      column_variant: 'has-two-columns-threequarter'
+      headergroup: ''
+      column_content_left: '
+        <p class="jcc-lead">If your wages are garnished, the debt collector can take up to 25% of your after-tax wages. If your income is low or near minimum wage, the amount taken may be less than 25%. Unfortunately, some employers miscalculate the amount below 25%.</p>
+        <p class="jcc-lead">By law, your employer cannot fire you or take other action against you for a single wage garnishment.</p>
+        <p>If you are unable to afford the amount to be garnished from wages, a claim of exemption may reduce or stop the withholding. Act quickly! If you file within ten days you might be able to prevent the garnishment from starting. Even if the garnishment starts, file as early as possible, since the sheriff will hold onto funds levied after filing the claim of exemption. Once the garnishment starts and funds are transferred to the debt collector, it is almost impossible to get them back.</p>'
+      column_content_right:
+        join():
+          - '<div class="margin-bottom-4">'
+          - include():
+              pattern: 'molecules-read-more'
+              with:
+                read_more:
+                  block_variant: true
+          - '</div><div class="margin-bottom-4">'
+          - include():
+              pattern: 'molecules-list-block-files'
+          - '</div>'
+
+  - type: 'steps'
+    steps:
+      items:
+      - title: 'Prepare the claim of exemption'
+        excerpt: '<p>Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: 'autospacing-steps-toggle-1'
+            title: 'read more'
+            content: 'Read more content'
+      - title: 'File the claim of exemption'
+        excerpt: '<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail)</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: 'autospacing-steps-toggle-2'
+            title: 'read more'
+            content: 'Read more content'
+      - title: 'Wait to see if the claim of exemption is opposed'
+        excerpt: '<p>File the original plus one copy with the sheriff shown on the Order to Withhold Wages within 10 days (15 if the Order to Withhold Wages was served by mail).</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: 'autospacing-steps-toggle-3'
+            title: 'read more'
+            content: 'Read more content'
+      - title: 'Reply to the opposition, if any'
+        excerpt: '<p>Serve and file your reply, if any with the court</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: 'autospacing-steps-toggle-4'
+            title: 'read more'
+            content: 'Read more content'
+      - title: 'Attend the hearing, if any'
+        excerpt: '<p>Gather your evidence. Check tentative rulings the court day before if your court uses them.</p>'
+        read_more:
+          type: 'toggle'
+          toggle:
+            id: 'autospacing-steps-toggle-5'
+            title: 'read more'
+            content: 'Read more content'
+
+  - type: 'section'
+    text_section:
+      background_variant: 'has-background-color--dark--secondary'
+      column_variant: 'has-two-columns-threequarter'
+      headergroup: ''
+      column_content_left: 'In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t file an Answer due to inadvertence, mistake, or excusable neglect.'
+
+  - type: 'section'
+    text_section:
+      background_variant: 'has-background-color--dark--secondary'
+      column_variant: 'has-two-columns-threequarter'
+      headergroup: ''
+      column_content_left: 'In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t file an Answer due to inadvertence, mistake, or excusable neglect.'
+
+  - type: 'section'
+    text_section:
+      background_variant: 'has-background-color--light--secondary'
+      column_variant: 'has-two-columns-threequarter'
+      headergroup: ''
+      column_content_left: 'In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t file an Answer due to inadvertence, mistake, or excusable neglect.'
+
+  - type: 'section'
+    text_section:
+      background_variant: 'has-background-color--light--secondary'
+      column_variant: 'has-two-columns-threequarter'
+      headergroup: ''
+      column_content_left: 'In addition to your claim of exemption, you may be able to negotiate a settlement of your judgment. If the judgment was entered because you did not file an Answer in the case, you may be able to file a motion to set aside the judgment if you did not know about the case, the documents starting the case were never served, or you didn’t file an Answer due to inadvertence, mistake, or excusable neglect.'
+
+  - type: 'steps'
+    steps:
+      headergroup: ''
+      background_variant: 'has-background-color--light--primary'
+      items:
+        - title: 'Prepare the claim of exemption'
+          excerpt: '<p>Prepare a Claim of Exemption (form WG-006) and Financial Statement (form WG-007)</p>'
+          read_more:
+            type: 'toggle'
+            toggle:
+              id: 'autospacing-steps-toggle-2-1'
+              title: 'read more'
+              content: 'If your bank account is levied, you must act quickly! You have only ten days from the date of the levy to file a claim of exempltion (plus five days if the notice was sent be mail) with the sheriff performing the levy.'
+        - title: 'File the claim of exemption'
+          excerpt: 'File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail)'
+          read_more:
+            type: 'toggle'
+            toggle:
+              id: 'autospacing-steps-toggle-2-2'
+              title: 'read more'
+              content: 'Read more content'
+
+switchboard:
+  background_variant: 'has-background-color--dark--primary'

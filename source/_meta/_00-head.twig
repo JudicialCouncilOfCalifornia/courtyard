@@ -6,15 +6,25 @@
 		<meta name="viewport" content="width=device-width" />
 
 		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?{{ cacheBuster }}" media="all" />
-		<link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
-
+		<link rel="stylesheet" id='srl' type='text/css' href="../../css/styles-srl.css?{{ cacheBuster }}" media="all" />
+		<link rel="stylesheet" id='trial' type='text/css' href="../../css/styles-trial.css?{{ cacheBuster }}" media="all" disabled/>
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 		{{ patternLabHead | raw }}
 		<!-- End Pattern Lab -->
 
 	</head>
-	<body class="{{ bodyClass }}">
+
+	<body>
+		<div class="jcc-themebar">
+			<a href="/styleguide/html/styleguide.html"><span class="jcc-themebar__title"> JCC COURTYARD</span></a>
+			<span class="jcc-themebar__select">
+				<select class="jcc-themebar__switcher" name="options" id="options">
+						<option value="srl">SRL</option>
+						<option value="trial-court">TRIAL COURTS</option>
+	      </select>
+			</span>
+		</div>
     <div style="width:0;height:0;position:absolute;overflow:hidden;">
       {% include "@atoms/icons/symbol-defs.svg" %}
     </div>
-
+		<div class="jcc-all">

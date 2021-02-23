@@ -1,0 +1,46 @@
+primary_nav:
+  mega: false
+  links:
+    - text: Current section 1
+      is_current: true
+      id: nav-section-one
+      links:
+        - text: Navigation link 1
+          href: "#"
+        - text: Navigation link 2
+          href: "#"
+          is_current: false
+        - text: Navigation link 3
+          href: "#"
+        - text: Navigation link 4
+          href: "#"
+        - text: A very long navigation link that goes onto two lines
+          href: "#"
+        - text: Navigation link 5
+          href: "#"
+        - text: Navigation link 6
+          href: "#"
+        - text: Navigation link 7
+          href: "#"
+        - text: Navigation link 8
+          href: "#"
+    - text: Simple link 1
+      href: "#"
+    - text: Section 3
+      is_current: false
+      id: nav-section-two
+      links:
+        - text: Section 4
+          is_current: false
+          id: nav-section-three
+          links:
+            - text: Navigation link 1
+              href: "#"
+            - text: Navigation link 2
+              href: "#"
+            - text: Navigation link 3
+              href: "#"
+            - text: Navigation link 4
+              href: "#"
+            - text: Navigation link 5
+              href: "#"

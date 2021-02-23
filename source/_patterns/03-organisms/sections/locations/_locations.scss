@@ -1,0 +1,20 @@
+.jcc-locations--full {
+  .jcc-locations__items {
+    @include section-container;
+    @include u-padding-bottom(8);
+
+    .jcc-locations[data-quantity="1"] & {
+      @include u-padding-bottom(0);
+    }
+  }
+
+  .jcc-locations__item {
+    @include u-padding-y("4");
+    @include u-border-bottom("1px", "base-light");
+
+    .jcc-locations[data-quantity="1"] & {
+      @include u-padding-bottom(0);
+      @include u-border-bottom(0);
+    }
+  }
+}

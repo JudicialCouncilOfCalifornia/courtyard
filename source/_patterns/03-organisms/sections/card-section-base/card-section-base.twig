@@ -1,0 +1,45 @@
+{% set card_template = card_section.card_template|default('@molecules/blocks/card-base/card-base.twig') %}
+{% set headergroup = card_section.headergroup %}
+{% set card_section_classes = [
+  'jcc-cards',
+  headergroup.layout.alignment == 'center' ? 'jcc-cards--centered' : '',
+  card_section.background ? 'jcc-cards-background--' ~ card_section.background ~ ' margin-bottom-4' : '',
+  card_section.theme ? card_section.theme : '',
+]|merge(card_section.card_section_classes|default([''])) %}
+
+<div class="{{ card_section_classes|join(' ')|trim }}"{% if card_section.id %} id="{{ card_section.id }}"{% endif %}>
+  <div class="jcc-cards__container">
+    {% if card_section.headergroup %}
+      {% set headergroup_layout_classes = [
+        'margin-bottom-4',
+        headergroup.layout.spacing ? headergroup.layout.spacing: '',
+        headergroup.layout.alignment ? 'text-' ~ headergroup.layout.alignment : '',
+      ]|merge(headergroup_layout_classes|default([''])) %}
+
+      {% include '@molecules/text/header-group/header-group.twig' with {
+        headergroup: {
+          brow: headergroup.brow,
+          title: headergroup.title,
+          lead: headergroup.lead,
+          layout: headergroup_layout_classes|join(' ')|trim,
+        }
+      } %}
+    {% endif %}
+
+    <div class="jcc-cards__row grid-row">
+      {% if card_section.max %}
+        {% for card in card_section.cards|slice(0, card_section.max) %}
+          {% include card_template with {
+            card: card
+          } %}
+        {% endfor %}
+      {% else %}
+        {% for card in card_section.cards %}
+          {% include card_template with {
+            card: card
+          } %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

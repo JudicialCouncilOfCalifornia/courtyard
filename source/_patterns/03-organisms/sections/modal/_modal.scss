@@ -1,6 +1,23 @@
-// Disables non-native backdrop
+// Disables non-native backdrop by default
 .jcc-modal__backdrop {
   @include u-display(none);
+
+  &--overlay {
+    @include u-display(block);
+  }
+}
+
+.jcc-modal {
+  &--overlay {
+    @include u-position(fixed);
+    @include u-z(top);
+    width: 100%;
+    top: 30%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @include u-position(absolute);
+    }
+  }
 }
 
 .jcc-modal[data-a11y-dialog-native] .jcc-modal__backdrop {
@@ -21,17 +38,18 @@
   @include u-display(none);
 }
 
-.jcc-modal__backdrop,
-.jcc-modal__dialog::backdrop {
-  // Structural Attributes
-  @include u-position(fixed);
-  @include u-top(0);
-  @include u-bottom(0);
-  @include u-left(0);
-  @include u-right(0);
+.jcc-modal__backdrop {
+  &--overlay {
+    // Structural Attributes
+    @include u-position(fixed);
+    @include u-top(0);
+    @include u-bottom(0);
+    @include u-left(0);
+    @include u-right(0);
 
-  // Visual Attributes
-  background-color: rgba(black, 0.2);
+    // Visual Attributes
+    background-color: rgba(black, 0.2);
+  }
 }
 
 .jcc-modal__dialog {
@@ -46,6 +64,19 @@
   min-height: 80%;
   width: 90%;
   max-width: 70rem;
+
+  &--overlay {
+    min-height: 0;
+  }
+
+  dialog::backdrop {
+    /* native */
+    background-color: white;
+  }
+  dialog + .backdrop {
+    /* polyfill */
+    background-color: gray;
+  }
 
   @include at-media(desktop) {
     @include u-padding(6);
@@ -71,15 +102,24 @@
     height: 2rem;
     width: 2rem;
   }
+
+  @include u-cursor(pointer);
 }
 
-.jcc-modal__content {
+.jcc-modal .jcc-modal__dialog .jcc-modal__content {
   @extend .usa-prose;
 }
 
 .jcc-modal__trigger {
-  @include button-unstyled;
+  @include jcc-button-unstyled;
   @include u-font-size(sans, md);
+  @include u-margin-x(1);
+  @include u-cursor(pointer);
+}
+
+.jcc-modal__dialog {
+  @include u-bg("white");
+  @include u-color("black");
 }
 
 .jcc-modal--full {

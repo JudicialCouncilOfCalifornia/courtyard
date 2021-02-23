@@ -1,0 +1,8 @@
+card:
+  brow: "Staff"
+  url: "#"
+  title: "Jane Smith"
+  excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  img:
+    src: "../../images/graphics/person.svg"
+    alt: "Alt text"

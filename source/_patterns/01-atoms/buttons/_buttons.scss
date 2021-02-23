@@ -1,17 +1,25 @@
 .usa-button {
   @include u-padding-y(2);
   @include u-padding-x(3);
+  @include u-line-height("body", 2);
 
   &:disabled {
     @include u-text(gray-70);
   }
 }
 
+.usa-button--round {
+  border-radius: 2rem;
+}
+
 .usa-button--big {
-  @include u-padding-y(2.5);
-  @include u-padding-x(4);
-  @include u-font-size(body, 8);
-  @include u-radius(0);
+  @include big-button-style;
+}
+
+.usa-button--big--desktop {
+  @include at-media(desktop) {
+    @include big-button-style;
+  }
 }
 
 .usa-button--unstyled {
@@ -32,5 +40,139 @@
   &.usa-button--active {
     @include u-text(gray-90);
     background-color: color(accent-warm-darker);
+  }
+
+  &:visited,
+  &:focus {
+    @include u-text(ink);
+  }
+}
+
+.usa-button--outline {
+  @include u-text(ink);
+  @include u-text("normal");
+  background-color: transparent;
+  box-shadow: 0 0 0 2px color(primary) inset;
+
+  &.usa-button--primary {
+    box-shadow: 0 0 0 2px color(primary) inset;
+
+    &:hover,
+    &.usa-button--hover {
+      @include u-text("white");
+      @include u-bg(primary);
+    }
+  }
+
+  &.usa-button--secondary {
+    box-shadow: 0 0 0 2px color(secondary) inset;
+
+    &:hover,
+    &.usa-button--hover {
+      @include u-text("white");
+      @include u-bg(secondary);
+    }
+  }
+
+  &.usa-button--accent-warm {
+    box-shadow: 0 0 0 2px color(accent-warm) inset;
+
+    &:hover,
+    &.usa-button--hover {
+      @include u-text("white");
+      @include u-bg(accent-warm);
+    }
+  }
+}
+
+.external-button {
+  @include u-padding-y(2);
+  @include u-padding-left(3);
+  @include u-padding-right(5);
+  @include u-font-size(body, 7);
+  @include u-font-weight(normal);
+  @include u-text("white", !important);
+  @include u-radius("pill");
+  @include u-bg(secondary);
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+}
+
+.usa-button--external {
+  @include u-padding-left(3);
+  @include u-padding-right(5);
+  &:after {
+    background-image: url("../images/graphics/right-arrow-white.svg");
+    right: 8px;
+    top: 19px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.usa-button--form {
+  @include u-padding-left(7);
+  @include u-padding-right(3);
+  &:before {
+    content: "";
+    background-image: url("../images/graphics/form.svg");
+    left: 17px;
+    top: 11px;
+    width: 30px;
+    height: 25px;
+    background-size: cover;
+  }
+}
+
+.external-explainer {
+  @include u-font-size(body, 4);
+  @include u-color(primary);
+  @include u-text("italic");
+}
+
+.usa-button--back {
+  @include u-display("inline-flex");
+  @include u-align-items("align-center");
+  @include u-padding-y(1);
+  @include u-padding-right(3);
+  @include u-padding-left(0.5);
+
+  svg {
+    @include u-position("relative");
+    right: -4px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.scroll-button {
+  @include u-bg(base-darker);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 100px;
+  border-width: 0;
+  border-radius: 0;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
   }
 }

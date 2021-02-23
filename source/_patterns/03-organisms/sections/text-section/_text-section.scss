@@ -54,6 +54,36 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
+    h3 {
+      @include u-font(heading, 11);
+      @include u-font-weight(normal);
+    }
+  }
+
+  .jcc-callout__block,
+  .jcc-callout__italic {
+    @include u-margin-bottom(3);
+    @include u-margin-top(3);
+    @include at-media(desktop) {
+      position: absolute;
+      right: 6.5%;
+      width: 27%;
+    }
+  }
+
+  & .jcc-alert {
+    @include u-margin-bottom(5);
+  }
+
+  & .jcc-option-list {
+    @include u-margin-bottom(5);
+  }
+}
+
+.jcc-text-section__column-right {
+  h3 {
+    @include u-font-family(serif);
+    @include u-font-weight(normal);
   }
 }
 

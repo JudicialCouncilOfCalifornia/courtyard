@@ -1,18 +1,31 @@
 # Background variants
-#  - has-background-color--dark
-#  - has-background-color--light--secondary
+# - has-background-color--dark
+# - has-background-color--light--secondary
+# - has-background-image
 #
 # Column variants
 # - has-one-column
 # - has-two-columns-half
 # - has-two-columns-threequarter
+# - has-banner-image
+# - has-banner-image-half
+#
+# Height variants
+# - viewport-height
 
 hero:
+  background-variant: ""
+  background_parallax: #set 'true' to apply parallax effect to has-background-image variant
+  lowercase_brow: false
+  brow: "Brow Description" # Not in used by SRL
   title: "Serving your papers"
   lead: "For your case to be fair, the court requires everyone to have copies of the same papers and information before any orders are made."
   body: "<h2>Heading level 2 with <strong>bold</strong>, <em>italics</em>, and <strong><em>bold italics</em></strong></h2><ul><li>One</li><li>Two</li></ul>"
+  title_variant: ""
+  inset_variant: ""
   breadcrumbs:
-    - url: "#"
-      label: "Home"
-    - url: ""
-      label: "Wage Garnishment"
+    items:
+      - url: "#"
+        label: "Home"
+      - url: ""
+        label: "Wage Garnishment"

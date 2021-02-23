@@ -41,6 +41,7 @@
 @import "../../node_modules/uswds/src/stylesheets/components/accordions";
 @import "../../node_modules/uswds/src/stylesheets/components/alerts";
 @import "../../node_modules/uswds/src/stylesheets/components/banner";
+@import "../../node_modules/uswds/src/stylesheets/components/card";
 @import "../../node_modules/uswds/src/stylesheets/components/checklist";
 @import "../../node_modules/uswds/src/stylesheets/components/footer";
 @import "../../node_modules/uswds/src/stylesheets/components/forms";
@@ -57,6 +58,7 @@
 @import "../../node_modules/uswds/src/stylesheets/components/section";
 @import "../../node_modules/uswds/src/stylesheets/components/sidenav";
 @import "../../node_modules/uswds/src/stylesheets/components/skipnav";
+@import "../../node_modules/uswds/src/stylesheets/components/step-indicator";
 
 // Utilities
 // -------------------------------------
@@ -65,6 +67,7 @@
 @import "../../node_modules/uswds/src/stylesheets/utilities/rules/all";
 @import "../../node_modules/uswds/src/stylesheets/utilities/rules/package";
 @import "../../node_modules/uswds/src/stylesheets/core/mixins/_utility-builder.scss";
+@import "../../node_modules/dialog-polyfill/dialog-polyfill.css";
 
 @include render-utilities-in($utilities-package);
 

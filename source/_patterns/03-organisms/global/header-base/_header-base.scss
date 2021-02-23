@@ -1,0 +1,265 @@
+// Hat
+.jcc-header-hat {
+  .jcc-global__menu {
+    @include u-display(none);
+
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+    }
+  }
+}
+
+// Header
+.jcc-header-base {
+  @include u-border-top("05", accent-warm);
+
+  // logo
+  .usa-logo {
+    @include at-media(desktop) {
+      @include u-margin(0);
+    }
+
+    a {
+      @include u-text(primary-dark);
+      @include u-display(flex); // theme
+
+      @include at-media(desktop) {
+        height: $jcc-nav-link-height;
+      }
+    }
+  }
+
+  .usa-logo__text {
+    @include u-text(normal);
+    @include u-font-family(serif);
+    align-self: center;
+
+    @include at-media-max(desktop) {
+      @include u-font(serif, 7);
+    }
+  }
+
+  .usa-logo__graphic--mobile,
+  .usa-logo__graphic--desktop {
+    align-self: center;
+
+    img {
+      @include at-media-max(desktop) {
+        height: 2rem;
+      }
+    }
+  }
+
+  .usa-logo__graphic--mobile {
+    @include u-display(block);
+
+    @include at-media(desktop) {
+      @include u-display(none);
+    }
+  }
+
+  .usa-logo__graphic--desktop {
+    @include u-display(none);
+
+    @include at-media(desktop) {
+      @include u-display(block);
+    }
+  }
+
+  .usa-nav__close,
+  .usa-menu-btn {
+    @include u-text(primary); // theme
+    width: $jcc-navbar-height;
+    height: $jcc-navbar-height;
+
+    .icon {
+      width: $jcc-nav-icon-size;
+      height: $jcc-nav-icon-size;
+    }
+  }
+
+  .usa-menu-btn {
+    background-color: transparent; // theme
+  }
+
+  .usa-nav__close {
+    @include u-bg("white"); // theme
+    @include u-margin(0);
+    @include u-position(absolute);
+    @include u-display(none);
+    top: auto;
+    right: 0;
+    z-index: 10;
+
+    @include at-media(desktop) {
+      @include u-display(none);
+    }
+  }
+
+  // nav layout
+  .usa-nav {
+    background-color: transparent;
+    align-self: center;
+
+    @include at-media-max(desktop) {
+      @include u-width(full);
+      @include u-padding(0);
+    }
+
+    &.is-visible {
+      @include at-media-max(desktop) {
+        margin-top: $jcc-navbar-offset;
+        animation: none;
+      }
+    }
+  }
+
+  .usa-navbar {
+    @include u-border(0);
+
+    @include at-media-max(desktop) {
+      height: $jcc-navbar-height;
+    }
+  }
+
+  .usa-nav-container {
+    @include at-media(desktop) {
+      @include u-maxw(widescreen);
+    }
+  }
+
+  .jcc-nav-secondary__group {
+    .usa-nav__link:hover::after {
+      height: 0;
+    }
+  }
+
+  &.usa-header {
+    z-index: unset;
+  }
+
+  // basic
+  &.usa-header--basic .usa-current::after,
+  &.usa-header--basic .usa-nav__link:hover::after,
+  &.usa-header--extended .usa-current::after,
+  &.usa-header--extended .usa-nav__link:hover::after {
+    @include at-media(desktop) {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.usa-header--basic {
+    .usa-nav {
+      @include at-media(desktop) {
+        @include u-position(relative);
+      }
+    }
+  }
+
+  // extended
+  &.usa-header--extended {
+    .usa-nav {
+      @include u-bg(primary-lighter); // theme
+      @include u-border(0);
+    }
+
+    .usa-navbar,
+    .usa-nav__inner {
+      @include at-media(desktop) {
+        @include u-maxw(widescreen);
+      }
+    }
+
+    .usa-nav__link {
+      @include at-media(desktop) {
+        @include u-padding-y(0);
+      }
+    }
+
+    .usa-nav__submenu.usa-megamenu {
+      @include u-padding-left(0);
+    }
+
+    .jcc-nav-secondary__menu {
+      @include at-media(desktop) {
+        right: 2rem;
+      }
+    }
+    .usa-logo__graphic--mobile,
+    .usa-logo__graphic--desktop {
+      align-self: center;
+      position: relative;
+      height: 100%;
+      img {
+        max-height: 90%;
+        padding: 2% 2% 0% 2%;
+        @include at-media-max(desktop) {
+          height: 3rem;
+        }
+      }
+    }
+  }
+
+  // invert
+  &.jcc-header--inverted {
+    &.usa-header {
+      @include u-bg(primary-darker);
+    }
+
+    .usa-logo a {
+      @include u-text("white");
+    }
+
+    .usa-nav__close,
+    .usa-menu-btn {
+      @include u-text("white");
+    }
+
+    .usa-nav__close {
+      @include u-bg(primary-darker);
+    }
+
+    &.usa-header--extended .usa-nav {
+      @include u-bg(primary-dark);
+    }
+  }
+  &.usa-header--extended .usa-nav {
+    .usa-nav__secondary {
+      bottom: 6rem;
+    }
+  }
+}
+
+// patternlab mobile nav
+.jcc-all {
+  .jcc-header-base .usa-nav {
+    @include at-media-max(desktop) {
+      top: 2.25rem;
+    }
+  }
+
+  .usa-overlay {
+    @include at-media-max(desktop) {
+      top: 8.75rem;
+    }
+  }
+}
+
+// close button override
+.usa-js-mobile-nav--active {
+  .jcc-header-base .usa-nav__close {
+    @include u-display(block);
+
+    @include at-media(desktop) {
+      @include u-display(none);
+    }
+  }
+}
+
+// overlay offset
+.usa-overlay {
+  @include at-media-max(desktop) {
+    top: $jcc-navbar-offset;
+  }
+}
