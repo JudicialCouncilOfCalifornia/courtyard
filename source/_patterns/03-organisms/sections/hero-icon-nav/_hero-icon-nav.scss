@@ -25,6 +25,10 @@
       @include u-color("black");
     }
   }
+
+  .jcc-hero__content {
+    @include u-padding-top(4);
+  }
 }
 
 .jcc-hero-icon-nav__nav {
@@ -51,7 +55,10 @@
     }
 
     .usa-card__container {
-      @include u-padding-y(5);
+      @include u-padding-y(4);
+      @media only screen and (min-width: 375px) {
+        @include u-padding-y(5);
+      }
       @include at-media("tablet") {
         @include u-padding-y(7);
       }
@@ -91,8 +98,10 @@
     h3 {
       @include u-font("sans", 5);
       @include u-font-weight("bold");
-
       @include at-media("tablet") {
+        @include u-font("sans", 8);
+      }
+      @media only screen and (min-width: 1200px) {
         @include u-font("sans", 10);
       }
     }
