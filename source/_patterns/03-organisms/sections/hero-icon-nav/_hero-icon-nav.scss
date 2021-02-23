@@ -56,9 +56,6 @@
 
     .usa-card__container {
       @include u-padding-y(4);
-      @media only screen and (min-width: 375px) {
-        @include u-padding-y(5);
-      }
       @include at-media("tablet") {
         @include u-padding-y(7);
       }
