@@ -8,16 +8,12 @@ const config = require("./config.json");
 // Include plugins.
 const autoprefix = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
-const concat = require("gulp-concat");
 const glob = require("gulp-sass-glob");
-const mqpacker = require("css-mqpacker");
 const notify = require("gulp-notify");
 const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const replace = require("gulp-replace");
 const sass = require("gulp-sass");
-const through = require("through2");
 const sourcemaps = require("gulp-sourcemaps");
 const webpack = require("webpack-stream");
 const compiler = require("webpack");
@@ -33,11 +29,11 @@ jsSrc.unshift(`${uswds}/js/uswds.js`);
 
 // Error Handler
 // -------------------------------------------------------------- //
-const errorHandler = error => {
+const errorHandler = (error) => {
   notify.onError({
     title: "Task Failed [" + error.plugin + "]",
     message: "Error: <%= error.message %>",
-    sound: "Beep"
+    sound: "Beep",
   })(error);
   // Log error to console, unless that's already happening. Sass lint provides
   // good error handling/feedback in the terminal, so in this case we only want
@@ -72,19 +68,19 @@ const copyIconSprite = () => {
 
 const buildCss = (paths, minFileName) => {
   let css = gulp
-    .src(paths)
+    .src(config.css.src)
     .pipe(glob())
     .pipe(
       plumber({
-        errorHandler: function(error) {
+        errorHandler: function (error) {
           notify.onError({
             title: "Gulp",
             subtitle: "Failure!",
             message: "Error: <%= error.message %>",
-            sound: "Beep"
+            sound: "Beep",
           })(error);
           this.emit("end");
-        }
+        },
       })
     )
     .pipe(sourcemaps.init({ largeFile: true }))
@@ -93,19 +89,13 @@ const buildCss = (paths, minFileName) => {
         outputStyle: "expanded",
         errLogToConsole: true,
         includePaths: [
-          config.css.project_scss // pulling all the sass and converts to css
-          // "${uswds}/scss",
-          // "${uswds}/scss/packages",
-        ]
-        // importer: importOnce
-      })
+          config.css.project_scss, // pulling all the sass and converts to css
+        ],
+      }).on("error", sass.logError)
     )
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
-    .pipe(autoprefix("last 2 versions", "> 1%", "ie 9", "ie 10"))
-    .pipe(strip.text())
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder)) //writing source map
-    .pipe(rename(`${minFileName}.min.css`));
+    .pipe(autoprefix())
+    .pipe(strip.text());
 
   if (!devBuild) {
     css.pipe(csso());
@@ -113,20 +103,12 @@ const buildCss = (paths, minFileName) => {
 
   return css
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder)) //
+    .pipe(gulp.dest(config.css.public_folder))
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
 };
 
-const srlCss = () => {
-  return buildCss(config.css.srl, "styles-srl");
-};
-
-const trialCss = () => {
-  return buildCss(config.css.trial, "styles-trial");
-};
-
-const allCss = () => {
-  return buildCss(config.css.srlTrial, "styles-all");
+const plCss = () => {
+  return buildCss(config.css.src, "styles-src");
 };
 
 // Component JS.
@@ -147,19 +129,19 @@ const plJs = () => {
             new compiler.ProvidePlugin({
               $: "jquery",
               jQuery: "jquery",
-              "window.jQuery": "jquery"
-            })
+              "window.jQuery": "jquery",
+            }),
           ],
           output: {
-            filename: "scripts.js"
-          }
+            filename: "scripts.js",
+          },
         },
         compiler
       )
     )
     .pipe(
       babel({
-        presets: ["@babel/preset-env"]
+        presets: ["@babel/preset-env"],
       })
     )
     .pipe(sourcemaps.init({ loadMaps: true }))
@@ -173,60 +155,26 @@ const plJs = () => {
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
 
-const watch = cb => {
-  gulp.watch(config.css.srlTrial, allCss);
+const watch = (cb) => {
+  gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, dev);
+  gulp.watch(config.pattern_lab.src, build);
   gulp.watch(config.css.styleguide_src, copyPlStyles);
 };
 
-const trialwatch = cb => {
-  gulp.watch(config.css.trial, trialCss);
-  gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, trialbuild);
-  gulp.watch(config.css.styleguide_src, copyPlStyles);
-};
-
-const srlwatch = cb => {
-  gulp.watch(config.css.srl, srlCss);
-  gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, srlbuild);
-  gulp.watch(config.css.styleguide_src, copyPlStyles);
-};
-
-const serve = cb => {
+const serve = (cb) => {
   browserSync.init({
     server: "public",
     callbacks: {
       ready: (err, bs) => {
         cb();
-      }
+      },
     },
-    reloadDebounce: 200
+    reloadDebounce: 200,
   });
 };
 
-const build = gulp.series(
-  plPhp,
-  copyUswdsFonts,
-  copyUswdsImages,
-  copyIconSprite,
-  srlCss,
-  trialCss,
-  plJs
-);
-const srlbuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, srlCss, plJs);
-const trialbuild = gulp.series(
-  plPhp,
-  copyUswdsFonts,
-  copyUswdsImages,
-  copyIconSprite,
-  trialCss,
-  plJs
-);
+const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
 
-const dev = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, allCss, plJs);
 exports.build = build;
-exports.trial = gulp.series(trialbuild, serve, trialwatch);
-exports.srl = gulp.series(srlbuild, serve, srlwatch);
-exports.default = gulp.series(dev, serve, watch);
+exports.default = gulp.series(build, serve, watch);

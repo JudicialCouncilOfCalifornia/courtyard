@@ -3,8 +3,6 @@
   "repository": "https://github.com/Exygy/courtyard.git",
   "scripts": {
     "build": "gulp build",
-    "trial": "gulp trial",
-    "srl": "gulp srl",
     "start": "gulp",
     "pretty-quick": "pretty-quick",
     "postinstall": "husky install"
@@ -40,7 +38,7 @@
     "pretty-quick": "^3.1.0",
     "source-map-loader": "^2.0.1",
     "svgxuse": "^1.2.6",
-    "uswds": "^2.9.0",
+    "uswds": "^2.10.1",
     "uswds-gulp": "github:uswds/uswds-gulp",
     "webpack-stream": "^6.1.2"
   },
