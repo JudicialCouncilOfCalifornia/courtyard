@@ -1,16 +1,16 @@
-.jcc-image--media-icon {
-  height: $jcc-icon-media-container-size;
-  width: $jcc-icon-media-container-size;
-  min-width: $jcc-icon-media-container-size;
-  @include u-bg("transparent");
+// .jcc-image--media-icon {
+//   height: $jcc-icon-media-container-size;
+//   width: $jcc-icon-media-container-size;
+//   min-width: $jcc-icon-media-container-size;
+//   @include u-bg("transparent");
 
-  img {
-    height: $jcc-icon-media-size;
-    width: $jcc-icon-media-size;
-  }
+//   img {
+//     height: $jcc-icon-media-size;
+//     width: $jcc-icon-media-size;
+//   }
 
-  svg {
-    @include u-width("full");
-    @include u-height("full");
-  }
-}
+//   svg {
+//     @include u-width("full");
+//     @include u-height("full");
+//   }
+// }

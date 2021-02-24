@@ -1,16 +1,16 @@
-.jcc-dropbutton {
-  .usa-accordion__button {
-    .icon {
-      @include u-height(3);
-      @include u-width(3);
-    }
+// .jcc-dropbutton {
+//   .usa-accordion__button {
+//     .icon {
+//       @include u-height(3);
+//       @include u-width(3);
+//     }
 
-    @include u-color(primary);
-  }
+//     @include u-color(primary);
+//   }
 
-  .usa-accordion__button[aria-expanded="true"] {
-    .icon {
-      filter: brightness(0) invert(1);
-    }
-  }
-}
+//   .usa-accordion__button[aria-expanded="true"] {
+//     .icon {
+//       filter: brightness(0) invert(1);
+//     }
+//   }
+// }

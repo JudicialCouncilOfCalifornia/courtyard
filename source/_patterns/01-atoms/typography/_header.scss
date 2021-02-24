@@ -1,40 +1,40 @@
-h1,
-h2 {
-  @include u-font-family(serif);
-  @include u-text(normal);
-  @include u-line-height("heading", 2);
-}
+// h1,
+// h2 {
+//   @include u-font-family(serif);
+//   @include u-text(normal);
+//   @include u-line-height("heading", 2);
+// }
 
-.h-responsive-mega {
-  @include responsive-h-mega();
-}
+// .h-responsive-mega {
+//   @include responsive-h-mega();
+// }
 
-h1,
-.h-responsive-h1 {
-  @include responsive-h1();
-}
+// h1,
+// .h-responsive-h1 {
+//   @include responsive-h1();
+// }
 
-h2,
-.h-responsive-h2 {
-  @include responsive-h2();
-}
+// h2,
+// .h-responsive-h2 {
+//   @include responsive-h2();
+// }
 
-h3,
-.h-responsive-h3 {
-  @include responsive-h3();
-}
+// h3,
+// .h-responsive-h3 {
+//   @include responsive-h3();
+// }
 
-h4,
-.h-responsive-h4 {
-  @include responsive-h4();
-}
+// h4,
+// .h-responsive-h4 {
+//   @include responsive-h4();
+// }
 
-h5,
-.h-responsive-h5 {
-  @include responsive-h5();
-}
+// h5,
+// .h-responsive-h5 {
+//   @include responsive-h5();
+// }
 
-h6,
-.h-responsive-h6 {
-  @include responsive-h6();
-}
+// h6,
+// .h-responsive-h6 {
+//   @include responsive-h6();
+// }
