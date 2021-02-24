@@ -14,4 +14,3 @@ card_section:
       action:
         style: 'title'
         url: https://www.courts.ca.gov
-      elevated: true

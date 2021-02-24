@@ -18,7 +18,6 @@ card_section:
       action:
         style: 'title'
         url: https://www.courts.ca.gov
-      elevated: true
     - brow: 'Category'
       title: 'File the claim of exemption'
       body: '<p>File the original plus one copy with the sheriff shown on the Notice of Levy (form EJ-150) form within 10 days (15 days if the Notice of Levy was served by mail</p>'
@@ -26,7 +25,6 @@ card_section:
       action:
         style: 'title'
         url: https://www.courts.ca.gov
-      elevated: true
     - brow: 'Category'
       title: 'A third card example'
       body: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis earum tenetur quo cupiditate, eaque qui officia recusandae.</p>'
@@ -34,7 +32,6 @@ card_section:
       action:
         style: 'title'
         url: https://www.courts.ca.gov
-      elevated: true
   # Variants
   max: #1-n ... limit the number of cards to display
   background: #'dark' ... inverts background color

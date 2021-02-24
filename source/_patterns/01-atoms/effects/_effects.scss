@@ -3,11 +3,10 @@
 }
 
 .jcc-border--borderless {
-  @include u-border(0);
-  @include u-radius(0);
-  @include u-shadow(none);
+  @include u-border(0, "transparent", !important);
+  @include u-radius(0, !important);
 
   .usa-card__img {
-    @include u-radius(0);
+    @include u-radius(0, !important);
   }
 }

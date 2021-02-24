@@ -1,4 +1,4 @@
 card:
-  width: 6
+  width: "desktop:grid-col-6"
   flag_position: "left"
 

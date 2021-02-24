@@ -1,3 +1,9 @@
+$amt: 10%; // amount to darken in percent
+$c1: #008480;
+$c2: #0b4778;
+$c3: #2378c3;
+$c4: #162e51;
+
 .jcc-hero-icon-nav {
   @include u-margin-bottom(4);
 
@@ -39,9 +45,13 @@
     @include u-text-decoration("no-underline");
   }
 
-  .jcc-cards__container {
-    @include at-media("tablet-lg") {
-      @include u-padding-x(0);
+  .jcc-cards {
+    @include u-margin-x(0);
+
+    &__container {
+      @include at-media("tablet-lg") {
+        @include u-padding-x(0);
+      }
     }
   }
 
@@ -50,35 +60,62 @@
     @include at-media("tablet") {
       height: 15rem;
     }
-    @include at-media("tablet-lg") {
-      width: 49.4%;
-    }
+    @include u-margin-bottom(0, !important);
 
     .usa-card__container {
+      @extend .jcc-border--borderless;
+      @include background-color();
+      @include u-margin(0);
       @include u-padding-y(4);
       @include at-media("tablet") {
         @include u-padding-y(7);
       }
+      -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.3);
     }
 
     &:nth-child(1) {
+      z-index: 4;
+
       .usa-card__container {
-        @include u-bg("mint-cool-50v");
+        background-color: $c1;
+
+        &:hover {
+          background-color: darken($c1, $amt);
+        }
       }
     }
     &:nth-child(2) {
+      z-index: 3;
+
       .usa-card__container {
-        @include u-bg("blue-70v");
+        background-color: $c2;
+
+        &:hover {
+          background-color: darken($c2, $amt);
+        }
       }
     }
     &:nth-child(3) {
+      z-index: 2;
+
       .usa-card__container {
-        @include u-bg("blue-50");
+        background-color: $c3;
+
+        &:hover {
+          background-color: darken($c3, $amt);
+        }
       }
     }
     &:nth-child(4) {
+      z-index: 1;
+
       .usa-card__container {
-        @include u-bg("blue-warm-80v");
+        background-color: $c4;
+
+        &:hover {
+          background-color: darken($c4, $amt);
+        }
       }
     }
 
