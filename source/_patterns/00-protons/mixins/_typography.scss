@@ -1,0 +1,96 @@
+// Type
+@mixin responsive-h-mega($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 13); // 36
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 15); // 48
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 12); // 32
+  }
+}
+
+@mixin responsive-h1($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 12); // 32
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 14); // 40
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 11); // 28
+  }
+}
+
+@mixin responsive-h2($responsive-font-family: heading) {
+  @include u-font($responsive-font-family, 11); // 28
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 13); // 36
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 10);
+  }
+}
+
+@mixin responsive-h3($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 10);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 11);
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 9);
+  }
+}
+
+@mixin responsive-h4($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 9);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 8); // 18
+  }
+}
+
+@mixin responsive-h5($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 8);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 9); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 7); // 18
+  }
+}
+
+@mixin responsive-h6($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 7);
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 8); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 6);
+  }
+}
+
+@mixin responsive-lead($responsive-font-family: body) {
+  @include u-font($responsive-font-family, 9); // 22
+
+  @include at-media(desktop) {
+    @include u-font($responsive-font-family, 10); // 24
+  }
+
+  @media print {
+    @include u-font($responsive-font-family, 6); // 18
+  }
+}
