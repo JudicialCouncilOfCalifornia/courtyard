@@ -9,7 +9,6 @@ hero_icon_nav:
     src: '../../images/photos/alameda.jpg'
     alt: 'Alameda Superior courthouse photo'
   card_section:
-    theme: 'jcc-cards--tiles'
     max: 4
     cards:
       - title: 'Jury Service'
