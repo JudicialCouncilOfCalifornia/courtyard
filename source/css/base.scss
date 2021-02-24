@@ -1,0 +1,12 @@
+// Base theme with minimal modifications
+// -------------------------------------
+
+@import "global/uswds";
+
+@import "../_patterns/00-protons/mixins/*.scss";
+@import "../_patterns/01-atoms/**/*.scss";
+// @import "../_patterns/02-molecules/**/*.scss";
+// @import "../_patterns/03-organisms/**/*.scss";
+// @import "../_patterns/04-templates/**/*.scss";
+// @import "../_patterns/05-pages/**/*.scss";
+// @import "../_patterns/00-protons/print";
