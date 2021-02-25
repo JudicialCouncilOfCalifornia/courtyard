@@ -1,0 +1,145 @@
+{% set color_sets = [
+  {
+    type: 'Theme colors',
+    sets: [
+      {
+        name: 'Base',
+        colors: [
+          'base-lightest',
+          'base-lighter',
+          'base-light',
+          'base',
+          'base-dark',
+          'base-darker',
+          'base-darkest',
+          'ink',
+        ]
+      },
+      {
+        name: 'Primary',
+        colors: [
+          'primary-lightest',
+          'primary-lighter',
+          'primary-light',
+          'primary',
+          'primary-vivid',
+          'primary-dark',
+          'primary-darker',
+          'primary-darkest',
+        ]
+      },
+      {
+        name: 'Secondary',
+        colors: [
+          'secondary-lightest',
+          'secondary-lighter',
+          'secondary-light',
+          'secondary',
+          'secondary-vivid',
+          'secondary-dark',
+          'secondary-darker',
+          'secondary-darkest',
+        ]
+      },
+      {
+        name: 'Accent warm',
+        colors: [
+          'accent-warm-lightest',
+          'accent-warm-lighter',
+          'accent-warm-light',
+          'accent-warm',
+          'accent-warm-dark',
+          'accent-warm-darker',
+          'accent-warm-darkest',
+        ]
+      },
+      {
+        name: 'Accent cool',
+        colors: [
+          'accent-cool-lightest',
+          'accent-cool-lighter',
+          'accent-cool-light',
+          'accent-cool',
+          'accent-cool-dark',
+          'accent-cool-darker',
+          'accent-cool-darkest',
+        ]
+      },
+    ]
+  },
+  {
+    type: 'State colors',
+    sets: [
+      {
+        name: 'Info',
+        colors: [
+          'info-lighter',
+          'info-light',
+          'info',
+          'info-dark',
+          'info-darker',
+        ]
+      },
+      {
+        name: 'Error',
+        colors: [
+          'error-lighter',
+          'error-light',
+          'error',
+          'error-dark',
+          'error-darker',
+        ]
+      },
+      {
+        name: 'Warning',
+        colors: [
+          'warning-lighter',
+          'warning-light',
+          'warning',
+          'warning-dark',
+          'warning-darker',
+        ]
+      },
+      {
+        name: 'Success',
+        colors: [
+          'success-lighter',
+          'success-light',
+          'success',
+          'success-dark',
+          'success-darker',
+        ]
+      },
+      {
+        name: 'Disabled',
+        colors: [
+          'disabled-light',
+          'disabled',
+          'disabled-dark',
+        ]
+      },
+    ]
+  },
+  {
+    type: 'Misc colors',
+    sets: [
+    ]
+  },
+] %}
+
+
+{% for color_set in color_sets %}
+  <h5>{{ color_set.type }}</h5>
+  {% for item in color_set.sets %}
+    <h6>{{ item.name }}</h6>
+    <ul class="sg-colors">
+      {% for color in item.colors %}
+        <li>
+          <span class="sg-swatch bg-{{ color }}"></span>
+          <span class="sg-hex" data-color="{{ color }}"></span>
+          <span class="sg-label">{{ color }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endfor %}

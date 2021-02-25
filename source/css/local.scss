@@ -1,9 +1,9 @@
-// "Base" scheme with minimal modifications
+// "Local" scheme
 // -------------------------------------
 
-$scheme: "base";
+$scheme: "local";
 
-// @import "base/*.scss";
+@import "local/*.scss";
 
 @import "uswds";
 
@@ -15,3 +15,7 @@ $scheme: "base";
 // @import "../_patterns/04-templates/**/*.scss";
 // @import "../_patterns/05-pages/**/*.scss";
 // @import "../_patterns/00-protons/print";
+
+div {
+  color: color($theme-color-secondary);
+}

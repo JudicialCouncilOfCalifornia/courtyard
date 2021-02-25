@@ -14,7 +14,7 @@ $_button_schemes: (
   )
 );
 
-$_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $schema);
+$_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 
 
 .usa-button {
