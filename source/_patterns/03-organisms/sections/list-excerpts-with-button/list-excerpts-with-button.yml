@@ -1,0 +1,21 @@
+list_excerpt_with_button:
+  headergroup:
+    brow: ""
+    title: "Link Excerpt with Button"
+  items:
+    - title: "Title 1"
+      description: "Item #1 description"
+      url: "#"
+    - title: "Title 2"
+      description: "Item #2 description"
+      url: "#"
+    - title: "Title 3"
+      description: "Item #3 description"
+      url: "#"
+    - title: "Title 4"
+      description: "Item #4 description"
+      url: "#"
+  button:
+    text: "View All Links"
+    url: "#"
+    style: 'primary'
