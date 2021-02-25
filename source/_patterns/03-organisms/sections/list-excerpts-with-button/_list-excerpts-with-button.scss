@@ -1,0 +1,24 @@
+.jcc-list-excerpt-with-button__container {
+  .jcc-list-excerpts {
+    flex-wrap: wrap;
+    @include u-display(flex);
+    .jcc-excerpt__item{
+      list-style: none;
+      @include u-width(full);
+      @include u-margin-top(0);
+      @include u-margin-bottom(4);
+      @include u-padding-x(3);
+      @include u-padding-top(2);
+      @include grid-col(6);
+      @include at-media(desktop) {
+        @include grid-col(4);
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .jcc-cards-with-button__button-container {
+    @include u-text-align(center);
+  }
+}

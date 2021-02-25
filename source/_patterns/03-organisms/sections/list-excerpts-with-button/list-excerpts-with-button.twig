@@ -1,0 +1,30 @@
+{% set classes = [
+  'jcc-link-list-with-button__container',
+  'jcc-list-excerpt-with-button__container',
+]|merge(list_excerpt_with_button.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}"{% if cards_with_button.id %} id="{{ cards_with_button.id }}"{% endif %}>
+  {% if list_excerpt_with_button.headergroup %}
+    {% include '@molecules/text/header-group/header-group.twig' with {
+      headergroup: list_excerpt_with_button.headergroup
+    } %}
+  {% endif %}
+
+  <ul class="jcc-list-excerpts">
+    {% for item in list_excerpt_with_button.items %}
+      <li class="jcc-excerpt__item">
+        <div class="jcc-excerpt__item-title"><h4><a href="{{ item.url }}">{{ item.title }}</a></h4></div>
+        <div class="jcc-excerpt__item-description">{{ item.description }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="jcc-cards-with-button__button-container">
+    <div class="jcc-cards-with-button__button">
+      {% if list_excerpt_with_button.button %}
+        {% include "@atoms/buttons/link-button.twig" with {
+          link_button: list_excerpt_with_button.button
+        } only %}
+      {% endif %}
+    </div>
+  </div>
+</div>
