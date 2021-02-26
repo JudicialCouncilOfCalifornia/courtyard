@@ -3,6 +3,9 @@ $_button_schemes: (
     default: "primary",
     default-hover: "primary-dark",
     default-active: "primary-darker",
+    secondary: "secondary",
+    secondary-hover: "secondary-dark",
+    secondary-active: "secondary-darker",
     external: "secondary",
     external-hover: "secondary-dark",
     external-active: "secondary-darker",
@@ -19,9 +22,11 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 
 .usa-button {
   @include set-text-and-bg(map-get($_button, default), $context: $button-context);
-  @include u-padding-y(2);
-  @include u-padding-x(3);
-  @include u-line-height("body", 2);
+  @include u-padding-top(2.5);
+  @include u-padding-bottom(2);
+  @include u-padding-x(4);
+  @include u-font-size(ui, sm);
+  @include u-line-height(ui, 2);
   letter-spacing: 0.17px;
 
   &:hover,
@@ -39,6 +44,20 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
   }
 }
 
+.usa-button--secondary {
+  @include set-text-and-bg(map-get($_button, secondary), $context: $button-context);
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg(map-get($_button, secondary-hover), $context: $button-context);
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg(map-get($_button, secondary-active), $context: $button-context);
+  }
+}
+
 .usa-button.ext,
 .usa-button--external {
   @include u-position("relative");
@@ -51,7 +70,7 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 
   svg {
     @include u-position("absolute");
-    @include u-top(1);
+    @include u-top(1.5);
     @include u-width(3);
     @include u-height(3);
     @include u-margin-left(1);
@@ -87,6 +106,11 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
   }
 }
 
+.usa-button--unstyled {
+  @include button-unstyled;
+  @include u-padding(0);
+}
+
 .usa-button--inverse {
   @include set-text-and-bg("white", "primary", $context: $button-context);
 
@@ -99,11 +123,11 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
   &.usa-button--active {
     @include set-text-and-bg("accent-warm-dark", $context: $button-context);
   }
-}
 
-.usa-button--unstyled {
-  @include button-unstyled;
-  @include u-padding(0);
+  &.usa-button--unstyled {
+    background-color: transparent;
+    @include u-color("white");
+  }
 }
 
 .usa-button--cta-link {

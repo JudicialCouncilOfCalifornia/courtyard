@@ -1,45 +1,18 @@
-// .usa-input,
-// .usa-select {
-//   @include u-padding(1.5);
-//   height: 3.25rem;
-// }
+.usa-input,
+.usa-select,
+.usa-textarea {
+  @include u-padding(1.5);
+}
 
-// .usa-select,
-// .usa-range,
-// .usa-input,
-// .usa-textarea {
-//   @include u-border(2px);
-//   height: 3.25rem;
-// }
+.usa-input,
+.usa-select,
+.usa-range,
+.usa-textarea {
+  @include u-border(2px);
+}
 
-// .form-required::after {
-//   @include u-text("error");
-//   content: " *" !important;
-//   display: inline;
-//   font-size: 2rem;
-//   background-color: transparent !important;
-// }
-
-// .jcc-inline-input {
-//   @include u-display("flex");
-//   @include u-flex("wrap");
-//   @include u-position("relative");
-
-//   input,
-//   .usa-input,
-//   select,
-//   .usa-select {
-//     @include u-margin(0);
-//     @include u-margin-right(1);
-//     @include u-float("left");
-//     flex: 1;
-//   }
-
-//   button,
-//   .usa-button,
-//   input[type="submit"] {
-//     @include u-margin(0);
-//     @include u-padding-x(2);
-//     @include u-width("auto");
-//   }
-// }
+.usa-select,
+.usa-range,
+.usa-input {
+  height: 3.25rem;
+}

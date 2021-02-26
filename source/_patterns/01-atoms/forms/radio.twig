@@ -2,10 +2,10 @@
 
 {% set classes = [
   'usa-radio',
-  radio.style|map(s =>  'jcc-radio--' ~ s)|join(' '),
+  radio.style ? (radio.style is iterable ? radio.style|map(s => 'jcc-radio--' ~ s)|join(' ') : 'jcc-radio--' ~ radio.style),
 ]|merge(radio.classes|default([''])) %}
 
 <div {{attributes.addClass(classes) }}>
-  <input class="usa-radio__input" id="{{ radio.id }}" type="radio" checked name="{{ radio.name }}" value="{{ radio.id }}">
-  <label class="usa-radio__label" for="{{ radio.id }}">{{ radio.label }}</label>
+	<input class="usa-radio__input" id="{{ radio.id }}" type="radio" checked name="{{ radio.name }}" value="{{ radio.id }}">
+	<label class="usa-radio__label" for="{{ radio.id }}">{{ radio.label }}</label>
 </div>

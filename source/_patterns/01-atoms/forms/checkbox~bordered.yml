@@ -1,4 +1,0 @@
-checkbox:
-  label: First
-  name: Test
-  style: ['bordered']

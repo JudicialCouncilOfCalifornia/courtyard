@@ -1,33 +1,34 @@
-<form class="usa-form">
-  <fieldset class="usa-fieldset">
-    {% if title %}
-    <legend class="usa-legend">{{ title }}</legend>
-    {% endif %}
-    {% if hint %}
-    {% set dob_hint_id = 'dobHint-' ~ random() %}
-    <span class="usa-hint" id="{{ dob_hint_id }}">{{ hint }}</span>
-    {% endif %}
-    <div class="usa-form-group{% if error %} usa-form-group--error{% endif %}">
-      {% if error %}
-      <div class="usa-error-message" id="input-error-message" role="alert">Helpful error message</div>
-      {% endif %}
-      <div class="usa-memorable-date">
-        {% set dob_m_id = 'date_of_birth-month--' ~ random() %}
-        {% set dob_d_id = 'date_of_birth-day--' ~ random() %}
-        {% set dob_y_id = 'date_of_birth-year--' ~ random() %}
-        <div class="usa-form-group usa-form-group--month">
-          <label class="usa-label" for="{{ dob_m_id }}">{{ month_label }}</label>
-          <input class="usa-input usa-input--inline{% if error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_m_id }}" name="{{ dob_m_id }}" type="number" min="1" max="12" value="">
-        </div>
-        <div class="usa-form-group usa-form-group--day">
-          <label class="usa-label" for="{{ dob_d_id }}">{{ day_label }}</label>
-          <input class="usa-input usa-input--inline{% if error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_d_id }}" name="{{ dob_d_id }}" type="number" min="1" max="31" value="">
-        </div>
-        <div class="usa-form-group usa-form-group--year">
-          <label class="usa-label" for="{{ dob_y_id }}">{{ year_label }}</label>
-          <input class="usa-input usa-input--inline{% if error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_y_id }}" name="{{ dob_y_id }}" type="number" min="1900" max="2019" value="">
-        </div>
-      </div>
-    {% if error %}</div>{% endif %}
-  </fieldset>
-</form>
+<fieldset class="usa-fieldset">
+	{% if date_input.title %}
+		<legend class="usa-legend">{{ date_input.title }}</legend>
+	{% endif %}
+
+	{% if date_input.hint %}
+		{% set dob_hint_id = 'dobHint-' ~ random() %}
+		<span class="usa-hint" id="{{ dob_hint_id }}">{{ date_input.hint }}</span>
+	{% endif %}
+
+	<div class="usa-form-group{% if error %} usa-form-group--error{% endif %}">
+		{% if date_input.error %}
+			<div class="usa-error-message" id="input-error-message" role="alert">{{ date_input.error_message }}</div>
+		{% endif %}
+
+		<div class="usa-memorable-date">
+			{% set dob_m_id = 'date_of_birth-month--' ~ random() %}
+			{% set dob_d_id = 'date_of_birth-day--' ~ random() %}
+			{% set dob_y_id = 'date_of_birth-year--' ~ random() %}
+			<div class="usa-form-group usa-form-group--month">
+				<label class="usa-label" for="{{ dob_m_id }}">{{ date_input.month_label }}</label>
+				<input class="usa-input usa-input--inline{% if date_input.error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_m_id }}" name="{{ dob_m_id }}" type="number" min="1" max="12" value="">
+			</div>
+			<div class="usa-form-group usa-form-group--day">
+				<label class="usa-label" for="{{ dob_d_id }}">{{ date_input.day_label }}</label>
+				<input class="usa-input usa-input--inline{% if date_input.error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_d_id }}" name="{{ dob_d_id }}" type="number" min="1" max="31" value="">
+			</div>
+			<div class="usa-form-group usa-form-group--year">
+				<label class="usa-label" for="{{ dob_y_id }}">{{ date_input.year_label }}</label>
+				<input class="usa-input usa-input--inline{% if date_input.error %} usa-input--error{% endif %}" aria-describedby="{{ dob_hint_id }}" id="{{ dob_y_id }}" name="{{ dob_y_id }}" type="number" min="1900" max="2019" value="">
+			</div>
+		</div>
+	</div>
+</fieldset>

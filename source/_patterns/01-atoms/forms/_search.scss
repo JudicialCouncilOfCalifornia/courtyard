@@ -1,31 +1,39 @@
-// .jcc-fieldset-search {
-//   @include u-maxw("mobile-lg");
-//   @include u-minw(15);
-//   @include u-width("full");
+$_search_schemes: (
+  base: (
+    icon-color: "primary"
+  ),
+  local: (
+  )
+);
 
-//   .usa-fieldset {
-//     @include u-position("relative");
-//   }
+$_search: map-merge-by-keys($_search_schemes, base, $_search_schemes, $scheme);
 
-//   .usa-input {
-//     @include u-margin-top(0);
 
-//     @if ($trial) {
-//       @include u-border(0);
-//       @include u-bg(primary-lighter);
-//     }
-//   }
+.jcc-fieldset-search {
+  @include u-maxw("mobile-lg");
+  @include u-minw(15);
+  @include u-width("full");
 
-//   button {
-//     @include u-position("absolute");
-//     @include u-right(1);
-//     @include u-top(1.5);
-//     @include u-border(0);
-//     @include u-bg("transparent");
+  .usa-fieldset {
+    @include u-position("relative");
+  }
 
-//     .icon-search {
-//       @include u-height(3);
-//       @include u-width(3);
-//     }
-//   }
-// }
+  .usa-input {
+    @include u-margin-top(0);
+  }
+
+  button {
+    @include u-position("absolute");
+    @include u-right(0);
+    @include u-top(1);
+    @include u-padding-top(2px);
+    @include u-border(0);
+    @include u-bg("transparent");
+
+    .icon-search {
+      @include u-height(4);
+      @include u-width(4);
+      fill: color(map-get($_search, icon-color))
+    }
+  }
+}

@@ -2,11 +2,11 @@
 
 {% set classes = [
   'usa-checkbox',
-  checkbox.style|map(s =>  'jcc-checkbox--' ~ s)|join(' '),
+  checkbox.style ? (checkbox.style is iterable ? checkbox.style|map(s => 'jcc-checkbox--' ~ s)|join(' ') : 'jcc-checkbox--' ~ checkbox.style),
 ]|merge(checkbox.classes|default([''])) %}
 
 <div {{attributes.addClass(classes) }}>
-  {% set id = 'checkbox-' ~ random() %}
-  <input class="usa-checkbox__input" id="{{ id }}" type="checkbox" name="{{ checkbox.name }}" value="{{ id }}">
-  <label class="usa-checkbox__label" for="{{ id }}">{{ checkbox.label }}</label>
+	{% set id = 'checkbox-' ~ random() %}
+	<input class="usa-checkbox__input" id="{{ id }}" type="checkbox" name="{{ checkbox.name }}" value="{{ id }}">
+	<label class="usa-checkbox__label" for="{{ id }}">{{ checkbox.label }}</label>
 </div>
