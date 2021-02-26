@@ -1,11 +1,20 @@
-// "Base" scheme with minimal modifications
+// "Base" scheme
+// Uses default USWDS settings
 // -------------------------------------
 
 $scheme: "base";
 
-// @import "base/*.scss";
+// -------------------------------------
+// No individual theme settings
+// See "../../node_modules/uswds/dist/scss/settings/*.scss"
+
+// -------------------------------------
+// Import USWDS library
 
 @import "uswds";
+
+// -------------------------------------
+// Import PatternLab
 
 @import "../_patterns/00-protons/functions/*.scss";
 @import "../_patterns/00-protons/mixins/*.scss";

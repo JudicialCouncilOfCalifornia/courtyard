@@ -3,9 +3,23 @@
 
 $scheme: "local";
 
-@import "local/*.scss";
+// -------------------------------------
+// Import individual theme settings
+
+@import "local/uswds-theme-general";
+@import "local/uswds-theme-typography";
+@import "local/uswds-theme-spacing";
+@import "local/uswds-theme-color";
+@import "local/uswds-theme-utilities";
+@import "local/uswds-theme-components";
+
+// -------------------------------------
+// Import USWDS library
 
 @import "uswds";
+
+// -------------------------------------
+// Import PatternLab
 
 @import "../_patterns/00-protons/functions/*.scss";
 @import "../_patterns/00-protons/mixins/*.scss";
@@ -15,7 +29,3 @@ $scheme: "local";
 // @import "../_patterns/04-templates/**/*.scss";
 // @import "../_patterns/05-pages/**/*.scss";
 // @import "../_patterns/00-protons/print";
-
-div {
-  color: color($theme-color-secondary);
-}
