@@ -1,0 +1,65 @@
+$_header_schemes: (
+  base: (
+    h1-color: "ink",
+    h2-color: "ink",
+    h3-color: "ink",
+    h4-color: "ink",
+    h5-color: "ink",
+    h6-color: "ink",
+  ),
+  local: (
+    h1-color: "primary",
+    h2-color: "primary-dark",
+    h3-color: "base-darkest",
+    h4-color: "ink",
+    h5-color: "ink",
+    h6-color: "ink",
+  )
+);
+
+$_header: map-merge-by-keys($_header_schemes, base, $_header_schemes, $scheme);
+
+
+h1,
+.jcc-h1 {
+  @include jcc-h1();
+  @include u-text(map-get($_header, h1-color));
+  letter-spacing: 0.153846px;
+}
+
+h2,
+.jcc-h2 {
+  @include jcc-h2();
+  @include u-text(map-get($_header, h2-color));
+  letter-spacing: 0.1px;
+}
+
+h3,
+.jcc-h3 {
+  @include jcc-h3();
+  @include u-text(map-get($_header, h3-color));
+  letter-spacing: 0.1px;
+}
+
+h4,
+.jcc-h4 {
+  @include jcc-h4();
+  @include u-text(map-get($_header, h4-color));
+  letter-spacing: 0.4px;
+}
+
+h5,
+.jcc-h5 {
+  @include jcc-h5();
+  @include u-text(map-get($_header, h5-color));
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h6,
+.jcc-h6 {
+  @include jcc-h6();
+  @include u-text(map-get($_header, h6-color));
+  text-transform: none;
+  letter-spacing: 1px;
+}

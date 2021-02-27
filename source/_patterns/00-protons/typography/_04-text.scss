@@ -1,0 +1,22 @@
+.h-dash {
+  @include has-dash();
+}
+
+.jcc-brow {
+  @include u-margin-bottom(2);
+  @include u-font(sans, 6);
+}
+
+.jcc-title {
+  @include u-text(primary-dark);
+  @include has-dash();
+  @include u-margin-bottom(3);
+}
+
+.jcc-lead {
+  @include jcc-lead();
+}
+
+.jcc-small {
+  @include jcc-small();
+}

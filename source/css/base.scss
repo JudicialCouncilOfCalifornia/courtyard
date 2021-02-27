@@ -5,8 +5,11 @@
 $scheme: "base";
 
 // -------------------------------------
-// No individual theme settings
-// See "../../node_modules/uswds/dist/scss/settings/*.scss"
+// No individual theme settings:
+//   See "../../node_modules/uswds/dist/scss/settings/*.scss"
+
+// ... other than hiding USWDS notifications:
+$theme-show-notifications: false;
 
 // -------------------------------------
 // Import USWDS library
@@ -18,6 +21,7 @@ $scheme: "base";
 
 @import "../_patterns/00-protons/functions/*.scss";
 @import "../_patterns/00-protons/mixins/*.scss";
+@import "../_patterns/00-protons/typography/*.scss";
 @import "../_patterns/01-atoms/**/*.scss";
 // @import "../_patterns/02-molecules/**/*.scss";
 // @import "../_patterns/03-organisms/**/*.scss";

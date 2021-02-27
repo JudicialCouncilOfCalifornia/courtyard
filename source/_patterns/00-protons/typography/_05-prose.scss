@@ -1,0 +1,44 @@
+.usa-prose {
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul li {
+    @include u-measure(6);
+  }
+
+  > ul li {
+    @include u-margin-bottom(1.5);
+  }
+
+  h1,
+  .jcc-h1 {
+    @extend .jcc-h1;
+  }
+
+  h2,
+  .jcc-h2 {
+    @extend .jcc-h2;
+  }
+
+  h3,
+  .jcc-h3 {
+    @extend .jcc-h3;
+  }
+
+  h4,
+  .jcc-h4 {
+    @extend .jcc-h4;
+  }
+
+  h5,
+  .jcc-h5 {
+    @extend .jcc-h5;
+  }
+
+  h6,
+  .jcc-h6 {
+    @extend .jcc-h6;
+  }
+}

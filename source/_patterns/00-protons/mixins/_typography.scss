@@ -1,96 +1,74 @@
 // Type
-@mixin responsive-h-mega($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 13); // 36
+
+@mixin jcc-h1($font-family: heading) {
+  @include typeset($font-family, $theme-h2-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-normal;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 15); // 48
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 12); // 32
+    @include typeset($font-family, $theme-h1-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h1($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 12); // 32
+@mixin jcc-h2($font-family: heading) {
+  @include typeset($font-family, $theme-h3-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-normal;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 14); // 40
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 11); // 28
+    @include typeset($font-family, $theme-h2-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h2($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 11); // 28
+@mixin jcc-h3($font-family: body) {
+  @include typeset($font-family, $theme-h4-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-normal;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 13); // 36
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 10);
+    @include typeset($font-family, $theme-h3-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h3($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 10);
+@mixin jcc-h4($font-family: body) {
+  @include typeset($font-family, $theme-h5-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-bold;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 11);
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 9);
+    @include typeset($font-family, $theme-h4-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h4($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 9);
+@mixin jcc-h5($font-family: body) {
+  @include typeset($font-family, $theme-h6-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-bold;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 10); // 24
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 8); // 18
+    @include typeset($font-family, $theme-h5-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h5($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 8);
+@mixin jcc-h6($font-family: body) {
+  @include typeset($font-family, $theme-h6-font-size, $theme-heading-line-height);
+  font-weight: $theme-font-weight-bold;
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 9); // 24
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 7); // 18
+    @include typeset($font-family, $theme-h6-font-size, $theme-heading-line-height);
   }
 }
 
-@mixin responsive-h6($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 7);
-
-  @include at-media(desktop) {
-    @include u-font($responsive-font-family, 8); // 24
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 6);
-  }
+@mixin jcc-lead() {
+  @include typeset(
+    $theme-lead-font-family,
+    $theme-lead-font-size,
+    $theme-lead-line-height
+  );
+  font-weight: $theme-font-weight-normal;
+  max-width: measure($theme-lead-measure);
 }
 
-@mixin responsive-lead($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 9); // 22
-
-  @include at-media(desktop) {
-    @include u-font($responsive-font-family, 10); // 24
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 6); // 18
-  }
+@mixin jcc-small() {
+  @include typeset(
+    $theme-body-font-family,
+    $theme-small-font-size,
+    $theme-body-line-height
+  );
+  font-weight: $theme-font-weight-normal;
 }
