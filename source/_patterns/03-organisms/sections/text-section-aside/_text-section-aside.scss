@@ -29,7 +29,8 @@
       @include u-font(heading, 12);
 
       @include at-media(desktop) {
-        @include u-padding-bottom(4);
+        padding-top: 1.1rem;
+        @include u-padding-bottom(2);
         @include has-dash-position($dash-color: "mint-cool-50v", $dash-position: "right");
       }
     }
