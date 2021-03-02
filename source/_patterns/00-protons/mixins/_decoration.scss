@@ -75,13 +75,15 @@
       position: relative;
       display: block;
       transform: translate(-50%, 24px);
-      z-index: -1;
+      z-index: 0;
     }
 
     span {
+      position: relative;
       background-color: $inner-color;
       box-shadow: 30px 0 0 $inner-color, -30px 0 0 $inner-color;
       box-decoration-break: clone;
+      z-index: 1;
     }
   } @else if $dash-position == "right" {
     // `right` requires a `<span>` to wrap the text
@@ -93,13 +95,15 @@
       position: relative;
       display: block;
       transform: translate(-50%, 24px);
-      z-index: -1;
+      z-index: 0;
     }
 
     span {
+      position: relative;
       background-color: $inner-color;
       box-shadow: 30px 0 0 $inner-color;
       box-decoration-break: clone;
+      z-index: 1;
     }
   }
 }

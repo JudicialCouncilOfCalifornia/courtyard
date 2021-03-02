@@ -1,0 +1,32 @@
+{#
+/**
+ * Available variables:
+ * - section_heading - primary variable
+ *   - title: the title
+ *   - lead: the lead paragraph/text/etc
+ *   - width: the width of the parent html [full, partial]
+ *   - classes: array of classes to add to component
+ *   - title_tag: the html tag of the title
+ */
+#}
+
+{% set tag = section_heading.title_tag|default('h2') %}
+{% set width = section_heading.width|default('full') %}
+
+{% set classes = [
+  'jcc-section-heading',
+]|merge(section_heading.classes|default([''])) %}
+
+{% if section_heading.title or section_heading.lead %}
+  <header class="{{ classes|join(' ')|trim }}">
+    {% if section_heading.title %}
+      <{{ tag }} class="jcc-section-heading__title {{ 'jcc-section-heading__title--' ~ width }}">
+        <span>{{ section_heading.title }}</span>
+      </{{ tag }}>
+    {% endif %}
+
+    {% if section_heading.lead %}
+      <div class="jcc-section-heading__lead">{{ section_heading.lead }}</div>
+    {% endif %}
+  </header>
+{% endif %}

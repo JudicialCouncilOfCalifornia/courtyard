@@ -1,0 +1,60 @@
+.jcc-section-heading {
+  overflow: hidden;
+}
+
+.jcc-section-heading__title {
+  @include u-margin-bottom(3);
+}
+
+.jcc-section-heading__title--full {
+  @include at-media-max(desktop) {
+    @include add-dash($dash-position: "above-center", $dash-width: 5rem);
+  }
+
+  @include at-media(desktop) {
+    .jcc-section--alt-background & {
+      @include add-dash(
+        $dash-position: "left-right",
+        $inner-spacing: 150px,
+        $inner-color: color($theme-color-section-alt)
+      );
+    }
+
+    .jcc-section:not(.jcc-section--alt-background) & {
+      @include add-dash(
+        $dash-position: "left-right",
+        $inner-spacing: 150px,
+        $inner-color: color($theme-body-background-color)
+      );
+    }
+  }
+}
+
+.jcc-section-heading__title--partial {
+  @include at-media-max(desktop) {
+    @include add-dash($dash-position: "above-left", $dash-width: 5rem);
+  }
+
+  @include at-media(desktop) {
+    .jcc-section--alt-background & {
+      @include add-dash(
+        $dash-position: "right",
+        $inner-spacing: 150px,
+        $inner-color: color($theme-color-section-alt)
+      );
+    }
+
+    .jcc-section:not(.jcc-section--alt-background) & {
+      @include add-dash(
+        $dash-position: "right",
+        $inner-spacing: 150px,
+        $inner-color: color($theme-body-background-color)
+      );
+    }
+  }
+}
+
+.jcc-section-heading__lead {
+  @include u-margin-bottom(2);
+  @extend .jcc-lead;
+}
