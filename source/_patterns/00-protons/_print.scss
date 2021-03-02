@@ -17,34 +17,38 @@
     visibility: hidden !important;
   }
 
-  // body {
-  //   font: 12px Georgia, "Times New Roman", Times, serif;
-  //   text-align: left !important;
-  // }
+  body {
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    text-align: left !important;
+  }
 
-  // h1, .h1 {
-  //   font-size: 36px;
-  // }
+  h1, .h1 {
+    font-size: 36px;
+  }
 
-  // h2, .h2 {
-  //   font-size: 24px;
-  // }
+  h2, .h2 {
+    font-size: 24px;
+  }
 
-  // h3, .h3 {
-  //   font-size: 20px;
-  // }
+  h3, .h3 {
+    font-size: 20px;
+  }
 
-  // h4, .h4 {
-  //   font-size: 18px;
-  // }
+  h4, .h4 {
+    font-size: 18px;
+  }
 
-  // h5, .h5 {
-  //   font-size: 16px;
-  // }
+  h5, .h5 {
+    font-size: 16px;
+  }
 
-  // small, .t-small {
-  //   font-size: 12px;
-  // }
+  h6, .h6 {
+    font-size: 14px;
+  }
+
+  small, .t-small {
+    font-size: 12px;
+  }
 }
 
 @media print {

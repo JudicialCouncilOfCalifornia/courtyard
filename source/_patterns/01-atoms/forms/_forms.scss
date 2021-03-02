@@ -1,3 +1,14 @@
+$_config_schemes: (
+  base: (
+    icon-color: "primary"
+  ),
+  local: (
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+
 .usa-input,
 .usa-select,
 .usa-textarea {
@@ -15,4 +26,38 @@
 .usa-range,
 .usa-input {
   height: 3.25rem;
+}
+
+.usa-select {
+  background-image: url(../images/icomoon/SVG/expand_more.svg);
+  background-size: 1.5rem auto;
+}
+
+.jcc-fieldset-search {
+  @include u-maxw("mobile-lg");
+  @include u-minw(15);
+  @include u-width("full");
+
+  .usa-fieldset {
+    @include u-position("relative");
+  }
+
+  .usa-input {
+    @include u-margin-top(0);
+  }
+
+  button {
+    @include u-position("absolute");
+    @include u-right(0);
+    @include u-top(1);
+    @include u-padding-top(2px);
+    @include u-border(0);
+    @include u-bg("transparent");
+
+    .icon-search {
+      @include u-height(4);
+      @include u-width(4);
+      fill: color(map-get($_config, icon-color))
+    }
+  }
 }

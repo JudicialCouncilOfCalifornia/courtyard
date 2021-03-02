@@ -4,5 +4,5 @@ date_input:
   month_label: Month
   day_label: Day
   year_label: Year
-  error: true
+  error: false
   error_message: Helpful error message

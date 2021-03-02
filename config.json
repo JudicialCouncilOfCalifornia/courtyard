@@ -3,20 +3,8 @@
     "project_scss": "source/css",
     "public_folder": "public/css",
     "styleguide_public_folder": "public/styleguide/css",
-    "src": ["source/_patterns/*.scss", "source/_patterns/**/*.scss", "source/css/*.scss"],
-    "styleguide_src": "source/styleguide/css/*.css",
-    "srl": ["source/_patterns/*.scss", "source/_patterns/**/*.scss", "source/css/styles-srl.scss"],
-    "trial": [
-      "source/_patterns/*.scss",
-      "source/_patterns/**/*.scss",
-      "source/css/styles-trial.scss"
-    ],
-    "srlTrial": [
-      "source/_patterns/*.scss",
-      "source/_patterns/**/*.scss",
-      "source/css/styles-srl.scss",
-      "source/css/styles-trial.scss"
-    ]
+    "src": ["source/_patterns/*.scss", "source/_patterns/**/*.scss", "source/css/**/*.scss"],
+    "styleguide_src": "source/styleguide/css/*.scss"
   },
   "fonts": {
     "source_fonts": "source/fonts/**/**",

@@ -58,17 +58,17 @@ const copyUswdsImages = () => {
   return gulp.src(`${uswds}/img/**/*`).pipe(gulp.dest(config.images.public_images));
 };
 
-const copyPlStyles = () => {
-  return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
-};
+// const copyPlStyles = () => {
+//   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
+// };
 
 const copyIconSprite = () => {
   return gulp.src(config.icons.sprite_src).pipe(gulp.dest(config.icons.sprite_dest));
 };
 
-const buildCss = (paths, minFileName) => {
+const buildCss = (source, includes, destination) => {
   let css = gulp
-    .src(config.css.src)
+    .src(source)
     .pipe(glob())
     .pipe(
       plumber({
@@ -88,9 +88,7 @@ const buildCss = (paths, minFileName) => {
       sass({
         outputStyle: "expanded",
         errLogToConsole: true,
-        includePaths: [
-          config.css.project_scss, // pulling all the sass and converts to css
-        ],
+        includePaths: includes, // pulling all the sass and converts to css
       }).on("error", sass.logError)
     )
     .pipe(replace(/\buswds @version\b/g, "based on uswds v" + pkg.version))
@@ -103,12 +101,16 @@ const buildCss = (paths, minFileName) => {
 
   return css
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.css.public_folder))
+    .pipe(gulp.dest(destination))
     .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
 };
 
 const plCss = () => {
-  return buildCss(config.css.src, "styles-src");
+  return buildCss(config.css.src, config.css.project_scss, config.css.public_folder);
+};
+
+const styleguideCss = () => {
+  return buildCss(config.css.styleguide_src, [], config.css.styleguide_public_folder);
 };
 
 // Component JS.
@@ -159,7 +161,7 @@ const watch = (cb) => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
   gulp.watch(config.pattern_lab.src, build);
-  gulp.watch(config.css.styleguide_src, copyPlStyles);
+  gulp.watch(config.css.styleguide_src, styleguideCss);
 };
 
 const serve = (cb) => {
@@ -174,7 +176,15 @@ const serve = (cb) => {
   });
 };
 
-const build = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, copyIconSprite, plCss, plJs);
+const build = gulp.series(
+  plPhp,
+  copyUswdsFonts,
+  copyUswdsImages,
+  copyIconSprite,
+  plCss,
+  plJs,
+  styleguideCss
+);
 
 exports.build = build;
 exports.default = gulp.series(build, serve, watch);

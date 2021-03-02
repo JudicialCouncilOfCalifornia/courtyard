@@ -1,0 +1,95 @@
+$_config_schemes: (
+  base: (
+    h1-color: "ink",
+    h2-color: "ink",
+    h3-color: "ink",
+    h4-color: "ink",
+    h5-color: "ink",
+    h6-color: "ink",
+  ),
+  local: (
+    h1-color: "primary",
+    h2-color: "primary-dark",
+    h3-color: "base-darkest",
+    h4-color: "ink",
+    h5-color: "ink",
+    h6-color: "ink",
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+
+h1,
+.jcc-h1 {
+  @include typeset(heading, $theme-h2-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h1-color));
+  font-weight: $theme-font-weight-normal;
+  letter-spacing: 0.153846px;
+
+  @include at-media(desktop) {
+    @include typeset(heading, $theme-h1-font-size, $theme-heading-line-height);
+  }
+}
+
+h2,
+.jcc-h2 {
+  @include typeset(heading, $theme-h3-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h2-color));
+  font-weight: $theme-font-weight-normal;
+  letter-spacing: 0.1px;
+
+  @include at-media(desktop) {
+    @include typeset(heading, $theme-h2-font-size, $theme-heading-line-height);
+  }
+}
+
+h3,
+.jcc-h3 {
+  @include typeset(body, $theme-h4-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h3-color));
+  font-weight: $theme-font-weight-normal;
+  letter-spacing: 0.1px;
+
+  @include at-media(desktop) {
+    @include typeset(body, $theme-h3-font-size, $theme-heading-line-height);
+  }
+}
+
+h4,
+.jcc-h4 {
+  @include typeset(body, $theme-h5-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h4-color));
+  font-weight: $theme-font-weight-bold;
+  letter-spacing: 0.4px;
+
+  @include at-media(desktop) {
+    @include typeset(body, $theme-h4-font-size, $theme-heading-line-height);
+  }
+}
+
+h5,
+.jcc-h5 {
+  @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h5-color));
+  font-weight: $theme-font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include at-media(desktop) {
+    @include typeset(body, $theme-h5-font-size, $theme-heading-line-height);
+  }
+}
+
+h6,
+.jcc-h6 {
+  @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+  @include u-text(map-get($_config, h6-color));
+  font-weight: $theme-font-weight-bold;
+  text-transform: none;
+  letter-spacing: 1px;
+
+  @include at-media(desktop) {
+    @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+  }
+}

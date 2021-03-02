@@ -131,9 +131,9 @@
 
 
 {% for color_set in color_sets %}
-  <h5>{{ color_set.type }}</h5>
+  <div class="sg-h5">{{ color_set.type }}</div>
   {% for item in color_set.sets %}
-    <h6>{{ item.name }}</h6>
+    <div class="sg-h6">{{ item.name }}</div>
     <ul class="sg-colors">
       {% for color in item.colors %}
         <li>

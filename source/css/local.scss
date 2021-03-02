@@ -4,7 +4,7 @@
 $scheme: "local";
 
 // -------------------------------------
-// Import individual theme settings
+// Import individual USWDS theme settings
 
 @import "local/uswds-theme-general";
 @import "local/uswds-theme-typography";
@@ -19,14 +19,11 @@ $scheme: "local";
 @import "uswds";
 
 // -------------------------------------
+// Import individual JCC theme settings
+
+@import "local/jcc-theme-color";
+
+// -------------------------------------
 // Import PatternLab
 
-@import "../_patterns/00-protons/functions/*.scss";
-@import "../_patterns/00-protons/mixins/*.scss";
-@import "../_patterns/00-protons/typography/*.scss";
-@import "../_patterns/01-atoms/**/*.scss";
-// @import "../_patterns/02-molecules/**/*.scss";
-// @import "../_patterns/03-organisms/**/*.scss";
-// @import "../_patterns/04-templates/**/*.scss";
-// @import "../_patterns/05-pages/**/*.scss";
-// @import "../_patterns/00-protons/print";
+@import "pl";

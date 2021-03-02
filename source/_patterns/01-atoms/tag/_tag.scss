@@ -1,8 +1,23 @@
-// .jcc-tag {
-//   @include u-display("inline-block");
-//   @include u-margin-bottom("1");
-//   @include u-padding-x("1.5");
-//   @include u-padding-y("0.5");
-//   @include u-bg(secondary);
-//   @include u-white-space("no-wrap");
-// }
+$_config_schemes: (
+  base: (
+    color: "base-dark",
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+
+.jcc-tag {
+  @include u-display("inline-block");
+  @include u-margin-bottom(1);
+  @include u-padding-x(2);
+  @include u-padding-top(0.5);
+  @include u-padding-bottom(2px);
+  @include u-radius(md);
+  @include set-text-and-bg(map-get($_config, color), $context: $button-context);
+  @include u-font-size(ui, 3);
+  @include u-line-height(ui, 2);
+  @include u-white-space("no-wrap");
+  letter-spacing: 0.2px;
+}

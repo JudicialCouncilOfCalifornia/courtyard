@@ -1,4 +1,4 @@
-$_button_schemes: (
+$_config_schemes: (
   base: (
     default: "primary",
     default-hover: "primary-dark",
@@ -17,26 +17,26 @@ $_button_schemes: (
   )
 );
 
-$_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 
 .usa-button {
-  @include set-text-and-bg(map-get($_button, default), $context: $button-context);
+  @include set-text-and-bg(map-get($_config, default), $context: $button-context);
   @include u-padding-top(2.5);
   @include u-padding-bottom(2);
   @include u-padding-x(4);
-  @include u-font-size(ui, sm);
+  @include u-font-size(ui, xs);
   @include u-line-height(ui, 2);
   letter-spacing: 0.17px;
 
   &:hover,
   &.usa-button--hover {
-    @include set-text-and-bg(map-get($_button, default-hover), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, default-hover), $context: $button-context);
   }
 
   &:active,
   &.usa-button--active {
-    @include set-text-and-bg(map-get($_button, default-active), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, default-active), $context: $button-context);
   }
 
   &:disabled {
@@ -45,53 +45,53 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 }
 
 .usa-button--secondary {
-  @include set-text-and-bg(map-get($_button, secondary), $context: $button-context);
+  @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
 
   &:hover,
   &.usa-button--hover {
-    @include set-text-and-bg(map-get($_button, secondary-hover), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, secondary-hover), $context: $button-context);
   }
 
   &:active,
   &.usa-button--active {
-    @include set-text-and-bg(map-get($_button, secondary-active), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, secondary-active), $context: $button-context);
   }
 }
 
 .usa-button.ext,
 .usa-button--external {
-  @include u-position("relative");
+  @include u-position(relative);
   @include u-padding-right(7);
-  @include u-radius("pill");
-  @include u-font("sans", "md");
-  @include set-text-and-bg(map-get($_button, external), $context: $button-context);
-  font-weight: font-weight("normal");
+  @include u-radius(pill);
+  @include u-font(sans, xs);
+  @include set-text-and-bg(map-get($_config, external), $context: $button-context);
+  font-weight: font-weight(normal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   svg {
-    @include u-position("absolute");
+    @include u-position(absolute);
     @include u-top(1.5);
     @include u-width(3);
     @include u-height(3);
     @include u-margin-left(1);
-    fill: color(get-color-token-from-bg(map-get($_button, external), $context: $button-context));
+    fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
   }
 
   &:hover,
   &.usa-button--hover {
-    @include set-text-and-bg(map-get($_button, external-hover), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, external-hover), $context: $button-context);
 
     svg {
-      fill: color(get-color-token-from-bg(map-get($_button, external-hover), $context: $button-context));
+      fill: color(get-color-token-from-bg(map-get($_config, external-hover), $context: $button-context));
     }
   }
 
   &:active,
   &.usa-button--active {
-    @include set-text-and-bg(map-get($_button, external-active), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, external-active), $context: $button-context);
 
     svg {
-      fill: color(get-color-token-from-bg(map-get($_button, external-active), $context: $button-context));
+      fill: color(get-color-token-from-bg(map-get($_config, external-active), $context: $button-context));
     }
   }
 
@@ -99,7 +99,7 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
     @include button-unstyled;
 
     svg {
-      @include u-position("relative");
+      @include u-position(relative);
       @include u-top(1px);
       fill: color($theme-link-color);
     }
@@ -112,16 +112,16 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 }
 
 .usa-button--inverse {
-  @include set-text-and-bg("white", "primary", $context: $button-context);
+  @include set-text-and-bg("white", primary, $context: $button-context);
 
   &:hover,
   &.usa-button--hover {
-    @include set-text-and-bg("accent-warm", $context: $button-context);
+    @include set-text-and-bg(accent-warm, $context: $button-context);
   }
 
   &:active,
   &.usa-button--active {
-    @include set-text-and-bg("accent-warm-dark", $context: $button-context);
+    @include set-text-and-bg(accent-warm-dark, $context: $button-context);
   }
 
   &.usa-button--unstyled {
@@ -133,8 +133,8 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
 .usa-button--cta-link {
   @include button-unstyled;
   @include u-padding(0);
-  @include u-text("uppercase");
-  @include u-font("sans", "md");
+  @include u-text(uppercase);
+  @include u-font(sans, sm);
   letter-spacing: 1.8px;
   text-decoration: none;
 
@@ -161,7 +161,7 @@ $_button: map-merge-by-keys($_button_schemes, base, $_button_schemes, $scheme);
   }
 
   &:after {
-    @include u-display("inline-block");
+    @include u-display(inline-block);
     @include u-width(2.5);
     @include u-height(2.5);
     @include u-margin-left(1.5);
