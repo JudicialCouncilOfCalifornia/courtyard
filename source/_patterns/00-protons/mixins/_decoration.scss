@@ -13,58 +13,38 @@
 }
 
 // Adds decorative dash to headers
-@mixin has-dash($dash-color: "gold-30v") {
-  position: relative;
-  padding-bottom: 0.5em;
-
-  &:after {
-    background-color: color($dash-color);
-    content: "";
-    height: 3px;
-    width: 3rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
-
-// Adds decorative dash to headers with positions:
-// below, above, left-right, left, right
-@mixin has-dash-position($dash-color: "gold-30v", $dash-position: "below", $dash-width: null) {
+// below-center, above-left, above-center, left-right, right
+@mixin add-dash(
+  $dash-color: secondary,
+  $dash-position: "below-center",
+  $dash-width: null,
+  $inner-spacing: null,
+  $inner-color: null
+) {
   position: relative;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     @include u-bg($dash-color);
     content: "";
     height: 3px;
   }
 
-  @if $dash-position == "below" {
-    padding-bottom: 0.5em;
-
-    &:after {
-      $dash-width: 3rem !default;
-      width: $dash-width;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-  } @else if $dash-position == "below-center" {
+  @if $dash-position == "below-center" {
     padding-bottom: 0.8em;
 
-    &:after {
+    &::after {
       $dash-width: 100% !default;
       width: $dash-width;
       position: absolute;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
     }
-  } @else if $dash-position == "above" {
+  } @else if $dash-position == "above-left" {
     padding-top: 0.8em;
 
-    &:after {
+    &::after {
       $dash-width: 100% !default;
       width: $dash-width;
       position: absolute;
@@ -73,54 +53,53 @@
     }
   } @else if $dash-position == "above-center" {
     padding-top: 0.8em;
+    text-align: center;
 
-    &:before {
+    &::before {
       $dash-width: 100% !default;
       width: $dash-width;
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
     }
   } @else if $dash-position == "left-right" {
-    @include u-overflow(hidden);
-    &:before,
-    &:after {
-      $dash-width: 50% !default;
+    // `left-right` requires a `<span>` to wrap the text
+    margin-left: $inner-spacing + 30px;
+    margin-right: $inner-spacing + 30px;
+    text-align: center;
+
+    &::before {
+      $dash-width: 300% !default;
       width: $dash-width;
-      display: inline-block;
       position: relative;
-      vertical-align: middle;
+      display: block;
+      transform: translate(-50%, 24px);
+      z-index: -1;
     }
-    &:before {
-      left: -0.5em;
-      margin-left: -50%;
-    }
-    &:after {
-      left: 0.5em;
-      margin-right: -50%;
-    }
-  } @else if $dash-position == "left" {
-    @include u-overflow(hidden);
-    &:before {
-      $dash-width: 100% !default;
-      width: $dash-width;
-      display: inline-block;
-      position: relative;
-      vertical-align: middle;
-      left: -0.5em;
-      margin-left: -50%;
+
+    span {
+      background-color: $inner-color;
+      box-shadow: 30px 0 0 $inner-color, -30px 0 0 $inner-color;
+      box-decoration-break: clone;
     }
   } @else if $dash-position == "right" {
-    @include u-overflow(hidden);
-    &:after {
-      $dash-width: 100% !default;
+    // `right` requires a `<span>` to wrap the text
+    margin-right: $inner-spacing + 30px;
+
+    &::before {
+      $dash-width: 300% !default;
       width: $dash-width;
-      display: inline-block;
       position: relative;
-      vertical-align: middle;
-      left: 0.5em;
-      margin-right: -50%;
+      display: block;
+      transform: translate(-50%, 24px);
+      z-index: -1;
+    }
+
+    span {
+      background-color: $inner-color;
+      box-shadow: 30px 0 0 $inner-color;
+      box-decoration-break: clone;
     }
   }
 }
