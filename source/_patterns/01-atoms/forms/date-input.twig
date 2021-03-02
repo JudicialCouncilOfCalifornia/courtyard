@@ -1,3 +1,17 @@
+{#
+/**
+ * Available variables:
+ * - date_input - primary variable
+ *   - title: the title
+ *   - hint: helper text under the title
+ *   - error: boolean of error status
+ *   - error_message: the error message
+ *   - month_label: the label of the month input
+ *   - day_label: the label of the day input
+ *   - year_label: the label of the year input
+ */
+#}
+
 <fieldset class="usa-fieldset">
 	{% if date_input.title %}
 		<legend class="usa-legend">{{ date_input.title }}</legend>
@@ -8,7 +22,7 @@
 		<span class="usa-hint" id="{{ dob_hint_id }}">{{ date_input.hint }}</span>
 	{% endif %}
 
-	<div class="usa-form-group{% if error %} usa-form-group--error{% endif %}">
+	<div class="usa-form-group{% if date_input.error %} usa-form-group--error{% endif %}">
 		{% if date_input.error %}
 			<div class="usa-error-message" id="input-error-message" role="alert">{{ date_input.error_message }}</div>
 		{% endif %}

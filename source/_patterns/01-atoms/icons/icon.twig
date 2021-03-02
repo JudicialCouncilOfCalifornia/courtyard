@@ -1,3 +1,17 @@
+{#
+/**
+ * Available variables:
+ * - icon - primary variable
+ *   - name: the name of the svg file, without file extension
+ *   - width: the width of the svg
+ *   - height: the height of the svg
+ *   - title: the title of the svg
+ *   - decorative: boolean - is the icon only for decoration?
+ *   - color: color of icon (use css classes starting with "text-")
+ *   - file: the file containing icon (if not using default)
+ */
+#}
+
 {% if icon.name %}
   {% spaceless %}
     <svg class="icon icon-{{ icon.name }} {{ icon.width|default('') }} {{ icon.height|default('') }}" role="presentation"

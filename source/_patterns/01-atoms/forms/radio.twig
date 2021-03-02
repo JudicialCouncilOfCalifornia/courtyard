@@ -1,11 +1,25 @@
+{#
+/**
+ * Available variables:
+ * - radio - primary variable
+ *   - name: the html "name"
+ *   - label: the label next to the radio
+ *   - id: the id of the checkbox
+ *   - attributes: Drupal attributes
+ *   - style: array of styles to add to radio
+ *   - classes: array of classes to add to radio
+ */
+#}
+
 {% set attributes = radio.attributes ? radio.attributes : create_attribute() %}
 
 {% set classes = [
   'usa-radio',
-  radio.style ? (radio.style is iterable ? radio.style|map(s => 'jcc-radio--' ~ s)|join(' ') : 'jcc-radio--' ~ radio.style),
+  radio.style ? radio.style|map(s => 'jcc-radio--' ~ s)|join(' '),
 ]|merge(radio.classes|default([''])) %}
 
 <div {{attributes.addClass(classes) }}>
-	<input class="usa-radio__input" id="{{ radio.id }}" type="radio" checked name="{{ radio.name }}" value="{{ radio.id }}">
-	<label class="usa-radio__label" for="{{ radio.id }}">{{ radio.label }}</label>
+	{% set id = radio.id ?? 'radio-' ~ random() %}
+	<input class="usa-radio__input" id="{{ id }}" type="radio" checked name="{{ radio.name }}" value="{{ id }}">
+	<label class="usa-radio__label" for="{{ id }}">{{ radio.label }}</label>
 </div>
