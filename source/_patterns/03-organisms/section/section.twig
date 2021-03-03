@@ -1,0 +1,36 @@
+{#
+/**
+ * Available variables:
+ * - section - primary variable
+ *   - heading: the heading (title & lead)
+ *   - content: the main content
+ *   - id: the html "id" of the section
+ *   - alt_background: boolean - use the alternate color background
+ *   - no_container: boolean - don't use a container to constrain content
+ *   - attributes: Drupal attributes
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set attributes = section.attributes ? section.attributes : create_attribute() %}
+{% if section.id %}
+  {% set attributes = attributes.setAttribute('id', section.id) %}
+{% endif %}
+
+{% set classes = [
+  'jcc-section',
+  section.alt_background ? 'jcc-section--alt-background',
+  section.no_container ? 'jcc-section--no-container' : 'jcc-section--container',
+]|merge(section.classes|default([])) %}
+
+<section {{attributes.addClass(classes) }}>
+  <div class="jcc-section__inner">
+    {% if section.heading %}
+      {% include "@molecules/section-heading/section-heading.twig" with {
+        section_heading: section.heading
+      } %}
+    {% endif %}
+
+    {{ section.content }}
+  </div>
+</section>
