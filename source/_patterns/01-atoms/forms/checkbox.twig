@@ -11,7 +11,7 @@
  */
 #}
 
-{% set attributes = checkbox.attributes ? checkbox.attributes : create_attribute() %}
+{% set attributes = checkbox.attributes ?? create_attribute() %}
 
 {% set classes = [
   'usa-checkbox',

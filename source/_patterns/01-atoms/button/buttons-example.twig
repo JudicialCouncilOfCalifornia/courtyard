@@ -4,6 +4,7 @@
     button: {
       type: "button",
       text: "Default",
+      aria_label: "Test label",
     }
   } %}
   {% include "button.twig" with {
@@ -24,7 +25,7 @@
     button: {
       type: "button",
       text: "Focus",
-      other: "usa-focus",
+      classes: ["usa-focus"],
     }
   } %}
   {% include "button.twig" with {
@@ -100,7 +101,7 @@
     button: {
       type: "external",
       text: "Focus",
-      other: "usa-focus",
+      classes: ["usa-focus"],
     }
   } %}
   {# <a> links don't really "disable" #}

@@ -12,7 +12,7 @@
  */
 #}
 
-{% set attributes = section.attributes ? section.attributes : create_attribute() %}
+{% set attributes = section.attributes ?? create_attribute() %}
 {% if section.id %}
   {% set attributes = attributes.setAttribute('id', section.id) %}
 {% endif %}
