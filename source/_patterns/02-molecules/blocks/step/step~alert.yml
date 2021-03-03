@@ -1,6 +1,0 @@
-step:
-  alert:
-    type: "warning"
-    icon: true
-    heading: "Think about safety when serving papers"
-    text: "For some people, getting served papers can trigger emotional responses. If you’re using someone who is not a professional server, tell them to keep the interaction brief and not to engage in any conversation about the case. They should remain outside and not enter a private home."

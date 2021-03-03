@@ -1,6 +1,0 @@
-timeline_item:
-  read_more:
-    type: "link"
-    link:
-      label: "Read more link"
-      url: "#"

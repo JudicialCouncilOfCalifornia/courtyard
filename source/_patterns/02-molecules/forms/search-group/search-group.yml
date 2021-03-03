@@ -1,5 +1,0 @@
-search_group:
-  label: Enter your email of phone number
-  button:
-    text: Send Link
-  helper: We'll only use this email or phone number to send this link

@@ -1,7 +1,0 @@
-hero:
-  height_variant: "minimum-height"
-  title_variant: "sr-only"
-  background_variant: "has-background-color--dark"
-  brow: ''
-  lead: ''
-  body: ''

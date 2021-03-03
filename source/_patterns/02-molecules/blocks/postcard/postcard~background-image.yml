@@ -1,4 +1,0 @@
-postcard:
-  background_variant: "has-background-image" #has-background-color--transparent has-background-color--light--secondary has-background-color--dark--secondary
-  img:
-    src: "https://placeimg.com/900/600/arch"

@@ -1,8 +1,0 @@
-feedback:
-  id: "feedback-id"
-  button:
-    title: "Was this helpful?"
-  form:
-    attributes: "class='webform'"
-    children: "Form Goes Here"
-

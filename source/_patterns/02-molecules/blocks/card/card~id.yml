@@ -1,8 +1,0 @@
-card:
-  brow: "Feb 04, 2020"
-  title: "Lorem ipsum"
-  id: "read-more"
-  excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
-  img:
-    src: "../../images/graphics/person.svg"
-    alt: "Alt text"
