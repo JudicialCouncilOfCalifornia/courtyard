@@ -1,0 +1,5 @@
+alert:
+  type: "error"
+  heading: "Error status."
+  text: "<p>Hendrerit euismod mauris id viverra posuere lorem ac magna class, ornare nascetur cubilia rhoncus potenti commodo habitasse curae.</p>"
+  close: true

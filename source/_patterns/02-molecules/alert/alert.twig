@@ -1,0 +1,31 @@
+{#
+/**
+ * Available variables:
+ * - alert - primary variable
+ *   - type: type of alert [info, success, warning, error]
+ *   - heading: bolded text at the beginning
+ *   - text: the message
+ *   - close: show a close button?
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set type = alert.type|default('info') %}
+
+{% set classes = [
+  'usa-alert',
+  'usa-alert--' ~ type,
+]|merge(alert.classes|default([])) %}
+
+<div class="usa-alert__wrapper usa-alert__wrapper--{{ type }}">
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">{{ alert.heading }}</h3>
+      <div class="usa-alert__text">{{ alert.text }}</div>
+
+      {% if alert.close %}
+        <div class="usa-alert__close"></div>
+      {% endif %}
+    </div>
+  </div>
+</div>

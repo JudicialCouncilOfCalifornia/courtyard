@@ -1,0 +1,59 @@
+.usa-alert {
+  @extend .grid-container-widescreen;
+  @include u-display(none);
+
+  &.active {
+    @include u-display(block);
+  }
+}
+
+.usa-alert__wrapper {
+  &--info {
+    @include u-bg($theme-color-info-lighter);
+  }
+
+  &--success {
+    @include u-bg($theme-color-success-lighter);
+  }
+
+  &--warning {
+    @include u-bg($theme-color-warning-lighter);
+  }
+
+  &--error {
+    @include u-bg($theme-color-error-lighter);
+  }
+}
+
+.usa-alert__body {
+  @include u-display(block);
+  @include u-padding-right(8);
+}
+
+.usa-alert__heading,
+.usa-alert__text {
+  @include u-margin-bottom(0);
+  @include typeset(
+    $theme-body-font-family,
+    $theme-body-font-size,
+    $theme-body-line-height
+  );
+}
+
+.usa-alert__heading {
+  @include u-float(left);
+  @include u-margin-right(0.5);
+  @include u-font-weight(bold);
+}
+
+.usa-alert__close {
+  @include u-display(block);
+  @include u-position(absolute);
+  @include u-top(2);
+  @include u-right(2);
+  @include u-cursor(pointer);
+  @include add-background-svg("close", "../images/icomoon/SVG");
+  width: 30px;
+  height: 28px;
+  background-size: cover;
+}

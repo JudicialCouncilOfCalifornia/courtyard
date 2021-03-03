@@ -1,0 +1,5 @@
+alert:
+  type: "warning"
+  heading: "Warning status"
+  text: "At lacus laoreet sit mattis nunc cubilia porta, taciti fusce felis mi risus ullamcorper, neque potenti ligula egestas libero dignissim."
+  close: true
