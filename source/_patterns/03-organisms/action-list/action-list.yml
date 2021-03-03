@@ -1,0 +1,21 @@
+action_list:
+  heading:
+    title: "Action List"
+    lead: "Molestie dolor nec nam maecenas proin quisque malesuada habitant, potenti id curabitur ridiculus pretium faucibus quis, non per facilisis habitasse dapibus parturient magna."
+  items:
+    - title: "First brief sentence describing the action"
+      body: "One to two sentences providing addition details about the action link."
+      link:
+        text: "Click 1"
+        url: "#"
+        style: 'primary'
+    - title: "Second brief sentence describing the action"
+      body: "One to two sentences providing addition details about the action link. Sociis metus velit cras augue vulputate in etiam, habitant nostra egestas facilisi lorem dis blandit, massa vehicula praesent aenean libero neque."
+      link:
+        text: "Click 2 longer Ridiculus morbi aptent placerat integer"
+        url: "#"
+    - title: "Third brief sentence describing the action"
+      body: "One to two sentences providing addition details about the action link."
+      link:
+        text: "Click 3"
+        url: "#"

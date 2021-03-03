@@ -1,0 +1,74 @@
+$_config_schemes: (
+  base: (
+    action-button: (
+      "usa-button",
+      "usa-button--secondary",
+    )
+  ),
+  local: (
+    action-button: (
+      "usa-button",
+    )
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-action-list {
+  @include add-list-reset;
+  @include u-border-top(1px, base-light);
+}
+
+.jcc-action-list__item {
+  @include u-padding-y(3);
+  @include u-border-bottom(1px, base-light);
+
+  @include at-media(tablet-lg) {
+    @include grid-row();
+  }
+}
+
+.jcc-action-list__item-content {
+  @include at-media-max(tablet-lg) {
+    @include u-padding-bottom(2);
+  }
+
+  @include at-media(tablet-lg) {
+    @include u-padding-right(5);
+    @include grid-col(8);
+  }
+
+  @include at-media(desktop) {
+    @include u-padding-right(7);
+    @include grid-col(9);
+  }
+}
+
+.jcc-action-list__item-title {
+  @include typeset(
+    $theme-body-font-family,
+    $theme-body-font-size,
+    $theme-body-line-height
+  );
+  @include u-font-weight(bold);
+}
+
+.jcc-action-list__action {
+  @include at-media(tablet-lg) {
+    @include grid-col(4);
+    @include u-display(flex);
+    @include u-justify-content(justify-end);
+    @include u-align-items(align-start);
+  }
+
+  @include at-media(desktop) {
+    @include grid-col(3);
+  }
+
+  a {
+    @include u-margin-right(0);
+    @each $button in map-get($_config, action-button) {
+      @extend .#{$button};
+    }
+  }
+}

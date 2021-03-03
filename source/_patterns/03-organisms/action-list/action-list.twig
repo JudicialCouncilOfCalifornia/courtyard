@@ -1,0 +1,49 @@
+{#
+/**
+ * Available variables:
+ * - action_list - primary variable
+ *   - heading: the heading (title & lead)
+ *   - items: array of action_list items
+ *     - title: title of action_list item
+ *     - body: content of action_list item
+ *     - link: action_list link/button
+ *       - text: action_list link/button text
+ *       - url: action_list link/button url
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-action-list',
+]|merge(action_list.classes|default([])) %}
+
+{% set content %}
+  <ul class="{{ classes|join(' ')|trim }}">
+    {% for item in action_list.items %}
+      <li class="jcc-action-list__item">
+        <div class="jcc-action-list__item-content">
+          {% if item.title %}
+            <h3 class="jcc-action-list__item-title">{{ item.title }}</h3>
+          {% endif %}
+
+          {% if item.body %}
+            <div class="jcc-action-list__item-body">{{ item.body }}</div>
+          {% endif %}
+        </div>
+
+        {% if item.link %}
+          <div class="jcc-action-list__action">
+            <a href="{{ item.link.url }}">{{ item.link.text }}</a>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    heading: action_list.heading,
+    content: content,
+  }
+} %}
