@@ -14,11 +14,10 @@ $_config_schemes: (
     h4-color: "ink",
     h5-color: "ink",
     h6-color: "ink",
-  )
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
-
 
 h1,
 .jcc-h1 {
@@ -72,8 +71,8 @@ h5,
 .jcc-h5 {
   @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
   @include u-text(map-get($_config, h5-color));
+  @include u-text(uppercase);
   font-weight: $theme-font-weight-bold;
-  text-transform: uppercase;
   letter-spacing: 2px;
 
   @include at-media(desktop) {
@@ -85,8 +84,8 @@ h6,
 .jcc-h6 {
   @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
   @include u-text(map-get($_config, h6-color));
+  @include u-text(no-uppercase);
   font-weight: $theme-font-weight-bold;
-  text-transform: none;
   letter-spacing: 1px;
 
   @include at-media(desktop) {

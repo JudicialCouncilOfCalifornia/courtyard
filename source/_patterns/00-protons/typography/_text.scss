@@ -1,11 +1,23 @@
+$_config_schemes: (
+  base: (
+    lead-color: "ink",
+  ),
+  local: (
+    lead-color: "base-darker",
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .jcc-lead {
   @include typeset(
     $theme-lead-font-family,
     $theme-lead-font-size,
     $theme-lead-line-height
   );
-  font-weight: $theme-font-weight-normal;
+  @include u-color(map-get($_config, lead-color));
   max-width: measure($theme-lead-measure);
+  font-weight: $theme-font-weight-normal;
 }
 
 .jcc-small {
