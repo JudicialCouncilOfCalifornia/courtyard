@@ -1,0 +1,18 @@
+$_config_schemes: (
+  base: (
+    button-color: 'gray-5',
+    button-hover-color: 'gray-10',
+  ),
+  local: (
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.usa-accordion__button {
+  @include u-bg(map-get($_config, button-color));
+
+  &:hover {
+    @include u-bg(map-get($_config, button-hover-color));
+  }
+}
