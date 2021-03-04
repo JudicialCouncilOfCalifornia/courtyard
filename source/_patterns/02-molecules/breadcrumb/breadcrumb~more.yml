@@ -1,0 +1,7 @@
+breadcrumb:
+  items:
+    - url: "#"
+      label: "Primary nav cubilia dapibus"
+    - url: "#"
+      label: "Secondary nav pharetra penatibus"
+    - label: "Tertiary page nibh scelerisque aliquet bibendum suscipit vel semper fermentum"
