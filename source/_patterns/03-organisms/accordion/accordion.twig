@@ -7,13 +7,13 @@
  *   - items: array of accordion items
  *     - title: title of accordion item
  *     - body: content inside of accordion item
- *   - expand_first: boolean - expand the first item on load?
+ *   - collapse_first: boolean - collapse the first item on load?
  *   - classes: array of classes to add to component
  */
 #}
 
 {% set tag = accordion.item_tag|default('h3') %}
-{% set expand_first = accordion.expand_first|default('yes') %}
+{% set collapse_first = accordion.collapse_first|default(false) %}
 
 {% set classes = [
   'usa-accordion',
@@ -25,7 +25,7 @@
       {% set id = 'accordion-item-' ~ loop.index ~ '-' ~  random() %}
 
       <{{ tag }} class="usa-accordion__heading">
-        {% set expanded = (loop.first and expand_first == "yes") ? "true" : "false" %}
+        {% set expanded = (loop.first and not collapse_first) ? "true" : "false" %}
         <button class="usa-accordion__button" aria-expanded="{{ expanded }}" aria-controls="{{ id }}">
           {{- item.title -}}
         </button>
