@@ -46,12 +46,14 @@
 .usa-alert__text {
   @include u-margin-bottom(0);
   @include typeset(body, 2xs, 6);
+  letter-spacing: 0.37px;
 }
 
 .usa-alert__heading {
   @include u-margin-bottom(1);
   @include typeset(body, sm, 2);
   @include u-font-weight(bold);
+  letter-spacing: 0.37px;
 
   .usa-alert--slim & {
     @include u-float(left);
