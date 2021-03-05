@@ -1,0 +1,7 @@
+alert:
+  type: "info"
+  size: "slim"
+  width: "full"
+  heading: "Info/slim/full"
+  text: "<p>Lorem ipsum dolor sit amet, <a href=\"javascript:void(0);\">consectetur adipiscing</a> elit, sed do eiusmod. Euismod nullam donec auctor fames cum ante mattis feugiat dolor sociosqu nisl, morbi vel facilisi interdum nec habitant urna tellus eleifend varius, lacinia egestas mauris montes augue sagittis potenti vitae erat consectetur.</p>"
+  close: false

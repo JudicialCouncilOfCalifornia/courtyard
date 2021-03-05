@@ -8,10 +8,7 @@
   // Centered/constrained
   &--centered {
     @extend .grid-container-widescreen;
-  }
 
-  // Short version
-  &--slim {
     &::before {
       display: none;
     }

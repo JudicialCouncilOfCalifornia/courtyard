@@ -1,0 +1,7 @@
+alert:
+  type: "success"
+  size: "tall"
+  width: "full"
+  heading: "Success/tall/full"
+  text: "<p>Hendrerit euismod mauris id viverra posuere lorem ac magna class, ornare nascetur cubilia rhoncus potenti commodo habitasse curae.</p>"
+  close: true
