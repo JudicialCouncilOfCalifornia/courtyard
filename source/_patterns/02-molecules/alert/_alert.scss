@@ -1,9 +1,20 @@
 .usa-alert {
-  @extend .grid-container-widescreen;
   @include u-display(none);
 
   &.active {
     @include u-display(block);
+  }
+
+  // Centered/constrained
+  &--centered {
+    @extend .grid-container-widescreen;
+  }
+
+  // Short version
+  &--slim {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -28,22 +39,27 @@
 .usa-alert__body {
   @include u-display(block);
   @include u-padding-right(8);
+
+  .usa-alert--slim & {
+    @include u-padding-top(0.5);
+  }
 }
 
-.usa-alert__heading,
 .usa-alert__text {
   @include u-margin-bottom(0);
-  @include typeset(
-    $theme-body-font-family,
-    $theme-body-font-size,
-    $theme-body-line-height
-  );
+  @include typeset(body, 2xs, 6);
 }
 
 .usa-alert__heading {
-  @include u-float(left);
-  @include u-margin-right(0.5);
+  @include u-margin-bottom(0);
+  @include typeset(body, sm, 2);
   @include u-font-weight(bold);
+
+  .usa-alert--slim & {
+    @include u-float(left);
+    @include u-margin-right(0.5);
+    @include typeset(body, 2xs, 6);
+  }
 }
 
 .usa-alert__close {
@@ -56,4 +72,8 @@
   width: 30px;
   height: 28px;
   background-size: cover;
+
+  .usa-alert--slim & {
+    @include u-top(1);
+  }
 }

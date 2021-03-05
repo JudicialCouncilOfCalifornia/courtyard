@@ -3,6 +3,8 @@
  * Available variables:
  * - alert - primary variable
  *   - type: type of alert [info, success, warning, error]
+ *   - size: vertical size of alert [tall, slim]
+ *   - width: horizontal width of alert [full, centered]
  *   - heading: bolded text at the beginning
  *   - text: the message
  *   - close: show a close button?
@@ -11,10 +13,14 @@
 #}
 
 {% set type = alert.type|default('info') %}
+{% set size = alert.size|default('tall') %}
+{% set width = alert.width|default('full') %}
 
 {% set classes = [
   'usa-alert',
   'usa-alert--' ~ type,
+  'usa-alert--' ~ size,
+  'usa-alert--' ~ width,
 ]|merge(alert.classes|default([])) %}
 
 <div class="usa-alert__wrapper usa-alert__wrapper--{{ type }}">

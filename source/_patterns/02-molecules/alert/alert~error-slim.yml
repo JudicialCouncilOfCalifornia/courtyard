@@ -1,5 +1,7 @@
 alert:
   type: "error"
+  size: "slim"
+  width: "centered"
   heading: "Error status."
   text: "<p>Hendrerit euismod mauris id viverra posuere lorem ac magna class, ornare nascetur cubilia rhoncus potenti commodo habitasse curae.</p>"
-  close: false
+  close: true
