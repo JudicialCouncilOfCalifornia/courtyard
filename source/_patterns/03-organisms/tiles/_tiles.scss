@@ -1,0 +1,14 @@
+.jcc-tiles {
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap(3);
+  }
+}
+
+.jcc-tiles__tile {
+  @include u-margin-bottom(3);
+
+  @include at-media(tablet-lg) {
+    @include grid-col(4);
+  }
+}

@@ -1,0 +1,32 @@
+{#
+/**
+ * Available variables:
+ * - tiles - primary variable
+ *   - heading: the heading (title & lead)
+ *   - items: array of tile items
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-tiles',
+]|merge(tiles.classes|default([])) %}
+
+{% set content %}
+  <div class="{{ classes|join(' ')|trim }}">
+    {% for item in tiles.items %}
+      <div class="jcc-tiles__tile">
+        {% include "@molecules/tile/tile.twig" with {
+          tile: item
+        } %}
+      </div>
+    {% endfor %}
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    heading: tiles.heading,
+    content: content,
+  }
+} %}
