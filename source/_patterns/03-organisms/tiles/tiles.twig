@@ -13,15 +13,15 @@
 ]|merge(tiles.classes|default([])) %}
 
 {% set content %}
-  <div class="{{ classes|join(' ')|trim }}">
+  <ul class="{{ classes|join(' ')|trim }}">
     {% for item in tiles.items %}
-      <div class="jcc-tiles__tile">
+      <li class="jcc-tiles__tile">
         {% include "@molecules/tile/tile.twig" with {
           tile: item
         } %}
-      </div>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 {% endset %}
 
 {% include "@molecules/section/section.twig" with {

@@ -14,11 +14,11 @@
 ]|merge(tile.classes|default([''])) %}
 
 <a class="{{ classes|join(' ')|trim }}" href="{{ tile.url }}">
-  {% if tile.brow %}
-    <p class="jcc-tile__brow">{{ tile.brow }}</p>
-  {% endif %}
-
   {% if tile.title %}
     <h3 class="jcc-tile__title">{{ tile.title }}</h3>
+  {% endif %}
+
+  {% if tile.brow %}
+    <p class="jcc-tile__brow">{{ tile.brow }}</p>
   {% endif %}
 </a>
