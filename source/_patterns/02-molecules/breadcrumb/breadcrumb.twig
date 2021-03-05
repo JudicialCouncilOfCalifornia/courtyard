@@ -1,3 +1,14 @@
+{#
+/**
+ * Available variables:
+ * - breadcrumb - primary variable
+ *   - items: array of breadcrumb items
+ *     - label: label of breadcrumb item
+ *     - url: url of breadcrumb item
+ *   - classes: array of classes to add to component
+ */
+#}
+
 {% set classes = [
   'usa-breadcrumb',
 ]|merge(breadcrumb.classes|default([''])) %}
