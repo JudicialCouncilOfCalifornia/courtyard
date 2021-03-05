@@ -24,6 +24,7 @@ Theme palette colors
 */
 
 // Base colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#gray
 $theme-color-base-family: "gray";
 $theme-color-base-lightest: "gray-2";
 $theme-color-base-lighter: "gray-4";
@@ -35,6 +36,7 @@ $theme-color-base-darkest: "gray-80";
 $theme-color-base-ink: "gray-90";
 
 // Primary colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#blue
 $theme-color-primary-family: "blue";
 $theme-color-primary-lightest: false;
 $theme-color-primary-lighter: "blue-5";
@@ -46,6 +48,7 @@ $theme-color-primary-darker: "blue-80";
 $theme-color-primary-darkest: false;
 
 // Secondary colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#cyan
 $theme-color-secondary-family: "cyan";
 $theme-color-secondary-lightest: false;
 $theme-color-secondary-lighter: "blue-cool-5";
@@ -57,6 +60,7 @@ $theme-color-secondary-darker: "cyan-70";
 $theme-color-secondary-darkest: false;
 
 // Accent warm colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#gold-vivid
 $theme-color-accent-warm-family: "gold vivid";
 $theme-color-accent-warm-lightest: false;
 $theme-color-accent-warm-lighter: false;
@@ -67,6 +71,7 @@ $theme-color-accent-warm-darker: "gold-40v";
 $theme-color-accent-warm-darkest: false;
 
 // Accent cool colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#blue-cool
 $theme-color-accent-cool-family: "blue-cool";
 $theme-color-accent-cool-lightest: false;
 $theme-color-accent-cool-lighter: "blue-cool-5v";
@@ -83,6 +88,7 @@ State palette colors
 */
 
 // Error colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#red-vivid
 $theme-color-error-family: "red-vivid";
 $theme-color-error-lighter: "red-10v";
 $theme-color-error-light: "red-20v";
@@ -91,6 +97,7 @@ $theme-color-error-dark: "red-60v";
 $theme-color-error-darker: "red-70v";
 
 // Warning colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#yellow
 $theme-color-warning-family: "yellow";
 $theme-color-warning-lighter: "yellow-5";
 $theme-color-warning-light: "yellow-10v";
@@ -99,6 +106,7 @@ $theme-color-warning-dark: false;
 $theme-color-warning-darker: "yellow-40";
 
 // Success colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#green-cool-vivid
 $theme-color-success-family: "green-cool-vivid";
 $theme-color-success-lighter: "green-cool-5v";
 $theme-color-success-light: "green-cool-10v";
@@ -107,6 +115,7 @@ $theme-color-success-dark: "green-cool-40v";
 $theme-color-success-darker: "green-cool-50v";
 
 // Info colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#blue-cool-vivid
 $theme-color-info-family: "blue-cool-vivid";
 $theme-color-info-lighter: "blue-cool-5v";
 $theme-color-info-light: "blue-cool-20v";
@@ -115,12 +124,14 @@ $theme-color-info-dark: "blue-cool-40v";
 $theme-color-info-darker: false;
 
 // Disabled colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#gray
 $theme-color-disabled-family: "gray";
 $theme-color-disabled-light: "gray-10";
 $theme-color-disabled: "gray-20";
 $theme-color-disabled-dark: "gray-30";
 
 // Emergency colors
+// https://designsystem.digital.gov/design-tokens/color/system-tokens/#red-warm
 $theme-color-emergency: "red-warm-60v";
 $theme-color-emergency-dark: "red-warm-80";
 
