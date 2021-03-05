@@ -38,6 +38,7 @@
 
 .usa-alert__body {
   @include u-display(block);
+  @include u-padding-top(2px);
   @include u-padding-right(8);
 
   .usa-alert--slim & {
@@ -51,13 +52,14 @@
 }
 
 .usa-alert__heading {
-  @include u-margin-bottom(0);
+  @include u-margin-bottom(1);
   @include typeset(body, sm, 2);
   @include u-font-weight(bold);
 
   .usa-alert--slim & {
     @include u-float(left);
     @include u-margin-right(0.5);
+    @include u-margin-bottom(0);
     @include typeset(body, 2xs, 6);
   }
 }
