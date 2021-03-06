@@ -22,31 +22,38 @@
     text-align: left !important;
   }
 
-  h1, .h1 {
+  h1,
+  .jcc-h1 {
     font-size: 36px;
   }
 
-  h2, .h2 {
+  h2,
+  .jcc-h2 {
     font-size: 24px;
   }
 
-  h3, .h3 {
+  h3,
+  .jcc-h3 {
     font-size: 20px;
   }
 
-  h4, .h4 {
+  h4,
+  .jcc-h4 {
     font-size: 18px;
   }
 
-  h5, .h5 {
+  h5,
+  .jcc-h5 {
     font-size: 16px;
   }
 
-  h6, .h6 {
+  h6,
+  .jcc-h6 {
     font-size: 14px;
   }
 
-  small, .t-small {
+  small,
+  .jcc-small {
     font-size: 12px;
   }
 }
@@ -56,16 +63,7 @@
     display: block;
   }
 
-  .jcc-switchboard,
-  .jcc-jump-nav {
-    display: none;
-  }
-
   .usa-accordion [hidden] {
-    display: block !important;
-  }
-
-  .jcc-read-more [aria-hidden="true"] {
     display: block !important;
   }
 
