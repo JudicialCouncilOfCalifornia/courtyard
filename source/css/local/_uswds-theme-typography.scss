@@ -270,9 +270,9 @@ $theme-font-sans-custom-src: (
     200: false,
     300: "Lato-Light",
     400: "Lato-Regular",
-    500: "Lato-Medium",
-    600: "Lato-SemiBold",
-    700: "Lato-Bold",
+    500: false,
+    600: false,
+    700: "Lato-SemiBold",
     800: false,
     900: false,
   ),
@@ -371,7 +371,7 @@ $theme-font-weight-thin: false;
 $theme-font-weight-light: 300;
 $theme-font-weight-normal: 400;
 $theme-font-weight-medium: false;
-$theme-font-weight-semibold: 600;
+$theme-font-weight-semibold: false;
 $theme-font-weight-bold: 700;
 $theme-font-weight-heavy: false;
 
