@@ -1,0 +1,71 @@
+{#
+/**
+ * Available variables:
+ * - card - primary variable
+ *   - title: title of card
+ *   - brow: text in upper left
+ *   - body: main text content
+ *   - action: card link/button info
+ *     - style: style of link [card, title, cta]
+ *     - url: card link/button url
+ *     - cta: card link/button text
+ *   - borderless: should the card remove border?
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set attributes = card.attributes ?? create_attribute() %}
+
+{% set tag = 'div' %}
+{% set unique_id = 'card-' ~ random() %}
+
+{% if card.action.style == 'card' %}
+  {% set attributes = attributes.setAttribute('href', card.action.url) %}
+  {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
+  {% set tag = 'a' %}
+{% endif %}
+
+{% set classes = [
+  'usa-card',
+  'usa-card--action-style-' ~ card.action.style,
+  card.borderless ? 'usa-card--no-border',
+  card.icon ? 'usa-card--no-border',
+]|merge(card.classes|default([''])) %}
+
+<{{ tag }} {{ attributes.addClass(classes) }}>
+  <div class="usa-card__container">
+    <div class="usa-card__content">
+      <header class="usa-card__header">
+        {% if card.brow %}
+          <div class="usa-card__brow">{{ card.brow }}</div>
+        {% endif %}
+
+        <h3 class="usa-card__heading" id="{{ unique_id }}">
+          {% if card.action.style == 'title' %}
+            <a href="{{ card.action.url }}">{{ card.title }}</a>
+          {% else %}
+            {{ card.title }}
+          {% endif %}
+        </h3>
+      </header>
+
+      {% if card.body %}
+        <div class="usa-card__body">
+          {{ card.body }}
+        </div>
+      {% endif %}
+
+      {% if card.action.style == 'cta' %}
+        <div class="usa-card__footer">
+          <a href="{{ card.action.url }}">{{ card.action.text }}</a>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if card.icon %}
+      <div class="usa-card__image">
+        icon<br>here
+      </div>
+    {% endif %}
+  </div>
+</{{ tag }}>

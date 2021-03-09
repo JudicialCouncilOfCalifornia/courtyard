@@ -47,7 +47,7 @@ h3,
 .jcc-h3 {
   @include typeset(body, $theme-h4-font-size, $theme-heading-line-height);
   @include u-text(map-get($_config, h3-color));
-  font-weight: $theme-font-weight-normal;
+  font-weight: $theme-font-weight-bold;
   letter-spacing: 0.1px;
 
   @include at-media(desktop) {

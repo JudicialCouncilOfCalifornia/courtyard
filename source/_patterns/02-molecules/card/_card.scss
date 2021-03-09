@@ -1,0 +1,98 @@
+$_config_schemes: (
+  base: (
+    brow-color: "base-dark",
+    title-color: "primary-darker",
+    title-link: (
+      default: "primary",
+      hover: "primary-dark",
+      active: "primary-darker",
+    ),
+    action-button: (
+      "usa-button",
+      "usa-button--secondary",
+    ),
+  ),
+  local: (
+    title-link: (
+      default: "primary-vivid",
+    ),
+    action-button: (
+      "usa-button",
+      "usa-button--cta-link",
+    ),
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.usa-card {
+  @include u-height(full);
+}
+
+.usa-card--action-style-card {
+  @include u-text-decoration(no-underline);
+}
+
+.usa-card__container {
+  @include u-radius(0);
+  @include u-padding(3);
+
+  .usa-card--action-style-card & {
+    @include u-border-width(1px);
+    @include u-radius($theme-card-border-radius);
+    @include u-shadow(3);
+    @include u-text-decoration(no-underline);
+    transition: box-shadow 0.4s;
+
+    &:active,
+    &:hover {
+      @include u-shadow(none);
+    }
+  }
+
+  .usa-card--no-border & {
+    @include u-padding(0);
+    @include u-padding-right(3);
+    @include u-border-width(0);
+  }
+}
+
+.usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
+  @include u-padding(0);
+}
+
+.usa-card__content {
+  @include u-height(full);
+  @include u-display(flex);
+  @include u-flex-direction(column);
+}
+
+.usa-card__heading {
+  @include u-color(map-get($_config, title-color));
+
+  a {
+    @include link-colors(map-get($_config, title-link));
+    @include u-text-decoration(no-underline);
+  }
+}
+
+.usa-card__brow {
+  @include u-margin-bottom(1);
+  @include u-order(0);
+  @include u-color(map-get($_config, brow-color));
+  letter-spacing: 0.09px;
+}
+
+.usa-card__body {
+  @include u-color($theme-text-color);
+}
+
+.usa-card__footer {
+  @include u-margin-top(4);
+
+  a {
+    @each $button in map-get($_config, action-button) {
+      @extend .#{$button};
+    }
+  }
+}

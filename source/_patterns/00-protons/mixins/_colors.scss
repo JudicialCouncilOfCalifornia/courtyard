@@ -1,3 +1,27 @@
+// Get a link & its states.
+// Expects a map of colors. Example:
+// $my-map: (
+//   default: "primary",
+//   hover: "primary-dark",
+//   active: "primary-darker",
+// )
+@mixin link-colors($map) {
+  @if (type-of($map) == map) {
+    &,
+    &:visited {
+      @include u-color(map-get($map, default));
+    }
+    &:hover {
+      @include u-color(map-get($map, hover));
+    }
+    &:active {
+      @include u-color(map-get($map, active));
+    }
+  } @else {
+    @warn "link-colors() expects it\'s parameter to be a map type!";
+  }
+}
+
 @mixin background-color(
   $background-color: primary,
   $background-text-color: "white",

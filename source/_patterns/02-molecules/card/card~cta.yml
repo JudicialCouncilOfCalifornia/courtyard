@@ -1,0 +1,7 @@
+card:
+  title: "Porttitor nisi eu"
+  body: "<p>ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  action:
+    style: "cta"
+    url: "#"
+    text: "Fames vel"

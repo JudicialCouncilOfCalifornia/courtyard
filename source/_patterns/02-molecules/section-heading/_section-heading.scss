@@ -55,6 +55,10 @@
 }
 
 .jcc-section-heading__lead {
-  @include u-margin-bottom(5);
   @extend .jcc-lead;
+  @include u-margin-bottom(5);
+
+  > * {
+    max-width: unset;
+  }
 }
