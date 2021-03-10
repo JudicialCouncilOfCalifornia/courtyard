@@ -4,24 +4,19 @@
 
 $scheme: "base";
 
-// -------------------------------------
 // "Base" does not customize USWDS theme settings:
 //   See "../../node_modules/uswds/dist/scss/settings/*.scss"
+// -------------------------------------
 
 // ... other than hiding USWDS notifications:
 $theme-show-notifications: false;
 
-// -------------------------------------
 // Import USWDS library
+// -------------------------------------
 
 @import "uswds";
 
-// -------------------------------------
-// Import individual JCC theme settings
-
-@import "base/jcc-theme-color";
-
-// -------------------------------------
 // Import PatternLab
+// -------------------------------------
 
 @import "pl";

@@ -3,8 +3,8 @@
 
 $scheme: "local";
 
-// -------------------------------------
 // Import individual USWDS theme settings
+// -------------------------------------
 
 @import "local/uswds-theme-general";
 @import "local/uswds-theme-typography";
@@ -13,17 +13,12 @@ $scheme: "local";
 @import "local/uswds-theme-utilities";
 @import "local/uswds-theme-components";
 
-// -------------------------------------
 // Import USWDS library
+// -------------------------------------
 
 @import "uswds";
 
-// -------------------------------------
-// Import individual JCC theme settings
-
-@import "local/jcc-theme-color";
-
-// -------------------------------------
 // Import PatternLab
+// -------------------------------------
 
 @import "pl";
