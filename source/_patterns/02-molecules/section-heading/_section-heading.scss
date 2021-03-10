@@ -1,3 +1,12 @@
+$_config_schemes: (
+  base: (
+    background: $theme-body-background-color,
+    alt-background: $theme-color-base-lightest,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .jcc-section-heading {
   overflow: hidden;
 }
@@ -16,7 +25,7 @@
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
-        $inner-color: color($theme-color-section-alt)
+        $inner-color: color(map-get($_config, alt-background))
       );
     }
 
@@ -24,7 +33,7 @@
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
-        $inner-color: color($theme-body-background-color)
+        $inner-color: color(map-get($_config, background))
       );
     }
   }
@@ -40,7 +49,7 @@
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,
-        $inner-color: color($theme-color-section-alt)
+        $inner-color: color(map-get($_config, alt-background))
       );
     }
 
@@ -48,7 +57,7 @@
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,
-        $inner-color: color($theme-body-background-color)
+        $inner-color: color(map-get($_config, background))
       );
     }
   }

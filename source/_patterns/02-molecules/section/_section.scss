@@ -1,5 +1,13 @@
+$_config_schemes: (
+  base: (
+    alt-background: $theme-color-base-lightest,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .jcc-section--alt-background {
-  @include u-bg($theme-color-section-alt);
+  @include u-bg(map-get($_config, alt-background));
 }
 
 .jcc-section--container {
