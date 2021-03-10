@@ -128,7 +128,8 @@ $c4: #162e51;
       @include u-margin(0);
       @include u-padding-y(4);
       @include at-media("tablet") {
-        @include u-padding-y(7);
+        @include u-padding-top(7);
+        @include u-padding-bottom(5);
       }
       -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.3);
       box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.3);

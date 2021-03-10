@@ -65,7 +65,7 @@
   }
   .usa-card__media {
     @include u-height(auto, !important);
-    @include u-overflow(auto, !important);
+    @include u-overflow(visible, !important);
     @include u-padding(0, !important);
   }
 
