@@ -18,6 +18,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-color(map-get($_config, lead-color));
   max-width: measure($theme-lead-measure);
   font-weight: $theme-font-weight-normal;
+
+  @include at-media-max(tablet-lg) {
+    font-size: font-size($theme-lead-font-family, $theme-lead-font-size) * 0.9;
+  }
 }
 
 .jcc-small {
