@@ -16,8 +16,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     $theme-lead-line-height
   );
   @include u-color(map-get($_config, lead-color));
+  @include u-font-weight(normal);
   max-width: measure($theme-lead-measure);
-  font-weight: $theme-font-weight-normal;
 
   @include at-media-max(tablet-lg) {
     font-size: font-size($theme-lead-font-family, $theme-lead-font-size) * 0.9;
@@ -30,5 +30,17 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     $theme-small-font-size,
     $theme-body-line-height
   );
-  font-weight: $theme-font-weight-normal;
+  @include u-font-weight(normal);
+}
+
+.jcc-brow {
+  @include typeset(
+    $theme-body-font-family,
+    2xs,
+    $theme-body-line-height
+  );
+  @include u-color(base-dark);
+  @include u-font-weight(normal);
+  @include u-text(uppercase);
+  letter-spacing: 2px;
 }

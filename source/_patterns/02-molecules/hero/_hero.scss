@@ -1,0 +1,124 @@
+$_config_schemes: (
+  base: (
+    default-background: $theme-color-base-lightest,
+    alt-background: primary,
+    alt-background-text: "white",
+    alt-aside-link: (
+      "usa-button",
+      "usa-button--inverse",
+    ),
+    default-aside-link: (
+      "usa-button",
+    ),
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-hero {
+  @include u-bg(map-get($_config, default-background));
+
+  &--alt-background {
+    @include u-bg(map-get($_config, alt-background));
+  }
+}
+
+.jcc-hero__container {
+  @extend .grid-container-widescreen;
+  @include u-padding-top(4);
+  @include u-padding-bottom(4);
+
+  @include at-media(tablet-lg) {
+    @include u-padding-top(9);
+    @include u-padding-bottom(5);
+  }
+}
+
+.jcc-hero__content {
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap(6);
+  }
+}
+
+.jcc-hero__main {
+  @include u-position(relative);
+
+  @include at-media(tablet-lg) {
+    @include grid-col(8);
+
+    .jcc-hero--full-main & {
+      @include grid-col(12);
+    }
+  }
+}
+
+.jcc-hero__main-title {
+  @include u-margin-bottom(3);
+
+  .jcc-hero--alt-background & {
+    @include u-color(map-get($_config, alt-background-text));
+  }
+}
+
+.jcc-hero__main-lead {
+  @extend .jcc-lead;
+
+  .jcc-hero--alt-background & {
+    @include u-color(map-get($_config, alt-background-text));
+  }
+}
+
+.jcc-hero__main-brow {
+  @extend .jcc-brow;
+  @include u-margin-bottom(1.5);
+
+  @include at-media(tablet-lg) {
+    @include u-position(absolute);
+    top: -44px;
+  }
+}
+
+.jcc-hero__aside {
+  @include at-media-max(tablet-lg) {
+    @include u-margin-top(2);
+  }
+
+  @include at-media(tablet-lg) {
+    @include grid-col(4);
+    @include u-padding-top(1.5);
+  }
+}
+
+.jcc-hero__aside-title {
+  @include u-margin-bottom(2);
+
+  .jcc-hero--alt-background & {
+    @include u-color(map-get($_config, alt-background-text));
+  }
+}
+
+.jcc-hero__aside-text {
+  @include u-margin-bottom(2.5);
+  @extend .jcc-lead;
+
+  .jcc-hero--alt-background & {
+    @include u-color(map-get($_config, alt-background-text));
+  }
+}
+
+.jcc-hero__aside-link {
+  a {
+    .jcc-hero--default-background & {
+      @each $button in map-get($_config, default-aside-link) {
+        @extend .#{$button};
+      }
+    }
+
+    .jcc-hero--alt-background & {
+      @each $button in map-get($_config, alt-aside-link) {
+        @extend .#{$button};
+      }
+    }
+  }
+}

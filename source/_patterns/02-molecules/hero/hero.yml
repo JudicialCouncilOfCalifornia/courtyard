@@ -1,0 +1,9 @@
+hero:
+  main:
+    title: "Dignissim ultrices inceptos mus nam"
+    lead: "<p>Facilisis nec nibh himenaeos penatibus tempus fringilla sollicitudin felis urna, inceptos scelerisque mus integer ligula enim vulputate tempor, amet nascetur donec odio nam purus risus potenti.</p>"
+  aside:
+    title: "Diam tristique fermentum"
+    text: "Facilisi orci congue feugiat tempor eu et nascetur venenatis"
+    link_url: "#"
+    link_text: "Accumsan placerat"
