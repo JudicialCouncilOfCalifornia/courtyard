@@ -2,16 +2,17 @@
 /**
  * Available variables:
  * - section - primary variable
+ *   - variant: [alt-background, white-background] - component variants
  *   - heading: the heading (title & lead)
  *   - content: the main content
  *   - id: the html "id" of the section
- *   - alt_background: boolean - use the alternate color background
  *   - no_container: boolean - don't use a container to constrain content
  *   - attributes: Drupal attributes
  *   - classes: array of classes to add to component
  */
 #}
 
+{% set variant = section.variant ? section.variant : 'default' %}
 {% set attributes = section.attributes ?? create_attribute() %}
 {% if section.id %}
   {% set attributes = attributes.setAttribute('id', section.id) %}
@@ -19,7 +20,7 @@
 
 {% set classes = [
   'jcc-section',
-  section.alt_background ? 'jcc-section--alt-background',
+  'jcc-section--' ~ variant,
   section.no_container ? 'jcc-section--no-container' : 'jcc-section--container',
 ]|merge(section.classes|default([])) %}
 
