@@ -1,0 +1,20 @@
+// Styleguide specific
+// -------------------------------------
+
+@import "styleguide";
+
+// Import individual USWDS theme settings
+// -------------------------------------
+
+@import "../../css/base/uswds-theme-general";
+@import "../../css/base/uswds-theme-typography";
+@import "../../css/base/uswds-theme-spacing";
+@import "../../css/base/uswds-theme-color";
+@import "../../css/base/uswds-theme-utilities";
+@import "../../css/base/uswds-theme-components";
+
+// USWDS utilities
+// -------------------------------------
+
+@import "../../../node_modules/uswds/dist/scss/packages/required";
+@import "../../../node_modules/uswds/dist/scss/packages/uswds-utilities";

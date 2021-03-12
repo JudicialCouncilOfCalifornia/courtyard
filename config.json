@@ -19,7 +19,9 @@
   },
   "js": {
     "src": ["source/js/*.js", "source/js/**/*.js", "source/_patterns/**/*.js"],
-    "dest": "public/js"
+    "dest": "public/js",
+    "styleguide_src": ["source/styleguide/js/*.js"],
+    "styleguide_dest": "public/styleguide/js"
   },
   "pattern_lab": {
     "src": [

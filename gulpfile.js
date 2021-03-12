@@ -119,9 +119,9 @@ const styleguideCss = () => {
 // _patterns folder, if new patterns need to be added the config.json array
 // needs to be edited to watch for more folders.
 
-const plJs = () => {
+const buildJs = (src, destPath, destName) => {
   return gulp
-    .src(jsSrc)
+    .src(src)
     .pipe(
       webpack(
         {
@@ -135,7 +135,7 @@ const plJs = () => {
             }),
           ],
           output: {
-            filename: "scripts.js",
+            filename: destName + ".js",
           },
         },
         compiler
@@ -147,21 +147,32 @@ const plJs = () => {
       })
     )
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(gulp.dest(config.js.dest))
+    .pipe(gulp.dest(destPath))
     .pipe(strip())
     .pipe(uglify())
     .pipe(sourcemaps.write("./"))
-    .pipe(rename("scripts.min.js"))
+    .pipe(rename(destName + ".min.js"))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(config.js.dest))
+    .pipe(gulp.dest(destPath))
     .pipe(browserSync.reload({ stream: true, match: "**/*.js" }));
 };
+
+const plJs = () => {
+  return buildJs(jsSrc, config.js.dest, "scripts");
+};
+
+const styleguideJs = () => {
+  return buildJs(config.js.styleguide_src, config.js.styleguide_dest, "styleguide");
+};
+
+// -------------------------------------------------------------------- //
 
 const watch = (cb) => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
   gulp.watch(config.pattern_lab.src, build);
   gulp.watch(config.css.styleguide_src, styleguideCss);
+  gulp.watch(config.js.styleguide_src, styleguideJs);
 };
 
 const serve = (cb) => {
@@ -183,7 +194,8 @@ const build = gulp.series(
   copyIconSprite,
   plCss,
   plJs,
-  styleguideCss
+  styleguideCss,
+  styleguideJs
 );
 
 exports.build = build;
