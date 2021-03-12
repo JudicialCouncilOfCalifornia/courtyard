@@ -4,12 +4,16 @@
 
 $scheme: "base";
 
-// "Base" does not customize USWDS theme settings:
-//   See "../../node_modules/uswds/dist/scss/settings/*.scss"
+// "Base" is very close to the out of the box USWDS look.
+// It customizes USWDS theme settings in the least possible way.
 // -------------------------------------
 
-// ... other than hiding USWDS notifications:
-$theme-show-notifications: false;
+@import "base/uswds-theme-general";
+@import "base/uswds-theme-typography";
+@import "base/uswds-theme-spacing";
+@import "base/uswds-theme-color";
+@import "base/uswds-theme-utilities";
+@import "base/uswds-theme-components";
 
 // Import USWDS library
 // -------------------------------------
