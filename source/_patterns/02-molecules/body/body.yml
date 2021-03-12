@@ -1,0 +1,27 @@
+body:
+  main:
+    title: "Dicgtumst digam nunc laoreet molestie"
+    lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet purus arcu, eget tincidunt odio laoreet ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
+    text: >
+      <p>This is the <a href="#">style of a link</a> and <strong>bold text would like this</strong>. <em>Italic text would look like this</em>. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla convallis sit amet turpis vehicula blandit. Cras iaculis sit amet mauris at sollicitudin. Suspendisse placerat dolor erat, vel egestas elit condimentum eu. In lacinia dignissim vestibulum. Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper.</p>
+      <hr>
+      <h3>Next Header 3</h3>
+      <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <h4>More Header 4</h4>
+      <p>Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <ul><li>Unordered list. So here is the first item in this list.</li><li>In this example we're keeping the items short.</li><li>Later, we'll use longer, more complex list items.</li></ul>
+      <h5>Even More Header 5</h5>
+      <ol><li>Ordered List. I often do this thing where list items have headings.</li><li>Since this is a list, I need at least two items.</li><li>It's not a bad idea to add a third item either.</li></ol>
+      <h3>Next heading 3</h3>
+      <p>Facilisis netus suscipit tempus enim blandit donec faucibus ac commodo natoque condimentum aenean adipiscing primis bibendum placerat sociis, ullamcorper eros ut augue fermentum tincidunt aliquam pharetra iaculis sagittis conubia cubilia fusce risus vestibulum porta.</p>
+      <h4>A heading level 4</h4>
+      <p>Dignissim facilisi ridiculus penatibus cum tempus amet mi convallis, mauris congue sollicitudin laoreet integer donec.</p>
+      <h5>Heading 5</h5>
+      <ol><li>Class mauris ultricies porta sem</li><li>In purus dapibus nisi cubilia dictumst nec fermentum</li><li>Interdum adipiscing odio</li></ol>
+      <table><thead><th>Col One</th><th>Column two</th><th>Himenaeos tristique sit</th></thead><tbody><tr><td>Fringilla nisl bibendum purus</td><td>Per Egestas placerat</td><td>Sodales elit dignissim etiam congue</td></tr><tr><td>Dignissim venenatis ipsum vel</td><td>Enim lacus lacinia quis ac platea dignissim vulputate class</td><td>Taciti primis felis imperdiet faucibus posuere magnis</td></tr></tbody></table>
+  aside:
+    title: "Dapibus dictumst litora lacinia"
+    text: >
+      <p>Praesent duis varius imperdiet quis ligula non nisi ante.</p>
+      <p><a href="#" class="usa-button">A link button</a></p>
+      <p><a href="#" class="usa-button usa-button--cta-link">CTA link</a></p>

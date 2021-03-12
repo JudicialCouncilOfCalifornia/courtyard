@@ -1,0 +1,59 @@
+{#
+/**
+ * Available variables:
+ * - body - primary variable
+ *   - main: the main content
+ *     - title: the title
+ *     - lead: lead text
+ *     - text: the text
+ *   - aside: secondary content
+ *     - title: the title
+ *     - text: the text
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-body',
+]|merge(body.classes|default([''])) %}
+
+{% set content %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-body__content">
+      <div class="jcc-body__main">
+        {% if body.main.title or body.main.lead %}
+          {% include "@molecules/section-heading/section-heading.twig" with {
+            section_heading: {
+              title: body.main.title,
+              lead: body.main.lead,
+              width: "partial",
+            }
+          } %}
+        {% endif %}
+
+        <div class="jcc-body__main-text usa-prose">
+          {{ body.main.text }}
+        </div>
+      </div>
+
+      {% if body.aside.title or body.aside.text %}
+        <aside class="jcc-body__aside">
+          <div class="jcc-body__aside-bar"></div>
+          {% if body.aside.title %}
+            <h4 class="jcc-body__aside-title">{{ body.aside.title }}</h4>
+          {% endif %}
+
+          {% if body.aside.text %}
+            <div class="jcc-body__aside-text usa-prose">{{ body.aside.text }}</div>
+          {% endif %}
+        </aside>
+      {% endif %}
+    </div>
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    content: content
+  }
+} %}
