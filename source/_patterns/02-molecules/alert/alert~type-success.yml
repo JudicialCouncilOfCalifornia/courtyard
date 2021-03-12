@@ -1,5 +1,5 @@
 alert:
   type: "success"
   heading: "Success status -"
-  text: "Mi sociosqu arcu phasellus id vitae suspendisse dis at eu, torquent tristique et ridiculus lorem praesent consectetur ligula, erat diam pharetra mauris tortor a egestas duis."
+  text: "Mi sociosqu arcu phasellus id vitae <a href=\"javascript:void(0);\">consectetur adipiscing</a> suspendisse dis at eu, torquent tristique et ridiculus lorem praesent consectetur ligula, erat diam pharetra mauris tortor a egestas duis."
   close: false
