@@ -59,3 +59,16 @@ video {
   @include u-margin(0);
   @include u-padding(0);
 }
+
+hr {
+  @include u-border(0);
+  border-bottom: 3px solid color(base-lighter);
+}
+
+a {
+  @include link-colors((
+    default: "secondary",
+    hover: "secondary-dark",
+    active: "secondary-darker"
+  ));
+}

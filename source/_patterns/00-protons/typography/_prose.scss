@@ -4,12 +4,14 @@
   > h5,
   > h6,
   > p,
-  > ul li {
+  > ul li,
+  > ol li {
     @include u-measure(6);
   }
 
-  > ul li {
-    @include u-margin-bottom(1.5);
+  > ul li,
+  > ol li {
+    @include u-margin-top(1.5);
   }
 
   h1,
@@ -40,5 +42,9 @@
   h6,
   .jcc-h6 {
     @extend .jcc-h6;
+  }
+
+  > hr {
+    @include u-margin-top(5);
   }
 }
