@@ -184,6 +184,7 @@ const serve = (cb) => {
       },
     },
     reloadDebounce: 200,
+    ghostMode: false,
   });
 };
 
