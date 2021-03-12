@@ -13,20 +13,21 @@ $_config_schemes: (
     inverse-hover: "secondary-dark",
     inverse-active: "secondary-darker",
   ),
-  local: (
-  )
+  local: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-
 .usa-button {
-  @include set-text-and-bg(map-get($_config, default), $context: $button-context);
-  @include u-padding-y(2.5);
-  @include u-padding-x(4);
-  @include u-font-size(ui, xs);
-  @include u-line-height(ui, 2);
-  letter-spacing: 0.17px;
+  &,
+  &:visited {
+    @include set-text-and-bg(map-get($_config, default), $context: $button-context);
+    @include u-padding-y(2.5);
+    @include u-padding-x(4);
+    @include u-font-size(ui, xs);
+    @include u-line-height(ui, 2);
+    letter-spacing: 0.17px;
+  }
 
   &:hover,
   &.usa-button--hover {
@@ -44,7 +45,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-button--secondary {
-  @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
+  &,
+  &:visited {
+    @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
+  }
 
   &:hover,
   &.usa-button--hover {
@@ -59,21 +63,24 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-button.ext,
 .usa-button--external {
-  @include u-position(relative);
-  @include u-padding-right(7);
-  @include u-radius(pill);
-  @include u-font(sans, xs);
-  @include set-text-and-bg(map-get($_config, external), $context: $button-context);
-  font-weight: font-weight(normal);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &,
+  &:visited {
+    @include u-position(relative);
+    @include u-padding-right(7);
+    @include u-radius(pill);
+    @include u-font(sans, xs);
+    @include set-text-and-bg(map-get($_config, external), $context: $button-context);
+    font-weight: font-weight(normal);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  svg {
-    @include u-position(absolute);
-    @include u-top(1.5);
-    @include u-width(3);
-    @include u-height(3);
-    @include u-margin-left(1);
-    fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
+    svg {
+      @include u-position(absolute);
+      @include u-top(1.5);
+      @include u-width(3);
+      @include u-height(3);
+      @include u-margin-left(1);
+      fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
+    }
   }
 
   &:hover,
@@ -81,7 +88,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include set-text-and-bg(map-get($_config, external-hover), $context: $button-context);
 
     svg {
-      fill: color(get-color-token-from-bg(map-get($_config, external-hover), $context: $button-context));
+      fill: color(
+        get-color-token-from-bg(map-get($_config, external-hover), $context: $button-context)
+      );
     }
   }
 
@@ -90,7 +99,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include set-text-and-bg(map-get($_config, external-active), $context: $button-context);
 
     svg {
-      fill: color(get-color-token-from-bg(map-get($_config, external-active), $context: $button-context));
+      fill: color(
+        get-color-token-from-bg(map-get($_config, external-active), $context: $button-context)
+      );
     }
   }
 
@@ -111,7 +122,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-button--inverse {
-  @include set-text-and-bg("white", primary, $context: $button-context);
+  &,
+  &:visited {
+    @include set-text-and-bg("white", primary, $context: $button-context);
+  }
 
   &:hover,
   &.usa-button--hover {
@@ -130,14 +144,17 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-button--cta-link {
-  @include button-unstyled;
-  @include u-display(flex);
-  @include u-flex(justify);
-  @include u-padding(0);
-  @include u-text(uppercase);
-  @include u-font(sans, sm);
-  letter-spacing: 1.8px;
-  text-decoration: none;
+  &,
+  &:visited {
+    @include button-unstyled;
+    @include u-display(flex);
+    @include u-flex(justify);
+    @include u-padding(0);
+    @include u-text(uppercase);
+    @include u-font(sans, sm);
+    letter-spacing: 1.8px;
+    text-decoration: none;
+  }
 
   &:hover,
   &.usa-button--hover {
