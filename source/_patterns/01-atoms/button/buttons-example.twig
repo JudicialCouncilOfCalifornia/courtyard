@@ -32,7 +32,7 @@
     button: {
       type: "button",
       text: "Disabled",
-      disabled: true,
+      state: "disabled",
     }
   } %}
   {% include "button.twig" with {
@@ -50,7 +50,7 @@
   <button class="usa-button usa-button--secondary usa-button--hover">Hover</button>
   <button class="usa-button usa-button--secondary usa-button--active">Active</button>
   <button class="usa-button usa-button--secondary usa-focus">Focus</button>
-  <button class="usa-button usa-button--secondary" disabled>Disabled</button>
+  <button class="usa-button usa-button--secondary usa-button--disabled" disabled>Disabled</button>
   <button class="usa-button usa-button--secondary usa-button--unstyled">Unstyled button</button>
 </div>
 
@@ -60,7 +60,7 @@
   <button class="usa-button usa-button--inverse usa-button--hover">Hover</button>
   <button class="usa-button usa-button--inverse usa-button--active">Active</button>
   <button class="usa-button usa-button--inverse usa-focus">Focus</button>
-  <button class="usa-button usa-button--inverse" disabled>Disabled</button>
+  <button class="usa-button usa-button--inverse usa-button--disabled" disabled>Disabled</button>
   <button class="usa-button usa-button--inverse usa-button--unstyled">Unstyled button</button>
 </div>
 
@@ -71,7 +71,7 @@
   <a href="#" class="usa-button usa-button--active">Active</a>
   <a href="#" class="usa-button usa-focus">Focus</a>
   {# <a> links don't really "disable" #}
-  {# <a href="#" class="usa-button" disabled>Disabled</a> #}
+  {# <a href="#" class="usa-button usa-button--disabled" disabled>Disabled</a> #}
   <a href="#" class="usa-button usa-button--unstyled">Unstyled button</a>
 </div>
 
@@ -109,7 +109,7 @@
     button: {
       type: "external",
       text: "Disabled",
-      disabled: true,
+      state: "disabled",
     }
   } %} #}
   {% include "button.twig" with {
@@ -128,7 +128,7 @@
   <a href="#" class="usa-button usa-button--cta-link usa-button--active">Active</a>
   <a href="#" class="usa-button usa-button--cta-link usa-focus">Focus</a>
   {# <a> links don't really "disable" #}
-  {# <a href="#" class="usa-button usa-button--cta-link" disabled>Disabled</a> #}
+  {# <a href="#" class="usa-button usa-button--cta-link usa-button--disabled" disabled>Disabled</a> #}
   {# Unstyled is kind of irrelevant #}
   {# <a href="#" class="usa-button usa-button--cta-link usa-button--unstyled">Unstyled button</a> #}
 </div>

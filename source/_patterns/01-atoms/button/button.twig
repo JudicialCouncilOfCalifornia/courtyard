@@ -2,13 +2,12 @@
 /**
  * Available variables:
  * - button - primary variable
+ *   - type: the type of button [button, external, link]
+ *   - style: the visual look of the button [primary, secondary, inverse, cta-link, unstyled]
+ *   - state: the state of the button [hover, active, disabled]
  *   - text: the visible text on the button
  *   - url: the url of the button
- *   - type: the type of button [button, external, link]
  *   - aria_label: the aria label
- *   - style: the visual look of the button [primary, secondary, inverse, cta-link, unstyled]
- *   - state: the state of the button [hover, active]
- *   - disabled: boolean - is the button disabled?
  *   - attributes: Drupal attributes
  *   - classes: array of classes to add to component
  */
@@ -16,7 +15,7 @@
 
 {% set attributes = button.attributes ?? create_attribute() %}
 
-{% if button.disabled %}
+{% if button.state == 'disabled' %}
   {% set attributes = attributes.setAttribute('disabled', 'disabled') %}
 {% endif %}
 {% if button.aria_label %}

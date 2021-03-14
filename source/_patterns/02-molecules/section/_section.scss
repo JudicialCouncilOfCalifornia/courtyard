@@ -6,7 +6,7 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-.jcc-section--alt-background {
+.jcc-section--background-alt {
   @include u-bg(map-get($_config, alt-background));
 }
 

@@ -1,7 +1,7 @@
 card:
+  style: "cta"
   title: "Consequat nostra vel"
   body: "<p>Lacus nec laoreet velit augue tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-  action:
-    style: "cta"
+  link:
     url: "#"
     text: "Luctus nunc quam"

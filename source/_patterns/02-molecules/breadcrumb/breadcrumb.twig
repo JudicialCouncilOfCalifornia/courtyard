@@ -2,17 +2,17 @@
 /**
  * Available variables:
  * - breadcrumb - primary variable
+ *   - container: container to constrain content [container, no-container]
  *   - items: array of breadcrumb items
- *     - label: label of breadcrumb item
  *     - url: url of breadcrumb item
- *   - no_container: boolean - don't use a container to constrain content
+ *     - label: label of breadcrumb item
  *   - classes: array of classes to add to component
  */
 #}
 
 {% set classes = [
   'usa-breadcrumb',
-  breadcrumb.no_container ? 'usa-breadcrumb--no-container' : 'usa-breadcrumb--container',
+  'usa-breadcrumb' ~ breadcrumb.container|default('container'),
 ]|merge(breadcrumb.classes|default([''])) %}
 
 {% if breadcrumb.items|length > 0 %}

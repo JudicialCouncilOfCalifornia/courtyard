@@ -2,6 +2,8 @@
 /**
  * Available variables:
  * - hero - primary variable
+ *   - layout: arrangement/visibility [default, full-main]
+ *   - background: background color [default, alt]
  *   - main: the main content
  *     - title: the title
  *     - lead: lead text
@@ -9,18 +11,17 @@
  *   - aside: secondary content
  *     - title: the title
  *     - text: the text
- *     - link_url: the link url
- *     - link_text: the link text
- *   - full_width_main: boolean - make the main content full width (no aside)
- *   - alt_background: boolean - use the alternate color background
+ *     - link: the link
+ *       - url: the link url
+ *       - text: the link text
  *   - classes: array of classes to add to component
  */
 #}
 
 {% set classes = [
   'jcc-hero',
-  hero.full_width_main ? 'jcc-hero--full-main',
-  hero.alt_background ? 'jcc-hero--alt-background' : 'jcc-hero--default-background',
+  'jcc-hero--layout-' ~ hero.layout|default('default'),
+  'jcc-hero--background-' ~ hero.background|default('default'),
 ]|merge(hero.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
@@ -50,9 +51,9 @@
             <div class="jcc-hero__aside-text">{{ hero.aside.text }}</div>
           {% endif %}
 
-          {% if hero.aside.link_url %}
+          {% if hero.aside.link.url %}
             <div class="jcc-hero__aside-link">
-              <a href="{{ hero.aside.link_url }}">{{ hero.aside.link_text }}</a>
+              <a href="{{ hero.aside.link.url }}">{{ hero.aside.link.text }}</a>
             </div>
           {% endif %}
         </aside>

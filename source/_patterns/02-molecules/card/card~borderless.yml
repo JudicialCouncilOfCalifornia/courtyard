@@ -1,7 +1,6 @@
 card:
+  style: "borderless"
   title: "Posuere et ornare"
   body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-  action:
-    style: "title"
+  link:
     url: "#"
-  borderless: true

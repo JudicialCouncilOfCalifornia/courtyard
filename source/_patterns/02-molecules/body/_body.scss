@@ -1,22 +1,22 @@
 .jcc-body__content {
-  @include at-media(tablet-lg) {
+  @include at-media(desktop) {
     @include grid-row();
     @include grid-gap(3);
   }
 }
 
 .jcc-body__main {
-  @include at-media-max(tablet-lg) {
+  @include at-media-max(desktop) {
     @include u-margin-bottom(10);
   }
 
-  @include at-media(tablet-lg) {
+  @include at-media(desktop) {
     @include grid-col(8);
   }
 }
 
 .jcc-body__aside {
-  @include at-media(tablet-lg) {
+  @include at-media(desktop) {
     @include grid-col(4);
   }
 }

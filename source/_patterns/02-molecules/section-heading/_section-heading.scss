@@ -21,7 +21,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   @include at-media(desktop) {
-    .jcc-section--alt-background & {
+    .jcc-section--background-alt & {
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
@@ -29,7 +29,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       );
     }
 
-    .jcc-section:not(.jcc-section--alt-background) & {
+    .jcc-section:not(.jcc-section--background-alt) & {
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
@@ -45,7 +45,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   @include at-media(desktop) {
-    .jcc-section--alt-background & {
+    .jcc-section--background-alt & {
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,
@@ -53,7 +53,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       );
     }
 
-    .jcc-section:not(.jcc-section--alt-background) & {
+    .jcc-section:not(.jcc-section--background-alt) & {
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,

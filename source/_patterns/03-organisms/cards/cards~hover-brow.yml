@@ -4,31 +4,31 @@ cards:
     lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
   num_cols: 3
   items:
-    - title: "Iaculis proin erat porttitor"
+    - style: "hover"
+      title: "Iaculis proin erat porttitor"
       brow: "Habitant ut"
       body: null
-      action:
-        style: "card"
+      link:
         url: "#"
         text: "Ullamcorper elit"
-    - title: "Consequat nostra vel"
+    - style: "hover"
+      title: "Consequat nostra vel"
       brow: "Odio cum consectetur"
       body: null
-      action:
-        style: "card"
+      link:
         url: "#"
         text: "Luctus nunc quam"
-    - title: "Consequat"
+    - style: "hover"
+      title: "Consequat"
       brow: "Potenti"
       body: null
-      action:
-        style: "card"
+      link:
         url: "#"
         text: "Diamtempor"
-    - title: "Sem est iaculis nullam tincidunt"
+    - style: "hover"
+      title: "Sem est iaculis nullam tincidunt"
       brow: "Adipiscing"
       body: null
-      action:
-        style: "card"
+      link:
         url: "#"
         text: "Mattis tellus"

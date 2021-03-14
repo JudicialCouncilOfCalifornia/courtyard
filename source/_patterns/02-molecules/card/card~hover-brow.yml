@@ -1,7 +1,7 @@
 card:
+  style: "hover"
   title: "Lacinia volutpat luctus sapien"
   brow: "Sociosqu vivamus"
   body: null
-  action:
-    style: "card"
+  link:
     url: "#"

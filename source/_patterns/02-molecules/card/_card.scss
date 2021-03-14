@@ -29,7 +29,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-height(full);
 }
 
-.usa-card--action-style-card {
+.usa-card--hover {
   @include u-text-decoration(no-underline);
 }
 
@@ -37,7 +37,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-radius(0);
   @include u-padding(3);
 
-  .usa-card--action-style-card & {
+  .usa-card--hover & {
     @include u-border-width(1px);
     @include u-radius($theme-card-border-radius);
     @include u-shadow(3);
@@ -50,7 +50,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
-  .usa-card--no-border & {
+  .usa-card--borderless & {
     @include u-padding(0);
     @include u-padding-right(3);
     @include u-border-width(0);

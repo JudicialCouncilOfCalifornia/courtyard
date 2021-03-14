@@ -3,5 +3,4 @@ hero:
     brow: "Press Release"
     title: "Tellus per porttitor parturient eget rhoncus pulvinar etiam proin sapien consequat"
     lead: null
-  aside: false
-  full_width_main: true
+  layout: "full-main"

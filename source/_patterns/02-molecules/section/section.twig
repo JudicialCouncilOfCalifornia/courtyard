@@ -2,11 +2,11 @@
 /**
  * Available variables:
  * - section - primary variable
+ *   - background: background color [default, alt]
+ *   - container: container to constrain content [container, no-container]
  *   - heading: the heading (title & lead)
  *   - content: the main content
  *   - id: the html "id" of the section
- *   - alt_background: boolean - use the alternate color background
- *   - no_container: boolean - don't use a container to constrain content
  *   - attributes: Drupal attributes
  *   - classes: array of classes to add to component
  */
@@ -19,8 +19,8 @@
 
 {% set classes = [
   'jcc-section',
-  section.alt_background ? 'jcc-section--alt-background',
-  section.no_container ? 'jcc-section--no-container' : 'jcc-section--container',
+  'jcc-section--' ~ section.container|default('container'),
+  'jcc-section--background-' ~ section.background|default('default'),
 ]|merge(section.classes|default([])) %}
 
 <section {{attributes.addClass(classes) }}>

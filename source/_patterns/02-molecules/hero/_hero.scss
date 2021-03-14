@@ -18,7 +18,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-hero {
   @include u-bg(map-get($_config, default-background));
 
-  &--alt-background {
+  &--background-alt {
     @include u-bg(map-get($_config, alt-background));
   }
 }
@@ -47,7 +47,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include at-media(tablet-lg) {
     @include grid-col(8);
 
-    .jcc-hero--full-main & {
+    .jcc-hero--layout-full-main & {
       @include grid-col(12);
     }
   }
@@ -56,7 +56,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-hero__main-title {
   @include u-margin-bottom(3);
 
-  .jcc-hero--alt-background & {
+  .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
   }
 }
@@ -64,7 +64,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-hero__main-lead {
   @extend .jcc-lead;
 
-  .jcc-hero--alt-background & {
+  .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
   }
 }
@@ -88,12 +88,16 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include grid-col(4);
     @include u-padding-top(1.5);
   }
+
+  .jcc-hero--layout-full-main & {
+    @include u-display(none);
+  }
 }
 
 .jcc-hero__aside-title {
   @include u-margin-bottom(2);
 
-  .jcc-hero--alt-background & {
+  .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
   }
 }
@@ -102,20 +106,20 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-margin-bottom(2.5);
   @extend .jcc-lead;
 
-  .jcc-hero--alt-background & {
+  .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
   }
 }
 
 .jcc-hero__aside-link {
   a {
-    .jcc-hero--default-background & {
+    .jcc-hero--background-default & {
       @each $button in map-get($_config, default-aside-link) {
         @extend .#{$button};
       }
     }
 
-    .jcc-hero--alt-background & {
+    .jcc-hero--background-alt & {
       @each $button in map-get($_config, alt-aside-link) {
         @extend .#{$button};
       }

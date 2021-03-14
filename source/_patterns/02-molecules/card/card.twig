@@ -2,14 +2,13 @@
 /**
  * Available variables:
  * - card - primary variable
+ *   - style: general style of card [hover, cta, borderless]
  *   - title: title of card
  *   - brow: text in upper left
  *   - body: main text content
- *   - action: card link/button info
- *     - style: style of link [card, title, cta]
+ *   - link: card link/button
  *     - url: card link/button url
- *     - cta: card link/button text
- *   - borderless: should the card remove border?
+ *     - text: card link/button text
  *   - classes: array of classes to add to component
  */
 #}
@@ -18,18 +17,17 @@
 
 {% set tag = 'div' %}
 {% set unique_id = 'card-' ~ random() %}
+{% set style = card.style|default('cta') %}
 
-{% if card.action.style == 'card' %}
-  {% set attributes = attributes.setAttribute('href', card.action.url) %}
+{% if style == 'hover' %}
+  {% set attributes = attributes.setAttribute('href', card.link.url) %}
   {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
   {% set tag = 'a' %}
 {% endif %}
 
 {% set classes = [
   'usa-card',
-  'usa-card--action-style-' ~ card.action.style,
-  card.borderless ? 'usa-card--no-border',
-  card.icon ? 'usa-card--no-border',
+  'usa-card--' ~ style,
 ]|merge(card.classes|default([''])) %}
 
 <{{ tag }} {{ attributes.addClass(classes) }}>
@@ -41,8 +39,8 @@
         {% endif %}
 
         <h3 class="usa-card__heading" id="{{ unique_id }}">
-          {% if card.action.style == 'title' %}
-            <a href="{{ card.action.url }}">{{ card.title }}</a>
+          {% if style == 'borderless' %}
+            <a href="{{ card.link.url }}">{{ card.title }}</a>
           {% else %}
             {{ card.title }}
           {% endif %}
@@ -55,16 +53,16 @@
         </div>
       {% endif %}
 
-      {% if card.action.style == 'cta' %}
+      {% if style == 'cta' %}
         <div class="usa-card__footer">
-          <a href="{{ card.action.url }}">{{ card.action.text }}</a>
+          <a href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
       {% endif %}
     </div>
 
-    {% if card.icon %}
-      <div class="usa-card__image">
-        icon<br>here
+    {% if card.media %}
+      <div class="usa-card__media">
+        {{ card.media }}
       </div>
     {% endif %}
   </div>
