@@ -1,12 +1,7 @@
 h1,
 h2 {
-  @include u-font-family(serif);
   @include u-text(normal);
   @include u-line-height("heading", 2);
-}
-
-.h-responsive-mega {
-  @include responsive-h-mega();
 }
 
 h1,

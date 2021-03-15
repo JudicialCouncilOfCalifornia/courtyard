@@ -214,99 +214,87 @@ $aspect-width: 16;
 }
 
 // Type
-@mixin responsive-h-mega($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 13); // 36
-
-  @include at-media(desktop) {
-    @include u-font($responsive-font-family, 15); // 48
-  }
-
-  @media print {
-    @include u-font($responsive-font-family, 12); // 32
-  }
-}
-
 @mixin responsive-h1($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 12); // 32
+  @include u-font($responsive-font-family, $theme-h1-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 14); // 40
+    @include u-font($responsive-font-family, $theme-h1-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 11); // 28
+    @include u-font($responsive-font-family, $theme-h1-font-size-print);
   }
 }
 
 @mixin responsive-h2($responsive-font-family: heading) {
-  @include u-font($responsive-font-family, 11); // 28
+  @include u-font($responsive-font-family, $theme-h2-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 13); // 36
+    @include u-font($responsive-font-family, $theme-h2-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 10);
+    @include u-font($responsive-font-family, $theme-h2-font-size-print);
   }
 }
 
 @mixin responsive-h3($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 10);
+  @include u-font($responsive-font-family, $theme-h3-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 11);
+    @include u-font($responsive-font-family, $theme-h3-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 9);
+    @include u-font($responsive-font-family, $theme-h3-font-size-print);
   }
 }
 
 @mixin responsive-h4($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 9);
+  @include u-font($responsive-font-family, $theme-h4-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 10); // 24
+    @include u-font($responsive-font-family, $theme-h4-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 8); // 18
+    @include u-font($responsive-font-family, $theme-h4-font-size-print);
   }
 }
 
 @mixin responsive-h5($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 8);
+  @include u-font($responsive-font-family, $theme-h5-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 9); // 24
+    @include u-font($responsive-font-family, $theme-h5-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 7); // 18
+    @include u-font($responsive-font-family, $theme-h5-font-size-print);
   }
 }
 
 @mixin responsive-h6($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 7);
+  @include u-font($responsive-font-family, $theme-h6-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 8); // 24
+    @include u-font($responsive-font-family, $theme-h6-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 6);
+    @include u-font($responsive-font-family, $theme-h6-font-size-print);
   }
 }
 
 @mixin responsive-lead($responsive-font-family: body) {
-  @include u-font($responsive-font-family, 9); // 22
+  @include u-font($responsive-font-family, $theme-lead-font-size);
 
   @include at-media(desktop) {
-    @include u-font($responsive-font-family, 10); // 24
+    @include u-font($responsive-font-family, $theme-lead-font-size-desktop);
   }
 
   @media print {
-    @include u-font($responsive-font-family, 6); // 18
+    @include u-font($responsive-font-family, $theme-lead-font-size-print);
   }
 }
 

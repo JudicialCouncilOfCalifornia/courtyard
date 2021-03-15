@@ -6,11 +6,5 @@
   @include u-color(primary);
   @include u-bg("white");
   @include u-text("bold");
-}
-
-.jcc-callout__italic {
-  @extend .usa-prose;
-  @include u-font(heading, 8);
-  @include u-color(primary);
-  @include u-text("italic");
+  @include u-font("body", 8);
 }

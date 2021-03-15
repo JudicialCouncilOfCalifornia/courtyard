@@ -111,40 +111,44 @@ a.usa-link,
     @include u-text(normal);
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include u-font-family(sans);
-    @include u-text(bold);
-  }
-
-  h6 {
-    text-transform: none;
-  }
-
+  h1,
   .h-responsive-h1 {
     @extend .h-responsive-h1;
   }
 
+  h2,
   .h-responsive-h2 {
     @extend .h-responsive-h2;
+    @extend .jcc-title;
   }
 
+  h3,
   .h-responsive-h3 {
     @extend .h-responsive-h3;
+    @include u-text(primary-dark);
   }
 
+  h4,
   .h-responsive-h4 {
     @extend .h-responsive-h4;
   }
 
+  h5,
   .h-responsive-h5 {
     @extend .h-responsive-h5;
   }
 
+  h6,
   .h-responsive-h6 {
     @extend .h-responsive-h6;
+    @include u-font-weight("bold");
+    text-transform: none;
+  }
+}
+
+.usa-prose--background-color {
+  h3 {
+    @include u-color("white");
   }
 }
 
