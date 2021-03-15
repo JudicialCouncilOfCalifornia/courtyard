@@ -25,18 +25,3 @@
     @content;
   }
 }
-
-// Section vertical rhythm
-@mixin section-wrapper($padding-size: 6) {
-  @include u-padding-top($padding-size);
-  @include u-padding-bottom($padding-size);
-
-  @media print {
-    @include u-padding-bottom(3);
-  }
-}
-
-// Creates a wrapper for a series of rows
-@mixin section-container($container-size: widescreen) {
-  @include grid-container($container-size);
-}

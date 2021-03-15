@@ -1,17 +1,3 @@
-@mixin card-border(
-  $border-color: base-light,
-  $bg: "white",
-  $border-width: 1px,
-  $shadow: 3,
-  $radius: lg
-) {
-  @include u-bg($bg);
-  @include u-border($border-width);
-  @include u-border($border-color);
-  @include u-radius($radius);
-  @include u-shadow($shadow);
-}
-
 // Adds decorative dash to headers
 // below-center, above-left, above-center, left-right, right
 @mixin add-dash(
