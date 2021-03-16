@@ -1,5 +1,5 @@
 .usa-breadcrumb--container {
-  @extend .grid-container-widescreen;
+  @include grid-container(widescreen);
 }
 
 .usa-breadcrumb__link {

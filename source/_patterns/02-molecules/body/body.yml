@@ -19,6 +19,7 @@ body:
       <h5>Heading 5</h5>
       <ol><li>Class mauris ultricies porta sem</li><li>In purus dapibus nisi cubilia dictumst nec fermentum</li><li>Interdum adipiscing odio</li></ol>
       <table><thead><th>Col One</th><th>Column two</th><th>Himenaeos tristique sit</th></thead><tbody><tr><td>Fringilla nisl bibendum purus</td><td>Per Egestas placerat</td><td>Sodales elit dignissim etiam congue</td></tr><tr><td>Dignissim venenatis ipsum vel</td><td>Enim lacus lacinia quis ac platea dignissim vulputate class</td><td>Taciti primis felis imperdiet faucibus posuere magnis</td></tr></tbody></table>
+      <blockquote class="blockquote--alert"><h5>Important</h5><p>Any recording of a court proceeding held by video or teleconference, including “screen-shots” or other audio or visual copying of a hearing, is absolutely prohibited consistenct with the California Rules of Court, rule 1.150. Also, the court will not provide technical support for Zoom participants. Please contact the Zoom Help Center, your local IT support, or other online guidance.</p></blockquote>
   aside:
     title: "Dapibus dictumst litora lacinia"
     text: >

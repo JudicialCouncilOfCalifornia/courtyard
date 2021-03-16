@@ -7,7 +7,7 @@
 
   // Centered/constrained
   &--centered {
-    @extend .grid-container-widescreen;
+    @include grid-container(widescreen);
 
     &::before {
       display: none;
@@ -35,11 +35,10 @@
 
 .usa-alert__body {
   @include u-display(block);
-  @include u-padding-top(2px);
   @include u-padding-right(8);
 
   .usa-alert--slim & {
-    @include u-padding-top(0.5);
+    @include u-padding-y(2px);
   }
 }
 
@@ -64,17 +63,18 @@
 }
 
 .usa-alert__close {
-  @include u-display(block);
+  all: unset;
+  @include u-display(flex);
   @include u-position(absolute);
+  @include u-justify-content(justify-center);
+  @include u-align-items(align-center);
   @include u-top(2);
   @include u-right(2);
   @include u-cursor(pointer);
-  @include add-background-svg("close", "../images/icomoon/SVG");
-  width: 30px;
-  height: 28px;
-  background-size: cover;
+  width: 43px;
+  height: 43px;
 
   .usa-alert--slim & {
-    @include u-top(1);
+    @include u-top(2px);
   }
 }

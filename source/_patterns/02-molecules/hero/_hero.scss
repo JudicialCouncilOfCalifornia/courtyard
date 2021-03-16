@@ -24,7 +24,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-hero__container {
-  @extend .grid-container-widescreen;
+  @include grid-container(widescreen);
   @include u-padding-top(4);
   @include u-padding-bottom(4);
 

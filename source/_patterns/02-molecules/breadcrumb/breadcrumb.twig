@@ -12,7 +12,7 @@
 
 {% set classes = [
   'usa-breadcrumb',
-  'usa-breadcrumb' ~ breadcrumb.container|default('container'),
+  'usa-breadcrumb--' ~ breadcrumb.container|default('container'),
 ]|merge(breadcrumb.classes|default([''])) %}
 
 {% if breadcrumb.items|length > 0 %}

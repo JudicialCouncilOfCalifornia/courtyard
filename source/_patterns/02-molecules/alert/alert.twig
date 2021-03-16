@@ -32,7 +32,15 @@
       <div class="usa-alert__text">{{ alert.text }}</div>
 
       {% if alert.close %}
-        <div class="usa-alert__close"></div>
+        <button class="usa-alert__close" aria-label="Close alert">
+          {% include "@atoms/icon/icon.twig" with {
+            icon: {
+              name: "close",
+              width: 25,
+              height: 25
+            }
+          } %}
+        </button>
       {% endif %}
     </div>
   </div>

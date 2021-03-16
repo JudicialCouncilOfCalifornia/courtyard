@@ -12,6 +12,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section--container {
   .jcc-section__inner {
-    @extend .grid-container-widescreen;
+    @include grid-container(widescreen);
   }
 }
