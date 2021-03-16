@@ -14,8 +14,9 @@
     "public_images": "public/img"
   },
   "icons": {
-    "sprite_src": "source/images/icomoon/symbol-defs.svg",
-    "sprite_dest": "source/_patterns/01-atoms/icons"
+    "src": "source/icons/**/*.svg",
+    "dest": "source/_patterns/01-atoms/icon",
+    "dest_name": "icons.svg"
   },
   "js": {
     "src": ["source/js/*.js", "source/js/**/*.js", "source/_patterns/**/*.js"],

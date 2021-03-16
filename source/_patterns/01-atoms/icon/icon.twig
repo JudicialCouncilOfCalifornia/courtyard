@@ -1,0 +1,36 @@
+{#
+/**
+ * Available variables:
+ * - icon - primary variable
+ *   - name: the name of the svg file, without file extension
+ *   - width: the width of the svg
+ *   - height: the height of the svg
+ *   - title: the title of the svg
+ *   - decorative: boolean - is the icon only for decoration?
+ *   - file: the file containing icon (if not using default)
+ */
+#}
+
+{% set classes = [
+  'icon',
+  'icon-' ~ icon.name|clean_class
+] %}
+
+{% set width = icon.width|default('35') %}
+{% set height = icon.height|default('35') %}
+
+{% set attributes = icon.attributes ?? create_attribute() %}
+
+{% set attributes = attributes.setAttribute('width', width) %}
+{% set attributes = attributes.setAttribute('height', height) %}
+{% if icon.decorative %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
+{% endif %}
+
+{% if icon.name %}
+  {% spaceless %}
+    <svg class="{{ classes|join(' ') }}" width="{{ width }}" height="{{ height }}" role="img" aria-label="{{ icon.title ?? icon.name|title }}">
+      <use xlink:href="{{ icon.file }}#icon-{{ icon.name }}"></use>
+    </svg>
+  {% endspaceless %}
+{% endif %}

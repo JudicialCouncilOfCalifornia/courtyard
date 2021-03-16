@@ -21,6 +21,8 @@ const uglify = require("gulp-uglify");
 const { exec } = require("child_process");
 const csso = require("gulp-csso");
 const strip = require("gulp-strip-comments");
+const svgmin = require("gulp-svgmin");
+const svgstore = require("gulp-svgstore");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -45,6 +47,8 @@ const errorHandler = (error) => {
   this.emit("end");
 };
 
+// -------------------------------------------------------------------- //
+
 // Use the Pattern Lab PHP command to generate the pattern library
 const plPhp = () => {
   return exec("php core/console --generate");
@@ -58,13 +62,26 @@ const copyUswdsImages = () => {
   return gulp.src(`${uswds}/img/**/*`).pipe(gulp.dest(config.images.public_images));
 };
 
-// const copyPlStyles = () => {
-//   return gulp.src(config.css.styleguide_src).pipe(gulp.dest(config.css.styleguide_public_folder));
-// };
+// -------------------------------------------------------------------- //
 
-const copyIconSprite = () => {
-  return gulp.src(config.icons.sprite_src).pipe(gulp.dest(config.icons.sprite_dest));
+const buildIcons = () => {
+  return gulp
+    .src(config.icons.src)
+    .pipe(plumber({ errorHandler: errorHandler }))
+    .pipe(svgmin())
+    .pipe(rename({ prefix: "icon-" }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename(config.icons.dest_name))
+    .pipe(
+      rename(function (path) {
+        path.dirname = "";
+        return path;
+      })
+    )
+    .pipe(gulp.dest(config.icons.dest));
 };
+
+// -------------------------------------------------------------------- //
 
 const buildCss = (source, includes, destination) => {
   let css = gulp
@@ -113,11 +130,7 @@ const styleguideCss = () => {
   return buildCss(config.css.styleguide_src, [], config.css.styleguide_public_folder);
 };
 
-// Component JS.
 // -------------------------------------------------------------------- //
-// the following task concatenates all the javascript files inside the
-// _patterns folder, if new patterns need to be added the config.json array
-// needs to be edited to watch for more folders.
 
 const buildJs = (src, destPath, destName) => {
   return gulp
@@ -171,6 +184,7 @@ const watch = (cb) => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
   gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.icons.src, buildIcons);
   gulp.watch(config.css.styleguide_src, styleguideCss);
   gulp.watch(config.js.styleguide_src, styleguideJs);
 };
@@ -192,7 +206,7 @@ const build = gulp.series(
   plPhp,
   copyUswdsFonts,
   copyUswdsImages,
-  copyIconSprite,
+  buildIcons,
   plCss,
   plJs,
   styleguideCss,

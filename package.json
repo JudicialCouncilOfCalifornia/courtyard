@@ -32,6 +32,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-strip-comments": "^2.5.2",
     "gulp-uglify": "^3.0.2",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
     "husky": "^5.0.9",
     "path": "^0.12.7",
     "prettier": "^2.2.1",
