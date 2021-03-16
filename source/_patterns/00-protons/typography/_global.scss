@@ -72,3 +72,41 @@ a {
     active: "secondary-darker"
   ));
 }
+
+blockquote.blockquote {
+  &--alert {
+    @include u-position(relative);
+    @include u-padding-top(2.5);
+    @include u-padding-bottom(3);
+    @include u-padding-left(9);
+    @include u-padding-right(2);
+    @include u-bg($theme-color-warning-lighter);
+
+    h5, h6, p {
+      @include typeset(body, xs, $theme-body-line-height);
+    }
+
+    &::before {
+      @include u-position(absolute);
+      @include u-top(0);
+      @include u-left(0);
+      @include u-height(full);
+      @include u-bg($theme-color-warning);
+      width: 4px;
+      content: "";
+    }
+
+    &::after {
+      @include u-display(block);
+      @include u-position(absolute);
+      @include u-top(2);
+      @include u-left(2.5);
+      @include u-width(4);
+      @include u-height(4);
+      @include add-background-svg("usa-icons/warning");
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+    }
+  }
+}
