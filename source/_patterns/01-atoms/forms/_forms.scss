@@ -1,13 +1,11 @@
 $_config_schemes: (
   base: (
-    icon-color: "primary"
+    icon-color: "primary",
   ),
-  local: (
-  )
+  local: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
-
 
 .usa-input,
 .usa-select,
@@ -55,9 +53,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-bg("transparent");
 
     .icon-search {
-      @include u-height(4);
-      @include u-width(4);
-      fill: color(map-get($_config, icon-color))
+      @include u-height(3);
+      @include u-width(3);
+      fill: color(map-get($_config, icon-color));
     }
   }
 }

@@ -75,10 +75,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
     svg {
       @include u-position(absolute);
-      @include u-top(1.5);
       @include u-width(3);
       @include u-height(3);
       @include u-margin-left(1);
+      top: 14px;
       fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
     }
   }
@@ -149,6 +149,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include button-unstyled;
     @include u-display(flex);
     @include u-flex(justify);
+    @include u-align-items(align-center);
     @include u-padding(0);
     @include u-text(uppercase);
     @include u-font(sans, sm);
@@ -162,7 +163,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     color: color($theme-link-hover-color);
     text-decoration: none;
 
-    &:after {
+    &::after {
       background-color: color($theme-link-hover-color);
     }
   }
@@ -173,18 +174,17 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     color: color($theme-link-active-color);
     text-decoration: none;
 
-    &:after {
+    &::after {
       background-color: color($theme-link-active-color);
     }
   }
 
-  &:after {
+  &::after {
     @include u-display(inline-block);
     @include u-width(2.5);
     @include u-height(2.5);
     @include u-margin-left(1.5);
     flex-shrink: 0;
-    transform: translateY(2px);
     content: "";
     mask-image: url("../icons/arrow-right.svg");
     mask-size: contain;
