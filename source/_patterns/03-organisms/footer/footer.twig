@@ -1,0 +1,118 @@
+{#
+/**
+ * Available variables:
+ * - footer - primary variable
+ *   - background: background color [default, alt]
+ *   - links: the sets/groups of links
+ *     - text: the text heading of a set/group
+ *     - links: the links in a set/group
+ *       - text: the link text
+ *       - url: the link url
+ *   - title: the title of the court
+ *     - first: first portion
+ *     - second: second portion
+ *   - social_links: social links/icons
+ *     - name: name of icon
+ *     - title: title of icon
+ *     - url: the link url
+ *   - shoe: shoe section
+ *     - title: title in shoe
+ *       - text: text title
+ *       - url: the link url
+ *     - links: links
+ *       - text: the link text
+ *       - url: the link url
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'usa-footer',
+  'usa-footer--big',
+  'jcc-footer',
+  'jcc-footer--' ~ footer.background|default('default'),
+]|merge(footer.classes|default([''])) %}
+
+<footer class="{{ classes|join(' ')|trim }}">
+
+  {% if footer.links %}
+    <div class="usa-footer__primary-section">
+      <div class="jcc-footer__container">
+        <nav class="jcc-footer__nav" aria-label="Footer navigation">
+          {% for link in footer.links %}
+            <div class="jcc-footer__nav-col">
+              <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                <h4 class="usa-footer__primary-link">{{ link.text }}</h4>
+                {% if link.links %}
+                  <ul class="usa-list usa-list--unstyled">
+                    {% for child in link.links %}
+                      <li class="usa-footer__secondary-link">
+                        <a href="{{ child.url }}">{{ child.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </section>
+            </div>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="usa-footer__secondary-section">
+    <div class="jcc-footer__container">
+      <div class="jcc-footer__row">
+
+        <div class="usa-footer__logo">
+          <h3 class="usa-footer__logo-heading">
+            <span>{{ footer.title.first }}</span>
+            <span>{{ footer.title.second }}</span>
+          </h3>
+        </div>
+
+        {% if footer.social_links %}
+          <div class="jcc-footer__social-links">
+            {% for social_link in footer.social_links %}
+              <div class="jcc-footer__social-links-item">
+                <a href="{{ social_link.url }}">
+                  {% include "@atoms/icon/icon.twig" with {
+                    icon: {
+                      name: social_link.name,
+                      title: social_link.title,
+                    }
+                  } %}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="jcc-footer__shoe-section">
+    <div class="jcc-footer__container">
+      <div class="jcc-footer__row">
+        <div class="jcc-footer__shoe-logo">
+          <h3 class="jcc-footer__shoe-logo-heading">
+            <a href="{{ footer.shoe.title.url }}" target="_blank">{{ footer.shoe.title.text }}</a>
+          </h3>
+        </div>
+
+        {% if footer.shoe.links %}
+          <nav class="jcc-footer__shoe-nav">
+            <ul class="jcc-footer__shoe-nav-items">
+              {% for link in footer.shoe.links %}
+                <li class="jcc-footer__shoe-nav-item">
+                  <a href="{{ link.url }}">{{ link.text }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</footer>
