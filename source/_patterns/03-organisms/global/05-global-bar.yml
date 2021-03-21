@@ -1,0 +1,11 @@
+global_bar:
+  title:
+    text: 'Judicial Branch of California'
+    url: '#'
+  links:
+    - text: "Contact Us"
+      url: "#"
+    - text: "Terms of Use"
+      url: "#"
+    - text: "Privacy Policy"
+      url: "#"

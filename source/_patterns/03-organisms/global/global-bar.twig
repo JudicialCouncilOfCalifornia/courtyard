@@ -1,0 +1,39 @@
+{#
+/**
+ * Available variables:
+ * - global_bar - primary variable
+ *   - title: title in shoe
+ *     - text: text title
+ *     - url: the link url
+ *   - links: links
+ *     - text: the link text
+ *     - url: the link url
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-global-bar',
+]|merge(global_bar.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-global-bar__container">
+    <div class="jcc-global-bar__row">
+      <h3 class="jcc-global-bar__logo">
+        <a href="{{ global_bar.title.url }}" target="_blank">{{ global_bar.title.text }}</a>
+      </h3>
+
+      {% if global_bar.links %}
+        <nav class="jcc-global-bar__nav">
+          <ul class="jcc-global-bar__nav-items">
+            {% for link in global_bar.links %}
+              <li class="jcc-global-bar__nav-item">
+                <a href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+    </div>
+  </div>
+</div>

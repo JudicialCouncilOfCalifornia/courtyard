@@ -16,12 +16,6 @@
  *     - title: title of icon
  *     - url: the link url
  *   - shoe: shoe section
- *     - title: title in shoe
- *       - text: text title
- *       - url: the link url
- *     - links: links
- *       - text: the link text
- *       - url: the link url
  *   - classes: array of classes to add to component
  */
 #}
@@ -92,27 +86,10 @@
   </div>
 
   <div class="jcc-footer__shoe-section">
-    <div class="jcc-footer__container">
-      <div class="jcc-footer__row">
-        <div class="jcc-footer__shoe-logo">
-          <h3 class="jcc-footer__shoe-logo-heading">
-            <a href="{{ footer.shoe.title.url }}" target="_blank">{{ footer.shoe.title.text }}</a>
-          </h3>
-        </div>
+    {% include "global-bar.twig" with {
+      global_bar: footer.shoe
+    } %}
 
-        {% if footer.shoe.links %}
-          <nav class="jcc-footer__shoe-nav">
-            <ul class="jcc-footer__shoe-nav-items">
-              {% for link in footer.shoe.links %}
-                <li class="jcc-footer__shoe-nav-item">
-                  <a href="{{ link.url }}">{{ link.text }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        {% endif %}
-      </div>
-    </div>
   </div>
 
 </footer>
