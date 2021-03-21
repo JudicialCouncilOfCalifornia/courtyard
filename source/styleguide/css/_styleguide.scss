@@ -69,9 +69,14 @@
   text-align: center;
 }
 
-.sg-pattern-example .jcc-full-modal__backdrop,
-.sg-pattern-example .jcc-full-modal__dialog::backdrop {
-  display: none;
+.sg-pattern-example {
+  position: relative;
+  overflow: hidden;
+
+  .jcc-full-modal__backdrop,
+  .jcc-full-modal__dialog::backdrop {
+    display: none;
+  }
 }
 
 h3.sg-pattern-title {

@@ -116,10 +116,7 @@ const buildCss = (source, includes, destination) => {
     css.pipe(csso());
   }
 
-  return css
-    .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(destination))
-    .pipe(browserSync.reload({ stream: true, match: "**/*.css" }));
+  return css.pipe(sourcemaps.write("./")).pipe(gulp.dest(destination)).pipe(browserSync.stream());
 };
 
 const plCss = () => {
@@ -183,7 +180,7 @@ const styleguideJs = () => {
 const watch = (cb) => {
   gulp.watch(config.css.src, plCss);
   gulp.watch(config.js.src, plJs);
-  gulp.watch(config.pattern_lab.src, build);
+  gulp.watch(config.pattern_lab.src, partialBuild);
   gulp.watch(config.icons.src, buildIcons);
   gulp.watch(config.css.styleguide_src, styleguideCss);
   gulp.watch(config.js.styleguide_src, styleguideJs);
@@ -202,7 +199,7 @@ const serve = (cb) => {
   });
 };
 
-const build = gulp.series(
+const fullBuild = gulp.series(
   plPhp,
   copyUswdsFonts,
   copyUswdsImages,
@@ -213,5 +210,7 @@ const build = gulp.series(
   styleguideJs
 );
 
-exports.build = build;
-exports.default = gulp.series(build, serve, watch);
+const partialBuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, buildIcons, plCss, plJs);
+
+exports.build = fullBuild;
+exports.default = gulp.series(fullBuild, serve, watch);

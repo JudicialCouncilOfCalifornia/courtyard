@@ -27,7 +27,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-select {
-  background-image: url(../images/icomoon/SVG/expand_more.svg);
+  background-image: url("../icons/chevron-down.svg");
   background-size: 1.5rem auto;
 }
 
