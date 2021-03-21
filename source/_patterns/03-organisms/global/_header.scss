@@ -1,0 +1,440 @@
+$_config_schemes: (
+  base: (
+    navbar: (
+      default-background: "white",
+      default-logo: primary-darker,
+      alt-background: primary-darker,
+      alt-logo: "white",
+    ),
+    nav: (
+      // xxx-top-xxx is the bar/primary items
+      default-top-background: primary-lighter,
+      default-top-text: primary,
+      default-top-arrow: secondary,
+      default-top-border: primary-light,
+      default-top-background-active: primary-dark,
+      default-top-text-active: "white",
+      default-top-arrow-active: "white",
+      alt-top-background: primary-dark,
+      alt-top-text: "white",
+      alt-top-arrow: "white",
+      alt-top-border: primary-light,
+      alt-top-background-active: base-lighter,
+      alt-top-text-active: ink,
+      alt-top-arrow-active: ink,
+      // xxx-sub-xxx is the inner/sub items
+      default-sub-background: primary-dark,
+      default-sub-background-active: primary-dark,
+      default-sub-text: "white",
+      default-sub-border: primary-vivid,
+      default-sub-sub-background: primary-vivid,
+      alt-sub-background: base-lighter,
+      alt-sub-background-active: base-light,
+      alt-sub-text: ink,
+      alt-sub-border: base-light,
+      alt-sub-sub-background: base-light,
+      // section link
+      section-link-background: accent-warm,
+      section-link-text: ink,
+    ),
+    hat: (
+      border: accent-warm,
+    ),
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+$_navbar: map-get($_config, navbar);
+$_nav: map-get($_config, nav);
+$_hat: map-get($_config, hat);
+
+// Add the css rule for default & alt
+@mixin hc($prop, $map, $key) {
+  #{$prop}: color(map-get($map, "default-#{$key}"));
+
+  .jcc-header--alt & {
+    #{$prop}: color(map-get($map, "alt-#{$key}"));
+  }
+}
+
+.jcc-header {
+  @include u-position(relative);
+  @include u-z(500);
+}
+
+.jcc-header__navbar {
+  @include hc(background-color, $_navbar, background);
+
+  .usa-navbar {
+    @include u-position(relative);
+    @include u-border-bottom(0);
+    @include u-overflow(hidden);
+  }
+
+  .usa-logo {
+    @include u-margin(0);
+    line-height: 0;
+  }
+
+  .jcc-header__logo {
+    @include u-display(inline-flex);
+    @include u-align-items(align-center);
+    @include hc(color, $_navbar, logo);
+
+    @include at-media-max(tablet-lg) {
+      height: 37px;
+    }
+
+    @include at-media(tablet-lg) {
+      height: 69px;
+    }
+
+    svg {
+      @include u-width(auto);
+      max-height: 100%;
+    }
+  }
+
+  .jcc-header__logo + .usa-logo__text {
+    @include sr-only();
+  }
+
+  .jcc-header__mobile-button-open,
+  .jcc-header__mobile-button-close {
+    @include button-unstyled;
+    @include u-display(flex);
+    @include u-position(absolute);
+    @include u-justify-content(justify-center);
+    @include u-align-items(align-center);
+    @include u-top(0);
+    @include u-right(0);
+    @include u-width(6);
+    @include u-height(6);
+    @include u-cursor(pointer);
+    @include hc(color, $_navbar, logo);
+
+    @include at-media(tablet-lg) {
+      @include u-display(none);
+    }
+
+    svg {
+      @include u-width(3);
+      @include u-height(3);
+    }
+  }
+
+  .jcc-header__mobile-button-open {
+    .usa-js-mobile-nav--active & {
+      @include u-display(none);
+    }
+  }
+
+  .jcc-header__mobile-button-close {
+    @include u-display(none);
+
+    .usa-js-mobile-nav--active & {
+      @include at-media-max(tablet-lg) {
+        @include u-display(flex);
+      }
+    }
+  }
+}
+
+.jcc-header__hat {
+  border-bottom: 4px solid color(map-get($_shoe, border));
+
+  @include at-media-max(desktop) {
+    .jcc-global-bar__nav {
+      display: none;
+    }
+  }
+}
+
+.jcc-header__nav {
+  .usa-nav {
+    @include u-position(relative);
+    @include u-top(0);
+    @include u-width(full);
+    @include u-padding(0);
+    @include u-border-width(0);
+    @include hc(background-color, $_nav, top-background);
+
+    &.is-visible {
+      animation: none;
+    }
+  }
+
+  .usa-nav__inner {
+    @include at-media-max(tablet-lg) {
+      @include u-display(flex);
+      @include u-flex-direction(column);
+    }
+  }
+
+  .usa-nav__primary {
+    @include at-media-max(tablet-lg) {
+      @include u-order(2);
+      @include u-margin-top(0);
+    }
+
+    .usa-nav__primary-item {
+      @include at-media-max(tablet-lg) {
+        @include hc(border-top-color, $_nav, top-border);
+      }
+    }
+
+    // Top level toggle button & simple link
+    .usa-nav__link {
+      @include u-display(flex);
+      @include u-align-items(align-center);
+      @include u-padding-x(3);
+      @include hc(background-color, $_nav, top-background);
+      @include hc(color, $_nav, top-text);
+      @include u-font-weight(normal);
+      height: 60px;
+      background-image: none;
+      font-size: 18px;
+      letter-spacing: 0.37px;
+
+      @include at-media-max(tablet-lg) {
+        @include u-justify-content(justify);
+      }
+
+      @include at-media(tablet-lg) {
+        height: 90px;
+      }
+
+      &:hover,
+      &[aria-expanded="true"] {
+        background-image: none;
+
+        @include at-media-max(tablet-lg) {
+          @include hc(background-color, $_nav, top-background);
+        }
+
+        @include at-media(tablet-lg) {
+          @include hc(background-color, $_nav, top-background-active);
+          @include hc(color, $_nav, top-text-active);
+
+        }
+
+        &::after {
+          @include at-media(tablet-lg) {
+            @include u-display(none);
+          }
+        }
+
+        svg {
+          @include at-media(tablet-lg) {
+            @include hc(color, $_nav, top-arrow-active);
+          }
+        }
+      }
+
+      &[aria-expanded="true"] {
+        svg {
+          @include at-media-max(tablet-lg) {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &.usa-current {
+        &::after {
+          @include hc(background-color, $_nav, top-text);
+
+          @include at-media-max(tablet-lg) {
+            @include u-top(0);
+            @include u-bottom(0);
+            @include u-left(0);
+            @include u-radius(0);
+          }
+        }
+      }
+
+      span {
+        padding-right: 3px;
+      }
+
+      svg {
+        @include u-padding-top(2px);
+        @include hc(color, $_nav, top-arrow);
+        width: 30px;
+        height: 25px;
+
+        @include at-media(tablet-lg) {
+          width: 20px;
+          height: 15px;
+        }
+      }
+    }
+
+    .usa-nav__submenu {
+      @include u-padding(0);
+
+      @include at-media(tablet-lg) {
+        width: 18rem;
+      }
+
+      .usa-nav__submenu {
+        @include u-position(relative);
+        @include u-padding-left(2);
+        @include hc(background-color, $_nav, sub-sub-background);
+      }
+    }
+
+    .usa-nav__submenu-item {
+      @include u-margin-top(0);
+      @include u-border-top(1px);
+      @include hc(border-top-color, $_nav, sub-border);
+
+      a {
+        @include u-display(flex);
+        @include u-align-items(align-center);
+        @include u-padding-x(3);
+        @include hc(background-color, $_nav, sub-background);
+        @include hc(color, $_nav, sub-text);
+        height: 50px;
+
+        &.usa-current {
+          @include hc(background-color, $_nav, sub-sub-background);
+        }
+
+        &:hover {
+          @include u-text-decoration(underline);
+        }
+      }
+
+      .usa-nav__submenu-item {
+        @include hc(border-top-color, $_nav, sub-border);
+      }
+    }
+
+    .jcc-header__submenu-section-item {
+      a {
+        @include u-bg(map-get($_nav, section-link-background));
+        @include u-color(map-get($_nav, section-link-text));
+        @include u-justify-content(justify-end);
+      }
+
+      svg {
+        @include u-margin-left(0.5);
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    .jcc-header__translate-nav {
+      span {
+        flex: 1 0 auto;
+      }
+
+      svg.icon-translate {
+        @include u-margin-right(1);
+        @include hc(color, $_nav, top-text);
+        width: 35px;
+        height: 35px;
+        transform: rotate(0deg);
+      }
+
+      @include at-media(tablet-lg) {
+        @include u-display(none);
+      }
+    }
+  }
+
+  .usa-nav__secondary {
+    @include at-media-max(tablet-lg) {
+      @include u-order(1);
+      @include u-margin-top(0);
+    }
+
+    @include at-media(tablet-lg) {
+      @include u-flex-direction(row);
+      @include u-align-items(align-center);
+      @include u-margin-top(0);
+      bottom: 6rem;
+    }
+
+    .jcc-header__translate-nav {
+      @include at-media-max(tablet-lg) {
+        @include u-display(none);
+      }
+
+      @include at-media(tablet-lg) {
+        @include u-margin-right(1);
+        width: 135px;
+      }
+
+      .usa-accordion__button {
+        @include u-display(flex);
+        @include u-align-items(align-center);
+        @include u-padding(1);
+        @include u-bg(primary-lighter);
+        @include u-color(primary-darker);
+        @include u-font-weight(normal);
+        height: 50px;
+        background-image: none;
+        letter-spacing: 0.37px;
+
+        svg {
+          @include u-margin-right(1);
+          @include u-color(primary-dark);
+        }
+
+        .icon-chevron-down {
+          display: none;
+        }
+      }
+
+      .usa-nav__submenu {
+        @include u-padding(0);
+        @include u-bg(primary-lighter);
+      }
+
+      .usa-nav__submenu-item {
+        @include u-margin-top(0);
+
+        a {
+          @include u-display(block);
+          @include u-padding(1);
+          @include u-color(primary-darker);
+          height: 40px;
+
+          &:hover {
+            @include u-bg(primary-dark);
+            @include u-color("white");
+          }
+        }
+      }
+    }
+
+    .usa-search {
+      @include at-media-max(tablet-lg) {
+        @include u-margin-y(1);
+        @include u-padding-x(3);
+      }
+
+      @include at-media(tablet-lg) {
+        @include u-margin-top(0);
+      }
+
+      .usa-input {
+        @include at-media-max(tablet-lg) {
+          @include u-maxw(none);
+        }
+      }
+
+      .usa-button {
+        @include button-unstyled();
+        background-image: none;
+      }
+    }
+  }
+}
+
+// Body gets this class when mobile menu opened
+.usa-js-mobile-nav--active {
+  overflow-y: visible;
+}

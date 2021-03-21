@@ -1,0 +1,181 @@
+{#
+/**
+ * Available variables:
+ * - header - primary variable
+ *   - background: background color [default, alt]
+ *   - skip: the skip link for accessibility
+ *     - text: the link text
+ *     - url: the link url
+ *   - hat: hat section
+ *   - title: the title of the court
+ *     - first: first portion
+ *     - second: second portion
+ *   - social_links: social links/icons
+ *     - name: name of icon
+ *     - title: title of icon
+ *     - url: the link url
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'usa-header',
+  'usa-header--extended',
+  'jcc-header',
+  'jcc-header--' ~ header.background|default('default'),
+]|merge(header.classes|default([''])) %}
+
+{% if header.skip %}
+  <a class="usa-skipnav" href="{{ header.skip.url }}">{{ header.skip.text }}</a>
+{% endif %}
+
+<div class="usa-overlay"></div>
+
+<header class="{{ classes|join(' ')|trim }}">
+
+  <div class="jcc-header__hat">
+    {% include 'global-bar.twig' with {
+      global_bar: header.hat
+    } %}
+  </div>
+
+  <div class="jcc-header__navbar">
+    <div class="usa-navbar">
+      <div class="usa-logo" id="extended-logo">
+        <a href="/" title="Home" aria-label="Home">
+          {% if header.logo.svg %}
+            <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
+          {% endif %}
+          <em class="usa-logo__text">Project title</em>
+        </a>
+      </div>
+
+      <button class="usa-menu-btn jcc-header__mobile-button-open" aria-label="Open main navigation for mobile devices">
+        {% include "@atoms/icon/icon.twig" with {
+          icon: {
+            name: "menu-bars"
+          }
+        } %}
+      </button>
+      <button class="usa-nav__close jcc-header__mobile-button-close" aria-label="Close main navigation for mobile devices">
+        {% include '@atoms/icon/icon.twig' with {
+          icon: {
+            name: "close"
+          }
+        } %}
+      </button>
+    </div>
+  </div>
+
+  <div class="jcc-header__nav">
+    <nav aria-label="Main menu" class="usa-nav">
+      <div class="usa-nav__inner">
+        <ul class="usa-nav__primary usa-accordion">
+          {% for link in header.links %}
+            <li class="usa-nav__primary-item">
+              {% if link.links %}
+                {% set id = link.id ?? random() %}
+                <button class="usa-accordion__button usa-nav__link {{ link.is_current ? 'usa-current' }}" aria-expanded="false" aria-controls="{{ id }}">
+                  <span>{{ link.text }}</span>
+                  {% include "@atoms/icon/icon.twig" with {
+                    icon: {
+                      name: "chevron-down"
+                    }
+                  } %}
+                </button>
+                <ul id="{{ id }}" class="usa-nav__submenu">
+                  {% for child in link.links %}
+                    <li class="usa-nav__submenu-item {{ child.links ? 'has-children' }}">
+                      <a class="{{ child.is_current ? 'usa-current' }}" href="{{ child.url }}">{{ child.text }}</a>
+                      {% if child.links %}
+                        <ul class="usa-nav__submenu">
+                          {% for grandchild in child.links %}
+                            <li class="usa-nav__submenu-item">
+                              <a class="{{ grandchild.is_current ? 'usa-current' }}" href="{{ grandchild.url }}">{{ grandchild.text }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                  {% if link.section_link %}
+                    <li class="usa-nav__submenu-item jcc-header__submenu-section-item">
+                      <a href="{{ link.section_link.url }}">
+                        <span>{{ link.section_link.text }}</span>
+                        {% include "@atoms/icon/icon.twig" with {
+                          icon: {
+                            name: "chevron-right"
+                          }
+                        } %}
+                      </a>
+                    </li>
+                  {% endif %}
+                </ul>
+              {% else %}
+                <a class="usa-nav__link {{ link.is_current ? 'usa-current' }}" href="{{ link.url }}"><span>{{ link.text }}</span></a>
+              {% endif %}
+            </li>
+          {% endfor %}
+
+          {% if header.translate %}
+            <li class="usa-nav__primary-item jcc-header__translate-nav">
+              {{ _self.translate_button(header.translate) }}
+            </li>
+          {% endif %}
+        </ul>
+
+        <div class="usa-nav__secondary">
+          {% if header.translate %}
+            {# <ul class="jcc-translate usa-accordion">
+              <li class="jcc-header__translate-nav"> #}
+                <div class="jcc-header__translate-nav usa-accordion">
+                {{ _self.translate_button(header.translate) }}
+                </div>
+              {# </li>
+            </ul> #}
+          {% endif %}
+
+          <form class="usa-search usa-search--small " role="search">
+            <label class="usa-sr-only" for="extended-search-field-small">Search small</label>
+            <input class="usa-input" id="extended-search-field-small" type="search" name="search">
+            <button class="usa-button" type="submit"><span class="usa-sr-only">Search</span></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+{% macro translate_button(button) %}
+  {% set id = button.id ?? random() %}
+  <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="{{ id }}">
+    {% include "@atoms/icon/icon.twig" with {
+      icon: {
+        name: "translate"
+      }
+    } %}
+    <span>{{ button.text }}</span>
+    {% include "@atoms/icon/icon.twig" with {
+      icon: {
+        name: "chevron-down"
+      }
+    } %}
+  </button>
+  <ul id="{{ id }}" class="usa-nav__submenu">
+    {% for link in button.links %}
+      <li class="usa-nav__submenu-item">
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
+<p>Quam hac sociis orci leo sagittis habitant semper ultrices class torquent metus velit ad commodo scelerisque per, ipsum dui inceptos et nibh ullamcorper ornare aliquet maecenas venenatis ultricies risus pellentesque mus. Enim venenatis gravida condimentum consequat a diam orci adipiscing ipsum, elit dis leo blandit vestibulum libero dolor nunc magna, nascetur scelerisque pretium placerat cursus aptent euismod penatibus. Urna suspendisse dictum morbi pretium vivamus penatibus nascetur diam, dictumst fusce dis sed class lectus orci interdum maecenas, elit metus aenean sociosqu facilisi consectetur aliquam. Ornare luctus viverra porttitor neque conubia dictumst congue egestas suscipit risus velit nunc facilisi, purus platea justo vel senectus vulputate mi montes sodales cursus vitae habitant. Fermentum rhoncus porttitor urna ultrices venenatis platea est pulvinar, euismod inceptos vitae condimentum porta turpis nisi gravida, vivamus velit mauris lorem a enim interdum. Justo erat nec aptent laoreet habitant, purus congue metus cubilia, quis tellus orci aliquam. Suscipit venenatis nascetur sodales volutpat mi cursus luctus dui, habitant felis bibendum consequat urna hac dapibus cras dis, nunc quisque enim neque tristique aliquet vestibulum. Eros amet lacinia conubia cras dignissim nullam consectetur feugiat duis donec condimentum, dui dolor proin parturient mus senectus odio habitasse viverra a, blandit per commodo taciti vulputate pellentesque phasellus nostra neque tincidunt.</p>
