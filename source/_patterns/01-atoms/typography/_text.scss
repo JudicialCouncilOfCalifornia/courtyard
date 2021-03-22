@@ -113,34 +113,34 @@ a.usa-link,
 
   h1,
   .h-responsive-h1 {
-    @extend .h-responsive-h1;
+    @extend .heading-h1;
   }
 
   h2,
   .h-responsive-h2 {
-    @extend .h-responsive-h2;
+    @extend .heading-h2;
     @extend .jcc-title;
   }
 
   h3,
   .h-responsive-h3 {
-    @extend .h-responsive-h3;
+    @extend .heading-h3;
     @include u-text(primary-dark);
   }
 
   h4,
   .h-responsive-h4 {
-    @extend .h-responsive-h4;
+    @extend .heading-h4;
   }
 
   h5,
   .h-responsive-h5 {
-    @extend .h-responsive-h5;
+    @extend .heading-h5;
   }
 
   h6,
   .h-responsive-h6 {
-    @extend .h-responsive-h6;
+    @extend .heading-h6;
     @include u-font-weight("bold");
     text-transform: none;
   }
