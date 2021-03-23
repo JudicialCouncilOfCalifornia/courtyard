@@ -37,6 +37,32 @@ $_config_schemes: (
       section-link-background: accent-warm,
       section-link-text: ink,
     ),
+    translate: (
+      default-background: primary-lighter,
+      default-background-hover: primary-darker,
+      default-background-active: primary-dark,
+      default-text: primary-darker,
+      default-text-hover: "white",
+      default-text-active: "white",
+      default-icon: primary-dark,
+      default-icon-hover: "white",
+      default-icon-active: "white",
+      default-sub-background: primary-dark,
+      default-sub-background-hover: primary-vivid,
+      default-sub-text: "white",
+      alt-background: base-lighter,
+      alt-background-hover: base-light,
+      alt-background-active: base-lighter,
+      alt-text: ink,
+      alt-text-hover: ink,
+      alt-text-active: ink,
+      alt-icon: primary-dark,
+      alt-icon-hover: primary-dark,
+      alt-icon-active: primary-dark,
+      alt-sub-background: base-lighter,
+      alt-sub-background-hover: base-light,
+      alt-sub-text: ink,
+    ),
     hat: (
       border: accent-warm,
     ),
@@ -47,6 +73,7 @@ $_config_schemes: (
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 $_navbar: map-get($_config, navbar);
 $_nav: map-get($_config, nav);
+$_translate: map-get($_config, translate);
 $_hat: map-get($_config, hat);
 
 // Add the css rule for default & alt
@@ -70,6 +97,12 @@ $_hat: map-get($_config, hat);
     @include u-position(relative);
     @include u-border-bottom(0);
     @include u-overflow(hidden);
+
+    @include at-media(tablet-lg) {
+      @include u-display(flex);
+      @include u-align-items(align-center);
+      height: 92px;
+    }
   }
 
   .usa-logo {
@@ -312,16 +345,18 @@ $_hat: map-get($_config, hat);
     }
 
     .jcc-header__submenu-section-item {
-      a {
-        @include u-bg(map-get($_nav, section-link-background));
-        @include u-color(map-get($_nav, section-link-text));
-        @include u-justify-content(justify-end);
-      }
+      &, .jcc-header--alt & {
+        a {
+          @include u-bg(map-get($_nav, section-link-background));
+          @include u-color(map-get($_nav, section-link-text));
+          @include u-justify-content(justify-end);
+        }
 
-      svg {
-        @include u-margin-left(0.5);
-        width: 17px;
-        height: 17px;
+        svg {
+          @include u-margin-left(0.5);
+          width: 17px;
+          height: 17px;
+        }
       }
     }
 
@@ -354,7 +389,7 @@ $_hat: map-get($_config, hat);
       @include u-flex-direction(row);
       @include u-align-items(align-center);
       @include u-margin-top(0);
-      bottom: 6rem;
+      bottom: 110px;
     }
 
     .jcc-header__translate-nav {
@@ -371,16 +406,34 @@ $_hat: map-get($_config, hat);
         @include u-display(flex);
         @include u-align-items(align-center);
         @include u-padding(1);
-        @include u-bg(primary-lighter);
-        @include u-color(primary-darker);
         @include u-font-weight(normal);
+        @include hc(background-color, $_translate, background);
+        @include hc(color, $_translate, text);
         height: 50px;
         background-image: none;
         letter-spacing: 0.37px;
 
+        &[aria-expanded="true"] {
+          @include hc(background-color, $_translate, background-active);
+          @include hc(color, $_translate, text-active);
+
+          svg {
+            @include hc(color, $_translate, icon-active);
+          }
+        }
+
+        &:hover {
+          @include hc(background-color, $_translate, background-hover);
+          @include hc(color, $_translate, text-hover);
+
+          svg {
+            @include hc(color, $_translate, icon-hover);
+          }
+        }
+
         svg {
           @include u-margin-right(1);
-          @include u-color(primary-dark);
+          @include hc(color, $_translate, icon);
         }
 
         .icon-chevron-down {
@@ -390,21 +443,26 @@ $_hat: map-get($_config, hat);
 
       .usa-nav__submenu {
         @include u-padding(0);
-        @include u-bg(primary-lighter);
+        @include u-border-top(1px, solid);
+        @include hc(border-color, $_translate, sub-background-hover);
+        width: 170px;
       }
 
       .usa-nav__submenu-item {
         @include u-margin-top(0);
 
         a {
-          @include u-display(block);
-          @include u-padding(1);
-          @include u-color(primary-darker);
-          height: 40px;
+          @include u-display(flex);
+          @include u-align-items(align-center);
+          @include u-padding-x(3);
+          @include u-padding-y(1);
+          @include u-text-decoration(no-underline);
+          @include hc(background-color, $_translate, sub-background);
+          @include hc(color, $_translate, sub-text);
+          height: 50px;
 
           &:hover {
-            @include u-bg(primary-dark);
-            @include u-color("white");
+            @include hc(background-color, $_translate, sub-background-hover);
           }
         }
       }
