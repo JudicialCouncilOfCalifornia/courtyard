@@ -34,7 +34,7 @@
 <header class="{{ classes|join(' ')|trim }}">
 
   <div class="jcc-header__hat">
-    {% include 'global-bar.twig' with {
+    {% include '@organisms/global/global-bar.twig' with {
       global_bar: header.hat
     } %}
   </div>
