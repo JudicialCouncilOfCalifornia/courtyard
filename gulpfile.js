@@ -69,7 +69,13 @@ const buildIcons = () => {
   return gulp
     .src(config.icons.src)
     .pipe(plumber({ errorHandler: errorHandler }))
-    .pipe(svgmin())
+    .pipe(svgmin({
+      plugins: [
+        {
+          removeViewBox: false
+        }
+      ]
+    }))
     .pipe(rename(function (file) {
       let name = ['icon'];
       name = name.concat(file.dirname.split(path.sep));
