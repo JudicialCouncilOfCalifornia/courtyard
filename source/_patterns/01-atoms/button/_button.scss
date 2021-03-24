@@ -66,6 +66,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   &,
   &:visited {
     @include u-position(relative);
+    @include u-padding-y(1.5);
     @include u-padding-right(7);
     @include u-radius(pill);
     @include u-font(sans, xs);
@@ -78,7 +79,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-width(3);
       @include u-height(3);
       @include u-margin-left(1);
-      top: 14px;
+      top: 6px;
       fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
     }
   }
@@ -186,7 +187,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-margin-left(1.5);
     flex-shrink: 0;
     content: "";
-    mask-image: url("../icons/arrow-right.svg");
+    mask-image: url("../icons/fa/arrow-right.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     background-color: color($theme-link-color);

@@ -102,7 +102,7 @@ $_shoe: map-get($_config, shoe);
 
     &::before {
       background-image: none !important;
-      mask-image: url("../icons/chevron-down.svg");
+      mask-image: url("../icons/fa/chevron-down.svg");
       mask-size: 12px;
       mask-position: 0 4px;
       mask-repeat: no-repeat;
@@ -116,7 +116,7 @@ $_shoe: map-get($_config, shoe);
 
   .usa-footer__primary-content--collapsible.hidden & {
     &::before {
-      mask-image: url("../icons/chevron-right.svg");
+      mask-image: url("../icons/fa/chevron-right.svg");
       mask-size: 9px;
       mask-position: 4px 3px;
     }

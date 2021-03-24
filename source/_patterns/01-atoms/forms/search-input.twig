@@ -11,6 +11,7 @@
 
 {% set icon = {
     name: "search",
+    set: 'fa',
     title: "Search"|t,
     decorative: true,
 } %}
@@ -18,9 +19,9 @@
 {% set title = search_input.placeholder|default('Search this site') %}
 
 <div class="jcc-fieldset-search">
-	<fieldset class="usa-fieldset">
-		{% set id = search_input.id ?? 'search-type-text--' ~ random() %}
-		<input type="text" placeholder="{{ search_input.placeholder }}" class="usa-input" id="{{ id }}" name="{{ search_input.name }}" title="{{ title }}" aria-label="{{ title }}"/>
-		<button type="submit" aria-label="{{ search_input.button_title|default('Submit your search') }}">{% include '@atoms/icon/icon.twig' with { icon: icon } %}</button>
-	</fieldset>
+  <fieldset class="usa-fieldset">
+    {% set id = search_input.id ?? 'search-type-text--' ~ random() %}
+    <input type="text" placeholder="{{ search_input.placeholder }}" class="usa-input" id="{{ id }}" name="{{ search_input.name }}" title="{{ title }}" aria-label="{{ title }}"/>
+    <button type="submit" aria-label="{{ search_input.button_title|default('Submit your search') }}">{% include '@atoms/icon/icon.twig' with { icon: icon } %}</button>
+  </fieldset>
 </div>

@@ -53,14 +53,16 @@
       <button class="usa-menu-btn jcc-header__mobile-button-open" aria-label="Open main navigation for mobile devices">
         {% include "@atoms/icon/icon.twig" with {
           icon: {
-            name: "menu-bars"
+            name: "menu-bars",
+            set: "fa",
           }
         } %}
       </button>
       <button class="usa-nav__close jcc-header__mobile-button-close" aria-label="Close main navigation for mobile devices">
         {% include '@atoms/icon/icon.twig' with {
           icon: {
-            name: "close"
+            name: "close",
+            set: "fa",
           }
         } %}
       </button>
@@ -79,7 +81,8 @@
                   <span>{{ link.text }}</span>
                   {% include "@atoms/icon/icon.twig" with {
                     icon: {
-                      name: "chevron-down"
+                      name: "chevron-down",
+                      set: "fa",
                     }
                   } %}
                 </button>
@@ -104,7 +107,8 @@
                         <span>{{ link.section_link.text }}</span>
                         {% include "@atoms/icon/icon.twig" with {
                           icon: {
-                            name: "chevron-right"
+                            name: "chevron-right",
+                            set: "fa",
                           }
                         } %}
                       </a>
@@ -152,13 +156,15 @@
   <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="{{ id }}">
     {% include "@atoms/icon/icon.twig" with {
       icon: {
-        name: "translate"
+        name: "translate",
+        set: "fa",
       }
     } %}
     <span>{{ button.text }}</span>
     {% include "@atoms/icon/icon.twig" with {
       icon: {
-        name: "chevron-down"
+        name: "chevron-down",
+        set: "fa",
       }
     } %}
   </button>
