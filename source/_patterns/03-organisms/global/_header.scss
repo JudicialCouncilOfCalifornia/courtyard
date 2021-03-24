@@ -249,7 +249,6 @@ $_hat: map-get($_config, hat);
         @include at-media(tablet-lg) {
           @include hc(background-color, $_nav, top-background-active);
           @include hc(color, $_nav, top-text-active);
-
         }
 
         &::after {
@@ -335,7 +334,8 @@ $_hat: map-get($_config, hat);
         }
 
         &:hover {
-          @include u-text-decoration(underline);
+          @include hc(background-color, $_nav, sub-sub-background);
+          @include u-text-decoration(no-underline);
         }
       }
 
@@ -345,11 +345,16 @@ $_hat: map-get($_config, hat);
     }
 
     .jcc-header__submenu-section-item {
-      &, .jcc-header--alt & {
+      &,
+      .jcc-header--alt & {
         a {
           @include u-bg(map-get($_nav, section-link-background));
           @include u-color(map-get($_nav, section-link-text));
           @include u-justify-content(justify-end);
+
+          &:hover {
+            @include u-bg(map-get($_nav, section-link-background));
+          }
         }
 
         svg {
