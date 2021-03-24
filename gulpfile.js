@@ -2,6 +2,7 @@
 
 const devBuild = process.title == "gulp";
 const gulp = require("gulp");
+const path = require("path");
 const browserSync = require("browser-sync").create();
 const config = require("./config.json");
 
@@ -69,7 +70,12 @@ const buildIcons = () => {
     .src(config.icons.src)
     .pipe(plumber({ errorHandler: errorHandler }))
     .pipe(svgmin())
-    .pipe(rename({ prefix: "icon-" }))
+    .pipe(rename(function (file) {
+      let name = ['icon'];
+      name = name.concat(file.dirname.split(path.sep));
+      name.push(file.basename.replace(' ', '-').toLowerCase());
+      file.basename = name.join('-');
+    }))
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename(config.icons.dest_name))
     .pipe(

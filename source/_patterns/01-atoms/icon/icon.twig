@@ -3,6 +3,7 @@
  * Available variables:
  * - icon - primary variable
  *   - name: the name of the svg file, without file extension
+ *   - set: the icon set to use [fa, line-white, line-dark]
  *   - width: the width of the svg
  *   - height: the height of the svg
  *   - title: the title of the svg
@@ -30,7 +31,7 @@
 {% if icon.name %}
   {% spaceless %}
     <svg class="{{ classes|join(' ') }}" width="{{ width }}" height="{{ height }}" role="img" aria-label="{{ icon.title ?? icon.name|title }}">
-      <use xlink:href="{{ icon.file }}#icon-{{ icon.name }}"></use>
+      <use xlink:href="{{ icon.file }}#icon-{{ icon.set ~ '-' ~ icon.name }}"></use>
     </svg>
   {% endspaceless %}
 {% endif %}
