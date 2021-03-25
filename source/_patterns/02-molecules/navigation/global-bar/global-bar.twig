@@ -1,8 +1,8 @@
-{% set aria__banner_label = 'Judicial Branch of California branding.  Skip this banner to the current site.' %}
-{% set aria__logo_label = 'Judicial Branch logo linked to its site' %}
+{% set aria__banner_label = 'Official California Judicial Branch website' %}
+{% set aria__logo_label = 'California Judicial Branch logo and link to the main website' %}
 {% if is_footer %}
-  {% set aria__banner_label = 'Judicial Branch branding repeated in the footer. You have reached the bottom of the page.' %}
-  {% set aria__logo_label = 'Judicial Branch logo repeated in the footer and linked to its site' %}
+  {% set aria__banner_label = 'Judicial Branch website copyright and relevant privacy information' %}
+  {% set aria__logo_label = 'California Judicial Branch logo repeated in the footer' %}
 {% endif %}
 
 <div class="jcc-global-bar" role="region" aria-label="{{ global_bar.aria_label|default(aria__banner_label) }}">
