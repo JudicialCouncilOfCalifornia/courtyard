@@ -1,0 +1,29 @@
+hero_tiles:
+  title:
+    first: "Welcome to the"
+    second: "Superior Court of San Bernardino"
+  tiles:
+    - text: "Jury Service"
+      url: "#"
+      icon:
+        name: "jury"
+        set: "line-white"
+        title: "Jury Service"
+    - text: "Traffic Tickts"
+      url: "#"
+      icon:
+        name: "paper-traffic-ticket"
+        set: "line-white"
+        title: "Traffic Tickets"
+    - text: "Case Information"
+      url: "#"
+      icon:
+        name: "website-remote-hearing"
+        set: "line-white"
+        title: "Remote Hearings"
+    - text: "Pay Fines & Fees"
+      url: "#"
+      icon:
+        name: "website-e-file"
+        set: "line-white"
+        title: "E-filing"

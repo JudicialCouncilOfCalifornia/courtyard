@@ -1,0 +1,68 @@
+{#
+/**
+ * Available variables:
+ * - hero_tiles - primary variable
+ *   - style: general style of hero [background-image, side-image, no-image]
+ *   - image: image url
+ *   - title: the title
+ *     - first: first portion
+ *     - second: second portion
+ *   - tiles: the navigation tiles
+ *     - icon:
+ *       - name: the icon's name
+ *       - set: the icon set to use [fa, line-white, line-dark]
+ *       - title: the textual title
+ *     - text: the text of the tile
+ *     - url: the url of the tile
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set style = hero_tiles.style|default('no-image') %}
+
+{% set classes = [
+  'jcc-hero-tiles',
+  'jcc-hero-tiles--' ~ style,
+]|merge(hero_tiles.classes|default([])) %}
+
+<div class="{{ classes|join(' ') }}">
+  {% if style == 'background-image' %}
+    <div class="jcc-hero-tiles__background">
+      <img src="{{ hero_tiles.image }}" alt="Hero image">
+    </div>
+  {% endif %}
+
+  <div class="jcc-hero-tiles__title-container">
+    <span class="jcc-hero-tiles__title-prefix">{{ hero_tiles.title.first }}</span>
+    <h1 class="jcc-hero-tiles__title">{{ hero_tiles.title.second }}</h1>
+  </div>
+
+  <div class="jcc-hero-tiles__tiles-side">
+    <ul class="jcc-hero-tiles__tiles">
+      {% for tile in hero_tiles.tiles %}
+        <li class="jcc-hero-tiles__tile" data-index="{{ loop.index }}">
+          <a href="{{ tile.url }}">
+            <h2 class="jcc-hero-tiles__tile-title">{{ tile.text }}</h2>
+            <span class="jcc-hero-tiles__tile-icon">
+              {% include "@atoms/icon/icon.twig" with {
+                icon: {
+                  name: tile.icon.name,
+                  set: tile.icon.set,
+                  title: tile.icon.title,
+                  width: 80,
+                  height: 80,
+                }
+              } %}
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if style == 'side-image' %}
+      <div class="jcc-hero-tiles__side">
+        <img src="{{ hero_tiles.image }}" alt="Hero image">
+      </div>
+    {% endif %}
+  </div>
+</div>

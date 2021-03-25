@@ -1,0 +1,247 @@
+$_config_schemes: (
+  base: (
+    tiles: (
+      // tiles 1-4
+      secondary,
+      primary-dark,
+      primary-vivid,
+      primary-darker,
+    ),
+    background-overlay: primary,
+    title-prefix: primary,
+    title-prefix-dash: accent-warm,
+    title: primary-darker,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-hero-tiles {
+  @include u-position(relative);
+}
+
+.jcc-hero-tiles__tiles {
+  @include list-reset();
+
+  @include at-media(mobile-lg) {
+    @include grid-row();
+  }
+
+  .jcc-hero-tiles__tile {
+    @include at-media(mobile-lg) {
+      @include grid-col(6);
+    }
+
+    @include at-media(desktop) {
+      .jcc-hero-tiles--no-image &,
+      .jcc-hero-tiles--background-image & {
+        @include grid-col(3);
+      }
+    }
+  }
+}
+
+.jcc-hero-tiles__tile {
+  $_tiles: map-get($_config, tiles);
+  @include u-position(relative);
+
+  @for $i from length($_tiles) through 1 {
+    $tile: nth($_tiles, $i);
+    &[data-index="#{$i}"] {
+      z-index: length($_tiles) - $i +1;
+
+      a {
+        background-color: color($tile);
+
+        &:hover {
+          background-color: darken(color($tile), 5%);
+        }
+      }
+    }
+  }
+
+  a {
+    @include u-display(flex);
+    @include u-align-items(align-center);
+    @include u-height(full);
+    @include u-padding-x(2);
+    @include u-color("white");
+    @include u-text-decoration(no-underline);
+    height: 110px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
+    @include at-media(mobile-lg) {
+      @include u-justify-content(justify-center);
+      @include u-padding-y(3);
+      flex-direction: column;
+      height: 180px;
+    }
+
+    @include at-media(tablet) {
+      @include u-padding-x(6);
+      height: 230px;
+    }
+
+    &:hover {
+      @include u-text-decoration(underline);
+    }
+  }
+}
+
+.jcc-hero-tiles__tile-icon {
+  @include u-display(flex);
+  @include u-justify-content(justify);
+  @include u-order(1);
+  @include u-padding-left(1.5);
+  @include u-padding-right(3);
+  box-sizing: content-box;
+
+  @include at-media(mobile-lg) {
+    @include u-padding(0);
+    @include u-margin-bottom(2);
+  }
+
+  @include at-media(tablet) {
+    @include u-margin-bottom(3);
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+
+    @include at-media(tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.jcc-hero-tiles__tile-title {
+  @include u-order(2);
+  @include u-color("white");
+  @include u-font(sans, sm);
+  letter-spacing: 0.5px;
+
+  @include at-media(mobile-lg) {
+    @include u-text-align(center)  ;
+  }
+
+  @include at-media(tablet) {
+    @include u-font(sans, md);
+  }
+}
+
+.jcc-hero-tiles__tiles-side {
+  @include grid-container(widescreen);
+
+  @include at-media(desktop) {
+    .jcc-hero-tiles--side-image & {
+      @include grid-row();
+
+      .jcc-hero-tiles__tiles,
+      .jcc-hero-tiles__side {
+        @include grid-col(6);
+      }
+    }
+  }
+}
+
+.jcc-hero-tiles__side {
+  @include at-media-max(desktop) {
+    @include u-display(none);
+  }
+
+  .jcc-hero-tiles--side-image & {
+    img {
+      @include u-width(full);
+      @include u-height(full);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+}
+
+.jcc-hero-tiles__background {
+  @include u-display(none);
+
+  @include at-media(desktop) {
+    @include u-display(block);
+    @include u-position(absolute);
+    @include u-width(full);
+    height: 375px;
+    height: calc(100% - 115px); // 115px is 1/2 of tile height (230px)
+    z-index: 0;
+
+    &::before {
+      @include u-display(block);
+      @include u-position(absolute);
+      @include u-width(full);
+      @include u-height(full);
+      content: '';
+      background: rgba(color(map-get($_config, background-overlay)), 0.3);
+      z-index: 1;
+    }
+  }
+
+  img {
+    @include u-width(full);
+    @include u-height(full);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.jcc-hero-tiles__title-container {
+  @include grid-container(widescreen);
+  @include u-position(relative);
+  @include u-padding-top(3);
+  @include u-padding-bottom(2);
+  @include u-text-align(center);
+
+  @include at-media(desktop) {
+    .jcc-hero-tiles--background-image & {
+      @include u-padding-top(8);
+    }
+  }
+}
+
+.jcc-hero-tiles__title-prefix {
+  @include add-dash(
+    $dash-color: map-get($_config, title-prefix-dash),
+    $dash-position: "below-center",
+    $dash-width: 75px,
+  );
+
+  @extend .jcc-h5;
+  @include u-display(block);
+  @include u-margin-bottom(1.5);
+  @include u-padding-bottom(2);
+  @include u-font(sans, 2xs);
+  @include u-color(map-get($_config, title-prefix));
+
+  @include at-media(desktop) {
+    @include u-margin-bottom(1);
+    @include u-padding-bottom(4);
+    @include u-font(sans, lg);
+
+    &::after {
+      width: 115px;
+    }
+
+    .jcc-hero-tiles--background-image & {
+      @include u-color("white");
+    }
+  }
+}
+
+.jcc-hero-tiles__title {
+  @include u-color(map-get($_config, title));
+
+  @include at-media(desktop) {
+    @include u-margin-bottom(5);
+
+    .jcc-hero-tiles--background-image & {
+      @include u-color("white");
+    }
+  }
+}
