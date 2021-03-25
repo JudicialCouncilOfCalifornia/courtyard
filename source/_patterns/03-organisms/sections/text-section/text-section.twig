@@ -2,6 +2,7 @@
   'jcc-text-section',
   'jcc-text-section--' ~ text_section.background_variant|default('has-background-color--transparent'),
   'jcc-text-section--' ~ text_section.column_variant|default('has-two-columns-threequarter'),
+  text_section.padding_adjustment,
 ]|merge(text_section.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}"{% if text_section.id %} id="{{ text_section.id }}"{% endif %}>
