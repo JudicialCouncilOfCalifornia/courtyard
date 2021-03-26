@@ -7,13 +7,30 @@
  *     - text: the link text
  *     - url: the link url
  *   - hat: hat section
- *   - title: the title of the court
- *     - first: first portion
- *     - second: second portion
- *   - social_links: social links/icons
- *     - name: name of icon
- *     - title: title of icon
- *     - url: the link url
+ *   - logo: the site's logo/name
+ *     - title: the name of the site
+ *     - svg: the url to the svg
+ *   - links: main menu links
+ *     - text: link text
+ *     - url: link url
+ *     - id: link id
+ *     - is_current: is the link the current page, or in the active-trail?
+ *     - section_link: link to primary level section/overview
+ *       - text: link text
+ *       - url: link url
+ *     - links: second level links
+ *       - text: link text
+ *       - url: link url
+ *       - is_current: is the link the current page, or in the active-trail?
+ *       - links: tertiary level links
+ *         - text: link text
+ *         - url: link url
+ *         - is_current: is the link the current page, or in the active-trail?
+ *   - translate: links to switch languages
+ *     - text: button text
+ *     - links:
+ *       - text: link text
+ *       - url: link url
  *   - classes: array of classes to add to component
  */
 #}
@@ -46,7 +63,7 @@
           {% if header.logo.svg %}
             <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
           {% endif %}
-          <em class="usa-logo__text">Project title</em>
+          <em class="usa-logo__text">{{ header.logo.title }}</em>
         </a>
       </div>
 
