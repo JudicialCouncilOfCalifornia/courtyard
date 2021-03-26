@@ -6,8 +6,18 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
+.jcc-section {
+  @include u-padding-top(9);
+}
+
 .jcc-section--background-alt {
+  @include u-margin-top(9);
+  @include u-padding-bottom(2.5);
   @include u-bg(map-get($_config, alt-background));
+
+  + .jcc-section--background-alt {
+    @include u-margin-top(0);
+  }
 }
 
 .jcc-section--container {
