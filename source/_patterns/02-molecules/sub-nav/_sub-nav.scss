@@ -1,0 +1,74 @@
+$_config_schemes: (
+  base: (
+    border: secondary-lighter,
+    text: secondary,
+    current-text: "white",
+    current-background: primary,
+    back-link-text: primary,
+    back-link-background: secondary-lighter,
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-sub-nav__container {
+  @include at-media(tablet) {
+    @include grid-container(widescreen);
+  }
+}
+
+.jcc-sub-nav__items {
+  @include list-reset();
+
+  @include at-media(tablet) {
+    @include grid-row();
+    @include u-border-bottom(solid, map-get($_config, border));
+    border-bottom-width: 3px;
+  }
+}
+
+.jcc-sub-nav__item {
+  @include at-media-max(tablet) {
+    @include u-border-bottom(solid, map-get($_config, border));
+    border-bottom-width: 3px;
+  }
+
+  a {
+    @include u-display(flex);
+    @include u-align-items(align-center);
+    @include u-padding-x(3);
+    @include u-color(map-get($_config, text));
+    @include u-text-decoration(no-underline);
+    height: 40px;
+    letter-spacing: 0.17px;
+
+    @include at-media(tablet) {
+      height: 52px;
+    }
+
+    &.back-link {
+      @include u-justify-content(justify-end);
+      @include u-bg(map-get($_config, back-link-background));
+      @include u-color(map-get($_config, back-link-text));
+
+      span {
+        @include u-order(2);
+      }
+
+      svg {
+        @include u-order(1);
+      }
+    }
+
+    &:hover,
+    &.usa-current {
+      @include u-bg(map-get($_config, current-background));
+      @include u-color(map-get($_config, current-text));
+    }
+  }
+
+  svg {
+    @include u-margin-right(0.5);
+  }
+}
