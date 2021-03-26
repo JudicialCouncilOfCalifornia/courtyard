@@ -16,11 +16,13 @@
 
     {% if is_footer %}
       <div class="jcc-footer-global-wrapper">
-        <nav class="jcc-global__menu" aria-label="Web policies and usage menu">
-          {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
-            inline_nav : global_bar.secondary_nav
-          } %}
-        </nav>
+        {% if global_bar.secondary_nav.items %}
+          <nav class="jcc-global__menu" aria-label="Web policies and usage menu">
+            {% include '@molecules/navigation/inline-nav/inline-nav.twig' with {
+              inline_nav : global_bar.secondary_nav
+            } %}
+          </nav>
+        {% endif %}
         <div class="jcc-footer-global-copyright">
           &copy;
           {{ "now"|date("Y") }}
