@@ -4,6 +4,11 @@
       body: entry.body
     } %}
 
+  {% elseif entry.type == 'hero' %}
+    {% include '@molecules/hero/hero.twig' with {
+      hero: entry.hero
+    } %}
+
   {% elseif entry.type == 'accordion' %}
     {% include '@organisms/accordion/accordion.twig' with {
       accordion: entry.accordion

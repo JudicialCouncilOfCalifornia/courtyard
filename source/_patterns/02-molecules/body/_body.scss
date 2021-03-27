@@ -6,10 +6,6 @@
 }
 
 .jcc-body__main {
-  @include at-media-max(desktop) {
-    @include u-margin-bottom(10);
-  }
-
   @include at-media(desktop) {
     @include grid-col(8);
   }
@@ -18,6 +14,12 @@
 .jcc-body__aside {
   @include at-media(desktop) {
     @include grid-col(4);
+  }
+
+  .jcc-body__main + & {
+    @include at-media-max(desktop) {
+      @include u-margin-top(10);
+    }
   }
 }
 
