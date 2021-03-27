@@ -76,6 +76,14 @@ entries:
           link:
             url: "#"
             text: "Diamtempor"
+  - type: 'body'
+    body:
+      main:
+        title: "Dicgtumst digam nunc laet molestierci temp tellus fermentum"
+        text: >
+          <p>This is the <a href="#">style of a link</a> and <strong>bold text would like this</strong>. <em>Italic text would look like this</em>. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <h3>Next Header 3</h3>
+          <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet.</p>
   - type: 'action-list'
     action_list:
       heading:
