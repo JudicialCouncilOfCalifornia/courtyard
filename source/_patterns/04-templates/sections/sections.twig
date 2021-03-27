@@ -1,0 +1,22 @@
+{% for entry in entries %}
+  {% if entry.type == 'body' %}
+    {% include '@molecules/body/body.twig' with {
+      body: entry.body
+    } %}
+
+  {% elseif entry.type == 'accordion' %}
+    {% include '@organisms/accordion/accordion.twig' with {
+      accordion: entry.accordion
+    } %}
+
+  {% elseif entry.type == 'action-list' %}
+    {% include '@organisms/action-list/action-list.twig' with {
+      action_list: entry.action_list
+    } %}
+
+  {% elseif entry.type == 'cards' %}
+    {% include '@organisms/cards/cards.twig' with {
+      cards: entry.cards
+    } %}
+  {% endif %}
+{% endfor %}

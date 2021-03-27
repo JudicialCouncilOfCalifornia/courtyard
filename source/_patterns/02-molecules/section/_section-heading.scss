@@ -25,7 +25,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
-        $top-spacing: 0,
         $inner-color: color(map-get($_config, alt-background))
       );
     }

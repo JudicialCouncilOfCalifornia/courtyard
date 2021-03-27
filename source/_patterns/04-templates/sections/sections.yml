@@ -1,0 +1,118 @@
+entries:
+  - type: 'accordion'
+    accordion:
+      heading:
+        title: "Accordion"
+      items:
+        - title: "First Amendment"
+          body: "<p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>"
+        - title: "Second Amendment Metus dictumst donec fringilla habitant habitasse in diam"
+          body: "<p>A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.</p> <ul><li>This is a list item</li><li>Another list item</li></ul>"
+        - title: "Third Amendment"
+          body: "<p>No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.</p>"
+        - title: "Fourth Amendment"
+          body: "<p>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</p>"
+        - title: "Fifth Amendment"
+          body: "<p>No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offence to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.</p>"
+  - type: "cards"
+    cards:
+      background: alt
+      heading:
+        title: "Cards"
+        lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis. Sagittis diam dignissim risus mattis ad donec urna, non ligula dui viverra rhoncus convallis netus vivamus, platea iaculis consectetur pellentesque litora dolor.</p>"
+      num_cols: 1
+      items:
+        - style: "media-left"
+          title: "Posuere et ornare"
+          body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+          media: "<svg class='icon icon-laptop' width='35' height='35' role='img' aria-label='Laptop'><use xlink:href='#icon-fa-laptop'></use></svg>"
+          link:
+            url: "#"
+            text: "Luctus nunc quam"
+        - style: "media-left"
+          title: "Posuere et ornare"
+          body: "<p>Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat, euismod potenti inceptos nibh mauris posuere scelerisque facilisi.</p>"
+          media: "<svg class='icon icon-landmark' width='35' height='35' role='img' aria-label='Landmark'><use xlink:href='#icon-fa-landmark'></use></svg>"
+          link:
+            url: "#"
+            text: "Erat neque quisque vivamus"
+        - style: "media-left"
+          title: "Posuere et ornare"
+          body: "<p>In torquent consequat quam vulputate himenaeos semper ut aliquam at, iaculis ac platea laoreet ridiculus mattis sagittis volutpat hendrerit, vehicula orci dictum dictumst nunc scelerisque lacus auctor.</p>"
+          media: "<svg class='icon icon-comment-alt' width='35' height='35' role='img' aria-label='Comment'><use xlink:href='#icon-fa-comment-alt'></use></svg>"
+          link:
+            url: "#"
+            text: "Aliquet potenti"
+        - style: "media-left"
+          title: "Posuere et ornare"
+          body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+          media: "<svg class='icon icon-money-bill-wave' width='35' height='35' role='img' aria-label='Money bill'><use xlink:href='#icon-fa-money-bill-wave'></use></svg>"
+          link:
+            url: "#"
+            text: "Luctus nunc quam"
+  - type: 'cards'
+    cards:
+      background: alt
+      heading:
+        title: "Cards"
+        lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+      num_cols: 3
+      items:
+        - style: "cta"
+          title: "Iaculis proin erat porttitor"
+          body: "<p>Pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+          link:
+            url: "#"
+            text: "Ullamcorper elit"
+        - style: "cta"
+          title: "Consequat nostra vel"
+          body: "<p>Lacus nec laoreet velit augue tellus justo ornare.</p>"
+          link:
+            url: "#"
+            text: "Luctus nunc quam"
+        - style: "cta"
+          title: "Consequat"
+          body: "<p>Habitasse parturient amet vulputate venenatis vel torquent, habitant enim massa sociosqu ultrices accumsan, taciti sociis leo curabitur feugiat auctor mattis dignissim scelerisque.</p>"
+          link:
+            url: "#"
+            text: "Diamtempor"
+  - type: 'action-list'
+    action_list:
+      heading:
+        title: "Action List"
+        lead: "Molestie dolor nec nam maecenas proin quisque malesuada habitant, potenti id curabitur ridiculus pretium faucibus quis, non per facilisis habitasse dapibus parturient magna."
+      items:
+        - title: "First brief sentence describing the action"
+          body: "One to two sentences providing addition details about the action link."
+          link:
+            text: "Click 1"
+            url: "#"
+            style: 'primary'
+        - title: "Second brief sentence describing the action"
+          body: "One to two sentences providing addition details about the action link. Sociis metus velit cras augue vulputate in etiam, habitant nostra egestas facilisi lorem dis blandit, massa vehicula praesent aenean libero neque."
+          link:
+            text: "Click 2 longer Ridiculus morbi aptent placerat integer"
+            url: "#"
+        - title: "Third brief sentence describing the action"
+          body: "One to two sentences providing addition details about the action link."
+          link:
+            text: "Click 3"
+            url: "#"
+  - type: 'body'
+    body:
+      main:
+        title: "Dicgtumst digam nunc laoreet molestie"
+        lead: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet purus arcu, eget tincidunt odio laoreet ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
+        text: >
+          <p>This is the <a href="#">style of a link</a> and <strong>bold text would like this</strong>. <em>Italic text would look like this</em>. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <hr>
+          <h3>Next Header 3</h3>
+          <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet.</p>
+          <h4>More Header 4</h4>
+          <p>Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      aside:
+        title: "Dapibus dictumst litora lacinia"
+        text: >
+          <p>Praesent duis varius imperdiet quis ligula non nisi ante.</p>
+          <p><a href="#" class="usa-button">A link button</a></p>
+          <p><a href="#" class="usa-button usa-button--cta-link">CTA link</a></p>

@@ -11,7 +11,7 @@ $_config_schemes: (
       "usa-button",
       "usa-button--secondary",
     ),
-    icon-color: primary-light
+    icon-color: primary-light,
   ),
   local: (
     title-link: (
@@ -73,9 +73,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__content {
-  @include u-height(full);
   @include u-display(flex);
   @include u-flex-direction(column);
+  @include u-width(full);
+  @include u-height(full);
 }
 
 .usa-card__heading {
