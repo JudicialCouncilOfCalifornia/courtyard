@@ -1,20 +1,21 @@
 $_config_schemes: (
   base: (
-    brow-color: "base-dark",
-    title-color: "primary-darker",
+    brow-color: base-dark,
+    title-color: primary-darker,
     title-link: (
-      default: "primary",
-      hover: "primary-dark",
-      active: "primary-darker",
+      default: primary,
+      hover: primary-dark,
+      active: primary-darker,
     ),
     action-button: (
       "usa-button",
       "usa-button--secondary",
     ),
+    icon-color: primary-light
   ),
   local: (
     title-link: (
-      default: "primary-vivid",
+      default: primary-vivid,
     ),
     action-button: (
       "usa-button",
@@ -56,6 +57,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-border-width(0);
     @include u-bg("transparent");
   }
+
+  .usa-card--media-left & {
+    @include at-media(tablet) {
+      @include grid-row();
+      @include u-flex(no-wrap);
+      @include u-flex-direction(row);
+      @include u-padding-x(4);
+    }
+  }
 }
 
 .usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
@@ -84,16 +94,26 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   letter-spacing: 0.09px;
 }
 
-.usa-card__body {
-  @include u-color($theme-text-color);
-}
-
 .usa-card__footer {
   @include u-margin-top(4);
+
+  .usa-card--media-left & {
+    @include u-margin-top(0.5);
+  }
 
   a {
     @each $button in map-get($_config, action-button) {
       @extend .#{$button};
     }
+  }
+}
+
+.usa-card__media {
+  @include u-margin-right(5);
+  @include u-color(map-get($_config, icon-color));
+
+  .icon {
+    width: 80px;
+    height: 80px;
   }
 }

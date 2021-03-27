@@ -2,7 +2,7 @@
 /**
  * Available variables:
  * - card - primary variable
- *   - style: general style of card [hover, cta, borderless]
+ *   - style: general style of card [hover, cta, borderless, media-left]
  *   - title: title of card
  *   - brow: text in upper left
  *   - body: main text content
@@ -53,7 +53,7 @@
         </div>
       {% endif %}
 
-      {% if style == 'cta' %}
+      {% if style == 'cta' or style == 'media-left' %}
         <div class="usa-card__footer">
           <a href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
