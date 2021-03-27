@@ -1,0 +1,141 @@
+$_config_schemes: (
+  base: (
+    brow: base-dark,
+    title: ink,
+    phone: secondary,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-location__container {
+  @include grid-container(widescreen);
+
+  @include at-media(desktop) {
+    @include grid-row();
+    @include grid-gap(4);
+  }
+}
+
+.jcc-location__content-first {
+  @include u-maxw(mobile-lg);
+  @include u-margin-x(auto);
+  @include u-margin-bottom(2);
+
+  @include at-media(desktop) {
+    @include grid-col(3);
+    @include u-order(2);
+  }
+}
+
+.jcc-location__content-second {
+  @include at-media(desktop) {
+    @include grid-col(9);
+    @include u-order(1);
+  }
+}
+
+.jcc-location__location-tags {
+  @include at-media(desktop) {
+    @include grid-row();
+    @include grid-gap(4);
+  }
+}
+
+.jcc-location__location {
+  @include at-media(desktop) {
+    @include grid-col(8);
+  }
+}
+
+.jcc-location__tags {
+  @include at-media(desktop) {
+    @include grid-col(4);
+  }
+}
+
+.jcc-location__title {
+  @include u-margin-bottom(1);
+  @include u-color(map-get($_config, title));
+  @extend .jcc-h4;
+}
+
+.jcc-location__brow {
+  @include u-color(map-get($_config, brow));
+}
+
+.jcc-location__phone {
+  @include u-margin-bottom(2);
+
+  a {
+    @include u-text(no-underline);
+    @include u-color(map-get($_config, phone));
+
+    &:hover {
+      @include u-text(underline);
+    }
+  }
+}
+
+.jcc-location__additional {
+  @include u-margin-bottom(2.5);
+
+  p {
+    @include u-margin-bottom(2.5);
+  }
+}
+
+.jcc-location__tags-label {
+  @include u-margin-bottom(0.5);
+  @include u-font-weight(bold);
+}
+
+.jcc-location__hours-label {
+  @include u-font-weight(bold);
+}
+
+.jcc-location__tags-list {
+  @include u-margin-bottom(1);
+}
+
+.jcc-location__hours-items {
+  @include grid-row();
+  @include grid-gap(4);
+}
+
+.jcc-location__hours-item {
+  @include u-margin-bottom(2);
+
+  @include at-media(tablet-lg) {
+    [data-quantity="3"] > & {
+      @include grid-col(4);
+    }
+  }
+}
+
+.jcc-location__map {
+  @include u-position(relative);
+
+  &::after {
+    @include u-display(block);
+    padding-bottom: 100%;
+    content: "";
+  }
+
+  img {
+    @include u-position(absolute);
+    @include u-width(full);
+    @include u-height(full);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.jcc-location__directions {
+  @include u-margin-top(1.5);
+
+  a,
+  a:visited {
+    @include u-width(full);
+  }
+}
