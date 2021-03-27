@@ -26,3 +26,12 @@
     }
   }
 }
+
+.jcc-cards--1cols {
+  @include at-media(tablet-lg) {
+    > li {
+      @include grid-col(10);
+      @include grid-offset(1);
+    }
+  }
+}
