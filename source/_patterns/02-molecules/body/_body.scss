@@ -11,6 +11,10 @@
   }
 }
 
+.jcc-body__main-text {
+  @include u-overflow(hidden);
+}
+
 .jcc-body__aside {
   @include at-media(desktop) {
     @include grid-col(4);
