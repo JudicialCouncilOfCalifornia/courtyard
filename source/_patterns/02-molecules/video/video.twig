@@ -17,8 +17,8 @@
     'modestbranding=1',
     'rel=0',
     'playsinline=1',
-    'autoplay=1',
     'controls=1',
+    video.cover ? 'autoplay=1',
   ] %}
   {% set url = 'https://www.youtube.com/embed/' ~ video.video_id ~ '?' ~ parameters|trim_empty|join('&') %}
 
@@ -27,7 +27,7 @@
     'byline=0',
     'portrait=0',
     'title=0',
-    'autoplay=1',
+    video.cover ? 'autoplay=1',
   ] %}
   {% set url = 'https://player.vimeo.com/video/' ~ video.video_id ~ '?' ~ parameters|trim_empty|join('&') %}
 {% endif %}
