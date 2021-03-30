@@ -52,4 +52,8 @@
   > blockquote {
     @include u-margin-top(2);
   }
+
+  > .embed-responsive {
+    @include u-margin-top(2);
+  }
 }
