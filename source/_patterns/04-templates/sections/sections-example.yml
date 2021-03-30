@@ -3,7 +3,7 @@ entries:
     hero:
       background: alt
       main:
-        title: "Section examples"
+        title: "Sections example"
         lead: "<p>Examples of components to see/verify stacking and spacing.</p>"
   - type: 'accordion'
     accordion:
