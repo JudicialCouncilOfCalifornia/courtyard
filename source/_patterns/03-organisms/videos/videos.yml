@@ -1,0 +1,21 @@
+videos:
+  heading:
+    title: "Videos"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+  items:
+    - title: "Quam donec quis ante"
+      description: "Elit velit augue tristique vivamus molestie hendrerit senectus neque, gravida egestas penatibus duis venenatis mi orci ut, lacinia non eu nunc suscipit cursus interdum."
+      video:
+        video_id: "esnMDtMysHo"
+        provider: "YouTube"
+        width: 1920
+        height: 1080
+        cover: "https://placeimg.com/2000/1350/nature"
+    - title: "Porta ridiculus natoque"
+      description: "Nascetur egestas dui lacus condimentum potenti risus per augue diam, conubia at fusce primis porta phasellus nisl mollis laoreet, nullam enim aptent quis odio aliquet tristique id."
+      video:
+        video_id: "267853632"
+        provider: "Vimeo"
+        width: 640
+        height: 360
+        cover: "https://placeimg.com/2000/1350/architecture"

@@ -1,0 +1,25 @@
+.jcc-videos {
+  @include unstyled-list();
+
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap(5);
+  }
+
+  > li {
+    @include u-margin-bottom(5);
+
+    @include at-media(tablet-lg) {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-videos__item-video {
+  @include u-margin-bottom(5);
+}
+
+.jcc-videos__item-title {
+  @extend .jcc-h4;
+  @include u-margin-bottom(3);
+}

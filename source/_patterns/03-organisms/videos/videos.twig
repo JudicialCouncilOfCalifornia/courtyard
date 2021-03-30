@@ -1,0 +1,45 @@
+{#
+/**
+ * Available variables:
+ * - videos - primary variable
+ *   - heading: the heading (title & lead)
+ *   - items: array of video items
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-videos',
+]|merge(videos.classes|default([])) %}
+
+{% set content %}
+  <ul class="{{ classes|join(' ')|trim }}">
+    {% for item in videos.items %}
+      <li class="jcc-videos__item">
+        <div class="jcc-videos__item-video">
+          {% include "@molecules/video/video.twig" with {
+            video: item.video
+          } %}
+        </div>
+
+        {% if item.title %}
+          <h3 class="jcc-videos__item-title">
+            {{ item.title }}
+          </h3>
+        {% endif %}
+        {% if item.description %}
+          <div class="jcc-videos__item-description">
+            {{ item.description }}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    heading: videos.heading,
+    content: content,
+  }
+} %}

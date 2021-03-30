@@ -1,0 +1,65 @@
+{#
+/**
+ * Available variables:
+ * - video - primary variable
+ *   - video_id: the id of the video
+ *   - provider: video provider [YouTube, Vimeo]
+ *   - width: width of video
+ *   - height: height of video
+ *   - cover: url of image to cover the video
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% if video.provider == 'YouTube' %}
+  {% set parameters = [
+    'fs=0',
+    'modestbranding=1',
+    'rel=0',
+    'playsinline=1',
+    'autoplay=1',
+    'controls=1',
+  ] %}
+  {% set url = 'https://www.youtube.com/embed/' ~ video.video_id ~ '?' ~ parameters|trim_empty|join('&') %}
+
+{% elseif video.provider == 'Vimeo' %}
+  {% set parameters = [
+    'byline=0',
+    'portrait=0',
+    'title=0',
+    'autoplay=1',
+  ] %}
+  {% set url = 'https://player.vimeo.com/video/' ~ video.video_id ~ '?' ~ parameters|trim_empty|join('&') %}
+{% endif %}
+
+{#
+  Common aspect ratios:
+    - Cinemascope 21:9 (.428571429)
+    - HD video 16:9 (.5625)
+    - Classic film 3:2 (.666666667)
+    - Standard monitor 4:3 (.75)
+#}
+{% set ratio = video.height / video.width %}
+
+{# Store the url so the video doesn't autoplay, #}
+{# and use javascript to start it when the cover is clicked #}
+{% if video.cover %}
+  {% set data_url = url %}
+  {% set url = '' %}
+{% endif %}
+
+{% set classes = [
+  'embed-responsive',
+  video.cover ? 'embed-wrapper embed-covered',
+]|merge(video.classes|default([])) %}
+
+<div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">
+  <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
+    width="{{ video.width }}" height="{{ video.height }}"
+    src="{{ url }}" data-src="{{ data_url }}"
+    frameborder="0" allow="autoplay"></iframe>
+
+  {% if video.cover %}
+    <button class="embed-cover" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
+  {% endif %}
+</div>
