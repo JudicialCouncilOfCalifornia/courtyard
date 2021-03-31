@@ -1,0 +1,9 @@
+.jcc-locations {
+  @include list-reset();
+}
+
+.jcc-locations__item {
+  @include u-margin-bottom(5);
+  @include u-padding-bottom(3);
+  border-bottom: 3px solid color(base-lighter);
+}

@@ -1,0 +1,30 @@
+{#
+/**
+ * Available variables:
+ * - locations - primary variable
+ *   - items: array of location items
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-locations',
+]|merge(locations.classes|default([])) %}
+
+{% set content %}
+  <ul class="{{ classes|join(' ')|trim }}">
+    {% for item in locations.items %}
+      <li class="jcc-locations__item">
+        {% include "@molecules/location/location.twig" with {
+          location: item
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    content: content,
+  }
+} %}

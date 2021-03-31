@@ -1,0 +1,56 @@
+locations:
+  items:
+    -
+      container: "no-container"
+      brow: "Courthouse"
+      title: "Santa Cruz Courthouse"
+      address: "701 Ocean Street<br>Santa Cruz, CA 95060"
+      phone:
+        text: "(831) 420-2200"
+        url: "tel:831-420-2200"
+      tags:
+        - text: "Family"
+        - text: "Criminal"
+        - text: "Probate"
+        - text: "Traffic"
+        - text: "Small claims"
+      additional: >
+        <p><strong>Parking:</strong> Limited free parking is available in a lot next to the courthouse.</p>
+        <p><strong>Transportation:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      hours_label: "Hours"
+      hours:
+        - label: "Building"
+          details: "M-F: 8:00AM - 5:00PM"
+        - label: "Clerks"
+          details: "M-F: 8:00AM - 3:00PM"
+        - label: "Self Help"
+          details: "M, Tu, Thu, F: 8:15AM - 12:00PM<br>W: N/A"
+      map: "<img src='https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg' alt='Santa Cruz Courthouse'>"
+      directions_text: "Get Directions"
+    -
+      container: "no-container"
+      brow: "Courthouse"
+      title: "Santa Cruz Courthouse"
+      address: "701 Ocean Street<br>Santa Cruz, CA 95060"
+      phone:
+        text: "(831) 420-2200"
+        url: "tel:831-420-2200"
+      tags:
+        - text: "Family"
+        - text: "Criminal"
+        - text: "Probate"
+        - text: "Traffic"
+        - text: "Small claims"
+      additional: >
+        <p><strong>Parking:</strong> Limited free parking is available in a lot next to the courthouse.</p>
+        <p><strong>Transportation:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      hours_label: "Hours"
+      hours:
+        - label: "Building"
+          details: "M-F: 8:00AM - 5:00PM"
+        - label: "Clerks"
+          details: "M-F: 8:00AM - 3:00PM"
+        - label: "Self Help"
+          details: "M, Tu, Thu, F: 8:15AM - 12:00PM<br>W: N/A"
+      map: "<img src='https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg' alt='Santa Cruz Courthouse'>"
+      directions_text: "Get Directions"

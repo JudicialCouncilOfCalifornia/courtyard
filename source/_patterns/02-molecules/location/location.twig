@@ -2,6 +2,7 @@
 /**
  * Available variables:
  * - location - primary variable
+ *   - container: container to constrain content [container, no-container]
  *   - title: the title of this location
  *   - brow: small brow text
  *   - address: the street address (use <br> to separate lines)
@@ -23,6 +24,7 @@
 
 {% set classes = [
   'jcc-location',
+  'jcc-location--' ~ location.container|default('no-container'),
 ]|merge(location.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">

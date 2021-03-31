@@ -9,11 +9,13 @@ $_config_schemes: (
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-location__container {
-  @include grid-container(widescreen);
-
   @include at-media(desktop) {
     @include grid-row();
     @include grid-gap(4);
+  }
+
+  .jcc-location--container & {
+    @include grid-container(widescreen);
   }
 }
 
