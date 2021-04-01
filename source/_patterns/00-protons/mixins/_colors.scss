@@ -25,7 +25,7 @@
 // Change text color (the selector & its children).
 @mixin text-color($color) {
   &,
-  h3, h4, h5, h6,
+  h2, h3, h4, h5, h6,
   p, li, a {
     @include u-color($color);
   }

@@ -29,7 +29,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
-        $inner-color: color(map-get($_config, alt-background))
+        $inner-color: map-get($_config, alt-background)
       );
     }
 
@@ -37,7 +37,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include add-dash(
         $dash-position: "left-right",
         $inner-spacing: 150px,
-        $inner-color: color(map-get($_config, background))
+        $inner-color: map-get($_config, background)
       );
     }
   }
@@ -53,7 +53,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,
-        $inner-color: color(map-get($_config, alt-background))
+        $inner-color: map-get($_config, alt-background)
       );
     }
 
@@ -61,7 +61,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include add-dash(
         $dash-position: "right",
         $inner-spacing: 150px,
-        $inner-color: color(map-get($_config, background))
+        $inner-color: map-get($_config, background)
       );
     }
   }

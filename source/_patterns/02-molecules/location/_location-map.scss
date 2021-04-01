@@ -1,0 +1,151 @@
+$_config_schemes: (
+  base: (
+    background: primary-darker,
+    text: "white",
+    marker: secondary-light,
+    link-button: (
+      "usa-button",
+      "usa-button--secondary",
+    )
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-location-map {
+  @include u-bg(map-get($_config, background));
+}
+
+.jcc-location-map__container {
+  @include at-media(desktop) {
+    $padding: get-uswds-value(padding, $theme-site-margins-width);
+    $cols-min: get-uswds-value(max-width, desktop);
+    $col1-min: $cols-min / 12 * 4 - $padding;
+    $col2-min: $cols-min / 12 * 8 - $padding;
+    $cols-max: get-uswds-value(max-width, widescreen);
+    $col1-max: $cols-max / 12 * 4 - $padding;
+    $col2-max: $cols-max / 12 * 8 - $padding;
+
+    display: grid;
+    grid-template-columns: minmax($padding, auto) minmax($col1-min, $col1-max) minmax($col2-min, $col2-max) minmax($padding, auto);
+
+    .jcc-location-map__content-first {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .jcc-location-map__content-second {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+  }
+}
+
+.jcc-location-map__content-first {
+  @include u-bg(map-get($_config, background));
+  @include text-color(map-get($_config, text));
+  @include u-position(relative);
+  @include u-padding-x(2);
+  @include u-padding-top(6);
+  @include u-padding-bottom(2);
+  @include u-overflow(hidden);
+
+  @include at-media(desktop) {
+    @include u-display(flex);
+    @include u-flex-direction(column);
+    @include u-padding-bottom(0);
+    height: 600px;
+
+    &::after {
+      @include u-display(block);
+      @include u-position(absolute);
+      @include u-bottom(0);
+      @include u-left(0);
+      @include u-width(full);
+      @include u-height(6);
+      background: linear-gradient(to bottom, transparent 0%, color(map-get($_config, background)) 65%);
+      content: "";
+      z-index: 1;
+    }
+  }
+}
+
+.jcc-location-map__title-wrapper {
+  @include u-margin-bottom(3);
+  @include u-overflow(hidden);
+  flex-shrink: 0;
+}
+
+.jcc-location-map__title {
+  @include add-dash(
+    $dash-position: "right",
+    $dash-color: map-get($_config, text),
+    $inner-color: map-get($_config, background),
+  );
+}
+
+.jcc-location-map__text {
+  @include u-margin-bottom(2);
+  flex-shrink: 0;
+  letter-spacing: 0.09px;
+}
+
+.jcc-location-map__link {
+  flex-shrink: 0;
+
+  a {
+    @each $button in map-get($_config, link-button) {
+      @extend .#{$button};
+    }
+  }
+}
+
+.jcc-location-map__locations {
+  @include u-margin-top(6);
+  @include u-margin-bottom(0);
+  list-style: none;
+
+  @include at-media(desktop) {
+    @include u-padding-bottom(4);
+    @include u-overflow-y(scroll);
+  }
+}
+
+.jcc-location-map__location-title {
+  @include u-margin-bottom(1.5);
+  @extend .jcc-h5;
+  @include u-text(no-uppercase);
+  letter-spacing: 1px;
+}
+
+.jcc-location-map__locations-item {
+  @include u-position(relative);
+  @include u-margin-bottom(4);
+
+  &::before {
+    @include u-display(block);
+    @include u-position(absolute);
+    @include u-width(4);
+    @include u-height(4);
+    @include u-top(0);
+    left: -2.5rem;
+    flex-shrink: 0;
+    content: "";
+    mask-image: url("../icons/fa/map-marker-alt.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: color(map-get($_config, marker));
+  }
+}
+
+.jcc-location-map__map {
+  @include u-height(full);
+
+  img {
+    @include u-width(full);
+    @include u-height(full);
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}

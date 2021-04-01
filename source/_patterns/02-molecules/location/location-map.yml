@@ -1,0 +1,20 @@
+location_map:
+  title: "Locations"
+  text: "Habitasse aliquam velit vivamus enim ac pellentesque potenti nullam, mauris tincidunt non aliquet eget fames torquent, adipiscing sit tristique turpis dictum neque lacus."
+  link:
+    text: "Tincidunt hendrerit mattis"
+    url: "#"
+  map: "<img src='https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg' alt='Santa Cruz Courthouse'>"
+  locations:
+    -
+      title: "Santa Cruz Court House"
+      address: "701 Ocean Street<br>Santa Cruz, CA 95060"
+    -
+      title: "Watsonville Court House"
+      address: "1 Second Street<br>Watsonville, CA 95076"
+    -
+      title: "Ut duis nibh quis"
+      address: "Sodales nisi mus litora habitant<br>Sed senectus praesent"
+    -
+      title: "Maecenas donec libero parturient eu augue"
+      address: "Montes ultrices purus quis pharetra rutrum<br>Ad rhoncus sit"

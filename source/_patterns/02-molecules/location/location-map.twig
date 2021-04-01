@@ -1,0 +1,70 @@
+{#
+/**
+ * Available variables:
+ * - location_map - primary variable
+ *   - locations: the list of locations
+ *     - title: the title of this location
+ *     - address: the street address (use <br> to separate lines)
+ *   - map: a map image or map html
+ *   - title: the title
+ *   - text: the short description
+ *   - link: the link/button
+ *     - text: the display text
+ *     - url: the url of the button
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-location-map',
+  'jcc-location-map--' ~ location_map.container|default('no-container'),
+]|merge(location_map.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-location-map__container">
+
+    <div class="jcc-location-map__content-first">
+      <div class="jcc-location-map__title-wrapper">
+        <h2 class="jcc-location-map__title">
+          <span>{{ location_map.title }}</span>
+        </h2>
+      </div>
+
+      {% if location_map.text %}
+        <div class="jcc-location-map__text">
+          {{ location_map.text }}
+        </div>
+      {% endif %}
+
+      {% if location_map.link %}
+        <div class="jcc-location-map__link">
+          <a href="{{ location_map.link.url }}">{{ location_map.link.text }}</a>
+        </div>
+      {% endif %}
+
+      {% if location_map.locations %}
+        <ul class="jcc-location-map__locations">
+          {% for item in location_map.locations %}
+            <li class="jcc-location-map__locations-item">
+              <h3 class="jcc-location-map__location-title">
+                {{ item.title }}
+              </h3>
+              <div class="jcc-location-map__location-address">
+                {{ item.address }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="jcc-location-map__content-second">
+      {% if location_map.map %}
+        <div class="jcc-location-map__map">
+          {{ location_map.map }}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>

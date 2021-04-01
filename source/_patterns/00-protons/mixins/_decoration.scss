@@ -5,7 +5,7 @@
   $dash-position: "below-center",
   $dash-width: null,
   $top-spacing: 28px,
-  $inner-spacing: null,
+  $inner-spacing: 0,
   $inner-color: null
 ) {
   position: relative;
@@ -71,8 +71,8 @@
     // Put background gradient under span to hide line
     span {
       position: relative;
-      background: linear-gradient(0deg, $inner-color 70%, transparent 70%);
-      box-shadow: 30px 25px 0 $inner-color, -30px 25px 0 $inner-color;
+      background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
+      box-shadow: 30px 25px 0 color($inner-color), -30px 25px 0 color($inner-color);
       box-decoration-break: clone;
       z-index: 1;
     }
@@ -94,8 +94,8 @@
     // Put background gradient under span to hide line
     span {
       position: relative;
-      background: linear-gradient(0deg, $inner-color 70%, transparent 70%);
-      box-shadow: 30px 25px 0 $inner-color;
+      background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
+      box-shadow: 30px 25px 0 color($inner-color);
       box-decoration-break: clone;
       z-index: 1;
     }
