@@ -1,0 +1,60 @@
+$_config_schemes: (
+  base: (
+    link: (
+      default: primary,
+      hover: primary-dark,
+      active: primary-darker,
+    ),
+    current-background: primary,
+    current-text: "white",
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+.jcc-pager__items {
+  @include grid-row();
+  @include u-justify-content(justify-center);
+  @include list-reset();
+}
+
+.jcc-pager__item {
+  @include u-margin-x(2.5);
+  @include u-font-weight(bold);
+  letter-spacing: 0.2px;
+
+  &.is-active {
+    a,
+    a:hover {
+      @include u-bg(map-get($_config, current-background));
+      @include u-color(map-get($_config, current-text));
+      @include u-cursor(default);
+      width: 32px;
+    }
+  }
+
+  &[data-page] {
+    a {
+      @include u-radius(pill);
+    }
+  }
+
+  a {
+    @include u-display(flex);
+    @include u-justify-content(justify-center);
+    @include u-align-items(align-center);
+    @include link-colors(map-get($_config, link));
+    @include u-text-decoration(no-underline);
+    height: 32px;
+  }
+
+  &--first,
+  &--last {
+    @include at-media-max(tablet-lg) {
+      @include sr-only();
+    }
+  }
+}
+
+.jcc-pager__item--ellipsis {
+  @include u-display(none);
+}

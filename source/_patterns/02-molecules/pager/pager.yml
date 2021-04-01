@@ -1,0 +1,36 @@
+pager:
+  heading_id: "the-pager"
+  items:
+    first:
+      href: "#"
+      text: "« First"
+      attributes: null
+    previous:
+      href: "#"
+      text: "‹ Previous"
+      attributes: null
+    pages:
+      1:
+        href: "#"
+        attributes: null
+      2:
+        href: "#"
+        attributes: null
+      3:
+        href: "#"
+        attributes: null
+      4:
+        href: "#"
+        attributes: null
+    next:
+      href: "#"
+      text: "Next ›"
+      attributes: null
+    last:
+      href: "#"
+      text: "Last »"
+      attributes: null
+  current: 2
+  ellipses:
+    previous: true
+    next: true
