@@ -1,0 +1,77 @@
+news_listing:
+  items:
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "Press Release"
+      date: "Feb 14, 2021"
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "News"
+      date: "Feb 14, 2021"
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "Emergency Order"
+      date: "Feb 14, 2021"
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "News"
+      date: "Feb 14, 2021"
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "News"
+      date: "Feb 14, 2021"
+    -
+      title:
+        text: "Habitant ornare bibendum natoque mi"
+        url: "#"
+      type: "News"
+      date: "Feb 14, 2021"
+  form: >
+    <form class="views-exposed-form bef-exposed-form usa-form jcc-form" data-drupal-selector="views-exposed-form-news-news-list" action="/views/news" method="get" id="views-exposed-form-news-news-list" accept-charset="UTF-8">
+      <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-combine form-item-combine">
+        <input placeholder="Search title or topic" data-drupal-selector="edit-combine" type="text" id="edit-combine" name="combine" value="" size="30" maxlength="128" class="form-text usa-input">
+        <fieldset data-drupal-selector="edit-field-news-type-target-id" id="edit-field-news-type-target-id--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper usa-fieldset">
+          <legend class="usa-legend jcc-form-group__title">
+            <span class="fieldset-legend">Filter by type</span>
+          </legend>
+          <div class="fieldset-wrapper">
+            <div id="edit-field-news-type-target-id" class="form-checkboxes usa-form-group jcc-form-group__options">
+              <div class="form-checkboxes">
+                <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-field-news-type-target-id-5 form-item-field-news-type-target-id-5 usa-checkbox">
+                  <input data-drupal-selector="edit-field-news-type-target-id-5" type="checkbox" id="edit-field-news-type-target-id-5" name="field_news_type_target_id[5]" value="5" class="form-checkbox usa-checkbox__input">
+                  <label for="edit-field-news-type-target-id-5" class="option usa-label">Emergency Order</label>
+                </div>
+                <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-field-news-type-target-id-6 form-item-field-news-type-target-id-6 usa-checkbox">
+                  <input data-drupal-selector="edit-field-news-type-target-id-6" type="checkbox" id="edit-field-news-type-target-id-6" name="field_news_type_target_id[6]" value="6" class="form-checkbox usa-checkbox__input">
+                  <label for="edit-field-news-type-target-id-6" class="option usa-label">Press Release</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-date-value-min form-item-field-date-value-min">
+          <label for="edit-field-date-value-min" class="usa-label">Filter by date</label>
+          <input placeholder="Oldest" class="bef-datepicker form-text usa-input hasDatepicker" data-drupal-selector="edit-field-date-value-min" type="text" id="edit-field-date-value-min" name="field_date_value[min]" value="" size="30" maxlength="128">
+          <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-date-value-max form-item-field-date-value-max">
+            <label for="edit-field-date-value-max" class="usa-label">And</label>
+            <input placeholder="Newest" class="bef-datepicker form-text usa-input hasDatepicker" data-drupal-selector="edit-field-date-value-max" type="text" id="edit-field-date-value-max" name="field_date_value[max]" value="" size="30" maxlength="128">
+          </div>
+          <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group" id="edit-actions">
+            <input data-drupal-selector="edit-submit-news" type="submit" id="edit-submit-news" value="Apply" class="button js-form-submit form-submit usa-button">
+          </div>
+        </div>
+      </div>
+    </form>
+  pager:
+    include():
+      pattern: 'molecules-pager'

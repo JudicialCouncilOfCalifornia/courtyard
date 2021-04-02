@@ -1,0 +1,67 @@
+$_config_schemes: (
+  base: (
+    item-border: base-lighter,
+    item-link: (
+      default: primary-vivid,
+      hover: primary-dark,
+      active: primary-darker,
+    ),
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-news-listing {
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap();
+  }
+}
+
+.jcc-news-listing__form {
+  @include at-media(tablet-lg) {
+    @include grid-col(3);
+  }
+}
+
+.jcc-news-listing__content {
+  @include at-media(tablet-lg) {
+    @include grid-col(9);
+  }
+}
+
+.jcc-news-listing__items {
+  @include list-reset();
+  border-top: 3px solid color(map-get($_config, item-border));
+}
+
+.jcc-news-listing__item {
+  @include u-padding-y(2);
+  border-bottom: 3px solid color(map-get($_config, item-border));
+
+  a {
+    @include link-colors(map-get($_config, item-link));
+    @include u-text-decoration(no-underline);
+  }
+}
+
+.jcc-news-listing__item-title {
+  @include u-margin-bottom(0.5);
+}
+
+.jcc-news-listing__item-type {
+  @include u-font(serif, xs);
+  @include u-text(italic);
+
+  @include at-media(tablet-lg) {
+    @include u-font(serif, sm);
+  }
+}
+
+.jcc-news-listing__item-date {
+  @include u-font(sans, 2xs);
+}
+
+.jcc-news-listing__pager {
+  @include u-margin-top(6);
+}

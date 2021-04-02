@@ -1,0 +1,55 @@
+{#
+/**
+ * Available variables:
+ * - news_listing - primary variable
+ *   - items: array of news items
+ *     - title:
+ *       - url: title url
+ *       - text: title text
+ *     - type: type (taxonomy term)
+ *     - date: date of news item
+ *   - form: form search, filters, etc
+ *   - pager: pagination for multiple pages of content
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-news-listing',
+]|merge(news_listing.classes|default([])) %}
+
+{% set content %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-news-listing__form">
+      {{ news_listing.form }}
+    </div>
+
+    <div class="jcc-news-listing__content">
+      <ul class="jcc-news-listing__items">
+        {% for item in news_listing.items %}
+          <li class="jcc-news-listing__item">
+            <h4 class="jcc-news-listing__item-title">
+              <a href="{{ item.title.url }}">{{ item.title.text }}</a>
+            </h4>
+            <div class="jcc-news-listing__item-type">
+              {{ item.type }}
+            </div>
+            <div class="jcc-news-listing__item-date">
+              {{ item.date }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="jcc-news-listing__pager">
+        {{ news_listing.pager }}
+      </div>
+    </div>
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    content: content,
+  }
+} %}
