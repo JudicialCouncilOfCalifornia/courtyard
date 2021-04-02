@@ -130,3 +130,12 @@ entries:
           <p>Praesent duis varius imperdiet quis ligula non nisi ante.</p>
           <p><a href="#" class="usa-button">A link button</a></p>
           <p><a href="#" class="usa-button usa-button--cta-link">CTA link</a></p>
+  - type: 'cards2'
+    include():
+      pattern: 'organisms-cards'
+      with:
+        cards:
+          background: 'alt'
+  - type: 'location-map'
+    include():
+      pattern: 'molecules-location-map'

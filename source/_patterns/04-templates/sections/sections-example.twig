@@ -23,5 +23,7 @@
     {% include '@organisms/cards/cards.twig' with {
       cards: entry.cards
     } %}
+  {% else %}
+    {{ entry }}
   {% endif %}
 {% endfor %}
