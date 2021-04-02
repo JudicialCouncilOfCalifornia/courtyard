@@ -72,7 +72,7 @@
     span {
       position: relative;
       background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
-      box-shadow: 30px 25px 0 color($inner-color), -30px 25px 0 color($inner-color);
+      box-shadow: 30px 15px 0 color($inner-color), -30px 15px 0 color($inner-color);
       box-decoration-break: clone;
       z-index: 1;
     }
@@ -95,7 +95,7 @@
     span {
       position: relative;
       background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
-      box-shadow: 30px 25px 0 color($inner-color);
+      box-shadow: 30px 15px 0 color($inner-color);
       box-decoration-break: clone;
       z-index: 1;
     }

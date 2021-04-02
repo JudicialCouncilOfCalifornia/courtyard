@@ -20,8 +20,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include at-media(tablet-lg) {
     $padding: get-uswds-value(padding, $theme-site-margins-width);
     $cols-min: get-uswds-value(max-width, tablet-lg);
-    $col1-min: $cols-min / 12 * 4 - $padding;
-    $col2-min: $cols-min / 12 * 8 - $padding;
+    $col1-min: $cols-min / 12 * 4.5 - $padding;
+    $col2-min: $cols-min / 12 * 7.5 - $padding;
     $cols-max: get-uswds-value(max-width, widescreen);
     $col1-max: $cols-max / 12 * 4 - $padding;
     $col2-max: $cols-max / 12 * 8 - $padding;
@@ -46,8 +46,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-bg(map-get($_config, background));
   @include text-color(map-get($_config, text));
   @include u-position(relative);
-  @include u-padding-x(2);
   @include u-padding-top(6);
+  @include u-padding-left(2);
+  @include u-padding-right(2);
   @include u-padding-bottom(2);
   @include u-overflow(hidden);
 
@@ -55,6 +56,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-display(flex);
     @include u-flex-direction(column);
     @include u-padding-bottom(0);
+    @include u-padding-right(4);
     height: 600px;
 
     &::after {
@@ -81,8 +83,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include add-dash(
     $dash-position: "right",
     $dash-color: map-get($_config, text),
+    $top-spacing: 24px,
     $inner-color: map-get($_config, background),
   );
+
+  @include at-media(desktop) {
+    &::before {
+      transform: translate(-50%, 28px)
+    }
+  }
 }
 
 .jcc-location-map__text {
