@@ -1,0 +1,10 @@
+share:
+  title: "Share"
+  services:
+    - facebook
+    - twitter
+    - linkedin
+    - email
+  page_title: "The title of the page"
+  page_url: "#"
+  base_url: "#"

@@ -1,0 +1,74 @@
+{#
+/**
+* Available variables:
+* - share - primary variable
+*   - title: component title
+*   - services: array of services [facebook, twitter, linkedin, email]
+*   - page_title: page title
+*   - page_url: full/absolute url of page
+*   - base_url: base url of site
+*   - classes: array of classes to add to component
+*/
+#}
+
+{% set classes = [
+'jcc-share',
+]|merge(share.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if share.title %}
+    <div class="jcc-share__title">
+      {{ share.title }}
+    </div>
+  {% endif %}
+
+  <div class="jcc-share__buttons">
+    {% if 'facebook' in share.services %}
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ share.page_url }}&title={{ share.page_title }}" target="_blank" title="{{ 'Share to'|t }} Facebook" aria-label="{{ 'Share to'|t }} Facebook" class="jcc-share__button" rel="noopener">
+        {% include "@atoms/icon/icon.twig" with {
+          icon: {
+            name: "facebook",
+            title: "Facebook",
+            set: "fa",
+          }
+        } %}
+      </a>
+    {% endif %}
+
+    {% if 'twitter' in share.services %}
+      <a href="http://twitter.com/intent/tweet?text={{ share.page_title }}+{{ share.page_url }}" target="_blank" title="{{ 'Share to'|t }} Twitter" aria-label="{{ 'Share to'|t }} Twitter" class="jcc-share__button" rel="noopener">
+        {% include "@atoms/icon/icon.twig" with {
+          icon: {
+            name: "twitter",
+            title: "Twitter",
+            set: "fa",
+          }
+        } %}
+      </a>
+    {% endif %}
+
+    {% if 'linkedin' in share.services %}
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ share.page_url }}&title={{ share.page_title }}&source={{ share.base_url }}" target="_blank" title="{{ 'Share to'|t }} Linkedin" aria-label="{{ 'Share to'|t }} Linkedin" class="jcc-share__button" rel="noopener">
+        {% include "@atoms/icon/icon.twig" with {
+          icon: {
+            name: "linkedin",
+            title: "LinkedIn",
+            set: "fa",
+          }
+        } %}
+      </a>
+    {% endif %}
+
+    {% if 'email' in share.services %}
+      <a href="mailto:?subject={{ share.page_title }}&body={{ share.page_url }}" title="{{ 'Share to'|t }} E-mail" aria-label="{{ 'Share to'|t }} E-mail" class="jcc-share__button" target="_blank" rel="noopener">
+        {% include "@atoms/icon/icon.twig" with {
+          icon: {
+            name: "envelope",
+            title: "Email",
+            set: "fa",
+          }
+        } %}
+      </a>
+    {% endif %}
+  </div>
+</div>

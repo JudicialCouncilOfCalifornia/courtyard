@@ -1,0 +1,39 @@
+$_config_schemes: (
+  base: (
+    background-color: accent-warm-light,
+    icon-color: primary-darker,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-share__title {
+  @include u-margin-bottom(1);
+  @include u-font(serif, md);
+  @include u-text(italic);
+  @include u-color(base-dark);
+}
+
+.jcc-share__buttons {
+  @include u-display(flex);
+}
+
+.jcc-share__button {
+  @include u-display(flex);
+  @include u-justify-content(justify-center);
+  @include u-align-items(align-center);
+  @include u-radius(pill);
+  @include u-margin-right(1);
+  @include u-bg(map-get($_config, background-color));
+  @include u-text-decoration(no-underline);
+  width: 60px;
+  height: 60px;
+
+  &:hover {
+    background-color: darken(color(map-get($_config, background-color)), 5%);
+  }
+
+  .icon {
+    @include u-color(map-get($_config, icon-color));
+  }
+}
