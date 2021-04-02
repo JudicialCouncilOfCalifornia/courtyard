@@ -17,9 +17,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-location-map__container {
-  @include at-media(desktop) {
+  @include at-media(tablet-lg) {
     $padding: get-uswds-value(padding, $theme-site-margins-width);
-    $cols-min: get-uswds-value(max-width, desktop);
+    $cols-min: get-uswds-value(max-width, tablet-lg);
     $col1-min: $cols-min / 12 * 4 - $padding;
     $col2-min: $cols-min / 12 * 8 - $padding;
     $cols-max: get-uswds-value(max-width, widescreen);
@@ -51,7 +51,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-padding-bottom(2);
   @include u-overflow(hidden);
 
-  @include at-media(desktop) {
+  @include at-media(tablet-lg) {
     @include u-display(flex);
     @include u-flex-direction(column);
     @include u-padding-bottom(0);
@@ -106,7 +106,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-margin-bottom(0);
   list-style: none;
 
-  @include at-media(desktop) {
+  @include at-media(tablet-lg) {
     @include u-padding-bottom(4);
     @include u-overflow-y(scroll);
   }
