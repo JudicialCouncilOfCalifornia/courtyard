@@ -1,0 +1,24 @@
+news_highlights:
+  heading:
+    title: "News, Updates & Notices"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+  primary_items:
+    - title: "Iaculis proin erat porttitor"
+      date: "Jan 03, 2021"
+      url: "#"
+    - title: "Consequat nostra vel"
+      date: "Dec 30, 2020"
+      url: "#"
+  secondary_items:
+    - title: "Iaculis proin erat porttitor"
+      date: "Jan 03, 2021"
+      url: "#"
+    - title: "Consequat nostra vel"
+      date: "Dec 30, 2020"
+      url: "#"
+    - title: "Consequat"
+      date: "Feb 12, 2021"
+      url: "#"
+  link:
+    url: "#"
+    text: "More News"

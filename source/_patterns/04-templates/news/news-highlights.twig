@@ -1,0 +1,83 @@
+{#
+/**
+ * Available variables:
+ * - news_highlights - primary variable
+ *   - background: background color [default, alt]
+ *   - heading: the heading (title & lead)
+ *   - primary_items: array of primary news items (max 2)
+ *     - title: title of news item
+ *     - date: date of news item
+ *     - url: url to news item
+ *   - secondary_items: array of secondary news items (max 3)
+ *     - title: title of news item
+ *     - date: date of news item
+ *     - url: url to news item
+ *   - link: secondary content link/button
+ *     - url: link/button url
+ *     - text: link/button text
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-news-highlights',
+]|merge(news_highlights.classes|default([])) %}
+
+{% set content %}
+  <div class="{{ classes|join(' ')|trim }}">
+
+    <ul class="jcc-news-highlights__items">
+      {% for item in news_highlights.primary_items %}
+        <li class="jcc-news-highlights__item">
+          {% include "@molecules/card/card.twig" with {
+            card: {
+              style: "cta",
+              title: item.title,
+              brow: item.date,
+              link: {
+                text: 'Read more'|t,
+                url: item.url,
+              },
+            }
+          } %}
+        </li>
+      {% endfor %}
+
+      <li class="jcc-news-highlights__item">
+        <ul class="jcc-news-highlights__secondary-items">
+          {% for item in news_highlights.secondary_items %}
+            <li class="jcc-news-highlights__secondary-item">
+              {% include "@molecules/card/card.twig" with {
+                card: {
+                  style: "borderless",
+                  title: item.title,
+                  brow: item.date,
+                  link: {
+                    url: item.url,
+                  },
+                }
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+
+    {% if news_highlights.link %}
+      <div class="jcc-news-highlights__link-wrapper">
+        <div class="jcc-news-highlights__link">
+          <a href="{{ news_highlights.link.url }}">{{ news_highlights.link.text }}</a>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    heading: news_highlights.heading,
+    content: content,
+    background: news_highlights.background|default('alt'),
+  }
+} %}

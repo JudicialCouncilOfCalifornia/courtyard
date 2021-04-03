@@ -75,6 +75,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__content {
   @include u-display(flex);
   @include u-flex-direction(column);
+  @include u-justify-content(justify);
   @include u-width(full);
   @include u-height(full);
 }

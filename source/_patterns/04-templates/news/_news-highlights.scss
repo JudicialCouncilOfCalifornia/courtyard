@@ -1,0 +1,79 @@
+$_config_schemes: (
+  base: (
+    link-button: (
+      "usa-button",
+    ),
+    secondary-item-border: base-lighter,
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-news-highlights__items {
+  @include unstyled-list();
+
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap(3);
+
+    > li {
+      @include grid-col(4);
+    }
+  }
+
+  .usa-card__brow {
+    @include u-font(serif, md);
+    @include u-text(italic);
+  }
+}
+
+.jcc-news-highlights__secondary-items {
+  @include unstyled-list();
+
+  @include at-media-max(tablet-lg) {
+    @include u-margin-top(6);
+  }
+
+  > li {
+    @include u-margin-bottom(2);
+    @include u-padding-bottom(2);
+    border-bottom: 3px solid color(map-get($_config, secondary-item-border));
+
+    &:last-child {
+      @include u-margin-bottom(0);
+      @include u-padding-bottom(0);
+      @include u-border-bottom(0);
+    }
+  }
+
+  .usa-card__brow {
+    @include u-font(serif, sm);
+  }
+
+  .usa-card__heading {
+    @include u-font(sans, sm);
+  }
+}
+
+.jcc-news-highlights__link-wrapper {
+  @include u-margin-top(4);
+
+  @include at-media(tablet-lg) {
+    @include grid-row();
+    @include grid-gap(3);
+  }
+
+  .jcc-news-highlights__link {
+    @include at-media(tablet-lg) {
+      @include grid-col(4);
+      @include grid-offset(8);
+    }
+
+    a {
+      @include u-margin-right(0);
+      @each $button in map-get($_config, link-button) {
+        @extend .#{$button};
+      }
+    }
+  }
+}
