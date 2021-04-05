@@ -1,0 +1,111 @@
+{#
+/**
+ * Available variables:
+ * - news_full - primary variable
+ *   - date: date of news item
+ *   - byline: author/etc
+ *   - text: body text
+ *   - file_links: links to files
+ *     - url: file url
+ *     - text: text to display
+ *   - related: related cards
+ *     - title: title of related section
+ *     - items:
+ *       - title: title of item
+ *       - brow: short text in the brow
+ *       - url: url to item
+ *   - share: share widget
+ *     - title: title of news item
+ *     - page_url: full url of page
+ *     - base_url: base url of site
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-news-full',
+]|merge(news_full.classes|default([])) %}
+
+{% set content %}
+  <div class="jcc-news-full__main">
+
+    <div class="jcc-news-full__content">
+      <div class="jcc-news-full__meta">
+        {% if news_full.date %}
+          <span class="jcc-news-full__date">{{ news_full.date }}</span>
+        {% endif %}
+
+        {% if news_full.byline %}
+          <span class="jcc-news-full__byline">{{ news_full.byline }}</span>
+        {% endif %}
+      </div>
+
+      <div class="jcc-news-full__text usa-prose">
+        {{ news_full.text }}
+      </div>
+
+      {% if news_full.file_links %}
+        <ul class="jcc-news-full__files">
+          {% for link in news_full.file_links %}
+            <li class="jcc-news-full__link">
+              {% include "@atoms/file-link/file-link.twig" with {
+                file_link: {
+                  url: link.url,
+                  text: link.text,
+                }
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="jcc-news-full__aside">
+      {% if news_full.share.title %}
+        {% include "@molecules/share/share.twig" with {
+          share: {
+            title: 'Share'|t,
+            services: ['facebook', 'twitter', 'linkedin', 'email'],
+            page_title: news_full.share.title,
+            page_url: news_full.share.page_url,
+            base_title: news_full.share.base_url,
+          }
+        } %}
+
+      {% endif %}
+    </div>
+
+  </div>
+{% endset %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% include "@molecules/section/section.twig" with {
+    section: {
+      content: content,
+    }
+  } %}
+
+  {% if news_full.related.items %}
+    {% set items = [] %}
+    {% for item in news_full.related.items %}
+      {% set items = items|merge([{
+        style: "hover",
+        title: item.title,
+        brow: item.brow,
+        link: {
+          url: item.url,
+        }
+      }]) %}
+    {% endfor %}
+    <div class="jcc-news-full__related">
+      {% include "@organisms/cards/cards.twig" with {
+        cards: {
+          heading: {
+            title: news_full.related.title|default("Related News"),
+          },
+          items: items,
+        }
+      } %}
+    </div>
+  {% endif %}
+</div>
