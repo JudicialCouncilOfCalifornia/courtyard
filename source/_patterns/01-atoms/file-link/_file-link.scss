@@ -1,0 +1,23 @@
+$_config_schemes: (
+  base: (
+    icon: "primary",
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-file-link {
+  @include u-display(inline-flex);
+  @include u-align-items(align-center);
+
+  span {
+    @include u-margin-right(0.5);
+  }
+
+  .icon {
+    @include u-position(relative);
+    @include u-top(1px);
+    @include u-color(map-get($_config, icon));
+  }
+}
