@@ -6,6 +6,9 @@
  *   - num_cols: the number of columns at desktop widths [1, 3, 4]
  *   - heading: the heading (title & lead)
  *   - items: array of card items
+ *   - link: link/button
+ *     - url: link url
+ *     - text: link text
  *   - classes: array of classes to add to component
  */
 #}
@@ -25,6 +28,12 @@
       </li>
     {% endfor %}
   </ul>
+
+  {% if cards.link %}
+    <div class="jcc-cards__link">
+      <a href="{{ cards.link.url }}">{{ cards.link.text }}</a>
+    </div>
+  {% endif %}
 {% endset %}
 
 {% include "@molecules/section/section.twig" with {

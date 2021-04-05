@@ -1,3 +1,13 @@
+$_config_schemes: (
+  base: (
+    button: (
+      "usa-button",
+    )
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .jcc-cards {
   @include unstyled-list();
 
@@ -32,6 +42,21 @@
     > li {
       @include grid-col(10);
       @include grid-offset(1);
+    }
+  }
+}
+
+.jcc-cards__link {
+  @include u-margin-top(3);
+
+  @include at-media(tablet-lg) {
+    @include u-text(center);
+  }
+
+  a {
+    @include u-margin-right(0);
+    @each $button in map-get($_config, button) {
+      @extend .#{$button};
     }
   }
 }
