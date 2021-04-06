@@ -152,6 +152,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .jcc-hero-tiles--side-image & {
+    height: 460px;
+
     img {
       @include u-width(full);
       @include u-height(full);
