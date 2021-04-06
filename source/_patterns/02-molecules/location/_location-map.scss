@@ -151,6 +151,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-location-map__map {
   @include u-height(full);
 
+  .geolocation-map-wrapper {
+    @include u-height(full);
+  }
+
   img {
     @include u-width(full);
     @include u-height(full);
