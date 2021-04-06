@@ -156,11 +156,9 @@
             </ul> #}
           {% endif %}
 
-          <form class="usa-search usa-search--small " role="search">
-            <label class="usa-sr-only" for="extended-search-field-small">Search small</label>
-            <input class="usa-input" id="extended-search-field-small" type="search" name="search">
-            <button class="usa-button" type="submit"><span class="usa-sr-only">Search</span></button>
-          </form>
+          <div class="jcc-header__search">
+            {{ header.search }}
+          </div>
         </div>
       </div>
     </nav>
