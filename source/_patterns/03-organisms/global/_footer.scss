@@ -210,6 +210,7 @@ $_shoe: map-get($_config, shoe);
 
   > a {
     @include u-color(map-get($_secondary, default-social-icon));
+    @include u-text-decoration(no-underline);
     line-height: 0;
   }
 
