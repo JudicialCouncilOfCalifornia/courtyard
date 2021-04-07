@@ -48,7 +48,11 @@
     @include u-margin-top(5);
   }
 
-  > table,
+  > table {
+    @include u-width(full);
+    @include u-margin-top(2);
+  }
+
   > blockquote {
     @include u-margin-top(2);
   }
