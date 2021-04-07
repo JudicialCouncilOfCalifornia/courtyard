@@ -25,6 +25,10 @@ $_primary: map-get($_config, primary);
 $_secondary: map-get($_config, secondary);
 $_shoe: map-get($_config, shoe);
 
+.usa-footer {
+  @include u-margin-top(10);
+}
+
 .jcc-footer__container {
   @include grid-container(widescreen);
 }
