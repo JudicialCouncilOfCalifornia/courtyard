@@ -3,7 +3,9 @@
  * Available variables:
  * - hero_tiles - primary variable
  *   - style: general style of hero [background-image, side-image, no-image]
- *   - image: image url
+ *   - images: image url
+ *     - banner: wide format image url
+ *     - side: squarish format image url
  *   - title: the title
  *     - first: first portion
  *     - second: second portion
@@ -28,7 +30,7 @@
 <div class="{{ classes|join(' ') }}">
   {% if style == 'background-image' %}
     <div class="jcc-hero-tiles__background">
-      <img src="{{ hero_tiles.image }}" alt="Hero image">
+      <img src="{{ hero_tiles.images.banner }}" alt="Hero image">
     </div>
   {% endif %}
 
@@ -61,7 +63,7 @@
 
     {% if style == 'side-image' %}
       <div class="jcc-hero-tiles__side">
-        <img src="{{ hero_tiles.image }}" alt="Hero image">
+        <img src="{{ hero_tiles.images.side }}" alt="Hero image">
       </div>
     {% endif %}
   </div>
