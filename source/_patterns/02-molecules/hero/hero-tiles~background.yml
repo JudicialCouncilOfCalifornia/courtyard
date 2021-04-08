@@ -1,3 +1,4 @@
 hero_tiles:
   style: "background-image"
-  image: "https://placeimg.com/1000/350/nature"
+  images:
+    banner: "https://placeimg.com/1000/350/nature"

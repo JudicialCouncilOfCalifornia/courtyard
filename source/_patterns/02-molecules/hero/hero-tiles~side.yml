@@ -1,3 +1,4 @@
 hero_tiles:
   style: "side-image"
-  image: "https://placeimg.com/750/500/nature"
+  images:
+    side: "https://placeimg.com/750/500/nature"
