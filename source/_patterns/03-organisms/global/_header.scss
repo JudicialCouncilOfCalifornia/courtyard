@@ -489,7 +489,7 @@ $_hat: map-get($_config, hat);
         }
       }
 
-      .usa-button {
+      .jcc-button--unstyled {
         @include button-unstyled();
         background-image: none;
       }

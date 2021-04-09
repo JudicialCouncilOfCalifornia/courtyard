@@ -1,13 +1,12 @@
 $_config_schemes: (
   base: (
     action-button: (
-      "usa-button",
-      "usa-button--secondary",
+      "jcc-button--secondary",
     )
   ),
   local: (
     action-button: (
-      "usa-button",
+      "jcc-button--primary",
     )
   )
 );

@@ -4,11 +4,10 @@ $_config_schemes: (
     alt-background: primary,
     alt-background-text: "white",
     alt-aside-link: (
-      "usa-button",
-      "usa-button--inverse",
+      "jcc-button--inverse",
     ),
     default-aside-link: (
-      "usa-button",
+      "jcc-button--primary",
     ),
   ),
 );

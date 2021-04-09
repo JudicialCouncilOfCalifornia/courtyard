@@ -1,0 +1,8 @@
+card:
+  style: "cta"
+  title: "Porttitor nisi eu"
+  body: "<p>ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  link:
+    url: "#"
+    text: "Fames vel"
+    type: "file"

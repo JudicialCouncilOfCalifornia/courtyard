@@ -67,9 +67,9 @@ hr {
 
 a {
   @include link-colors((
-    default: "secondary",
-    hover: "secondary-dark",
-    active: "secondary-darker"
+    default: $theme-link-color,
+    hover: $theme-link-hover-color,
+    active: $theme-link-active-color,
   ));
 }
 

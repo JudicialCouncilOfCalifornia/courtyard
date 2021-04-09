@@ -1,42 +1,215 @@
 $_config_schemes: (
   base: (
-    default: "primary",
-    default-hover: "primary-dark",
-    default-active: "primary-darker",
-    secondary: "secondary",
-    secondary-hover: "secondary-dark",
-    secondary-active: "secondary-darker",
-    external: "secondary",
-    external-hover: "secondary-dark",
-    external-active: "secondary-darker",
-    inverse: "secondary",
-    inverse-hover: "secondary-dark",
-    inverse-active: "secondary-darker",
+    default: primary,
+    default-hover: primary-dark,
+    default-active: primary-darker,
+    secondary: secondary,
+    secondary-hover: secondary-dark,
+    secondary-active: secondary-darker,
+    external: secondary,
+    external-hover: secondary-dark,
+    external-active: secondary-darker,
+    inverse: secondary,
+    inverse-hover: secondary-dark,
+    inverse-active: secondary-darker,
+    cta-text: primary,
+    cta-text-hover: primary-vivid,
+    cta-text-active: primary-dark,
+    cta-icon: secondary,
+    cta-icon-hover: secondary-light,
+    cta-icon-active: secondary-dark,
+    inline-icon: primary,
   ),
   local: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-.usa-button {
+%jcc-button {
+  @extend .usa-button;
+
   &,
   &:visited {
-    @include set-text-and-bg(map-get($_config, default), $context: $button-context);
-    @include u-padding-y(2.5);
+    @include u-padding-y(2);
     @include u-padding-x(4);
     @include u-font-size(ui, xs);
     @include u-line-height(ui, 2);
     letter-spacing: 0.17px;
   }
+}
+
+%jcc-button-unstyled {
+  @include button-unstyled;
+  @include u-padding(0);
+  @include link-colors((
+    default: $theme-link-color,
+    hover: $theme-link-hover-color,
+    active: $theme-link-active-color,
+  ));
+  @include u-bg("transparent");
+}
+
+%jcc-button-external {
+  &,
+  &:visited {
+    @include u-display(inline-flex);
+    @include u-justify-content(justify-center);
+    @include u-align-items(align-center);
+    @include u-position(relative);
+    @include u-padding-y(1.5);
+    @include u-radius(pill);
+    @include u-font(sans, xs);
+    @include set-text-and-bg(map-get($_config, external), $context: $button-context);
+    font-weight: font-weight(normal);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
   &:hover,
-  &.usa-button--hover {
+  &.jcc-button--hover {
+    @include set-text-and-bg(map-get($_config, external-hover), $context: $button-context);
+  }
+
+  &:active,
+  &.jcc-button--active {
+    @include set-text-and-bg(map-get($_config, external-active), $context: $button-context);
+  }
+
+  &::after {
+    @include u-display(inline-block);
+    @include u-position(relative);
+    @include u-width(2);
+    @include u-height(2);
+    @include u-margin-left(1.5);
+    @include u-top(-1px);
+    flex-shrink: 0;
+    content: "";
+    mask-image: url("../icons/fa/external-link.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    @include u-bg("white");
+  }
+
+  span {
+    display: none;
+  }
+}
+
+%jcc-inline-icon-link {
+  @include u-position(relative);
+  @include u-display(inline-flex);
+  @include u-align-items(align-center);
+  @include u-margin-right(2px);
+
+  &:focus {
+    z-index: 1;
+  }
+
+  &::after {
+    @include u-position(relative);
+    @include u-display(inline-block);
+    @include u-top(1px);
+    @include u-margin-left(0.5);
+    @include u-bg(map-get($_config, inline-icon));
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    content: "";
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+}
+
+.jcc-button--primary {
+  @extend %jcc-button;
+
+  &,
+  &:visited {
+    @include set-text-and-bg(map-get($_config, default), $context: $button-context);
+  }
+
+  &:hover,
+  &.jcc-button--hover {
     @include set-text-and-bg(map-get($_config, default-hover), $context: $button-context);
   }
 
   &:active,
-  &.usa-button--active {
+  &.jcc-button--active {
     @include set-text-and-bg(map-get($_config, default-active), $context: $button-context);
+  }
+
+  &.jcc-button--unstyled {
+    @extend %jcc-button-unstyled;
+  }
+
+  &:disabled {
+    @include u-text(gray-70);
+  }
+
+  &.ext {
+    @extend %jcc-button-external;
+  }
+}
+
+.jcc-button--secondary {
+  @extend %jcc-button;
+
+  &,
+  &:visited {
+    @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
+  }
+
+  &:hover,
+  &.jcc-button--hover {
+    @include set-text-and-bg(map-get($_config, secondary-hover), $context: $button-context);
+  }
+
+  &:active,
+  &.jcc-button--active {
+    @include set-text-and-bg(map-get($_config, secondary-active), $context: $button-context);
+  }
+
+  &.jcc-button--unstyled {
+    @extend %jcc-button-unstyled;
+  }
+
+  &:disabled {
+    @include u-text(gray-70);
+  }
+
+  &.ext {
+    @extend %jcc-button-external;
+  }
+}
+
+.jcc-button--unstyled {
+  @extend %jcc-button-unstyled;
+}
+
+.jcc-button--inverse {
+  @extend %jcc-button;
+
+  &,
+  &:visited {
+    @include set-text-and-bg("white", primary, $context: $button-context);
+  }
+
+  &:hover,
+  &.jcc-button--hover {
+    @include set-text-and-bg(accent-warm, $context: $button-context);
+  }
+
+  &:active,
+  &.jcc-button--active {
+    @include set-text-and-bg(accent-warm-dark, $context: $button-context);
+  }
+
+  &.jcc-button--unstyled {
+    @extend %jcc-button-unstyled;
+    @include link-colors((
+      default: $theme-link-reverse-color,
+      hover: $theme-link-reverse-hover-color,
+      active: $theme-link-reverse-active-color,
+    ));
   }
 
   &:disabled {
@@ -44,114 +217,36 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.usa-button--secondary {
-  &,
-  &:visited {
-    @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
-  }
+.jcc-button--file-link,
+a[data-entity-type="media"] {
+  @extend %jcc-inline-icon-link;
 
-  &:hover,
-  &.usa-button--hover {
-    @include set-text-and-bg(map-get($_config, secondary-hover), $context: $button-context);
-  }
-
-  &:active,
-  &.usa-button--active {
-    @include set-text-and-bg(map-get($_config, secondary-active), $context: $button-context);
+  &::after {
+    mask-image: url("../icons/fa/file.svg");
   }
 }
 
-.usa-button.ext,
-.usa-button--external {
-  &,
-  &:visited {
-    @include u-position(relative);
-    @include u-padding-y(1.5);
-    @include u-padding-right(7);
-    @include u-radius(pill);
-    @include u-font(sans, xs);
-    @include set-text-and-bg(map-get($_config, external), $context: $button-context);
-    font-weight: font-weight(normal);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+a.ext,
+.jcc-button--external-link {
+  @extend %jcc-inline-icon-link;
 
-    svg {
-      @include u-position(absolute);
-      @include u-width(3);
-      @include u-height(3);
-      @include u-margin-left(1);
-      top: 6px;
-      fill: color(get-color-token-from-bg(map-get($_config, external), $context: $button-context));
-    }
-  }
-
-  &:hover,
-  &.usa-button--hover {
-    @include set-text-and-bg(map-get($_config, external-hover), $context: $button-context);
-
-    svg {
-      fill: color(
-        get-color-token-from-bg(map-get($_config, external-hover), $context: $button-context)
-      );
-    }
-  }
-
-  &:active,
-  &.usa-button--active {
-    @include set-text-and-bg(map-get($_config, external-active), $context: $button-context);
-
-    svg {
-      fill: color(
-        get-color-token-from-bg(map-get($_config, external-active), $context: $button-context)
-      );
-    }
-  }
-
-  &.usa-button--unstyled {
-    @include button-unstyled;
-
-    svg {
-      @include u-position(relative);
-      @include u-top(1px);
-      fill: color($theme-link-color);
-    }
+  &::after {
+    mask-image: url("../icons/fa/external-link.svg");
   }
 }
 
-.usa-button--unstyled {
-  @include button-unstyled;
-  @include u-padding(0);
-}
+a.jcc-button--cta-link {
+  @extend %jcc-button;
 
-.usa-button--inverse {
-  &,
-  &:visited {
-    @include set-text-and-bg("white", primary, $context: $button-context);
-  }
-
-  &:hover,
-  &.usa-button--hover {
-    @include set-text-and-bg(accent-warm, $context: $button-context);
-  }
-
-  &:active,
-  &.usa-button--active {
-    @include set-text-and-bg(accent-warm-dark, $context: $button-context);
-  }
-
-  &.usa-button--unstyled {
-    background-color: transparent;
-    @include u-color("white");
-  }
-}
-
-.usa-button--cta-link {
   &,
   &:visited {
     @include button-unstyled;
     @include u-display(flex);
     @include u-flex(justify);
     @include u-align-items(align-center);
+    @include u-margin-right(0);
     @include u-padding(0);
+    @include u-color(map-get($_config, cta-text));
     @include u-text(uppercase);
     @include u-font(sans, sm);
     letter-spacing: 1.8px;
@@ -159,24 +254,24 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   &:hover,
-  &.usa-button--hover {
-    background-color: transparent;
-    color: color($theme-link-hover-color);
+  &.jcc-button--hover {
+    @include u-bg("transparent");
+    @include u-color(map-get($_config, cta-text-hover));
     text-decoration: none;
 
     &::after {
-      background-color: color($theme-link-hover-color);
+      @include u-bg(map-get($_config, cta-icon-hover));
     }
   }
 
   &:active,
-  &.usa-button--active {
-    background-color: transparent;
-    color: color($theme-link-active-color);
+  &.jcc-button--active {
+    @include u-bg("transparent");
+    @include u-color(map-get($_config, cta-text-active));
     text-decoration: none;
 
     &::after {
-      background-color: color($theme-link-active-color);
+      @include u-bg(map-get($_config, cta-icon-active));
     }
   }
 
@@ -185,11 +280,32 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-width(2.5);
     @include u-height(2.5);
     @include u-margin-left(1.5);
+    @include u-bg(map-get($_config, cta-icon));
     flex-shrink: 0;
     content: "";
     mask-image: url("../icons/fa/arrow-right.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
-    background-color: color($theme-link-color);
+  }
+
+  &.ext {
+    &::after {
+      @include u-position(relative);
+      @include u-top(-1px);
+      @include u-width(2.5);
+      @include u-height(2.5);
+      @include u-margin-left(1.5);
+      mask-image: url("../icons/fa/external-link.svg");
+    }
+  }
+
+  &.file {
+    &::after {
+      @include u-position(relative);
+      @include u-width(2.5);
+      @include u-height(2.5);
+      @include u-top(-1px);
+      mask-image: url("../icons/fa/file.svg");
+    }
   }
 }

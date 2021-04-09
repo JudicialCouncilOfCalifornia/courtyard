@@ -67,7 +67,7 @@ news_listing:
             <input placeholder="Newest" class="bef-datepicker form-text usa-input hasDatepicker" data-drupal-selector="edit-field-date-value-max" type="text" id="edit-field-date-value-max" name="field_date_value[max]" value="" size="30" maxlength="128">
           </div>
           <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group" id="edit-actions">
-            <input data-drupal-selector="edit-submit-news" type="submit" id="edit-submit-news" value="Apply" class="button js-form-submit form-submit usa-button">
+            <input data-drupal-selector="edit-submit-news" type="submit" id="edit-submit-news" value="Apply" class="button js-form-submit form-submit jcc-button--primary">
           </div>
         </div>
       </div>

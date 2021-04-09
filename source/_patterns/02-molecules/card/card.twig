@@ -9,6 +9,7 @@
  *   - link: card link/button
  *     - url: card link/button url
  *     - text: card link/button text
+ *     - type: card link/button type (n/a or external or file) [ext, file]
  *   - classes: array of classes to add to component
  */
 #}
@@ -55,7 +56,7 @@
 
       {% if style == 'cta' or style == 'media-left' %}
         <div class="usa-card__footer">
-          <a href="{{ card.link.url }}">{{ card.link.text }}</a>
+          <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
       {% endif %}
     </div>

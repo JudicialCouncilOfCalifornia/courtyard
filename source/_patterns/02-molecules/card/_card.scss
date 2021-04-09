@@ -8,8 +8,7 @@ $_config_schemes: (
       active: primary-darker,
     ),
     action-button: (
-      "usa-button",
-      "usa-button--secondary",
+      "jcc-button--secondary",
     ),
     icon-color: primary-light,
   ),
@@ -18,8 +17,7 @@ $_config_schemes: (
       default: primary-vivid,
     ),
     action-button: (
-      "usa-button",
-      "usa-button--cta-link",
+      "jcc-button--cta-link",
     ),
   ),
 );
