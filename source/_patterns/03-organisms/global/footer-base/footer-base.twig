@@ -26,6 +26,8 @@
                               <li class="usa-footer__secondary-link"><a href="{{ child.href }}">{{ child.text }}</a></li>
                             {% endfor %}
                           </ul>
+                        {% elseif link.block %}
+                          {{ link.block }}
                         {% endif %}
                       </section>
                     </div>
@@ -84,9 +86,10 @@
         </div>
       </div>
     </div>
+  </div>
 
-    {% include '@molecules/navigation/global-bar/global-bar.twig' with {
-      global_bar: footer_base.global_bar,
-      is_footer: true
-    } %}
+  {% include '@molecules/navigation/global-bar/global-bar.twig' with {
+    global_bar: footer_base.global_bar,
+    is_footer: true
+  } %}
 </footer>

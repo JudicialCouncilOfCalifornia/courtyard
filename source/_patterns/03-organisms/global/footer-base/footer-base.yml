@@ -11,6 +11,7 @@ footer_base:
       href: "#"
     - text: Simple link 3
       href: "#"
+    - block: #content or feature alternative rather than a simple listing, text title optional
   secondary_menu_cols: '3'
   social_links:
     items:

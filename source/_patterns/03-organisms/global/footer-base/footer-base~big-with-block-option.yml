@@ -1,6 +1,5 @@
 footer_base:
   height_variant: 'big'
-  background_variant: 'inverted'
   links:
     - text: Nested section 1
       links:
@@ -34,3 +33,5 @@ footer_base:
           href: "#"
         - text: Navigation link 12
           href: "#"
+    - text: Subscribe with your email address to receive news and updates
+      block: '<div><input id="input-type-text" class="usa-input margin-bottom-2" name="input-type-text" type="text"><button class="usa-button ">Sign Up</button></div>'
