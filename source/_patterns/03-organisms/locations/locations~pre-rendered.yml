@@ -1,0 +1,13 @@
+locations:
+  items_pre_rendered: true
+  items:
+    - include():
+        pattern: 'molecules-location'
+        with:
+          location:
+            container: "no-container"
+    - include():
+        pattern: 'molecules-location'
+        with:
+          location:
+            container: "no-container"

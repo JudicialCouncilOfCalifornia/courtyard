@@ -23,5 +23,6 @@ location:
       details: "M-F: 8:00AM - 3:00PM"
     - label: "Self Help"
       details: "M, Tu, Thu, F: 8:15AM - 12:00PM<br>W: N/A"
-  map: "<img src='https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg' alt='Santa Cruz Courthouse'>"
+  map:
+    image: "<img src='https://www.courts.ca.gov/cms/ftrc/maps/alameda-berkeley-courthouse.jpg' alt='Santa Cruz Courthouse'>"
   directions_text: "Get Directions"

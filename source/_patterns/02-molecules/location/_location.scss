@@ -118,18 +118,20 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-location__map {
   @include u-position(relative);
 
-  &::after {
-    @include u-display(block);
-    padding-bottom: 100%;
-    content: "";
-  }
+  &.jcc-location__map--image {
+    &::after {
+      @include u-display(block);
+      padding-bottom: 100%;
+      content: "";
+    }
 
-  img {
-    @include u-position(absolute);
-    @include u-width(full);
-    @include u-height(full);
-    object-fit: cover;
-    object-position: 50% 50%;
+    img {
+      @include u-position(absolute);
+      @include u-width(full);
+      @include u-height(full);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
   }
 }
 

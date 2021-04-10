@@ -7,6 +7,8 @@
  *   - brow: small brow text
  *   - address: the street address (use <br> to separate lines)
  *   - map: a map image or map html
+ *     - image: full image
+ *     - html: geocoded map html
  *   - directions_text: the directions button text
  *   - phone: the phone number, as a link
  *     - text: the display text
@@ -31,8 +33,10 @@
   <div class="jcc-location__container">
 
     <div class="jcc-location__content-first">
-      {% if location.map %}
-        <div class="jcc-location__map">{{ location.map }}</div>
+      {% if location.map.image %}
+        <div class="jcc-location__map jcc-location__map--image">{{ location.map.image }}</div>
+      {% elseif location.map.html %}
+        <div class="jcc-location__map jcc-location__map--html">{{ location.map.html }}</div>
       {% endif %}
 
       {% if location.address %}

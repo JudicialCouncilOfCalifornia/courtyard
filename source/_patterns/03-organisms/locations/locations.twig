@@ -2,6 +2,7 @@
 /**
  * Available variables:
  * - locations - primary variable
+ *   - items_pre_rendered: true
  *   - items: array of location items
  *   - classes: array of classes to add to component
  */
@@ -15,9 +16,13 @@
   <ul class="{{ classes|join(' ')|trim }}">
     {% for item in locations.items %}
       <li class="jcc-locations__item">
-        {% include "@molecules/location/location.twig" with {
-          location: item
-        } %}
+        {% if locations.items_pre_rendered %}
+          {{ item }}
+        {% else %}
+          {% include "@molecules/location/location.twig" with {
+            location: item
+          } %}
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
