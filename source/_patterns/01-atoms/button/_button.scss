@@ -218,6 +218,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-button--file-link,
+a[data-entity-type="file"],
 a[data-entity-type="media"] {
   @extend %jcc-inline-icon-link;
 
