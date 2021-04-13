@@ -24,6 +24,7 @@ const csso = require("gulp-csso");
 const strip = require("gulp-strip-comments");
 const svgmin = require("gulp-svgmin");
 const svgstore = require("gulp-svgstore");
+const cheerio = require("gulp-cheerio");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = require("./node_modules/uswds-gulp/config/uswds");
@@ -81,6 +82,16 @@ const buildIcons = () => {
       name = name.concat(file.dirname.split(path.sep));
       name.push(file.basename.replace(' ', '-').toLowerCase());
       file.basename = name.join('-');
+    }))
+    .pipe(cheerio({
+      run: function($) {
+        // Wrap inner html of each svg with a group.
+        const $svg = $('svg');
+        $svg.html('<g>' + $svg.html() + '</g>');
+        // Transfer svg attribute to group.
+        $('svg > g').attr('fill', $svg.attr('fill'));
+      },
+      parserOptions: { xmlMode: true }
     }))
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename(config.icons.dest_name))
