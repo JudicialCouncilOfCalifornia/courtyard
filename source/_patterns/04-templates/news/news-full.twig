@@ -43,23 +43,6 @@
       <div class="jcc-news-full__text usa-prose">
         {{ news_full.text }}
       </div>
-
-      {% if news_full.file_links %}
-        <ul class="jcc-news-full__files">
-          {% for link in news_full.file_links %}
-            <li class="jcc-news-full__link">
-              {% include "@atoms/button/button.twig" with {
-                button: {
-                  type: "link",
-                  style: "file-link",
-                  url: link.url,
-                  text: link.text,
-                }
-              } %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
     </div>
 
     <div class="jcc-news-full__aside">
@@ -70,7 +53,7 @@
             services: ['facebook', 'twitter', 'linkedin', 'email'],
             page_title: news_full.share.title,
             page_url: news_full.share.page_url,
-            base_title: news_full.share.base_url,
+            base_url: news_full.share.base_url,
           }
         } %}
 
