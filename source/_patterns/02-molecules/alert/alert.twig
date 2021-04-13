@@ -29,7 +29,7 @@
   <div class="{{ classes|join(' ')|trim }}">
     <div class="usa-alert__body">
       <h3 class="usa-alert__heading">{{ alert.heading }}</h3>
-      <div class="usa-alert__text">{{ alert.text }}</div>
+      <div class="usa-alert__text usa-prose">{{ alert.text }}</div>
 
       {% if alert.close %}
         <button class="usa-alert__close" aria-label="Close alert">

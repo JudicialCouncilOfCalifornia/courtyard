@@ -1,14 +1,4 @@
 .usa-prose {
-  > h3,
-  > h4,
-  > h5,
-  > h6,
-  > p,
-  > ul li,
-  > ol li {
-    @include u-measure(6);
-  }
-
   > ul li,
   > ol li {
     @include u-margin-top(1.5);

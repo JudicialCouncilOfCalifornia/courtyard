@@ -44,8 +44,12 @@
 
 .usa-alert__text {
   @include u-margin-bottom(0);
-  @include typeset(body, 2xs, 6);
-  letter-spacing: 0.37px;
+
+  &,
+  > p {
+    @include typeset(body, 2xs, 6);
+    letter-spacing: 0.37px;
+  }
 }
 
 .usa-alert__heading {
