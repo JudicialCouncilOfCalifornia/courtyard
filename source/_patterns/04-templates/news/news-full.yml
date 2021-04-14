@@ -1,22 +1,35 @@
 news_full:
+  title: "Quam consectetur mauris nulla libero pretium interdum auctor"
+  type: "Dignissim egestas"
   date: "Feb 4, 2021"
   byline: "By author Interdum Ultricies"
-  text: >
-    <p>Eget suspendisse ornare magna himenaeos tristique montes porttitor imperdiet leo, urna laoreet conubia molestie scelerisque dictum feugiat pellentesque egestas, purus porta velit turpis ultrices risus eros ipsum.</p>
-    <p>Senectus amet maecenas posuere lacinia pretium pulvinar eros lectus, sodales mi fames fringilla ultrices torquent nec donec, ornare accumsan dictumst lobortis condimentum parturient elit. Imperdiet vehicula orci class ligula porttitor taciti, inceptos auctor elementum fames senectus, magnis dui in nunc luctus.</p>
-  related:
-    title: "Related News"
-    items:
-      - title: "Iaculis proin erat porttitor"
-        brow: "Habitant ut"
-        url: "#"
-      - title: "Consequat nostra vel"
-        brow: "Odio cum consectetur"
-        url: "#"
-      - title: "Consequat"
-        brow: "Potenti"
-        url: "#"
-  share:
-    title: "Tempor parturient bibendum proin ante ipsum"
-    page_url: "#"
-    base_url: "#"
+  components:
+    - include():
+        pattern: 'molecules-text-share'
+    - include():
+        pattern: 'organisms-cards'
+        with:
+          cards:
+            heading:
+              title: "Related Items"
+              lead: ""
+            num_cols: 3
+            items:
+              - style: "hover"
+                brow: "Cras etiam"
+                title: "Iaculis proin erat porttitor"
+                body: ""
+                link:
+                  url: "#"
+              - style: "hover"
+                brow: "UtSem scelerisque"
+                title: "Consequat nostra vel"
+                body: ""
+                link:
+                  url: "#"
+              - style: "hover"
+                brow: "Ridic sapien"
+                title: "Consequat"
+                body: ""
+                link:
+                  url: "#"

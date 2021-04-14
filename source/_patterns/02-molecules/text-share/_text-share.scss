@@ -1,0 +1,24 @@
+.jcc-text-share {
+  @include at-media(desktop) {
+    @include grid-row();
+    @include grid-gap(3);
+  }
+}
+
+.jcc-text-share__main {
+  @include at-media(desktop) {
+    @include grid-col(8);
+  }
+}
+
+.jcc-text-share__aside {
+  @include at-media(desktop) {
+    @include grid-col(4);
+  }
+
+  .jcc-text-share__main + & {
+    @include at-media-max(desktop) {
+      @include u-margin-top(4);
+    }
+  }
+}

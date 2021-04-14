@@ -1,0 +1,23 @@
+{#
+/**
+ * Available variables:
+ * - date_byline - primary variable
+ *   - date: a date string
+ *   - byline: author name
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-date-byline',
+]|merge(date_byline.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if date_byline.date %}
+    <span class="jcc-date-byline__date">{{ date_byline.date }}</span>
+  {% endif %}
+
+  {% if date_byline.byline %}
+    <span class="jcc-date-byline__byline">{{ date_byline.byline }}</span>
+  {% endif %}
+</div>

@@ -21,6 +21,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.jcc-section--spacing-none {
+  @include u-margin-top(0);
+  @include u-padding-top(0);
+  @include u-padding-bottom(0);
+}
+
 .jcc-section--container {
   .jcc-section__inner {
     @include grid-container(widescreen);

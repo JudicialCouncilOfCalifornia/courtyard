@@ -4,6 +4,7 @@
  * - section - primary variable
  *   - background: background color [default, alt, none]
  *   - container: container to constrain content [container, no-container]
+ *   - spacing: top/bottom spacing [default, none]
  *   - heading: the heading (title & lead)
  *   - content: the main content
  *   - id: the html "id" of the section
@@ -20,6 +21,7 @@
 {% set classes = [
   'jcc-section',
   'jcc-section--' ~ section.container|default('container'),
+  'jcc-section--spacing-' ~ section.spacing|default('default'),
   'jcc-section--background-' ~ section.background|default('default'),
 ]|merge(section.classes|default([])) %}
 

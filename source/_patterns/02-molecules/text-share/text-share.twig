@@ -1,0 +1,44 @@
+{#
+/**
+ * Available variables:
+ * - text_share - primary variable
+ *   - text: the text
+ *   - share: share widget
+ *     - page_title: title of page
+ *     - page_url: full url of page
+ *     - base_url: base url of site
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-text-share',
+]|merge(text_share.classes|default([''])) %}
+
+{% set content %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-text-share__main">
+      <div class="jcc-text-share__main-text usa-prose">
+        {{ text_share.text }}
+      </div>
+    </div>
+
+    <aside class="jcc-text-share__aside">
+      {% include "@molecules/share/share.twig" with {
+        share: {
+          title: 'Share'|t,
+          services: ['facebook', 'twitter', 'linkedin', 'email'],
+          page_title: text_share.share.page_title,
+          page_url: text_share.share.page_url,
+          base_url: text_share.share.base_url,
+        }
+      } %}
+    </aside>
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    content: content
+  }
+} %}

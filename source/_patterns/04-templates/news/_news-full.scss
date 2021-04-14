@@ -2,52 +2,12 @@
   @include u-margin-bottom(7);
 }
 
-.jcc-news-full__main {
-  @include at-media(tablet-lg) {
-    @include grid-row();
-    @include grid-gap(3);
-  }
-}
-
-.jcc-news-full__content {
-  @include at-media(tablet-lg) {
-    @include grid-col(8);
-  }
-}
-
-.jcc-news-full__aside {
-  @include at-media(tablet-lg) {
-    @include grid-col(4);
-  }
-}
-
 .jcc-news-full__meta {
   @include u-margin-bottom(2);
 }
 
-.jcc-news-full__date {
-  @include u-font(serif, md);
-  @include u-text(italic);
-  @include u-color(base-dark);
-}
-
-.jcc-news-full__byline {
-  @include u-position(relative);
-  @include u-font(sans, md);
-
-  .jcc-news-full__date + & {
-    @include u-margin-left(2);
-    @include u-padding-left(2.5);
-
-    &::before {
-      @include u-position(absolute);
-      @include u-width(1px);
-      @include u-height(3);
-      @include u-left(0);
-      @include u-bg(base-light);
-      top: 50%;
-      transform: translateY(-50%);
-      content: "";
-    }
+.jcc-news-full__content {
+  > .jcc-section:first-child {
+    @include u-padding-top(0);
   }
 }

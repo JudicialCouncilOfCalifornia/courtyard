@@ -1,0 +1,26 @@
+.jcc-date-byline__date {
+  @include u-font(serif, md);
+  @include u-text(italic);
+  @include u-color(base-dark);
+}
+
+.jcc-date-byline__byline {
+  @include u-position(relative);
+  @include u-font(sans, md);
+
+  .jcc-date-byline__date + & {
+    @include u-margin-left(2);
+    @include u-padding-left(2.5);
+
+    &::before {
+      @include u-position(absolute);
+      @include u-width(1px);
+      @include u-height(3);
+      @include u-left(0);
+      @include u-bg(base-light);
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+    }
+  }
+}

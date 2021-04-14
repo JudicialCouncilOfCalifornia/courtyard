@@ -2,95 +2,62 @@
 /**
  * Available variables:
  * - news_full - primary variable
+ *   - title: the title of the page
+ *   - type: the type (taxonomy term)
  *   - date: date of news item
  *   - byline: author/etc
- *   - text: body text
- *   - file_links: links to files
- *     - url: file url
- *     - text: text to display
- *   - related: related cards
- *     - title: title of related section
- *     - items:
- *       - title: title of item
- *       - brow: short text in the brow
- *       - url: url to item
- *   - share: share widget
- *     - title: title of news item
- *     - page_url: full url of page
- *     - base_url: base url of site
+ *   - components: pre-rendered components
  *   - classes: array of classes to add to component
  */
 #}
+
+{% set metadata %}
+  {% include "@molecules/date-byline/date-byline.twig" with {
+    date_byline: {
+      date: news_full.date,
+      byline: news_full.byline,
+    }
+  } %}
+{% endset %}
+
+{% set main_content %}
+  <div class="jcc-news-full__main">
+    {% include "@molecules/section/section.twig" with {
+      section: {
+        content: metadata,
+        spacing: 'none',
+        classes: ['jcc-news-full__meta']
+      }
+    } %}
+
+    <div class="jcc-news-full__content">
+      {% for item in news_full.components %}
+        {{ item }}
+      {% endfor %}
+    </div>
+  </div>
+{% endset %}
+
 
 {% set classes = [
   'jcc-news-full',
 ]|merge(news_full.classes|default([])) %}
 
-{% set content %}
-  <div class="jcc-news-full__main">
-
-    <div class="jcc-news-full__content">
-      <div class="jcc-news-full__meta">
-        {% if news_full.date %}
-          <span class="jcc-news-full__date">{{ news_full.date }}</span>
-        {% endif %}
-
-        {% if news_full.byline %}
-          <span class="jcc-news-full__byline">{{ news_full.byline }}</span>
-        {% endif %}
-      </div>
-
-      <div class="jcc-news-full__text usa-prose">
-        {{ news_full.text }}
-      </div>
-    </div>
-
-    <div class="jcc-news-full__aside">
-      {% if news_full.share.title %}
-        {% include "@molecules/share/share.twig" with {
-          share: {
-            title: 'Share'|t,
-            services: ['facebook', 'twitter', 'linkedin', 'email'],
-            page_title: news_full.share.title,
-            page_url: news_full.share.page_url,
-            base_url: news_full.share.base_url,
-          }
-        } %}
-
-      {% endif %}
-    </div>
-
-  </div>
-{% endset %}
-
 <div class="{{ classes|join(' ')|trim }}">
-  {% include "@molecules/section/section.twig" with {
-    section: {
-      content: content,
+  {% include "@molecules/hero/hero.twig" with {
+    hero: {
+      main: {
+        brow: news_full.type,
+        title: news_full.title,
+      },
+      layout: 'full-main',
     }
   } %}
 
-  {% if news_full.related.items %}
-    {% set items = [] %}
-    {% for item in news_full.related.items %}
-      {% set items = items|merge([{
-        style: "hover",
-        title: item.title,
-        brow: item.brow,
-        link: {
-          url: item.url,
-        }
-      }]) %}
-    {% endfor %}
-    <div class="jcc-news-full__related">
-      {% include "@organisms/cards/cards.twig" with {
-        cards: {
-          heading: {
-            title: news_full.related.title|default("Related News"),
-          },
-          items: items,
-        }
-      } %}
-    </div>
-  {% endif %}
+  {% include "@molecules/section/section.twig" with {
+    section: {
+      content: main_content,
+      container: 'no-container',
+    }
+  } %}
 </div>
