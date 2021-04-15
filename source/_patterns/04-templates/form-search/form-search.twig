@@ -1,0 +1,28 @@
+{#
+/**
+ * Available variables:
+ * - form_search - primary variable
+ *   - form: form search, filters, etc
+ *   - results: pre-rendered search results
+ *   - pager: pagination for multiple pages of content
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-form-search',
+]|merge(form_search.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-form-search__form">
+    {{ form_search.form }}
+  </div>
+
+  <div class="jcc-form-search__results">
+    {{ form_search.results }}
+  </div>
+
+  <div class="jcc-form-search__pager">
+    {{ form_search.pager }}
+  </div>
+</div>

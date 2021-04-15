@@ -1,0 +1,31 @@
+{#
+/**
+ * Available variables:
+ * - form_search_results - primary variable
+ *   - items: array of form items
+ *     - file:
+ *       - url: file url
+ *       - text: file text
+ *     - type: type (taxonomy term)
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-form-search-results',
+]|merge(form_search_results.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <ul class="jcc-form-search-results__items">
+    {% for item in form_search_results.items %}
+      <li class="jcc-form-search-results__item">
+        <h4 class="jcc-form-search-results__item-file">
+          <a href="{{ item.file.url }}">{{ item.file.text }}</a>
+        </h4>
+        <div class="jcc-form-search-results__item-type">
+          {{ item.type }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

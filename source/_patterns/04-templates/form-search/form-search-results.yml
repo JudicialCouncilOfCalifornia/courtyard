@@ -1,0 +1,30 @@
+form_search_results:
+  items:
+    - file:
+        text: "Venenatis hac euismod lectus tempor leo tellus quam"
+        url: "#"
+      type: "Tempor phasellus montes"
+    - file:
+        text: "Natoque conubia rutrum nisl torquent ante lectus"
+        url: "#"
+      type: "Quam pulvinar auctor in"
+    - file:
+        text: "Aenean euismod congue ultrices tempus amet vehicula"
+        url: "#"
+      type: "Quam pulvinar auctor in"
+    - file:
+        text: "Litora sociis at tellus risus enim vulputate a tortor"
+        url: "#"
+      type: "Tempor phasellus montes"
+    - file:
+        text: "Per bibendum cras pharetra est porta sapien"
+        url: "#"
+      type: "Quam pulvinar auctor in"
+    - file:
+        text: "Enim tristique convallis proin sapien platea"
+        url: "#"
+      type: "Tempor phasellus montes"
+    - file:
+        text: "Porttitor vel nec condimentum pulvinar massa erat amet class faucibus metus purus ligula"
+        url: "#"
+      type: "Tempor phasellus montes"

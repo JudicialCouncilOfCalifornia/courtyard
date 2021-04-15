@@ -1,0 +1,24 @@
+form_search:
+  form: >
+    <form class="views-exposed-form bef-exposed-form usa-form jcc-form">
+      <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+        <input placeholder="Search title or topic" type="text" name="name" value="" size="30" maxlength="128" class="form-text usa-input">
+      </div>
+      <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-field-document-type-target-id form-item-field-document-type-target-id jcc-dropdown">
+        <label for="edit-field-document-type-target-id--1Uj_H7SQwao" class="usa-label">Filter by document type</label>
+        <select data-drupal-selector="edit-field-document-type-target-id"
+          id="edit-field-document-type-target-id--1Uj_H7SQwao" name="field_document_type_target_id" class="form-select usa-select jcc-dropdown">
+          <option value="All" selected="selected">- Any -</option>
+          <option value="1942">Fee and Bail Schedule</option>
+        </select>
+      </div>
+      <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group">
+        <input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit usa-button" data-drupal-selector="edit-submit-forms-pjxcirj661u" type="submit" value="Apply">
+      </div>
+    </form>
+  results:
+    include():
+      pattern: 'templates-form-search-results'
+  pager:
+    include():
+      pattern: 'molecules-pager'

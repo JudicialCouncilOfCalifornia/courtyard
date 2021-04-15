@@ -1,0 +1,63 @@
+$_config_schemes: (
+  base: (
+    search-icon: primary-dark,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-form-search__form {
+  form {
+    @include u-position(relative);
+    @include u-maxw(none);
+    @include u-margin-bottom(5);
+
+    @include at-media(tablet-lg) {
+      @include grid-row();
+      @include grid-gap(3);
+      @include u-justify-content(justify);
+      @include u-align-items(align-end);
+      flex-wrap: nowrap;
+    }
+
+    .form-item {
+      @include at-media(tablet-lg) {
+        @include u-width(100%);
+        max-width: 525px;
+      }
+    }
+
+    .form-item-name {
+      @include u-position(relative);
+
+      &::after {
+        @include u-display(block);
+        @include u-position(absolute);
+        @include u-width(3);
+        @include u-height(3);
+        top: 23px;
+        right: 25px;
+        content: "";
+        mask-image: url("../icons/fa/search.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        @include u-bg(map-get($_config, search-icon));
+      }
+    }
+
+    .js-hide {
+      @include u-display(none);
+    }
+
+    .form-actions {
+      @include at-media(tablet-lg) {
+        @include u-position(absolute);
+        bottom: -40%;
+      }
+    }
+  }
+}
+
+.jcc-form-search__pager {
+  @include u-margin-top(6);
+}
