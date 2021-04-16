@@ -12,6 +12,7 @@
   h2,
   .jcc-h2 {
     @extend .jcc-h2;
+    @include u-margin-bottom(3);
   }
 
   h3,
