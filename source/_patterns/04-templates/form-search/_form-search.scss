@@ -22,7 +22,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
     .form-item {
       @include at-media(tablet-lg) {
-        @include u-width(100%);
+        @include u-width(full);
         max-width: 525px;
       }
     }

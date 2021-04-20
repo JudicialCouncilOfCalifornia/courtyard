@@ -180,7 +180,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-width(full);
       @include u-height(full);
       content: '';
-      background: rgba(color(map-get($_config, background-overlay)), 0.3);
+      background: rgba(color(map-get($_config, background-overlay)), 0.7);
       z-index: 1;
     }
   }
