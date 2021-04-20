@@ -263,7 +263,7 @@ a[data-entity-type="media"] {
   }
 }
 
-.usa-prose a.ext,
+.usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
   @extend %jcc-inline-icon-link;
 

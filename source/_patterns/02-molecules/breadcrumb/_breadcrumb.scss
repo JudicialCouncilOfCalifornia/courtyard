@@ -1,9 +1,40 @@
+$_config_schemes: (
+  base: (
+    link: primary-vivid,
+    slash: primary-vivid,
+    text: base-dark,
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .usa-breadcrumb--container {
   @include grid-container(widescreen);
 }
 
 .usa-breadcrumb__link {
+  &,
+  &:visited {
+    @include u-color(map-get($_config, link));
+  }
+
   span {
-    text-decoration: none;
+    @include u-text-decoration(no-underline);
+  }
+}
+
+.usa-breadcrumb__list-item {
+  @include u-color(map-get($_config, text));
+
+  &:not(:last-child) {
+    &::after {
+      @include u-bottom(0);
+      @include u-bg("transparent");
+      @include u-text-align(center);
+      @include u-color(map-get($_config, slash));
+      mask-image: none;
+      height: 1ex;
+      content: "/";
+    }
   }
 }

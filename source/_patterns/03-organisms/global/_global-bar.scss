@@ -40,7 +40,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-global-bar__logo {
-  @include typeset(heading, 2xs, $theme-heading-line-height);
+  @include typeset(heading, 3xs, $theme-heading-line-height);
   @include u-font-weight(normal);
   @include u-text(uppercase);
   @include u-text-align(center);
