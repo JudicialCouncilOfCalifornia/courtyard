@@ -120,6 +120,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-bg("white");
   }
 
+  svg,
   span {
     display: none;
   }
@@ -246,6 +247,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   &:disabled {
     @include u-text(gray-70);
   }
+
+  &.ext {
+    @extend %jcc-button-external;
+  }
 }
 
 .jcc-button--file-link,
@@ -269,25 +274,24 @@ a[data-entity-type="media"] {
 
 a.jcc-button--cta-link {
   @extend %jcc-button;
+  @include u-display(flex);
+  @include u-flex(justify);
+  @include u-align-items(align-center);
+  @include u-margin-right(0);
+  @include u-padding(0);
+  @include u-bg("transparent");
+  @include u-text(uppercase);
+  @include u-font(sans, sm);
+  letter-spacing: 1.8px;
+  text-decoration: none;
 
   &,
   &:visited {
-    @include button-unstyled;
-    @include u-display(flex);
-    @include u-flex(justify);
-    @include u-align-items(align-center);
-    @include u-margin-right(0);
-    @include u-padding(0);
     @include u-color(map-get($_config, cta-text));
-    @include u-text(uppercase);
-    @include u-font(sans, sm);
-    letter-spacing: 1.8px;
-    text-decoration: none;
   }
 
   &:hover,
   &.jcc-button--hover {
-    @include u-bg("transparent");
     @include u-color(map-get($_config, cta-text-hover));
     text-decoration: none;
 
@@ -298,7 +302,6 @@ a.jcc-button--cta-link {
 
   &:active,
   &.jcc-button--active {
-    @include u-bg("transparent");
     @include u-color(map-get($_config, cta-text-active));
     text-decoration: none;
 
