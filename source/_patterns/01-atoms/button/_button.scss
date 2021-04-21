@@ -149,6 +149,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     mask-size: contain;
     mask-repeat: no-repeat;
   }
+
+  svg,
+  span {
+    display: none;
+  }
 }
 
 .jcc-button--primary {
@@ -263,6 +268,14 @@ a[data-entity-type="media"] {
   }
 }
 
+a.ext {
+  svg,
+  span[class^='fa'],
+  span[class*='fa'] {
+    display: none;
+  }
+}
+
 .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
   @extend %jcc-inline-icon-link;
@@ -342,5 +355,10 @@ a.jcc-button--cta-link {
       @include u-top(-1px);
       mask-image: url("../icons/fa/file.svg");
     }
+  }
+
+  svg,
+  span {
+    display: none;
   }
 }
