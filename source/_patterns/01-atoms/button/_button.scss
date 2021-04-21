@@ -294,7 +294,7 @@ a.jcc-button--cta-link {
   @include u-padding(0);
   @include u-bg("transparent");
   @include u-text(uppercase);
-  @include u-font(sans, sm);
+  font-size: font-size('sans', 7);
   letter-spacing: 1.8px;
   text-decoration: none;
 
