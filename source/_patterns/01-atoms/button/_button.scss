@@ -121,6 +121,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   svg.ext,
+  svg.mailto,
   span[class^='fa'],
   span[class*='fa'] {
     display: none;
@@ -152,6 +153,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   svg.ext,
+  svg.mailto,
   span[class^='fa'],
   span[class*='fa'] {
     display: none;
@@ -278,6 +280,14 @@ a.ext {
   }
 }
 
+a.mailto {
+  svg.mailto,
+  span[class^='fa'],
+  span[class*='fa'] {
+    display: none;
+  }
+}
+
 .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
   @extend %jcc-inline-icon-link;
@@ -360,6 +370,7 @@ a.jcc-button--cta-link {
   }
 
   svg.ext,
+  svg.mailto,
   span[class^='fa'],
   span[class*='fa'] {
     display: none;
