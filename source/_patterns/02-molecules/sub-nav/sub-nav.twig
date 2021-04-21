@@ -17,30 +17,32 @@
   'jcc-sub-nav',
 ]|merge(sub_nav.classes|default([''])) %}
 
-<nav class="{{ classes|join(' ')|trim }}">
-  <div class="jcc-sub-nav__container">
-    <ul class="jcc-sub-nav__items">
-      {% if sub_nav.back_link %}
-        <li class="jcc-sub-nav__item">
-          <a class="back-link" href="{{ sub_nav.back_link.url }}">
-            <span>{{ sub_nav.back_link.text }}</span>
-            {% include "@atoms/icon/icon.twig" with {
-              icon: {
-                name: "chevron-left",
-                set: "fa",
-                width: 18,
-                height: 18,
-              }
-            } %}
-          </a>
-        </li>
-      {% endif %}
+{% if sub_nav.back_link or sub_nav.links %}
+  <nav class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-sub-nav__container">
+      <ul class="jcc-sub-nav__items">
+        {% if sub_nav.back_link %}
+          <li class="jcc-sub-nav__item">
+            <a class="back-link" href="{{ sub_nav.back_link.url }}">
+              <span>{{ sub_nav.back_link.text }}</span>
+              {% include "@atoms/icon/icon.twig" with {
+                icon: {
+                  name: "chevron-left",
+                  set: "fa",
+                  width: 18,
+                  height: 18,
+                }
+              } %}
+            </a>
+          </li>
+        {% endif %}
 
-      {% for item in sub_nav.links %}
-        <li class="jcc-sub-nav__item">
-          <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}">{{ item.text }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</nav>
+        {% for item in sub_nav.links %}
+          <li class="jcc-sub-nav__item">
+            <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}">{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+{% endif %}

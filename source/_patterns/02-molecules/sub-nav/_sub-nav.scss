@@ -12,6 +12,11 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
+.jcc-sub-nav {
+  @include u-border-bottom(solid, map-get($_config, border));
+  border-bottom-width: 3px;
+}
+
 .jcc-sub-nav__container {
   @include at-media(tablet) {
     @include grid-container(widescreen);
@@ -23,8 +28,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(tablet) {
     @include grid-row();
-    @include u-border-bottom(solid, map-get($_config, border));
-    border-bottom-width: 3px;
   }
 }
 
