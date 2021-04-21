@@ -27,9 +27,7 @@ const svgstore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
 
 const pkg = require("./node_modules/uswds/package.json");
-const uswds = require("./node_modules/uswds-gulp/config/uswds");
-const jsSrc = config.js.src;
-jsSrc.unshift(`${uswds}/js/uswds.js`);
+const uswds = "./node_modules/uswds/dist";
 
 // Error Handler
 // -------------------------------------------------------------- //
@@ -56,6 +54,10 @@ const plPhp = () => {
   return exec("php core/console --generate");
 };
 
+const copyUswdsJs = () => {
+  return gulp.src(`${uswds}/js/**/*`).pipe(gulp.dest(config.js.dest));
+};
+
 const copyUswdsFonts = () => {
   return gulp.src(`${uswds}/fonts/**/*`).pipe(gulp.dest(config.fonts.public_fonts));
 };
@@ -70,29 +72,35 @@ const buildIcons = () => {
   return gulp
     .src(config.icons.src)
     .pipe(plumber({ errorHandler: errorHandler }))
-    .pipe(svgmin({
-      plugins: [
-        {
-          removeViewBox: false
-        }
-      ]
-    }))
-    .pipe(rename(function (file) {
-      let name = ['icon'];
-      name = name.concat(file.dirname.split(path.sep));
-      name.push(file.basename.replace(' ', '-').toLowerCase());
-      file.basename = name.join('-');
-    }))
-    .pipe(cheerio({
-      run: function($) {
-        // Wrap inner html of each svg with a group.
-        const $svg = $('svg');
-        $svg.html('<g>' + $svg.html() + '</g>');
-        // Transfer svg attribute to group.
-        $('svg > g').attr('fill', $svg.attr('fill'));
-      },
-      parserOptions: { xmlMode: true }
-    }))
+    .pipe(
+      svgmin({
+        plugins: [
+          {
+            removeViewBox: false,
+          },
+        ],
+      })
+    )
+    .pipe(
+      rename(function (file) {
+        let name = ["icon"];
+        name = name.concat(file.dirname.split(path.sep));
+        name.push(file.basename.replace(" ", "-").toLowerCase());
+        file.basename = name.join("-");
+      })
+    )
+    .pipe(
+      cheerio({
+        run: function ($) {
+          // Wrap inner html of each svg with a group.
+          const $svg = $("svg");
+          $svg.html("<g>" + $svg.html() + "</g>");
+          // Transfer svg attribute to group.
+          $("svg > g").attr("fill", $svg.attr("fill"));
+        },
+        parserOptions: { xmlMode: true },
+      })
+    )
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename(config.icons.dest_name))
     .pipe(
@@ -191,7 +199,7 @@ const buildJs = (src, destPath, destName) => {
 };
 
 const plJs = () => {
-  return buildJs(jsSrc, config.js.dest, "scripts");
+  return buildJs(config.js.src, config.js.dest, "scripts");
 };
 
 const styleguideJs = () => {
@@ -224,6 +232,7 @@ const serve = (cb) => {
 
 const fullBuild = gulp.series(
   plPhp,
+  copyUswdsJs,
   copyUswdsFonts,
   copyUswdsImages,
   buildIcons,
@@ -233,7 +242,15 @@ const fullBuild = gulp.series(
   styleguideJs
 );
 
-const partialBuild = gulp.series(plPhp, copyUswdsFonts, copyUswdsImages, buildIcons, plCss, plJs);
+const partialBuild = gulp.series(
+  plPhp,
+  copyUswdsJs,
+  copyUswdsFonts,
+  copyUswdsImages,
+  buildIcons,
+  plCss,
+  plJs
+);
 
 exports.build = fullBuild;
 exports.default = gulp.series(fullBuild, serve, watch);
