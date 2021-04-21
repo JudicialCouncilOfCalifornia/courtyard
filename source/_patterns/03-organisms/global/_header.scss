@@ -97,6 +97,11 @@ $_hat: map-get($_config, hat);
     @include u-position(relative);
     @include u-border-bottom(0);
     @include u-overflow(hidden);
+    height: 60px;
+
+    @include at-media-max(tablet-lg) {
+      @include u-padding-x(2);
+    }
 
     @include at-media(tablet-lg) {
       @include u-display(flex);
@@ -114,18 +119,15 @@ $_hat: map-get($_config, hat);
     @include u-display(inline-flex);
     @include u-align-items(align-center);
     @include hc(color, $_navbar, logo);
-
-    @include at-media-max(tablet-lg) {
-      height: 37px;
-    }
+    height: 37px;
 
     @include at-media(tablet-lg) {
-      height: 69px;
+      height: 65px;
     }
 
     svg {
       @include u-width(auto);
-      max-height: 100%;
+      height: 100%;
     }
   }
 
@@ -140,12 +142,12 @@ $_hat: map-get($_config, hat);
     @include u-position(absolute);
     @include u-justify-content(justify-center);
     @include u-align-items(align-center);
-    @include u-top(0);
-    @include u-right(0);
+    @include u-right(1);
     @include u-width(6);
     @include u-height(6);
     @include u-cursor(pointer);
     @include hc(color, $_navbar, logo);
+    top: 6px;
 
     @include at-media(tablet-lg) {
       @include u-display(none);
