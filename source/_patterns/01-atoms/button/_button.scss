@@ -120,8 +120,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-bg("white");
   }
 
-  svg,
-  span {
+  svg.ext,
+  span[class^='fa'],
+  span[class*='fa'] {
     display: none;
   }
 }
@@ -150,8 +151,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     mask-repeat: no-repeat;
   }
 
-  svg,
-  span {
+  svg.ext,
+  span[class^='fa'],
+  span[class*='fa'] {
     display: none;
   }
 }
@@ -269,7 +271,7 @@ a[data-entity-type="media"] {
 }
 
 a.ext {
-  svg,
+  svg.ext,
   span[class^='fa'],
   span[class*='fa'] {
     display: none;
@@ -357,8 +359,9 @@ a.jcc-button--cta-link {
     }
   }
 
-  svg,
-  span {
+  svg.ext,
+  span[class^='fa'],
+  span[class*='fa'] {
     display: none;
   }
 }
