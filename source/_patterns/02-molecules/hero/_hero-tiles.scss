@@ -23,12 +23,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-hero-tiles__tiles {
   @include list-reset();
 
-  @include at-media(mobile-lg) {
+  @include at-media(tablet) {
     @include grid-row();
   }
 
   .jcc-hero-tiles__tile {
-    @include at-media(mobile-lg) {
+    @include at-media(tablet) {
       @include grid-col(6);
     }
 
@@ -70,7 +70,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     height: 110px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 
-    @include at-media(mobile-lg) {
+    @include at-media(tablet) {
       @include u-justify-content(justify-center);
       @include u-padding-y(3);
       flex-direction: column;
@@ -96,7 +96,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-padding-right(3);
   box-sizing: content-box;
 
-  @include at-media(mobile-lg) {
+  @include at-media(tablet) {
     @include u-padding(0);
     @include u-margin-bottom(2);
   }
@@ -122,7 +122,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-font(sans, sm);
   letter-spacing: 0.5px;
 
-  @include at-media(mobile-lg) {
+  @include at-media(tablet) {
     @include u-text-align(center)  ;
   }
 
