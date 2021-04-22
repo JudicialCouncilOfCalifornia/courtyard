@@ -65,3 +65,59 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-news-listing__pager {
   @include u-margin-top(6);
 }
+
+.jcc-news-listing__filters-title {
+  @include u-margin-top(7);
+  @include u-color(base-darker);
+  @include u-font(serif, md);
+  @include u-font-weight(normal);
+  @include u-text(italic);
+}
+
+.jcc-news-listing__filters-filter {
+  .usa-legend,
+  .fieldset-legend {
+    @include u-display(none);
+  }
+
+  .usa-checkbox__label {
+    @include u-margin-top(4);
+  }
+
+  .usa-input {
+    @include u-margin-top(0);
+  }
+
+  .usa-label {
+    @include u-font(sans, 2xs);
+  }
+
+  .usa-hint {
+    @include u-color(base);
+    @include u-font(sans, 2xs);
+  }
+
+  .form-item-search {
+    @include u-position(relative);
+
+    &::after {
+      @include u-position(absolute);
+      @include u-display(block);
+      @include u-bg(primary);
+      width: 22px;
+      height: 22px;
+      top: 17px;
+      right: 15px;
+      content: "";
+      mask-image: url("../icons/fa/search.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+    }
+  }
+}
+
+.usa-button {
+  .jcc-news-listing & {
+    @include u-margin-top(6);
+  }
+}
