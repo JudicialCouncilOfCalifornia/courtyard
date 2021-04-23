@@ -66,7 +66,40 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-margin-top(6);
 }
 
-.jcc-news-listing__filters-title {
+.jcc-news-listing__form {
+  .usa-form {
+    @include u-maxw(none);
+  }
+}
+
+.jcc-news-listing-form {
+  .usa-accordion {
+    @include u-position(relative);
+    @include u-margin-top(5);
+    @include u-margin-bottom(5);
+  }
+
+  .usa-accordion__heading {
+    @include at-media(tablet-lg) {
+      @include u-display(none);
+    }
+  }
+
+  .usa-accordion__content {
+    @include u-padding-top(4);
+    @include u-padding-bottom(4);
+    @include u-bg(base-lightest);
+
+    @include at-media(tablet-lg) {
+      @include u-display(block);
+      @include u-padding-top(2);
+      @include u-padding-x(0);
+      @include u-bg("transparent");
+    }
+  }
+}
+
+.jcc-news-listing-form__filters-title {
   @include u-margin-top(7);
   @include u-color(base-darker);
   @include u-font(serif, md);
@@ -74,7 +107,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-text(italic);
 }
 
-.jcc-news-listing__filters-filter {
+.jcc-news-listing-form__filters-filter {
   .usa-legend,
   .fieldset-legend {
     @include u-display(none);
@@ -114,10 +147,18 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       mask-repeat: no-repeat;
     }
   }
+
+  .usa-date-picker {
+    @include u-margin-top(1);
+  }
+
+  .usa-date-picker__button {
+    @include u-margin-top(0);
+  }
 }
 
 .usa-button {
-  .jcc-news-listing & {
+  .jcc-news-listing-form & {
     @include u-margin-top(6);
   }
 }

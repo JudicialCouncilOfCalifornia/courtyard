@@ -38,53 +38,60 @@ news_listing:
       date: "Feb 14, 2021"
   form: >
     <form class="views-exposed-form bef-exposed-form usa-form jcc-form" data-drupal-selector="views-exposed-form-news-news-list" action="" method="get" id="views-exposed-form-news-news-list" accept-charset="UTF-8">
-      <div class="jcc-news-listing">
-        <div class="jcc-news-listing__filters-filter">
+      <div class="jcc-news-listing-form">
+        <div class="jcc-news-listing-form__filters-filter">
           <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search">
             <input placeholder="Search title or topic" data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text usa-input">
           </div>
         </div>
-        <h3 class="jcc-news-listing__filters-title">Filter by type</h3>
-        <div class="jcc-news-listing__filters-filter">
-          <fieldset data-drupal-selector="edit-type" id="edit-type--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper usa-fieldset">
-            <legend class="usa-legend jcc-form-group__title">
-              <span class="fieldset-legend"></span>
-            </legend>
-            <div class="fieldset-wrapper">
-              <div id="edit-type" class="form-checkboxes usa-form-group jcc-form-group__options">
-                <div class="form-checkboxes">
-                  <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-type-1940 form-item-type-1940 usa-checkbox">
-                    <input data-drupal-selector="edit-type-1940" type="checkbox" id="edit-type-1940" name="type[1940]" value="1940" class="form-checkbox usa-checkbox__input">
-                    <label for="edit-type-1940" class="option usa-checkbox__label">Term #1</label>
+        <div class="usa-accordion">
+          <h4 class="usa-accordion__heading">
+            <button class="usa-accordion__button" aria-expanded="false" aria-controls="filters-wrapper">Filters</button>
+          </h4>
+          <div id="filters-wrapper" class="usa-accordion__content">
+            <h3 class="jcc-news-listing-form__filters-title">Filter by type</h3>
+            <div class="jcc-news-listing-form__filters-filter">
+              <fieldset data-drupal-selector="edit-type" id="edit-type--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper usa-fieldset">
+                <legend class="usa-legend jcc-form-group__title">
+                  <span class="fieldset-legend"></span>
+                </legend>
+                <div class="fieldset-wrapper">
+                  <div id="edit-type" class="form-checkboxes usa-form-group jcc-form-group__options">
+                    <div class="form-checkboxes">
+                      <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-type-1940 form-item-type-1940 usa-checkbox">
+                        <input data-drupal-selector="edit-type-1940" type="checkbox" id="edit-type-1940" name="type[1940]" value="1940" class="form-checkbox usa-checkbox__input">
+                        <label for="edit-type-1940" class="option usa-checkbox__label">Term #1</label>
+                      </div>
+                      <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-type-1941 form-item-type-1941 usa-checkbox">
+                        <input data-drupal-selector="edit-type-1941" type="checkbox" id="edit-type-1941" name="type[1941]" value="1941" class="form-checkbox usa-checkbox__input">
+                        <label for="edit-type-1941" class="option usa-checkbox__label">Term number 2</label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="js-form-item form-item js-form-type-checkbox form-type-checkbox js-form-item-type-1941 form-item-type-1941 usa-checkbox">
-                    <input data-drupal-selector="edit-type-1941" type="checkbox" id="edit-type-1941" name="type[1941]" value="1941" class="form-checkbox usa-checkbox__input">
-                    <label for="edit-type-1941" class="option usa-checkbox__label">Term number 2</label>
-                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <h3 class="jcc-news-listing-form__filters-title">Filter by date</h3>
+            <div class="jcc-news-listing-form__filters-filter">
+              <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-date-start form-item-date-start usa-form-group">
+                <label class="usa-label" id="edit-date-start-label" for="edit-date-start">Start date</label>
+                <div class="usa-hint" id="edit-date-start-hint">mm/dd/yyyy</div>
+                <div class="usa-date-picker" data-default-value="2021-04-09">
+                  <input class="bef-datepicker form-text usa-input" data-drupal-selector="edit-date-start" type="text" id="edit-date-start" name="date_start" value="2021-04-09" size="30" maxlength="128">
+                </div>
+              </div>
+              <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-date-end form-item-date-end usa-form-group">
+                <label class="usa-label" id="edit-date-end-label" for="edit-date-end">End date</label>
+                <div class="usa-hint" id="edit-date-end-hint">mm/dd/yyyy</div>
+                <div class="usa-date-picker" data-default-value="">
+                  <input data-drupal-selector="edit-date-end" type="text" id="edit-date-end" name="date_end" value="" size="30" maxlength="128" class="form-text usa-input">
                 </div>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <h3 class="jcc-news-listing__filters-title">Filter by date</h3>
-        <div class="jcc-news-listing__filters-filter">
-          <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-date-start form-item-date-start usa-form-group">
-            <label class="usa-label" id="edit-date-start-label" for="edit-date-start">End date</label>
-            <div class="usa-hint" id="edit-date-start-hint">mm/dd/yyyy</div>
-            <div class="usa-date-picker" data-default-value="2021-04-09">
-              <input class="bef-datepicker form-text usa-input" data-drupal-selector="edit-date-start" type="text" id="edit-date-start" name="date_start" value="2021-04-09" size="30" maxlength="128">
+            <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group" id="edit-actions">
+              <input data-drupal-selector="edit-submit-news" type="submit" id="edit-submit-news" value="Apply" class="button js-form-submit form-submit usa-button">
             </div>
           </div>
-          <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-date-end form-item-date-end usa-form-group">
-            <label class="usa-label" id="edit-date-end-label" for="edit-date-end">Start date</label>
-            <div class="usa-hint" id="edit-date-end-hint">mm/dd/yyyy</div>
-            <div class="usa-date-picker" data-default-value="">
-              <input data-drupal-selector="edit-date-end" type="text" id="edit-date-end" name="date_end" value="" size="30" maxlength="128" class="form-text usa-input">
-            </div>
-          </div>
-        </div>
-        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group" id="edit-actions">
-          <input data-drupal-selector="edit-submit-news" type="submit" id="edit-submit-news" value="Apply" class="button js-form-submit form-submit usa-button">
         </div>
       </div>
     </form>
