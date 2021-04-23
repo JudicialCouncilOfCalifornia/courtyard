@@ -307,18 +307,18 @@ $aspect-width: 16;
 }
 
 @mixin t-copy() {
-  @include u-font(body, 5); // 16
+  @include u-font(body, $theme-text-size);
 
   @media print {
-    @include u-font(body, 4); // 16
+    @include u-font(body, $theme-text-size-print);
   }
 }
 
 @mixin t-small() {
-  @include u-font(body, 4); // 16
+  @include u-font(body, $theme-small-font-size);
 
   @media print {
-    @include u-font(body, 2);
+    @include u-font(body, $theme-small-font-size-print);
   }
 }
 @mixin body-prose() {
