@@ -1,0 +1,20 @@
+search:
+  background: "alt"
+  title: "Search"
+  keywords: "law"
+  num_results: 150
+  results:
+    include():
+      pattern: 'templates-search-results'
+  form: >
+    <form class="views-exposed-form bef-exposed-form usa-form jcc-form" data-bef-auto-submit-full-form="" data-bef-auto-submit="" data-bef-auto-submit-delay="1500" data-drupal-selector="views-exposed-form-search-search" action="/search" method="get" id="views-exposed-form-search-search" accept-charset="UTF-8">
+      <div class="js-form-item form-item js-form-type-search-api-autocomplete form-type-search-api-autocomplete js-form-item-search form-item-search">
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="test" size="30" maxlength="128" class="form-text usa-input">
+      </div>
+      <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper usa-form-group" id="edit-actions">
+        <input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit usa-button" data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="Search">
+      </div>
+    </form>
+  pager:
+    include():
+      pattern: 'molecules-pager'

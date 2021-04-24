@@ -1,0 +1,17 @@
+$_config_schemes: (
+  base: (
+    item-border: base-lighter,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.search-results__items {
+  @include list-reset();
+  border-top: 3px solid color(map-get($_config, item-border));
+}
+
+.search-results__item {
+  @include u-padding-y(2);
+  border-bottom: 3px solid color(map-get($_config, item-border));
+}

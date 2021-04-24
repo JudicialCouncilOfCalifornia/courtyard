@@ -24,8 +24,10 @@
 
 {% set attributes = attributes.setAttribute('width', width) %}
 {% set attributes = attributes.setAttribute('height', height) %}
+
 {% if icon.decorative %}
   {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
+  {% set attributes = attributes.setAttribute('focusable', 'false') %}
 {% endif %}
 
 {% if icon.name %}

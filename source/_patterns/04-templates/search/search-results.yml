@@ -1,0 +1,11 @@
+search_results:
+  items:
+    -
+      include():
+        pattern: 'templates-search-result'
+    -
+      include():
+        pattern: 'templates-search-result'
+    -
+      include():
+        pattern: 'templates-search-result'

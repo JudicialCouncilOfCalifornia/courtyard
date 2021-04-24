@@ -10,6 +10,7 @@
  *   - logo: the site's logo/name
  *     - title: the name of the site
  *     - svg: the url to the svg
+ *   - search_action: search form action link
  *   - links: main menu links
  *     - text: link text
  *     - url: link url
@@ -147,17 +148,28 @@
 
         <div class="usa-nav__secondary">
           {% if header.translate %}
-            {# <ul class="jcc-translate usa-accordion">
-              <li class="jcc-header__translate-nav"> #}
-                <div class="jcc-header__translate-nav usa-accordion">
-                {{ _self.translate_button(header.translate) }}
-                </div>
-              {# </li>
-            </ul> #}
+            <div class="jcc-header__translate-nav usa-accordion">
+              {{ _self.translate_button(header.translate) }}
+            </div>
           {% endif %}
 
           <div class="jcc-header__search">
-            {{ header.search }}
+            <form action="{{ header.search_action }}" class="usa-search usa-search--small" role="search">
+              <label class="usa-sr-only" for="header-search">{{ 'Search'|t }}</label>
+              <input class="usa-input" id="header-search" type="search" name="search" placeholder="{{ 'Search'|t }}">
+              <button class="jcc-button--unstyled" type="submit">
+                {% include "@atoms/icon/icon.twig" with {
+                  icon: {
+                    name: 'search',
+                    set: 'fa',
+                    width: 24,
+                    height: 24,
+                    decorative: true
+                  }
+                } %}
+                <span class="usa-sr-only">{{ 'Search'|t }}</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>

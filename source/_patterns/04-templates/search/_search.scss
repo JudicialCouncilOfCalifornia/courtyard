@@ -1,0 +1,23 @@
+.search__pager {
+  @include u-margin-top(6);
+}
+
+.search__form {
+  @include u-margin-bottom(6);
+
+  .usa-form {
+    @include grid-row();
+    @include grid-gap(1);
+    @include u-justify-content(justify);
+    @include u-align-items(align-center);
+    @include u-maxw(mobile-lg);
+
+    .form-item {
+      flex: 1 0 auto;
+    }
+
+    input {
+      @include u-margin-top(0);
+    }
+  }
+}

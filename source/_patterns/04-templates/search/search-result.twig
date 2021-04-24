@@ -1,0 +1,22 @@
+{#
+/**
+ * Available variables:
+ * - search_result - primary variable
+ *   - title: title of search result (node, etc)
+ *   - excerpt: text excerpt
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'search-result',
+]|merge(search_result.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <h3 class="search-result__title">
+    {{ search_result.title }}
+  </h3>
+  <div class="search-result__excerpt">
+    {{ search_result.excerpt }}
+  </div>
+</div>

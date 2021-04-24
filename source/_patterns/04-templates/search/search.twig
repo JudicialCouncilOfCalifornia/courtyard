@@ -1,0 +1,58 @@
+{#
+/**
+ * Available variables:
+ * - search - primary variable
+ *   - results: array of search results
+ *   - form: form search, filters, etc
+ *   - pager: pagination for multiple pages of content
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set content %}
+    <div class="search__form">
+      {{ search.form }}
+    </div>
+
+    <div class="search__content">
+      {{ search.results }}
+
+      <div class="search__pager">
+        {{ search.pager }}
+      </div>
+    </div>
+{% endset %}
+
+{% set classes = [
+  'search',
+]|merge(search.classes|default([])) %}
+
+{% set title %}
+  {% if search.keywords %}
+    {% trans %}
+        1 result for “{{ search.keywords }}”
+    {% plural search.num_results %}
+        {{ search.num_results }} results for “{{ search.keywords }}”
+    {% endtrans %}
+  {% else %}
+    {{ search.title|default('Search'|t ) }}
+  {% endif %}
+{% endset %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% include "@molecules/hero/hero.twig" with {
+    hero: {
+      background: search.background,
+      main: {
+        title: title,
+      },
+      layout: 'full-main',
+    }
+  } %}
+
+  {% include "@molecules/section/section.twig" with {
+    section: {
+      content: content,
+    }
+  } %}
+</div>

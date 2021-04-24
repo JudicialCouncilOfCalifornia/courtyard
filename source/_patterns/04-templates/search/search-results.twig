@@ -1,0 +1,16 @@
+{#
+/**
+ * Available variables:
+ * - search_results - primary variable
+ *   - items: array of search resultss
+ *   - classes: array of classes to add to component
+ */
+#}
+
+<ul class="search-results__items">
+  {% for item in search_results.items %}
+    <li class="search-results__item">
+      {{ item }}
+    </li>
+  {% endfor %}
+</ul>

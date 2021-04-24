@@ -1,0 +1,20 @@
+$_config_schemes: (
+  base: (
+    title: (
+      default: primary-vivid,
+      hover: primary-dark,
+      active: primary-darker,
+    ),
+  )
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.search-result__title {
+  @include u-margin-bottom(1);
+
+  a {
+    @include link-colors(map-get($_config, title));
+    @include u-text-decoration(no-underline);
+  }
+}

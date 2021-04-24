@@ -66,6 +66,7 @@ $_config_schemes: (
     hat: (
       border: accent-warm,
     ),
+    search: primary,
   ),
   local: (),
 );
@@ -394,6 +395,7 @@ $_hat: map-get($_config, hat);
 
     @include at-media(tablet-lg) {
       @include u-flex-direction(row);
+      @include u-justify-content(justify-end);
       @include u-align-items(align-center);
       @include u-margin-top(0);
       bottom: 110px;
@@ -474,27 +476,44 @@ $_hat: map-get($_config, hat);
         }
       }
     }
+  }
+}
 
-    .usa-search {
+.jcc-header__search {
+  @include at-media-max(tablet-lg) {
+    @include u-margin-y(1);
+    @include u-padding-x(3);
+  }
+
+  .usa-search {
+    @include u-position("relative");
+
+    @include at-media(tablet-lg) {
+      @include u-margin-top(0);
+    }
+
+    @include at-media(desktop) {
+      width: 300px;
+    }
+
+    .usa-input {
       @include at-media-max(tablet-lg) {
-        @include u-margin-y(1);
-        @include u-padding-x(3);
+        @include u-maxw(none);
       }
+    }
 
-      @include at-media(tablet-lg) {
-        @include u-margin-top(0);
-      }
-
-      .usa-input {
-        @include at-media-max(tablet-lg) {
-          @include u-maxw(none);
-        }
-      }
-
-      .jcc-button--unstyled {
-        @include button-unstyled();
-        background-image: none;
-      }
+    .jcc-button--unstyled {
+      @include button-unstyled();
+      @include u-position(absolute);
+      @include u-display(flex);
+      @include u-justify-content(justify-center);
+      @include u-align-items(align-center);
+      @include u-right(0);
+      @include u-top(2px);
+      @include u-height(6);
+      @include u-width(6);
+      @include u-color(map-get($_config, search));
+      background-image: none;
     }
   }
 }
