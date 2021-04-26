@@ -2,6 +2,7 @@ $_config_schemes: (
   base: (
     brow-color: base-dark,
     title-color: primary-darker,
+    hover-title-color: primary-vivid,
     title-link: (
       default: primary,
       hover: primary-dark,
@@ -81,6 +82,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__heading {
   @include u-color(map-get($_config, title-color));
 
+  .usa-card--hover & {
+    @include u-color(map-get($_config, hover-title-color));
+  }
+
   a {
     @include link-colors(map-get($_config, title-link));
     @include u-text-decoration(no-underline);
@@ -115,5 +120,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .icon {
     width: 80px;
     height: 80px;
+  }
+}
+
+.usa-card__body {
+  .usa-card--hover & {
+    @include u-color(ink);
   }
 }

@@ -21,7 +21,7 @@ cards:
     - style: "hover"
       title: "Consequat"
       brow: "Potenti"
-      body: null
+      body: "Nostra parturient vivamus quam eros suscipit ridiculus nisl vel"
       link:
         url: "#"
         text: "Diamtempor"
