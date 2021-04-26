@@ -65,7 +65,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-left(0);
       @include u-width(full);
       @include u-height(5);
-      background: linear-gradient(to bottom, transparent 0%, color(map-get($_config, background)) 65%);
+      background: linear-gradient(to bottom, rgba(color(map-get($_config, background)), 0) 0%, color(map-get($_config, background)) 95%);
       content: "";
       z-index: 1;
     }
