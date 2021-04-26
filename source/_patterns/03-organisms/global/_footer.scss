@@ -127,6 +127,12 @@ $_shoe: map-get($_config, shoe);
   }
 }
 
+.usa-footer__secondary-link {
+  a.ext {
+    @extend .jcc-button--external-link;
+  }
+}
+
 .usa-footer__logo {
   @include at-media(desktop) {
     @include grid-col(9);

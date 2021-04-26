@@ -288,6 +288,7 @@ a.mailto {
   }
 }
 
+// This is a plain-text link
 .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
   @extend %jcc-inline-icon-link;
