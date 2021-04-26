@@ -9,6 +9,10 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
+.jcc-news-highlights {
+  @include u-margin-top(4);
+}
+
 .jcc-news-highlights__items {
   @include unstyled-list();
 
