@@ -40,7 +40,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-border-width(0);
   @include u-radius($theme-button-border-radius);
   @include typeset($theme-button-font-family, null, 1);
-  @include u-font-weight(bold);
+  @include u-font-weight(normal);
   @include u-font-size(ui, xs);
   @include u-line-height(ui, 2);
   @include u-text-align(center);
