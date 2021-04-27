@@ -21,6 +21,11 @@
 #}
 
 {% set style = hero_tiles.style|default('no-image') %}
+{% if style == 'background-image' and not hero_tiles.images.banner %}
+  {% set style = 'no-image' %}
+{% elseif style == 'side-image' and not hero_tiles.images.side %}
+  {% set style = 'no-image' %}
+{% endif %}
 
 {% set classes = [
   'jcc-hero-tiles',
