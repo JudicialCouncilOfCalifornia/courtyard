@@ -1,0 +1,18 @@
+.embed-responsive {
+  @include u-position(relative);
+  @include u-maxw(full);
+  @include u-height(0);
+  @include u-overflow(hidden);
+
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    @include u-pin(top, left);
+    @include u-width(full);
+    @include u-height(full);
+    @include u-border(0);
+    z-index: 1;
+  }
+}

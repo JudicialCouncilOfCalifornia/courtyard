@@ -1,81 +1,59 @@
-.embed-responsive {
-  @include u-position(relative);
-  @include u-maxw(full);
-  @include u-height(0);
+.jcc-video__cover {
+  @include u-pin-all();
+  @include u-width(full);
+  @include u-height(full);
+  @include u-margin(0);
+  @include u-padding(0);
+  @include u-border(0);
+  @include u-cursor(pointer);
   @include u-overflow(hidden);
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-size: cover;
+  text-indent: -999em;
+  opacity: 1;
+  transition: opacity 800ms, height 0ms;
+  transition-delay: 0ms, 0ms;
+  z-index: 2;
 
-  &.video-active {
-    .embed-cover {
-      opacity: 0;
-      height: 0;
-      transition-delay: 0ms, 800ms;
-    }
+  .video-active & {
+    opacity: 0;
+    height: 0;
+    transition-delay: 0ms, 800ms;
   }
 
-  .embed-responsive-item,
-  iframe,
-  embed,
-  object,
-  video {
-    @include u-pin(top, left);
-    @include u-width(full);
-    @include u-height(full);
-    @include u-border(0);
-    z-index: 1;
+  &::before,
+  &::after {
+    @include u-position(absolute);
+    content: '';
+    top: 50%;
+    left: 50%;
+    opacity: 0.7;
+    transition: opacity 300ms;
   }
 
-  // Cover
-  .embed-cover {
-    @include u-pin-all();
-    @include u-width(full);
-    @include u-height(full);
-    @include u-margin(0);
-    @include u-padding(0);
-    @include u-border(0);
-    @include u-cursor(pointer);
-    @include u-overflow(hidden);
-    background-position: 50% 50%;
-    background-size: 100% 100%;
-    background-size: cover;
-    text-indent: -999em;
-    opacity: 1;
-    transition: opacity 800ms, height 0ms;
-    transition-delay: 0ms, 0ms;
-    z-index: 2;
+  &::before {
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    border: 5px solid white;
+    border-radius: 100%;
+  }
 
+  &::after {
+    width: 0;
+    height: 0;
+    margin: -25px 0 0 -15px;
+    border-left: 40px solid white;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+  }
+
+  &:hover,
+  &:focus {
     &::before,
     &::after {
-      @include u-position(absolute);
-      content: '';
-      top: 50%;
-      left: 50%;
-      opacity: 0.7;
-      transition: opacity 300ms;
-    }
-
-    &::before {
-      width: 80px;
-      height: 80px;
-      margin: -40px 0 0 -40px;
-      border: 5px solid white;
-      border-radius: 100%;
-    }
-
-    &::after {
-      width: 0;
-      height: 0;
-      margin: -25px 0 0 -15px;
-      border-left: 40px solid white;
-      border-top: 25px solid transparent;
-      border-bottom: 25px solid transparent;
-    }
-
-    &:hover,
-    &:focus {
-      &::before,
-      &::after {
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
 }

@@ -1,8 +1,8 @@
-document.querySelectorAll('.embed-responsive .embed-cover').forEach(item => {
+document.querySelectorAll('.jcc-video .jcc-video__cover').forEach(item => {
   item.addEventListener('click', event => {
     event.preventDefault();
 
-    const wrapper = event.target.closest('.embed-responsive');
+    const wrapper = event.target.closest('.jcc-video');
     const iframe = wrapper.querySelector('iframe:first-child');
     const src = iframe.getAttribute('data-src');
 
