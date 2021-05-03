@@ -28,7 +28,11 @@
           <ul class="jcc-global-bar__nav-items">
             {% for link in global_bar.links %}
               <li class="jcc-global-bar__nav-item">
-                <a href="{{ link.url }}">{{ link.text }}</a>
+                {% if link.url %}
+                  <a href="{{ link.url }}">{{ link.text }}</a>
+                {% else %}
+                  <span>{{ link.text }}</span>
+                {% endif %}
               </li>
             {% endfor %}
           </ul>
