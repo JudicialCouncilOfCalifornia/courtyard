@@ -197,15 +197,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-hero-tiles__title-container {
   @include grid-container(widescreen);
   @include u-position(relative);
-  @include u-padding-top(3);
+  @include u-padding-top(8);
   @include u-padding-bottom(2);
   @include u-text-align(center);
-
-  @include at-media(desktop) {
-    .jcc-hero-tiles--background-image & {
-      @include u-padding-top(8);
-    }
-  }
 }
 
 .jcc-hero-tiles__title-prefix {
