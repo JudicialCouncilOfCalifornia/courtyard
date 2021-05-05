@@ -56,11 +56,6 @@
 }
 
 .jcc-hero__title {
-  @include u-font(heading, 14); // 40
-
-  @include at-media(tablet) {
-    @include u-font(heading, 16); // 56
-  }
   @include u-line-height("heading", 2);
   @include u-text(primary-darker);
   @if $trial {

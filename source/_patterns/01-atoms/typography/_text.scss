@@ -107,7 +107,11 @@ a.usa-link,
   }
 
   h1,
-  h2 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include u-text(normal);
   }
 
@@ -135,7 +139,6 @@ a.usa-link,
 
   h6 {
     @extend .heading-h6;
-    @include u-font-weight("bold");
     text-transform: none;
   }
 
