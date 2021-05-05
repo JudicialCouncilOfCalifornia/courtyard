@@ -51,9 +51,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     &.back-link {
-      @include u-justify-content(justify-end);
       @include u-bg(map-get($_config, back-link-background));
       @include u-color(map-get($_config, back-link-text));
+
+      @include at-media(tablet) {
+        @include u-justify-content(justify-end);
+      }
 
       span {
         @include u-order(2);

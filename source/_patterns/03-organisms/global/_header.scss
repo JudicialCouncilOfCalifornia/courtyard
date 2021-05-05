@@ -316,6 +316,11 @@ $_hat: map-get($_config, hat);
         @include u-position(relative);
         @include u-padding-left(2);
         @include hc(background-color, $_nav, sub-sub-background);
+
+        // Hide tertiary items on wide screens
+        @include at-media(tablet-lg) {
+          @include u-display(none);
+        }
       }
     }
 
