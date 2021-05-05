@@ -328,9 +328,10 @@ $_hat: map-get($_config, hat);
         @include u-display(flex);
         @include u-align-items(align-center);
         @include u-padding-x(3);
+        @include u-padding-y(1);
         @include hc(background-color, $_nav, sub-background);
         @include hc(color, $_nav, sub-text);
-        height: 50px;
+        min-height: 50px;
 
         &.usa-current {
           @include hc(background-color, $_nav, sub-sub-background);
