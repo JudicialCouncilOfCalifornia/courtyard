@@ -13,6 +13,8 @@
  */
 #}
 
+{% set tag = cards.heading.title is empty ? 'h2' : 'h3' %}
+
 {% set classes = [
   'jcc-cards',
   'jcc-cards--' ~ cards.num_cols|default('3') ~ 'cols',
@@ -21,6 +23,7 @@
 {% set content %}
   <ul class="{{ classes|join(' ')|trim }}">
     {% for item in cards.items %}
+      {% set item = item|merge({ title_tag: tag }) %}
       <li class="jcc-cards__item">
         {% include "@molecules/card/card.twig" with {
           card: item
