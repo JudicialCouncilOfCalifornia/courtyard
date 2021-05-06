@@ -141,16 +141,6 @@ a.usa-link,
     @extend .heading-h6;
     text-transform: none;
   }
-
-  .h-responsive-h1,
-  .h-responsive-h2,
-  .h-responsive-h3,
-  .h-responsive-h4,
-  .h-responsive-h5,
-  .h-responsive-h6 {
-    /* FIXME: REMOVE BEFORE PRODUCTION MERGE */
-    @extend .heading-h2;
-  }
 }
 
 .usa-prose--background-color {
