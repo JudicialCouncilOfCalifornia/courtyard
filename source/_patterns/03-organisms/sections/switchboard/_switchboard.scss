@@ -49,7 +49,7 @@
   @include dark-background();
   @include u-border-top(accent-warm-dark);
   @include u-border-top("05");
-  right .jcc-breadcrumb__item,
+  .jcc-breadcrumb__item,
   .jcc-breadcrumb__item a {
     color: #fff;
   }
