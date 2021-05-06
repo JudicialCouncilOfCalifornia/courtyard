@@ -1,16 +1,19 @@
-.jcc-callout__block {
+.jcc-callout {
   @extend .usa-prose;
-  @include u-padding(3);
-  @include u-bg(secondary-lighter);
-  @include u-border-left("05", accent-warm);
   @include u-color(primary);
-  @include u-bg("white");
-  @include u-text("bold");
-}
+  @include u-color(primary);
 
-.jcc-callout__italic {
-  @extend .usa-prose;
-  @include u-font(heading, 8);
-  @include u-color(primary);
-  @include u-text("italic");
+  &__block {
+    @include u-padding(3);
+    @include u-bg(secondary-lighter);
+    @include u-border-left("05", accent-warm);
+    @include u-bg("white");
+    @include u-font(body, 8);
+    @include u-text("bold");
+  }
+
+  &__italic {
+    @include u-font(heading, 8);
+    @include u-text("italic");
+  }
 }
