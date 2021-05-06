@@ -88,7 +88,6 @@
 .jcc-switchboard--next {
   .jcc-header-group {
     margin-top: 40px;
-    padding-bottom: 0;
   }
   .jcc-header-group__title {
     @include u-font(heading, 14);
@@ -107,9 +106,6 @@
     }
   }
 
-  .jcc-header-group__title {
-    @include u-font(heading, 16);
-  }
   .jcc-switchboard__column-right {
     @include at-media(desktop) {
       margin-top: 2em;
@@ -131,9 +127,6 @@
     @include at-media(desktop) {
       @include grid-row;
       @include grid-gap;
-    }
-    .jcc-header-group {
-      padding-bottom: 0;
     }
     .jcc-header-group__title:after {
       left: 0;

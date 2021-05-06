@@ -11,37 +11,12 @@
   }
 }
 
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--light--secondary,
-.jcc-text-section--has-background-color--dark--secondary {
-  @include section-wrapper-bg;
-}
-
-.jcc-text-section--has-background-color--light,
-.jcc-text-section--has-background-color--light--secondary {
-  @include light-background($light-background-color: secondary-lighter);
-}
-
-.jcc-text-section--has-background-color--dark,
-.jcc-text-section--has-background-color--dark--secondary {
-  @include dark-background($dark-background-color: secondary);
-
-  a {
-    @include dark-background-link(
-      $dark-background-link-color: "white",
-      $dark-background-link-color-hover: accent-warm-light
-    );
-  }
-}
-
 .jcc-text-section__container {
   @include section-container;
 }
 
 .jcc-text-section__content {
   @include u-line-height(body, 4);
-  @extend .usa-prose;
 }
 
 .jcc-text-section__column-left,
@@ -54,10 +29,6 @@
 
   @include at-media(desktop) {
     @include u-margin-bottom(0);
-    h3 {
-      @include u-font(heading, 11);
-      @include u-font-weight(normal);
-    }
   }
 
   .jcc-callout__block,
@@ -128,5 +99,30 @@
     @include at-media(desktop) {
       @include grid-col(4);
     }
+  }
+}
+
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--light--secondary,
+.jcc-text-section--has-background-color--dark--secondary {
+  @include section-wrapper-bg;
+}
+
+.jcc-text-section--has-background-color--light,
+.jcc-text-section--has-background-color--light--secondary {
+  @include light-background($light-background-color: secondary-lighter);
+}
+
+.jcc-text-section--has-background-color--dark,
+.jcc-text-section--has-background-color--dark--secondary {
+  @include dark-background($dark-background-color: secondary);
+  @extend .usa-prose--background-color;
+
+  a {
+    @include dark-background-link(
+      $dark-background-link-color: "white",
+      $dark-background-link-color-hover: accent-warm-light
+    );
   }
 }

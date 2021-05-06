@@ -461,24 +461,40 @@ $theme-body-line-height: 5;
 $theme-style-body-element: true;
 
 // Headings
-$theme-h1-font-size: "3xl";
-$theme-h2-font-size: "2xl";
-$theme-h3-font-size: 13;
-$theme-h4-font-size: 10;
-$theme-h5-font-size: "lg";
-$theme-h6-font-size: 8;
+$theme-h1-font-size: 14; // 40px
+$theme-h1-font-size-desktop: 15; // 48px
+$theme-h1-font-size-print: 13; // 36px
+$theme-h2-font-size: 12; // 32px
+$theme-h2-font-size-desktop: 13; // 36px
+$theme-h2-font-size-print: 11; // 28px
+$theme-h3-font-size: 10; // 24px
+$theme-h3-font-size-desktop: 10; // 24px
+$theme-h3-font-size-print: 9; // 22px
+$theme-h4-font-size: 9; // 22px
+$theme-h4-font-size-desktop: 9; // 22px
+$theme-h4-font-size-print: 8; // 20px
+$theme-h5-font-size: 8; // 20px
+$theme-h5-font-size-desktop: 8; // 20px
+$theme-h5-font-size-print: 7; // 18px
+$theme-h6-font-size: 7; // 18px
+$theme-h6-font-size-desktop: 7; // 18px
+$theme-h6-font-size-print: 6; // 17px
 $theme-heading-line-height: 2;
-$theme-small-font-size: "xs";
-$theme-display-font-size: 16;
 
 // Text and prose
+$theme-text-size: 5;
+$theme-text-size-print: 4;
 $theme-text-measure-narrow: 1;
 $theme-text-measure: 4;
 $theme-text-measure-wide: 6;
 $theme-prose-font-family: "body";
+$theme-small-font-size: 4;
+$theme-small-font-size-print: 3;
 
 // Lead text
 $theme-lead-font-family: "body";
-$theme-lead-font-size: 10;
+$theme-lead-font-size: 9; // 22px
+$theme-lead-font-size-desktop: 9; // 22px
+$theme-lead-font-size-print: 8; // 20px
 $theme-lead-line-height: 6;
 $theme-lead-measure: 6;
