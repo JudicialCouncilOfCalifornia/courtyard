@@ -20,6 +20,9 @@
   @if $dash-position == "below-center" {
     padding-bottom: 0.8em;
 
+    &::before {
+      display: none;
+    }
     &::after {
       $dash-width: 100% !default;
       width: $dash-width;
@@ -31,6 +34,9 @@
   } @else if $dash-position == "above-left" {
     padding-top: 0.8em;
 
+    &::before {
+      display: none;
+    }
     &::after {
       $dash-width: 100% !default;
       width: $dash-width;
@@ -51,6 +57,9 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    &::after {
+      display: none;
+    }
   } @else if $dash-position == "left-right" {
     // `left-right` requires a `<span>` to wrap the text
     margin-left: $inner-spacing + 30px;
@@ -64,6 +73,9 @@
       display: block;
       transform: translate(-50%, $top-spacing);
       z-index: 0;
+    }
+    &::after {
+      display: none;
     }
 
     // box-shadow adds padding around multi-line text
@@ -87,6 +99,9 @@
       display: block;
       transform: translate(-50%, $top-spacing);
       z-index: 0;
+    }
+    &::after {
+      display: none;
     }
 
     // box-shadow adds padding around multi-line text
