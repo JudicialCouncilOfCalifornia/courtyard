@@ -120,7 +120,7 @@ $_hat: map-get($_config, hat);
     @include u-display(inline-flex);
     @include u-align-items(align-center);
     @include hc(color, $_navbar, logo);
-    height: 37px;
+    height: 39px;
 
     @include at-media(tablet-lg) {
       height: 65px;
