@@ -130,8 +130,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 %jcc-inline-icon-link {
   @include u-position(relative);
-  @include u-display(inline-flex);
-  @include u-align-items(align-center);
   @include u-margin-right(2px);
 
   &:focus {
