@@ -53,7 +53,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-hero__main-title {
-  @include u-margin-bottom(3);
+  @include at-media(tablet-lg) {
+    @include u-margin-bottom(3);
+  }
 
   .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
@@ -62,6 +64,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-hero__main-lead {
   @extend .jcc-lead;
+
+  .jcc-hero__main-title + & {
+    @include u-margin-top(3);
+  }
 
   .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));

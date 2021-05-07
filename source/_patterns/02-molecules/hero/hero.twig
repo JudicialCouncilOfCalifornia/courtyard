@@ -41,7 +41,7 @@
         {% endif %}
       </div>
 
-      {% if hero.aside %}
+      {% if hero.aside.title or hero.aside.text or hero.aside.link.url %}
         <aside class="jcc-hero__aside">
           {% if hero.aside.title %}
             <h4 class="jcc-hero__aside-title">{{ hero.aside.title }}</h4>
