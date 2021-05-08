@@ -1,3 +1,7 @@
+iframe {
+  @include u-maxw(full);
+}
+
 .embed-responsive {
   @include u-position(relative);
   @include u-maxw(full);
