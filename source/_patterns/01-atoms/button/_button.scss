@@ -296,6 +296,17 @@ a.mailto {
   }
 }
 
+// This is a plain-text link
+.usa-prose a.mailto:not(.jcc-button--primary):not(.jcc-button--cta-link),
+.jcc-button--mailto-link {
+  @extend %jcc-inline-icon-link;
+
+  &::after {
+    top: 3px;
+    mask-image: url("../icons/fa/envelope.svg");
+  }
+}
+
 a.jcc-button--cta-link {
   @extend %jcc-button;
   @include u-display(flex);

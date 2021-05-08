@@ -8,7 +8,7 @@ body:
       <h3>Next Header 3</h3>
       <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
       <h4>More Header 4</h4>
-      <p>Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <p>Proin sagittis commodo quam, vel <a href="#" class="mailto">bibendum tellus</a> molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
       <ul><li>Unordered list. So here is the first item in this list.</li><li>In this example we're keeping the items short.</li><li>Later, we'll use longer, more complex list items.</li><li><a data-entity-substitution="media" data-entity-type="media" data-entity-uuid="" href="a-file.pdf" title="the file title">A file link</a></li></ul>
       <h5>Even More Header 5</h5>
       <ol><li>Ordered List. I often do this thing where list items have headings.</li><li>Since this is a list, I need at least two items.</li><li>It's not a bad idea to add a third item either.</li></ol>
