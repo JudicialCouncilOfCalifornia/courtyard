@@ -1,0 +1,68 @@
+$_config_schemes: (
+  base: (
+    default-line: base,
+    alert-bg: $theme-color-warning-lighter,
+    alert-line: $theme-color-warning,
+    callout-line: secondary,
+    callout-text: primary-dark,
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+blockquote {
+  @include u-position(relative);
+  @include u-padding-left(3);
+
+  &::before {
+    @include u-position(absolute);
+    @include u-top(0);
+    @include u-left(0);
+    @include u-height(full);
+    @include u-bg(map-get($_config, default-line));
+    width: 3px;
+    content: "";
+  }
+}
+
+.blockquote--alert {
+  @include u-padding-top(2.5);
+  @include u-padding-bottom(3);
+  @include u-padding-left(9);
+  @include u-padding-right(2);
+  @include u-bg(map-get($_config, alert-bg));
+
+  h2, h3, h4, h5, h6, p {
+    @include typeset(body, xs, $theme-body-line-height);
+  }
+
+  &::before {
+    @include u-bg(map-get($_config, alert-line));
+    width: 4px;
+  }
+
+  &::after {
+    @include u-display(block);
+    @include u-position(absolute);
+    @include u-top(2);
+    @include u-left(2.5);
+    @include u-width(4);
+    @include u-height(4);
+    @include add-background-svg("usa-icons/warning");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+  }
+}
+
+.blockquote--callout {
+  h2, h3, h4, h5, h6, p {
+    @include typeset(body, sm, $theme-body-line-height);
+    @include u-color(map-get($_config, callout-text));
+  }
+
+  &::before {
+    @include u-bg(map-get($_config, callout-line));
+  }
+}
