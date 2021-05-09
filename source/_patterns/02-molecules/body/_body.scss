@@ -42,8 +42,9 @@
 }
 
 .jcc-body__aside-text {
+  @include u-color(base-dark);
+
   p {
     @include typeset(body, sm, 6);
-    @include u-color(base-dark);
   }
 }
