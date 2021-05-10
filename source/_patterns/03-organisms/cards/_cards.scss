@@ -13,7 +13,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(tablet-lg) {
     @include grid-row();
-    @include grid-gap(3);
+    @include grid-gap(4);
   }
 
   > li {

@@ -1,7 +1,7 @@
 .jcc-text-share {
   @include at-media(desktop) {
     @include grid-row();
-    @include grid-gap(3);
+    @include grid-gap(4);
   }
 }
 
