@@ -45,6 +45,10 @@
   @include u-color(base-dark);
 
   p {
-    @include typeset(body, sm, 6);
+    @include typeset(body, xs, 6);
+
+    @include at-media(desktop) {
+      @include u-font-size(body, sm);
+    }
   }
 }
