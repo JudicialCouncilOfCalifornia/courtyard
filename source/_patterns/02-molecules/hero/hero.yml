@@ -4,7 +4,7 @@ hero:
     lead: "<p>Facilisis nec nibh himenaeos penatibus tempus fringilla sollicitudin felis urna, inceptos scelerisque mus integer ligula enim vulputate tempor, amet nascetur donec odio nam purus risus potenti.</p>"
   aside:
     title: "Diam tristique fermentum"
-    text: "Facilisi orci congue feugiat tempor eu et nascetur venenatis"
+    text: "Facilisi orci <a href='#'>congue</a> feugiat tempor eu et nascetur venenatis"
     link:
       url: "#"
       text: "Accumsan placerat"

@@ -113,7 +113,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @extend .jcc-lead;
 
   .jcc-hero--background-alt & {
-    @include u-color(map-get($_config, alt-background-text));
+    @include text-color(map-get($_config, alt-background-text));
   }
 }
 
