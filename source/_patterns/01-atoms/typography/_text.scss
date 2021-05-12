@@ -85,7 +85,8 @@ a.usa-link,
   @include sr-only();
 }
 
-.usa-prose {
+.usa-prose,
+.cke_editable {
   > h3,
   > h4,
   > h5,
