@@ -29,7 +29,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(tablet-lg) {
     @include u-padding-top(9);
-    @include u-padding-bottom(5);
+    @include u-padding-bottom(6);
   }
 }
 
