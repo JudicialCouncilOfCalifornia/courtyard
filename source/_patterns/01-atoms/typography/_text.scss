@@ -86,7 +86,8 @@ a.usa-link,
 }
 
 .usa-prose,
-.cke_editable {
+.cke_editable,
+.cke_panel_block[title="Paragraph Format"] {
   > h3,
   > h4,
   > h5,
@@ -107,7 +108,7 @@ a.usa-link,
     @include u-text(normal);
   }
 
-  h1,
+  h1:not(.cke_panel_grouptitle),
   h2,
   h3,
   h4,
@@ -116,7 +117,7 @@ a.usa-link,
     @include u-text(normal);
   }
 
-  h1 {
+  h1:not(.cke_panel_grouptitle) {
     @extend .heading-h1;
   }
 
