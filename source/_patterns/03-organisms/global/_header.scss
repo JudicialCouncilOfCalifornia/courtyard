@@ -309,7 +309,21 @@ $_hat: map-get($_config, hat);
       @include u-padding(0);
 
       @include at-media(tablet-lg) {
+        @include hc(background-color, $_nav, sub-background);
         width: 18rem;
+
+        &.megamenu {
+          @include u-left(0);
+          @include u-right(0);
+          @include u-width(full);
+          padding-left: 90px;
+          padding-right: 90px;
+
+          .usa-nav__submenu-inner {
+            @include u-display(flex);
+            @include grid-gap(6);
+          }
+        }
       }
 
       .usa-nav__submenu {
@@ -322,6 +336,18 @@ $_hat: map-get($_config, hat);
           @include u-display(none);
         }
       }
+    }
+
+    .usa-nav__submenu-inner {
+      @include at-media(tablet-lg) {
+        @include u-position(relative);
+        @include u-width(full);
+      }
+    }
+
+    .usa-nav__submenu-items {
+      @include list-reset();
+      @include u-width(full);
     }
 
     .usa-nav__submenu-item {

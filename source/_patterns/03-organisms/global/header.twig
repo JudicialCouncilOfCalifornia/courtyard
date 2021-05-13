@@ -104,35 +104,40 @@
                     }
                   } %}
                 </button>
-                <ul id="{{ id }}" class="usa-nav__submenu">
-                  {% for child in link.links %}
-                    <li class="usa-nav__submenu-item {{ child.links ? 'has-children' }}">
-                      <a class="{{ child.is_current ? 'usa-current' }}" href="{{ child.url }}">{{ child.text }}</a>
-                      {% if child.links %}
-                        <ul class="usa-nav__submenu">
-                          {% for grandchild in child.links %}
-                            <li class="usa-nav__submenu-item">
-                              <a class="{{ grandchild.is_current ? 'usa-current' }}" href="{{ grandchild.url }}">{{ grandchild.text }}</a>
-                            </li>
-                          {% endfor %}
-                        </ul>
+                {% set count = link.links|length %}
+                <div id="{{ id }}" class="usa-nav__submenu {{ count > 7 ? 'megamenu' }}">
+                  <div class="usa-nav__submenu-inner">
+                    {% if count > 15 %}
+                      {# 3 columns #}
+                      {% if count % 3 == 0 %}
+                        {% set first = (count / 3) + 1 %}
+                        {% set second = (count / 3) %}
+                        {% set third = (count / 3) - 1 %}
+                      {% else %}
+                        {% set first  = (count / 3)|round(0, 'ceil') %}
+                        {% set second = (count / 3)|round(0, 'ceil') %}
+                        {% set third  = (count / 3)|round(0, 'floor') %}
                       {% endif %}
-                    </li>
-                  {% endfor %}
-                  {% if link.section_link %}
-                    <li class="usa-nav__submenu-item jcc-header__submenu-section-item">
-                      <a href="{{ link.section_link.url }}">
-                        <span>{{ link.section_link.text }}</span>
-                        {% include "@atoms/icon/icon.twig" with {
-                          icon: {
-                            name: "chevron-right",
-                            set: "fa",
-                          }
-                        } %}
-                      </a>
-                    </li>
-                  {% endif %}
-                </ul>
+                      {{ _self.sub_menu(link.links|slice(0, first)) }}
+                      {{ _self.sub_menu(link.links|slice(first, second)) }}
+                      {{ _self.sub_menu(link.links|slice(first + second, third), link.section_link) }}
+
+                    {% elseif count > 7 %}
+                      {# 2 columns #}
+                      {% if count is odd %}
+                        {% set first = (count / 2)|round(0, 'ceil') %}
+                      {% else %}
+                        {% set first = (count / 2) + 1 %}
+                      {% endif %}
+                      {{ _self.sub_menu(link.links|slice(0, first)) }}
+                      {{ _self.sub_menu(link.links|slice(first, count - first), link.section_link) }}
+
+                    {% elseif count > 0 %}
+                      {# 1 column #}
+                      {{ _self.sub_menu(link.links, link.section_link) }}
+                    {% endif %}
+                  </div>
+                </div>
               {% else %}
                 <a class="usa-nav__link {{ link.is_current ? 'usa-current' }}" href="{{ link.url }}"><span>{{ link.text }}</span></a>
               {% endif %}
@@ -177,6 +182,39 @@
   </div>
 
 </header>
+
+{% macro sub_menu(menu_links, section_link) %}
+  <ul class="usa-nav__submenu-items">
+    {% for child in menu_links %}
+      <li class="usa-nav__submenu-item {{ child.links ? 'has-children' }}">
+        <a class="{{ child.is_current ? 'usa-current' }}" href="{{ child.url }}">{{ child.text }}</a>
+        {% if child.links %}
+          <ul class="usa-nav__submenu">
+            {% for grandchild in child.links %}
+              <li class="usa-nav__submenu-item">
+                <a class="{{ grandchild.is_current ? 'usa-current' }}" href="{{ grandchild.url }}">{{ grandchild.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+
+    {% if section_link %}
+      <li class="usa-nav__submenu-item jcc-header__submenu-section-item">
+        <a href="{{ section_link.url }}">
+          <span>{{ section_link.text }}</span>
+          {% include "@atoms/icon/icon.twig" with {
+            icon: {
+              name: "chevron-right",
+              set: "fa",
+            }
+          } %}
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+{% endmacro %}
 
 {% macro translate_button(button) %}
   {% set id = button.id ?? random() %}

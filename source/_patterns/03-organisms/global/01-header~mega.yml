@@ -1,0 +1,228 @@
+header:
+  skip:
+    text: "Skip to main content"
+    url: "#"
+  hat:
+    title:
+      text: 'Judicial Branch of California'
+      url: '#'
+    links:
+      - text: "Contact Us"
+        url: "#"
+      - text: "Terms of Use"
+        url: "#"
+      - text: "Privacy Policy"
+        url: "#"
+  logo:
+    title: "County of lorem ipsum"
+    svg: "logo-example.svg"
+  search_action: "#"
+  links:
+    - text: Two column 1
+      is_current: true
+      id: nav-section-one
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+          is_current: true
+        - text: Navigation link 3
+          url: "#"
+          links:
+          - text: Navigation link 3.1
+            url: "#"
+          - text: Navigation link 3.2
+            url: "#"
+            is_current: true
+          - text: Navigation link 3.3
+            url: "#"
+        - text: Navigation link 4
+          url: "#"
+        - text: A very long navigation link that goes onto two lines 5
+          url: "#"
+        - text: Navigation link 6
+          url: "#"
+        - text: Navigation link 7
+          url: "#"
+        - text: Navigation link 8
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+    - text: Two column 2
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+        - text: Navigation link 3
+          url: "#"
+        - text: Navigation link 4
+          url: "#"
+        - text: Navigation link 5
+          url: "#"
+        - text: Navigation link 6
+          url: "#"
+        - text: Navigation link 7
+          url: "#"
+        - text: Navigation link 8
+          url: "#"
+        - text: Navigation link 9
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+    - text: Simple link
+      url: "#"
+      links: ""
+    - text: One column
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+        - text: Navigation link 3
+          url: "#"
+        - text: Navigation link 4
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+    - text: Three column 1
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+        - text: Navigation link 3
+          url: "#"
+        - text: Navigation link 4
+          url: "#"
+        - text: Navigation link 5
+          url: "#"
+          links:
+          - text: Navigation link 5.1
+            url: "#"
+          - text: Navigation link 5.2
+            url: "#"
+        - text: Navigation link 6
+          url: "#"
+        - text: Navigation link 7
+          url: "#"
+        - text: Navigation link 8
+          url: "#"
+        - text: Navigation link 9
+          url: "#"
+        - text: Navigation link 10
+          url: "#"
+        - text: Navigation link 11
+          url: "#"
+        - text: Navigation link 12
+          url: "#"
+        - text: Navigation link 13
+          url: "#"
+        - text: Navigation link 14
+          url: "#"
+        - text: Navigation link 15
+          url: "#"
+        - text: Navigation link 16
+          url: "#"
+        - text: Navigation link 17
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+    - text: Three column 2
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+        - text: Navigation link 3
+          url: "#"
+        - text: Navigation link 4
+          url: "#"
+        - text: Navigation link 5
+          url: "#"
+        - text: Navigation link 6
+          url: "#"
+        - text: Navigation link 7
+          url: "#"
+        - text: Navigation link 8
+          url: "#"
+        - text: Navigation link 9
+          url: "#"
+        - text: Navigation link 10
+          url: "#"
+        - text: Navigation link 11
+          url: "#"
+        - text: Navigation link 12
+          url: "#"
+        - text: Navigation link 13
+          url: "#"
+        - text: Navigation link 14
+          url: "#"
+        - text: Navigation link 15
+          url: "#"
+        - text: Navigation link 16
+          url: "#"
+        - text: Navigation link 17
+          url: "#"
+        - text: Navigation link 18
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+    - text: Three column 3
+      links:
+        - text: Navigation link 1
+          url: "#"
+        - text: Navigation link 2
+          url: "#"
+        - text: Navigation link 3
+          url: "#"
+        - text: Navigation link 4
+          url: "#"
+        - text: Navigation link 5
+          url: "#"
+        - text: Navigation link 6
+          url: "#"
+        - text: Navigation link 7
+          url: "#"
+        - text: Navigation link 8
+          url: "#"
+        - text: Navigation link 9
+          url: "#"
+        - text: Navigation link 10
+          url: "#"
+        - text: Navigation link 11
+          url: "#"
+        - text: Navigation link 12
+          url: "#"
+        - text: Navigation link 13
+          url: "#"
+        - text: Navigation link 14
+          url: "#"
+        - text: Navigation link 15
+          url: "#"
+        - text: Navigation link 16
+          url: "#"
+        - text: Navigation link 17
+          url: "#"
+        - text: Navigation link 18
+          url: "#"
+        - text: Navigation link 19
+          url: "#"
+      section_link:
+        text: Navigation link
+        url: "#"
+  translate:
+    text: "Translate"
+    links:
+      - text: "English"
+        url: "#"
+      - text: "Spanish"
+        url: "#"
+      - text: "Ewokese"
+        url: "#"
