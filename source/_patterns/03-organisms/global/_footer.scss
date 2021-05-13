@@ -3,6 +3,9 @@ $_config_schemes: (
     primary: (
       border: primary-vivid,
       default-background: primary-lighter,
+      default-link: primary-vivid,
+      default-link-hover: primary-dark,
+      default-link-active: primary-darker,
       alt-background: primary-dark,
       alt-background-text: "white",
     ),
@@ -133,13 +136,33 @@ $_shoe: map-get($_config, shoe);
 }
 
 .usa-footer__secondary-link {
-  a.ext {
-    @extend .jcc-button--external-link;
-    @include u-display(inline-block);
+  & + & {
+    @include u-padding-top(3);
+  }
+
+  a {
+    @include link-colors((
+      default: map-get($_primary, default-link),
+      hover: map-get($_primary, default-link-hover),
+      active: map-get($_primary, default-link-active),
+    ));
 
     .jcc-footer--alt & {
-      &::after {
-        @include u-bg("white");
+      @include link-colors((
+        default: "white",
+        hover: "white",
+        active: "white",
+      ));
+    }
+
+    &.ext {
+      @extend .jcc-button--external-link;
+      @include u-display(inline-block);
+
+      .jcc-footer--alt & {
+        &::after {
+          @include u-bg("white");
+        }
       }
     }
   }
