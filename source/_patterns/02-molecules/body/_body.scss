@@ -12,6 +12,7 @@
 }
 
 .jcc-body__main-text {
+  @include u-padding-bottom(1);
   @include u-overflow(hidden);
 }
 
