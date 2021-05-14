@@ -11,6 +11,7 @@ $_config_schemes: (
       default-top-background: primary-lighter,
       default-top-text: primary,
       default-top-arrow: secondary,
+      default-top-current-bar: primary-dark,
       default-top-border: primary-light,
       default-top-background-active: primary-dark,
       default-top-text-active: "white",
@@ -18,6 +19,7 @@ $_config_schemes: (
       alt-top-background: primary-dark,
       alt-top-text: "white",
       alt-top-arrow: "white",
+      alt-top-current-bar: "white",
       alt-top-border: primary-light,
       alt-top-background-active: base-lighter,
       alt-top-text-active: ink,
@@ -277,7 +279,7 @@ $_hat: map-get($_config, hat);
 
       &.usa-current {
         &::after {
-          @include hc(background-color, $_nav, top-text);
+          @include hc(background-color, $_nav, top-current-bar);
 
           @include at-media-max(tablet-lg) {
             @include u-top(0);
