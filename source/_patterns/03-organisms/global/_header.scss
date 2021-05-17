@@ -321,6 +321,13 @@ $_hat: map-get($_config, hat);
           padding-left: 90px;
           padding-right: 90px;
 
+          // This was overridden by the .megamenu styles and is
+          // needed to stop the menu from flashing on page load.
+          html.usa-js-loading & {
+            left: -999em;
+            right: auto;
+          }
+
           .usa-nav__submenu-inner {
             @include u-display(flex);
             @include grid-gap(6);

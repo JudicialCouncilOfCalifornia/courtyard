@@ -260,6 +260,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.usa-prose a.file:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--file-link,
 a[data-entity-type="file"],
 a[data-entity-type="media"] {
