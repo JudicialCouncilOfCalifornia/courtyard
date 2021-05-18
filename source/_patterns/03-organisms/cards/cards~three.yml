@@ -1,5 +1,8 @@
 cards:
-  background: alt
+  heading:
+    title: "Cards"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+  num_cols: 3
   items:
     - style: "cta"
       title: "Iaculis proin erat porttitor"
@@ -20,4 +23,3 @@ cards:
       link:
         url: "#"
         text: "Diamtempor"
-        type: "file"

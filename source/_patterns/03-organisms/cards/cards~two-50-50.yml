@@ -1,4 +1,7 @@
 cards:
+  heading:
+    title: "Cards"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
   num_cols: "2-50-50"
   items:
     - style: "cta"
@@ -13,3 +16,4 @@ cards:
       link:
         url: "#"
         text: "Luctus nunc quam"
+        type: "ext"

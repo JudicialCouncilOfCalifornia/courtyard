@@ -21,7 +21,43 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-cards--3cols {
+.jcc-cards--1-cols {
+  @include at-media(tablet-lg) {
+    > li {
+      @include grid-col(10);
+      @include grid-offset(1);
+    }
+  }
+}
+
+.jcc-cards--2-50-50-cols {
+  @include at-media(tablet-lg) {
+    > li {
+      @include grid-col(6);
+    }
+  }
+}
+
+.jcc-cards--2-75-25-cols {
+  @include at-media(tablet-lg) {
+    > li:nth-child(1n) {
+      @include grid-col(8);
+    }
+    > li:nth-child(2n) {
+      @include grid-col(4);
+    }
+  }
+  @include at-media(desktop) {
+    > li:nth-child(1n) {
+      @include grid-col(9);
+    }
+    > li:nth-child(2n) {
+      @include grid-col(3);
+    }
+  }
+}
+
+.jcc-cards--3-cols {
   @include at-media(tablet-lg) {
     > li {
       @include grid-col(4);
@@ -29,19 +65,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-cards--4cols {
+.jcc-cards--4-cols {
   @include at-media(tablet-lg) {
     > li {
-      @include grid-col(3);
+      @include grid-col(6);
     }
   }
-}
-
-.jcc-cards--1cols {
-  @include at-media(tablet-lg) {
+  @include at-media(desktop) {
     > li {
-      @include grid-col(10);
-      @include grid-offset(1);
+      @include grid-col(3);
     }
   }
 }

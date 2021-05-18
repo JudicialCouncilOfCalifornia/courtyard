@@ -3,7 +3,7 @@
  * Available variables:
  * - cards - primary variable
  *   - background: background color [default, alt]
- *   - num_cols: the number of columns at desktop widths [1, 3, 4]
+ *   - num_cols: the number of columns at desktop widths [1, 2-50-50, 2-75-25, 3, 4]
  *   - heading: the heading (title & lead)
  *   - items: array of card items
  *   - link: link/button
@@ -17,7 +17,7 @@
 
 {% set classes = [
   'jcc-cards',
-  'jcc-cards--' ~ cards.num_cols|default('3') ~ 'cols',
+  'jcc-cards--' ~ cards.num_cols|default('3') ~ '-cols',
 ]|merge(cards.classes|default([])) %}
 
 {% set content %}
