@@ -123,12 +123,18 @@ a.usa-link,
 
   h2 {
     @extend .heading-h2;
-    @extend .jcc-title;
+
+    &:not([class]) {
+      @extend .jcc-title;
+    }
   }
 
   h3 {
     @extend .heading-h3;
-    @include u-text(primary-dark);
+
+    &:not([class]) {
+      @include u-text(primary-dark);
+    }
   }
 
   h4 {
