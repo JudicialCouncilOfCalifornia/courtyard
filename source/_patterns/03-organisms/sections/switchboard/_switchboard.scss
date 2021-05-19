@@ -7,8 +7,8 @@
   }
 
   .jcc-header-group__title {
-    @include u-text(primary-dark);
-    @include has-dash();
+    @extend .jcc-title;
+    @include u-padding-bottom(2);
   }
 
   .jcc-breadcrumbs {

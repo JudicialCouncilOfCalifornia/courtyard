@@ -6,8 +6,8 @@
   @include at-media(desktop) {
     @include u-measure(2);
   }
-}
 
-.jcc-list-block__title {
-  @include responsive-h5($responsive-font-family: "heading");
+  h2 {
+    @include responsive-h5($responsive-font-family: "heading");
+  }
 }
