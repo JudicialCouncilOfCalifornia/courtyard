@@ -1,1 +1,12 @@
-<div id="jcc-chatbot"></div>
+{% set chatbot %}<div id="jcc-chatbot"></div>{% endset %}
+
+{% include '@molecules/blocks/feedback/feedback.twig' with {
+  feedback: {
+    id: 'chat-id',
+    title: chat.title|default("Chat Now"),
+    lead: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    form: {
+      children: chatbot
+    },
+  }
+} %}

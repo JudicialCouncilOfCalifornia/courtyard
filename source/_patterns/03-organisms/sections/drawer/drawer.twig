@@ -1,10 +1,23 @@
 <div class="jcc-drawer" visible="visible">
   <div class="jcc-drawer__inner">
-    {% if drawer.feedback %}
-      {{ drawer.feedback }}
-    {% endif %}
-    {% if drawer.chatbot %}
-      {% include '@molecules/blocks/chatbot/chatbot.twig' %}
+    {% if drawer.features %}
+      {% for feature in drawer.features %}
+        {% if feature.type == 'chat' %}
+          {% include '@molecules/blocks/chatbot/chatbot.twig' %}
+        {% else %}
+          {# {{ feature.embed }} #}
+          {% include '@molecules/blocks/feedback/feedback.twig' %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {# BEGIN DEPRECATED - Replaced by more scalable approach #}
+      {% if drawer.feedback %}
+        {{ drawer.feedback }}
+      {% endif %}
+      {% if drawer.chatbot %}
+        {% include '@molecules/blocks/chatbot/chatbot.twig' %}
+      {% endif %}
+      {# END #}
     {% endif %}
   </div>
 </div>

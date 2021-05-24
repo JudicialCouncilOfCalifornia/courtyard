@@ -6,44 +6,40 @@
   &[open] {
     @include u-border(1px, base-light);
     @include u-bg("white");
-    @include u-padding(3);
-    @include u-radius(lg);
     min-width: 0;
     max-width: 100%;
-
-    .jcc-feedback__trigger-container {
-      display: none;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-    }
   }
 
-  dialog {
+  .jcc-feedback__dialog {
+    @include u-position("absolute");
     border: 0;
-    display: block;
     height: 0;
     left: auto;
     overflow: hidden;
-    padding: 0;
-    position: relative;
     visibility: hidden;
+    padding: 0;
 
     &[open] {
-      height: auto;
+      @include u-display("inline-block");
+      @include u-width("full");
+      @include at-media("tablet-lg") {
+        @include u-position("relative");
+        @include u-width("mobile-lg");
+      }
+      height: calc(100vh - 2vmax);
       overflow: visible;
       visibility: visible;
+    }
+
+    .icon-close {
+      @include u-height(4);
+      @include u-width(4);
+      @include u-color("white");
     }
 
     [data-feedback^="trigger"] {
       appearance: none;
       border: 0;
-      text-align: right;
-
-      .icon-close {
-        color: #0d7ea2;
-        height: 2em;
-        width: 2em;
-      }
     }
 
     .js-webform-webform-buttons label {
@@ -56,12 +52,25 @@
     }
   }
 
-  .jcc-feedback__dialog-footer {
-    text-align: right;
+  .jcc-feedback__dialog-header {
+    @include u-position("relative");
+    @include u-minh(8);
+    @include u-padding(2);
+    @include dark-background();
+  }
+
+  .jcc-feedback__dialog-body {
+    @include u-padding(3);
+  }
+
+  .jcc-feedback__dialog-close {
+    @include u-position("absolute");
+    @include u-top(1);
+    @include u-right(1);
   }
 
   .jcc-feedback__trigger-container {
-    text-align: right;
+    @include u-width("auto");
 
     button {
       width: inherit;

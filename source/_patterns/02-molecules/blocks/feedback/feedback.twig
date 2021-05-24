@@ -1,34 +1,57 @@
 <div class="jcc-feedback" id="{{ feedback.id }}" data-feedback="container" visible="visible">
-
-  <dialog role="dialog" data-feedback="dialog">
-    {% if feedback.form.children %}
-      <form {{ feedback.form.attributes }}>
-        {{ feedback.form.children }}
-      </form>
-    {% endif %}
-    <div class="jcc-feedback__dialog-footer">
-      <button tabindex="-1" aria-label="{{ 'Close this dialog window'|t }}" data-feedback="trigger-close">
-        {% include '@atoms/icons/icon.twig' with {
-          icon: {
-            name: "close",
-            title: "Close"|t,
-            decorative: false,
+  <dialog class="jcc-feedback__dialog" role="dialog" data-feedback="dialog">
+    <div class="jcc-feedback__dialog-header">
+      <div class="jcc-feedback__dialog-close">
+        {% include '@atoms/buttons/button.twig' with {
+          button: {
+            style: 'unstyled',
+            aria_label: 'Close this dialog window'|t,
+            other_attributes: 'tabindex="-1" data-feedback="trigger-close"',
+            icon: {
+              name: "close",
+              title: "Close"|t,
+              decorative: false,
+            },
           }
         } %}
-      </button>
+      </div>
+      {% if feedback.icon %}
+        <div class="">
+          {% include '@atoms/icons/icon.twig' with {
+            icon: feedback.icon
+          } %}
+        </div>
+      {% endif %}
+
+      {% if feedback.title %}
+        <h2>{{ feedback.title }}</h2>
+      {% endif %}
+
+      {% if feedback.lead %}
+        <div class="jcc-feedback__dialog-header--lead">{{ feedback.lead }}</div>
+      {% endif %}
     </div>
+    {% if feedback.form.children %}
+      <div class="jcc-feedback__dialog-body">
+        <form {{ feedback.form.attributes }}>
+          {{ feedback.form.children }}
+        </form>
+      </div>
+    {% endif %}
   </dialog>
 
   <div class="jcc-feedback__trigger-container">
-    <button class="usa-button usa-button--accent-warm" data-feedback="trigger">
-      {{ feedback.button.title }}
-      {% include '@atoms/icons/icon.twig' with {
+    {% include '@atoms/buttons/button.twig' with {
+      button: {
+        id: 'trigger-' ~ feedback.id,
+        text: feedback.title,
+        other_attributes: 'data-feedback="trigger"',
         icon: {
-          name: "expand_more",
-          title: "Expand More"|t,
+          name: 'expand_more',
+          title: 'Expand More',
           decorative: false,
-        }
-      } %}
-    </button>
+        },
+      }
+    } %}
   </div>
 </div>
