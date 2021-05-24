@@ -2,10 +2,6 @@
   @include section-wrapper;
   @include u-padding-bottom(8);
 
-  .jcc-header-group {
-    @include u-padding-bottom(4);
-  }
-
   .jcc-header-group__title {
     @extend .jcc-title;
     @include u-padding-bottom(2);
