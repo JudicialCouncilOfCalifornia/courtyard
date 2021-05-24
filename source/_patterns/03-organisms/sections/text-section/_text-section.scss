@@ -5,10 +5,6 @@
     @extend .jcc-title;
     @include u-padding-bottom(2);
   }
-
-  .jcc-header-group {
-    @include u-padding-bottom(4);
-  }
 }
 
 .jcc-text-section__container {

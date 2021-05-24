@@ -4,21 +4,11 @@
   .jcc-header-group__title {
     @include u-text(primary-dark);
     @include has-dash-position($dash-position: below-center, $dash-width: 3rem);
-    @include u-font(heading, 11); // 32
     text-align: center;
-
-    @include at-media(desktop) {
-      @include u-font(heading, 14); // 40
-    }
   }
 
   .jcc-lead {
-    @include u-font(body, 7); // 22
     text-align: left;
-
-    @include at-media(desktop) {
-      @include u-font(body, 10); // 24
-    }
   }
 
   .jcc-header-group {

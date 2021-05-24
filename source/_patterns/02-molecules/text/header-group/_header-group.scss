@@ -1,15 +1,3 @@
-.jcc-header-group {
-  > :first-child {
-    @include u-margin-top(0);
-    @include u-padding-top(0);
-  }
-
-  > :last-child {
-    @include u-margin-bottom(0);
-    @include u-padding-bottom(0);
-  }
-}
-
 .jcc-header-group__brow {
   @include t-copy();
   @include u-text(uppercase);
