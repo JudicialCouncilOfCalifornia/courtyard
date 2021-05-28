@@ -4,12 +4,17 @@ const $feedback_trigger_show = $('[data-feedback="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $feedback_dialog = $('[data-feedback="dialog"]');
 const $feedback_confirmation = $('[data-feedback="container"] .webform-confirmation');
+const min_desktop_width = 800;
 
 // Functions.
-const feedbackOpen = feedback_id => {
+const feedbackOpen = () => {
   $feedback_trigger_show.hide();
-  $("#" + feedback_id + ' [data-feedback="dialog"]').attr("open", "open");
-  $("#" + feedback_id).attr("open", "open");
+  $feedback_container.attr("open", "open");
+  $feedback_dialog.attr("open", "open");
+  $feedback_dialog.focus();
+  if ($(window).width() < min_desktop_width) {
+    $("body").css("overflow", "hidden");
+  }
 };
 
 const feedbackDismiss = () => {
@@ -24,6 +29,10 @@ const feedbackConfirmed = () => {
   return $feedback_confirmation.length > 0;
 };
 
+const autoDesktopDialogHeight = () => {
+  $('[data-feedback="dialog"]').css("height", $(window).height() - 100);
+};
+
 // Allow user to dismiss completely if confirmation is visible.
 if (feedbackConfirmed() == true) {
   if (feedbackDismissPath() == true) {
@@ -36,24 +45,57 @@ if (feedbackConfirmed() == true) {
 }
 
 // Click.
-$feedback_trigger
-  .parent()
-  .parent()
-  .on("click", function(e) {
-    e.preventDefault;
-    let feedback_container_id = $(this).attr("id");
-
-    if ($(this).attr("open")) {
-      if (feedbackConfirmed() && $(this).attr("data-feedback") == "trigger-close") {
-        sessionStorage.feedback_dismissed_page = window.location.pathname;
-        feedbackDismiss();
-      } else {
-        $feedback_container.css("transition", "all .2s");
-        $feedback_dialog.removeAttr("open");
-        $feedback_container.removeAttr("open");
-        $feedback_trigger_show.show();
-      }
+$feedback_trigger.on("click", function(e) {
+  e.preventDefault;
+  if ($feedback_dialog.attr("open")) {
+    if (feedbackConfirmed() && $(this).attr("data-feedback") == "trigger-close") {
+      sessionStorage.feedback_dismissed_page = window.location.pathname;
+      feedbackDismiss();
     } else {
-      feedbackOpen(feedback_container_id);
+      $feedback_container.css("transition", "all .2s");
+      $feedback_dialog.removeAttr("open");
+      $feedback_container.removeAttr("open");
+      $feedback_trigger_show.show();
+      if ($(window).width() < min_desktop_width) {
+        $("body").removeAttr("style");
+      }
     }
-  });
+  } else {
+    feedbackOpen();
+  }
+});
+
+$(document).ready(function() {
+  // Detect if Drupal web form in use.
+  let drupalWebForm = ".jcc-drawer__inner .webform-ajax-form-wrapper";
+
+  // Auto adjust dialog height on larger screens.
+  if ($(window).width() > min_desktop_width) {
+    autoDesktopDialogHeight();
+  }
+
+  // BEGIN Drupal web form workarounds.
+  if ($(drupalWebForm)) {
+    // Disallow ENTER key form submission.
+    $(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function(e) {
+      if (e.keyCode == "13") {
+        e.preventDefault();
+      }
+    });
+
+    // Remove button focus on context change.
+    $(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function() {
+      $(this).removeClass("ui-visual-focus");
+    });
+  }
+  // END
+});
+
+// Auto adjust dialog if able to toggle between screen sizes.
+$(window).resize(function() {
+  if ($(window).width() > min_desktop_width) {
+    autoDesktopDialogHeight();
+  } else {
+    $('[data-feedback="dialog"]').removeAttr("style");
+  }
+});

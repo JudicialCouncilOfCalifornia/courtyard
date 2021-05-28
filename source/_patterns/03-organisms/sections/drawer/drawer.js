@@ -21,10 +21,18 @@ const isSmallScreen = () => {
   return mql.matches ? true : false;
 };
 
-// Disable initial visibility with js for graceful degredation.
-if (!pageIsShorterThanWindow()) {
-  $drawer.removeAttr("visible");
-}
+const isNoPageScroll = () => {
+  var docHeight = $(document).height();
+  var scroll = $(window).height() + $(window).scrollTop();
+  return docHeight == scroll;
+};
+
+// Initial visibility.
+$(document).ready(function() {
+  if (isNoPageScroll() == true) {
+    $drawer.attr("visible", "visible");
+  }
+});
 
 // Scroll.
 $window.on("scroll", function() {
@@ -56,10 +64,13 @@ $feedback_trigger.on("click", function(e) {
   e.preventDefault;
 
   // Show/hide chatbot when feedback dialog is toggled.
-  if ($feedback_dialog.attr("open")) {
-    $("#jcc-chatbot").hide();
-  } else {
-    $("#jcc-chatbot").show();
+  let chat = ".iframeBot";
+  if ($(chat).length > 0) {
+    if ($feedback_dialog.attr("open")) {
+      $(chat).hide();
+    } else {
+      $(chat).show();
+    }
   }
 });
 

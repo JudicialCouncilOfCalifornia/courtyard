@@ -4,17 +4,20 @@
   }
 
   &[open] {
-    @include u-border(1px, base-light);
-    @include u-bg("white");
     min-width: 0;
     max-width: 100%;
   }
 
   .jcc-feedback__dialog {
-    @include u-position("absolute");
-    border: 0;
-    height: 0;
-    left: auto;
+    @include u-position("fixed");
+    @include u-top(0);
+    @include u-left(0);
+    @include at-media("tablet-lg") {
+      @include u-top("auto");
+      @include u-left("auto");
+    }
+    @include u-border(1px, base-light);
+    @include u-bg("white");
     overflow: hidden;
     visibility: hidden;
     padding: 0;
@@ -22,11 +25,12 @@
     &[open] {
       @include u-display("inline-block");
       @include u-width("full");
+      height: 100vh;
       @include at-media("tablet-lg") {
         @include u-position("relative");
         @include u-width("mobile-lg");
+        height: auto;
       }
-      height: calc(100vh - 2vmax);
       overflow: visible;
       visibility: visible;
     }
@@ -54,13 +58,107 @@
 
   .jcc-feedback__dialog-header {
     @include u-position("relative");
-    @include u-minh(8);
-    @include u-padding(2);
+    @include u-minh(6);
     @include dark-background();
+    @include u-padding-y(3);
+    @include u-padding-x(2);
+
+    .icon-like_dislike {
+      @include u-height(5);
+      @include u-width(5);
+      @include u-color("blue-cool-10v");
+      margin-bottom: -0.8rem;
+    }
+
+    h2 {
+      @extend .heading-h3;
+    }
+  }
+
+  .jcc-feedback__dialog-header--lead {
+    @include u-margin-bottom(2);
+    @include u-color("blue-cool-10v");
+  }
+
+  .jcc-feedback__action-button {
+    @include u-minw(10);
+    @include u-bg("blue-cool-10v");
+    @include u-margin-bottom(2);
+    @include u-shadow("none");
+
+    &:active,
+    &:focus {
+      @include u-bg("white");
+    }
+  }
+
+  .jcc-feedback__actions {
+    button {
+      @extend .jcc-feedback__action-button;
+    }
   }
 
   .jcc-feedback__dialog-body {
-    @include u-padding(3);
+    //BEGIN Drupal Web Form Adjustments */
+    .webform-elements {
+      & > div {
+        @include u-margin-x(2);
+      }
+
+      .usa-label {
+        &:first-child {
+          @include u-margin-top(0);
+        }
+      }
+
+      fieldset {
+        @extend .jcc-feedback__dialog-header;
+        @include u-position("relative");
+        @include u-padding-x(2);
+        top: -1.5rem;
+
+        .jcc-form-group__title {
+          @extend .heading-h3;
+          @include u-margin(0);
+        }
+
+        .jcc-feedback__action-button--webform {
+          @extend .usa-button;
+          @extend .usa-button--outline;
+          @extend .usa-button--round;
+          @extend .jcc-feedback__action-button;
+
+          &:hover {
+            @extend .usa-button--hover;
+            @include u-bg("white");
+            @include u-shadow("none");
+          }
+
+          &:active {
+            @include u-bg("white");
+          }
+        }
+
+        .js-webform-webform-buttons {
+          .ui-button {
+            @extend .jcc-feedback__action-button--webform;
+          }
+
+          .ui-state-active {
+            @include u-bg("white");
+          }
+
+          .ui-visual-focus {
+            @extend .usa-focus;
+          }
+        }
+      }
+
+      .button {
+        @extend .jcc-feedback__action-button--webform;
+      }
+    }
+    //END
   }
 
   .jcc-feedback__dialog-close {
@@ -73,16 +171,18 @@
     @include u-width("auto");
 
     button {
-      width: inherit;
-      margin-right: 0;
-      padding-left: 24px;
-      padding-right: 15px;
+      @include u-width("auto");
+      @include u-margin-right(0);
+      @include u-color("blue-cool-10v");
+      @include u-font-weight("normal");
     }
-  }
 
-  .icon-expand_more {
-    height: 2rem;
-    vertical-align: middle;
-    width: 2rem;
+    .icon-like_dislike {
+      @include u-position("relative");
+      @include u-top(1);
+      @include u-height(6);
+      @include u-width(6);
+      margin-top: -0.5rem;
+    }
   }
 }

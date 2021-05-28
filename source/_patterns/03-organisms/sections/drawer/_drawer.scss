@@ -19,8 +19,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: center;
+    @include u-flex("justify-center");
     @include at-media("tablet-lg") {
-      justify-content: flex-end;
+      @include u-flex("justify-end");
     }
     margin: 0 -#{units(1)};
 

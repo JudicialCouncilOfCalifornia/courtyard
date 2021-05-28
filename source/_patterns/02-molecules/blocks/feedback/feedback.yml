@@ -2,7 +2,11 @@ feedback:
   id: "feedback-id"
   title: "Was this helpful?"
   lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  actions:
+    - text: "Yes"
+    - text: "No"
   form:
     attributes: "class='webform'"
     children: "Form Goes Here"
-
+  button:
+    text: "Was this helpful?"
