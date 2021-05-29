@@ -158,6 +158,10 @@
         @extend .jcc-feedback__action-button--webform;
       }
     }
+
+    .webform-confirmation__message {
+      @include u-margin(1);
+    }
     //END
   }
 

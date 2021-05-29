@@ -1,7 +1,10 @@
 .jcc-drawer {
-  position: sticky;
+  @include u-position("sticky");
+  padding: 2rem units(2.5) 0;
+  @include at-media("desktop-lg") {
+    padding: 0 units(2.5);
+  }
   bottom: units(2.5);
-  padding: 0 units(2.5);
   z-index: z("top");
   transition: opacity 1s;
 
@@ -18,16 +21,22 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     justify-content: center;
     @include u-flex("justify-center");
-    @include at-media("tablet-lg") {
+    @include at-media("desktop") {
       @include u-flex("justify-end");
     }
     margin: 0 -#{units(1)};
 
-    > * {
-      margin: units(2.5) units(1);
+    @include at-media("desktop") {
+      > * {
+        margin: units(2.5) units(1);
+      }
+
+      > div {
+        @include u-position("relative");
+        @include u-bottom(2);
+      }
     }
   }
 

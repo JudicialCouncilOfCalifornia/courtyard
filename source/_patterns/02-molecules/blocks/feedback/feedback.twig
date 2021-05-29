@@ -46,13 +46,19 @@
         </div>
       {% endif %}
     </div>
-    {% if feedback.form.children %}
-      <div class="jcc-feedback__dialog-body">
+    <div class="jcc-feedback__dialog-body">
+    {% if feedback.embed %}
+      {{ feedback.embed }}
+    {% else %}
+      {# BEGIN DEPRECATED - Replaced by more flexible embed #}
+      {% if feedback.form.children %}
         <form {{ feedback.form.attributes }}>
           {{ feedback.form.children }}
         </form>
-      </div>
+      {% endif %}
+      {# END #}
     {% endif %}
+    </div>
   </dialog>
 
   <div class="jcc-feedback__trigger-container">

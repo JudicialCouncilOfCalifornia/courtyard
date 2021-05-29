@@ -4,6 +4,7 @@ const $feedback_trigger_show = $('[data-feedback="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $feedback_dialog = $('[data-feedback="dialog"]');
 const $feedback_confirmation = $('[data-feedback="container"] .webform-confirmation');
+const drupalWebForm = ".jcc-feedback__dialog-body .webform-ajax-form-wrapper";
 const min_desktop_width = 800;
 
 // Functions.
@@ -12,7 +13,7 @@ const feedbackOpen = () => {
   $feedback_container.attr("open", "open");
   $feedback_dialog.attr("open", "open");
   $feedback_dialog.focus();
-  if ($(window).width() < min_desktop_width) {
+  if ($(window).width() < min_desktop_width && $feedback_dialog.attr("open")) {
     $("body").css("overflow", "hidden");
   }
 };
@@ -47,7 +48,9 @@ if (feedbackConfirmed() == true) {
 // Click.
 $feedback_trigger.on("click", function(e) {
   e.preventDefault;
+  // Toggle dialog visibility.
   if ($feedback_dialog.attr("open")) {
+    // Close dialog.
     if (feedbackConfirmed() && $(this).attr("data-feedback") == "trigger-close") {
       sessionStorage.feedback_dismissed_page = window.location.pathname;
       feedbackDismiss();
@@ -60,42 +63,40 @@ $feedback_trigger.on("click", function(e) {
         $("body").removeAttr("style");
       }
     }
+    return false;
   } else {
     feedbackOpen();
   }
 });
 
+// Auto adjust dialog height on larger screens.
 $(document).ready(function() {
-  // Detect if Drupal web form in use.
-  let drupalWebForm = ".jcc-drawer__inner .webform-ajax-form-wrapper";
-
-  // Auto adjust dialog height on larger screens.
   if ($(window).width() > min_desktop_width) {
     autoDesktopDialogHeight();
   }
-
-  // BEGIN Drupal web form workarounds.
-  if ($(drupalWebForm)) {
-    // Disallow ENTER key form submission.
-    $(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function(e) {
-      if (e.keyCode == "13") {
-        e.preventDefault();
-      }
-    });
-
-    // Remove button focus on context change.
-    $(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function() {
-      $(this).removeClass("ui-visual-focus");
-    });
-  }
-  // END
 });
 
 // Auto adjust dialog if able to toggle between screen sizes.
 $(window).resize(function() {
   if ($(window).width() > min_desktop_width) {
     autoDesktopDialogHeight();
+    $("body").removeAttr("style");
   } else {
     $('[data-feedback="dialog"]').removeAttr("style");
+    if ($feedback_dialog.attr("open")) {
+      $("body").css("overflow", "hidden");
+    }
   }
+});
+
+// Disallow ENTER key form submission.
+$(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function(e) {
+  if (e.keyCode == "13") {
+    e.preventDefault();
+  }
+});
+
+// Remove button focus on context change.
+$(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function() {
+  $(this).removeClass("ui-visual-focus");
 });
