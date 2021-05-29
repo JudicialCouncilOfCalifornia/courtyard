@@ -27,17 +27,6 @@ const isNoPageScroll = () => {
   return docHeight == scroll;
 };
 
-const chatVisibility = () => {
-  let chat = ".iframeBot";
-  if ($(chat).length > 0) {
-    if ($feedback_dialog.attr("open")) {
-      $(chat).hide();
-    } else {
-      $(chat).show();
-    }
-  }
-};
-
 // Initial visibility.
 $(document).ready(function() {
   if (isNoPageScroll() == true) {
@@ -71,7 +60,14 @@ $feedback_trigger.on("click", function(e) {
   e.preventDefault;
 
   // Show/hide chatbot when feedback dialog is toggled.
-  setTimeout(chatVisibility(), 5);
+  let chat = ".iframeBot";
+  if ($(chat).length > 0) {
+    if ($feedback_dialog.attr("open")) {
+      $(chat).hide();
+    } else {
+      $(chat).show();
+    }
+  }
 });
 
 // Hide feeback widget when chatbot opens.
