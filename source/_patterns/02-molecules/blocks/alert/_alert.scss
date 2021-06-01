@@ -25,7 +25,7 @@
       background-image: url("../img/alerts/error.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     } @else {
-      background-image: url("../images/graphics/error-warning.svg"),
+      background-image: url("../images/graphics/error.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     }
     @include u-padding-left(6);
@@ -38,7 +38,7 @@
       background-image: url("../img/alerts/warning.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     } @else {
-      background-image: url("../images/graphics/warning-warning.svg"),
+      background-image: url("../images/graphics/warning-warm.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     }
     @include u-padding-left(6);
@@ -64,7 +64,7 @@
       background-image: url("../img/alerts/info.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     } @else {
-      background-image: url("../images/info.svg"),
+      background-image: url("../images/graphics/info.svg"),
         -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
     }
     @include u-padding-left(6);
