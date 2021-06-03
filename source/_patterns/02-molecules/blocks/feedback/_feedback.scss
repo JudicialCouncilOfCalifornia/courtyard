@@ -59,7 +59,7 @@
   .jcc-feedback__dialog-header {
     @include u-position("relative");
     @include u-minh(6);
-    @include dark-background();
+    @include dark-background("primary-dark");
     @include u-padding-y(3);
     @include u-padding-x(2);
 
@@ -99,6 +99,16 @@
   }
 
   .jcc-feedback__dialog-body {
+    .jcc-feedback__dialog-button--submit {
+      @include u-width("full");
+      @include u-margin-top(2);
+      @include u-text("uppercase");
+    }
+
+    .usa-button--primary {
+      @extend .jcc-feedback__dialog-button--submit;
+    }
+
     //BEGIN Drupal Web Form Adjustments */
     .webform-elements {
       & > div {
@@ -156,6 +166,10 @@
 
       .button {
         @extend .jcc-feedback__action-button--webform;
+      }
+
+      .webform-button--submit {
+        @extend .jcc-feedback__dialog-button--submit;
       }
     }
 
