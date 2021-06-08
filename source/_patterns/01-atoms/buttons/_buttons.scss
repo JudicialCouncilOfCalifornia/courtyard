@@ -176,3 +176,36 @@
     fill: #fff;
   }
 }
+
+// Overrides the button style specificity on dark background
+.jcc-hero--has-background-color--dark {
+  .usa-button {
+    @include u-text(primary);
+    background-color: white !important;
+
+    &:hover,
+    &.usa-button--hover {
+      @include u-text(ink);
+      background-color: color(accent-warm) !important;
+    }
+
+    &:active,
+    &.usa-button--active {
+      @include u-text(gray-90);
+      background-color: color(accent-warm-darker) !important;
+    }
+
+    &:visited,
+    &:focus {
+      @include u-text(ink);
+    }
+    &.usa-button--unstyled {
+      background-color: transparent !important;
+      @include u-text("white");
+      &:hover {
+        background-color: transparent !important;
+        @include u-text(gray-20);
+      }
+    }
+  }
+}
