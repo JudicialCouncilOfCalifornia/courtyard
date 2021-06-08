@@ -55,6 +55,9 @@
     @include u-padding-top(2);
   }
 
+  .usa-card__body {
+    @include u-padding-top(0, !important);
+  }
   .usa-card__header,
   .usa-card__body,
   .usa-card__footer {
