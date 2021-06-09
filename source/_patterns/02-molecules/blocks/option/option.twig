@@ -1,7 +1,8 @@
-<div class="jcc-option">
+{% set tag = option.tag|default('h3') %}
 
+<div class="jcc-option">
   {% if option.title %}
-      <h6>{{ option.title }}</h6>
+      <{{ tag }} class="jcc-option__title">{{ option.title }}</{{ tag }}>
   {% endif %}
   {% if option.content %}
       <div class="jcc-option__content">{{ option.content }}</div>
