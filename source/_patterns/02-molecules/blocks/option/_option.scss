@@ -1,9 +1,16 @@
+.jcc-option__title {
+  @extend .heading-h4;
+  @include u-line-height("heading", 2);
+  @include u-margin-bottom(1);
+}
+
 .jcc-option {
   @include u-radius(lg);
   @include u-padding(3);
   @include u-text(base-darkest);
   @include u-position(relative);
   @include u-text(left);
+
   &:before {
     content: "";
     @include u-display(block);
@@ -12,7 +19,23 @@
     @include u-height(0.5);
     @include u-margin-bottom(1);
   }
+
+  h3,
+  h4,
+  h5,
   h6 {
-    @include u-margin-bottom(2px);
+    @extend .jcc-option__title;
+  }
+}
+
+// Content template conflict
+.jcc-step__excerpt {
+  .jcc-option {
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .jcc-option__title;
+    }
   }
 }
