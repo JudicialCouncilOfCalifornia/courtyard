@@ -2,6 +2,7 @@
   @extend .heading-h4;
   @include u-line-height("heading", 2);
   @include u-margin-bottom(1);
+  @include u-color("base-darkest", !important);
 }
 
 .jcc-option {
@@ -28,7 +29,7 @@
   }
 }
 
-// Content template conflict
+// BEGIN - Component embedding and content template support
 .jcc-step__excerpt {
   .jcc-option {
     h3,
@@ -39,3 +40,14 @@
     }
   }
 }
+.cke_editable {
+  .jcc-option {
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .jcc-option__title;
+    }
+  }
+}
+// END
