@@ -2,7 +2,7 @@
   @extend .heading-h4;
   @include u-line-height("heading", 2);
   @include u-margin-bottom(1);
-  @include u-color("base-darkest");
+  @include u-color("base-darkest", !important);
 }
 
 .jcc-option {
