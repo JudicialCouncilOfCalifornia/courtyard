@@ -21,6 +21,7 @@
     @include u-margin-bottom(1);
   }
 
+  h2,
   h3,
   h4,
   h5,
@@ -30,18 +31,11 @@
 }
 
 // BEGIN - Component embedding and content template support
-.jcc-step__excerpt {
-  .jcc-option {
-    h3,
-    h4,
-    h5,
-    h6 {
-      @extend .jcc-option__title;
-    }
-  }
-}
+.jcc-text-section__column-left,
+.jcc-step__excerpt,
 .cke_editable {
   .jcc-option {
+    h2,
     h3,
     h4,
     h5,
