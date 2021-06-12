@@ -3,17 +3,17 @@
 ]|merge(share.classes|default([''])) %}
 
 <div class="{{ classes|join(' ')|trim }}">
-  <button id="print" class="jcc-share__button" aria-label="Print current page">
+  <button id="jcc-share__trigger--print" class="jcc-share__button" aria-label="Print current page">
     <span class="jcc-share__print"></span>
   </button>
   {% if share.email_modal %}
     {% set email_id = "email" %}
     {% set email_label = share.text_desc|default("Email page to yourself") %}
     {% set email_button %}
-      <button id="{{ email_id }}"
+      <button id="jcc-share__trigger--{{ email_id }}"
               class="jcc-share__button jcc-modal__trigger"
               aria-label="{{ email_label }}"
-              {% if share.email_modal %}data-a11y-dialog-show="{{ email_id }}"{% endif %}
+              {% if share.email_modal %}data-a11y-dialog-show="jcc-share--{{ email_id }}"{% endif %}
       >
         <span class="jcc-share__email"></span>
       </button>
@@ -21,8 +21,8 @@
     {% include '@organisms/sections/modal/modal.twig' with {
       modal: {
         custom_button: email_button,
-        id: email_id,
-        aria_label: email_label,
+        id: 'jcc-share--' ~ email_id,
+        aria_label: 'Email page link dialog window',
         uses_modal: true,
         overlay_mode: true,
         content: share.email_modal,
@@ -34,10 +34,10 @@
     {% set text_id = "text" %}
     {% set text_label = share.text_desc|default("Text page to yourself") %}
     {% set text_button %}
-      <button id="{{ text_id }}"
+      <button id="jcc-share__trigger--{{ text_id }}"
               class="jcc-share__button jcc-modal__trigger"
               aria-label="{{ text_label }}"
-              {% if share.text_modal %}data-a11y-dialog-show="{{ text_id }}"{% endif %}
+              {% if share.text_modal %}data-a11y-dialog-show="jcc-share--{{ text_id }}"{% endif %}
       >
         <span class="jcc-share__text"></span>
       </button>
@@ -45,8 +45,8 @@
     {% include '@organisms/sections/modal/modal.twig' with {
       modal: {
         custom_button: text_button,
-        id: text_id,
-        aria_label: text_label,
+        id: 'jcc-share--' ~ text_id,
+        aria_label: 'Text page link dialog window',
         uses_modal: true,
         overlay_mode: true,
         content: share.text_modal,
