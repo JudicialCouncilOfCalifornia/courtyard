@@ -33,7 +33,7 @@
 
   <div class="{{ classes|join(' ')|trim }}">
     <div class="jcc-cascading-jump-menu__form">
-      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-parent-options">{{ cascading_jump_menu.label }}</label>
+      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-parent-options">{{ cascading_jump_menu.label|default(default_option) }}</label>
       <select class="usa-select jcc-cascading-jump-menu__parent" name="{{ cascading_jump_menu.id }}-parent-options" id="{{ cascading_jump_menu.id }}-parent-options">
         <option value="" aria-hidden="true">{{ default_option }}</option>
         {% for group in cascading_jump_menu.groups %}
@@ -41,7 +41,7 @@
         {% endfor %}
       </select>
 
-      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-child-options">{{ cascading_jump_menu.label_child }}</label>
+      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-child-options">{{ cascading_jump_menu.label_child|default(default_child_option) }}</label>
       <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled" name="{{ cascading_jump_menu.id }}-child-options" id="{{ cascading_jump_menu.id }}-child-options">
         <option value="" aria-hidden="true">{{ default_child_option }}</option>
       </select>
