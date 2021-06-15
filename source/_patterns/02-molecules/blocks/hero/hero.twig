@@ -8,6 +8,7 @@
   'jcc-hero',
   'jcc-hero--' ~ column_variant|default('has-two-columns-half'),
   hero.lowercase_brow ? 'jcc-hero--lowercase-brow',
+  hero.hide_title ? 'display-none',
   hero.background_variant ? 'jcc-hero--' ~ hero.background_variant : '',
   hero.background_parallax ? 'jcc-hero--background-parallax' : '',
   hero.height_variant ? 'jcc-hero--' ~ hero.height_variant : '',
