@@ -320,6 +320,26 @@
       }
     }
 
+    .jcc-nav-secondary__group {
+      .usa-accordion__button {
+        &[aria-expanded="true"],
+        &:hover {
+          @include at-media(desktop) {
+            @include u-bg(accent-warm);
+            @include u-text(ink);
+          }
+        }
+      }
+
+      .usa-accordion ul .usa-nav__submenu-item a {
+        @include u-bg(accent-warm);
+        @include u-text(ink);
+        &:hover {
+          @include u-bg(accent-warm-darker);
+        }
+      }
+    }
+
     .usa-nav__primary {
       .usa-current::after,
       .usa-nav__link:hover::after {
@@ -370,11 +390,6 @@
     .jcc-nav-secondary__group .usa-accordion__button[aria-expanded="true"] {
       @include at-media-max(desktop) {
         background-image: url(../img/angle-arrow-up-white.svg); // thenme
-      }
-
-      @include at-media(desktop) {
-        @include u-bg(primary);
-        @include u-text("white");
       }
     }
 
