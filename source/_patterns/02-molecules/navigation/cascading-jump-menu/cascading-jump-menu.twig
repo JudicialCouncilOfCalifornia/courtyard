@@ -28,24 +28,22 @@
     default_option: default_option,
     default_child_option: default_child_option,
     groups: groups
-   } %}
+  } %}
 
 
   <div class="{{ classes|join(' ')|trim }}">
     <div class="jcc-cascading-jump-menu__form">
-      {% if cascading_jump_menu.label %}
-        <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-parent-options">{{ cascading_jump_menu.label }}</label>
-      {% endif %}
-
+      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-parent-options">{{ cascading_jump_menu.label }}</label>
       <select class="usa-select jcc-cascading-jump-menu__parent" name="{{ cascading_jump_menu.id }}-parent-options" id="{{ cascading_jump_menu.id }}-parent-options">
-        <option value="">{{ default_option }}</option>
+        <option value="" aria-hidden="true">{{ default_option }}</option>
         {% for group in cascading_jump_menu.groups %}
           <option>{{ group.name }}</option>
         {% endfor %}
       </select>
 
+      <label class="usa-label sr-only" for="{{ cascading_jump_menu.id }}-child-options">{{ cascading_jump_menu.label_child }}</label>
       <select class="usa-select jcc-cascading-jump-menu__child" disabled="disabled" name="{{ cascading_jump_menu.id }}-child-options" id="{{ cascading_jump_menu.id }}-child-options">
-        <option value="">{{ default_child_option }}</option>
+        <option value="" aria-hidden="true">{{ default_child_option }}</option>
       </select>
     </div>
 

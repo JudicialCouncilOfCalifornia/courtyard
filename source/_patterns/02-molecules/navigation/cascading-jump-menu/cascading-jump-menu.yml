@@ -1,6 +1,8 @@
 cascading_jump_menu:
+  id: "jump"
   label: "Common Questions"
   default_option: "Select your case type"
+  label_child: "Actions for selected question"
   default_child_option: "Select your parent case type!"
   groups:
     - name: "Choice #1"
