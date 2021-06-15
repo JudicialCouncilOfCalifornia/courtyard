@@ -4,7 +4,7 @@
   breadcrumbs.show_mobile ? 'show-mobile' : 'hide-mobile',
 ]|merge(breadcrumbs.classes|default([''])) %}
 
-{% if breadcrumbs.items|length > 0 %}
+{% if breadcrumbs.items|length > 0 or breadcrumbs.show_back_button %}
 <nav class="{{ classes|join(' ')|trim }}">
   {% if breadcrumbs.show_back_button %}
     {% include '@atoms/buttons/back-button.twig' %}
