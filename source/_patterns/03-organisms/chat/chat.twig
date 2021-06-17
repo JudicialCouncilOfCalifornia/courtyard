@@ -1,0 +1,33 @@
+{% set heading_tag = chat.heading_tag|default('h3') %}
+
+{% set classes = [
+  'jcc-chat'
+]|merge(card.classes|default([''])) %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="jcc-chat__container">
+    <div class="jcc-chat__content">
+      {% for grouping in chat.grouping %}
+
+        {% set content %}
+          {% if grouping.messages %}
+          <ul class="jcc-chat__messages">
+          {% for message in grouping.messages %}
+            <li class="jcc-chat__message jcc-chat__message--{{ message.type }}" aria-label="{{ message.type }} response">
+              {{ message.text }}
+            </li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        {% endset %}
+
+        {% include "@molecules/section/section.twig" with {
+          section: {
+            heading: grouping.heading,
+            content: content,
+          }
+        } %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

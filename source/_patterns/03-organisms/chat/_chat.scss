@@ -1,0 +1,74 @@
+.jcc-chat {
+  &__content {
+    @include u-padding(2);
+  }
+
+  &__messages,
+  &__options {
+    @include unstyled-list();
+
+    &> li {
+      @include u-margin-bottom(1);
+    }
+  }
+
+  &__message {
+    @include u-padding(2);
+    @include u-border(1px, 'base-light');
+    @include u-bg('base-lightest');
+    border-radius: 1rem;
+
+    &--received {
+      margin-right: 25%;
+      border-top-left-radius: 0.2rem;
+    }
+
+    &--sent {
+      @include u-border-color('blue-cool-30v');
+      @include u-bg('blue-cool-10v');
+      margin-left: 25%;
+      border-top-right-radius: 0.2rem;
+    }
+
+    &--select {
+      @include u-border-color('transparent');
+      @include u-bg('transparent');
+    }
+  }
+
+  &__options {
+    &-item {
+      .jcc-button--outline {
+        @include u-width('full');
+
+        @include at-media('tablet-lg') {
+          @include u-width('mobile-lg');
+        }
+      }
+    }
+  }
+
+  .jcc-section-heading__title--full {
+    @extend .usa-prose;
+    @include u-color('ink');
+
+    span {
+      padding: 0 0.3rem;
+    }
+  }
+
+  .jcc-section:not(.jcc-section--background-alt) {
+    .jcc-section-heading__title--full {
+      span{
+        padding: 0 1rem;
+        box-shadow: 6px 15px 0 color('white'), -6px 15px 0 color('white');
+      }
+
+      &::before {
+        @include u-height('1px');
+        @include u-bg('base-light');
+        transform: translate(-50%, 14px);
+      }
+    }
+  }
+}

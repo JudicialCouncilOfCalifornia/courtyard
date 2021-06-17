@@ -1,0 +1,35 @@
+chat:
+  grouping:
+    - heading:
+        title: 'Welcome'
+      messages:
+        - type: 'received'
+          text: 'Hi! I am a bot. This means the answers I give are automated and aren’t coming from a real person.'
+        - type: 'received'
+          text: 'By continuing to use this bot you are indicating that you agree with our Disclosure Statement.'
+        - type: 'sent'
+          text: 'Name change overview'
+    - heading:
+        title: 'Name Change Overview'
+      messages:
+        - type: 'received'
+          text: 'To make sure you get the right answer, I need to get info about your case, even if you have already answered these questions.'
+        - type: 'received'
+          text: '<p>Who is filing this case?</p>'
+        - type: 'select'
+          text: '<ul class="jcc-chat__options">
+                   <li class="jcc-chat__options-item">
+                     <a href="#" class="jcc-button--outline">An adult</a>
+                   </li>
+                   <li class="jcc-chat__options-item">
+                     <a href="#" class="jcc-button--outline jcc-button--active">Both parents for a child</a>
+                   </li>
+                   <li class="jcc-chat__options-item">
+                     <a href="#" class="jcc-button--outline">Guardian for a child</a>
+                   </li>
+                   <li class="jcc-chat__options-item">
+                     <a href="#" class="jcc-button--outline">Ask for something else</a>
+                   </li>
+                 </ul>'
+        - type: 'sent'
+          text: 'Both parents for a child'
