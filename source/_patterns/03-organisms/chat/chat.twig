@@ -13,8 +13,28 @@
           {% if grouping.messages %}
           <ul class="jcc-chat__messages">
           {% for message in grouping.messages %}
-            <li class="jcc-chat__message jcc-chat__message--{{ message.type }}" aria-label="{{ message.type }} response">
-              {{ message.text }}
+            <li class="jcc-chat__item {{ message.type }}">
+              <div class="jcc-chat__message jcc-chat__message--{{ message.type }}" aria-label="{{ message.type }} response">
+                {{ message.text }}
+              </div>
+
+              {% if message.type == 'received' and message.icon %}
+                <div class="jcc-chat__message-icon">
+                  {% if message.icon.url %}
+                  <a href="message.icon.url">
+                  {% endif %}
+                    {% include "@atoms/icon/icon.twig" with {
+                      icon: {
+                        name: message.icon.name,
+                        set: 'fa',
+                        title: message.icon.title,
+                      }
+                    } %}
+                  {% if message.icon.url %}
+                  </a>
+                  {% endif %}
+                </div>
+              {% endif %}
             </li>
           {% endfor %}
           </ul>
@@ -28,6 +48,11 @@
           }
         } %}
       {% endfor %}
+    </div>
+    <div class="jcc-chat__footer">
+      <div class="jcc-chat__footer-container">
+        {{ chat.footer.block }}
+      </div>
     </div>
   </div>
 </div>

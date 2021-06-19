@@ -33,6 +33,15 @@
       } %}
     {% endif %}
 
-    {{ section.content }}
+    {% if section.sub_sections %}
+      {% set col_width = 12/section.num_cols|default(1) %}
+      <div class="jcc-section__subsections">
+        {% for sub_section in section.sub_sections %}
+          <div class="jcc-section__subsection jcc-section__subsection--col-{{ col_width }}">{{ sub_section.content }}</div>
+        {% endfor %}
+      </div>
+    {% else %}
+      {{ section.content }}
+    {% endif %}
   </div>
 </section>

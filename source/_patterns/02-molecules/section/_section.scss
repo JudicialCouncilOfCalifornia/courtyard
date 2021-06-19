@@ -32,3 +32,31 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include grid-container(widescreen);
   }
 }
+
+.jcc-section__subsections {
+  @include grid-row();
+  @include grid-gap(6);
+}
+
+.jcc-section__subsection--col {
+  &-3 {
+    @include grid-col(12);
+    @include at-media('tablet') {
+      @include grid-col(6);
+    }
+  }
+
+  &-4 {
+    @include grid-col(12);
+    @include at-media('tablet') {
+      @include grid-col(6);
+    }
+  }
+
+  &-6 {
+    @include grid-col(12);
+    @include at-media('tablet') {
+      @include grid-col(6);
+    }
+  }
+}

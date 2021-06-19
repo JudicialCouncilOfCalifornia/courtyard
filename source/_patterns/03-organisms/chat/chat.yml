@@ -1,10 +1,17 @@
 chat:
+  footer:
+    block: '<label class="usa-label usa-sr-only" for="input-type-textarea">Enter Response</label>
+           <textarea class="usa-textarea" id="input-type-textarea" name="input-type-textarea"></textarea>
+           <a aria_label="Click me to execute action" class="jcc-button--primary" href="#">Send Message</a>'
   grouping:
     - heading:
         title: 'Welcome'
       messages:
         - type: 'received'
           text: 'Hi! I am a bot. This means the answers I give are automated and aren’t coming from a real person.'
+          icon:
+            name: 'volume-up'
+            url: '#'
         - type: 'received'
           text: 'By continuing to use this bot you are indicating that you agree with our Disclosure Statement.'
         - type: 'sent'
@@ -16,20 +23,20 @@ chat:
           text: 'To make sure you get the right answer, I need to get info about your case, even if you have already answered these questions.'
         - type: 'received'
           text: '<p>Who is filing this case?</p>'
-        - type: 'select'
-          text: '<ul class="jcc-chat__options">
-                   <li class="jcc-chat__options-item">
-                     <a href="#" class="jcc-button--outline">An adult</a>
-                   </li>
-                   <li class="jcc-chat__options-item">
-                     <a href="#" class="jcc-button--outline jcc-button--active">Both parents for a child</a>
-                   </li>
-                   <li class="jcc-chat__options-item">
-                     <a href="#" class="jcc-button--outline">Guardian for a child</a>
-                   </li>
-                   <li class="jcc-chat__options-item">
-                     <a href="#" class="jcc-button--outline">Ask for something else</a>
-                   </li>
-                 </ul>'
+        #- type: 'select'
+        #  text: '<ul class="jcc-chat__options">
+        #           <li class="jcc-chat__options-item">
+        #             <a href="#" class="jcc-button--outline">An adult</a>
+        #           </li>
+        #           <li class="jcc-chat__options-item">
+        #             <a href="#" class="jcc-button--outline jcc-button--active">Both parents for a child</a>
+        #           </li>
+        #           <li class="jcc-chat__options-item">
+        #             <a href="#" class="jcc-button--outline">Guardian for a child</a>
+        #           </li>
+        #           <li class="jcc-chat__options-item">
+        #             <a href="#" class="jcc-button--outline">Ask for something else</a>
+        #           </li>
+        #         </ul>'
         - type: 'sent'
           text: 'Both parents for a child'

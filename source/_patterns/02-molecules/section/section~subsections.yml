@@ -1,0 +1,8 @@
+section:
+  heading:
+    title: "Section title Hac dictum turpis eget a sit elementum metus gravida amet urna habitant ut eleifend"
+    lead: "<p>Nullam at semper mauris, at rhoncus purus. A consectetur nec sit vivamus, eleifend congue luctus amet, urna dignissim quisque. Senectus vitae iaculis per elit interdum euismod neque penatibus rhoncus, sem facilisi scelerisque fusce torquent curabitur fames facilisis.</p>"
+  num_cols: 2
+  sub_sections:
+    - content: "<p>Id magna facilisi odio molestie dis feugiat proin, massa mollis cras libero dictum amet interdum, mauris sociis penatibus condimentum dolor habitant.</p><p>Turpis nulla aliquam lacus natoque torquent praesent consectetur nostra proin malesuada sem dolor pharetra, pellentesque libero massa parturient dui habitasse accumsan nec arcu orci cubilia quam.</p><p>Mollis rhoncus consequat torquent praesent suspendisse imperdiet felis sagittis ac, nibh neque varius ullamcorper massa donec nullam tortor non, nunc pellentesque conubia placerat platea taciti vitae tincidunt.</p>"
+    - content: "<p>Id magna facilisi odio molestie dis feugiat proin, massa mollis cras libero dictum amet interdum, mauris sociis penatibus condimentum dolor habitant.</p><p>Turpis nulla aliquam lacus natoque torquent praesent consectetur nostra proin malesuada sem dolor pharetra, pellentesque libero massa parturient dui habitasse accumsan nec arcu orci cubilia quam.</p><p>Mollis rhoncus consequat torquent praesent suspendisse imperdiet felis sagittis ac, nibh neque varius ullamcorper massa donec nullam tortor non, nunc pellentesque conubia placerat platea taciti vitae tincidunt.</p>"
