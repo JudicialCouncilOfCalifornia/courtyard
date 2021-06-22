@@ -59,3 +59,30 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 }
+
+.usa-paragraph-webform {
+  .usa-form-item, .usa-form-fieldset{
+    @include u-padding-top(2);
+    @include u-padding-bottom(2);
+  }
+  .usa-form-fieldset.usa-fieldset {
+    @include u-margin-top(2);
+    @include u-padding-bottom(2);
+  }
+  .usa-form-fieldset {
+    .usa-form-item {
+      @include u-padding-top(2px);
+      @include u-padding-bottom(2px);
+    }
+  }
+  .form-actions {
+    @include u-padding-top(2);
+  }
+
+  label.form-required:after {
+    content: '*';
+    color: color("error");
+    display: inline;
+    @include u-margin-x(0.5);
+  }
+}
