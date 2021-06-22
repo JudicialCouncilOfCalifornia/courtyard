@@ -54,7 +54,7 @@
       {% if header_base.nav_secondary.accordion_button or header_base.nav_secondary.search %}
       <div class="jcc-nav-secondary__group">
         
-        {% if header_base.nav_secondary.accordion_button %}
+        {% if header_base.nav_secondary.accordion_button and header_base.nav_secondary.accordion_button.links %}
         <ul class="jcc-translate usa-accordion">
           <li>
             <button class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-two">
