@@ -18,7 +18,7 @@
 <div class="{{ classes|join(' ')|trim }}" id="{{ randomId }}" aria-hidden="true">
   <div class="jcc-modal__backdrop{% if modal.overlay_mode %} jcc-modal__backdrop--overlay{% endif %}" tabindex="-1"></div>
 
-  <dialog class="jcc-modal__dialog{% if modal.overlay_mode %} jcc-modal__dialog--overlay{% endif %} js-dialog-window" id="jcc-dialog-window" aria-label="{{ randomId }} dialog window">
+  <dialog class="jcc-modal__dialog{% if modal.overlay_mode %} jcc-modal__dialog--overlay{% endif %} js-dialog-window" aria-label="{{ modal.aria_label|default(randomId ~ ' dialog window') }}">
     <button class="jcc-modal__close-button usa-button--unstyled jcc-modal__close-reset" type="button" data-a11y-dialog-hide="{{ randomId }}" aria-label="{{ 'Close this dialog window'|t }}">
       {% include '@atoms/icons/icon.twig' with {
         icon: {
