@@ -3,6 +3,7 @@ card:
   excerpt: "<p>Nullam at semper mauris, at rhoncus purus.</p>"
   img: null
   menu_label: 'The label'
+  menu_label_child: 'The child menu label'
   menu_items:
     - name: "Who sent me these papers?"
       url: "#"
