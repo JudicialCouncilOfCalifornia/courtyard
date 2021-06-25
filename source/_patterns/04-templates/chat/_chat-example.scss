@@ -1,0 +1,4 @@
+// Hide from View All due to fixed positioning of header and footer
+#templates-chat-example {
+  @include u-display(none);
+}

@@ -37,11 +37,6 @@
       border-top-right-radius: 0.2rem;
     }
 
-    &--select {
-      @include u-border-color('transparent');
-      @include u-bg('transparent');
-    }
-
     &-icon {
       @include u-display('inline-block');
       @include u-position('relative');
@@ -62,25 +57,22 @@
     }
   }
 
-  &__footer {
-    @include u-padding(0);
-
-    &-container {
-      @include u-position('fixed');
-      @include u-bottom(0);
-      @include u-width('full');
-      @include u-bg('base-lightest');
-      @include u-z(500);
-      @include u-padding(4);
-      @include u-border-top(1px, 'base-light');
-      @include u-text-align('center');
-    }
+  &__controls {
+    @include u-width('full');
+    @include u-bg('base-lightest');
+    @include u-padding(4);
+    @include u-border-top(1px, 'base-light');
+    @include u-text-align('center');
 
     textarea {
       @include u-margin-x('auto');
       @include u-margin-bottom(2);
       @include u-maxh(9);
     }
+  }
+
+  .jcc-section:first-child {
+    @include u-padding-top(0);
   }
 
   // BEGIN Section component overrides

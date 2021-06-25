@@ -25,6 +25,7 @@ const strip = require("gulp-strip-comments");
 const svgmin = require("gulp-svgmin");
 const svgstore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
+const cleanCss = require("gulp-clean-css");
 
 const pkg = require("./node_modules/uswds/package.json");
 const uswds = "./node_modules/uswds/dist";
@@ -150,8 +151,22 @@ const buildCss = (source, includes, destination) => {
   return css.pipe(sourcemaps.write("./")).pipe(gulp.dest(destination)).pipe(browserSync.stream());
 };
 
+const minifyCss = (destination) => {
+  let css = gulp
+    .src([destination + "/*.css"])
+    .pipe(cleanCss({ compatibility: "*"}))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest(destination));
+
+  return css;
+}
+
 const plCss = () => {
   return buildCss(config.css.src, config.css.project_scss, config.css.public_folder);
+};
+
+const minifyPlCss = () => {
+  return minifyCss(config.css.public_folder);
 };
 
 const styleguideCss = () => {
@@ -237,6 +252,7 @@ const fullBuild = gulp.series(
   copyUswdsImages,
   buildIcons,
   plCss,
+  minifyPlCss,
   plJs,
   styleguideCss,
   styleguideJs
@@ -249,6 +265,7 @@ const partialBuild = gulp.series(
   copyUswdsImages,
   buildIcons,
   plCss,
+  minifyPlCss,
   plJs
 );
 

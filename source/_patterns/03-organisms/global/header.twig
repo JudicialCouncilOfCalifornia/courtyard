@@ -41,6 +41,7 @@
   'usa-header--extended',
   'jcc-header',
   'jcc-header--' ~ header.background|default('default'),
+  header.fixed_position ? 'jcc-header--fixed-position':'',
 ]|merge(header.classes|default([''])) %}
 
 {% if header.skip %}
@@ -48,6 +49,8 @@
 {% endif %}
 
 <div class="usa-overlay"></div>
+
+<div class="jcc-header__spacer"></div>
 
 <header class="{{ classes|join(' ')|trim }}">
 

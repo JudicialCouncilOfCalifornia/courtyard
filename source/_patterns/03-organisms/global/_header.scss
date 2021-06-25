@@ -564,3 +564,9 @@ $_hat: map-get($_config, hat);
 .usa-js-mobile-nav--active {
   overflow-y: visible;
 }
+
+.jcc-header--fixed-position {
+  @include u-position('fixed');
+  @include u-top(0);
+  @include u-width('full');
+}
