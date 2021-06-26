@@ -1,6 +1,5 @@
 chat_view:
   header:
-    fixed_position: true
     skip:
       text: "Skip to main content"
       url: "#"
@@ -73,7 +72,6 @@ chat_view:
         - text: "Ewokese"
           url: "#"
   footer:
-    fixed_position: true
     controls: '<div class="jcc-chat__controls"><label class="usa-label usa-sr-only" for="input-type-textarea">Enter Response</label>
                <textarea class="usa-textarea" id="input-type-textarea" name="input-type-textarea"></textarea>
                <a aria_label="Click me to execute action" class="jcc-button--primary" href="#">Send Message</a></div>'

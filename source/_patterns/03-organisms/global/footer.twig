@@ -25,7 +25,6 @@
   'usa-footer--big',
   'jcc-footer',
   'jcc-footer--' ~ footer.background|default('default'),
-  footer.fixed_position ? 'jcc-footer--fixed-position':'',
 ]|merge(footer.classes|default([''])) %}
 
 <footer class="{{ classes|join(' ')|trim }}">
@@ -100,7 +99,3 @@
     } %}
   </div>
 </footer>
-
-{% if footer.fixed_position %}
-  <div class="jcc-footer__spacer" aria-hidden="true"></div>
-{% endif %}

@@ -269,17 +269,3 @@ $_shoe: map-get($_config, shoe);
     }
   }
 }
-
-.jcc-footer--fixed-position {
-  @include u-position('fixed');
-  @include u-bottom(0);
-  @include u-z(300);
-  @include u-width('full');
-}
-
-// Fixed footer position when View All in Pattern Lab
-#organisms-footer {
-  .jcc-footer--fixed-position {
-    @include u-position('relative');
-  }
-}
