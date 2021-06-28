@@ -55,6 +55,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-padding-right(3);
     @include u-border-width(0);
     @include u-bg("transparent");
+
+    .usa-card__heading a:hover {
+      @include u-text-decoration(underline);
+      text-decoration-thickness: 2px;
+    }
   }
 
   .usa-card--media-left & {
