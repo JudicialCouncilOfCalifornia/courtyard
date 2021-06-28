@@ -37,6 +37,7 @@ $_config_schemes: (
       alt-sub-sub-background: base-light,
       // section link
       section-link-background: accent-warm,
+      section-link-background-hover: accent-warm-dark,
       section-link-text: ink,
     ),
     translate: (
@@ -397,7 +398,7 @@ $_hat: map-get($_config, hat);
           @include u-justify-content(justify-end);
 
           &:hover {
-            @include u-bg(map-get($_nav, section-link-background));
+            @include u-bg(map-get($_nav, section-link-background-hover));
           }
         }
 
