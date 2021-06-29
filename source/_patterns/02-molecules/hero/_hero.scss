@@ -71,6 +71,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
+    @include text-color(map-get($_config, alt-background-text));
+  }
+
+  &.usa-prose a.ext {
+    &::after {
+      .jcc-hero--background-alt & {
+        @include u-bg(map-get($_config, alt-background-text));
+      }
+    }
   }
 }
 
@@ -114,6 +123,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .jcc-hero--background-alt & {
     @include text-color(map-get($_config, alt-background-text));
+  }
+
+  &.usa-prose a.ext {
+    &::after {
+      .jcc-hero--background-alt & {
+        @include u-bg(map-get($_config, alt-background-text));
+      }
+    }
   }
 }
 
