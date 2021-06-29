@@ -93,6 +93,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   a {
     @include link-colors(map-get($_config, title-link));
     @include u-text-decoration(no-underline);
+
+    &.ext {
+      @extend %jcc-inline-icon-link;
+
+      &::after {
+        mask-image: url("../icons/fa/external-link.svg");
+      }
+    }
   }
 }
 
