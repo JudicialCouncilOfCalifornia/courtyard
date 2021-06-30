@@ -220,6 +220,28 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.jcc-button--outline {
+  @extend %jcc-button;
+  @extend .usa-button--outline;
+
+  &:hover,
+  &.jcc-button--hover {
+    @include set-text-and-bg(map-get($_config, default-hover), $context: $button-context);
+  }
+
+  &:active,
+  &.jcc-button--active {
+    @include set-text-and-bg(map-get($_config, default-active), $context: $button-context);
+  }
+
+  &:disabled,
+  &.jcc-button--disabled {
+    @extend .usa-button--outline:disabled;
+    @include u-bg("transparent");
+    @include u-color("base-light");
+  }
+}
+
 .jcc-button--unstyled {
   @extend %jcc-button-unstyled;
 }

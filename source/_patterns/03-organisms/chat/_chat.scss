@@ -1,0 +1,108 @@
+.jcc-chat {
+  &__content {
+    @include u-margin-bottom(4);
+    @include u-padding(2);
+  }
+
+  &__item {
+    &.sent {
+      @include u-text-align('right');
+    }
+  }
+
+  &__messages,
+  &__options {
+    @include unstyled-list();
+
+    &> li {
+      @include u-margin-bottom(1);
+    }
+  }
+
+  &__message {
+    @include u-display('inline-block');
+    @include u-padding(2);
+    @include u-border(1px, 'base-light');
+    @include u-bg('base-lightest');
+    max-width: 75%;
+    border-radius: 1rem;
+
+    &--received {
+      border-top-left-radius: 0.2rem;
+    }
+
+    &--sent {
+      @include u-border-color('blue-cool-30v');
+      @include u-bg('blue-cool-10v');
+      border-top-right-radius: 0.2rem;
+    }
+
+    &-icon {
+      @include u-display('inline-block');
+      @include u-position('relative');
+      @include u-margin-left(1);
+      bottom: -0.5rem;
+    }
+  }
+
+  &__options {
+    &-item {
+      .jcc-button--outline {
+        @include u-width('full');
+
+        @include at-media('tablet-lg') {
+          @include u-width('mobile-lg');
+        }
+      }
+    }
+  }
+
+  &__controls {
+    @include u-width('full');
+    @include u-bg('base-lightest');
+    @include u-padding(4);
+    @include u-border-top(1px, 'base-light');
+    @include u-text-align('center');
+
+    textarea {
+      @include u-margin-x('auto');
+      @include u-margin-bottom(2);
+      @include u-maxh(9);
+    }
+  }
+
+  .jcc-section:first-child {
+    @include u-padding-top(0);
+  }
+
+  // BEGIN Section component overrides
+  .jcc-section-heading__title--full {
+    @extend .usa-prose;
+    @include u-color('ink');
+
+    span {
+      padding: 0 0.3rem;
+    }
+  }
+
+  .jcc-section:not(.jcc-section--background-alt) {
+    .jcc-section-heading__title--full {
+      @include add-dash(
+        $dash-position: "left-right",
+        $inner-color: 'white'
+      );
+
+      span{
+        padding: 0 1rem;
+        box-shadow: 6px 15px 0 color('white'), -6px 15px 0 color('white');
+      }
+
+      &::before {
+        @include u-height('1px');
+        @include u-bg('base-light');
+        transform: translate(-50%, 14px);
+      }
+    }
+  }
+  // END
+}

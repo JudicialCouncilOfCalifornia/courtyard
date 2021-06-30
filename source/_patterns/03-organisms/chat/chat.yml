@@ -1,0 +1,23 @@
+chat:
+  grouping:
+    - heading:
+        title: 'Welcome'
+      messages:
+        - type: 'received'
+          text: 'Hi! I am a bot. This means the answers I give are automated and aren’t coming from a real person.'
+          #icon:
+          #  name: 'volume-up'
+          #  url: '#'
+        - type: 'received'
+          text: 'By continuing to use this bot you are indicating that you agree with our Disclosure Statement.'
+        - type: 'sent'
+          text: 'Name change overview'
+    - heading:
+        title: 'Name Change Overview'
+      messages:
+        - type: 'received'
+          text: 'To make sure you get the right answer, I need to get info about your case, even if you have already answered these questions.'
+        - type: 'received'
+          text: 'Who is filing this case?'
+        - type: 'sent'
+          text: 'Both parents for a child'

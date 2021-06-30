@@ -28,6 +28,11 @@
 ]|merge(footer.classes|default([''])) %}
 
 <footer class="{{ classes|join(' ')|trim }}">
+  {% if footer.controls %}
+    <div class="jcc-footer__controls">
+      {{ footer.controls }}
+    </div>
+  {% endif %}
 
   {% if footer.links %}
     <div class="usa-footer__primary-section">
@@ -54,6 +59,7 @@
     </div>
   {% endif %}
 
+  {% if footer.title %}
   <div class="usa-footer__secondary-section">
     <div class="jcc-footer__container">
       <div class="jcc-footer__row">
@@ -85,12 +91,11 @@
       </div>
     </div>
   </div>
+  {% endif %}
 
   <div class="jcc-footer__shoe-section">
     {% include "@organisms/global/global-bar.twig" with {
       global_bar: footer.shoe
     } %}
-
   </div>
-
 </footer>
