@@ -9,6 +9,10 @@
   @include at-media(desktop) {
     @include grid-col(8);
   }
+
+  .usa-table td {
+    white-space: normal;
+  }
 }
 
 .jcc-body__main-text {
