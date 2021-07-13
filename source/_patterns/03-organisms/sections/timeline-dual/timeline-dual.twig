@@ -22,11 +22,16 @@
 
     {% if timeline_dual.title_bar %}
       <div class="jcc-timeline-dual__title-bar">
-        <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
-          {% if timeline_dual.title_bar.previous %}
-            {{ timeline_dual.title_bar.previous.title }}
-          {% endif %}
-        </a>
+        {% if timeline_dual.title_bar.previous.title %}
+          <a href="{{ timeline_dual.title_bar.previous.url }}" class="jcc-timeline-dual__title-bar-previous">
+            {% if timeline_dual.title_bar.previous %}
+              {{ timeline_dual.title_bar.previous.title }}
+            {% endif %}
+          </a>
+        {% else %}
+          <div class="jcc-timeline-dual__title-bar-previous">
+          </div>
+        {% endif %}
         <div class="jcc-timeline-dual__title-bar-title">
           {% if timeline_dual.title_bar.title %}
             {{ timeline_dual.title_bar.title }}
