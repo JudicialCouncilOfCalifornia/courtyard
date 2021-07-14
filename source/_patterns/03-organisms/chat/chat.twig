@@ -8,7 +8,6 @@
   <div class="jcc-chat__container">
     <div class="jcc-chat__content">
       {% for grouping in chat.grouping %}
-
         {% set content %}
           {% if grouping.messages %}
           <ul class="jcc-chat__messages">
@@ -18,7 +17,7 @@
                 {{ message.text }}
               </div>
 
-              {% if message.type == 'received' and message.icon %}
+              {% if message.type and message.icon %}
                 <div class="jcc-chat__message-icon">
                   {% if message.icon.url %}
                   <a href="message.icon.url">

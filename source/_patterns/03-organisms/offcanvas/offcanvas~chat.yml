@@ -1,0 +1,82 @@
+offcanvas:
+  id: "chat_modal-id"
+  button_close:
+    id: "chat_close"
+  hero:
+    main:
+      icon:
+        name: "chat"
+        set: "fig"
+        width: 35
+        height: 50
+        title: "Chat Now"
+      title: "Chat Now"
+      lead: "Duis autem vel eum iure reprehenderit qui in volup tate velit esse quam."
+      actions: false
+  embed: "<div class='jcc-chat'>
+  <div class='jcc-chat__container'>
+  <div class='jcc-chat__content'>
+  <section class='jcc-section jcc-section--container jcc-section--spacing-default jcc-section--background-default'>
+  <div class='jcc-section__inner'>
+  <header class='jcc-section-heading'>
+  <h2 class='jcc-section-heading__title jcc-section-heading__title--full'>
+  <span>Welcome</span>
+  </h2>
+  </header>
+  <ul class='jcc-chat__messages'>
+  <li class='jcc-chat__item received'>
+  <div class='jcc-chat__message jcc-chat__message--received' aria-label='received response'>
+  Hi! I am a bot. This means the answers I give are automated and aren’t coming from a real person.
+  </div>
+  </li>
+  <li class='jcc-chat__item received'>
+  <div class='jcc-chat__message jcc-chat__message--received' aria-label='received response'>
+  By continuing to use this bot you are indicating that you agree with our Disclosure Statement.
+  </div>
+  </li>
+  <li class='jcc-chat__item sent'>
+  <div class='jcc-chat__message jcc-chat__message--sent' aria-label='sent response'>
+  Name change overview
+  </div>
+  </li>
+  </ul>
+  </div>
+  </section>
+  <section class='jcc-section jcc-section--container jcc-section--spacing-default jcc-section--background-default'>
+  <div class='jcc-section__inner'>
+  <header class='jcc-section-heading'>
+  <h2 class='jcc-section-heading__title jcc-section-heading__title--full'>
+  <span>Name Change Overview</span>
+  </h2>
+  </header>
+  <ul class='jcc-chat__messages'>
+  <li class='jcc-chat__item received'>
+  <div class='jcc-chat__message jcc-chat__message--received' aria-label='received response'>
+  To make sure you get the right answer, I need to get info about your case, even if you have already answered these questions.
+  </div>
+  </li>
+  <li class='jcc-chat__item received'>
+  <div class='jcc-chat__message jcc-chat__message--received' aria-label='received response'>
+  Who is filing this case?
+  </div>
+  </li>
+  <li class='jcc-chat__item sent'>
+  <div class='jcc-chat__message jcc-chat__message--sent' aria-label='sent response'>
+  Both parents for a child
+  </div>
+  </li>
+  </ul>
+  </div>
+  </section>
+  </div>
+  </div>
+  </div>"
+  button:
+    id: "chat_open"
+    text: "Chat Now"
+    icon:
+      name: "chat"
+      set: "fig"
+      width: 22
+      height: 22
+      title: "Chat Now"

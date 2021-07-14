@@ -2,7 +2,14 @@ $_config_schemes: (
   base: (
     default-background: $theme-color-base-lighter,
     alt-background: primary,
+    alt-background-icon: "white",
     alt-background-text: "white",
+    alt-main-link: (
+      "jcc-button--inverse",
+    ),
+    default-main-link: (
+      "jcc-button--primary",
+    ),
     alt-aside-link: (
       "jcc-button--inverse",
     ),
@@ -19,6 +26,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &--background-alt {
     @include u-bg(map-get($_config, alt-background));
+
+    svg {
+      @include u-color(map-get($_config, alt-background-icon));
+    }
   }
 }
 
@@ -49,6 +60,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     .jcc-hero--layout-full-main & {
       @include grid-col(12);
     }
+  }
+
+  .icon {
+    @include u-position(relative);
+    @include u-top(1);
   }
 }
 
@@ -91,6 +107,24 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include at-media(tablet-lg) {
     @include u-position(absolute);
     top: -44px;
+  }
+}
+
+.jcc-hero__main-actions {
+  @include u-margin-top(4);
+
+  a {
+    .jcc-hero--background-default & {
+      @each $button in map-get($_config, default-main-link) {
+        @extend .#{$button};
+      }
+    }
+
+    .jcc-hero--background-alt & {
+      @each $button in map-get($_config, alt-main-link) {
+        @extend .#{$button};
+      }
+    }
   }
 }
 
