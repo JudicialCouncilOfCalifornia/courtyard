@@ -8,10 +8,7 @@
   // Centered/constrained
   &--centered {
     @include grid-container(widescreen);
-
-    &::before {
-      display: none;
-    }
+    border-left: none;
   }
 }
 
