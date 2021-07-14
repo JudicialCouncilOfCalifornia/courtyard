@@ -187,6 +187,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   &.ext {
     @extend %jcc-button-external;
   }
+
+  svg {
+    @include u-margin-left(1);
+    fill: white;
+  }
 }
 
 .jcc-button--secondary {
@@ -409,5 +414,25 @@ a.jcc-button--cta-link {
   span[class^='fa'],
   span[class*='fa'] {
     display: none;
+  }
+}
+
+.jcc-button__text--with-icon {
+  @include u-position(relative);
+  @include u-bottom(1);
+}
+
+.jcc-button--icon-top {
+  display: inline-grid;
+
+  svg {
+    @include u-order(1);
+    @include u-margin-x(auto);
+    @include u-maxh(5);
+    margin-bottom: 0.3rem;
+  }
+
+  .jcc-button__text--with-icon {
+    @include u-order(2);
   }
 }
