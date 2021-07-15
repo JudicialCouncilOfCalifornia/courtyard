@@ -1,0 +1,97 @@
+$_config_schemes: (
+  base: (
+    close-icon-color: "white",
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-offcanvas {
+  @include u-position(fixed);
+  @include u-right(0);
+  @include u-z(top);
+
+  &__dialog {
+    @include u-display(none);
+    @include u-position(fixed);
+    @include u-top(0);
+    @include u-left(0);
+    @include at-media(tablet-lg) {
+      @include u-top(auto);
+      @include u-left(auto);
+    }
+    @include u-border(1px, base-light);
+    @include u-padding(0);
+    background-color: #fff;
+
+    &[open] {
+      @include u-display(flex);
+      @include u-width(full);
+      @include at-media(tablet-lg) {
+        @include u-position(relative);
+        @include u-width(mobile-lg);
+        @include u-height(auto);
+      }
+      flex-flow: column;
+    }
+
+    &-close {
+      @include u-position(absolute);
+      @include u-top(2);
+      @include u-right(0);
+      @include u-z(500);
+
+      a {
+        @include u-margin(0);
+        @include u-padding(2);
+
+        svg{
+          @include u-color(map-get($_config, close-icon-color));
+        }
+      }
+    }
+
+    &-header {
+      flex: 0 1 auto;
+    }
+
+    &-body {
+      @include u-overflow(auto);
+      @include u-margin(2);
+      flex: 1 1 auto;
+      height: 90%;
+
+      .jcc-section__inner {
+        @include u-padding(0);
+      }
+    }
+  }
+
+  %jcc-button {
+    @include u-height(auto);
+  }
+
+  &__trigger-container {
+    %jcc-button {
+      @include u-padding-x(1);
+      width: 11rem;
+      height: 6rem;
+    }
+  }
+
+  .jcc-hero__container {
+    @include u-padding-top(4);
+  }
+
+  .jcc-button--icon-top {
+    svg {
+      @include u-margin-bottom(0);
+      margin-top: 0.3rem;
+    }
+
+    .jcc-button__text--with-icon {
+      @include u-bottom(0);
+    }
+  }
+}

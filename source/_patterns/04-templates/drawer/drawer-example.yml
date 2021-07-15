@@ -1,0 +1,109 @@
+drawer_example:
+  header:
+    skip:
+      text: "Skip to main content"
+      url: "#"
+    hat:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Contact Us"
+          url: "#"
+        - text: "Terms of Use"
+          url: "#"
+        - text: "Privacy Policy"
+          url: "#"
+    logo:
+      title: "County of lorem ipsum"
+      svg: "logo-example.svg"
+    search_action: "#"
+    links:
+      - text: Current section 1
+        is_current: true
+        id: nav-section-one
+        links:
+          - text: Navigation link
+            url: "#"
+          - text: Navigation link
+            url: "#"
+            is_current: true
+          - text: Navigation link
+            url: "#"
+            links:
+              - text: Navigation link
+                url: "#"
+              - text: Navigation link
+                url: "#"
+                is_current: true
+              - text: Navigation link
+                url: "#"
+          - text: Navigation link
+            url: "#"
+          - text: A very long navigation link that goes onto two lines
+            url: "#"
+          - text: Navigation link
+            url: "#"
+        section_link:
+          text: Navigation link
+          url: "#"
+      - text: Simple link 1
+        url: "#"
+      - text: Section 3
+        links:
+          - text: Navigation link 1
+            url: "#"
+          - text: Navigation link 2
+            url: "#"
+          - text: Navigation link 3
+            url: "#"
+          - text: Navigation link 4
+            url: "#"
+        section_link:
+          text: Navigation link
+          url: "#"
+    translate:
+      text: "Translate"
+      links:
+        - text: "English"
+          url: "#"
+        - text: "Spanish"
+          url: "#"
+        - text: "Ewokese"
+          url: "#"
+  offcanvas:
+    id: "chat_modal_id"
+    button_close:
+      id: "chat_close"
+    hero:
+      main:
+        icon:
+          name: "chat"
+          set: "fig"
+          width: 35
+          height: 50
+          title: "Chat Now"
+        title: "Chat Now"
+        lead: "Duis autem vel eum iure reprehenderit qui in volup tate velit esse quam."
+        actions: false
+    button:
+      id: "chat_open"
+      text: "Chat Now"
+      icon:
+        name: "chat"
+        set: "fig"
+        width: 22
+        height: 22
+        title: "Chat Now"
+  footer:
+    shoe:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Contact Us"
+          url: "#"
+        - text: "Terms of Use"
+          url: "#"
+        - text: "Privacy Policy"
+          url: "#"

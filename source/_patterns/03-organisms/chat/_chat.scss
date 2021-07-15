@@ -1,3 +1,22 @@
+$_config_schemes: (
+  base: (
+    msg-received-background: 'base-lightest',
+    msg-received-border: 'base-light',
+    msg-sent-background: 'blue-cool-10v',
+    msg-sent-border: 'blue-cool-30v',
+    msg-border-size: 1px,
+    msg-border-radius: 1rem,
+    msg-border-radius-fold: 0.2rem,
+    msg-section-heading-color: 'ink',
+    msg-section-heading-dash: 'base-light',
+    msg-section-heading-background: 'white',
+    msg-section-heading-shadow-h-offset-color: 'white',
+    msg-section-heading-shadow-v-offset-color: 'white',
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
 .jcc-chat {
   &__content {
     @include u-margin-bottom(4);
@@ -6,7 +25,7 @@
 
   &__item {
     &.sent {
-      @include u-text-align('right');
+      @include u-text-align(right);
     }
   }
 
@@ -20,26 +39,26 @@
   }
 
   &__message {
-    @include u-display('inline-block');
+    @include u-display(inline-block);
     @include u-padding(2);
-    @include u-border(1px, 'base-light');
-    @include u-bg('base-lightest');
+    @include u-border(map-get($_config, msg-border-size), map-get($_config, msg-received-border));
+    @include u-bg(map-get($_config, msg-received-background));
     max-width: 75%;
-    border-radius: 1rem;
+    border-radius: map-get($_config, msg-border-radius);
 
     &--received {
-      border-top-left-radius: 0.2rem;
+      border-top-left-radius: map-get($_config, msg-border-radius-fold);
     }
 
     &--sent {
-      @include u-border-color('blue-cool-30v');
-      @include u-bg('blue-cool-10v');
-      border-top-right-radius: 0.2rem;
+      @include u-border-color(map-get($_config, msg-sent-border));
+      @include u-bg(map-get($_config, msg-sent-background));
+      border-top-right-radius: map-get($_config, msg-border-radius-fold);
     }
 
     &-icon {
-      @include u-display('inline-block');
-      @include u-position('relative');
+      @include u-display(inline-block);
+      @include u-position(relative);
       @include u-margin-left(1);
       bottom: -0.5rem;
     }
@@ -48,24 +67,24 @@
   &__options {
     &-item {
       .jcc-button--outline {
-        @include u-width('full');
+        @include u-width(full);
 
-        @include at-media('tablet-lg') {
-          @include u-width('mobile-lg');
+        @include at-media(tablet-lg) {
+          @include u-width(mobile-lg);
         }
       }
     }
   }
 
   &__controls {
-    @include u-width('full');
-    @include u-bg('base-lightest');
+    @include u-width(full);
+    @include u-bg(base-lightest);
     @include u-padding(4);
-    @include u-border-top(1px, 'base-light');
-    @include u-text-align('center');
+    @include u-border-top(1px, base-light);
+    @include u-text-align(center);
 
     textarea {
-      @include u-margin-x('auto');
+      @include u-margin-x(auto);
       @include u-margin-bottom(2);
       @include u-maxh(9);
     }
@@ -78,7 +97,7 @@
   // BEGIN Section component overrides
   .jcc-section-heading__title--full {
     @extend .usa-prose;
-    @include u-color('ink');
+    @include u-color(map-get($_config, msg-section-heading-color));
 
     span {
       padding: 0 0.3rem;
@@ -88,18 +107,18 @@
   .jcc-section:not(.jcc-section--background-alt) {
     .jcc-section-heading__title--full {
       @include add-dash(
-        $dash-position: "left-right",
-        $inner-color: 'white'
+        $dash-position: left-right,
+        $inner-color: map-get($_config, msg-section-heading-background)
       );
 
       span{
         padding: 0 1rem;
-        box-shadow: 6px 15px 0 color('white'), -6px 15px 0 color('white');
+        box-shadow: 6px 15px 0 color(map-get($_config, msg-section-heading-shadow-h-offset-color)), -6px 15px 0 color(map-get($_config, msg-section-heading-shadow-v-offset-color));
       }
 
       &::before {
-        @include u-height('1px');
-        @include u-bg('base-light');
+        @include u-height(1px);
+        @include u-bg(map-get($_config, msg-section-heading-dash));
         transform: translate(-50%, 14px);
       }
     }

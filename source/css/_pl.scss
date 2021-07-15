@@ -55,10 +55,12 @@
 @import "../_patterns/03-organisms/global/global-bar";
 @import "../_patterns/03-organisms/global/header";
 @import "../_patterns/03-organisms/locations/locations";
+@import "../_patterns/03-organisms/offcanvas/offcanvas";
 @import "../_patterns/03-organisms/videos/videos";
 
 // Templates
 // -------------------------------------
+@import "../_patterns/04-templates/drawer/drawer-example";
 @import "../_patterns/04-templates/form-search/form-search";
 @import "../_patterns/04-templates/form-search/form-search-results";
 @import "../_patterns/04-templates/news/news-full";

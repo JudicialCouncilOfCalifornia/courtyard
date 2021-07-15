@@ -28,9 +28,14 @@
   'jcc-button--' ~ button.style|default('primary'),
   button.state ? 'jcc-button--' ~ button.state,
   button.is_external ? 'ext',
+  button.icon_layout ? 'jcc-button--icon-' ~ button.icon_layout : ''
 ]|merge(button.classes|default([''])) %}
 
-{% set attributes = attributes.addClass(classes) %}
+{% set attributes =
+  attributes.addClass(classes) ~
+  attributes.setAttribute('aria_label', button.aria_label) ~
+  button.other_attributes
+%}
 
 {% if button.type == 'button' %}
   <button {{ attributes }}>
@@ -38,10 +43,14 @@
   </button>
 {% else %}
   <a {{ attributes }} href="{{ button.url }}">
-    {{- button.text -}}
+    <span class="jcc-button__text{{ button.icon ? '--with-icon' : '' }}">{{- button.text -}}</span>
 
     {% if button.is_external %}
       <span class="fa-ext extlink"><span class="fa fa-external-link" aria-label="(link is external)"></span></span>
+    {% elseif button.icon %}
+      {% include "@atoms/icon/icon.twig" with {
+        icon: button.icon
+      } %}
     {% endif %}
   </a>
 {% endif %}

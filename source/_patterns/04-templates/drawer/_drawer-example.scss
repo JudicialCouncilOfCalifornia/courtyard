@@ -1,0 +1,15 @@
+.jcc-drawer-example {
+  .jcc-offcanvas {
+    @include u-bottom(0);
+    @include u-margin-bottom(4);
+  }
+}
+
+// Disable float under pattern lab view all
+.sg-pattern-example {
+  .jcc-drawer-example {
+    .jcc-offcanvas {
+      @include u-position(absolute);
+    }
+  }
+}
