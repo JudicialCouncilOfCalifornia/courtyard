@@ -10,8 +10,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-offcanvas {
   @include u-position(fixed);
   @include u-right(0);
+  @include u-z(top);
 
   &__dialog {
+    @include u-display(none);
     @include u-position(fixed);
     @include u-top(0);
     @include u-left(0);
@@ -19,9 +21,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-top(auto);
       @include u-left(auto);
     }
-    @include u-z(top);
     @include u-border(1px, base-light);
     @include u-padding(0);
+    background-color: #fff;
 
     &[open] {
       @include u-display(flex);

@@ -6,7 +6,7 @@
           button: {
             id: offcanvas.button_close.id|default('offcanvas_close'),
             style: 'unstyled',
-            aria_label: offcanvas.button_close|default('Close this dialog window'),
+            aria_label: offcanvas.button_close.aria_label|default('Close this dialog window'),
             other_attributes: 'tabindex=-1 data-offcanvas=trigger-close',
             icon: {
               name: 'close',

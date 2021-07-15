@@ -1,0 +1,25 @@
+<div class="jcc-drawer-example">
+  {% include '@organisms/global/header.twig' with {
+    header: drawer_example.header
+  } %}
+
+  {% include '@templates/news/news-full.twig' %}
+
+  {% set chat %}
+    {% include '@organisms/chat/chat.twig' %}
+  {% endset %}
+
+  {% include '@organisms/offcanvas/offcanvas.twig' with {
+    offcanvas: {
+      id: drawer_example.offcanvas.id,
+      button_close: drawer_example.offcanvas.button_close,
+      hero: drawer_example.offcanvas.hero,
+      embed: chat,
+      button: drawer_example.offcanvas.button,
+    }
+  } %}
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: drawer_example.footer
+  } %}
+</div>
