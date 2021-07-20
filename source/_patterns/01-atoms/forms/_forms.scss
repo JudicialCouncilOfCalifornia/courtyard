@@ -94,4 +94,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .webform-multiple-table {
     @extend .usa-prose;
   }
+  .webform-multiple-table table {
+    @extend .usa-table;
+  }
 }
