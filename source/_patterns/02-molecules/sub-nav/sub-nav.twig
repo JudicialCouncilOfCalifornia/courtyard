@@ -20,6 +20,7 @@
 {% if sub_nav.back_link or sub_nav.links %}
   <nav class="{{ classes|join(' ')|trim }}">
     <div class="jcc-sub-nav__container">
+      <div class="jcc-sub-nav__label">{{ 'In this section'|t }}</div>
       <ul class="jcc-sub-nav__items">
         {% if sub_nav.back_link %}
           <li class="jcc-sub-nav__item">
