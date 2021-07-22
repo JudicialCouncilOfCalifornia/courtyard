@@ -12,9 +12,9 @@ cards:
         text: "Ullamcorper elit"
     - style: "borderless"
       title: "Consequat nostra vel"
-      body: "<p>Lacus nec laoreet velit augue tellus justo ornare.</p>"
+      body: "This card has no link url, so it doesn't display like a typical borderless card."
       link:
-        url: "#"
+        url: null
         text: "Luctus nunc quam"
     - style: "borderless"
       title: "Consequat"

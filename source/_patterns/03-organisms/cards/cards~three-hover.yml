@@ -14,9 +14,9 @@ cards:
     - style: "hover"
       title: "Consequat nostra vel"
       brow: "Odio cum consectetur"
-      body: null
+      body: "This card has no link url, so it doesn't display like a typical hover card. It also doesn't display the CTA link."
       link:
-        url: "#"
+        url: null
         text: "Luctus nunc quam"
     - style: "hover"
       title: "Consequat"

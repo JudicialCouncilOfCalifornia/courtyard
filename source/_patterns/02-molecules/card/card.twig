@@ -23,9 +23,13 @@
 {% set style = card.style|default('cta') %}
 
 {% if style == 'hover' %}
-  {% set attributes = attributes.setAttribute('href', card.link.url) %}
-  {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
-  {% set tag = 'a' %}
+  {% if card.link.url %}
+    {% set attributes = attributes.setAttribute('href', card.link.url) %}
+    {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
+    {% set tag = 'a' %}
+  {% else %}
+    {% set style = 'cta' %}
+  {% endif %}
 {% endif %}
 
 {% set classes = [
@@ -42,7 +46,7 @@
         {% endif %}
 
         <{{ title_tag }} class="usa-card__heading" id="{{ unique_id }}">
-          {% if style == 'borderless' %}
+          {% if style == 'borderless' and card.link.url %}
             <a href="{{ card.link.url }}">{{ card.title }}</a>
           {% else %}
             {{ card.title }}
@@ -56,7 +60,7 @@
         </div>
       {% endif %}
 
-      {% if style == 'cta' or style == 'media-left' %}
+      {% if (style == 'cta' or style == 'media-left') and card.link.url %}
         <div class="usa-card__footer">
           <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
