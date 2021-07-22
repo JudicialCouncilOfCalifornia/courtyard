@@ -31,7 +31,7 @@
           } %}
         {% endif %}
 
-        <div class="jcc-body__main-text usa-prose">
+        <div class="jcc-body__main-text usa-prose clearfix">
           {{ body.main.text }}
         </div>
       </div>
@@ -44,7 +44,7 @@
           {% endif %}
 
           {% if body.aside.text %}
-            <div class="jcc-body__aside-text usa-prose">{{ body.aside.text }}</div>
+            <div class="jcc-body__aside-text usa-prose clearfix">{{ body.aside.text }}</div>
           {% endif %}
         </aside>
       {% endif %}

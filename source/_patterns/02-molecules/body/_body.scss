@@ -13,6 +13,16 @@
   .usa-table td {
     white-space: normal;
   }
+
+  .align-left {
+    @include u-float(left);
+    @include u-margin-right(3);
+  }
+
+  .align-right {
+    @include u-float(right);
+    @include u-margin-left(3);
+  }
 }
 
 .jcc-body__main-text {
