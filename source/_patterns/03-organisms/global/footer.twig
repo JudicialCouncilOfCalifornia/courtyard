@@ -67,7 +67,9 @@
         <div class="usa-footer__logo">
           <h3 class="usa-footer__logo-heading">
             <span>{{ footer.title.first }}</span>
+            {% if footer.title.second %}
             <span>{{ footer.title.second }}</span>
+            {% endif %}
           </h3>
         </div>
 

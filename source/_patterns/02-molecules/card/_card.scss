@@ -145,3 +145,18 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-color(ink);
   }
 }
+
+// News feed embed adjustments
+.jcc-news-element {
+  &.usa-card {
+    @include u-margin-bottom(6);
+  }
+
+  .usa-card__heading {
+    @extend h6;
+  }
+
+  .usa-card__media {
+    @include u-width(card-lg);
+  }
+}
