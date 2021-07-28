@@ -31,18 +31,14 @@
   button.icon_layout ? 'jcc-button--icon-' ~ button.icon_layout : ''
 ]|merge(button.classes|default([''])) %}
 
-{% set attributes =
-  attributes.addClass(classes) ~
-  attributes.setAttribute('aria_label', button.aria_label) ~
-  button.other_attributes
-%}
+{% set attributes = attributes.addClass(classes) %}
 
 {% if button.type == 'button' %}
-  <button {{ attributes }}>
+  <button {{ attributes }} {{ button.other_attributes }} >
     {{- button.text -}}
   </button>
 {% else %}
-  <a {{ attributes }} href="{{ button.url }}">
+  <a {{ attributes }} {{ button.other_attributes }} href="{{ button.url }}">
     <span class="jcc-button__text{{ button.icon ? '--with-icon' : '' }}">{{- button.text -}}</span>
 
     {% if button.is_external %}
