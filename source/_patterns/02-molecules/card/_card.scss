@@ -146,8 +146,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-// News feed embed adjustments
-.jcc-news-element {
+// BEGIN Content stream styling
+.usa-card--content-stream {
   &.usa-card {
     @include u-margin-bottom(6);
   }
@@ -157,6 +157,27 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card__media {
-    @include u-width(card-lg);
+    @include u-width(mobile);
+
+    span {
+      @include u-display(inline-block);
+      @include u-position(relative);
+      @include add-aspect("4x3");
+      @include u-width(full);
+      @include u-overflow(hidden);
+
+      img {
+        @include u-position(absolute);
+        @include u-width(full);
+        @include u-top(0);
+        @include u-left(0);
+        object-fit: cover;
+      }
+    }
   }
 }
+
+.jcc-news-element {
+  @extend .usa-card--content-stream;
+}
+// END
