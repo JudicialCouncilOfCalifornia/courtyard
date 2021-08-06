@@ -1,0 +1,24 @@
+// "Pro" scheme
+// -------------------------------------
+
+$scheme: "pro";
+
+// Import individual USWDS theme settings
+// -------------------------------------
+
+@import "pro/uswds-theme-general";
+@import "pro/uswds-theme-typography";
+@import "pro/uswds-theme-spacing";
+@import "pro/uswds-theme-color";
+@import "pro/uswds-theme-utilities";
+@import "pro/uswds-theme-components";
+
+// Import USWDS library
+// -------------------------------------
+
+@import "uswds";
+
+// Import PatternLab
+// -------------------------------------
+
+@import "pl";

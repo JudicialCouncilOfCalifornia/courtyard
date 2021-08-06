@@ -5,6 +5,7 @@ $_config_schemes: (
   local: (
     lead-color: "base-darker",
   ),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

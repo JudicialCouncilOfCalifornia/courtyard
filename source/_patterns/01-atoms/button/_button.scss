@@ -21,6 +21,7 @@ $_config_schemes: (
     inline-icon: primary,
   ),
   local: (),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

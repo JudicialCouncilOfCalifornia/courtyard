@@ -3,8 +3,8 @@ $_config_schemes: (
     button-color: 'gray-5',
     button-hover-color: 'gray-10',
   ),
-  local: (
-  )
+  local: (),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

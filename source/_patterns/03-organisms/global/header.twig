@@ -41,6 +41,7 @@
   'usa-header--extended',
   'jcc-header',
   'jcc-header--' ~ header.background|default('default'),
+  header.variant ? 'jcc-header--' ~ header.variant : '',
 ]|merge(header.classes|default([''])) %}
 
 {% if header.skip %}
@@ -50,7 +51,6 @@
 <div class="usa-overlay"></div>
 
 <header class="{{ classes|join(' ')|trim }}">
-
   <div class="jcc-header__hat">
     {% include '@organisms/global/global-bar.twig' with {
       global_bar: header.hat
@@ -59,7 +59,7 @@
 
   <div class="jcc-header__navbar">
     <div class="usa-navbar">
-      <div class="usa-logo" id="extended-logo">
+      <div class="usa-logo" id="extended-logo"{{ 'masthead' in header.variant ? ' aria-hidden="false"' : '' }}>
         <a href="/" title="Home" aria-label="Home">
           {% if header.logo.svg %}
             <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
@@ -99,8 +99,8 @@
                   <span>{{ link.text }}</span>
                   {% include "@atoms/icon/icon.twig" with {
                     icon: {
-                      name: "chevron-down",
-                      set: "fa",
+                      name: header.nav_children.indicator|default('chevron-down'),
+                      set: header.nav_children.icon_family|default('fa'),
                     }
                   } %}
                 </button>
@@ -181,6 +181,28 @@
     </nav>
   </div>
 
+  {% if 'masthead' in header.variant %}
+    <div class="jcc-header__logo-container--alt-position" aria-hidden="true">
+      <div class="usa-logo" id="extended-logo--alternate-position">
+        <a href="/" title="Home" aria-label="Home">
+          {% if header.logo.svg %}
+            <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
+            <div class="jcc_header__lead">{{ header.logo.lead|default(header.logo.title) }}</div>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+
+    {% if header.body %}
+      <div class="jcc-header__body">{{ header.body }}</div>
+    {% endif %}
+
+    {% if header.media %}
+      <div class="jcc-header__media">
+        <img src="{{ header.media.src }}" alt="{{ header.media.alt }}">
+      </div>
+    {% endif %}
+  {% endif %}
 </header>
 
 {% macro sub_menu(menu_links, section_link) %}

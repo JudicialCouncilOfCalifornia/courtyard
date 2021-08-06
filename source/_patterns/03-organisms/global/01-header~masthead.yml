@@ -1,0 +1,4 @@
+header:
+  variant: 'masthead'
+  nav_children:
+    indicator: "circle-solid"

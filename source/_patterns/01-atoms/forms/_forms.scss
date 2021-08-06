@@ -1,8 +1,17 @@
 $_config_schemes: (
   base: (
+    field-border-size: 2px,
+    field-border-radius: 0,
+    field-border-color: gray-60,
+
     icon-color: "primary",
   ),
   local: (),
+  pro: (
+    field-border-size: 2px,
+    field-border-radius: md,
+    field-border-color: gray-60,
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -17,7 +26,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-select,
 .usa-range,
 .usa-textarea {
-  @include u-border(2px);
+  @include u-border(map-get($_config, field-border-size));
+  @include u-radius(map-get($_config, field-border-radius));
+  @include u-border-color(map-get($_config, field-border-color));
 }
 
 .usa-select,
