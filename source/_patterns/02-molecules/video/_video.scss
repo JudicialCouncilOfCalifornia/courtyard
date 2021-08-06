@@ -25,7 +25,7 @@
   &::before,
   &::after {
     @include u-position(absolute);
-    content: '';
+    content: "";
     top: 50%;
     left: 50%;
     opacity: 0.7;

@@ -1,22 +1,44 @@
 // Merges multidimensional maps recursively.
 // See https://github.com/pentzzsolt/sass-recursive-map-merge
-@function recursive-map-merge($map1, $map2, $config:() ) {
-  @if (type-of($map1) == map or (type-of($map1) == list and length($map1) == 0)) and (type-of($map2) == map or (type-of($map2) == list and length($map2) == 0)) {
+@function recursive-map-merge($map1, $map2, $config: ()) {
+  @if (type-of($map1) == map or (type-of($map1) == list and length($map1) == 0)) and
+    (type-of($map2) == map or (type-of($map2) == list and length($map2) == 0))
+  {
     $result: $map1;
     @each $key, $value in $map2 {
       @if (type-of(map-get($result, $key)) == map and type-of($value) == map) {
-        $result: map-merge($result, ($key: recursive-map-merge(map-get($result, $key), $value)));
-      }
-      @else if (map-get($config, "merge-lists") and type-of(map-get($result, $key)) == list and type-of($value) == list) {
-        $result: map-merge($result, ($key: join(map-get($result, $key), $value)));
-      }
-      @else {
-        $result: map-merge($result, ($key: $value));
+        $result: map-merge(
+          $result,
+          (
+            $key: recursive-map-merge(map-get($result, $key), $value),
+          )
+        );
+      } @else if
+        (
+          map-get($config, "merge-lists") and
+            type-of(map-get($result, $key)) ==
+            list and
+            type-of($value) ==
+            list
+        )
+      {
+        $result: map-merge(
+          $result,
+          (
+            $key: join(map-get($result, $key), $value),
+          )
+        );
+      } @else {
+        $result: map-merge(
+          $result,
+          (
+            $key: $value,
+          )
+        );
       }
     }
     @return $result;
-  }
-  @else {
+  } @else {
     @warn "recursive-map-merge() expects it\'s parameters to be map types!";
     @return null;
   }
@@ -29,8 +51,7 @@
       $result: recursive-map-merge($result, map-get($map2, $key2));
     }
     @return $result;
-  }
-  @else {
+  } @else {
     @warn "map-merge-by-keys() expects (at a minimum) that the key #{$key1} exists in #{$map1}";
     @return null;
   }

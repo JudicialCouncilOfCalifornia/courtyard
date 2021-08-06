@@ -4,6 +4,7 @@ $_config_schemes: (
     default-background-text: "white",
   ),
   local: (),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

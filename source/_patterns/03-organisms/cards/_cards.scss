@@ -2,8 +2,8 @@ $_config_schemes: (
   base: (
     button: (
       "jcc-button--primary",
-    )
-  )
+    ),
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

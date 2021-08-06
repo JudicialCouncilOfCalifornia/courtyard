@@ -1,8 +1,16 @@
 $_config_schemes: (
   base: (
+    field-border-size: 2px,
+    field-border-radius: 0,
+    field-border-color: gray-60,
     icon-color: "primary",
   ),
   local: (),
+  pro: (
+    field-border-size: 2px,
+    field-border-radius: md,
+    field-border-color: gray-60,
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -17,7 +25,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-select,
 .usa-range,
 .usa-textarea {
-  @include u-border(2px);
+  @include u-border(map-get($_config, field-border-size));
+  @include u-radius(map-get($_config, field-border-radius));
+  @include u-border-color(map-get($_config, field-border-color));
 }
 
 .usa-select,
@@ -65,7 +75,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-paragraph-webform {
-  .usa-form-item, .usa-form-fieldset{
+  .usa-form-item,
+  .usa-form-fieldset {
     @include u-padding-top(2);
     @include u-padding-bottom(2);
   }
@@ -86,7 +97,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   label.form-required:after {
     @include u-color(error);
     @include u-margin-x(0.5);
-    content: '*';
+    content: "*";
     display: inline;
     position: relative;
   }

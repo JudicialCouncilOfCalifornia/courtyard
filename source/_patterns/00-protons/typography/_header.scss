@@ -15,6 +15,7 @@ $_config_schemes: (
     h5-color: "ink",
     h6-color: "ink",
   ),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

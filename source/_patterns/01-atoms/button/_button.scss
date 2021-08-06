@@ -21,6 +21,7 @@ $_config_schemes: (
     inline-icon: primary,
   ),
   local: (),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -72,11 +73,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 %jcc-button-unstyled {
   @include button-unstyled;
   @include u-padding(0);
-  @include link-colors((
-    default: $theme-link-color,
-    hover: $theme-link-hover-color,
-    active: $theme-link-active-color,
-  ));
+  @include link-colors(
+    (
+      default: $theme-link-color,
+      hover: $theme-link-hover-color,
+      active: $theme-link-active-color,
+    )
+  );
   @include u-bg("transparent");
 }
 
@@ -122,8 +125,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   svg.ext,
   svg.mailto,
-  span[class^='fa'],
-  span[class*='fa'] {
+  span[class^="fa"],
+  span[class*="fa"] {
     display: none;
   }
 }
@@ -152,8 +155,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   svg.ext,
   svg.mailto,
-  span[class^='fa'],
-  span[class*='fa'] {
+  span[class^="fa"],
+  span[class*="fa"] {
     display: none;
   }
 }
@@ -271,11 +274,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &.jcc-button--unstyled {
     @extend %jcc-button-unstyled;
-    @include link-colors((
-      default: $theme-link-reverse-color,
-      hover: $theme-link-reverse-hover-color,
-      active: $theme-link-reverse-active-color,
-    ));
+    @include link-colors(
+      (
+        default: $theme-link-reverse-color,
+        hover: $theme-link-reverse-hover-color,
+        active: $theme-link-reverse-active-color,
+      )
+    );
   }
 
   &:disabled {
@@ -300,16 +305,16 @@ a[data-entity-type="media"] {
 
 a.ext {
   svg.ext,
-  span[class^='fa'],
-  span[class*='fa'] {
+  span[class^="fa"],
+  span[class*="fa"] {
     display: none;
   }
 }
 
 a.mailto {
   svg.mailto,
-  span[class^='fa'],
-  span[class*='fa'] {
+  span[class^="fa"],
+  span[class*="fa"] {
     display: none;
   }
 }
@@ -346,7 +351,7 @@ a.jcc-button--cta-link {
   @include u-font-weight(normal);
   @include u-text(uppercase);
   @include u-text-align(left);
-  font-size: font-size('sans', 7);
+  font-size: font-size("sans", 7);
   letter-spacing: 1.8px;
   text-decoration: none;
 
@@ -411,8 +416,8 @@ a.jcc-button--cta-link {
 
   svg.ext,
   svg.mailto,
-  span[class^='fa'],
-  span[class*='fa'] {
+  span[class^="fa"],
+  span[class*="fa"] {
     display: none;
   }
 }

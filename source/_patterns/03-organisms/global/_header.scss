@@ -1,5 +1,19 @@
 $_config_schemes: (
   base: (
+    header: (
+      // variants
+      masthead-background-default: blue-warm-70v,
+      masthead-background-blue-vivid: blue-60v,
+      masthead-background-blue: blue-50,
+      masthead-background-gray: gray-50,
+      masthead-background-gray-warm: gray-warm-50,
+      masthead-text: "white",
+      masthead-svg: "white",
+      masthead-sub-text: blue-50,
+      masthead-nav-background: "white",
+      masthead-sub-background: "white",
+      masthead-sub-background-active: "white",
+    ),
     navbar: (
       default-background: "white",
       default-logo: primary-darker,
@@ -72,9 +86,11 @@ $_config_schemes: (
     search: primary,
   ),
   local: (),
+  pro: (),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+$_header: map-get($_config, header);
 $_navbar: map-get($_config, navbar);
 $_nav: map-get($_config, nav);
 $_translate: map-get($_config, translate);
@@ -563,4 +579,243 @@ $_hat: map-get($_config, hat);
 // Body gets this class when mobile menu opened
 .usa-js-mobile-nav--active {
   overflow-y: visible;
+}
+
+// Adjustments for masthead variant
+.jcc-header--masthead {
+  @include u-bg(map-get($_header, masthead-background-default));
+  @include text-color(map-get($_header, masthead-text));
+  padding-bottom: 5.875rem;
+
+  .jcc-header__navbar {
+    @include u-bg("transparent");
+    @include u-margin-bottom(5);
+  }
+
+  .jcc-header__nav {
+    .usa-nav {
+      @include u-bg("transparent");
+      margin-bottom: 6.25rem;
+
+      .usa-nav__link {
+        @include u-height(auto);
+        @include u-bg("transparent");
+        @include u-color(map-get($_header, masthead-sub-text));
+
+        &::after {
+          @include u-margin-x(1);
+          @include u-bg(map-get($_header, masthead-nav-background));
+        }
+
+        &:hover::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 0.25rem;
+        }
+
+        span {
+          @include u-color(map-get($_header, masthead-text));
+        }
+      }
+
+      .usa-nav__submenu-item {
+        @include u-border-top(0);
+
+        &:not(:last-child) {
+          a {
+            @include u-bg(map-get($_header, masthead-sub-background));
+            @include u-color(map-get($_header, masthead-sub-text));
+          }
+        }
+      }
+
+      .usa-nav__primary {
+        .usa-nav__link {
+          &:focus {
+            @include u-bg(map-get($_header, masthead-sub-background));
+
+            span {
+              @include u-color(map-get($_header, masthead-sub-text));
+            }
+          }
+
+          span {
+            & + svg {
+              @include u-margin-left(1);
+            }
+          }
+
+          svg {
+            @include u-height(1);
+            @include u-width(1);
+            @include u-color(map-get($_header, masthead-svg));
+          }
+        }
+      }
+
+      .usa-nav__secondary {
+        bottom: 7rem;
+
+        .usa-nav__submenu {
+          @include u-border-top(0);
+        }
+
+        button {
+          &:hover,
+          &:focus {
+            @include u-bg(map-get($_header, masthead-sub-background));
+
+            svg {
+              @include u-color(map-get($_header, masthead-sub-text));
+            }
+
+            span {
+              @include u-color(map-get($_header, masthead-sub-text));
+            }
+          }
+        }
+
+        .usa-nav__submenu-item {
+          a {
+            @include u-bg(map-get($_header, masthead-sub-background));
+            @include u-color(map-get($_header, masthead-sub-text));
+          }
+        }
+
+        svg {
+          @include u-color(map-get($_header, masthead-svg));
+        }
+
+        .usa-input {
+          @include u-border-color("transparent");
+        }
+      }
+    }
+  }
+
+  .jcc-header__logo-container--alt-position {
+    @include u-width(widescreen);
+    @include u-margin-x(auto);
+
+    .usa-logo {
+      @include u-display(inline-block);
+      @include u-padding-x(4);
+
+      .jcc-header__logo {
+        @include u-display(block);
+        @include u-margin-bottom(1);
+
+        svg {
+          @include u-height(6);
+          @include u-width(auto);
+        }
+      }
+
+      .jcc_header__lead {
+        @extend h4;
+        @include u-text(uppercase, ls-2);
+      }
+    }
+  }
+
+  .usa-logo {
+    &[aria-hidden="false"] {
+      @include sr-only();
+    }
+  }
+
+  .jcc-header__body {
+    @include u-position(absolute);
+    @include u-left(0);
+    @include u-right(0);
+    @include u-width(widescreen);
+    @include u-margin-x(auto);
+    @include u-padding-x(4);
+  }
+
+  &.mega {
+    padding-bottom: 16.563rem;
+
+    .jcc-header__logo-container--alt-position {
+      .usa-logo {
+        .jcc-header__logo {
+          @include u-margin-bottom(3);
+
+          svg {
+            @include u-height(8);
+          }
+        }
+
+        .jcc_header__lead {
+          @extend h3;
+        }
+      }
+    }
+  }
+
+  .jcc-header__media {
+    @include u-display(block);
+    @include u-position(absolute);
+    @include u-top(0);
+    @include u-right(0);
+    @include u-bottom(0);
+    @include u-left(0);
+    @include u-z(bottom);
+    @include u-width(full);
+    @include u-height(full);
+    @include u-overflow(hidden);
+
+    img,
+    picture {
+      @include u-width(full);
+      @include u-height(full);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    &::after {
+      @include u-display(inline-block);
+      @include u-position(absolute);
+      @include u-top(0);
+      @include u-left(0);
+      @include u-width(full);
+      @include u-height(full);
+      @include u-bg(map-get($_header, masthead-background-default));
+      opacity: 0.9;
+      content: "";
+    }
+  }
+
+  &.blue-vivid {
+    @include u-bg(map-get($_header, masthead-background-blue-vivid));
+
+    .jcc-header__media::after {
+      @include u-bg(map-get($_header, masthead-background-blue-vivid));
+    }
+  }
+
+  &.blue {
+    @include u-bg(map-get($_header, masthead-background-blue));
+
+    .jcc-header__media::after {
+      @include u-bg(map-get($_header, masthead-background-blue));
+    }
+  }
+
+  &.gray {
+    @include u-bg(map-get($_header, masthead-background-gray));
+
+    .jcc-header__media::after {
+      @include u-bg(map-get($_header, masthead-background-gray));
+    }
+  }
+
+  &.gray-warm {
+    @include u-bg(map-get($_header, masthead-background-gray-warm));
+
+    .jcc-header__media::after {
+      @include u-bg(map-get($_header, masthead-background-gray-warm));
+    }
+  }
 }

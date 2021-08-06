@@ -5,7 +5,7 @@ $_config_schemes: (
     marker: secondary-light,
     link-button: (
       "jcc-button--secondary",
-    )
+    ),
   ),
 );
 
@@ -26,7 +26,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     $col2-max: $cols-max / 12 * 8 - $padding;
 
     display: grid;
-    grid-template-columns: minmax($padding, auto) minmax($col1-min, $col1-max) minmax($col2-min, $col2-max) minmax($padding, auto);
+    grid-template-columns: minmax($padding, auto) minmax($col1-min, $col1-max) minmax(
+        $col2-min,
+        $col2-max
+      ) minmax($padding, auto);
 
     .jcc-location-map__content-first {
       grid-column-start: 2;
@@ -37,7 +40,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       grid-column-start: 3;
       grid-column-end: 5;
     }
-
   }
 }
 
@@ -65,7 +67,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-left(0);
       @include u-width(full);
       @include u-height(5);
-      background: linear-gradient(to bottom, rgba(color(map-get($_config, background)), 0) 0%, color(map-get($_config, background)) 95%);
+      background: linear-gradient(
+        to bottom,
+        rgba(color(map-get($_config, background)), 0) 0%,
+        color(map-get($_config, background)) 95%
+      );
       content: "";
       z-index: 1;
     }
@@ -83,12 +89,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     $dash-position: "right",
     $dash-color: map-get($_config, text),
     $top-spacing: 24px,
-    $inner-color: map-get($_config, background),
+    $inner-color: map-get($_config, background)
   );
 
   @include at-media(desktop) {
     &::before {
-      transform: translate(-50%, 28px)
+      transform: translate(-50%, 28px);
     }
   }
 }
