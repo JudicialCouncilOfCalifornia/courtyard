@@ -11,11 +11,7 @@ $_config_schemes: (
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-lead {
-  @include typeset(
-    $theme-lead-font-family,
-    $theme-lead-font-size,
-    $theme-lead-line-height
-  );
+  @include typeset($theme-lead-font-family, $theme-lead-font-size, $theme-lead-line-height);
   @include u-color(map-get($_config, lead-color));
   @include u-font-weight(normal);
   max-width: measure($theme-lead-measure);
@@ -26,20 +22,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-small {
-  @include typeset(
-    $theme-body-font-family,
-    $theme-small-font-size,
-    $theme-body-line-height
-  );
+  @include typeset($theme-body-font-family, $theme-small-font-size, $theme-body-line-height);
   @include u-font-weight(normal);
 }
 
 .jcc-brow {
-  @include typeset(
-    $theme-body-font-family,
-    2xs,
-    $theme-body-line-height
-  );
+  @include typeset($theme-body-font-family, 2xs, $theme-body-line-height);
   @include u-color(base-dark);
   @include u-font-weight(normal);
   @include u-text(uppercase);

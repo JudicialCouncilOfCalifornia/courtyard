@@ -46,7 +46,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
         @include u-margin(0);
         @include u-padding(2);
 
-        svg{
+        svg {
           @include u-color(map-get($_config, close-icon-color));
         }
       }

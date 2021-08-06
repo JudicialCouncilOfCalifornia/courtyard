@@ -17,11 +17,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section-heading__title--full {
   @include at-media-max(desktop) {
-    @include add-dash(
-      $dash-position: "above-center",
-      $top-spacing: 0,
-      $dash-width: 5rem
-    );
+    @include add-dash($dash-position: "above-center", $top-spacing: 0, $dash-width: 5rem);
   }
 
   @include at-media(desktop) {

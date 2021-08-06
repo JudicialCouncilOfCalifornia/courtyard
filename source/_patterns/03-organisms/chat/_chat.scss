@@ -1,17 +1,17 @@
 $_config_schemes: (
   base: (
-    msg-received-background: 'base-lightest',
-    msg-received-border: 'base-light',
-    msg-sent-background: 'blue-cool-10v',
-    msg-sent-border: 'blue-cool-30v',
+    msg-received-background: "base-lightest",
+    msg-received-border: "base-light",
+    msg-sent-background: "blue-cool-10v",
+    msg-sent-border: "blue-cool-30v",
     msg-border-size: 1px,
     msg-border-radius: 1rem,
     msg-border-radius-fold: 0.2rem,
-    msg-section-heading-color: 'ink',
-    msg-section-heading-dash: 'base-light',
-    msg-section-heading-background: 'white',
-    msg-section-heading-shadow-h-offset-color: 'white',
-    msg-section-heading-shadow-v-offset-color: 'white',
+    msg-section-heading-color: "ink",
+    msg-section-heading-dash: "base-light",
+    msg-section-heading-background: "white",
+    msg-section-heading-shadow-h-offset-color: "white",
+    msg-section-heading-shadow-v-offset-color: "white",
   ),
 );
 
@@ -33,7 +33,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   &__options {
     @include unstyled-list();
 
-    &> li {
+    & > li {
       @include u-margin-bottom(1);
     }
   }
@@ -111,9 +111,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
         $inner-color: map-get($_config, msg-section-heading-background)
       );
 
-      span{
+      span {
         padding: 0 1rem;
-        box-shadow: 6px 15px 0 color(map-get($_config, msg-section-heading-shadow-h-offset-color)), -6px 15px 0 color(map-get($_config, msg-section-heading-shadow-v-offset-color));
+        box-shadow: 6px 15px 0 color(map-get($_config, msg-section-heading-shadow-h-offset-color)),
+          -6px 15px 0 color(map-get($_config, msg-section-heading-shadow-v-offset-color));
       }
 
       &::before {

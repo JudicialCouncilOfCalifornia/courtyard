@@ -141,18 +141,22 @@ $_shoe: map-get($_config, shoe);
   }
 
   a {
-    @include link-colors((
-      default: map-get($_primary, default-link),
-      hover: map-get($_primary, default-link-hover),
-      active: map-get($_primary, default-link-active),
-    ));
+    @include link-colors(
+      (
+        default: map-get($_primary, default-link),
+        hover: map-get($_primary, default-link-hover),
+        active: map-get($_primary, default-link-active),
+      )
+    );
 
     .jcc-footer--alt & {
-      @include link-colors((
-        default: "white",
-        hover: "white",
-        active: "white",
-      ));
+      @include link-colors(
+        (
+          default: "white",
+          hover: "white",
+          active: "white",
+        )
+      );
     }
 
     &.ext {

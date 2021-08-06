@@ -66,9 +66,11 @@ hr {
 }
 
 a {
-  @include link-colors((
-    default: $theme-link-color,
-    hover: $theme-link-hover-color,
-    active: $theme-link-active-color,
-  ));
+  @include link-colors(
+    (
+      default: $theme-link-color,
+      hover: $theme-link-hover-color,
+      active: $theme-link-active-color,
+    )
+  );
 }

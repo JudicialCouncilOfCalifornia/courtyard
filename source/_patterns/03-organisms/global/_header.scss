@@ -608,10 +608,10 @@ $_hat: map-get($_config, hat);
         }
 
         &:hover::after {
-          content:"";
-          display:block;
-          position:absolute;
-          height:0.25rem;
+          content: "";
+          display: block;
+          position: absolute;
+          height: 0.25rem;
         }
 
         span {
@@ -641,7 +641,7 @@ $_hat: map-get($_config, hat);
           }
 
           span {
-            &+svg {
+            & + svg {
               @include u-margin-left(1);
             }
           }

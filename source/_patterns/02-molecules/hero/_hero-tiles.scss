@@ -48,7 +48,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @for $i from length($_tiles) through 1 {
     $tile: nth($_tiles, $i);
     &[data-index="#{$i}"] {
-      z-index: length($_tiles) - $i +1;
+      z-index: length($_tiles) - $i + 1;
 
       a {
         background-color: color($tile);
@@ -123,7 +123,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   letter-spacing: 0.5px;
 
   @include at-media(tablet) {
-    @include u-text-align(center)  ;
+    @include u-text-align(center);
   }
 
   @include at-media(tablet) {
@@ -179,7 +179,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-position(absolute);
       @include u-width(full);
       @include u-height(full);
-      content: '';
+      content: "";
       background: rgba(color(map-get($_config, background-overlay)), 0.7);
       mix-blend-mode: multiply;
       z-index: 1;
@@ -206,7 +206,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include add-dash(
     $dash-color: map-get($_config, title-prefix-dash),
     $dash-position: "below-center",
-    $dash-width: 75px,
+    $dash-width: 75px
   );
 
   @extend .jcc-h5;

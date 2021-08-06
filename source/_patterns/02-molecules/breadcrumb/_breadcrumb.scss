@@ -3,7 +3,7 @@ $_config_schemes: (
     link: primary-vivid,
     slash: primary-vivid,
     text: base-dark,
-  )
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

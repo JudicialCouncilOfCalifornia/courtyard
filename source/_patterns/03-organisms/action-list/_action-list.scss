@@ -2,13 +2,13 @@ $_config_schemes: (
   base: (
     action-button: (
       "jcc-button--secondary",
-    )
+    ),
   ),
   local: (
     action-button: (
       "jcc-button--primary",
-    )
-  )
+    ),
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -44,11 +44,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-action-list__item-title {
-  @include typeset(
-    $theme-body-font-family,
-    $theme-body-font-size,
-    $theme-body-line-height
-  );
+  @include typeset($theme-body-font-family, $theme-body-font-size, $theme-body-line-height);
   @include u-font-weight(bold);
 }
 

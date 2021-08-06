@@ -46,7 +46,7 @@ if (offcanvasConfirmed() == true) {
 }
 
 // Click.
-$offcanvas_trigger.on("click", function(e) {
+$offcanvas_trigger.on("click", function (e) {
   e.preventDefault;
   // Toggle dialog visibility.
   if ($offcanvas_dialog.attr("open")) {
@@ -70,14 +70,14 @@ $offcanvas_trigger.on("click", function(e) {
 });
 
 // Auto adjust dialog height on larger screens.
-$(document).ready(function() {
+$(document).ready(function () {
   if ($(window).width() > min_desktop_width) {
     autoDesktopDialogHeight();
   }
 });
 
 // Auto adjust dialog if able to toggle between screen sizes.
-$(window).resize(function() {
+$(window).resize(function () {
   if ($(window).width() > min_desktop_width) {
     autoDesktopDialogHeight();
     $("body").removeAttr("style");
@@ -90,13 +90,13 @@ $(window).resize(function() {
 });
 
 // Disallow ENTER key form submission.
-$(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function(e) {
+$(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function (e) {
   if (e.keyCode == "13") {
     e.preventDefault();
   }
 });
 
 // Remove button focus on context change.
-$(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function() {
+$(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function () {
   $(this).removeClass("ui-visual-focus");
 });

@@ -34,7 +34,12 @@ blockquote {
   @include u-padding-right(2);
   @include u-bg(map-get($_config, alert-bg));
 
-  h2, h3, h4, h5, h6, p {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     @include typeset(body, xs, $theme-body-line-height);
   }
 
@@ -58,7 +63,12 @@ blockquote {
 }
 
 .blockquote--callout {
-  h2, h3, h4, h5, h6, p {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     @include typeset(body, sm, $theme-body-line-height);
     @include u-color(map-get($_config, callout-text));
   }
