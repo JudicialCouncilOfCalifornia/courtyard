@@ -38,6 +38,17 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.jcc-cards--2-60-40-cols {
+  @include at-media(tablet-lg) {
+    > li:nth-child(1n) {
+      @include grid-col(7);
+    }
+    > li:nth-child(2n) {
+      @include grid-col(5);
+    }
+  }
+}
+
 .jcc-cards--2-75-25-cols {
   @include at-media(tablet-lg) {
     > li:nth-child(1n) {
