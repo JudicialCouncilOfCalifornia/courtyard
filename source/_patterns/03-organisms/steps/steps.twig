@@ -1,0 +1,33 @@
+{#
+/**
+ * Available variables:
+ * - steps - primary variable
+ *   - heading: the heading (title & lead)
+ *   - items: array of step items
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = [
+  'jcc-steps',
+]|merge(steps.classes|default([])) %}
+
+{% set content %}
+  <ul class="{{ classes|join(' ')|trim }}">
+    {% for item in steps.items %}
+      <li class="jcc-steps__item">
+        {% include "@molecules/step/step.twig" with {
+          step: item
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    heading: steps.heading,
+    content: content,
+    background: 'default',
+  }
+} %}

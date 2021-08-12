@@ -1,0 +1,28 @@
+{#
+/**
+ * Available variables:
+ * - step - primary variable
+ *   - title: title of step
+ *   - title_tag: tag/size of step title
+ *   - body: main text content
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set attributes = step.attributes ?? create_attribute() %}
+
+{% set title_tag = step.title_tag|default('h3') %}
+
+{% set classes = [
+  'jcc-step',
+]|merge(step.classes|default([''])) %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if step.title %}
+    <{{ title_tag }} class="jcc-step__title">{{ step.title }}</{{ title_tag }}>
+  {% endif %}
+
+  {% if step.body %}
+    <div class="jcc-step__body usa-prose">{{ step.body }}</div>
+  {% endif %}
+</div>

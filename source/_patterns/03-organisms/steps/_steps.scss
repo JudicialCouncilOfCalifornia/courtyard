@@ -1,0 +1,93 @@
+$_config_schemes: (
+  base: (
+    number-color: "primary",
+    line-color: "secondary",
+  ),
+  local: (),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-steps {
+  @include unstyled-list();
+
+  .jcc-steps__item {
+    @include add-list-reset;
+    @include u-position(relative);
+    counter-increment: step-counter;
+
+    @include at-media(desktop) {
+      padding-left: 6rem;
+    }
+
+    // Circle with number
+    &::before {
+      @include u-display(block);
+      @include u-border(map-get($_config, line-color));
+      @include u-font(serif, 10);
+      @include u-text-align(center);
+      @include u-color(map-get($_config, number-color));
+      height: 3.5rem;
+      width: 3.5rem;
+      padding: 0.625rem;
+      border-radius: 50%;
+      background-color: color("white");
+      line-height: 1.35;
+      content: counter(step-counter);
+      z-index: 2;
+
+      @include at-media(desktop) {
+        @include u-position(absolute);
+        @include u-font(serif, 12);
+        height: 4.5rem;
+        width: 4.5rem;
+        top: -15px;
+        right: 0;
+        bottom: 0;
+        left: -7px;
+      }
+    }
+
+    // Horizontal line on mobile, vertical line on desktop
+    &:after {
+      @include u-position(absolute);
+      @include u-display(block);
+      width: 88%;
+      height: 3px;
+      top: 1.625rem;
+      left: 3.5rem;
+      background-color: color(map-get($_config, line-color));
+      content: "";
+      z-index: 1;
+
+      @include at-media(tablet) {
+        width: 92%;
+      }
+
+      @include at-media(desktop) {
+        height: 100%;
+        width: 3px;
+        top: 2.5rem;
+        left: 1.875rem;
+      }
+    }
+
+    &:last-of-type {
+      @include at-media(desktop) {
+        // No vertical line on last step
+        &:after {
+          height: 0;
+        }
+      }
+    }
+  }
+
+  .jcc-step {
+    @include u-margin-top(2);
+    @include u-padding-bottom(7);
+
+    @include at-media(desktop) {
+      @include u-padding-bottom(10);
+    }
+  }
+}
