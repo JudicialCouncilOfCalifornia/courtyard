@@ -30,7 +30,7 @@ steps:
       body: >
         Sollicitudin sit nunc netus montes mauris conubia nascetur tempor, nostra nibh mi tempus vitae nullam pharetra, sociosqu consequat nulla ultricies condimentum lobortis posuere.
         <blockquote class="blockquote--alert--error"><h3>alert: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
-    - title: "Fames senectus primis, sociis feugiat etiam viverra purus donec posuere."
+    - title: null
       body: >
         Sollicitudin sit nunc netus montes mauris conubia nascetur tempor, nostra nibh mi tempus vitae nullam pharetra, sociosqu consequat nulla ultricies condimentum lobortis posuere.
         <blockquote class="blockquote--alert--success"><h3>alert: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>

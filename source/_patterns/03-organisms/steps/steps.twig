@@ -13,21 +13,31 @@
 ]|merge(steps.classes|default([])) %}
 
 {% set content %}
-  <ul class="{{ classes|join(' ')|trim }}">
-    {% for item in steps.items %}
-      <li class="jcc-steps__item">
-        {% include "@molecules/step/step.twig" with {
-          step: item
-        } %}
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="{{ classes|join(' ')|trim }}">
+    {% if steps.heading.title or steps.heading.lead %}
+      {% include "@molecules/section/section-heading.twig" with {
+        section_heading: {
+          title: steps.heading.title,
+          lead: steps.heading.lead,
+          width: "partial",
+        }
+      } %}
+    {% endif %}
+
+    <ul class="jcc-steps__items">
+      {% for item in steps.items %}
+        <li class="jcc-steps__item">
+          {% include "@molecules/step/step.twig" with {
+            step: item
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endset %}
 
 {% include "@molecules/section/section.twig" with {
   section: {
-    heading: steps.heading,
     content: content,
-    background: 'default',
   }
 } %}
