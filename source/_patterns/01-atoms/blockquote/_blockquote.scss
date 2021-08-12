@@ -155,7 +155,12 @@ blockquote {
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    @include typeset(body, 2xs, $theme-body-line-height);
+    @include u-text(uppercase);
+    letter-spacing: 2px;
+  }
+
   p {
     @include typeset(body, xs, $theme-body-line-height);
   }
