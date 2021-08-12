@@ -1,10 +1,18 @@
 $_config_schemes: (
   base: (
     default-line: base,
-    alert-bg: $theme-color-warning-lighter,
-    alert-line: $theme-color-warning,
+    alert-warning-bg: $theme-color-warning-lighter,
+    alert-warning-line: $theme-color-warning,
+    alert-error-bg: $theme-color-error-lighter,
+    alert-error-line: $theme-color-error,
+    alert-success-bg: $theme-color-success-lighter,
+    alert-success-line: $theme-color-success,
+    alert-info-bg: $theme-color-info-lighter,
+    alert-info-line: $theme-color-info,
+    box-bg: primary-lighter,
     callout-line: secondary,
     callout-text: primary-dark,
+    italic-text: primary-dark,
   ),
   local: (),
   pro: (),
@@ -27,12 +35,13 @@ blockquote {
   }
 }
 
-.blockquote--alert {
+.blockquote--alert,
+.blockquote--alert--warning {
   @include u-padding-top(2.5);
   @include u-padding-bottom(3);
   @include u-padding-left(9);
   @include u-padding-right(2);
-  @include u-bg(map-get($_config, alert-bg));
+  @include u-bg(map-get($_config, alert-warning-bg));
 
   h2,
   h3,
@@ -44,7 +53,7 @@ blockquote {
   }
 
   &::before {
-    @include u-bg(map-get($_config, alert-line));
+    @include u-bg(map-get($_config, alert-warning-line));
     width: 4px;
   }
 
@@ -62,6 +71,45 @@ blockquote {
   }
 }
 
+.blockquote--alert--error {
+  @extend .blockquote--alert;
+  @include u-bg(map-get($_config, alert-error-bg));
+
+  &::before {
+    @include u-bg(map-get($_config, alert-error-line));
+  }
+
+  &::after {
+    @include add-background-svg("usa-icons/error");
+  }
+}
+
+.blockquote--alert--success {
+  @extend .blockquote--alert;
+  @include u-bg(map-get($_config, alert-success-bg));
+
+  &::before {
+    @include u-bg(map-get($_config, alert-success-line));
+  }
+
+  &::after {
+    @include add-background-svg("usa-icons/check_circle");
+  }
+}
+
+.blockquote--alert--info {
+  @extend .blockquote--alert;
+  @include u-bg(map-get($_config, alert-info-bg));
+
+  &::before {
+    @include u-bg(map-get($_config, alert-info-line));
+  }
+
+  &::after {
+    @include add-background-svg("usa-icons/info");
+  }
+}
+
 .blockquote--callout {
   h2,
   h3,
@@ -75,5 +123,44 @@ blockquote {
 
   &::before {
     @include u-bg(map-get($_config, callout-line));
+  }
+}
+
+.blockquote--italic {
+  @include u-padding-left(0);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @include typeset(heading, md, $theme-body-line-height);
+    @include u-color(map-get($_config, italic-text));
+    @include u-text(italic, normal);
+  }
+
+  &::before {
+    @include u-display(none);
+  }
+}
+
+.blockquote--box {
+  @include u-padding-x(3);
+  @include u-padding-y(2);
+  @include u-radius(lg);
+  @include u-bg(map-get($_config, box-bg));
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @include typeset(body, xs, $theme-body-line-height);
+  }
+
+  &::before {
+    @include u-display(none);
   }
 }

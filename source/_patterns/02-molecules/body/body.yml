@@ -11,6 +11,7 @@ body:
       <hr>
       <h3>Next Header 3</h3>
       <p>Morbi bibendum fringilla tincidunt. Morbi vitae vulputate ante. Mauris rutrum purus in purus dapibus lobortis. Integer tempor elit molestie, sagittis enim quis, porttitor sapien. Donec bibendum libero augue, ullamcorper auctor tortor hendrerit sit amet. Proin sagittis commodo quam, vel bibendum tellus molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
+      <blockquote class="blockquote--callout"><h3>callout: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
       <h4>More Header 4</h4>
       <p>Proin sagittis commodo quam, vel <a href="#" class="mailto">bibendum tellus</a> molestie eget. Duis dictum aliquet ante, id tincidunt odio imperdiet rutrum. Donec ultrices scelerisque nunc sit amet semper. Vivamus consectetur pulvinar molestie.</p>
       <ul><li>Unordered list. So here is the first item in this list.</li><li>In this example we're keeping the items short.</li><li>Later, we'll use longer, more complex list items.</li><li><a data-entity-substitution="media" data-entity-type="media" data-entity-uuid="" href="a-file.pdf" title="the file title">A file link</a></li></ul>
@@ -18,6 +19,7 @@ body:
       <ol><li>Ordered List. I often do this thing where list items have headings.</li><li>Since this is a list, I need at least two items.</li><li>It's not a bad idea to add a third item either.</li></ol>
       <h3>Next heading 3</h3>
       <p>Facilisis netus suscipit tempus enim blandit donec faucibus ac commodo natoque condimentum aenean adipiscing primis bibendum placerat sociis, ullamcorper eros ut augue fermentum tincidunt aliquam pharetra iaculis sagittis conubia cubilia fusce risus vestibulum porta.</p>
+      <blockquote class="blockquote--italic"><h3>italic: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
       <h2>A heading level 2 conubia quis volutpat adipiscing sapien mauris viverra</h2>
       <p>Dignissim <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">interdum class<span class="fa-ext extlink"><span class="fa fa-external-link" aria-label="(link is external)"></span></span></a> penatibus cum tempus amet mi convallis, mauris congue sollicitudin laoreet integer donec.</p>
       <h5>Heading 5</h5>
