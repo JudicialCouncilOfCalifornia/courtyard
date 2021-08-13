@@ -7,8 +7,18 @@
 
   // Centered/constrained
   &--centered {
-    @include grid-container(widescreen);
-    border-left: none;
+    @include u-border-color('transparent');
+
+    @include at-media(desktop) {
+      @include grid-container(widescreen);
+
+    }
+  }
+
+  &--slim {
+    &::before {
+      top: 3px;
+    }
   }
 }
 
@@ -36,6 +46,18 @@
 
   .usa-alert--slim & {
     @include u-padding-y(2px);
+  }
+
+  .usa-alert--slim.usa-alert--centered & {
+    @include at-media(desktop) {
+      @include u-padding-left(2);
+    }
+  }
+
+  .usa-alert--tall.usa-alert--centered & {
+    @include at-media(desktop) {
+      @include u-padding-left(4);
+    }
   }
 }
 
