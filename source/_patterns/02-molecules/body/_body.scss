@@ -27,7 +27,11 @@
 
 .jcc-body__main-text {
   @include u-padding-bottom(1);
-  @include u-overflow(hidden);
+
+  .jcc-section-heading__title {
+    @include u-width(full);
+    @include u-overflow(hidden);
+  }
 }
 
 .jcc-body__aside {

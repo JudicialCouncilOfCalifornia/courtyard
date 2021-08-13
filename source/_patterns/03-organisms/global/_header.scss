@@ -286,6 +286,11 @@ $_hat: map-get($_config, hat);
         }
       }
 
+      &:focus {
+        @include u-position(relative);
+        z-index: 1;
+      }
+
       &[aria-expanded="true"] {
         svg {
           @include at-media-max(tablet-lg) {

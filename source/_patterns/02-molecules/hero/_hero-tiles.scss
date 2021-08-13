@@ -43,18 +43,20 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-hero-tiles__tile {
   $_tiles: map-get($_config, tiles);
-  @include u-position(relative);
 
   @for $i from length($_tiles) through 1 {
     $tile: nth($_tiles, $i);
     &[data-index="#{$i}"] {
-      z-index: length($_tiles) - $i + 1;
-
       a {
+        @include u-position(relative);
         background-color: color($tile);
 
         &:hover {
           background-color: darken(color($tile), 5%);
+        }
+
+        &:focus {
+          z-index: 1;
         }
       }
     }

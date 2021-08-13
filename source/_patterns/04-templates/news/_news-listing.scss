@@ -93,7 +93,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include at-media(tablet-lg) {
       @include u-display(block);
       @include u-padding-top(2);
-      @include u-padding-x(0);
+      @include u-padding-x(2);
+      @include u-margin-x(neg-2);
       @include u-bg("transparent");
     }
   }

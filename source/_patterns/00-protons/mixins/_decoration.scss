@@ -62,8 +62,8 @@
     }
   } @else if $dash-position == "left-right" {
     // `left-right` requires a `<span>` to wrap the text
-    margin-left: $inner-spacing + 30px;
-    margin-right: $inner-spacing + 30px;
+    padding-left: $inner-spacing + 30px;
+    padding-right: $inner-spacing + 30px;
     text-align: center;
 
     &::before {
@@ -90,7 +90,7 @@
     }
   } @else if $dash-position == "right" {
     // `right` requires a `<span>` to wrap the text
-    margin-right: $inner-spacing + 30px;
+    padding-right: $inner-spacing + 30px;
 
     &::before {
       $dash-width: 300% !default;
