@@ -18,7 +18,7 @@
 {% set attributes = card.attributes ?? create_attribute() %}
 
 {% set tag = 'div' %}
-{% set title_tag = card.title_tag|default('h3') %}
+{% set heading_tag = card.card_title_tag|default('h3') %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
 
@@ -45,13 +45,13 @@
           <div class="usa-card__brow">{{ card.brow }}</div>
         {% endif %}
 
-        <{{ title_tag }} class="usa-card__heading" id="{{ unique_id }}">
-          {% if style == 'borderless' and card.link.url %}
+        <{{ heading_tag }} class="usa-card__heading" id="{{ unique_id }}">
+          {% if 'borderless' in style and card.link.url %}
             <a href="{{ card.link.url }}">{{ card.title }}</a>
           {% else %}
             {{ card.title }}
           {% endif %}
-        </{{ title_tag }}>
+        </{{ heading_tag }}>
       </header>
 
       {% if card.body %}
