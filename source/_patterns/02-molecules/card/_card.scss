@@ -148,14 +148,38 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-// BEGIN Content stream styling
-.usa-card--content-stream {
-  &.usa-card {
-    @include u-margin-bottom(6);
+// BEGIN If used as subcomponent
+.jcc-section,
+.jcc-section--container {
+  .jcc-section__inner {
+    @include u-padding-x(0, !important);
   }
 
-  .usa-card__heading {
-    @extend h6;
+  .jcc-cards__item {
+    @include u-width(full);
+    @include u-margin-x(0);
+
+    .usa-card__container {
+      @include u-padding-x(0);
+    }
+  }
+}
+// END
+
+// BEGIN Content stream styling
+.jcc-card--content-stream {
+  .jcc-cards__item {
+    @include u-padding-left(4);
+    @include u-padding-right(0);
+
+    &:first-child {
+      @include u-margin-bottom(1);
+      @include u-padding-x(0);
+    }
+  }
+
+  .usa-card {
+    @include u-margin-bottom(6);
   }
 
   .usa-card__media {
@@ -177,9 +201,5 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
     }
   }
-}
-
-.jcc-news-element {
-  @extend .usa-card--content-stream;
 }
 // END
