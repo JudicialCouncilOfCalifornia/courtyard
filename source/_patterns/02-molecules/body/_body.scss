@@ -10,10 +10,6 @@
     @include grid-col(8);
   }
 
-  .usa-table td {
-    white-space: normal;
-  }
-
   .align-left {
     @include u-float(left);
     @include u-margin-right(3);
