@@ -1,0 +1,45 @@
+.jcc-card--content-stream {
+  .jcc-cards__item {
+    @include u-width(full);
+    @include u-margin-x(0);
+    @include u-padding-left(4);
+    @include u-padding-right(0);
+
+    &:first-child {
+      @include u-margin-bottom(1);
+      @include u-padding-x(0);
+    }
+
+    .usa-card__container {
+      @include u-padding-x(0);
+    }
+
+    .jcc-section__inner {
+      @include u-padding-x(0, !important);
+    }
+  }
+
+  .usa-card {
+    @include u-margin-bottom(6);
+  }
+
+  .usa-card__media {
+    @include u-width(mobile);
+
+    span {
+      @include u-display(inline-block);
+      @include u-position(relative);
+      @include add-aspect("4x3");
+      @include u-width(full);
+      @include u-overflow(hidden);
+
+      img {
+        @include u-position(absolute);
+        @include u-width(full);
+        @include u-top(0);
+        @include u-left(0);
+        object-fit: cover;
+      }
+    }
+  }
+}
