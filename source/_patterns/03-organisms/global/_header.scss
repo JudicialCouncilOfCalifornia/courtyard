@@ -464,6 +464,10 @@ $_hat: map-get($_config, hat);
       bottom: 110px;
     }
 
+    .jcc-header__translate-extra {
+      @include u-margin-right(2);
+    }
+
     .jcc-header__translate-nav {
       @include at-media-max(tablet-lg) {
         @include u-display(none);

@@ -152,6 +152,11 @@
         </ul>
 
         <div class="usa-nav__secondary">
+          {% if header.translate_extra %}
+            <div class="jcc-header__translate-extra">
+              {{ header.translate_extra }}
+            </div>
+          {% endif %}
           {% if header.translate %}
             <div class="jcc-header__translate-nav usa-accordion">
               {{ _self.translate_button(header.translate) }}
