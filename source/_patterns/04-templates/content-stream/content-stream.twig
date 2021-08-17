@@ -1,0 +1,54 @@
+{#
+/**
+ * Available variables:
+ * - content_stream - primary variable
+ *   - heading: optional section title
+ *     - title: section title
+ *     - lead: section lead
+ *   - items: array of news card items
+ *     - title: heading
+ *     - body:  summary
+ *     - link: title url
+ *       - url: destination url
+ *     - media: optional image
+ *       - src: image file url
+ *       - alt: image description
+ */
+#}
+
+{% set content = [] %}
+{% for item in content_stream.items %}
+  {% set image = '' %}
+  {% if loop.first %}
+    {% set image %}
+      <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
+    {% endset %}
+  {% endif %}
+
+  {% set content = content|merge([{
+    style: 'borderless usa-card--media-left',
+    brow: item.brow,
+    title: item.title,
+    body: item.body,
+    media: image,
+    link: {
+      url: item.link.url,
+    }
+  }]) %}
+{% endfor %}
+
+<div class="jcc-content-stream">
+  {% include "@organisms/cards/cards.twig" with {
+    cards: {
+      num_cols: 1,
+      spacing: 'none',
+      background: 'landing_page jcc-card--content-stream',
+      heading: {
+        width: 'partial',
+        title: content_stream.heading.title,
+        lead: content_stream.heading.lead,
+      },
+      items: content,
+    }
+  } %}
+</div>
