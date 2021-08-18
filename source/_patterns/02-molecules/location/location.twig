@@ -30,7 +30,7 @@
   'jcc-location--' ~ location.container|default('no-container'),
 ]|merge(location.classes|default([''])) %}
 
-{% set location_id = location.id ? 'id="' ~ location.id ~ '"' : '' %}
+{% set location_id = location.id ? 'id=' ~ location.id : '' %}
 
 <div class="{{ classes|join(' ')|trim }}" {{ location_id }}>
   <div class="jcc-location__container">

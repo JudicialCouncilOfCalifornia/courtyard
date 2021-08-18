@@ -4,7 +4,7 @@ locations:
       container: "no-container"
       brow: "Courthouse"
       title: "Santa Cruz Courthouse"
-      id: santa-cruz-courthouse-67
+      id: "santa-cruz-courthouse-67"
       address: "701 Ocean Street<br>Santa Cruz, CA 95060"
       phone:
         text: "(831) 420-2200"
