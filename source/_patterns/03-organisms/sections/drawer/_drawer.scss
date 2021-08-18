@@ -1,7 +1,10 @@
 .jcc-drawer {
-  position: sticky;
+  @include u-position("sticky");
+  @include u-padding-y(4);
+  @include at-media("desktop-lg") {
+    padding: 0 units(2.5);
+  }
   bottom: units(2.5);
-  padding: 0 units(2.5);
   z-index: z("top");
   transition: opacity 1s;
 
@@ -18,12 +21,43 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: start;
+    @include u-flex("justify-start");
+    @include at-media("desktop") {
+      @include u-flex("justify-end");
+    }
     margin: 0 -#{units(1)};
 
-    > * {
-      margin: units(2.5) units(1);
+    @include at-media("desktop") {
+      > * {
+        margin: units(2.5) units(1);
+      }
+
+      > div {
+        @include u-position("relative");
+        @include u-bottom(2);
+      }
+    }
+
+    .jcc-feedback,
+    .block {
+      @include grid-col(6);
+      @include at-media("desktop") {
+        @include grid-col(auto);
+      }
+      // When feedback component is embedded within a block
+      .jcc-feedback {
+        @include grid-col(auto);
+      }
+    }
+
+    .jcc-feedback__trigger-container {
+      button {
+        @include u-width("full");
+        @include at-media("desktop") {
+          @include u-width("auto");
+        }
+      }
     }
   }
 

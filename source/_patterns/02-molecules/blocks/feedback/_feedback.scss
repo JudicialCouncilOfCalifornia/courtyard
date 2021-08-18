@@ -4,46 +4,46 @@
   }
 
   &[open] {
-    @include u-border(1px, base-light);
-    @include u-bg("white");
-    @include u-padding(3);
-    @include u-radius(lg);
     min-width: 0;
     max-width: 100%;
-
-    .jcc-feedback__trigger-container {
-      display: none;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-    }
   }
 
-  dialog {
-    border: 0;
-    display: block;
-    height: 0;
-    left: auto;
+  .jcc-feedback__dialog {
+    @include u-position("fixed");
+    @include u-top(0);
+    @include u-left(0);
+    @include at-media("tablet-lg") {
+      @include u-top("auto");
+      @include u-left("auto");
+    }
+    @include u-border(1px, base-light);
+    @include u-bg("white");
     overflow: hidden;
-    padding: 0;
-    position: relative;
     visibility: hidden;
+    padding: 0;
 
     &[open] {
-      height: auto;
+      @include u-display("inline-block");
+      @include u-width("full");
+      height: 100vh;
+      @include at-media("tablet-lg") {
+        @include u-position("relative");
+        @include u-width("mobile-lg");
+        height: auto;
+      }
       overflow: visible;
       visibility: visible;
+    }
+
+    .icon-close {
+      @include u-height(4);
+      @include u-width(4);
+      @include u-color("white");
     }
 
     [data-feedback^="trigger"] {
       appearance: none;
       border: 0;
-      text-align: right;
-
-      .icon-close {
-        color: #0d7ea2;
-        height: 2em;
-        width: 2em;
-      }
     }
 
     .js-webform-webform-buttons label {
@@ -56,24 +56,151 @@
     }
   }
 
-  .jcc-feedback__dialog-footer {
-    text-align: right;
-  }
+  .jcc-feedback__dialog-header {
+    @include u-position("relative");
+    @include u-minh(6);
+    @include dark-background("primary-dark");
+    @include u-padding-y(3);
+    @include u-padding-x(2);
 
-  .jcc-feedback__trigger-container {
-    text-align: right;
+    .icon-like_dislike {
+      @include u-height(5);
+      @include u-width(5);
+      @include u-color("blue-cool-10v");
+      margin-bottom: -0.8rem;
+    }
 
-    button {
-      width: inherit;
-      margin-right: 0;
-      padding-left: 24px;
-      padding-right: 15px;
+    h2 {
+      @extend .heading-h3;
     }
   }
 
-  .icon-expand_more {
-    height: 2rem;
-    vertical-align: middle;
-    width: 2rem;
+  .jcc-feedback__dialog-header--lead {
+    @include u-margin-bottom(2);
+    @include u-color("blue-cool-10v");
+  }
+
+  .jcc-feedback__action-button {
+    @include u-minw(10);
+    @include u-bg("blue-cool-10v");
+    @include u-margin-bottom(2);
+    @include u-shadow("none");
+
+    &:active,
+    &:focus {
+      @include u-bg("white");
+    }
+  }
+
+  .jcc-feedback__actions {
+    button {
+      @extend .jcc-feedback__action-button;
+    }
+  }
+
+  .jcc-feedback__dialog-body {
+    .jcc-feedback__dialog-button--submit {
+      @include u-width("full");
+      @include u-margin-top(2);
+      @include u-text("uppercase");
+    }
+
+    .usa-button--primary {
+      @extend .jcc-feedback__dialog-button--submit;
+    }
+
+    //BEGIN Drupal Web Form Adjustments */
+    .webform-elements {
+      & > div {
+        @include u-margin-x(2);
+      }
+
+      .usa-label {
+        &:first-child {
+          @include u-margin-top(0);
+        }
+      }
+
+      fieldset {
+        @extend .jcc-feedback__dialog-header;
+        @include u-position("relative");
+        @include u-padding-x(2);
+        top: -1.5rem;
+
+        .jcc-form-group__title {
+          @extend .heading-h3;
+          @include u-margin(0);
+        }
+
+        .jcc-feedback__action-button--webform {
+          @extend .usa-button;
+          @extend .usa-button--outline;
+          @extend .usa-button--round;
+          @extend .jcc-feedback__action-button;
+
+          &:hover {
+            @extend .usa-button--hover;
+            @include u-bg("white");
+            @include u-shadow("none");
+          }
+
+          &:active {
+            @include u-bg("white");
+          }
+        }
+
+        .js-webform-webform-buttons {
+          .ui-button {
+            @extend .jcc-feedback__action-button--webform;
+          }
+
+          .ui-state-active {
+            @include u-bg("white");
+          }
+
+          .ui-visual-focus {
+            @extend .usa-focus;
+          }
+        }
+      }
+
+      .button {
+        @extend .jcc-feedback__action-button--webform;
+      }
+
+      .webform-button--submit {
+        @extend .jcc-feedback__dialog-button--submit;
+      }
+    }
+
+    .webform-confirmation__message {
+      @include u-margin(1);
+    }
+    //END
+  }
+
+  .jcc-feedback__dialog-close {
+    @include u-position("absolute");
+    @include u-top(1);
+    @include u-right(1);
+  }
+
+  .jcc-feedback__trigger-container {
+    @include u-width("auto");
+
+    button {
+      @include u-width("auto");
+      @include u-margin-right(0);
+      @include u-color("blue-cool-10v");
+      @include u-font-weight("normal");
+    }
+
+    .icon-like_dislike {
+      @include u-position("relative");
+      @include u-top(1);
+      @include u-height(6);
+      @include u-width(6);
+      margin-top: -0.5rem;
+    }
   }
 }

@@ -6,6 +6,10 @@
   &:disabled {
     @include u-text(gray-70);
   }
+
+  .icon {
+    @include u-float("right");
+  }
 }
 
 .usa-button--round {
@@ -174,6 +178,22 @@
     width: 30px;
     height: 30px;
     fill: #fff;
+  }
+}
+
+.usa-button--icon-left {
+  .icon {
+    @include u-float("left");
+  }
+}
+
+.usa-button--icon-top {
+  @extend .usa-button--icon-left;
+
+  .icon {
+    @include u-float("none");
+    @include u-display("block");
+    @include u-margin-x("auto");
   }
 }
 

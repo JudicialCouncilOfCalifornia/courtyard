@@ -21,10 +21,18 @@ const isSmallScreen = () => {
   return mql.matches ? true : false;
 };
 
-// Disable initial visibility with js for graceful degredation.
-if (!pageIsShorterThanWindow()) {
-  $drawer.removeAttr("visible");
-}
+const isNoPageScroll = () => {
+  var docHeight = $(document).height();
+  var scroll = $(window).height() + $(window).scrollTop();
+  return docHeight == scroll;
+};
+
+// Initial visibility.
+$(document).ready(function() {
+  if (isNoPageScroll() == true) {
+    $drawer.attr("visible", "visible");
+  }
+});
 
 // Scroll.
 $window.on("scroll", function() {
@@ -35,19 +43,15 @@ $window.on("scroll", function() {
   if ((isScrolledToBottom($drawer.height() / 2) && isSmallScreen()) || isSmallScreen() == false) {
     $drawer.attr("visible", "visible");
   } else {
-    $drawer.removeAttr("visible");
-  }
-  // Prevent obscuring content behind drawer.
-  if (isScrolledToBottom()) {
-    $drawer.css("padding-bottom", "1.25rem");
-
-    if (isSmallScreen()) {
-      $drawer.css("height", "auto");
-      $(".jcc-drawer__inner").css("height", "auto");
+    if (!$feedback_dialog.attr("open")) {
+      $drawer.removeAttr("visible");
     }
-  } else {
-    $drawer.css("height", "0").css("padding-bottom", "0");
-    $(".jcc-drawer__inner").css("height", "0");
+  }
+});
+
+$(window).resize(function() {
+  if ($feedback_dialog.attr("open")) {
+    $drawer.attr("visible", "visible");
   }
 });
 
@@ -56,10 +60,13 @@ $feedback_trigger.on("click", function(e) {
   e.preventDefault;
 
   // Show/hide chatbot when feedback dialog is toggled.
-  if ($feedback_dialog.attr("open")) {
-    $("#jcc-chatbot").hide();
-  } else {
-    $("#jcc-chatbot").show();
+  let chat = ".iframeBot";
+  if ($(chat).length > 0) {
+    if ($feedback_dialog.attr("open")) {
+      $(chat).hide();
+    } else {
+      $(chat).show();
+    }
   }
 });
 

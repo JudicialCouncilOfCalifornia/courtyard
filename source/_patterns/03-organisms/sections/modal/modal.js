@@ -3,7 +3,6 @@ import A11yDialog from "a11y-dialog";
 var modals = $(".jcc-modal");
 
 if (modals.length > 0) {
-  console.log(modals);
   // import dialogPolyfill from "dialog-polyfill";
 
   // Get the dialog element (with the accessor method you want)

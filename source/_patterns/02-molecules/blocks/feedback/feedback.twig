@@ -1,34 +1,79 @@
 <div class="jcc-feedback" id="{{ feedback.id }}" data-feedback="container" visible="visible">
-
-  <dialog role="dialog" data-feedback="dialog">
-    {% if feedback.form.children %}
-      <form {{ feedback.form.attributes }}>
-        {{ feedback.form.children }}
-      </form>
-    {% endif %}
-    <div class="jcc-feedback__dialog-footer">
-      <button tabindex="-1" aria-label="{{ 'Close this dialog window'|t }}" data-feedback="trigger-close">
-        {% include '@atoms/icons/icon.twig' with {
-          icon: {
-            name: "close",
-            title: "Close"|t,
-            decorative: false,
+  <dialog class="jcc-feedback__dialog" role="dialog" data-feedback="dialog" tabindex="-1">
+    <div class="jcc-feedback__dialog-header">
+      <div class="jcc-feedback__dialog-close">
+        {% include '@atoms/buttons/button.twig' with {
+          button: {
+            id: "feedback_close",
+            style: 'unstyled',
+            aria_label: 'Close this dialog window'|t,
+            other_attributes: 'tabindex=-1 data-feedback=trigger-close',
+            icon: {
+              name: "close",
+              title: "Close"|t,
+              decorative: false,
+            },
           }
         } %}
-      </button>
+      </div>
+
+      {% include '@atoms/icons/icon.twig' with {
+        icon: {
+          name: "like_dislike",
+          title: "Helpful?"|t,
+          decorative: false,
+        },
+      } %}
+
+      {% if feedback.title %}
+        <h2>{{ feedback.title }}</h2>
+      {% endif %}
+
+      {% if feedback.lead %}
+        <div class="jcc-feedback__dialog-header--lead">{{ feedback.lead }}</div>
+      {% endif %}
+
+      {% if feedback.actions %}
+        <div class="jcc-feedback__actions">
+        {% for action in feedback.actions %}
+          {% include '@atoms/buttons/button.twig' with {
+            button: {
+              style: "outline usa-button--round",
+              text: action.text
+            }
+          } %}
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="jcc-feedback__dialog-body">
+    {% if feedback.embed %}
+      {{ feedback.embed }}
+    {% else %}
+      {# BEGIN DEPRECATED - Replaced by more flexible embed #}
+      {% if feedback.form.children %}
+        <form {{ feedback.form.attributes }}>
+          {{ feedback.form.children }}
+        </form>
+      {% endif %}
+      {# END #}
+    {% endif %}
     </div>
   </dialog>
 
   <div class="jcc-feedback__trigger-container">
-    <button class="usa-button usa-button--accent-warm" data-feedback="trigger">
-      {{ feedback.button.title }}
-      {% include '@atoms/icons/icon.twig' with {
+    {% include '@atoms/buttons/button.twig' with {
+      button: {
+        id: "feedback_open",
+        text: feedback.button.text,
+        other_attributes: 'data-feedback=trigger',
         icon: {
-          name: "expand_more",
-          title: "Expand More"|t,
+          name: "like_dislike",
+          title: "Helpful?"|t,
           decorative: false,
-        }
-      } %}
-    </button>
+        },
+        layout: "icon-top",
+      }
+    } %}
   </div>
 </div>

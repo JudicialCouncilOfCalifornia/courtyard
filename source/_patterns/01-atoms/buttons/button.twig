@@ -3,8 +3,14 @@
 {% set classes = [
   'usa-button',
   'usa-button--' ~ button.style|default('primary'),
+  button.layout ? 'usa-button--' ~ button.layout : '',
 ]|merge(button.classes|default([''])) %}
 
-<button {{ attributes.addClass(classes) }} {% if button.aria_label %}aria_label="{{ button.aria_label }}"{% endif %}>
+<button {% if button.id %}id="{{ button.id }}"{% endif %} {{ attributes.addClass(classes) }}{% if button.aria_label %} aria_label="{{ button.aria_label }}"{% endif %}{% if button.other_attributes %} {{ button.other_attributes }}{% endif %}>
+  {% if button.icon %}
+    {% include '@atoms/icons/icon.twig' with {
+      icon: button.icon
+    } %}
+  {% endif %}
   {{- button.text -}}
 </button>

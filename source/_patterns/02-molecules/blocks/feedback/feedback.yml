@@ -1,8 +1,12 @@
 feedback:
   id: "feedback-id"
-  button:
-    title: "Was this helpful?"
+  title: "Was this helpful?"
+  lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  actions:
+    - text: "Yes"
+    - text: "No"
   form:
     attributes: "class='webform'"
-    children: "Form Goes Here"
-
+    children: "<div class='margin-2'><label class='usa-label' for='input-type-text'>Any Additional Feedback?</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><label class='usa-label' for='input-type-text'>Email (optional)</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><button class='usa-button usa-button--primary' aria_label='Click me to execute action'>Submit</button></div>"
+  button:
+    text: "Was this helpful?"
