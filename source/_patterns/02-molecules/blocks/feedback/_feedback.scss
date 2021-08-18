@@ -110,7 +110,7 @@
     }
 
     //BEGIN Drupal Web Form Adjustments */
-    .webform-elements {
+    .webform-submission-form {
       & > div {
         @include u-margin-x(2);
       }
