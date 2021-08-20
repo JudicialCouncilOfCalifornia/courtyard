@@ -60,10 +60,6 @@
       }
     }
 
-    .jcc-feedback + block {
-      @include u-bg("primary");
-    }
-
     .jcc-feedback__trigger-container {
       button {
         @include u-width("full");

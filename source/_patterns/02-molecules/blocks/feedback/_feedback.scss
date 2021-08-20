@@ -191,8 +191,13 @@
     button {
       @include u-width("auto");
       @include u-margin-right(0);
+      @include u-bg("primary-dark");
       @include u-color("blue-cool-10v");
       @include u-font-weight("normal");
+
+      &:hover {
+        @include u-bg("blue-80v");
+      }
     }
 
     .icon-like_dislike {
