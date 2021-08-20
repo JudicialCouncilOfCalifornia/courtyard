@@ -5,6 +5,7 @@ const $feedback_trigger = $('[data-feedback^="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $drawer = $(".jcc-drawer");
 const $feedback_dialog = $('[data-feedback="dialog"]');
+const $cta_block = $(".jcc-drawer__inner .block");
 const $footer_spacer = $(".usa-footer .jcc-global-bar");
 
 const pageIsShorterThanWindow = ($offset = 0) => {
@@ -23,16 +24,22 @@ const isNoPageScroll = () => {
 };
 
 function siblingCheck() {
-  if ($(window).width() <= 1024 && $feedback_container.siblings().length == 0) {
+  if (window.innerWidth < 1024 && $feedback_container.siblings().length == 0) {
+    if ($cta_block.length > 0) {
+      $cta_block.addClass("block--single");
+    }
     $feedback_container.attr("style", "width: 100%");
   } else {
+    if ($cta_block.length > 0) {
+      $cta_block.removeClass("block--single");
+    }
     $feedback_container.removeAttr("style");
   }
 }
 
 // Initial visibility.
 $(document).ready(function() {
-  if ($(window).width() <= 1024) {
+  if (window.innerWidth < 1024) {
     siblingCheck();
   }
 
@@ -58,7 +65,7 @@ if (!isNoPageScroll()) {
       $drawer.attr("visible", "visible");
     }
 
-    if ($(window).width() <= 1024) {
+    if (window.innerWidth < 1024) {
       siblingCheck();
       $footer_spacer.attr("style", "padding-bottom: 7rem");
     } else {
