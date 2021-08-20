@@ -1,12 +1,21 @@
 .jcc-drawer {
-  @include u-position("sticky");
-  @include u-padding-y(4);
+  @include u-position("fixed");
+  @include u-bottom(0);
+  @include u-width("full");
+  @include u-padding-y(0);
+  z-index: z("top");
+  transition: opacity 1s;
+
+  @include at-media("desktop") {
+    @include u-position("sticky");
+    @include u-width("auto");
+    @include u-padding-y(4);
+    bottom: units(2.5);
+  }
+
   @include at-media("desktop-lg") {
     padding: 0 units(2.5);
   }
-  bottom: units(2.5);
-  z-index: z("top");
-  transition: opacity 1s;
 
   // Visibility controlled by js on scroll.
   &:not([visible]) {
@@ -49,6 +58,10 @@
       .jcc-feedback {
         @include grid-col(auto);
       }
+    }
+
+    .jcc-feedback + block {
+      @include u-bg("primary");
     }
 
     .jcc-feedback__trigger-container {
