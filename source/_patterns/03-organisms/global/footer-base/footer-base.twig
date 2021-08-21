@@ -68,10 +68,10 @@
               </div>
             {% endif %}
             <div class="mobile-lg:grid-col-auto">
-              <p class="usa-footer__logo-heading">
+              <div class="usa-footer__logo-heading">
                 {% if footer_base.logo %}<span class="usa-logo__graphic"><img src="{{ footer_base.logo }}" alt="{{ footer_base.title|upper }}" /></span>{% endif %}
                 <span class="usa-logo__text{% if footer_base.logo %} usa-sr-only{% endif %}">{{ footer_base.title|upper }}</span>
-              </p>
+              </div>
             </div>
           </div>
           {% if footer_base.social_links %}
