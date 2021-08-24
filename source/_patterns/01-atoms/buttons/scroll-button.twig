@@ -7,6 +7,7 @@
 ]|merge(scroll_button.classes|default([''])) %}
 
 <button {{ attributes.addClass(classes) }}>
+  <span class="usa-sr-only">{{ 'Scroll ' ~ scroll_button.direction|default('right') }}</span>
   {% include '@atoms/icons/icon.twig' with {
     icon: {
       name: 'chevron_' ~ scroll_button.direction|default('right'),
