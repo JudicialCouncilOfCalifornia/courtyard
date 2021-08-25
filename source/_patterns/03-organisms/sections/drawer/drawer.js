@@ -23,6 +23,7 @@ const isNoPageScroll = () => {
   return docHeight == scroll;
 };
 
+// Adjusts primary button if another button exists or not (e.g. ChatBot).
 function siblingCheck() {
   if (window.innerWidth < 1024 && $feedback_container.siblings().length == 0) {
     if ($cta_block.length > 0) {
@@ -40,7 +41,7 @@ function siblingCheck() {
 // Initial visibility.
 $(document).ready(function() {
   if (window.innerWidth < 1024) {
-    siblingCheck();
+    setTimeout(siblingCheck(), 1000);
   }
 
   if (isNoPageScroll() == true) {
@@ -66,19 +67,15 @@ if (!isNoPageScroll()) {
     }
 
     if (window.innerWidth < 1024) {
-      siblingCheck();
       $footer_spacer.attr("style", "padding-bottom: 7rem");
     } else {
-      siblingCheck();
       $footer_spacer.removeAttr("style");
     }
   });
 }
 
 // Widget interaction/visibility.
-$feedback_trigger.on("click", function(e) {
-  e.preventDefault;
-
+function toggleChatBot() {
   // Show/hide chatbot when feedback dialog is toggled.
   let chat = ".iframeBot";
   if ($(chat).length > 0) {
@@ -88,6 +85,10 @@ $feedback_trigger.on("click", function(e) {
       $(chat).show();
     }
   }
+}
+$feedback_trigger.on("click", function(e) {
+  e.preventDefault;
+  setTimeout(toggleChatBot(), 300);
 });
 
 // Hide feeback widget when chatbot opens.
