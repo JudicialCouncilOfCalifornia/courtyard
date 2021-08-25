@@ -31,7 +31,9 @@ const feedbackConfirmed = () => {
 };
 
 const autoDesktopDialogHeight = () => {
-  $('[data-feedback="dialog"]').css("height", $(window).height() - 100);
+  if (window.innerWidth < min_desktop_width) {
+    $('[data-feedback="dialog"]').css("height", $(window).height() - 100);
+  }
 };
 
 // Allow user to dismiss completely if confirmation is visible.

@@ -104,6 +104,7 @@
       @include u-width("full");
       @include u-margin-top(2);
       @include u-text("uppercase");
+      max-width: 30rem;
     }
 
     .usa-button--primary {
