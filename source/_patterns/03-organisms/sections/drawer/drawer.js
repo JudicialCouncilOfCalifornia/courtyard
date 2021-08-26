@@ -56,7 +56,7 @@ if (!isNoPageScroll()) {
       return;
     }
 
-    if ($window.scrollTop() + $window.height() >= $body.scrollHeight / 2) {
+    if ($window.scrollTop() + $window.height() >= $body.scrollHeight / 3) {
       $drawer.attr("visible", "visible");
     }
   });
