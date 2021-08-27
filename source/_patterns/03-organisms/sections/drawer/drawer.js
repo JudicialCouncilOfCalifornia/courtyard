@@ -25,7 +25,7 @@ const isNoPageScroll = () => {
 };
 
 // Adjusts primary button if another button exists or not (e.g. ChatBot).
-function siblingCheck() {
+const siblingCheck = () => {
   if (window.innerWidth < 1024 && $(chat).length == 0) {
     $cta_block.addClass("block--single");
     $feedback_container.attr("style", "width: 100%");
@@ -33,13 +33,12 @@ function siblingCheck() {
     $cta_block.removeClass("block--single");
     $feedback_container.removeAttr("style");
   }
-}
+};
 
 // Initial visibility.
 $(document).ready(function() {
-  siblingCheck();
-
   if (isNoPageScroll() == true) {
+    siblingCheck();
     $drawer.attr("visible", "visible");
   }
 });
@@ -52,6 +51,7 @@ if (!isNoPageScroll()) {
     }
 
     if ($window.scrollTop() + $window.height() >= $body.scrollHeight / 3) {
+      siblingCheck();
       $drawer.attr("visible", "visible");
     }
   });
