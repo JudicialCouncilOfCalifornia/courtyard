@@ -40,9 +40,7 @@ function siblingCheck() {
 
 // Initial visibility.
 $(document).ready(function() {
-  if (window.innerWidth < 1024) {
-    setTimeout(siblingCheck(), 1000);
-  }
+  setTimeout(siblingCheck(), 2000);
 
   if (isNoPageScroll() == true) {
     $drawer.attr("visible", "visible");
@@ -62,6 +60,8 @@ if (!isNoPageScroll()) {
   });
 
   $(window).resize(function() {
+    setTimeout(siblingCheck(), 2000);
+
     if ($feedback_dialog.attr("open")) {
       $drawer.attr("visible", "visible");
     }
