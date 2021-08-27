@@ -5,8 +5,9 @@ const $feedback_trigger = $('[data-feedback^="trigger"]');
 const $feedback_container = $('[data-feedback="container"]');
 const $drawer = $(".jcc-drawer");
 const $feedback_dialog = $('[data-feedback="dialog"]');
-const $cta_block = $(".jcc-drawer__inner .block");
 const $footer_spacer = $(".usa-footer .jcc-global-bar");
+const $cta_block = $(".jcc-drawer__inner > .block"); // If feedback has a block container
+var chat = ".iframeBot";
 
 const pageIsShorterThanWindow = ($offset = 0) => {
   return $(document).height() - $offset <= $window.height();
@@ -25,22 +26,18 @@ const isNoPageScroll = () => {
 
 // Adjusts primary button if another button exists or not (e.g. ChatBot).
 function siblingCheck() {
-  if (window.innerWidth < 1024 && $feedback_container.siblings().length == 0) {
-    if ($cta_block.length > 0) {
-      $cta_block.addClass("block--single");
-    }
+  if (window.innerWidth < 1024 && $(chat).length == 0) {
+    $cta_block.addClass("block--single");
     $feedback_container.attr("style", "width: 100%");
   } else {
-    if ($cta_block.length > 0) {
-      $cta_block.removeClass("block--single");
-    }
+    $cta_block.removeClass("block--single");
     $feedback_container.removeAttr("style");
   }
 }
 
 // Initial visibility.
 $(document).ready(function() {
-  setTimeout(siblingCheck(), 2000);
+  siblingCheck();
 
   if (isNoPageScroll() == true) {
     $drawer.attr("visible", "visible");
@@ -60,7 +57,7 @@ if (!isNoPageScroll()) {
   });
 
   $(window).resize(function() {
-    setTimeout(siblingCheck(), 2000);
+    siblingCheck();
 
     if ($feedback_dialog.attr("open")) {
       $drawer.attr("visible", "visible");
@@ -77,7 +74,6 @@ if (!isNoPageScroll()) {
 // Widget interaction/visibility.
 function toggleChatBot() {
   // Show/hide chatbot when feedback dialog is toggled.
-  let chat = ".iframeBot";
   if ($(chat).length > 0) {
     if ($feedback_dialog.attr("open")) {
       $(chat).hide();
