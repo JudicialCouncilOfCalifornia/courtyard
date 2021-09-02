@@ -64,7 +64,7 @@
     @include u-padding-y(3);
     @include u-padding-x(2);
 
-    .icon-like_dislike {
+    .icon-like-dislike {
       @include u-height(5);
       @include u-width(5);
       @include u-color("blue-cool-10v");
@@ -202,9 +202,9 @@
       }
     }
 
-    .icon-like_dislike {
+    .icon-like-dislike {
       @include u-position("relative");
-      @include u-top(1);
+      @include u-top(0);
       @include u-height(6);
       @include u-width(6);
       margin-top: -0.5rem;
