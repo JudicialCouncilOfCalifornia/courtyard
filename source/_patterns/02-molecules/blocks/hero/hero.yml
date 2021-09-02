@@ -25,7 +25,6 @@ hero:
   title_variant: ""
   inset_variant: ""
   breadcrumbs:
-    show_back_button: true
     items:
       - url: "#"
         label: "Home"
