@@ -25,8 +25,12 @@ hero:
   title_variant: ""
   inset_variant: ""
   breadcrumbs:
+    show_back_button: true
     items:
       - url: "#"
         label: "Home"
       - url: ""
         label: "Wage Garnishment"
+  case_type:
+    url: "#"
+    label: "Divorce"

@@ -1,0 +1,5 @@
+index_button: {
+  style: "unstyled",
+  url: "#",
+  text: "Index: All Divorce pages"
+  aria_label: "Index"

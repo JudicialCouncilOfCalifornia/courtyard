@@ -22,6 +22,14 @@
       display: none;
     }
   }
+
+  .usa-button--unstyled {
+    text-decoration: none;
+    @include u-text(info-darker);
+    @include at-media(tablet-lg) {
+      font-size: 21px;
+    }
+  }
 }
 
 .jcc-breadcrumbs {

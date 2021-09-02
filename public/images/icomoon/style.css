@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.i-list {
+  width: 1.1337890625em;
+}
+
 .i-globe-2 {
   width: 0.9521484375em;
 }
