@@ -7,14 +7,6 @@
       @include u-margin-right(3);
       flex-basis: 0;
     }
-
-    .jcc-breadcrumb__item {
-      font-size: 18px;
-
-      @include at-media(tablet-lg) {
-        font-size: 21px;
-      }
-    }
   }
 
   &.hide-mobile {
@@ -42,6 +34,9 @@
   @include u-padding-right(1);
   @include u-display(inline);
   font-size: 1.06rem;
+  @include at-media(tablet-lg) {
+    font-size: 21px;
+  }
 
   &:last-child {
     &::after {

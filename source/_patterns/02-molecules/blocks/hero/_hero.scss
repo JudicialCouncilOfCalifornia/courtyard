@@ -48,6 +48,7 @@
     @include u-display("flex");
     .jcc_hero__breadcrumbs-wrapper {
       @include grid-col(7);
+      align-self: center;
     }
     .jcc_hero__case-type-wrapper {
       @include grid-col(3);
