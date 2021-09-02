@@ -97,7 +97,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
     &-left {
       @include u-text(left);
-      @include u-padding-x(2);
     }
   }
 

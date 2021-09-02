@@ -19,9 +19,9 @@
     layout: 'full-main',
     background: 'default',
     main: {
-      title: content_stream_listing.title,
-      lead: content_stream_listing.lead,
-      brow: content_stream_listing.brow,
+      title: content_stream_filtering.title,
+      lead: content_stream_filtering.lead,
+      brow: content_stream_filtering.brow,
     },
     classes: []
   }
@@ -29,30 +29,30 @@
 
 {% set content %}
   {% set classes = [
-    'jcc-content-stream-listing',
-  ]|merge(content_stream_listing.classes|default([])) %}
+    'jcc-content-stream-filtering',
+  ]|merge(content_stream_filtering.classes|default([])) %}
   <div class="{{ classes|join(' ')|trim }}">
-    <div class="jcc-content-stream-listing__content">
+    <div class="jcc-content-stream-filtering__content">
       {% include "@templates/content-stream/content-stream.twig" with {
         content_stream: {
-          items: content_stream_listing.items,
+          items: content_stream_filtering.items,
         }
       } %}
 
-      <div class="jcc-content-stream-listing__pager">
-        {{ content_stream_listing.pager }}
+      <div class="jcc-content-stream-filtering__pager">
+        {{ content_stream_filtering.pager }}
       </div>
     </div>
 
-    <div class="jcc-content-stream-listing__form">
-      {{ content_stream_listing.form }}
+    <div class="jcc-content-stream-filtering__form">
+      {{ content_stream_filtering.form }}
     </div>
   </div>
 {% endset %}
 
 {% include "@molecules/section/section.twig" with {
   section: {
-    background: content_stream_listing.background_color,
+    background: content_stream_filtering.background_color,
     content: content,
   }
 } %}

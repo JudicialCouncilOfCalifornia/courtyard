@@ -11,31 +11,31 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-.jcc-content-stream-listing {
+.jcc-content-stream-filtering {
   @include at-media(tablet-lg) {
     @include grid-row();
     @include grid-gap();
   }
 }
 
-.jcc-content-stream-listing__form {
+.jcc-content-stream-filtering__form {
   @include at-media(tablet-lg) {
     @include grid-col(3);
   }
 }
 
-.jcc-content-stream-listing__content {
+.jcc-content-stream-filtering__content {
   @include at-media(tablet-lg) {
     @include grid-col(9);
   }
 }
 
-.jcc-content-stream-listing__items {
+.jcc-content-stream-filtering__items {
   @include list-reset();
   border-top: 3px solid color(map-get($_config, item-border));
 }
 
-.jcc-content-stream-listing__item {
+.jcc-content-stream-filtering__item {
   @include u-padding-y(2);
   border-bottom: 3px solid color(map-get($_config, item-border));
 
@@ -45,11 +45,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-content-stream-listing__item-title {
+.jcc-content-stream-filtering__item-title {
   @include u-margin-bottom(0.5);
 }
 
-.jcc-content-stream-listing__item-type {
+.jcc-content-stream-filtering__item-type {
   @include u-font(serif, xs);
   @include u-text(italic);
 
@@ -58,21 +58,21 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-content-stream-listing__item-date {
+.jcc-content-stream-filtering__item-date {
   @include u-font(sans, 2xs);
 }
 
-.jcc-content-stream-listing__pager {
+.jcc-content-stream-filtering__pager {
   @include u-margin-top(6);
 }
 
-.jcc-content-stream-listing__form {
+.jcc-content-stream-filtering__form {
   .usa-form {
     @include u-maxw(none);
   }
 }
 
-.jcc-content-stream-listing-form {
+.jcc-content-stream-filtering-form {
   .usa-accordion {
     @include u-position(relative);
     @include u-margin-top(5);
@@ -100,7 +100,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-content-stream-listing-form__filters-title {
+.jcc-content-stream-filtering-form__filters-title {
   @include u-margin-top(7);
   @include u-color(base-darker);
   @include u-font(serif, md);
@@ -108,7 +108,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-text(italic);
 }
 
-.jcc-content-stream-listing-form__filters-filter {
+.jcc-content-stream-filtering-form__filters-filter {
   .usa-legend,
   .fieldset-legend {
     @include u-display(none);
@@ -159,7 +159,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-button {
-  .jcc-content-stream-listing-form & {
+  .jcc-content-stream-filtering-form & {
     @include u-margin-top(6);
   }
 }
