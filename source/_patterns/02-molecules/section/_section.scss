@@ -1,7 +1,17 @@
 $_config_schemes: (
   base: (
     alt-background: $theme-color-base-lightest,
+    alt-background-border: 0,
+    alt-background-border-color: "transparent",
+    alt-margin-top: 10,
   ),
+  local: (),
+  pro: (
+    alt-background: "gray-1",
+    alt-background-border: 1px,
+    alt-background-border-color: "gray-3",
+    alt-margin-top: 0,
+  )
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -11,9 +21,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-section--background-alt {
-  @include u-margin-top(10);
+  @include u-margin-top(map-get($_config, alt-margin-top));
   @include u-padding-bottom(8);
   @include u-bg(map-get($_config, alt-background));
+  @include u-border-top(map-get($_config, alt-background-border), map-get($_config, alt-background-border-color));
 
   + .jcc-section--background-alt,
   + .jcc-section--background-none {
@@ -29,6 +40,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section--container {
   .jcc-section__inner {
+    @extend .usa-prose;
     @include grid-container(widescreen);
 
     // Adding table trick to avoid overflow in any section

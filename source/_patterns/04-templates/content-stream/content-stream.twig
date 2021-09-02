@@ -18,15 +18,18 @@
 
 {% set content = [] %}
 {% for item in content_stream.items %}
-  {% set image = '' %}
-  {% if loop.first %}
-    {% set image %}
-      <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
-    {% endset %}
+  {% if item.media %}
+    {% set image = null %}
+    {% if loop.first %}
+      {% set card_style = 'borderless usa-card--media-left' %}
+      {% set image %}
+        <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
+      {% endset %}
+    {% endif %}
   {% endif %}
 
   {% set content = content|merge([{
-    style: 'borderless usa-card--media-left',
+    style: card_style|default('borderless'),
     brow: item.brow,
     title: item.title,
     body: item.body,
@@ -47,6 +50,11 @@
         width: 'partial',
         title: content_stream.heading.title,
         lead: content_stream.heading.lead,
+      },
+      link: {
+        text: content_stream.link.text,
+        url: content_stream.link.url,
+        align: content_stream.link.align,
       },
       items: content,
     }

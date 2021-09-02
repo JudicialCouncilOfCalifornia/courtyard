@@ -90,10 +90,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-cards__link {
-  @include u-margin-top(3);
+  @include u-margin-top(4);
 
   @include at-media(tablet-lg) {
     @include u-text(center);
+
+    &-left {
+      @include u-text(left);
+      @include u-padding-x(2);
+    }
   }
 
   a {

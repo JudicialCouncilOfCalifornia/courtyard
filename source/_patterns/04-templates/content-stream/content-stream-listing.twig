@@ -1,0 +1,58 @@
+{#
+/**
+ * Available variables:
+ * - news_listing - primary variable
+ *   - items: array of news items
+ *     - title:
+ *       - url: title url
+ *       - text: title text
+ *     - type: type (taxonomy term)
+ *     - date: date of news item
+ *   - form: form search, filters, etc
+ *   - pager: pagination for multiple pages of content
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% include "@molecules/hero/hero.twig" with {
+  hero: {
+    layout: 'full-main',
+    background: 'default',
+    main: {
+      title: content_stream_listing.title,
+      lead: content_stream_listing.lead,
+      brow: content_stream_listing.brow,
+    },
+    classes: []
+  }
+} %}
+
+{% set content %}
+  {% set classes = [
+    'jcc-content-stream-listing',
+  ]|merge(content_stream_listing.classes|default([])) %}
+  <div class="{{ classes|join(' ')|trim }}">
+    <div class="jcc-content-stream-listing__content">
+      {% include "@templates/content-stream/content-stream.twig" with {
+        content_stream: {
+          items: content_stream_listing.items,
+        }
+      } %}
+
+      <div class="jcc-content-stream-listing__pager">
+        {{ content_stream_listing.pager }}
+      </div>
+    </div>
+
+    <div class="jcc-content-stream-listing__form">
+      {{ content_stream_listing.form }}
+    </div>
+  </div>
+{% endset %}
+
+{% include "@molecules/section/section.twig" with {
+  section: {
+    background: content_stream_listing.background_color,
+    content: content,
+  }
+} %}

@@ -1,5 +1,35 @@
 $_config_schemes: (
   base: (
+    h1-family: heading,
+    h2-family: heading,
+    h3-family: body,
+    h4-family: body,
+    h5-family: body,
+    h6-family: body,
+    h1-line-height: $theme-heading-line-height,
+    h2-line-height: $theme-heading-line-height,
+    h3-line-height: $theme-heading-line-height,
+    h4-line-height: $theme-heading-line-height,
+    h5-line-height: $theme-heading-line-height,
+    h6-line-height: $theme-heading-line-height,
+    h1-weight: $theme-font-weight-normal,
+    h2-weight: $theme-font-weight-normal,
+    h3-weight: $theme-font-weight-bold,
+    h4-weight: $theme-font-weight-bold,
+    h5-weight: $theme-font-weight-bold,
+    h6-weight: $theme-font-weight-bold,
+    h1-size: $theme-h1-font-size,
+    h2-size: $theme-h2-font-size,
+    h3-size: $theme-h3-font-size,
+    h4-size: $theme-h4-font-size,
+    h5-size: $theme-h5-font-size,
+    h6-size: $theme-h6-font-size,
+    h1-mobile-size: $theme-h2-font-size,
+    h2-mobile-size: $theme-h3-font-size,
+    h3-mobile-size: $theme-h4-font-size,
+    h4-mobile-size: $theme-h5-font-size,
+    h5-mobile-size: $theme-h6-font-size,
+    h6-mobile-size: $theme-h6-font-size,
     h1-color: "ink",
     h2-color: "ink",
     h3-color: "ink",
@@ -15,81 +45,118 @@ $_config_schemes: (
     h5-color: "ink",
     h6-color: "ink",
   ),
-  pro: (),
+  pro: (
+    h1-family: body,
+    h2-family: body,
+    h3-family: body,
+    h4-family: body,
+    h5-family: body,
+    h6-family: body,
+    h1-line-height: 2,
+    h2-line-height: 2,
+    h3-line-height: 3,
+    h4-line-height: 3,
+    h5-line-height: 3,
+    h6-line-height: 3,
+    h1-weight: $theme-font-weight-normal,
+    h2-weight: $theme-font-weight-normal,
+    h3-weight: $theme-font-weight-normal,
+    h4-weight: $theme-font-weight-normal,
+    h5-weight: $theme-font-weight-normal,
+    h6-weight: $theme-font-weight-normal,
+    h1-size: 11,
+    h2-size: 10,
+    h3-size: 8,
+    h4-size: 5,
+    h5-size: 3,
+    h6-size: 1,
+    h1-mobile-size: 10,
+    h2-mobile-size: 9,
+    h3-mobile-size: 7,
+    h4-mobile-size: 4,
+    h5-mobile-size: 2,
+    h6-mobile-size: 1,
+    h1-color: "gray-warm-90",
+    h2-color: "gray-warm-90",
+    h3-color: "gray-warm-90",
+    h4-color: "gray-warm-90",
+    h5-color: "gray-warm-90",
+    h6-color: "gray-warm-90",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 h1,
 .jcc-h1 {
-  @include typeset(heading, $theme-h2-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h1-family), map-get($_config, h1-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h1-color));
-  font-weight: $theme-font-weight-normal;
+  font-weight: map-get($_config, h1-weight);
   letter-spacing: 0.153846px;
 
   @include at-media(desktop) {
-    @include typeset(heading, $theme-h1-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h1-family), map-get($_config, h1-size), map-get($_config, h1-line-height));
   }
 }
 
 h2,
 .jcc-h2 {
-  @include typeset(heading, $theme-h3-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h2-family), map-get($_config, h2-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h2-color));
-  font-weight: $theme-font-weight-normal;
+  font-weight: map-get($_config, h2-weight);
   letter-spacing: 0.1px;
 
   @include at-media(desktop) {
-    @include typeset(heading, $theme-h2-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h2-family), map-get($_config, h2-size), map-get($_config, h1-line-height));
   }
 }
 
 h3,
 .jcc-h3 {
-  @include typeset(body, $theme-h4-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h3-family), map-get($_config, h3-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h3-color));
-  font-weight: $theme-font-weight-bold;
+  font-weight: map-get($_config, h3-weight);
   letter-spacing: 0.1px;
 
   @include at-media(desktop) {
-    @include typeset(body, $theme-h3-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h3-family), map-get($_config, h3-size), map-get($_config, h1-line-height));
   }
 }
 
 h4,
 .jcc-h4 {
-  @include typeset(body, $theme-h5-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h4-family), map-get($_config, h4-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h4-color));
-  font-weight: $theme-font-weight-bold;
+  font-weight: map-get($_config, h4-weight);
   letter-spacing: 0.4px;
 
   @include at-media(desktop) {
-    @include typeset(body, $theme-h4-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h4-family), map-get($_config, h4-size), map-get($_config, h1-line-height));
   }
 }
 
 h5,
 .jcc-h5 {
-  @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h5-family), map-get($_config, h5-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h5-color));
   @include u-text(uppercase);
-  font-weight: $theme-font-weight-bold;
+  font-weight: map-get($_config, h5-weight);
   letter-spacing: 2px;
 
   @include at-media(desktop) {
-    @include typeset(body, $theme-h5-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h5-family), map-get($_config, h5-size), map-get($_config, h1-line-height));
   }
 }
 
 h6,
 .jcc-h6 {
-  @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+  @include typeset(map-get($_config, h6-family), map-get($_config, h6-mobile-size), map-get($_config, h1-line-height));
   @include u-text(map-get($_config, h6-color));
   @include u-text(no-uppercase);
-  font-weight: $theme-font-weight-bold;
+  font-weight: map-get($_config, h6-weight);
   letter-spacing: 1px;
 
   @include at-media(desktop) {
-    @include typeset(body, $theme-h6-font-size, $theme-heading-line-height);
+    @include typeset(map-get($_config, h6-family), map-get($_config, h6-size), map-get($_config, h1-line-height));
   }
 }
