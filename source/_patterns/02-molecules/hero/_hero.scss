@@ -17,6 +17,10 @@ $_config_schemes: (
       "jcc-button--primary",
     ),
   ),
+  local: (),
+  pro: (
+    default-background: "transparent",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -39,7 +43,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-padding-bottom(4);
 
   @include at-media(tablet-lg) {
-    @include u-padding-top(9);
+    @include u-padding-top(6);
     @include u-padding-bottom(6);
   }
 }
@@ -103,11 +107,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @extend .jcc-brow;
   @include u-margin-bottom(1.5);
   @include u-text(uppercase);
-
-  @include at-media(tablet-lg) {
-    @include u-position(absolute);
-    top: -44px;
-  }
 }
 
 .jcc-hero__main-actions {

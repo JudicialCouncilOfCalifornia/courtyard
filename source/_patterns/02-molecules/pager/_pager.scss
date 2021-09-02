@@ -8,6 +8,15 @@ $_config_schemes: (
     current-background: primary,
     current-text: "white",
   ),
+  local: (),
+  pro: (
+    link: (
+      default: "blue-50v",
+      hover: "blue-60v",
+      active: "blue-70v",
+    ),
+    current-background: "blue-50v",
+  )
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);

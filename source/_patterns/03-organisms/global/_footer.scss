@@ -1,5 +1,6 @@
 $_config_schemes: (
   base: (
+    margin-top: 10,
     primary: (
       border: primary-vivid,
       default-background: primary-lighter,
@@ -21,6 +22,9 @@ $_config_schemes: (
     ),
   ),
   local: (),
+  pro: (
+    margin-top: 0,
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -29,7 +33,7 @@ $_secondary: map-get($_config, secondary);
 $_shoe: map-get($_config, shoe);
 
 .usa-footer {
-  @include u-margin-top(10);
+  @include u-margin-top(map-get($_config, margin-top));
 }
 
 .jcc-footer__container {

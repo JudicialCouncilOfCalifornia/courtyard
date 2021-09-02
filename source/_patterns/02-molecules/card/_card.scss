@@ -1,6 +1,10 @@
 $_config_schemes: (
   base: (
     brow-color: base-dark,
+    brow-size: 6,
+    brow-weight: $theme-font-weight-normal,
+    heading-size: 11,
+    heading-line-height: $theme-body-line-height,
     title-color: primary-darker,
     hover-title-color: primary-vivid,
     title-link: (
@@ -8,6 +12,7 @@ $_config_schemes: (
       hover: primary-dark,
       active: primary-darker,
     ),
+    body-size: 6,
     action-button: (
       "jcc-button--secondary",
     ),
@@ -21,7 +26,20 @@ $_config_schemes: (
       "jcc-button--cta-link",
     ),
   ),
-  pro: (),
+  pro: (
+    brow-color: "gray-warm-90",
+    brow-size: 5,
+    brow-weight: $theme-font-weight-bold,
+    heading-size: 10,
+    heading-line-height: 1,
+    title-color: "gray-warm-90",
+    title-link: (
+      default: "blue-50v",
+      hover: "blue-60v",
+      active: "blue-70v",
+    ),
+    body-size: 5,
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -86,8 +104,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-height(full);
 }
 
+.usa-card__header {
+  @include u-padding-bottom(0);
+}
+
 .usa-card__heading {
   @include u-color(map-get($_config, title-color));
+  @include typeset(body, map-get($_config, heading-size), map-get($_config, heading-line-height));
 
   .usa-card--hover & {
     @include u-color(map-get($_config, hover-title-color));
@@ -116,6 +139,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-order(0);
   @include u-color(map-get($_config, brow-color));
   letter-spacing: 0.09px;
+  @include typeset(body, map-get($_config, brow-size), $theme-body-line-height);
+  font-weight: map-get($_config, brow-weight);
 }
 
 .usa-card__footer {
@@ -143,6 +168,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__body {
+  @include typeset(body, map-get($_config, body-size), $theme-body-line-height);
+
   .usa-card--hover & {
     @include u-color(ink);
   }

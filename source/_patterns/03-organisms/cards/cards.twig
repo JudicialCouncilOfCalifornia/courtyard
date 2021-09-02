@@ -33,7 +33,7 @@
   </ul>
 
   {% if cards.link.url %}
-    <div class="jcc-cards__link">
+    <div class="jcc-cards__link{{ cards.link.align == 'left' ? ' jcc-cards__link-left' : '' }}">
       <a href="{{ cards.link.url }}">{{ cards.link.text }}</a>
     </div>
   {% endif %}

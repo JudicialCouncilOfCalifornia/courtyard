@@ -1,21 +1,33 @@
 .jcc-card--content-stream {
+  .jcc-section__inner {
+    @include u-padding-left(0);
+  }
+
+  .jcc-cards {
+    @include u-margin-top(0, !important);
+    @include u-padding-left(2, !important);
+  }
+
   .jcc-cards__item {
     @include u-width(full);
     @include u-margin-x(0);
-    @include u-padding-left(4);
+    @include u-padding-left(0);
     @include u-padding-right(0);
+    @include u-padding-bottom(2);
 
     &:first-child {
-      @include u-margin-bottom(1);
-      @include u-padding-x(0);
+      .usa-card--media-left {
+        @include u-position(relative);
+        left: -1rem;
+
+        img {
+          @include u-radius(md);
+        }
+      }
     }
 
     .usa-card__container {
       @include u-padding-x(0);
-    }
-
-    .jcc-section__inner {
-      @include u-padding-x(0, !important);
     }
   }
 

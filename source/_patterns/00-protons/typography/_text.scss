@@ -1,11 +1,15 @@
 $_config_schemes: (
   base: (
     lead-color: "ink",
+    brow-color: base-dark,
   ),
   local: (
     lead-color: "base-darker",
   ),
-  pro: (),
+  pro: (
+    brow-color: "gray-warm-90",
+    lead-color: "gray-warm-90",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -28,8 +32,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-brow {
   @include typeset($theme-body-font-family, 2xs, $theme-body-line-height);
-  @include u-color(base-dark);
+  @include u-color(map-get($_config, brow-color));
   @include u-font-weight(normal);
   @include u-text(uppercase);
   letter-spacing: 2px;
+}
+
+.jcc-metadata {
+  @include typeset($theme-body-font-family, 4, $theme-body-line-height);
+  @include u-color(gray-40);
+  @include u-text(uppercase);
+  line-height: 3.5;
 }

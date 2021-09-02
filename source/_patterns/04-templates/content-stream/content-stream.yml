@@ -2,6 +2,10 @@ content_stream:
     heading:
       title: "Recent Content"
       lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis. Sagittis diam dignissim risus mattis ad donec urna, non ligula dui viverra rhoncus convallis netus vivamus, platea iaculis consectetur pellentesque litora dolor.</p>"
+    link:
+      text: "See All News"
+      url: "#"
+      align: "left"
     items:
     - brow: "Aug 17, 2021"
       title: "Iaculis proin erat porttitor"
