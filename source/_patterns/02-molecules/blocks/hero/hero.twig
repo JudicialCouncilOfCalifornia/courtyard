@@ -24,11 +24,25 @@
     {% endif %}
 
     <div class="jcc-hero__content">
-      {% if hero.breadcrumbs %}
-        {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-          breadcrumbs: hero.breadcrumbs
-        } %}
-      {% endif %}
+      <div class="jcc_hero__content-top">
+        {% if hero.breadcrumbs %}
+          <div class="jcc_hero__breadcrumbs-wrapper">
+            {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
+              breadcrumbs: hero.breadcrumbs
+            } %}
+          </div>
+        {% endif %}
+        {% if hero.case_type %}
+          <div class="jcc_hero__case-type-wrapper">
+            {% include '@atoms/buttons/index-button.twig' with {
+              index_button: {
+                url: hero.case_type.url,
+                text: hero.case_type.label
+              }
+            }%}
+          </div>
+        {% endif %}
+      </div>
 
       <div class="jcc-hero__columns">
         <div class="jcc-hero__column-left">

@@ -30,3 +30,6 @@ hero:
         label: "Home"
       - url: ""
         label: "Wage Garnishment"
+  case_type:
+    url: "#"
+    label: "Divorce"

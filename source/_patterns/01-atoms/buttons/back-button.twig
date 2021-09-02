@@ -1,8 +1,8 @@
 {% set classes = [
   'usa-button',
-  'usa-button--accent-warm',
   'usa-button--back',
   back_button.style ? 'usa-button--' ~ back_button.style,
+  back_button.style != 'unstyled' ? 'usa-button--accent-warm',
 ]|merge(back_button.classes|default([''])) %}
 
 <a class="{{ classes|join(' ')|trim }}" href="{{ back_button.url|default('javascript:history.back()') }}">

@@ -44,6 +44,22 @@
       @include u-padding-top(6);
     }
   }
+  .jcc_hero__content-top {
+    @include u-display("flex");
+    .jcc_hero__breadcrumbs-wrapper {
+      @include grid-col(7);
+    }
+    .jcc_hero__case-type-wrapper {
+      @include grid-col(3);
+      .usa-button--unstyled {
+        text-decoration: none;
+        @include u-text(info-darker);
+        @include at-media(tablet-lg) {
+          font-size: 21px;
+        }
+      }
+    }
+  }
 }
 
 .jcc-hero__brow {
