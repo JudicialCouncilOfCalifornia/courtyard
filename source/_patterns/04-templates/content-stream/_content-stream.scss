@@ -1,4 +1,6 @@
-.jcc-card--content-stream {
+.jcc-content-stream {
+  @include u-margin-bottom(8);
+
   .jcc-section__inner {
     @include u-padding-left(0);
   }

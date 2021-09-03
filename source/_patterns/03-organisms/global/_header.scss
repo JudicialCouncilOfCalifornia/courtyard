@@ -723,7 +723,7 @@ $_hat: map-get($_config, hat);
 
       .jcc_header__lead {
         @extend h4;
-        @include u-text(uppercase, ls-2);
+        @include u-text(uppercase, ls-1);
       }
     }
   }
@@ -758,6 +758,7 @@ $_hat: map-get($_config, hat);
 
         .jcc_header__lead {
           @extend h3;
+          @include u-text(ls-2);
         }
       }
     }

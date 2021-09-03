@@ -447,12 +447,12 @@ $theme-body-line-height: 5;
 $theme-style-body-element: true;
 
 // Headings
-$theme-h1-font-size: "3xl";
-$theme-h2-font-size: "2xl";
-$theme-h3-font-size: "xl";
-$theme-h4-font-size: "lg";
-$theme-h5-font-size: "md";
-$theme-h6-font-size: 9;
+$theme-h1-font-size: 11;
+$theme-h2-font-size: 10;
+$theme-h3-font-size: 8;
+$theme-h4-font-size: 5;
+$theme-h5-font-size: 3;
+$theme-h6-font-size: 1;
 $theme-heading-line-height: 2;
 $theme-small-font-size: "3xs";
 $theme-display-font-size: "3xl";
@@ -465,6 +465,6 @@ $theme-prose-font-family: "body";
 
 // Lead text
 $theme-lead-font-family: "body";
-$theme-lead-font-size: "md";
-$theme-lead-line-height: 4;
+$theme-lead-font-size: 8;
+$theme-lead-line-height: 3;
 $theme-lead-measure: none;
