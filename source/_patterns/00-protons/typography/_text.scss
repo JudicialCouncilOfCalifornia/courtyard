@@ -7,12 +7,42 @@ $_config_schemes: (
     lead-color: "base-darker",
   ),
   pro: (
+    text1-line-height: 2,
+    text2-line-height: 2,
+    text3-line-height: 3,
+    text4-line-height: 3,
+    text5-line-height: 3,
+    text1-size: 11,
+    text2-size: 10,
+    text3-size: 8,
+    text4-size: 5,
+    text5-size: 3,
     brow-color: "gray-warm-90",
     lead-color: "gray-warm-90",
   ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-text-1 {
+  @include typeset(body, map-get($_config, text1-mobile-size), map-get($_config, text1-line-height));
+}
+
+.jcc-text-2 {
+  @include typeset(body, map-get($_config, text2-mobile-size), map-get($_config, text2-line-height));
+}
+
+.jcc-text-3 {
+  @include typeset(body, map-get($_config, text3-mobile-size), map-get($_config, text3-line-height));
+}
+
+.jcc-text-4 {
+  @include typeset(body, map-get($_config, text4-mobile-size), map-get($_config, text4-line-height));
+}
+
+.jcc-text-5 {
+  @include typeset(body, map-get($_config, text5-mobile-size), map-get($_config, text5-line-height));
+}
 
 .jcc-lead {
   @include typeset($theme-lead-font-family, $theme-lead-font-size, $theme-lead-line-height);
@@ -39,8 +69,24 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-metadata {
-  @include typeset($theme-body-font-family, 4, $theme-body-line-height);
+  @extend .jcc-text-5;
   @include u-color(gray-40);
   @include u-text(uppercase);
   line-height: 3.5;
+}
+
+.jcc-about {
+  @include u-margin-bottom(6);
+  @include u-font-weight(bold);
+
+  span {
+    @include u-display(block);
+  }
+}
+
+.usa-prose {
+  .jcc-metadata {
+    @extend .jcc-metadata;
+    font-size: 88%;
+  }
 }
