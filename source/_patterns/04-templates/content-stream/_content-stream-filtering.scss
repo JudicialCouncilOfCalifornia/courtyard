@@ -97,21 +97,28 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-margin-x(neg-2);
       @include u-bg("transparent");
     }
+
+    h3.jcc-content-stream-filtering-form__title {
+      @include u-color(base-darker);
+      @include u-font(serif, md);
+      @include u-font-weight(normal);
+      @include u-text(italic);
+
+      &:not(:first-child) {
+        @include u-margin-top(7);
+      }
+    }
   }
 }
 
-.jcc-content-stream-filtering-form__filters-title {
-  @include u-margin-top(7);
-  @include u-color(base-darker);
-  @include u-font(serif, md);
-  @include u-font-weight(normal);
-  @include u-text(italic);
-}
-
-.jcc-content-stream-filtering-form__filters-filter {
+.jcc-content-stream-filtering-form__filter {
   .usa-legend,
   .fieldset-legend {
     @include u-display(none);
+  }
+
+  .usa-fieldset {
+    @include u-margin(0);
   }
 
   .usa-checkbox__label {
