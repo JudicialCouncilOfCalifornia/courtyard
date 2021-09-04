@@ -22,8 +22,8 @@ content_stream_filtering:
         text: "Excepteur sint occaecat"
   form: >
     <form class="views-exposed-form bef-exposed-form usa-form jcc-form" data-drupal-selector="views-exposed-form-news-news-list" action="" method="get" id="views-exposed-form-news-news-list" accept-charset="UTF-8">
-      <div class="jcc-news-listing-form">
-        <div class="jcc-news-listing-form__filters-filter">
+      <div class="jcc-content-stream-filtering-form">
+        <div class="jcc-content-stream-filtering-form__filter">
           <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search">
             <input placeholder="Search title or topic" data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text usa-input">
           </div>
@@ -33,8 +33,8 @@ content_stream_filtering:
             <button class="usa-accordion__button" aria-expanded="false" aria-controls="filters-wrapper">Filters</button>
           </h4>
           <div id="filters-wrapper" class="usa-accordion__content">
-            <h3 class="jcc-news-listing-form__filters-title">Filter by type</h3>
-            <div class="jcc-news-listing-form__filters-filter">
+            <h3 class="jcc-content-stream-filtering-form__title">Filter by type</h3>
+            <div class="jcc-content-stream-filtering-form__filter">
               <fieldset data-drupal-selector="edit-type" id="edit-type--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper usa-fieldset">
                 <legend class="usa-legend jcc-form-group__title">
                   <span class="fieldset-legend"></span>
@@ -55,8 +55,8 @@ content_stream_filtering:
                 </div>
               </fieldset>
             </div>
-            <h3 class="jcc-news-listing-form__filters-title">Filter by date</h3>
-            <div class="jcc-news-listing-form__filters-filter">
+            <h3 class="jcc-content-stream-filtering-form__title">Filter by date</h3>
+            <div class="jcc-content-stream-filtering-form__filter">
               <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-date-start form-item-date-start usa-form-group">
                 <label class="usa-label" id="edit-date-start-label" for="edit-date-start">Start date</label>
                 <div class="usa-hint" id="edit-date-start-hint">mm/dd/yyyy</div>

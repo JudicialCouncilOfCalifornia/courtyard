@@ -41,6 +41,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   background-size: 1.5rem auto;
 }
 
+.usa-checkbox {
+  @include u-bg("transparent");
+}
+
 .usa-form-group {
   margin-top: 0;
 }
