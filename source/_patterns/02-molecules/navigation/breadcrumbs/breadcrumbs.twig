@@ -14,19 +14,19 @@
     }%}
   {% endif %}
 
-  <ul class="jcc-breadcrumbs">
-    {% for breadcrumb in breadcrumbs.items %}
-    {% set url_attributes = breadcrumb.url_attributes ? breadcrumb.url_attributes : create_attribute() %}
-    <li class="jcc-breadcrumb__item">
+{#  <ul class="jcc-breadcrumbs">#}
+{#    {% for breadcrumb in breadcrumbs.items %}#}
+{#    {% set url_attributes = breadcrumb.url_attributes ? breadcrumb.url_attributes : create_attribute() %}#}
+{#    <li class="jcc-breadcrumb__item">#}
 
-      {% if breadcrumb.url %}
-      <a href="{{ breadcrumb.url }}"{{ url_attributes }}>{{ breadcrumb.label }}</a>
-      {% else %}
-      <span aria-current="location">{{ breadcrumb.label }}</span>
-      {% endif %}
+{#      {% if breadcrumb.url %}#}
+{#      <a href="{{ breadcrumb.url }}"{{ url_attributes }}>{{ breadcrumb.label }}</a>#}
+{#      {% else %}#}
+{#      <span aria-current="location">{{ breadcrumb.label }}</span>#}
+{#      {% endif %}#}
 
-    </li>
-    {% endfor %}
-  </ul>
+{#    </li>#}
+{#    {% endfor %}#}
+{#  </ul>#}
 </nav>
 {% endif %}

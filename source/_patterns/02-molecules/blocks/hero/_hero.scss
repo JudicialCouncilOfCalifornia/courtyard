@@ -47,13 +47,20 @@
   .jcc_hero__content-top {
     @include u-display("flex");
     .jcc_hero__breadcrumbs-wrapper {
-      @include grid-col(7);
+      @include at-media(tablet-lg) {
+        @include grid-col(3);
+      }
       align-self: center;
     }
     .jcc_hero__case-type-wrapper {
-      @include grid-col(3);
+      @include at-media(tablet-lg) {
+        @include grid-col(7);
+      }
       .usa-button--unstyled {
         text-decoration: none;
+        @include at-media(tablet-lg) {
+          float: right;
+        }
         @include u-text(info-darker);
         @include at-media(tablet-lg) {
           font-size: 21px;
