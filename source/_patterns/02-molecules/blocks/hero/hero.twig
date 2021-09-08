@@ -35,7 +35,7 @@
                 } %}
               </div>
             {% endif %}
-{#            {% if hero.case_type %}#}
+            {% if hero.case_type %}
               <div class="jcc_hero__case-type-wrapper">
                 {% include '@atoms/buttons/index-button.twig' with {
                   index_button: {
@@ -44,7 +44,7 @@
                   }
                 }%}
               </div>
-{#            {% endif %}#}
+            {% endif %}
           </div>
 
           {% if hero.brow %}
