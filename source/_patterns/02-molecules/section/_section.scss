@@ -18,6 +18,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section {
   @include u-padding-top(9);
+
+  .jcc-section {
+    @include u-padding-top(0);
+  }
 }
 
 .jcc-section--background-alt {
@@ -92,6 +96,18 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include grid-col(12);
     @include at-media("tablet") {
       @include grid-col(5);
+    }
+  }
+}
+
+.jcc-section--layout-nav {
+  .jcc-section__subsection {
+    &:last-child {
+      @include u-order(first);
+    }
+
+    &:first-child {
+      @include u-order(last);
     }
   }
 }

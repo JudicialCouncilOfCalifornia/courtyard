@@ -1,0 +1,17 @@
+sub_nav:
+  config: 'sidenav'
+  back_link: null
+  links:
+    - text: "Appearing in Court"
+      url: "#"
+    - text: "Contesting a Citation"
+      url: "#"
+    - text: "Pay Your Ticket"
+      url: "#"
+      is_current: true
+    - text: "Traffic School"
+      url: "#"
+    - text: "Traffic Tickets 101"
+      url: "#"
+    - text: "Traffic Violation Types"
+      url: "#"

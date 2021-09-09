@@ -18,14 +18,17 @@
   {% set attributes = attributes.setAttribute('id', section.id) %}
 {% endif %}
 
+{% set tag = section.tag|default('section') %}
+
 {% set classes = [
   'jcc-section',
   'jcc-section--' ~ section.container|default('container'),
+  section.layout ? 'jcc-section--layout-' ~ section.layout : '',
   'jcc-section--spacing-' ~ section.spacing|default('default'),
   'jcc-section--background-' ~ section.background|default('default'),
 ]|merge(section.classes|default([])) %}
 
-<section {{attributes.addClass(classes) }}>
+<{{ tag }} {{attributes.addClass(classes) }}>
   <div class="jcc-section__inner">
     {% if section.heading %}
       {% include "@molecules/section/section-heading.twig" with {
@@ -47,4 +50,4 @@
       {{ section.content }}
     {% endif %}
   </div>
-</section>
+</{{ tag }}>
