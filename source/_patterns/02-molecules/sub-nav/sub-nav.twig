@@ -15,7 +15,7 @@
 
 {% set classes = [
   'jcc-sub-nav',
-  sub_nav.config == 'sidenav' ? 'jcc-sub-nav--sidenav' : '',
+  sub_nav.config ? 'jcc-sub-nav--' ~ sub_nav.config : '',
 ]|merge(sub_nav.classes|default([''])) %}
 
 {% import _self as subnav %}
@@ -24,12 +24,12 @@
   <nav class="{{ classes|join(' ')|trim }}" aria-label="{{ sub_nav.label|default('In this section'|t) }}">
     <div class="jcc-sub-nav__container">
       <div class="jcc-sub-nav__label">{{ sub_nav.label|default('In this section'|t) }}</div>
-      {{ subnav.subnav_links(sub_nav.links, sub_nav.back_link) }}
+      {{ subnav.subnav_links(sub_nav.config, sub_nav.links, sub_nav.back_link) }}
     </div>
   </nav>
 {% endif %}
 
-{% macro subnav_links(items, back, children) %}
+{% macro subnav_links(config, items, back, children) %}
   {% import _self as subnav %}
 
   <ul class="jcc-sub-nav__items{{ children ? ' jcc-sub-nav--children' : '' }}">
@@ -53,8 +53,8 @@
       <li class="jcc-sub-nav__item">
         <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}">{{ item.text }}</a>
         {# If sidenav variant, optionally display subpages #}
-        {% if sub_nav.config == 'sidenav' and item.below %}
-          {{ subnav.subnav_links(item.below, NULL, TRUE) }}
+        {% if (config == 'sidenav') and item.below %}
+          {{ subnav.subnav_links(config, item.below, NULL, TRUE) }}
         {% endif %}
       </li>
     {% endfor %}
