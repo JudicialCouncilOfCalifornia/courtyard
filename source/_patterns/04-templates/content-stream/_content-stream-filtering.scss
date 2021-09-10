@@ -28,6 +28,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include at-media(tablet-lg) {
     @include grid-col(9);
   }
+
+  .jcc-content-stream {
+    @include u-margin-bottom(0);
+  }
 }
 
 .jcc-content-stream-filtering__items {
@@ -63,7 +67,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-content-stream-filtering__pager {
-  @include u-margin-top(6);
+  nav {
+    @include u-margin-top(6);
+  }
 }
 
 .jcc-content-stream-filtering__form {
