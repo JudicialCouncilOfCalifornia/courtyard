@@ -139,16 +139,32 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-sub-nav--sidenav {
-  @include u-border-bottom(0);
+  @include u-margin-top(4);
+  @include u-border(0);
+  @include at-media(tablet-lg) {
+    @include u-margin-top(0);
+    @include u-border-bottom(0);
+  }
 
   .jcc-sub-nav__container {
-    @include u-maxw(mobile);
+    @include u-display(block);
     @include u-minw(15);
-    @include u-padding(0);
+    @include u-margin-x(0);
+    @include u-padding-x(0);
+    @include at-media(tablet) {
+      @include u-maxw(mobile);
+    }
   }
 
   .jcc-sub-nav__label {
-    @include u-display(none);
+    @include not-sr-only;
+    @include u-margin(0);
+    @include u-padding(0);
+    @include u-border(0);
+
+    @include at-media(tablet-lg) {
+      @include u-display(none);
+    }
   }
 
   .jcc-sub-nav__items {
@@ -159,6 +175,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .jcc-sub-nav__item {
     &:not(:last-child) {
       @include u-border-bottom(1px, gray-10);
+    }
+
+    &:last-child {
+      @include u-border(0);
     }
 
     &:after {

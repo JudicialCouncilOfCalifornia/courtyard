@@ -21,6 +21,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .jcc-section {
     @include u-padding-top(0);
+
+    .jcc-section__inner {
+      @include u-padding-x(0);
+    }
   }
 }
 
@@ -76,13 +80,16 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &-75 {
     @include grid-col(12);
-    @include at-media("tablet") {
+    @include at-media("tablet-lg") {
       @include grid-col(9);
     }
   }
 
   &-25 {
-    @extend .jcc-section__subsection--col-4;
+    @include grid-col(12);
+    @include at-media("tablet-lg") {
+      @include grid-col(3);
+    }
   }
 
   &-60 {
@@ -100,14 +107,16 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-section--layout-nav {
-  .jcc-section__subsection {
-    &:last-child {
-      @include u-order(first);
-    }
+.jcc-section--layout-sidenav {
+  @include at-media("tablet-lg") {
+    .jcc-section__subsection {
+      &:last-child {
+        @include u-order(first);
+      }
 
-    &:first-child {
-      @include u-order(last);
+      &:first-child {
+        @include u-order(last);
+      }
     }
   }
 }
