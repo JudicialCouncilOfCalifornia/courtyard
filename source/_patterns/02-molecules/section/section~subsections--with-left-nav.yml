@@ -1,0 +1,9 @@
+section:
+  layout: "sidenav"
+  heading: false
+  num_cols: 2 #2|3
+  sub_sections:
+    - content: "<h2>Id aliquet lectus proin nibh nisl condimentum</h2><p>Id magna facilisi odio molestie dis feugiat proin, massa mollis cras libero dictum amet interdum, mauris sociis penatibus condimentum dolor habitant.</p><p>Turpis nulla aliquam lacus natoque torquent praesent consectetur nostra proin malesuada sem dolor pharetra, pellentesque libero massa parturient dui habitasse accumsan nec arcu orci cubilia quam.</p><p>Mollis rhoncus consequat torquent praesent suspendisse imperdiet felis sagittis ac, nibh neque varius ullamcorper massa donec nullam tortor non, nunc pellentesque conubia placerat platea taciti vitae tincidunt.</p>"
+      width: 75 #75|25|60|40
+    - content: "<nav class='jcc-sub-nav jcc-sub-nav--sidenav' aria-label='Secondary Navigation'><div class='jcc-sub-nav__container'><div class='jcc-sub-nav__label'>Secondary Navigation</div><ul class='jcc-sub-nav__items'><li class='jcc-sub-nav__item'> <a class='' href='#'>Appearing in Court</a></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Contesting a Citation</a></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Pay Your Ticket</a><ul class='jcc-sub-nav__items jcc-sub-nav--children'><li class='jcc-sub-nav__item'> <a class='' href='#'>Child 1</a></li><li class='jcc-sub-nav__item'> <a class='usa-current' href='#'>Child 2</a></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Child 3</a></li></ul></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Traffic School</a></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Traffic Tickets 101</a></li><li class='jcc-sub-nav__item'> <a class='' href='#'>Traffic Violation Types</a></li></ul></div> </nav>"
+      width: 25

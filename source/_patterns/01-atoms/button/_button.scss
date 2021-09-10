@@ -24,9 +24,9 @@ $_config_schemes: (
   ),
   local: (),
   pro: (
-    default: "blue-50v",
-    default-hover: "blue-60v",
-    default-active: "blue-70v",
+    default: "blue-60v",
+    default-hover: "blue-50",
+    default-active: "blue-60",
     padding: 1,
     font-size: 5,
   ),
