@@ -39,9 +39,11 @@
         }
       } %}
 
-      <div class="jcc-content-stream-filtering__pager">
-        {{ content_stream_filtering.pager }}
-      </div>
+      {% if content_stream_filtering.pager %}
+        <div class="jcc-content-stream-filtering__pager">
+          {{ content_stream_filtering.pager }}
+        </div>
+      {% endif %}
     </div>
 
     <div class="jcc-content-stream-filtering__form">
