@@ -145,16 +145,15 @@
 .jcc-hero--has-background-color--dark {
   @include dark-background();
 
-  a {
+  a,
+  .jcc-breadcrumb__item,
+  .jcc-breadcrumb__item a,
+  .jcc_hero__breadcrumbs-wrapper a.usa-button.usa-button--back.usa-button--unstyled,
+  .jcc-hero__content .jcc_hero__content-top .jcc_hero__case-type-wrapper .usa-button--unstyled {
     @include dark-background-link();
   }
 
-  .jcc-breadcrumb__item a {
-    @include dark-background-link();
-  }
-
-  .jcc-hero__title,
-  .jcc-breadcrumb__item {
+  .jcc-hero__title {
     @include dark-background-text();
   }
 }
