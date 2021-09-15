@@ -4,29 +4,10 @@
   breadcrumbs.show_mobile ? 'show-mobile' : 'hide-mobile',
 ]|merge(breadcrumbs.classes|default([''])) %}
 
-{% if breadcrumbs.items|length > 0 or breadcrumbs.show_back_button %}
 <nav class="{{ classes|join(' ')|trim }}">
-{#  {% if breadcrumbs.show_back_button %}#}
     {% include '@atoms/buttons/back-button.twig' with{
       back_button: {
         style: 'unstyled'
       }
     }%}
-{#  {% endif %}#}
-
-{#  <ul class="jcc-breadcrumbs">#}
-{#    {% for breadcrumb in breadcrumbs.items %}#}
-{#    {% set url_attributes = breadcrumb.url_attributes ? breadcrumb.url_attributes : create_attribute() %}#}
-{#    <li class="jcc-breadcrumb__item">#}
-
-{#      {% if breadcrumb.url %}#}
-{#      <a href="{{ breadcrumb.url }}"{{ url_attributes }}>{{ breadcrumb.label }}</a>#}
-{#      {% else %}#}
-{#      <span aria-current="location">{{ breadcrumb.label }}</span>#}
-{#      {% endif %}#}
-
-{#    </li>#}
-{#    {% endfor %}#}
-{#  </ul>#}
 </nav>
-{% endif %}
