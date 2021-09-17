@@ -1,0 +1,13 @@
+card:
+  style: "media-top"
+  title: "Posuere et ornare"
+  brow: "Pellentesque tempo"
+  icon:
+    name: "arrow-right"
+  body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  media:
+    src: "https://www.courts.ca.gov/documents/TCS_border.png"
+    alt: "green"
+  link:
+    url: "#"
+    text: "Luctus nunc quam"

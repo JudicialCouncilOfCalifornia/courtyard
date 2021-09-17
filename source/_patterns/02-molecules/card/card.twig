@@ -2,15 +2,19 @@
 /**
  * Available variables:
  * - card - primary variable
- *   - style: general style of card [hover, cta, borderless, media-left]
+ *   - style: general style of card [hover, cta, borderless, media-left, media-full, media-top]
  *   - title: title of card
  *   - title_tag: tag/size of card title
  *   - brow: text in upper left
+ *   - icon: icon in upper right
  *   - body: main text content
  *   - link: card link/button
  *     - url: card link/button url
  *     - text: card link/button text
  *     - type: card link/button type (n/a or external or file) [ext, file]
+ *   - media: image
+ *     - src: image source file
+ *     - alt: image alt description
  *   - classes: array of classes to add to component
  */
 #}
@@ -42,7 +46,21 @@
     <div class="usa-card__content">
       <header class="usa-card__header">
         {% if card.brow %}
-          <div class="usa-card__brow">{{ card.brow }}</div>
+          <div class="usa-card__brow">
+          <span>{{ card.brow }}</span>
+
+          {% if card.icon %}
+            <div class="usa-card__icon">
+              {% include "@atoms/icon/icon.twig" with {
+                icon: {
+                  name: card.icon.name,
+                  set: "fa"
+                }
+              } %}
+            </div>
+          {% endif %}
+
+          </div>
         {% endif %}
 
         <{{ heading_tag }} class="usa-card__heading" id="{{ unique_id }}">
@@ -60,7 +78,7 @@
         </div>
       {% endif %}
 
-      {% if (style == 'cta' or style == 'media-left') and card.link.url %}
+      {% if (style == 'cta' or style == 'media-left' or style == 'media-full' or style == 'media-top') and card.link.url %}
         <div class="usa-card__footer">
           <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
@@ -69,7 +87,11 @@
 
     {% if card.media %}
       <div class="usa-card__media">
+      {% if not card.media.src %}
         <span>{{ card.media }}</span>
+      {% else %}
+        <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+      {% endif %}
       </div>
     {% endif %}
   </div>
