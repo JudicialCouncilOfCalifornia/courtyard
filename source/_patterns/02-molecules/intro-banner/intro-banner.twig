@@ -1,0 +1,60 @@
+{#
+/**
+ * Available variables:
+ * - banner - primary variable
+ *  - brow: Text on top of the title
+ *  - title: title
+ *  - body: body text
+ * - link:
+ *  - url: link url
+ *  - text: link description
+ * - media:
+ *   - src: background image url
+ *   - alt: background image alt text
+ * - classes: array of classes to add to component
+ */
+#}
+
+{% set heading_tag = card.card_title_tag|default('h2') %}
+
+{% set classes = [
+  'jcc-banner',
+  'jcc-intro-banner',
+]|merge(banner.classes|default([''])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+
+    <div class="intro-banner__content">
+        <div class="intro-banner__header">
+            {% if banner.brow %}
+                <div class="intro-banner__brow">{{ banner.brow }}</div>
+            {% endif %}
+            <{{ heading_tag }} class="intro-banner__heading" id="{{ unique_id }}">
+                {% if banner.link.url %}
+                    <a href="{{ banner.link.url }}">{{ banner.title }}</a>
+                {% else %}
+                    {{ banner.title }}
+                {% endif %}
+            </{{ heading_tag }}>
+        </div>
+
+        {% if banner.body %}
+            <div class="intro-banner__body usa-prose">
+                {{ banner.body }}
+            </div>
+        {% endif %}
+
+        {% if banner.link.url %}
+            <div class="intro-banner__footer">
+                <a class="{{ banner.link.type }}" href="{{ banner.link.url }}">{{ banner.link.text }}</a>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if banner.media %}
+      <div class="jcc-banner__media">
+        <img src="{{ banner.media.src }}" alt="{{ banner.media.alt }}">
+      </div>
+    {% endif %}
+</div>
+

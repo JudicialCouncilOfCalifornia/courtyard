@@ -1,0 +1,10 @@
+banner:
+  brow: "Test brow"
+  title: "Consequat nostra vel"
+  body: "<p>Lacus nec laoreet velit augue tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  link:
+    url: "#"
+    text: "Luctus nunc quam"
+  media:
+    src: "https://placeimg.com/900/600/arch"
+    alt: "A placeholder image"
