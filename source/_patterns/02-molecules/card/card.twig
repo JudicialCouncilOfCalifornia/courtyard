@@ -2,7 +2,7 @@
 /**
  * Available variables:
  * - card - primary variable
- *   - style: general style of card [hover, cta, borderless, media-left, media-full, media-top]
+ *   - style: general style of card [hover, cta, cta-color, borderless, media-left, media-full, media-top]
  *   - title: title of card
  *   - title_tag: tag/size of card title
  *   - brow: text in upper left
@@ -47,7 +47,11 @@
       <header class="usa-card__header">
         {% if card.brow %}
           <div class="usa-card__brow">
-          <span>{{ card.brow }}</span>
+            {% if 'cta-color' in style or 'media-full' in style or 'media-top' in style %}
+              <div class="usa-card__brow-color">{{ card.brow }}</div>
+            {% else %}
+              {{ card.brow }}
+            {% endif %}
 
           {% if card.icon %}
             <div class="usa-card__icon">
@@ -78,7 +82,7 @@
         </div>
       {% endif %}
 
-      {% if (style == 'cta' or style == 'media-left' or style == 'media-full' or style == 'media-top') and card.link.url %}
+      {% if ('cta' in style or 'media' in style) and card.link.url %}
         <div class="usa-card__footer">
           <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
         </div>
@@ -90,7 +94,9 @@
       {% if not card.media.src %}
         <span>{{ card.media }}</span>
       {% else %}
-        <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+        <div class="jcc-card--overlay-color-{{ card.bgcolor }}">
+          <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+        </div>
       {% endif %}
       </div>
     {% endif %}
