@@ -34,9 +34,9 @@ $_config_schemes: (
     heading-line-height: 1,
     title-color: "gray-warm-90",
     title-link: (
-      default: "blue-50",
-      hover: "blue-60",
-      active: "blue-70",
+      default: $theme-link-color,
+      hover: $theme-link-hover-color,
+      active: $theme-link-active-color,
     ),
     body-size: 5,
   ),
