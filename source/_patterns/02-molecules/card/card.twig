@@ -65,6 +65,19 @@
           {% endif %}
 
           </div>
+        {% else %}
+          {% if card.icon %}
+            <div class="usa-card__brow">
+              <div class="usa-card__icon-no-brow">
+                {% include "@atoms/icon/icon.twig" with {
+                  icon: {
+                    name: card.icon.name,
+                    set: "fa"
+                  }
+                } %}
+              </div>
+            </div>
+          {% endif %}
         {% endif %}
 
         <{{ heading_tag }} class="usa-card__heading" id="{{ unique_id }}">
@@ -83,9 +96,11 @@
       {% endif %}
 
       {% if ('cta' in style or 'media' in style) and card.link.url %}
-        <div class="usa-card__footer">
-          <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
-        </div>
+        {% if card.link.text %}
+          <div class="usa-card__footer">
+            <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
+          </div>
+        {% endif %}
       {% endif %}
     </div>
 
