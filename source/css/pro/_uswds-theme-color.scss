@@ -127,8 +127,8 @@ $theme-color-info-darker: false;
 // https://designsystem.digital.gov/design-tokens/color/system-tokens/#gray
 $theme-color-disabled-family: "gray";
 $theme-color-disabled-light: "gray-10";
-$theme-color-disabled: "gray-20";
-$theme-color-disabled-dark: "gray-30";
+$theme-color-disabled: "gray-30";
+$theme-color-disabled-dark: "gray-50";
 
 // Emergency colors
 // https://designsystem.digital.gov/design-tokens/color/system-tokens/#red-warm
@@ -149,10 +149,10 @@ $theme-text-color: "ink";
 $theme-text-reverse-color: "white";
 
 // Links
-$theme-link-color: "secondary";
-$theme-link-visited-color: "secondary";
-$theme-link-hover-color: "secondary-dark";
-$theme-link-active-color: "secondary-darker";
+$theme-link-color: "blue-50";
+$theme-link-visited-color: "blue-50";
+$theme-link-hover-color: "blue-60";
+$theme-link-active-color: "blue-60";
 $theme-link-reverse-color: "white";
 $theme-link-reverse-hover-color: "white";
 $theme-link-reverse-active-color: "white";

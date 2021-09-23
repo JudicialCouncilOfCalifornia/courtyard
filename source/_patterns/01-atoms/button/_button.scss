@@ -3,12 +3,28 @@ $_config_schemes: (
     default: primary,
     default-hover: primary-dark,
     default-active: primary-darker,
+    default-focus: primary,
+    disabled: $theme-color-disabled,
     secondary: secondary,
     secondary-hover: secondary-dark,
     secondary-active: secondary-darker,
+    outline: "blue-60v",
+    outline-hover: "blue-70v",
+    outline-hover-text: "white",
+    outline-active: "blue-80",
+    outline-active-text: "white",
+    outline-focus: "default",
+    outline-focus-text: "blue-60v",
+    outline-border-width: 2px,
+    outline-border-color: #005ea2,
+    outline-border-color-hover: #005ea2,
+    outline-border-color-active: #005ea2,
+    outline-disabled: #C9C9C9,
+    outline-disabled-text: $theme-color-disabled,
     external: secondary,
     external-hover: secondary-dark,
     external-active: secondary-darker,
+    external-focus: secondary,
     inverse: secondary,
     inverse-hover: secondary-dark,
     inverse-active: secondary-darker,
@@ -26,7 +42,22 @@ $_config_schemes: (
   pro: (
     default: "blue-60v",
     default-hover: "blue-50",
-    default-active: "blue-60",
+    default-active: "blue-50",
+    default-focus: "blue-50",
+    disabled: $theme-color-disabled-light,
+    outline: "blue-60v",
+    outline-hover: "default",
+    outline-hover-text: "blue-60v",
+    outline-active: "default",
+    outline-active-text: "blue-60v",
+    outline-focus: "blue-5v",
+    outline-focus-text: "blue-60v",
+    outline-disabled: #ADADAD,
+    outline-disabled-text: $theme-color-disabled-dark,
+    outline-border-width: 1px,
+    outline-border-color: #2378c3,
+    outline-border-color-hover: #73B3E7,
+    outline-border-color-active: #73B3E7,
     padding: 1,
     font-size: 5,
   ),
@@ -74,6 +105,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &:disabled {
     @include button-disabled;
+    @include u-bg(map-get($_config, disabled));
+
+    &:hover {
+      @include u-bg(map-get($_config, disabled));
+    }
   }
 }
 
@@ -88,6 +124,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     )
   );
   @include u-bg("transparent");
+  @include u-cursor(pointer);
 }
 
 %jcc-button-external {
@@ -113,6 +150,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   &:active,
   &.jcc-button--active {
     @include set-text-and-bg(map-get($_config, external-active), $context: $button-context);
+  }
+
+  &:focus,
+  &.usa-focus {
+    @include set-text-and-bg(map-get($_config, external-focus), $context: $button-context);
   }
 
   &::after {
@@ -186,6 +228,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include set-text-and-bg(map-get($_config, default-active), $context: $button-context);
   }
 
+  &:focus,
+  &.usa-focus {
+    @include set-text-and-bg(map-get($_config, default-focus), $context: $button-context);
+  }
+
   &.jcc-button--unstyled {
     @extend %jcc-button-unstyled;
   }
@@ -222,6 +269,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include set-text-and-bg(map-get($_config, secondary-active), $context: $button-context);
   }
 
+  &:focus,
+  &.usa-focus {
+    @include set-text-and-bg(map-get($_config, secondary), $context: $button-context);
+  }
+
   &.jcc-button--unstyled {
     @extend %jcc-button-unstyled;
   }
@@ -238,27 +290,47 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-button--outline {
   @extend %jcc-button;
   @extend .usa-button--outline;
+  //@include u-color(map-get($_config, outline-text));
+  box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color);
 
   &:hover,
   &.jcc-button--hover {
-    @include set-text-and-bg(map-get($_config, default-hover), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, outline-hover), $context: $button-context);
+    @include u-color(map-get($_config, outline-hover-text));
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-hover);
   }
 
   &:active,
   &.jcc-button--active {
-    @include set-text-and-bg(map-get($_config, default-active), $context: $button-context);
+    @include set-text-and-bg(map-get($_config, outline-active), $context: $button-context);
+    @include u-color(map-get($_config, outline-active-text));
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-active);
+  }
+
+  &:focus,
+  &.usa-focus {
+    @include set-text-and-bg(map-get($_config, outline-focus), $context: $button-context);
+    @include u-color(map-get($_config, outline-focus-text));
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-active);
   }
 
   &:disabled,
   &.jcc-button--disabled {
     @extend .usa-button--outline:disabled;
     @include u-bg("transparent");
-    @include u-color("base-light");
+    @include u-color(map-get($_config, outline-disabled-text));
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-disabled);
+
+    &:hover {
+      @include u-bg("transparent");
+      box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-disabled);
+    }
   }
 }
 
 .jcc-button--unstyled {
   @extend %jcc-button-unstyled;
+  box-shadow: none;
 }
 
 .jcc-button--inverse {
