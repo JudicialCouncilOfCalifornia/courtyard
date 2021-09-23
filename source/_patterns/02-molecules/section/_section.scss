@@ -20,7 +20,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-padding-top(9);
 
   .jcc-section {
-    @include u-padding-top(0);
+    &:first-child {
+      @include u-padding-top(0);
+    }
 
     .jcc-section__inner {
       @include u-padding-x(0);
@@ -48,7 +50,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section--container {
   .jcc-section__inner {
-    @extend .usa-prose;
     @include grid-container(widescreen);
 
     // Adding table trick to avoid overflow in any section
