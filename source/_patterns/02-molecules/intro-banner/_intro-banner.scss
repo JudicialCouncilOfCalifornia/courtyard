@@ -55,6 +55,8 @@ $_banner: map-get($_config, banner);
     }
     .intro-banner__heading {
       @include u-padding-bottom(2);
+      margin-bottom: 0;
+      @include text-color(map-get($_banner, intro-banner-text));
       a{
         text-decoration: none;
       }
