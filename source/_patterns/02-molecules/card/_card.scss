@@ -371,3 +371,59 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-color(ink);
   }
 }
+
+// BEGIN If used as subcomponent
+.jcc-section,
+.jcc-section--container {
+  .jcc-section__inner {
+    @include u-padding-x(0, !important);
+  }
+
+  .jcc-cards__item {
+    @include u-width(full);
+    @include u-margin-x(0);
+
+    .usa-card__container {
+      @include u-padding-x(0);
+    }
+  }
+}
+// END
+
+// BEGIN Content stream styling
+.jcc-card--content-stream {
+  .jcc-cards__item {
+    @include u-padding-left(4);
+    @include u-padding-right(0);
+
+    &:first-child {
+      @include u-margin-bottom(1);
+      @include u-padding-x(0);
+    }
+
+    .usa-card {
+      @include u-margin-bottom(6);
+    }
+
+    .usa-card__media {
+      @include u-width(mobile);
+
+      span {
+        @include u-display(inline-block);
+        @include u-position(relative);
+        @include add-aspect("4x3");
+        @include u-width(full);
+        @include u-overflow(hidden);
+
+        img {
+          @include u-position(absolute);
+          @include u-width(full);
+          @include u-top(0);
+          @include u-left(0);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+// END
