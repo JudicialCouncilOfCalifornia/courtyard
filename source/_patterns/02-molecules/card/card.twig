@@ -13,8 +13,8 @@
  *     - url: card link/button url
  *     - text: card link/button text
  *     - type: card link/button type (n/a or external or file) [ext, file]
- *   - media: image
- *     - src: image source file
+ *   - media: icon as embeded svg code
+ *     - src: image source file or URL for use as background image
  *     - alt: image alt description
  *   _ bgcolor: overlay color [none, blue, blue-dark, cyan, gray, green, magenta, mint, orange, red]
  *   - classes: array of classes to add to component
@@ -108,6 +108,8 @@
 
     {% if card.media %}
       <div class="usa-card__media">
+      /* check if an media item on the left exists as embeded into card.media rather than card.media.src
+         so that we do not break existing local theme usage */
       {% if not card.media.src %}
         <span>{{ card.media }}</span>
       {% else %}

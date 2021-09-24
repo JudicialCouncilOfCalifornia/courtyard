@@ -1,5 +1,8 @@
 $_config_schemes: (
   base: (
+    border-width: "05",
+    border-radius: "md",
+    border-color: "base-lightest",
     brow-color: base-dark,
     brow-size: 6,
     brow-weight: $theme-font-weight-normal,
@@ -34,6 +37,9 @@ $_config_schemes: (
     ),
   ),
   local: (
+    border-width: "05",
+    border-radius: "md",
+    border-color: "base-lighter",
     brow-color: "white",
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
@@ -58,6 +64,9 @@ $_config_schemes: (
     ),
   ),
   pro: (
+    border-width: "1px",
+    border-radius: "md",
+    border-color: "base-light",
     brow-color: "white",
     brow-size: 5,
     brow-weight: $theme-font-weight-normal,
@@ -103,12 +112,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__container {
-  @include u-radius(0);
+  @include u-border(map-get($_config, "border-color"));
+  @include u-border-width(map-get($_config, "border-width"));
+  @include u-radius(map-get($_config, "border-radius"));
   @include u-padding(3);
   @include u-z(0);
 
   .usa-card--hover & {
-    @include u-border-width(1px);
+    @include u-border-width(map-get($_config, "border-width"));
     @include u-radius($theme-card-border-radius);
     @include u-shadow(3);
     @include u-text-decoration(no-underline);
