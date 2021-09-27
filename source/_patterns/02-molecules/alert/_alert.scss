@@ -1,3 +1,41 @@
+$_config_schemes: (
+        base: (
+                alert: (
+                        // variants
+                        background-color_info :$theme-color-info-lighter,
+                        background-color_success: $theme-color-success-lighter,
+                        background-color_warning: $theme-color-warning-lighter,
+                        background-color_error: $theme-color-error-lighter,
+                        border-color_info : $theme-color-info,
+                        border-color_success: $theme-color-success,
+                        border-color_warning: $theme-color-warning,
+                        border-color_error: $theme-color-error
+
+                ),
+        ),
+        local: (),
+        pro: (
+                alert: (
+                        background-color_info : "white",
+                        background-color_success: "white",
+                        background-color_warning: "white",
+                        background-color_error: "white",
+                        border-color_info : "white",
+                        border-color_success: "white",
+                        border-color_warning: "white",
+                        border-color_error: "white"
+                ),
+        ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+$_alert: map-get($_config, alert);
+
+// Add the css rule for default & alt
+@mixin hc($prop, $map, $key) {
+  #{$prop}: color(map-get($map, "default-#{$key}"));
+}
+
 .usa-alert {
   @include u-display(none);
 
@@ -23,20 +61,28 @@
 }
 
 .usa-alert__wrapper {
-  &--info {
-    @include u-bg($theme-color-info-lighter);
+  &--info,
+  .usa-alert--info{
+    @include u-bg(map-get($_alert, background-color_info));
+    @include u-border-color(map-get($_alert, border-color_info));
   }
 
-  &--success {
-    @include u-bg($theme-color-success-lighter);
+  &--success,
+  .usa-alert--success{
+    @include u-bg(map-get($_alert, background-color_success));
+    @include u-border-color(map-get($_alert, border-color_success));
   }
 
-  &--warning {
-    @include u-bg($theme-color-warning-lighter);
+  &--warning,
+  .usa-alert--warning{
+    @include u-bg(map-get($_alert, background-color_warning));
+    @include u-border-color(map-get($_alert, border-color_warning));
   }
 
-  &--error {
-    @include u-bg($theme-color-error-lighter);
+  &--error,
+  .usa-alert--error{
+    @include u-bg(map-get($_alert, background-color_error));
+    @include u-border-color(map-get($_alert, border-color_error));
   }
 }
 

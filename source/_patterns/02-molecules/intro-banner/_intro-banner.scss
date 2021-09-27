@@ -1,0 +1,100 @@
+$_config_schemes: (
+  base: (
+    banner: (
+      // variants
+      intro-banner-background-default: blue-60v,
+      intro-banner-text: "white",
+    ),
+  ),
+  local: (),
+  pro: (
+    banner: (
+      intro-banner-background-default: blue-60v,
+      intro-banner-text: "white",
+    ),
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+$_banner: map-get($_config, banner);
+
+// Add the css rule for default & alt
+@mixin hc($prop, $map, $key) {
+  #{$prop}: color(map-get($map, "default-#{$key}"));
+}
+
+.jcc-banner {
+  @include u-position(relative);
+  @include u-z(500);
+}
+
+.jcc-intro-banner {
+  @include text-color(map-get($_banner, intro-banner-text));
+  @include u-radius($theme-card-border-radius);
+  overflow: hidden;
+
+  .intro-banner__content {
+    @include at-media(desktop) {
+      width: 66%;
+    }
+    min-height: 360px;
+    position:relative;
+    padding: 4rem 5rem 6rem 6rem;
+
+    &::after {
+      @include u-display(inline-block);
+      @include u-position(absolute);
+      @include u-top(0);
+      @include u-left(0);
+      @include u-width(full);
+      @include u-height(full);
+      @include u-bg(map-get($_banner, intro-banner-background-default));
+      opacity: 0.95;
+      content: "";
+      z-index: -1;
+    }
+    .intro-banner__heading {
+      @include u-padding-bottom(2);
+      margin-bottom: 0;
+      @include text-color(map-get($_banner, intro-banner-text));
+      a{
+        text-decoration: none;
+      }
+
+      .usa-card--hover:hover & {
+        @include u-text-decoration(underline);
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+
+  .jcc-banner__body {
+    @include u-position(absolute);
+    @include u-left(0);
+    @include u-right(0);
+    @include u-width(widescreen);
+    @include u-margin-x(auto);
+    @include u-padding-x(4);
+  }
+
+  .jcc-banner__media {
+    @include u-display(block);
+    @include u-position(absolute);
+    @include u-top(0);
+    @include u-right(0);
+    @include u-bottom(0);
+    @include u-left(0);
+    @include u-z(bottom);
+    @include u-width(full);
+    @include u-height(full);
+    @include u-overflow(hidden);
+
+    img,
+    picture {
+      @include u-width(full);
+      @include u-height(full);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+}

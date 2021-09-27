@@ -612,8 +612,10 @@ $_hat: map-get($_config, hat);
         @include u-color(map-get($_header, masthead-sub-text));
 
         &::after {
-          @include u-margin-x(1);
           @include u-bg(map-get($_header, masthead-nav-background));
+          @include at-media(tablet-lg) {
+            @include u-margin-x(1);
+          }
         }
 
         &:hover::after {
@@ -648,6 +650,24 @@ $_hat: map-get($_config, hat);
               @include u-color(map-get($_header, masthead-sub-text));
             }
           }
+          &[aria-expanded="false"] {
+            svg {
+              @include u-color(map-get($_header, masthead-svg));
+            }
+
+            @include at-media(tablet-lg) {
+              .icon-circle-solid {
+                @include u-color(map-get($_header, masthead-svg));
+              }
+            }
+          }
+          &[aria-expanded="true"] {
+            @include at-media(tablet-lg) {
+              .icon-circle-solid {
+                @include u-color(map-get($_header, masthead-sub-text));
+              }
+            }
+          }
 
           span {
             & + svg {
@@ -655,10 +675,17 @@ $_hat: map-get($_config, hat);
             }
           }
 
-          svg {
+          .icon-circle-solid {
             @include u-height(1);
             @include u-width(1);
-            @include u-color(map-get($_header, masthead-svg));
+          }
+        }
+      }
+
+      .jcc-header__translate-nav {
+        .usa-nav__link[aria-expanded="true"] {
+          svg {
+            @include u-color(map-get($_header, masthead-sub-text));
           }
         }
       }
@@ -709,14 +736,25 @@ $_hat: map-get($_config, hat);
 
     .usa-logo {
       @include u-display(inline-block);
-      @include u-padding-x(4);
+      @include u-padding-x(0);
+      @include u-padding-bottom(2);
+      @include at-media(tablet-lg) {
+        @include u-padding-x(4);
+        @include u-padding-bottom(0);
+      }
 
       .jcc-header__logo {
-        @include u-display(block);
+        @include u-display(inline-flex);
         @include u-margin-bottom(1);
+        @include at-media(tablet-lg) {
+          @include u-display(block);
+        }
 
         svg {
-          @include u-height(6);
+          height: 1.7rem;
+          @include at-media(mobile-lg) {
+            @include u-height(6);
+          }
           @include u-width(auto);
         }
       }
@@ -743,16 +781,32 @@ $_hat: map-get($_config, hat);
     @include u-padding-x(4);
   }
 
+  .jcc-header__mobile-button-open,
+  .jcc-header__mobile-button-close {
+    @include u-color(map-get($_header, masthead-svg));
+  }
+
   &.mega {
     padding-bottom: 16.563rem;
 
     .jcc-header__logo-container--alt-position {
       .usa-logo {
         .jcc-header__logo {
-          @include u-margin-bottom(3);
+          @include at-media(tablet) {
+            @include u-margin-bottom(2);
+          }
+          @include at-media(tablet-lg) {
+            @include u-margin-bottom(3);
+          }
 
           svg {
-            @include u-height(8);
+            height: 1.7rem;
+            @include at-media(tablet) {
+              @include u-height(6);
+            }
+            @include at-media(tablet-lg) {
+              @include u-height(8);
+            }
           }
         }
 

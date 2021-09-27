@@ -3,13 +3,23 @@ $_config_schemes: (
     bottom-border: secondary-lighter,
     item-border: base,
     text: secondary,
+    text-size: 6,
     current-text: "white",
     current-background: secondary,
+    hover-text: "white",
+    hover-background: secondary,
     back-link-text: primary,
     back-link-background: secondary-lighter,
   ),
   local: (),
-  pro: (),
+  pro: (
+    text: "blue-50",
+    text-size: 5,
+    current-text: "ink",
+    current-background: "transparent",
+    hover-text: "white",
+    hover-background:  "blue-50",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -85,6 +95,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-display(flex);
     @include u-align-items(align-center);
     @include u-padding-x(3);
+    @include u-font-size(body, map-get($_config, text-size));
     @include u-color(map-get($_config, text));
     @include u-text-decoration(no-underline);
     height: 40px;
@@ -111,7 +122,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
     }
 
-    &:hover,
+    &:hover {
+      @include u-bg(map-get($_config, hover-background));
+      @include u-color(map-get($_config, hover-text));
+    }
+
     &.usa-current {
       @include u-bg(map-get($_config, current-background));
       @include u-color(map-get($_config, current-text));
@@ -120,5 +135,75 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   svg {
     @include u-margin-right(0.5);
+  }
+}
+
+.jcc-sub-nav--sidenav {
+  @include u-margin-top(4);
+  @include u-border(0);
+  @include at-media(tablet-lg) {
+    @include u-margin-top(0);
+    @include u-border-bottom(0);
+  }
+
+  .jcc-sub-nav__container {
+    @include u-display(block);
+    @include u-minw(15);
+    @include u-margin-x(0);
+    @include u-padding-x(0);
+    @include at-media(tablet) {
+      @include u-maxw(mobile);
+    }
+  }
+
+  .jcc-sub-nav__label {
+    @include not-sr-only;
+    @include u-margin(0);
+    @include u-padding(0);
+    @include u-border(0);
+
+    @include at-media(tablet-lg) {
+      @include u-display(none);
+    }
+  }
+
+  .jcc-sub-nav__items {
+    @include u-display(block);
+    @include u-width(full);
+  }
+
+  .jcc-sub-nav__item {
+    &:not(:last-child) {
+      @include u-border-bottom(1px, gray-10);
+    }
+
+    &:last-child {
+      @include u-border(0);
+    }
+
+    &:after {
+      @include u-border(0);
+    }
+
+    a {
+      @include u-height(auto);
+      @include u-padding-x(1);
+      @include u-padding-y(2);
+    }
+  }
+
+  .jcc-sub-nav--children {
+    @include u-border-left(1px, blue-30);
+    @include u-margin-left(1);
+    @include u-margin-bottom(4);
+    @include u-padding-left(2);
+
+    .jcc-sub-nav__item {
+      @include u-border(0);
+
+      a {
+        @include u-padding-y(0.5);
+      }
+    }
   }
 }

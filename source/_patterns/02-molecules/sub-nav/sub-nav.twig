@@ -15,35 +15,48 @@
 
 {% set classes = [
   'jcc-sub-nav',
+  sub_nav.config ? 'jcc-sub-nav--' ~ sub_nav.config : '',
 ]|merge(sub_nav.classes|default([''])) %}
 
-{% if sub_nav.back_link or sub_nav.links %}
-  <nav class="{{ classes|join(' ')|trim }}">
-    <div class="jcc-sub-nav__container">
-      <div class="jcc-sub-nav__label">{{ 'In this section'|t }}</div>
-      <ul class="jcc-sub-nav__items">
-        {% if sub_nav.back_link %}
-          <li class="jcc-sub-nav__item">
-            <a class="back-link" href="{{ sub_nav.back_link.url }}">
-              <span>{{ sub_nav.back_link.text }}</span>
-              {% include "@atoms/icon/icon.twig" with {
-                icon: {
-                  name: "chevron-left",
-                  set: "fa",
-                  width: 18,
-                  height: 18,
-                }
-              } %}
-            </a>
-          </li>
-        {% endif %}
+{% import _self as subnav %}
 
-        {% for item in sub_nav.links %}
-          <li class="jcc-sub-nav__item">
-            <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}">{{ item.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+{% if sub_nav.back_link or sub_nav.links %}
+  <nav class="{{ classes|join(' ')|trim }}" aria-label="{{ sub_nav.label|default('In this section'|t) }}">
+    <div class="jcc-sub-nav__container">
+      <div class="jcc-sub-nav__label">{{ sub_nav.label|default('In this section'|t) }}</div>
+      {{ subnav.subnav_links(sub_nav.config, sub_nav.links, sub_nav.back_link) }}
     </div>
   </nav>
 {% endif %}
+
+{% macro subnav_links(config, items, back, children) %}
+  {% import _self as subnav %}
+
+  <ul class="jcc-sub-nav__items{{ children ? ' jcc-sub-nav--children' : '' }}">
+    {% if back %}
+      <li class="jcc-sub-nav__item">
+        <a class="back-link" href="{{ back.url }}">
+          <span>{{ back.text }}</span>
+          {% include "@atoms/icon/icon.twig" with {
+            icon: {
+              name: "chevron-left",
+              set: "fa",
+              width: 18,
+              height: 18,
+            }
+          } %}
+        </a>
+      </li>
+    {% endif %}
+
+    {% for item in items %}
+      <li class="jcc-sub-nav__item">
+        <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}">{{ item.text }}</a>
+        {# If sidenav variant, optionally display subpages #}
+        {% if (config == 'sidenav') and item.below %}
+          {{ subnav.subnav_links(config, item.below, NULL, TRUE) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
