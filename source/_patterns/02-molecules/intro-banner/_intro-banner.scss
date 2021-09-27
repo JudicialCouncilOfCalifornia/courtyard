@@ -38,7 +38,7 @@ $_banner: map-get($_config, banner);
       width: 66%;
     }
     min-height: 360px;
-    position:relative;
+    position: relative;
     padding: 4rem 5rem 6rem 6rem;
 
     &::after {
@@ -57,7 +57,7 @@ $_banner: map-get($_config, banner);
       @include u-padding-bottom(2);
       margin-bottom: 0;
       @include text-color(map-get($_banner, intro-banner-text));
-      a{
+      a {
         text-decoration: none;
       }
 

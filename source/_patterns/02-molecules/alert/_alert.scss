@@ -1,31 +1,30 @@
 $_config_schemes: (
-        base: (
-                alert: (
-                        // variants
-                        background-color_info :$theme-color-info-lighter,
-                        background-color_success: $theme-color-success-lighter,
-                        background-color_warning: $theme-color-warning-lighter,
-                        background-color_error: $theme-color-error-lighter,
-                        border-color_info : $theme-color-info,
-                        border-color_success: $theme-color-success,
-                        border-color_warning: $theme-color-warning,
-                        border-color_error: $theme-color-error
-
-                ),
-        ),
-        local: (),
-        pro: (
-                alert: (
-                        background-color_info : "white",
-                        background-color_success: "white",
-                        background-color_warning: "white",
-                        background-color_error: "white",
-                        border-color_info : "white",
-                        border-color_success: "white",
-                        border-color_warning: "white",
-                        border-color_error: "white"
-                ),
-        ),
+  base: (
+    alert: (
+      // variants
+      background-color_info: $theme-color-info-lighter,
+      background-color_success: $theme-color-success-lighter,
+      background-color_warning: $theme-color-warning-lighter,
+      background-color_error: $theme-color-error-lighter,
+      border-color_info: $theme-color-info,
+      border-color_success: $theme-color-success,
+      border-color_warning: $theme-color-warning,
+      border-color_error: $theme-color-error,
+    ),
+  ),
+  local: (),
+  pro: (
+    alert: (
+      background-color_info: "white",
+      background-color_success: "white",
+      background-color_warning: "white",
+      background-color_error: "white",
+      border-color_info: "white",
+      border-color_success: "white",
+      border-color_warning: "white",
+      border-color_error: "white",
+    ),
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -45,11 +44,10 @@ $_alert: map-get($_config, alert);
 
   // Centered/constrained
   &--centered {
-    @include u-border-color('transparent');
+    @include u-border-color("transparent");
 
     @include at-media(desktop) {
       @include grid-container(widescreen);
-
     }
   }
 
@@ -62,25 +60,25 @@ $_alert: map-get($_config, alert);
 
 .usa-alert__wrapper {
   &--info,
-  .usa-alert--info{
+  .usa-alert--info {
     @include u-bg(map-get($_alert, background-color_info));
     @include u-border-color(map-get($_alert, border-color_info));
   }
 
   &--success,
-  .usa-alert--success{
+  .usa-alert--success {
     @include u-bg(map-get($_alert, background-color_success));
     @include u-border-color(map-get($_alert, border-color_success));
   }
 
   &--warning,
-  .usa-alert--warning{
+  .usa-alert--warning {
     @include u-bg(map-get($_alert, background-color_warning));
     @include u-border-color(map-get($_alert, border-color_warning));
   }
 
   &--error,
-  .usa-alert--error{
+  .usa-alert--error {
     @include u-bg(map-get($_alert, background-color_error));
     @include u-border-color(map-get($_alert, border-color_error));
   }

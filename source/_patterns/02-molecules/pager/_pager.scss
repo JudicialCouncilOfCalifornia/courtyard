@@ -16,7 +16,7 @@ $_config_schemes: (
       active: "blue-70v",
     ),
     current-background: "blue-50v",
-  )
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
