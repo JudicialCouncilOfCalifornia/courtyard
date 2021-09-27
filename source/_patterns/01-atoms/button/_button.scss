@@ -27,12 +27,18 @@ $_config_schemes: (
     cta-link: uppercase,
   ),
   pro: (
-    default: "blue-50v",
-    default-hover: "blue-60v",
-    default-active: "blue-70v",
+    default: $theme-link-color,
+    default-hover: $theme-link-hover-color,
+    default-active: $theme-link-active-color,
+    cta-text: $theme-link-color,
+    cta-text-hover: $theme-link-hover-color,
+    cta-text-active: $theme-link-active-color,
+    cta-icon: $theme-link-color,
+    cta-icon-hover: $theme-link-hover-color,
+    cta-icon-active: $theme-link-active-color,
+    cta-link: none,
     padding: 1,
     font-size: 5,
-    cta-link: none,
   ),
 );
 

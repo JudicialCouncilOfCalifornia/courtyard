@@ -75,6 +75,7 @@ $_config_schemes: (
     heading-size: 10,
     heading-line-height: 1,
     title-color: "gray-warm-90",
+    hover-title-color: $theme-link-color,
     title-link: (
       default: $theme-link-color,
       hover: $theme-link-hover-color,
@@ -112,14 +113,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__container {
-  @include u-border(map-get($_config, "border-color"));
-  @include u-border-width(map-get($_config, "border-width"));
-  @include u-radius(map-get($_config, "border-radius"));
+  @include u-border(map-get($_config, border-color));
+  @include u-border-width(map-get($_config, border-width));
+  @include u-radius(map-get($_config, border-radius));
   @include u-padding(3);
   @include u-z(0);
 
   .usa-card--hover & {
-    @include u-border-width(map-get($_config, "border-width"));
+    @include u-border-width(map-get($_config, border-width));
     @include u-radius($theme-card-border-radius);
     @include u-shadow(3);
     @include u-text-decoration(no-underline);
@@ -192,7 +193,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-full-overlay &,
   .usa-card--media-top-overlay & {
     .usa-card__media {
-      @each $overlay-bgcolor, $color-value in map-get($_config, "overlay-bgcolors") {
+      @each $overlay-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
         @if $overlay-bgcolor {
           .jcc-card--overlay-color-#{$overlay-bgcolor} {
             @include u-display(inline-flex);
