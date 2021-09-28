@@ -157,6 +157,14 @@
     height: 36px;
   }
 }
+.usa-button--back {
+  margin-left: -15px;
+  svg {
+    @include u-position("relative");
+    right: auto;
+    left: 0px;
+  }
+}
 .usa-button--index {
   svg {
     padding: 10px 8px 8px 8px;

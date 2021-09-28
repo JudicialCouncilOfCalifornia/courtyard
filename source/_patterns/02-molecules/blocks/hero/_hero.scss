@@ -48,13 +48,13 @@
     @include u-display("flex");
     .jcc_hero__breadcrumbs-wrapper {
       @include at-media(tablet-lg) {
-        @include grid-col(3);
+        @include grid-col(4);
       }
       align-self: center;
     }
     .jcc_hero__case-type-wrapper {
       @include at-media(tablet-lg) {
-        @include grid-col(9);
+        @include grid-col(8);
       }
       .usa-button--unstyled {
         text-decoration: none;
