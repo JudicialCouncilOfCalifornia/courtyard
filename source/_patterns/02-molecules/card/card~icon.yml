@@ -1,0 +1,9 @@
+card:
+  style: "cta"
+  title: "Consequat nostra vel"
+  icon:
+    name: "gavel"
+  body: ""
+  link:
+    url: "#"
+    text: "Luctus nunc quam"

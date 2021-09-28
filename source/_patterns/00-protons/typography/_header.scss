@@ -89,74 +89,122 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 h1,
 .jcc-h1 {
-  @include typeset(map-get($_config, h1-family), map-get($_config, h1-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h1-family),
+    map-get($_config, h1-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h1-color));
   font-weight: map-get($_config, h1-weight);
   letter-spacing: 0.153846px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h1-family), map-get($_config, h1-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h1-family),
+      map-get($_config, h1-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }
 
 h2,
 .jcc-h2 {
-  @include typeset(map-get($_config, h2-family), map-get($_config, h2-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h2-family),
+    map-get($_config, h2-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h2-color));
   font-weight: map-get($_config, h2-weight);
   letter-spacing: 0.1px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h2-family), map-get($_config, h2-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h2-family),
+      map-get($_config, h2-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }
 
 h3,
 .jcc-h3 {
-  @include typeset(map-get($_config, h3-family), map-get($_config, h3-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h3-family),
+    map-get($_config, h3-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h3-color));
   font-weight: map-get($_config, h3-weight);
   letter-spacing: 0.1px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h3-family), map-get($_config, h3-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h3-family),
+      map-get($_config, h3-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }
 
 h4,
 .jcc-h4 {
-  @include typeset(map-get($_config, h4-family), map-get($_config, h4-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h4-family),
+    map-get($_config, h4-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h4-color));
   font-weight: map-get($_config, h4-weight);
   letter-spacing: 0.4px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h4-family), map-get($_config, h4-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h4-family),
+      map-get($_config, h4-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }
 
 h5,
 .jcc-h5 {
-  @include typeset(map-get($_config, h5-family), map-get($_config, h5-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h5-family),
+    map-get($_config, h5-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h5-color));
   @include u-text(uppercase);
   font-weight: map-get($_config, h5-weight);
   letter-spacing: 2px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h5-family), map-get($_config, h5-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h5-family),
+      map-get($_config, h5-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }
 
 h6,
 .jcc-h6 {
-  @include typeset(map-get($_config, h6-family), map-get($_config, h6-mobile-size), map-get($_config, h1-line-height));
+  @include typeset(
+    map-get($_config, h6-family),
+    map-get($_config, h6-mobile-size),
+    map-get($_config, h1-line-height)
+  );
   @include u-text(map-get($_config, h6-color));
   @include u-text(no-uppercase);
   font-weight: map-get($_config, h6-weight);
   letter-spacing: 1px;
 
   @include at-media(desktop) {
-    @include typeset(map-get($_config, h6-family), map-get($_config, h6-size), map-get($_config, h1-line-height));
+    @include typeset(
+      map-get($_config, h6-family),
+      map-get($_config, h6-size),
+      map-get($_config, h1-line-height)
+    );
   }
 }

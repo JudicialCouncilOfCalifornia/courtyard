@@ -26,10 +26,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     $col2-max: $cols-max / 12 * 8 - $padding;
 
     display: grid;
-    grid-template-columns: minmax($padding, auto) minmax($col1-min, $col1-max) minmax(
-        $col2-min,
-        $col2-max
-      ) minmax($padding, auto);
+    grid-template-columns:
+      minmax($padding, auto) minmax($col1-min, $col1-max) minmax($col2-min, $col2-max)
+      minmax($padding, auto);
 
     .jcc-location-map__content-first {
       grid-column-start: 2;

@@ -22,7 +22,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section-heading__title--full {
   @include at-media-max(desktop) {
-    @include add-dash($dash-position: "above-center", $top-spacing: 0, $dash-width: 5rem, $dash-color: map-get($_config, dash-color));
+    @include add-dash(
+      $dash-position: "above-center",
+      $top-spacing: 0,
+      $dash-width: 5rem,
+      $dash-color: map-get($_config, dash-color)
+    );
   }
 
   @include at-media(desktop) {
@@ -48,7 +53,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section-heading__title--partial {
   @include at-media-max(desktop) {
-    @include add-dash($dash-position: "above-left", $dash-width: 5rem, $dash-color: map-get($_config, dash-color));
+    @include add-dash(
+      $dash-position: "above-left",
+      $dash-width: 5rem,
+      $dash-color: map-get($_config, dash-color)
+    );
   }
 
   @include at-media(desktop) {

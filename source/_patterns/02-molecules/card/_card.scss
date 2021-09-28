@@ -1,8 +1,13 @@
 $_config_schemes: (
   base: (
+    border-width: "05",
+    border-radius: "none",
+    border-color: "base-lightest",
     brow-color: base-dark,
     brow-size: 6,
     brow-weight: $theme-font-weight-normal,
+    brow-bgcolor: "gray-90",
+    brow-icon-color: "gray-80",
     heading-size: 11,
     heading-line-height: $theme-body-line-height,
     title-color: primary-darker,
@@ -16,29 +21,83 @@ $_config_schemes: (
     action-button: (
       "jcc-button--secondary",
     ),
+    action-button-justify: "justify",
     icon-color: primary-light,
+    overlay-bgcolors: (
+      none: "transparent",
+      blue: "#005EA2",
+      blue-dark: "#0B4778",
+      cyan: "#2A646D",
+      gray: "#5C5C5C",
+      green: "#15816E",
+      magenta: "#8B4566",
+      mint: "#40807E",
+      orange: "#D0744D",
+      red: "#CC6161",
+    ),
   ),
   local: (
+    border-width: "05",
+    border-radius: "none",
+    border-color: "base-lighter",
+    brow-color: "white",
+    brow-bgcolor: "gray-90",
+    brow-icon-color: "gray-80",
     title-link: (
       default: primary-vivid,
     ),
     action-button: (
       "jcc-button--cta-link",
     ),
+    action-button-justify: "justify",
+    overlay-bgcolors: (
+      none: "transparent",
+      blue: "#005EA2",
+      blue-dark: "#0B4778",
+      cyan: "#2A646D",
+      gray: "#5C5C5C",
+      green: "#15816E",
+      magenta: "#8B4566",
+      mint: "#40807E",
+      orange: "#D0744D",
+      red: "#CC6161",
+    ),
   ),
   pro: (
-    brow-color: "gray-warm-90",
+    border-width: "1px",
+    border-radius: "md",
+    border-color: "base-light",
+    brow-color: "white",
     brow-size: 5,
-    brow-weight: $theme-font-weight-bold,
+    brow-weight: $theme-font-weight-normal,
+    brow-bgcolor: "gray-90",
+    brow-icon-color: "gray-80",
     heading-size: 10,
     heading-line-height: 1,
     title-color: "gray-warm-90",
+    hover-title-color: $theme-link-color,
     title-link: (
       default: $theme-link-color,
       hover: $theme-link-hover-color,
       active: $theme-link-active-color,
     ),
+    action-button: (
+      "jcc-button--cta-link",
+    ),
+    action-button-justify: "justify-start",
     body-size: 5,
+    overlay-bgcolors: (
+      none: "transparent",
+      blue: "#005EA2",
+      blue-dark: "#0B4778",
+      cyan: "#2A646D",
+      gray: "#5C5C5C",
+      green: "#15816E",
+      magenta: "#8B4566",
+      mint: "#40807E",
+      orange: "#D0744D",
+      red: "#CC6161",
+    ),
   ),
 );
 
@@ -54,11 +113,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__container {
-  @include u-radius(0);
+  @include u-border(map-get($_config, border-color));
+  @include u-border-width(map-get($_config, border-width));
+  @include u-radius(map-get($_config, border-radius));
   @include u-padding(3);
+  @include u-z(0);
 
   .usa-card--hover & {
-    @include u-border-width(1px);
+    @include u-border-width(map-get($_config, border-width));
     @include u-radius($theme-card-border-radius);
     @include u-shadow(3);
     @include u-text-decoration(no-underline);
@@ -90,6 +152,116 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-padding-x(4);
     }
   }
+
+  .usa-card--media-full &,
+  .usa-card--media-top &,
+  .usa-card--media-full-overlay &,
+  .usa-card--media-top-overlay & {
+    .usa-card__header {
+      @include u-color("white");
+
+      .usa-card__heading {
+        @include u-color("white");
+      }
+    }
+
+    .usa-card__icon {
+      @include u-color("white");
+    }
+
+    .usa-card__media {
+      @include u-display(block);
+      @include u-position(absolute);
+      @include u-top(0);
+      @include u-right(0);
+      @include u-bottom(0);
+      @include u-left(0);
+      @include u-z(bottom);
+      @include u-width(full);
+      @include u-height(full);
+      @include u-overflow(hidden);
+
+      img,
+      picture {
+        @include u-width(full);
+        object-position: 50% 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .usa-card--media-full-overlay &,
+  .usa-card--media-top-overlay & {
+    .usa-card__media {
+      @each $overlay-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
+        @if $overlay-bgcolor {
+          .jcc-card--overlay-color-#{$overlay-bgcolor} {
+            @include u-display(inline-flex);
+            @include u-position(absolute);
+            @include u-top(0);
+            @include u-left(0);
+            @include u-width(full);
+            background-color: #{$color-value};
+          }
+        }
+      }
+
+      img,
+      picture {
+        object-position: 50% 50%;
+        opacity: 0.1;
+      }
+
+      .jcc-card--overlay-color-none img {
+        opacity: 1;
+      }
+    }
+  }
+
+  .usa-card--media-full &,
+  .usa-card--media-full-overlay & {
+    @include u-color("white");
+
+    .usa-card__media {
+      img,
+      picture {
+        @include u-minh(viewport);
+      }
+
+      &::after {
+        @include u-height(full);
+      }
+    }
+
+    .usa-card__footer a {
+      @include u-color("white");
+      &::after {
+        @include u-bg("white");
+      }
+    }
+  }
+
+  .usa-card--media-top &,
+  .usa-card--media-top-overlay & {
+    .usa-card__header {
+      @include u-position(relative);
+      @include u-padding(0);
+      height: calc(10rem - 28px);
+
+      .usa-card__heading {
+        @include u-position(absolute);
+        @include u-bottom(1);
+        white-space: nowrap;
+      }
+    }
+
+    .usa-card__media {
+      img,
+      picture {
+        height: 10rem;
+      }
+    }
+  }
 }
 
 .usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
@@ -102,6 +274,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-justify-content(justify);
   @include u-width(full);
   @include u-height(full);
+}
+
+.usa-card__header {
+  @include u-padding-bottom(0);
 }
 
 .usa-card__header {
@@ -137,10 +313,38 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__brow {
   @include u-margin-bottom(1);
   @include u-order(0);
-  @include u-color(map-get($_config, brow-color));
   letter-spacing: 0.09px;
   @include typeset(body, map-get($_config, brow-size), $theme-body-line-height);
   font-weight: map-get($_config, brow-weight);
+
+  .usa-card__brow-color,
+  .usa-card__brow-color > div:first-child {
+    @include u-display(inline);
+    @include u-bg(map-get($_config, brow-bgcolor));
+    @include u-color(map-get($_config, brow-color));
+    @include u-margin-left("neg-3");
+    @include u-padding(1);
+    padding-left: 23px;
+  }
+}
+
+.usa-card__icon {
+  @include u-float("right");
+  @include u-color(map-get($_config, brow-icon-color));
+
+  .icon {
+    width: 32px;
+    height: 24px;
+  }
+}
+
+.usa-card__icon-no-brow {
+  @include u-color(map-get($_config, brow-icon-color));
+
+  .icon {
+    width: 32px;
+    height: 24px;
+  }
 }
 
 .usa-card__footer {
@@ -153,6 +357,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   a {
     @each $button in map-get($_config, action-button) {
       @extend .#{$button};
+      @include u-justify-content(map-get($_config, action-button-justify));
+    }
+    &::after {
+      @include u-width(2);
+      @include u-height(2);
     }
   }
 }

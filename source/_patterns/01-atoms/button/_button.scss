@@ -19,7 +19,7 @@ $_config_schemes: (
     outline-border-color: #005ea2,
     outline-border-color-hover: #005ea2,
     outline-border-color-active: #005ea2,
-    outline-disabled: #C9C9C9,
+    outline-disabled: #c9c9c9,
     outline-disabled-text: $theme-color-disabled,
     external: secondary,
     external-hover: secondary-dark,
@@ -34,11 +34,14 @@ $_config_schemes: (
     cta-icon: secondary,
     cta-icon-hover: secondary-light,
     cta-icon-active: secondary-dark,
+    cta-link: uppercase,
     inline-icon: primary,
     padding: 2,
     font-size: null,
   ),
-  local: (),
+  local: (
+    cta-link: uppercase,
+  ),
   pro: (
     default: "blue-60v",
     default-hover: "blue-50",
@@ -52,12 +55,19 @@ $_config_schemes: (
     outline-active-text: "blue-60v",
     outline-focus: "blue-5v",
     outline-focus-text: "blue-60v",
-    outline-disabled: #ADADAD,
+    outline-disabled: #adadad,
     outline-disabled-text: $theme-color-disabled-dark,
     outline-border-width: 1px,
     outline-border-color: #2378c3,
-    outline-border-color-hover: #73B3E7,
-    outline-border-color-active: #73B3E7,
+    outline-border-color-hover: #73b3e7,
+    outline-border-color-active: #73b3e7,
+    cta-text: $theme-link-color,
+    cta-text-hover: $theme-link-hover-color,
+    cta-text-active: $theme-link-active-color,
+    cta-icon: $theme-link-color,
+    cta-icon-hover: $theme-link-hover-color,
+    cta-icon-active: $theme-link-active-color,
+    cta-link: none,
     padding: 1,
     font-size: 5,
   ),
@@ -291,27 +301,31 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @extend %jcc-button;
   @extend .usa-button--outline;
   //@include u-color(map-get($_config, outline-text));
-  box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color);
+  box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+    map-get($_config, outline-border-color);
 
   &:hover,
   &.jcc-button--hover {
     @include set-text-and-bg(map-get($_config, outline-hover), $context: $button-context);
     @include u-color(map-get($_config, outline-hover-text));
-    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-hover);
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+      map-get($_config, outline-border-color-hover);
   }
 
   &:active,
   &.jcc-button--active {
     @include set-text-and-bg(map-get($_config, outline-active), $context: $button-context);
     @include u-color(map-get($_config, outline-active-text));
-    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-active);
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+      map-get($_config, outline-border-color-active);
   }
 
   &:focus,
   &.usa-focus {
     @include set-text-and-bg(map-get($_config, outline-focus), $context: $button-context);
     @include u-color(map-get($_config, outline-focus-text));
-    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-border-color-active);
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+      map-get($_config, outline-border-color-active);
   }
 
   &:disabled,
@@ -319,11 +333,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @extend .usa-button--outline:disabled;
     @include u-bg("transparent");
     @include u-color(map-get($_config, outline-disabled-text));
-    box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-disabled);
+    box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+      map-get($_config, outline-disabled);
 
     &:hover {
       @include u-bg("transparent");
-      box-shadow: inset 0 0 0 map-get($_config, outline-border-width) map-get($_config, outline-disabled);
+      box-shadow: inset 0 0 0 map-get($_config, outline-border-width)
+        map-get($_config, outline-disabled);
     }
   }
 }
@@ -428,7 +444,7 @@ a.jcc-button--cta-link {
   @include u-padding(0);
   @include u-bg("transparent");
   @include u-font-weight(normal);
-  @include u-text(uppercase);
+  text-transform: (map-get($_config, cta-link));
   @include u-text-align(left);
   font-size: font-size("sans", 7);
   letter-spacing: 1.8px;

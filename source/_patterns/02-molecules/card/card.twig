@@ -2,15 +2,21 @@
 /**
  * Available variables:
  * - card - primary variable
- *   - style: general style of card [hover, cta, borderless, media-left]
+ *   - style: general style of card [hover, cta, cta-color, borderless, media-left, media-full,
+ *        media-full-overlay, media-top, media-top-overlay]
  *   - title: title of card
  *   - title_tag: tag/size of card title
  *   - brow: text in upper left
+ *   - icon: icon in brow
  *   - body: main text content
  *   - link: card link/button
  *     - url: card link/button url
  *     - text: card link/button text
  *     - type: card link/button type (n/a or external or file) [ext, file]
+ *   - media: icon as embeded svg code
+ *     - src: image source file or URL for use as background image
+ *     - alt: image alt description
+ *   _ bgcolor: overlay color [none, blue, blue-dark, cyan, gray, green, magenta, mint, orange, red]
  *   - classes: array of classes to add to component
  */
 #}
@@ -42,7 +48,38 @@
     <div class="usa-card__content">
       <header class="usa-card__header">
         {% if card.brow %}
-          <div class="usa-card__brow">{{ card.brow }}</div>
+          <div class="usa-card__brow">
+            {% if 'cta-color' in style or 'media-full' in style or 'media-top' in style %}
+              <div class="usa-card__brow-color">{{ card.brow }}</div>
+            {% else %}
+              {{ card.brow }}
+            {% endif %}
+
+          {% if card.icon %}
+            <div class="usa-card__icon">
+              {% include "@atoms/icon/icon.twig" with {
+                icon: {
+                  name: card.icon.name,
+                  set: "fa"
+                }
+              } %}
+            </div>
+          {% endif %}
+
+          </div>
+        {% else %}
+          {% if card.icon %}
+            <div class="usa-card__brow">
+              <div class="usa-card__icon-no-brow">
+                {% include "@atoms/icon/icon.twig" with {
+                  icon: {
+                    name: card.icon.name,
+                    set: "fa"
+                  }
+                } %}
+              </div>
+            </div>
+          {% endif %}
         {% endif %}
 
         <{{ heading_tag }} class="usa-card__heading" id="{{ unique_id }}">
@@ -60,16 +97,26 @@
         </div>
       {% endif %}
 
-      {% if (style == 'cta' or style == 'media-left') and card.link.url %}
-        <div class="usa-card__footer">
-          <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
-        </div>
+      {% if ('cta' in style or 'media' in style) and card.link.url %}
+        {% if card.link.text %}
+          <div class="usa-card__footer">
+            <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
+          </div>
+        {% endif %}
       {% endif %}
     </div>
 
     {% if card.media %}
       <div class="usa-card__media">
+      {# check if an media item on the left exists as embeded into card.media rather than card.media.src
+         so that we do not break existing local theme usage #}
+      {% if not card.media.src %}
         <span>{{ card.media }}</span>
+      {% else %}
+        <div class="jcc-card--overlay-color-{{ card.bgcolor }}">
+          <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+        </div>
+      {% endif %}
       </div>
     {% endif %}
   </div>
