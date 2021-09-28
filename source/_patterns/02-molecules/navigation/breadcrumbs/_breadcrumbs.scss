@@ -1,6 +1,6 @@
 .jcc-breadcrumbs-nav {
   &.has-back-button {
-    @include u-display("flex");
+    //@include u-display("flex");
     @include u-align-items("align-center");
 
     .usa-button--back {
