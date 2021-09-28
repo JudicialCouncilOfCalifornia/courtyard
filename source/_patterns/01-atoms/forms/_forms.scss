@@ -49,6 +49,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   margin-top: 0;
 }
 
+label.form-required:after {
+  @include u-color(error);
+  @include u-margin-x(0.5);
+  content: "*";
+  display: inline;
+  position: relative;
+}
+
 .jcc-fieldset-search {
   @include u-maxw("mobile-lg");
   @include u-minw(15);
@@ -96,14 +104,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
   .form-actions {
     @include u-padding-top(2);
-  }
-
-  label.form-required:after {
-    @include u-color(error);
-    @include u-margin-x(0.5);
-    content: "*";
-    display: inline;
-    position: relative;
   }
 
   .webform-multiple-table {
