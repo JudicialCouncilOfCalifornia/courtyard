@@ -3,21 +3,39 @@ $_config_schemes: (
     button: (
       "jcc-button--primary",
     ),
+    top-padding: 9,
+    column-gap: 4,
+    card-bottom-margin: 4,
+  ),
+  local: (
+    top-padding: 9,
+    column-gap: 4,
+    card-bottom-margin: 4,
+  ),
+  pro: (
+    top-padding: "05",
+    column-gap: 1,
+    card-bottom-margin: 1,
   ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+// adjust cards layout by theme for top padding
+.jcc-section {
+  @include u-padding-top(map-get($_config, top-padding));
+}
 
 .jcc-cards {
   @include unstyled-list();
 
   @include at-media(tablet-lg) {
     @include grid-row();
-    @include grid-gap(4);
+    @include grid-gap(map-get($_config, column-gap));
   }
 
   > li {
-    @include u-margin-bottom(4);
+    @include u-margin-bottom(map-get($_config, card-bottom-margin));
   }
 }
 
