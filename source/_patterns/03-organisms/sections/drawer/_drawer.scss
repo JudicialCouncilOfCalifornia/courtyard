@@ -58,6 +58,12 @@
       .jcc-feedback {
         @include grid-col(auto);
       }
+
+      & > div {
+        button {
+          @include u-width("full", !important);
+        }
+      }
     }
 
     .block--single {
@@ -65,12 +71,25 @@
       @include u-width("full");
     }
 
-    .jcc-feedback__trigger-container {
+    // BEGIN Chat button plus third party adjustments
+    .jcc-chat {
+      @extend .jcc-feedback;
+    }
+
+    .jcc-chat__trigger-container {
+      @extend .jcc-feedback__trigger-container;
+
       button {
-        @include u-width("full");
-        @include at-media("desktop") {
-          @include u-width("auto");
+        @include u-border-left(1px);
+        border-color: #6d8aac;
+        @include at-media("tablet-lg") {
+          @include u-border(0);
         }
+      }
+
+      .icon-chat {
+        @extend .icon-like-dislike;
+        @include u-width(4, !important);
       }
     }
   }
