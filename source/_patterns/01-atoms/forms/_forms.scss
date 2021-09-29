@@ -49,6 +49,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   margin-top: 0;
 }
 
+span.form-required:after,
 label.form-required:after {
   @include u-color(error);
   @include u-margin-x(0.5);
