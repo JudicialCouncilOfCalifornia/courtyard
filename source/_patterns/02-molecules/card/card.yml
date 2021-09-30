@@ -2,6 +2,7 @@ card:
   style: "cta"
   title: "Consequat nostra vel"
   body: "<p>Lacus nec laoreet velit augue tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  extra_content: "<span>Extra content</span><ul><li>Item 1</li><li>Item 2</li></ul>"
   link:
     url: "#"
     text: "Luctus nunc quam"
