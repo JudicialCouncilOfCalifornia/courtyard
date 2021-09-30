@@ -97,6 +97,12 @@
         </div>
       {% endif %}
 
+      {% if card.extra_content %}
+        <div class="usa-card__body usa-prose usa-extra_content">
+          {{ card.extra_content }}
+        </div>
+      {% endif %}
+
       {% if ('cta' in style or 'media' in style) and card.link.url %}
         {% if card.link.text %}
           <div class="usa-card__footer">
