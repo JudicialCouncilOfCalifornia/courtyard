@@ -6,7 +6,7 @@ const $feedback_container = $('[data-feedback="container"]');
 const $drawer = $(".jcc-drawer");
 const $feedback_dialog = $('[data-feedback="dialog"]');
 const $footer_spacer = $(".usa-footer .jcc-global-bar");
-const $cta_block = $(".jcc-drawer__inner > .block"); // If feedback has a block container
+const $cta_feedback = $(".jcc-drawer__inner > .block:first-child");
 
 const pageIsShorterThanWindow = ($offset = 0) => {
   return $(document).height() - $offset <= $window.height();
@@ -25,11 +25,13 @@ const isNoPageScroll = () => {
 
 // Adjusts primary button if another button exists or not (e.g. ChatBot).
 const siblingCheck = () => {
-  if (window.innerWidth < 1024 && $(".jcc-drawer__inner .block").length == 0) {
-    $cta_block.addClass("block--single");
+  if (window.innerWidth < 1024 && $(".jcc-drawer__inner > .block").length == 1) {
+    if ($(".jcc-drawer__inner > .block > .jcc-feedback").length == 1) {
+      $cta_feedback.addClass("block--single");
+    }
     $feedback_container.attr("style", "width: 100%");
   } else {
-    $cta_block.removeClass("block--single");
+    $cta_feedback.removeClass("block--single");
     $feedback_container.removeAttr("style");
   }
 };
@@ -73,15 +75,15 @@ if (!isNoPageScroll()) {
 // Widget interaction/visibility.
 function toggleChat() {
   // Show/hide chat when feedback dialog is toggled.
-  if ($feedback_dialog.attr("open")) {
-    $(".jcc-drawer__inner .block").hide();
+  if ($feedback_dialog.attr("open") && $(".jcc-drawer__inner > .block").length == 2) {
+    $(".jcc-drawer__inner > .block:last-child").hide();
   } else {
-    $(".jcc-drawer__inner .block").show();
+    $(".jcc-drawer__inner > .block:last-child").show();
   }
 }
 $feedback_trigger.on("click", function(e) {
   e.preventDefault;
-  setTimeout(toggleChat(), 400);
+  setTimeout(toggleChat(), 1000);
 });
 
 // Hide feeback widget when chatbot opens.
