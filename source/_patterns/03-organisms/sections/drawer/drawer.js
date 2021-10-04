@@ -81,7 +81,7 @@ function toggleChat() {
 }
 $feedback_trigger.on("click", function(e) {
   e.preventDefault;
-  setTimeout(toggleChat(), 300);
+  setTimeout(toggleChat(), 400);
 });
 
 // Hide feeback widget when chatbot opens.
