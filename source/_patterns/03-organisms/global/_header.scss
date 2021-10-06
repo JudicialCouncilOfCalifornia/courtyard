@@ -846,7 +846,7 @@ $_hat: map-get($_config, hat);
       @include u-width(full);
       @include u-height(full);
       @include u-bg(map-get($_header, masthead-background-default));
-      opacity: 0.9;
+      opacity: 0.7;
       content: "";
     }
   }
