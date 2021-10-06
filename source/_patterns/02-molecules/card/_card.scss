@@ -109,7 +109,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-card--hover {
   @include u-display(block);
-  @include u-text-decoration(underline);
+  @include u-text-decoration(no-underline);
 }
 
 .usa-card__container {
