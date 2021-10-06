@@ -165,6 +165,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
     }
 
+    .usa-card__icon-no-brow {
+      @include u-color("white");
+    }
+
     .usa-card__icon {
       @include u-color("white");
     }

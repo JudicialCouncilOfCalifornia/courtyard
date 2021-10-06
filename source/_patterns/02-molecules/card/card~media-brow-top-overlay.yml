@@ -1,5 +1,5 @@
 card:
-  style: "media-full-overlay"
+  style: "media-top-overlay"
   title: "Posuere et ornare"
   brow: "Pellentesque tempo"
   icon:
@@ -11,4 +11,4 @@ card:
   link:
     url: "#"
     text: "Luctus nunc quam"
-  bgcolor: "blue"
+  bgcolor: "blue-dark"

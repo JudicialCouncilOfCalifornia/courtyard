@@ -1,7 +1,6 @@
 card:
-  style: "media-top"
+  style: "media-top-overlay"
   title: "Posuere et ornare"
-  brow: "Pellentesque tempo"
   icon:
     name: "gavel"
   body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
@@ -11,3 +10,4 @@ card:
   link:
     url: "#"
     text: "Luctus nunc quam"
+  bgcolor: "blue-dark"
