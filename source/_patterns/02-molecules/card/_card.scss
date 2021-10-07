@@ -8,6 +8,7 @@ $_config_schemes: (
     brow-weight: $theme-font-weight-normal,
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-top-space: 0,
     heading-size: 11,
     heading-line-height: $theme-body-line-height,
     title-color: primary-darker,
@@ -43,6 +44,7 @@ $_config_schemes: (
     brow-color: "white",
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-top-space: 0,
     title-link: (
       default: primary-vivid,
     ),
@@ -72,6 +74,7 @@ $_config_schemes: (
     brow-weight: $theme-font-weight-normal,
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-top-space: 6,
     heading-size: 10,
     heading-line-height: 1,
     title-color: "gray-warm-90",
@@ -330,6 +333,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-padding(1);
     padding-left: 23px;
   }
+}
+
+.usa-card__brow + .usa-card__heading {
+  @include u-padding-top(map-get($_config, heading-top-space));
 }
 
 .usa-card__icon {
