@@ -1,0 +1,73 @@
+{#
+/**
+ * Available variables:
+ * - card - primary variable
+ *   - icon: displays icon "bullet", default is file if simply set to true
+ *       - name: icon name
+ *       - title: accessible, short description for the icon
+ *       - set: icon family
+ *       - width: width size adjustent
+ *       - height: height size adjustment
+ *   - columns: auto renders items into columns [2,3,4]
+ *   - items: array of list items
+ */
+#}
+
+{% set classes = [
+  'jcc-list',
+  list.columns ? 'jcc_link-list--multicolumn' : '',
+  list.icon ? 'jcc-list--files' : '',
+]|merge(list.classes|default([''])) %}
+
+{% import _self as lists %}
+
+{% macro list(items, icon) %}
+  {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
+  <ul class="jcc-list__list">
+    {% for item in items %}
+      <li class="jcc-list__item">
+        {% if icon %}
+          {% set icon = item.icon|default({
+            name: 'file',
+            title: 'File'|t,
+            set: 'fa',
+            width: 20,
+            height: 20,
+            decorative: false,
+          }) %}
+          <span class="jcc-list__icon">
+            {% include '@atoms/icon/icon.twig' with  { icon: icon } %}
+          </span>
+        {% endif %}
+
+        <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+
+        {# When we merge with the original/SRL link-list as a single base
+        {% if item.name %}
+          {{ item.name }}
+
+          (<a{% if list.icon %} download{% endif %} href="{{ item.url }}"{{ url_attributes }}>
+          {{- item.url_title -}}
+        </a>)
+        {% else %}
+          <a href="{{ item.url }}">{{ item.url_title }}</a>
+        {% endif %}
+        #}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% if list.columns and list.columns > 1 %}
+    <div class="jcc_list--multicolumn jcc_list--col-{{ list.columns }}">
+      {% set group_items = list.items %}
+      {% set batch_size = group_items|length/list.columns %} {# max columns #}
+      {% for group_item in group_items|batch(batch_size) %}
+        {{ lists.list(group_item, list.icon) }}
+      {% endfor %}
+    </div>
+  {% else %}
+    {{ lists.list(list.items, list.icon) }}
+  {% endif %}
+</div>
