@@ -34,7 +34,7 @@
   }
 
   &:visited {
-    @include u-text($dark-background-link-color-active);
+    //@include u-text($dark-background-link-color-active);
   }
 }
 
