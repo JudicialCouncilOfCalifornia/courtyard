@@ -212,7 +212,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
           }
         }
       }
-
+      .jcc-card--overlay-color-{
+        @include u-display(inline-flex);
+        @include u-position(absolute);
+        @include u-top(0);
+        @include u-left(0);
+        @include u-width(full);
+      }
       img,
       picture {
         object-position: 50% 50%;
@@ -230,9 +236,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-color("white");
 
     .usa-card__media {
+      & > div {
+        bottom:0;
+      }
       img,
       picture {
-        @include u-minh(viewport);
+        //@include u-minh(viewport);
+        min-height:100%;
       }
 
       &::after {
