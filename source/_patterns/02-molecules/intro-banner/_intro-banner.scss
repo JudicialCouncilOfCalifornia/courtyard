@@ -26,6 +26,7 @@ $_banner: map-get($_config, banner);
 .jcc-banner {
   @include u-position(relative);
   @include u-z(500);
+  @include u-margin-bottom(4);
 }
 
 .jcc-intro-banner {
@@ -65,6 +66,10 @@ $_banner: map-get($_config, banner);
         @include u-text-decoration(underline);
         text-decoration-thickness: 2px;
       }
+    }
+
+    .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link)::after {
+      @include u-bg(map-get($_banner, intro-banner-text));
     }
   }
 
