@@ -35,12 +35,12 @@ $_banner: map-get($_config, banner);
   overflow: hidden;
 
   .intro-banner__content {
-    @include u-padding(8);
     @include at-media(desktop) {
       width: 66%;
     }
     min-height: 360px;
     position: relative;
+    padding: 4rem 5rem 6rem 6rem;
 
     &::after {
       @include u-display(inline-block);
