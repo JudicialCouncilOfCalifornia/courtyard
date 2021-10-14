@@ -20,6 +20,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .jcc-step {
     @include u-margin-top(2);
     @include u-padding-bottom(7);
+    display: inline-block;
 
     @include at-media(desktop) {
       @include u-padding-bottom(10);
@@ -61,6 +62,19 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       right: 0;
       bottom: 0;
       left: -5px;
+    }
+  }
+
+  &.jcc_custom-index {
+    &::before {
+      content: attr(data-index);
+      @include u-font(serif, 5);
+      text-align: center;
+      padding: .9rem 0.2rem;
+      @include at-media(desktop) {
+        padding: 1.1rem 0.3rem;
+        @include u-font(serif, 8);
+      }
     }
   }
 
