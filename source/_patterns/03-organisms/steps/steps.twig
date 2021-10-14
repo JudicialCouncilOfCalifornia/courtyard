@@ -26,7 +26,7 @@
 
     <ul class="jcc-steps__items">
       {% for item in steps.items %}
-        <li class="jcc-steps__item">
+        <li class="jcc-steps__item {{ item.index=='' ? '' :'jcc_custom-index' }}" data-index="{{ item.index }}">
           {% include "@molecules/step/step.twig" with {
             step: item
           } %}

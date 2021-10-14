@@ -27,10 +27,12 @@ steps:
         The debt collector has 10 days (15 if the sheriff serves them by mail) to oppose your claim. If not opposed, your claim is granted, and the amount of money claimed as exempt is returned.
         <blockquote class="blockquote--alert--warning"><h3>alert: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
     - title: "Fames senectus primis, sociis feugiat etiam viverra purus donec posuere."
+      index: "2019"
       body: >
         Sollicitudin sit nunc netus montes mauris conubia nascetur tempor, nostra nibh mi tempus vitae nullam pharetra, sociosqu consequat nulla ultricies condimentum lobortis posuere.
         <blockquote class="blockquote--alert--error"><h3>alert: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
     - title: null
+      index: "2020"
       body: >
         Sollicitudin sit nunc netus montes mauris conubia nascetur tempor, nostra nibh mi tempus vitae nullam pharetra, sociosqu consequat nulla ultricies condimentum lobortis posuere.
         <blockquote class="blockquote--alert--success"><h3>alert: Dictumst facilisi urna quisque vulputate integer nulla, gravida metus inceptos donec nisi orci nam, accumsan hendrerit consectetur nisl odio.</h3></blockquote>
