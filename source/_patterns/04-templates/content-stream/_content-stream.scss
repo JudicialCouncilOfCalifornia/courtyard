@@ -52,4 +52,8 @@
       }
     }
   }
+
+  .usa-card__brow + .usa-card__heading {
+    @include u-padding-top(0);
+  }
 }
