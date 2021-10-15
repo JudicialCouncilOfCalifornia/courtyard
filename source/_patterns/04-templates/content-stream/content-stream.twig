@@ -18,14 +18,12 @@
 
 {% set content = [] %}
 {% for item in content_stream.items %}
-  {% if item.media %}
-    {% set image = null %}
-    {% if loop.first %}
-      {% set card_style = 'borderless usa-card--media-left' %}
-      {% set image %}
-        <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
-      {% endset %}
-    {% endif %}
+  {% set image = null %}
+  {% if loop.first and item.media.src is defined and item.media.src is not null  %}
+    {% set card_style = 'borderless usa-card--media-left' %}
+    {% set image %}
+      <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
+    {% endset %}
   {% endif %}
 
   {% set content = content|merge([{
