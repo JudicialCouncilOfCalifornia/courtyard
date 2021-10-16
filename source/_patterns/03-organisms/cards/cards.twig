@@ -20,7 +20,9 @@
   'jcc-cards--' ~ cards.num_cols|default('3') ~ '-cols',
 ]|merge(cards.classes|default([])) %}
 
-{% set content %}
+{% import _self as sections %}
+
+{% macro section(classes, cards) %}
   <ul class="{{ classes|join(' ')|trim }}">
     {% for item in cards.items %}
       {% set item = item|merge({ title_tag: tag }) %}
@@ -37,13 +39,21 @@
       <a href="{{ cards.link.url }}">{{ cards.link.text }}</a>
     </div>
   {% endif %}
-{% endset %}
+{% endmacro %}
 
-{% include "@molecules/section/section.twig" with {
-  section: {
-    heading: cards.heading,
-    content: content,
-    background: cards.background|default('default'),
-    spacing: cards.spacing|default('default'),
-  }
-} %}
+{% if cards.no_container %}
+  {{ sections.section(classes, cards) }}
+{% else %}
+  {% set content %}
+    {{ sections.section(classes, cards) }}
+  {% endset %}
+
+  {% include "@molecules/section/section.twig" with {
+    section: {
+      heading: cards.heading,
+      content: content,
+      background: cards.background|default('default'),
+      spacing: cards.spacing|default('default'),
+    }
+  } %}
+{% endif %}

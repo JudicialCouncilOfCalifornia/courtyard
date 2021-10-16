@@ -21,11 +21,6 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-// adjust cards layout by theme for top padding
-.jcc-section {
-  @include u-padding-top(map-get($_config, top-padding));
-}
-
 .jcc-cards {
   @include unstyled-list();
 
