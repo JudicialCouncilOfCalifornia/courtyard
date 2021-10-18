@@ -27,6 +27,7 @@
 {% set heading_tag = card.card_title_tag|default('h3') %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
+{% set icon_set = card.icon.set|default('fa') %}
 
 {% if style == 'hover' %}
   {% if card.link.url %}
@@ -60,7 +61,7 @@
               {% include "@atoms/icon/icon.twig" with {
                 icon: {
                   name: card.icon.name,
-                  set: "fa"
+                  set: icon_set
                 }
               } %}
             </div>
