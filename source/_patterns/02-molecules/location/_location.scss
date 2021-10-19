@@ -59,7 +59,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-location__title {
   @include u-margin-bottom(1);
   @include u-color(map-get($_config, title));
-  @extend .jcc-h4;
 }
 
 .jcc-location__brow {
