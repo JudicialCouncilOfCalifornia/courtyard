@@ -4,6 +4,10 @@ $_config_schemes: (
     line-color: "secondary",
   ),
   local: (),
+  pro :(
+    number-color: "primary",
+    line-color: "primary",
+  )
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
