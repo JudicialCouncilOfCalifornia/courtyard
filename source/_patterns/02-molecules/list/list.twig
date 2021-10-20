@@ -17,6 +17,7 @@
   'jcc-list',
   list.columns ? 'jcc_link-list--multicolumn' : '',
   list.icon ? 'jcc-list--files' : '',
+  'jcc-list--anchor-' ~ list.anchor_align|default('left'),
 ]|merge(list.classes|default([''])) %}
 
 {% import _self as lists %}
@@ -41,6 +42,9 @@
         {% endif %}
 
         <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+        {% if item.description %}
+          {{ item.description }}
+        {% endif %}
 
         {# When we merge with the original/SRL link-list as a single base
         {% if item.name %}

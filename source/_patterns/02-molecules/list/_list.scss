@@ -3,6 +3,24 @@
     @include unstyled-list();
   }
 
+  &--anchor-left {
+    .jcc-list__item {
+      a {
+        @include u-margin-right(2);
+      }
+    }
+  }
+
+  &--anchor-right {
+    .jcc-list__item {
+      @include u-display(flex);
+
+      a {
+        @include u-order(1);
+        @include u-margin-left(2);
+      }
+    }
+  }
 }
 
 .jcc-list__item {
