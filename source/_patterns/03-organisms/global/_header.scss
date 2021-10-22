@@ -595,8 +595,10 @@ $_hat: map-get($_config, hat);
   @include u-bg(map-get($_header, masthead-background-default));
   @include text-color(map-get($_header, masthead-text));
   padding-bottom: 5.875rem;
-  &.jcc-header--has-body{
-    padding-bottom: 3rem;
+  @include at-media(tablet-lg) {
+    &.jcc-header--has-body {
+      padding-bottom: 3rem;
+    }
   }
 
   .jcc-header__navbar {
@@ -776,7 +778,7 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__body {
-    @include u-position(relative);
+    @include u-position(absolute);
     @include u-left(0);
     @include u-right(0);
     @include u-width(widescreen);
@@ -785,6 +787,9 @@ $_hat: map-get($_config, hat);
     iframe{
       padding-top: 1rem;
       max-height: 75px;
+    }
+    @include at-media(tablet-lg) {
+      @include u-position(relative);
     }
   }
 
@@ -795,8 +800,10 @@ $_hat: map-get($_config, hat);
 
   &.mega {
     padding-bottom: 16.563rem;
-    &.jcc-header--has-body{
-      padding-bottom: 11rem;
+    @include at-media(tablet-lg) {
+      &.jcc-header--has-body {
+        padding-bottom: 11rem;
+      }
     }
 
     .jcc-header__logo-container--alt-position {
