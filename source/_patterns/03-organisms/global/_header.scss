@@ -595,6 +595,9 @@ $_hat: map-get($_config, hat);
   @include u-bg(map-get($_header, masthead-background-default));
   @include text-color(map-get($_header, masthead-text));
   padding-bottom: 5.875rem;
+  &.jcc-header--has-body{
+    padding-bottom: 3rem;
+  }
 
   .jcc-header__navbar {
     @include u-bg("transparent");
@@ -773,12 +776,16 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__body {
-    @include u-position(absolute);
+    @include u-position(relative);
     @include u-left(0);
     @include u-right(0);
     @include u-width(widescreen);
     @include u-margin-x(auto);
     @include u-padding-x(4);
+    iframe{
+      padding-top: 1rem;
+      max-height: 75px;
+    }
   }
 
   .jcc-header__mobile-button-open,
@@ -788,6 +795,9 @@ $_hat: map-get($_config, hat);
 
   &.mega {
     padding-bottom: 16.563rem;
+    &.jcc-header--has-body{
+      padding-bottom: 11rem;
+    }
 
     .jcc-header__logo-container--alt-position {
       .usa-logo {
