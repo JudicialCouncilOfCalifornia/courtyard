@@ -597,7 +597,7 @@ $_hat: map-get($_config, hat);
   padding-bottom: 5.875rem;
   @include at-media(tablet-lg) {
     &.jcc-header--has-body {
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -785,8 +785,8 @@ $_hat: map-get($_config, hat);
     @include u-margin-x(auto);
     @include u-padding-x(4);
     iframe{
-      padding-top: 1rem;
-      max-height: 75px;
+      margin-top: 1rem;
+      //max-height: 75px;
     }
     @include at-media(tablet-lg) {
       @include u-position(relative);

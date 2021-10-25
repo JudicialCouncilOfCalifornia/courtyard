@@ -22,7 +22,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include unstyled-list();
 
   .jcc-step {
-    @include u-margin-top(2);
+    margin-top: .7rem;
     @include u-padding-bottom(7);
     display: inline-block;
 
@@ -76,7 +76,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       text-align: center;
       padding: .9rem 0.2rem;
       @include at-media(desktop) {
-        padding: 1.1rem 0.3rem;
+        padding: 1.3rem 0.3rem;
         @include u-font(serif, 8);
       }
     }
