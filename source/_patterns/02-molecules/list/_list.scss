@@ -40,6 +40,7 @@
 .jcc-list--multicolumn {
   @include grid-row();
   @include grid-gap(4);
+  @include u-margin-x(0);
 
   > .jcc-list__list {
     @include grid-col(12);
