@@ -1,3 +1,17 @@
+$_config_schemes: (
+  base: (
+    dash-text-background: true,
+  ),
+  local: (),
+  pro: (
+    dash-text-background: false,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+$text-background: map-get($_config, dash-text-background);
+
 // Adds decorative dash to headers
 // below-center, above-left, above-center, left-right, right
 @mixin add-dash(
@@ -6,7 +20,7 @@
   $dash-width: null,
   $top-spacing: 28px,
   $inner-spacing: 0,
-  $inner-color: null
+  $inner-color: null,
 ) {
   position: relative;
 
@@ -107,12 +121,14 @@
     // box-shadow adds padding around multi-line text
     // see https://css-tricks.com/multi-line-padded-text/
     // Put background gradient under span to hide line
-    span {
-      position: relative;
-      background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
-      box-shadow: 30px 15px 0 color($inner-color);
-      box-decoration-break: clone;
-      z-index: 1;
+    @if $text-background == true {
+      span {
+        position: relative;
+        background: linear-gradient(0deg, color($inner-color) 70%, transparent 70%);
+        box-shadow: 30px 15px 0 color($inner-color);
+        box-decoration-break: clone;
+        z-index: 1;
+      }
     }
   }
 }

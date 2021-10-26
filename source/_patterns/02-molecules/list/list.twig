@@ -41,8 +41,8 @@
           decorative: false,
         }) %}
         <span class="jcc-list__icon">
-            {% include '@atoms/icon/icon.twig' with  { icon: icon } %}
-          </span>
+          {% include '@atoms/icon/icon.twig' with  { icon: icon } %}
+        </span>
       {% endif %}
 
       <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
