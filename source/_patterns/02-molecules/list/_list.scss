@@ -1,7 +1,5 @@
 .jcc-list {
-  &__list {
-    @include unstyled-list();
-  }
+  @include u-margin-bottom(4);
 
   &--anchor-left {
     .jcc-list__item {
@@ -21,13 +19,25 @@
       }
     }
   }
+
+  ul, ol {
+    @include u-padding-left(3);
+  }
+}
+
+.jcc-list--style {
+  &-none {
+    .jcc-list__list {
+      @include unstyled-list();
+    }
+  }
 }
 
 .jcc-list__item {
-  @include u-margin-bottom(2, !important);
+  @include u-margin-bottom(1, !important);
 }
 
-.jcc_list--multicolumn {
+.jcc-list--multicolumn {
   @include grid-row();
   @include grid-gap(4);
 
@@ -35,7 +45,7 @@
     @include grid-col(12);
   }
 
-  &.jcc_list--col-2 {
+  &.jcc-list--col-2 {
     > .jcc-list__list {
       @include at-media(tablet) {
         @include grid-col(6);
@@ -43,7 +53,7 @@
     }
   }
 
-  &.jcc_list--col-3 {
+  &.jcc-list--col-3 {
     > .jcc-list__list {
       @include at-media(tablet) {
         @include grid-col(4);
@@ -51,7 +61,7 @@
     }
   }
 
-  &.jcc_list--col-4 {
+  &.jcc-list--col-4 {
     > .jcc-list__list {
       @include at-media(tablet) {
         @include grid-col(3);

@@ -1,7 +1,8 @@
 {#
 /**
  * Available variables:
- * - card - primary variable
+ * - list - primary variable
+ *   - style: override default list styling [none]
  *   - icon: displays icon "bullet", default is file if simply set to true
  *       - name: icon name
  *       - title: accessible, short description for the icon
@@ -15,38 +16,41 @@
 
 {% set classes = [
   'jcc-list',
-  list.columns ? 'jcc_link-list--multicolumn' : '',
+  'jcc-list--style-' ~ list.style|default('bullet'),
+  list.columns and list.columns > 1 ? 'jcc-list--multicolumn' : '',
   list.icon ? 'jcc-list--files' : '',
   'jcc-list--anchor-' ~ list.anchor_align|default('left'),
 ]|merge(list.classes|default([''])) %}
 
+{% set tag = list.tag|default('ul') %}
+
 {% import _self as lists %}
 
-{% macro list(items, icon) %}
+{% macro list(items, tag, icon) %}
   {% set url_attributes = item.url_attributes ? item.url_attributes : create_attribute() %}
-  <ul class="jcc-list__list">
-    {% for item in items %}
-      <li class="jcc-list__item">
-        {% if icon %}
-          {% set icon = item.icon|default({
-            name: 'file',
-            title: 'File'|t,
-            set: 'fa',
-            width: 20,
-            height: 20,
-            decorative: false,
-          }) %}
-          <span class="jcc-list__icon">
-            {% include '@atoms/icon/icon.twig' with  { icon: icon } %}
-          </span>
-        {% endif %}
+  <{{ tag }} class="jcc-list__list">
+  {% for item in items %}
+    <li class="jcc-list__item">
+      {% if icon %}
+        {% set icon = item.icon|default({
+          name: 'file',
+          title: 'File'|t,
+          set: 'fa',
+          width: 20,
+          height: 20,
+          decorative: false,
+        }) %}
+        <span class="jcc-list__icon">
+          {% include '@atoms/icon/icon.twig' with  { icon: icon } %}
+        </span>
+      {% endif %}
 
-        <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
-        {% if item.description %}
-          {{ item.description }}
-        {% endif %}
+      <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+      {% if item.description %}
+        {{ item.description }}
+      {% endif %}
 
-        {# When we merge with the original/SRL link-list as a single base
+      {# When we merge with the original/SRL link-list as a single base
         {% if item.name %}
           {{ item.name }}
 
@@ -56,15 +60,15 @@
         {% else %}
           <a href="{{ item.url }}">{{ item.url_title }}</a>
         {% endif %}
-        #}
-      </li>
-    {% endfor %}
-  </ul>
+      #}
+    </li>
+  {% endfor %}
+  </{{ tag }}>
 {% endmacro %}
 
 <div class="{{ classes|join(' ')|trim }}">
   {% if list.columns and list.columns > 1 %}
-    <div class="jcc_list--multicolumn jcc_list--col-{{ list.columns }}">
+    <div class="jcc-list--multicolumn jcc-list--col-{{ list.columns }}">
       {% set group_items = list.items %}
       {% set batch_size = group_items|length/list.columns %} {# max columns #}
       {% for group_item in group_items|batch(batch_size) %}
@@ -72,6 +76,6 @@
       {% endfor %}
     </div>
   {% else %}
-    {{ lists.list(list.items, list.icon) }}
+    {{ lists.list(list.items, tag, list.icon) }}
   {% endif %}
 </div>
