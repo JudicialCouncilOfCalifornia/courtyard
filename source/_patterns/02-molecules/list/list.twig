@@ -17,7 +17,6 @@
 {% set classes = [
   'jcc-list',
   'jcc-list--style-' ~ list.style|default('bullet'),
-  list.columns and list.columns > 1 ? 'jcc-list--multicolumn' : '',
   list.icon ? 'jcc-list--files' : '',
   'jcc-list--anchor-' ~ list.anchor_align|default('left'),
 ]|merge(list.classes|default([''])) %}
@@ -45,7 +44,9 @@
         </span>
       {% endif %}
 
-      <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+      {% if item.url %}
+        <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+      {% endif %}
       {% if item.description %}
         {{ item.description }}
       {% endif %}
@@ -72,7 +73,7 @@
       {% set group_items = list.items %}
       {% set batch_size = group_items|length/list.columns %} {# max columns #}
       {% for group_item in group_items|batch(batch_size) %}
-        {{ lists.list(group_item, list.icon) }}
+        {{ lists.list(group_item, tag, list.icon) }}
       {% endfor %}
     </div>
   {% else %}
