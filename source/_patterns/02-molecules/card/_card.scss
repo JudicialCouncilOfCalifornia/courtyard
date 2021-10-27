@@ -263,7 +263,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     .usa-card__header {
       @include u-position(relative);
       @include u-padding(0);
-      height: calc(16rem - 28px);
+      height: calc(14rem - 28px);
 
       .usa-card__heading {
         @include u-position(absolute);
@@ -275,7 +275,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     .usa-card__media {
       img,
       picture {
-        height: 16rem;
+        height: 14rem;
       }
     }
   }
