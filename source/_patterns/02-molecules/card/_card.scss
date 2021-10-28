@@ -337,6 +337,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card__brow-color,
   .usa-card__brow-color > div:first-child {
     @include u-display(inline);
+    @include u-radius-right("md");
     @include u-bg(map-get($_config, brow-bgcolor));
     @include u-color(map-get($_config, brow-color));
     @include u-margin-left("neg-3");
