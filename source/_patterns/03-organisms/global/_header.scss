@@ -84,9 +84,19 @@ $_config_schemes: (
       border: accent-warm,
     ),
     search: primary,
+    search-right: 0,
+    search-top: 2px,
+    search-height: 6,
+    search-width: 6,
   ),
   local: (),
-  pro: (),
+  pro: (
+    search: primary,
+    search-right: 1,
+    search-top: 4px,
+    search-height: 3,
+    search-width: 3,
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -575,10 +585,10 @@ $_hat: map-get($_config, hat);
       @include u-display(flex);
       @include u-justify-content(justify-center);
       @include u-align-items(align-center);
-      @include u-right(0);
-      @include u-top(2px);
-      @include u-height(6);
-      @include u-width(6);
+      @include u-right(map-get($_config, search-right));
+      top: map-get($_config, search-top);
+      @include u-height(map-get($_config, search-height));
+      @include u-width(map-get($_config, search-width));
       @include u-color(map-get($_config, search));
       background-image: none;
     }
@@ -594,12 +604,7 @@ $_hat: map-get($_config, hat);
 .jcc-header--masthead {
   @include u-bg(map-get($_header, masthead-background-default));
   @include text-color(map-get($_header, masthead-text));
-  padding-bottom: 5.875rem;
-  @include at-media(tablet-lg) {
-    &.jcc-header--has-body {
-      padding-bottom: 1rem;
-    }
-  }
+  padding-bottom: 6.875rem;
 
   .jcc-header__navbar {
     @include u-bg("transparent");
@@ -741,11 +746,11 @@ $_hat: map-get($_config, hat);
 
     .usa-logo {
       @include u-display(inline-block);
+      @include u-margin-top(0);
       @include u-padding-x(0);
       @include u-padding-bottom(2);
       @include at-media(tablet-lg) {
         @include u-padding-x(4);
-        @include u-padding-bottom(0);
       }
 
       .jcc-header__logo {
@@ -782,14 +787,14 @@ $_hat: map-get($_config, hat);
     @include u-left(0);
     @include u-right(0);
     @include u-width(widescreen);
+    @include u-maxh(9);
     @include u-margin-x(auto);
     @include u-padding-x(4);
-    iframe{
-      margin-top: 1rem;
-      //max-height: 75px;
-    }
-    @include at-media(tablet-lg) {
-      @include u-position(relative);
+
+    iframe {
+      @include u-width(full);
+      @include u-height(9);
+      @include u-border(0);
     }
   }
 
@@ -800,39 +805,6 @@ $_hat: map-get($_config, hat);
 
   &.mega {
     padding-bottom: 16.563rem;
-    @include at-media(tablet-lg) {
-      &.jcc-header--has-body {
-        padding-bottom: 11rem;
-      }
-    }
-
-    .jcc-header__logo-container--alt-position {
-      .usa-logo {
-        .jcc-header__logo {
-          @include at-media(tablet) {
-            @include u-margin-bottom(2);
-          }
-          @include at-media(tablet-lg) {
-            @include u-margin-bottom(3);
-          }
-
-          svg {
-            height: 1.7rem;
-            @include at-media(tablet) {
-              @include u-height(6);
-            }
-            @include at-media(tablet-lg) {
-              @include u-height(8);
-            }
-          }
-        }
-
-        .jcc_header__lead {
-          @extend h3;
-          @include u-text(ls-2);
-        }
-      }
-    }
   }
 
   .jcc-header__media {
