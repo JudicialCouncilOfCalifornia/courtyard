@@ -20,7 +20,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-padding-top(9);
 
   .jcc-section {
-    &:first-child {
+    &:first-of-type {
       @include u-padding-top(0);
     }
 
