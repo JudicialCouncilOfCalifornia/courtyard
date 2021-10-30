@@ -11,7 +11,7 @@ $_config_schemes: (
     field-border-size: 2px,
     field-border-radius: md,
     field-border-color: gray-60,
-    field-height: 2.25rem,
+    field-height: 2.5rem,
   ),
 );
 
@@ -35,7 +35,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-select,
 .usa-range,
 .usa-input {
-  height: map-get($_config, field-border-height);
+  height: map-get($_config, field-height);
 }
 
 .usa-select {
