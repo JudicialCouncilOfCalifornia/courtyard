@@ -45,7 +45,9 @@
       {% endif %}
 
       {% if item.url %}
-        <a href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+        <a class="jcc-list__link" href="{{ item.url }}"{% if item.aria_label %} aria-label="{{ item.aria_label }}"{% endif %}>{{ item.url_title }}</a>
+      {% else %}
+        <span class="jcc-list__link">{{ item.url_title }}</span>
       {% endif %}
       {% if item.description %}
         {{ item.description }}

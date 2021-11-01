@@ -3,7 +3,7 @@
 
   &--anchor-left {
     .jcc-list__item {
-      a {
+      .jcc-list__link {
         @include u-margin-right(2);
       }
     }
@@ -13,7 +13,7 @@
     .jcc-list__item {
       @include u-display(flex);
 
-      a {
+      .jcc-list__link {
         @include u-order(1);
         @include u-margin-left(2);
       }
