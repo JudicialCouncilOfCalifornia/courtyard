@@ -42,7 +42,6 @@
   'jcc-header',
   'jcc-header--' ~ header.background|default('default'),
   header.variant ? 'jcc-header--' ~ header.variant : '',
-  header.body ? 'jcc-header--has-body',
 ]|merge(header.classes|default([''])) %}
 
 {% if header.skip %}
