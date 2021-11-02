@@ -33,7 +33,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &.is-active {
     a,
-    a:hover {
+    a:hover,
+    a:visited {
       @include u-bg(map-get($_config, current-background));
       @include u-color(map-get($_config, current-text));
       @include u-cursor(default);
