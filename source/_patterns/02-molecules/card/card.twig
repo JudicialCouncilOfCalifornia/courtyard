@@ -29,7 +29,7 @@
 {% set style = card.style|default('cta') %}
 {% set icon_set = card.icon.set|default('fa') %}
 
-{% if style == 'hover' %}
+{% if (style == 'hover') or (card.is_clickable == TRUE) %}
   {% if card.link.url %}
     {% set attributes = attributes.setAttribute('href', card.link.url) %}
     {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
@@ -38,6 +38,7 @@
     {% set style = 'cta' %}
   {% endif %}
 {% endif %}
+
 
 {% set classes = [
   'usa-card',
@@ -75,7 +76,7 @@
                 {% include "@atoms/icon/icon.twig" with {
                   icon: {
                     name: card.icon.name,
-                    set: "fa"
+                    set: icon_set
                   }
                 } %}
               </div>
@@ -84,7 +85,7 @@
         {% endif %}
 
         <{{ heading_tag }} class="usa-card__heading" id="{{ unique_id }}">
-          {% if 'borderless' in style and card.link.url %}
+          {% if "borderless" in style and card.link.url %}
             <a href="{{ card.link.url }}">{{ card.title }}</a>
           {% else %}
             {{ card.title }}
