@@ -2,6 +2,7 @@ $_config_schemes: (
   base: (
     border-width: "05",
     border-radius: "none",
+    border-radius-img: 0,
     border-color: "base-lightest",
     brow-color: base-dark,
     brow-size: 6,
@@ -40,6 +41,7 @@ $_config_schemes: (
   local: (
     border-width: "05",
     border-radius: "none",
+    border-radius-img: 0,
     border-color: "base-lighter",
     brow-color: "white",
     brow-bgcolor: "gray-90",
@@ -68,6 +70,7 @@ $_config_schemes: (
   pro: (
     border-width: "1px",
     border-radius: "md",
+    border-radius-img: .2rem,
     border-color: "base-light",
     brow-color: "white",
     brow-size: 5,
@@ -257,6 +260,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       img,
       picture {
         //@include u-minh(viewport);
+        //@include u-width(auto);
+        //@include u-maxw(none);
         min-height:100%;
       }
 
@@ -406,6 +411,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__media {
   @include u-margin-right(5);
   @include u-color(map-get($_config, icon-color));
+  border-radius: map-get($_config, border-radius-img);
 
   .icon {
     width: 80px;
@@ -415,6 +421,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-card__body {
   @include typeset(body, map-get($_config, body-size), $theme-body-line-height);
+
+  h3, h4 {
+    @include u-margin-bottom(3);
+  }
 
   .usa-card--hover & {
     @include u-color(ink);
