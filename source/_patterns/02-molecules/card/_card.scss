@@ -111,6 +111,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-card {
   @include u-height(full);
+  @include u-text-decoration(no-underline);
 }
 
 .usa-card--hover {
@@ -124,6 +125,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-radius(map-get($_config, border-radius));
   @include u-padding(3);
   @include u-z(0);
+  min-height:250px;
 
   .usa-card--hover & {
     @include u-border-width(map-get($_config, border-width));
