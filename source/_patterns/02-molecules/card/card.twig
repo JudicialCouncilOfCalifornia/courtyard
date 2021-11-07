@@ -84,7 +84,7 @@
         {% endif %}
 
         <{{ heading_tag }} class="usa-card__heading{% if not card.title %} usa-sr-only{% endif %}" id="{{ unique_id }}">
-          {% if "borderless" in style and card.link.url or (card.is_clickable != TRUE) %}
+          {% if "borderless" in style and card.link.url and (card.is_clickable != TRUE) %}
             <a href="{{ card.link.url }}">{{ card.title }}</a>
           {% else %}
             {% if card.title %}
@@ -106,7 +106,7 @@
         </div>
       {% endif %}
 
-      {% if ('cta' in style or 'media' in style) and card.link.url or (card.is_clickable != TRUE) %}
+      {% if ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
         {% if card.link.text %}
           <div class="usa-card__footer">
             <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
