@@ -20,7 +20,7 @@ $text-background: map-get($_config, dash-text-background);
   $dash-width: null,
   $top-spacing: 28px,
   $inner-spacing: 0,
-  $inner-color: null,
+  $inner-color: null
 ) {
   position: relative;
 

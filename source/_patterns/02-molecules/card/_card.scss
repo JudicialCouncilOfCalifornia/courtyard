@@ -70,7 +70,7 @@ $_config_schemes: (
   pro: (
     border-width: "1px",
     border-radius: "md",
-    border-radius-img: .2rem,
+    border-radius-img: 0.2rem,
     border-color: "base-light",
     brow-color: "white",
     brow-size: 5,
@@ -111,6 +111,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-card {
   @include u-height(full);
+  @include u-text-decoration(no-underline);
 }
 
 .usa-card--hover {
@@ -124,6 +125,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-radius(map-get($_config, border-radius));
   @include u-padding(3);
   @include u-z(0);
+  min-height: 250px;
 
   .usa-card--hover & {
     @include u-border-width(map-get($_config, border-width));
@@ -215,7 +217,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
           }
         }
       }
-      .jcc-card--overlay-color-{
+      .jcc-card--overlay-color- {
         @include u-display(inline-flex);
         @include u-position(absolute);
         @include u-top(0);
@@ -235,7 +237,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card--media-full & {
-    .jcc-card--overlay-color-{
+    .jcc-card--overlay-color- {
       @include u-display(inline-flex);
       @include u-position(absolute);
       @include u-top(0);
@@ -255,14 +257,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
     .usa-card__media {
       & > div {
-        bottom:0;
+        bottom: 0;
       }
       img,
       picture {
         //@include u-minh(viewport);
         //@include u-width(auto);
         //@include u-maxw(none);
-        min-height:100%;
+        min-height: 100%;
       }
 
       &::after {
@@ -422,7 +424,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__body {
   @include typeset(body, map-get($_config, body-size), $theme-body-line-height);
 
-  h3, h4 {
+  h3,
+  h4 {
     @include u-margin-bottom(3);
   }
 

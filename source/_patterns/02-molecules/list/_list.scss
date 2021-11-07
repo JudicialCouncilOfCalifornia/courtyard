@@ -20,7 +20,8 @@
     }
   }
 
-  ul, ol {
+  ul,
+  ol {
     @include u-padding-left(3);
   }
 }

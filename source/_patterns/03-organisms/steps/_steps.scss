@@ -4,10 +4,10 @@ $_config_schemes: (
     line-color: "secondary",
   ),
   local: (),
-  pro :(
+  pro: (
     number-color: "primary",
     line-color: "primary",
-  )
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -22,7 +22,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include unstyled-list();
 
   .jcc-step {
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     @include u-padding-bottom(7);
     display: inline-block;
 
@@ -74,7 +74,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       content: attr(data-index);
       @include u-font(serif, 5);
       text-align: center;
-      padding: .9rem 0.2rem;
+      padding: 0.9rem 0.2rem;
       @include at-media(desktop) {
         padding: 1.3rem 0.3rem;
         @include u-font(serif, 8);
