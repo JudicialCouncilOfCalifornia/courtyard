@@ -125,7 +125,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-radius(map-get($_config, border-radius));
   @include u-padding(3);
   @include u-z(0);
-  min-height: 250px;
 
   .usa-card--hover & {
     @include u-border-width(map-get($_config, border-width));
@@ -237,6 +236,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card--media-full & {
+    min-height: 250px;
     .jcc-card--overlay-color- {
       @include u-display(inline-flex);
       @include u-position(absolute);
