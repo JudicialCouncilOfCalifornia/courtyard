@@ -413,11 +413,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-margin-right(5);
   @include u-color(map-get($_config, icon-color));
   border-radius: map-get($_config, border-radius-img);
-  min-height: 250px;
   .icon {
     width: 80px;
     height: 80px;
   }
+}
+
+.usa-card__media,
+.usa-card.usa-card--cta-color .usa-card__container{
+  min-height: 250px;
 }
 
 .usa-card__body {
