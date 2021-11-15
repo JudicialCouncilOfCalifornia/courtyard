@@ -741,8 +741,10 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__logo-container--alt-position {
-    @include u-width(widescreen);
     @include u-margin-x(auto);
+    @include at-media(desktop) {
+      @include u-width(widescreen);
+    }
 
     .usa-logo {
       @include u-display(inline-block);
@@ -786,10 +788,12 @@ $_hat: map-get($_config, hat);
     @include u-position(absolute);
     @include u-left(0);
     @include u-right(0);
-    @include u-width(widescreen);
     @include u-maxh(9);
     @include u-margin-x(auto);
     @include u-padding-x(4);
+    @include at-media(desktop) {
+      @include u-width(widescreen);
+    }
 
     iframe {
       @include u-width(full);
