@@ -82,6 +82,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
+  &-12 {
+    @include grid-col(12);
+  }
+
   &-75 {
     @include grid-col(12);
     @include at-media("tablet-lg") {
