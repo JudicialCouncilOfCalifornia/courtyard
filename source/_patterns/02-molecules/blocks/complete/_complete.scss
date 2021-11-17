@@ -32,6 +32,10 @@
       @include u-padding-right(4);
       @include u-padding-bottom(0);
     }
+
+    a {
+      @include u-color("white");
+    }
   }
 
   .jcc-complete__left {
