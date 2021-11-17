@@ -164,6 +164,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-top &,
   .usa-card--media-full-overlay &,
   .usa-card--media-top-overlay & {
+    min-height: 200px;
+
     .usa-card__header {
       @include u-color("white");
 
@@ -181,16 +183,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     .usa-card__media {
-      @include u-display(block);
-      @include u-position(absolute);
-      @include u-top(0);
-      @include u-right(0);
-      @include u-bottom(0);
-      @include u-left(0);
       @include u-z(bottom);
       @include u-width(full);
-      @include u-height(full);
-      @include u-overflow(hidden);
 
       img,
       picture {
@@ -213,14 +207,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
             @include u-left(0);
             @include u-width(full);
             background-color: #{$color-value};
+            border-radius: map-get($_config, border-radius-img);
           }
         }
       }
       .jcc-card--overlay-color- {
-        @include u-display(inline-flex);
-        @include u-position(absolute);
-        @include u-top(0);
-        @include u-left(0);
         @include u-width(full);
       }
       img,
@@ -412,16 +403,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__media {
   @include u-margin-right(5);
   @include u-color(map-get($_config, icon-color));
-  border-radius: map-get($_config, border-radius-img);
   .icon {
     width: 80px;
     height: 80px;
   }
-}
-
-.usa-card__media,
-.usa-card.usa-card--cta-color .usa-card__container{
-  min-height: 250px;
 }
 
 .usa-card__body {
