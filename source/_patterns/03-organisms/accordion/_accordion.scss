@@ -6,19 +6,15 @@ $_config_schemes: (
     button-font-color-hover: "black",
     border-bottom-color: "transparent",
     border-bottom-width: '0px',
-    background-img-add : "../img/usa-icons/add.svg",
-    background-img-remove : "../img/usa-icons/remove.svg",
   ),
   local: (),
   pro: (
-    button-color: "white",
-    button-hover-color: "white",
-    button-font-color: "primary-light",
+    button-color: "transparent",
+    button-hover-color: "transparent",
+    button-font-color: "primary-vivid",
     button-font-color-hover: "primary-dark",
-    border-bottom-color: "primary-light",
+    border-bottom-color: "primary-vivid",
     border-bottom-width: '2px',
-    background-img-add : "../img/usa-icons-bg/add--blue.svg",
-    background-img-remove : "../img/usa-icons-bg/remove--blue.svg",
   ),
 );
 
@@ -28,9 +24,26 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-bg(map-get($_config, button-color));
   @include u-text(map-get($_config,button-font-color));
   @include u-border-bottom('2px', solid, map-get($_config, border-bottom-color));
-  background-image: url(map-get($_config, background-img-remove)), linear-gradient(transparent, transparent);
+  background-image: none;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top:15px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    @include u-bg(map-get($_config,button-font-color));
+    -webkit-mask-image: url('../img/usa-icons/remove.svg');
+    mask-image: url('../img/usa-icons/remove.svg');
+  }
   &[aria-expanded="false"]{
-    background-image: url(map-get($_config, background-img-add)), linear-gradient(transparent, transparent);
+    background-image: none;
+    &:after {
+      @include u-bg(map-get($_config, button-font-color));
+      -webkit-mask-image: url('../img/usa-icons/add.svg');
+      mask-image: url('../img/usa-icons/add.svg');
+    }
   }
 
   &:hover {
