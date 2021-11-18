@@ -2,17 +2,39 @@ $_config_schemes: (
   base: (
     button-color: "gray-5",
     button-hover-color: "gray-10",
+    button-font-color: "black",
+    button-font-color-hover: "black",
+    border-bottom-color: "transparent",
+    border-bottom-width: '0px',
+    background-img-add : "../img/usa-icons/add.svg",
+    background-img-remove : "../img/usa-icons/remove.svg",
   ),
   local: (),
-  pro: (),
+  pro: (
+    button-color: "white",
+    button-hover-color: "white",
+    button-font-color: "primary-light",
+    button-font-color-hover: "primary-dark",
+    border-bottom-color: "primary-light",
+    border-bottom-width: '2px',
+    background-img-add : "../img/usa-icons-bg/add--blue.svg",
+    background-img-remove : "../img/usa-icons-bg/remove--blue.svg",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .usa-accordion__button {
   @include u-bg(map-get($_config, button-color));
+  @include u-text(map-get($_config,button-font-color));
+  @include u-border-bottom('2px', solid, map-get($_config, border-bottom-color));
+  background-image: url(map-get($_config, background-img-remove)), linear-gradient(transparent, transparent);
+  &[aria-expanded="false"]{
+    background-image: url(map-get($_config, background-img-add)), linear-gradient(transparent, transparent);
+  }
 
   &:hover {
     @include u-bg(map-get($_config, button-hover-color));
+    @include u-text(map-get($_config,button-font-color-hover));
   }
 }
