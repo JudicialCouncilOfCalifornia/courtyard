@@ -164,7 +164,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-top &,
   .usa-card--media-full-overlay &,
   .usa-card--media-top-overlay & {
-    min-height: 200px;
+    min-height: 250px;
 
     .usa-card__header {
       @include u-color("white");
