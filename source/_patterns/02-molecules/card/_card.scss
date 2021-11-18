@@ -211,23 +211,25 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
           }
         }
       }
-      .jcc-card--overlay-color- {
-        @include u-width(full);
-      }
+
       img,
       picture {
         object-position: 50% 50%;
         opacity: 0.1;
       }
 
-      .jcc-card--overlay-color-none img {
-        opacity: 1;
+      .jcc-card--overlay-color-none {
+        @include u-width(full);
+
+        img {
+          opacity: 1;
+        }
       }
     }
   }
 
   .usa-card--media-full & {
-    .jcc-card--overlay-color- {
+    .jcc-card--overlay-color-none {
       @include u-display(inline-flex);
       @include u-position(absolute);
       @include u-top(0);
@@ -238,6 +240,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     picture {
       object-position: 50% 50%;
       opacity: 1;
+      border-radius: map-get($_config, border-radius-img);
     }
   }
 
