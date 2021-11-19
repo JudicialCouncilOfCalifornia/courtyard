@@ -23,10 +23,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     &:first-of-type {
       @include u-padding-top(0);
     }
-
-    .jcc-section__inner {
-      @include u-padding-x(0);
-    }
   }
 }
 
