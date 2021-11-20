@@ -11,6 +11,9 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
+// Form column needs to be >=300px so date picker doesn't wrap inner elements.
+$_news-listing-form: px-to-rem(300px) + units($theme-column-gap-desktop);
+
 .jcc-news-listing {
   @include at-media(tablet-lg) {
     @include grid-row();
@@ -20,13 +23,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-news-listing__form {
   @include at-media(tablet-lg) {
-    @include grid-col(3);
+    width: $_news-listing-form;
   }
 }
 
 .jcc-news-listing__content {
   @include at-media(tablet-lg) {
-    @include grid-col(9);
+    width: calc(100% - #{$_news-listing-form});
   }
 }
 
