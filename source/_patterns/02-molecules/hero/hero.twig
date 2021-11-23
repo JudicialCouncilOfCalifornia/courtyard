@@ -30,6 +30,10 @@
   <div class="jcc-hero__container">
     <div class="jcc-hero__content">
       <div class="jcc-hero__main">
+        {% if hero.main.trail %}
+          <div class="jcc-hero__main-trail">{{ hero.main.trail }}</div>
+        {% endif %}
+
         {% if hero.main.icon %}
           {% include '@atoms/icon/icon.twig' with {
             icon: hero.main.icon

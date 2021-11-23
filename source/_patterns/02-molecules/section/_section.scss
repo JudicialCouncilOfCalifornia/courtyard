@@ -4,6 +4,7 @@ $_config_schemes: (
     alt-background-border: 0,
     alt-background-border-color: "transparent",
     alt-margin-top: 10,
+    subsection-section-padding: 4,
   ),
   local: (),
   pro: (
@@ -11,6 +12,7 @@ $_config_schemes: (
     alt-background-border: 1px,
     alt-background-border-color: "gray-3",
     alt-margin-top: 0,
+    subsection-section-padding: 0,
   ),
 );
 
@@ -61,6 +63,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-section__subsections {
   @include grid-row();
   @include grid-gap(6);
+
+  .jcc-section__inner {
+    @include u-padding-x(map-get($_config, subsection-section-padding));
+  }
 }
 
 .jcc-section__subsection--col {

@@ -103,6 +103,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.jcc-hero__main-trail {
+  @include u-margin-bottom(1);
+
+  .usa-breadcrumb--container {
+    @include u-padding-x(0);
+  }
+}
+
 .jcc-hero__main-brow {
   @extend .jcc-brow;
   @include u-margin-bottom(1.5);

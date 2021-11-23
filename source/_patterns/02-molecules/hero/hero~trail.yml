@@ -1,0 +1,12 @@
+hero:
+  main:
+    trail: "<nav class=\"usa-breadcrumb usa-breadcrumb--container\" aria-label=\"Breadcrumbs\">
+                  <ol class=\"usa-breadcrumb__list\">
+                    <li class=\"usa-breadcrumb__list-item\"><a href=\"#\" class=\"usa-breadcrumb__link\"><span>Supreme Court</span></a></li>
+                    <li class=\"usa-breadcrumb__list-item usa-current\" aria-current=\"page\"><span>News and Events</span></li>
+                  </ol>
+                </nav>"
+    brow: "Feature"
+    title: "Excepteur sint occaecat cupidatat non proident"
+    lead: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+  layout: "full-main"
