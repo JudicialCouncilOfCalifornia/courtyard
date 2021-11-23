@@ -79,7 +79,7 @@ $_config_schemes: (
     brow-icon-color: "gray-80",
     heading-top-space: 6,
     heading-size: 10,
-    heading-line-height: 1,
+    heading-line-height: $theme-body-line-height,
     title-color: "gray-warm-90",
     hover-title-color: $theme-link-color,
     title-link: (
