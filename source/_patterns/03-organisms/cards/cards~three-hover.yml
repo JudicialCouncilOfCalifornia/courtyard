@@ -25,6 +25,8 @@ cards:
       link:
         url: "#"
         text: "Diamtempor"
+      classes:
+        - "ext"
     - style: "hover"
       title: "Sem est iaculis nullam tincidunt"
       brow: "Adipiscing"
@@ -32,3 +34,5 @@ cards:
       link:
         url: "#"
         text: "Mattis tellus"
+      classes:
+        - "file"

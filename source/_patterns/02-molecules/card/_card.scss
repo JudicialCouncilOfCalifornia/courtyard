@@ -1,9 +1,11 @@
 $_config_schemes: (
   base: (
     border-width: "05",
+    hover-border-width: "05",
     border-radius: "none",
     border-radius-img: 0,
     border-color: "base-lightest",
+    hover-border-color: "base-lightest",
     brow-color: base-dark,
     brow-size: 6,
     brow-weight: $theme-font-weight-normal,
@@ -14,6 +16,7 @@ $_config_schemes: (
     heading-line-height: $theme-body-line-height,
     title-color: primary-darker,
     hover-title-color: primary-vivid,
+    hover-title-icon-color: secondary,
     title-link: (
       default: primary,
       hover: primary-dark,
@@ -40,13 +43,16 @@ $_config_schemes: (
   ),
   local: (
     border-width: "05",
+    hover-border-width: "1px",
     border-radius: "none",
     border-radius-img: 0,
     border-color: "base-lighter",
+    hover-border-color: "base-light",
     brow-color: "white",
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
     heading-top-space: 0,
+    hover-title-icon-color: secondary,
     title-link: (
       default: primary-vivid,
     ),
@@ -69,9 +75,11 @@ $_config_schemes: (
   ),
   pro: (
     border-width: "1px",
+    hover-border-width: "1px",
     border-radius: "md",
     border-radius-img: 0.2rem,
     border-color: "base-light",
+    hover-border-color: "base-light",
     brow-color: "white",
     brow-size: 5,
     brow-weight: $theme-font-weight-normal,
@@ -82,6 +90,7 @@ $_config_schemes: (
     heading-line-height: $theme-body-line-height,
     title-color: "gray-warm-90",
     hover-title-color: $theme-link-color,
+    hover-title-icon-color: $theme-link-color,
     title-link: (
       default: $theme-link-color,
       hover: $theme-link-hover-color,
@@ -127,7 +136,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-z(0);
 
   .usa-card--hover & {
-    @include u-border-width(map-get($_config, border-width));
+    @include u-border(map-get($_config, hover-border-color));
+    @include u-border-width(map-get($_config, hover-border-width));
     @include u-radius($theme-card-border-radius);
     @include u-shadow(3);
     @include u-text-decoration(no-underline);
@@ -326,6 +336,26 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--hover:hover & {
     @include u-text-decoration(underline);
     text-decoration-thickness: 2px;
+  }
+  .usa-card--hover.file &,
+  .usa-card--hover.ext & {
+    @extend %jcc-inline-icon-link;
+
+    &::after {
+      @include u-width(2.5);
+      @include u-height(2.5);
+      @include u-bg(map-get($_config, hover-title-icon-color));
+    }
+  }
+  .usa-card--hover.ext & {
+    &::after {
+      mask-image: url("../icons/fa/external-link.svg");
+    }
+  }
+  .usa-card--hover.file & {
+    &::after {
+      mask-image: url("../icons/fa/file.svg");
+    }
   }
 
   a {
