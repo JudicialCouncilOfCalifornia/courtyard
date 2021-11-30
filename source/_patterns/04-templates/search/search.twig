@@ -12,6 +12,12 @@
 {% set content %}
     <div class="search__form">
       {{ search.form }}
+
+      {% if search.message %}
+        <div class="search__message">
+          {{ search.message }}
+        </div>
+      {% endif %}
     </div>
 
     <div class="search__content">
