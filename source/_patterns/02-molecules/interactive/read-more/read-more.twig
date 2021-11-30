@@ -13,7 +13,7 @@
 {% if read_more.id and read_more.content %}
   <div class="{{ classes|join(' ')|trim }}">
     <button class="jcc-read-more__trigger usa-button usa-button--unstyled" data-a11y-toggle="{{ read_more.id }}">
-      {{ read_more.title ?? 'Read more'|t }}
+      <span>{{ read_more.title ?? 'Read more'|t }}</span>
       {% include '@atoms/icons/icon.twig' with { icon: icon } %}
     </button>
     <div class="jcc-read-more__content" id="{{ read_more.id }}">

@@ -2,6 +2,10 @@
   @include u-display(flex);
   @include u-flex(column);
 
+  span {
+    @include u-margin-right(1);
+  }
+
   .icon {
     @include u-display(inline-block);
     width: 1.25rem;
