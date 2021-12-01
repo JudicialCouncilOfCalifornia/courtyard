@@ -84,7 +84,7 @@
 
     // BEGIN Chat button plus third party adjustments
     .jcc-chat {
-      @extend .block;
+      @extend .jcc-feedback;
     }
 
     .jcc-chat__trigger-container {
