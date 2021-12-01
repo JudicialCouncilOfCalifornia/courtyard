@@ -41,7 +41,7 @@ $(document).ready(function() {
   setTimeout(siblingCheck(), 3000);
 
   if (isNoPageScroll() == true) {
-    $drawer.attr("visible", "visible");
+    $feedback_container.attr("visible", "visible");
   }
 });
 
@@ -53,7 +53,7 @@ if (!isNoPageScroll()) {
     }
 
     if ($window.scrollTop() + $window.height() >= $body.scrollHeight / 3) {
-      $drawer.attr("visible", "visible");
+      $feedback_container.attr("visible", "visible");
     }
   });
 

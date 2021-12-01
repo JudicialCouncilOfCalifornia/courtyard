@@ -4,7 +4,7 @@
   @include u-width("full");
   @include u-padding-y(0);
   z-index: z("top");
-  transition: opacity 1s;
+  //transition: opacity 1s;... always show drawer and chatbot until trial is over
 
   @include at-media("desktop") {
     @include u-position("sticky");
@@ -17,14 +17,14 @@
     padding: 0 units(2.5);
   }
 
-  // Visibility controlled by js on scroll.
-  &:not([visible]) {
-    opacity: 0;
-  }
-
-  &[visible] {
-    opacity: 1;
-  }
+  // Visibility controlled by js on scroll... always show drawer and chatbot until trial is over
+  //&:not([visible]) {
+  //  opacity: 0;
+  //}
+  //
+  //&[visible] {
+  //  opacity: 1;
+  //}
 
   // Space and wrap drawer items gracefully.
   &__inner {
@@ -71,9 +71,20 @@
       @include u-width("full");
     }
 
+    .jcc-feedback {
+      &:not([visible]) {
+        opacity: 0;
+      }
+
+      &[visible] {
+        transition: opacity 1s;
+        opacity: 1;
+      }
+    }
+
     // BEGIN Chat button plus third party adjustments
     .jcc-chat {
-      @extend .jcc-feedback;
+      @extend .block;
     }
 
     .jcc-chat__trigger-container {
