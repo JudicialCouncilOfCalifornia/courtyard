@@ -9,31 +9,32 @@
   }
 
   .jcc-feedback__dialog {
-    @include u-position("fixed");
-    @include u-top(0);
-    @include u-left(0);
-    @include at-media("tablet-lg") {
-      @include u-top("auto");
-      @include u-left("auto");
-    }
-    @include u-border(1px, base-light);
-    @include u-bg("white");
-    overflow: hidden;
+    @include u-overflow(hidden);
     visibility: hidden;
-    padding: 0;
 
     &[open] {
       @include u-display("inline-block");
-      @include u-width("full");
-      height: 100vh;
+      @include u-position("fixed");
+      @include u-left(0);
+      @include u-bottom(0);
+      @include u-border(1px, base-light);
+      @include u-bg("white");
+      @include u-overflow("visible");
+      @include u-overflow-x("auto");
+      @include u-padding(0);
+      @include u-height("auto");
+      visibility: visible;
+      @media only screen and (orientation: landscape) {
+        @include u-height(full);
+      }
       @include at-media("tablet-lg") {
         @include u-position("relative");
         @include u-width("mobile-lg");
-        height: auto;
       }
-      overflow: visible;
-      overflow-x: auto;
-      visibility: visible;
+      // Galaxy Note exceptions
+      @media only screen and (max-height: 415px) {
+        @include u-position("fixed");
+      }
     }
 
     .icon-close {
@@ -111,10 +112,20 @@
       @extend .jcc-feedback__dialog-button--submit;
     }
 
-    //BEGIN Drupal Web Form Adjustments */
+    // BEGIN Drupal Web Form Adjustments
     .webform-submission-form {
       & > div {
         @include u-margin-x(2);
+      }
+
+      div[data-drupal-messages] {
+        @include u-position(absolute);
+        @include u-z(100);
+        margin-top: -35px;
+
+        .usa-alert {
+          padding: 0 1.25rem 0.5rem 1.75rem;
+        }
       }
 
       .usa-label {
