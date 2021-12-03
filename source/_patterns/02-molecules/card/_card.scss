@@ -208,10 +208,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-color("white");
     }
 
-    .usa-card__body {
-      @include u-color("white");
-    }
-
     .usa-card__media {
       @include u-z(bottom);
       @include u-width(full);
@@ -277,6 +273,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-full &,
   .usa-card--media-full-overlay & {
     @include u-color("white");
+
+    .usa-card__body {
+      @include u-color("white");
+    }
 
     .usa-card__media {
       & > div {
