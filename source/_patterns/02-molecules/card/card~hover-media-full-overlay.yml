@@ -1,0 +1,15 @@
+card:
+  style: "media-full-overlay usa-card--hover"
+  is_clickable: TRUE
+  title: "Posuere et ornare"
+  brow: "Pellentesque tempo"
+  icon:
+    name: "gavel"
+  body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  media:
+    src: "https://newsroom.courts.ca.gov/sites/default/files/newsroom/2020-08/supreme%20court%20mural%20%28SF%29.jpg"
+    alt: "green"
+  link:
+    url: "#"
+    text: "Luctus nunc quam"
+  bgcolor: "blue"
