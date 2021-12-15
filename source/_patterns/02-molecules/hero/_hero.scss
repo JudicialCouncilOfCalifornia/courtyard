@@ -1,6 +1,8 @@
 $_config_schemes: (
   base: (
     default-background: $theme-color-base-lighter,
+    default-spacing: 6,
+    default-spacing-mobile: 4,
     alt-background: primary,
     alt-background-icon: "white",
     alt-background-text: "white",
@@ -20,6 +22,8 @@ $_config_schemes: (
   local: (),
   pro: (
     default-background: "transparent",
+    default-spacing: 4,
+    default-spacing-mobile: 3,
   ),
 );
 
@@ -39,12 +43,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-hero__container {
   @include grid-container(widescreen);
-  @include u-padding-top(4);
-  @include u-padding-bottom(4);
+  @include u-padding-top(map-get($_config, default-spacing-mobile));
+  @include u-padding-bottom(map-get($_config, default-spacing-mobile));
 
   @include at-media(tablet-lg) {
-    @include u-padding-top(6);
-    @include u-padding-bottom(6);
+    @include u-padding-top(map-get($_config, default-spacing));
+    @include u-padding-bottom(map-get($_config, default-spacing));
   }
 }
 
@@ -108,6 +112,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .usa-breadcrumb--container {
     @include u-padding-x(0);
+    @include u-padding-y(1);
+    @include at-media(tablet-lg) {
+      @include u-padding-y(2);
+    }
   }
 }
 
