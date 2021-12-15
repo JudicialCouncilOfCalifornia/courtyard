@@ -604,17 +604,16 @@ $_hat: map-get($_config, hat);
 .jcc-header--masthead {
   @include u-bg(map-get($_header, masthead-background-default));
   @include text-color(map-get($_header, masthead-text));
-  padding-bottom: 6.875rem;
+  padding-bottom: 3rem;
 
   .jcc-header__navbar {
     @include u-bg("transparent");
-    @include u-margin-bottom(5);
   }
 
   .jcc-header__nav {
     .usa-nav {
       @include u-bg("transparent");
-      margin-bottom: 6.25rem;
+      @include u-margin-bottom(9);
 
       .usa-nav__link {
         @include u-height(auto);
@@ -701,8 +700,6 @@ $_hat: map-get($_config, hat);
       }
 
       .usa-nav__secondary {
-        bottom: 7rem;
-
         .usa-nav__submenu {
           @include u-border-top(0);
         }
@@ -737,6 +734,10 @@ $_hat: map-get($_config, hat);
           @include u-border-color("transparent");
         }
       }
+    }
+
+    .usa-nav__secondary {
+      bottom: 4.5rem;
     }
   }
 
@@ -808,7 +809,7 @@ $_hat: map-get($_config, hat);
   }
 
   &.mega {
-    padding-bottom: 16.563rem;
+    padding-bottom: 6.875rem;
   }
 
   .jcc-header__media {

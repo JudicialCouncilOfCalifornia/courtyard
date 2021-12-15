@@ -1,0 +1,7 @@
+header:
+  variant: 'masthead mega'
+  media:
+    src: "https://placeimg.com/900/600/arch"
+    alt: "A placeholder image"
+  nav_children:
+    indicator: "circle-solid"
