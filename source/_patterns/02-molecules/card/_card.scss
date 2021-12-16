@@ -3,6 +3,7 @@ $_config_schemes: (
     border-width: "05",
     hover-border-width: "05",
     border-radius-container: "none", // Should be set by $theme-card-border-radius
+    border-radius-img: 0,
     border-color: "base-lightest",
     hover-border-color: "base-lightest",
     hover-shadow: 3,
@@ -46,6 +47,7 @@ $_config_schemes: (
     border-width: "05",
     hover-border-width: "1px",
     border-radius-container: "none", // Should be set by $theme-card-border-radius
+    border-radius-img: 0,
     border-color: "base-lighter",
     hover-border-color: "base-light",
     brow-color: "white",
@@ -77,6 +79,7 @@ $_config_schemes: (
     border-width: "1px",
     hover-border-width: "1px",
     border-radius-container: $theme-card-border-radius,
+    border-radius-img: 0.2rem,
     border-color: "base-light",
     hover-border-color: "base-light",
     hover-shadow: none,
@@ -230,8 +233,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
             @include u-top(0);
             @include u-left(0);
             @include u-width(full);
-            @include u-radius($theme-card-border-radius);
             background-color: #{$color-value};
+            border-radius: map-get($_config, border-radius-img);
           }
         }
       }
@@ -266,6 +269,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-radius($theme-card-border-radius);
       object-position: 50% 50%;
       opacity: 1;
+      border-radius: map-get($_config, border-radius-img);
     }
   }
 
