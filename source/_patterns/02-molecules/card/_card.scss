@@ -2,8 +2,7 @@ $_config_schemes: (
   base: (
     border-width: "05",
     hover-border-width: "05",
-    border-radius: "none",
-    border-radius-img: 0,
+    border-radius-container: "none", // Should be set by $theme-card-border-radius
     border-color: "base-lightest",
     hover-border-color: "base-lightest",
     hover-shadow: 3,
@@ -46,8 +45,7 @@ $_config_schemes: (
   local: (
     border-width: "05",
     hover-border-width: "1px",
-    border-radius: "none",
-    border-radius-img: 0,
+    border-radius-container: "none", // Should be set by $theme-card-border-radius
     border-color: "base-lighter",
     hover-border-color: "base-light",
     brow-color: "white",
@@ -78,8 +76,7 @@ $_config_schemes: (
   pro: (
     border-width: "1px",
     hover-border-width: "1px",
-    border-radius: "md",
-    border-radius-img: 0.2rem,
+    border-radius-container: $theme-card-border-radius,
     border-color: "base-light",
     hover-border-color: "base-light",
     hover-shadow: none,
@@ -135,7 +132,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .usa-card__container {
   @include u-border(map-get($_config, border-color));
   @include u-border-width(map-get($_config, border-width));
-  @include u-radius(map-get($_config, border-radius));
+  @include u-radius(map-get($_config, border-radius-container));
   @include u-padding(3);
   @include u-z(0);
 
@@ -233,8 +230,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
             @include u-top(0);
             @include u-left(0);
             @include u-width(full);
+            @include u-radius($theme-card-border-radius);
             background-color: #{$color-value};
-            border-radius: map-get($_config, border-radius-img);
           }
         }
       }
@@ -247,6 +244,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
       .jcc-card--overlay-color-none {
         @include u-width(full);
+        @include u-radius($theme-card-border-radius);
 
         img {
           opacity: 1;
@@ -265,9 +263,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
     img,
     picture {
+      @include u-radius($theme-card-border-radius);
       object-position: 50% 50%;
       opacity: 1;
-      border-radius: map-get($_config, border-radius-img);
     }
   }
 
@@ -319,6 +317,18 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     .usa-card__media {
+      @each $overlay-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
+        @if $overlay-bgcolor {
+          .jcc-card--overlay-color-#{$overlay-bgcolor} {
+            @include u-radius-bottom("none");
+          }
+        }
+      }
+
+      .jcc-card--overlay-color-none {
+        @include u-radius-bottom("none");
+      }
+
       img,
       picture {
         height: 14rem;
