@@ -159,8 +159,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
         @include u-width(full);
         @include u-height(full);
         @include u-radius($theme-card-border-radius);
+        @include u-bg("gray-warm-50");
+        opacity: 0.7;
         content: " ";
-        background-image: linear-gradient(to bottom,rgba(255,255,255,0),#000);
       }
     }
   }
