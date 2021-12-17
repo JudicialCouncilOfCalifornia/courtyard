@@ -75,7 +75,7 @@ if (!isNoPageScroll()) {
 // Widget interaction/visibility.
 function toggleChat() {
   // Show/hide chat when feedback dialog is toggled.
-  if ($feedback_dialog.attr("open") && $(".jcc-drawer__inner > .jcc-chat").length == 2) {
+  if ($feedback_dialog.attr("open") && $(".jcc-drawer__inner > .jcc-chat").length != 0) {
     $(".jcc-drawer__inner > .jcc-chat").hide();
   } else {
     $(".jcc-drawer__inner > .jcc-chat").show();
