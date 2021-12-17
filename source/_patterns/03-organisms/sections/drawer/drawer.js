@@ -75,10 +75,10 @@ if (!isNoPageScroll()) {
 // Widget interaction/visibility.
 function toggleChat() {
   // Show/hide chat when feedback dialog is toggled.
-  if ($feedback_dialog.attr("open") && $(".jcc-drawer__inner > .block").length == 2) {
-    $(".jcc-drawer__inner > .block:last-child").hide();
+  if ($feedback_dialog.attr("open") && $(".jcc-drawer__inner > .jcc-chat").length != 0) {
+    $(".jcc-drawer__inner > .jcc-chat").hide();
   } else {
-    $(".jcc-drawer__inner > .block:last-child").show();
+    $(".jcc-drawer__inner > .jcc-chat").show();
   }
 }
 $feedback_trigger.on("click", function(e) {
