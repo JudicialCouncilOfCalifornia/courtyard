@@ -9,8 +9,8 @@
   }
 
   .jcc-feedback__dialog {
+    @include u-display("none");
     @include u-overflow(hidden);
-    visibility: hidden;
 
     &[open] {
       @include u-display("inline-block");
@@ -23,7 +23,6 @@
       @include u-overflow-x("auto");
       @include u-padding(0);
       @include u-height("auto");
-      visibility: visible;
       @media only screen and (orientation: landscape) {
         @include u-height(full);
       }

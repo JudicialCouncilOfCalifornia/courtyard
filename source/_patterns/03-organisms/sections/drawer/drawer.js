@@ -52,7 +52,7 @@ if (!isNoPageScroll()) {
       return;
     }
 
-    if ($window.scrollTop() + $window.height() >= $body.scrollHeight / 3) {
+    if ($window.scrollTop() + $window.height() >= $body.scrollHeight * (2 / 3)) {
       $drawer.attr("visible", "visible");
     }
   });
