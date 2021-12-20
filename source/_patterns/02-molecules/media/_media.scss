@@ -1,0 +1,33 @@
+$_config_schemes: (
+  base: (
+    img-radius: "none",
+  ),
+  local: (
+    img-radius: "none",
+  ),
+  pro: (
+    img-radius: $theme-card-border-radius,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.jcc-media {
+  @include u-display(table);
+}
+
+.jcc-media__inner {
+  img {
+    @include u-display(block);
+    @include u-radius(map-get($_config, img-radius));
+  }
+
+  figcaption {
+    @extend .jcc-text-5;
+    @include u-width(full);
+    @include u-text-align(center);
+    display: table-caption;
+    caption-side: bottom;
+    margin-top: .25rem;
+  }
+}
