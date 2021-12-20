@@ -1,0 +1,11 @@
+{% set classes = [
+  'jcc-media',
+  media.classes_other ? media.classes_other : '',
+]|merge(banner.classes|default([''])) %}
+
+<figure role="group" class="{{ classes|join(' ')|trim }}">
+  <div class="jcc-media__inner">
+    {{ media.entity }}
+    <figcaption class="jcc-media__caption">{{ media.caption }}</figcaption>
+  </div>
+</figure>
