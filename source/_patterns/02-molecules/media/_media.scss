@@ -29,3 +29,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     margin-top: .25rem;
   }
 }
+
+// Drupal caption editing visual indicator
+.cke_widget_editable {
+  @include u-bg(gray-4);
+}
