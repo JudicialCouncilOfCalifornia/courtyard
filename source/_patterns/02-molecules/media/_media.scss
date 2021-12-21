@@ -14,9 +14,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-media {
   @include u-display(table);
-}
+  @include u-margin-bottom(4);
 
-.jcc-media__inner {
   img {
     @include u-display(block);
     @include u-radius(map-get($_config, img-radius));
@@ -24,7 +23,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   figcaption {
     @extend .jcc-text-5;
-    @include u-width(full);
     @include u-text-align(center);
     display: table-caption;
     caption-side: bottom;
