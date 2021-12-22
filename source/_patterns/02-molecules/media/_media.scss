@@ -21,8 +21,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-radius(map-get($_config, img-radius));
   }
 
-  figcaption {
+  .jcc-media__caption {
     @extend .jcc-text-5;
+    @include u-color(gray-80);
     @include u-text-align(center);
     display: table-caption;
     caption-side: bottom;
