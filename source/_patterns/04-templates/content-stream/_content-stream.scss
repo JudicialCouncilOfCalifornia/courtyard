@@ -21,10 +21,6 @@
       .usa-card--media-left {
         @include u-position(relative);
         left: -1rem;
-
-        img {
-          @include u-radius(md);
-        }
       }
     }
 
