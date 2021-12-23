@@ -176,6 +176,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-text-decoration(map-get($_config, hover-link-underline));
       text-decoration-thickness: 2px;
     }
+
+    .usa-card__media {
+      span {
+        border-radius: map-get($_config, border-radius-img);
+      }
+    }
   }
 
   .usa-card--media-left & {
