@@ -19,7 +19,7 @@
 {% set content = [] %}
 {% for item in content_stream.items %}
   {% set image = null %}
-  {% if loop.first and item.media.src is defined and item.media.src is not null  %}
+  {% if item.media.src is defined and item.media.src is not null  %}
     {% set card_style = 'borderless usa-card--media-left' %}
     {% set image %}
       <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
