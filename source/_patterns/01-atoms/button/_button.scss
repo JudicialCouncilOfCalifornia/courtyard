@@ -74,7 +74,7 @@ $_config_schemes: (
     cta-icon-hover: $theme-link-hover-color,
     cta-icon-active: $theme-link-active-color,
     cta-link: none,
-    cta-link-font-size: 1.07rem,
+    cta-link-font-size: 5,
     cta-link-letterspace: normal,
     padding: 1,
     font-size: 5,
@@ -452,10 +452,10 @@ a.jcc-button--cta-link {
   @include u-padding(0);
   @include u-bg("transparent");
   @include u-font-weight(normal);
-  text-transform: (map-get($_config, cta-link));
   @include u-text-align(left);
-  font-size: map-get($_config, cta-link-font-size);
+  font-size: font-size("sans", map-get($_config, cta-link-font-size));
   letter-spacing: map-get($_config, cta-link-letterspace);
+  text-transform: (map-get($_config, cta-link));
   text-decoration: none;
 
   &,
