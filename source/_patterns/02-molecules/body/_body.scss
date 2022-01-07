@@ -23,7 +23,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-body__main {
   @include at-media(desktop) {
-    @include grid-col(8);
+    @include grid-col(7);
   }
 
   .align-left {
@@ -54,7 +54,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-body__aside {
   @include at-media(desktop) {
-    @include grid-col(4);
+    @include grid-col(5);
   }
 
   .jcc-body__main + & {
