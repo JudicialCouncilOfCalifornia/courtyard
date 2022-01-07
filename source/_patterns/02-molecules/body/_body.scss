@@ -54,7 +54,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-body__aside {
   @include at-media(desktop) {
-    @include grid-col(5);
+    @include grid-col(4);
+    @include grid-offset(1);
   }
 
   .jcc-body__main + & {
