@@ -452,11 +452,10 @@ a.jcc-button--cta-link {
   @include u-padding(0);
   @include u-bg("transparent");
   @include u-font-weight(normal);
-  text-transform: (map-get($_config, cta-link));
   @include u-text-align(left);
-  //HERE
   font-size: font-size("sans", map-get($_config, cta-link-font-size));
   letter-spacing: map-get($_config, cta-link-letterspace);
+  text-transform: (map-get($_config, cta-link));
   text-decoration: none;
 
   &,
