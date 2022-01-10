@@ -411,6 +411,7 @@ $_hat: map-get($_config, hat);
 
         &:hover {
           @include hc(background-color, $_nav, sub-sub-background);
+          @include hc(color, $_translate, text-hover);
           @include u-text-decoration(no-underline);
         }
       }
