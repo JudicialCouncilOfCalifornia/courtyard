@@ -70,7 +70,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-color("white");
     @include u-text-decoration(no-underline);
     height: 110px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
     @include at-media(tablet) {
       @include u-justify-content(justify-center);
