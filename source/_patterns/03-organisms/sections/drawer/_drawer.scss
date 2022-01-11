@@ -70,9 +70,23 @@
       @include u-width("full");
     }
 
+    // TEMP: Feedback visibility revealed by scroll.
+    .jcc-feedback {
+      &:not([visible]) {
+        opacity: 0;
+      }
+
+      &[visible] {
+        transition: opacity 1s;
+        opacity: 1;
+      }
+    }
+
     // BEGIN Chat button plus third party adjustments
     .jcc-chat {
       @extend .jcc-feedback;
+      // TEMP: Chat visible when drawer reveals on page load
+      opacity: 1 !important;
     }
 
     .jcc-chat__trigger-container {
