@@ -1,8 +1,4 @@
 .jcc-feedback {
-  &[visible] {
-    opacity: 1;
-  }
-
   &[open] {
     min-width: 0;
     max-width: 100%;

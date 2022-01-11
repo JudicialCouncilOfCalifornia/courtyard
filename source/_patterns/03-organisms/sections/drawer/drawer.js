@@ -38,10 +38,14 @@ const siblingCheck = () => {
 
 // Initial visibility.
 $(document).ready(function() {
+  // TEMP: Reveal drawer on page load
+  $drawer.attr("visible", "visible");
   setTimeout(siblingCheck(), 3000);
 
   if (isNoPageScroll() == true) {
-    $drawer.attr("visible", "visible");
+    // TEMP: Adjust feedback reveal
+    //$drawer.attr("visible", "visible");
+    $feedback_container.attr("visible", "visible");
   }
 });
 
@@ -53,7 +57,9 @@ if (!isNoPageScroll()) {
     }
 
     if ($window.scrollTop() + $window.height() >= $body.scrollHeight * (2 / 3)) {
-      $drawer.attr("visible", "visible");
+      // TEMP: Adjust feedback reveal
+      //$drawer.attr("visible", "visible");
+      $feedback_container.attr("visible", "visible");
     }
   });
 
