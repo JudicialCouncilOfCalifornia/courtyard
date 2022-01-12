@@ -1,0 +1,161 @@
+self_help_example:
+  header:
+    skip:
+      text: "Skip to main content"
+      url: "#"
+    hat:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Supreme Court"
+          url: "#"
+        - text: "Courts of Appeal"
+          url: "#"
+        - text: "Superior Courts"
+          url: "#"
+        - text: "Judicial Council"
+          url: "#"
+    logo:
+      title: "County of El Condado"
+      svg: "logo-example.svg"
+    search_action: "#"
+    links:
+      - text: Home
+        url: "#"
+      - text: Online Services
+        id: nav-section-one
+        links:
+          - text: Online Payments
+            url: "#"
+          - text: Remote Appearance Instructions (model)
+            url: "#"
+          - text: Tentative Rulings
+            url: "#"
+          - text: Test landing page
+            url: "#"
+        section_link:
+          text: Online Services
+          url: "#"
+      - text: Forms & Filing (model)
+        links:
+          - text: All Local Forms (model)
+            url: "#"
+        section_link:
+          text: Forms & Filing (model)
+          url: "#"
+      - text: Self-Help (model)
+        is_current: true
+        links:
+          - text: Domestic Violence
+            url: "#"
+          - text: Divorce (model)
+            url: "#"
+          - text: Name Change (model)
+            url: "#"
+          - text: Restraining Orders
+            url: "#"
+          - text: At the Self Help Center (model)
+            url: "#"
+        section_link:
+          text: Self-Help (model)
+          url: "#"
+      - text: Divisions
+        links:
+          - text: Civil
+            url: "#"
+          - text: Collaborative Court
+            url: "#"
+          - text: Criminal
+            url: "#"
+          - text: Family Law
+            url: "#"
+          - text: Juvenile
+            url: "#"
+          - text: Probate & Conservatorship
+            url: "#"
+          - text: Small Claims
+            url: "#"
+          - text: Traffic
+            url: "#"
+        section_link:
+          text: Divisions
+          url: "#"
+      - text: General Information
+        links:
+          - text: ADA - Americans with Disabilities Act
+            url: "#"
+          - text: COVID-19 Information (model)
+            url: "#"
+          - text: Case Lookup Simple (model)
+            url: "#"
+          - text: Case Lookup Complex (model)
+            url: "#"
+          - text: Contracting with the Courts
+            url: "#"
+          - text: Court Calendars & Schedule
+            url: "#"
+          - text: Court Holidays
+            url: "#"
+          - text: Drupal Training Guides
+            url: "#"
+          - text: Employment
+            url: "#"
+          - text: Interpreter & Language Services (model)
+            url: "#"
+          - text: Judicial Profiles
+            url: "#"
+          - text: Jury Service (model)
+            url: "#"
+          - text: Locations & Contact Info
+            url: "#"
+          - text: News and Events
+            url: "#"
+          - text: Public Records, Media, and Research Requests
+            url: "#"
+        section_link:
+          text: General Information
+          url: "#"
+  footer:
+    links:
+      - text: Administrative
+        links:
+          - text: ADA Policy
+            url: "#"
+          - text: Contact
+            url: "#"
+          - text: Employment
+            url: "#"
+      - text: Attorney Resources
+        links:
+          - text: Court Calendars
+            url: "#"
+          - text: Forms & Local Rules
+            url: "#"
+      - text: California Court
+        links:
+          - text: CA Courts Self-Help Center
+            url: "#"
+          - text: Judicial Council
+            url: "#"
+      - text: Public Resources
+        links:
+          - text: Court Holidays
+            url: "#"
+          - text: Tentative Rulings
+            url: "#"
+    title:
+      first: "Superior Court of California"
+      second: "County of El Condado"
+    shoe:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Contact Us"
+          url: "#"
+        - text: "Privacy"
+          url: "#"
+        - text: "Terms of Use"
+          url: "#"
+        - text: "© 2022"

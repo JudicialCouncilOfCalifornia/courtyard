@@ -1,0 +1,19 @@
+{#
+/**
+ * Homepage Demo
+ *   Representing https://www.santacruz.courts.ca.gov/
+ */
+#}
+
+<div class="jcc-homepage-example">
+  {% include '@organisms/global/header.twig' with {
+    header: homepage_example.header
+  } %}
+
+  <div>Content</div>
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: homepage_example.footer
+  } %}
+
+</div>

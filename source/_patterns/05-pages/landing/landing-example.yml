@@ -1,0 +1,165 @@
+landing_example:
+  header:
+    skip:
+      text: "Skip to main content"
+      url: "#"
+    hat:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Supreme Court"
+          url: "#"
+        - text: "Courts of Appeal"
+          url: "#"
+        - text: "Superior Courts"
+          url: "#"
+        - text: "Judicial Council"
+          url: "#"
+    logo:
+      title: "County of Santa Cruz"
+      svg: "logo-example.svg"
+    search_action: "#"
+    links:
+      - text: Home
+        url: "#"
+      - text: Online Services
+        is_current: true
+        id: nav-section-one
+        links:
+          - text: Case Lookup
+            url: "#"
+          - text: Civil Tentative Rulings
+            url: "#"
+          - text: Court Reminder Notifications
+            url: "#"
+        section_link:
+          text: Online Services
+          url: "#"
+      - text: Forms & Filing
+        links:
+          - text: Electronic Filing
+            url: "#"
+          - text: Fees & Bail Schedules
+            url: "#"
+          - text: Local Forms
+            url: "#"
+          - text: Local Rules
+            url: "#"
+        section_link:
+          text: Forms & Filing
+          url: "#"
+      - text: Self-Help
+        url: "#"
+      - text: Divisions
+        links:
+          - text: Collaborative Courts
+            url: "#"
+          - text: Civil Division
+            url: "#"
+          - text: Civil Grand Jury
+            url: "#"
+          - text: Criminal Division
+            url: "#"
+          - text: Family Law Division
+            url: "#"
+          - text: Jury Division
+            url: "#"
+          - text: Juvenile Divison
+            url: "#"
+          - text: Probate Divison
+            url: "#"
+          - text: Records & Information
+            url: "#"
+          - text: Restraining Orders
+            url: "#"
+          - text: Small Claims Division
+            url: "#"
+          - text: Traffic Division
+            url: "#"
+        section_link:
+          text: Divisions
+          url: "#"
+      - text: General Information
+        links:
+          - text: Budget
+            url: "#"
+          - text: COVID-19 Information
+            url: "#"
+          - text: Court Holiday Schedule
+            url: "#"
+          - text: Courtoom Technology
+            url: "#"
+          - text: Disability Accomodation Request
+            url: "#"
+          - text: Employment
+            url: "#"
+          - text: Financial Hardship
+            url: "#"
+          - text: Judicial Assignments
+            url: "#"
+          - text: Language Access
+            url: "#"
+          - text: Locations & Contact Info
+            url: "#"
+          - text: Media
+            url: "#"
+          - text: Public Access to Judicial Administrative Records
+            url: "#"
+          - text: Vendors
+            url: "#"
+          - text: Government Claim Form
+            url: "#"
+          - text: News and Events
+            url: "#"
+        section_link:
+          text: General Information
+          url: "#"
+    translate:
+      text: "Translate"
+      links:
+        - text: "English"
+          url: "#"
+        - text: "Spanish"
+          url: "#"
+  footer:
+    links:
+      - text: Administrative
+        links:
+          - text: ADA Policy
+            url: "#"
+          - text: Contact
+            url: "#"
+          - text: Jobs
+            url: "#"
+      - text: Attorney Resources
+        links:
+          - text: Case Search
+            url: "#"
+          - text: Forms & Local Rules
+            url: "#"
+      - text: Media
+        links:
+          - text: Media Inquiries
+            url: "#"
+      - text: Public Resources
+        links:
+          - text: Holiday Calendar
+            url: "#"
+          - text: Language Access Information
+            url: "#"
+    title:
+      first: "Superior Court of California"
+      second: "Santa Cruz"
+    shoe:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Contact Us"
+          url: "#"
+        - text: "Privacy"
+          url: "#"
+        - text: "Terms of Use"
+          url: "#"
+        - text: "© 2022"

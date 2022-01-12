@@ -1,0 +1,18 @@
+{#
+/**
+ * Self-Help Page Demo
+ *   Representing https://live-jcc-elcondado.pantheonsite.io/self-help-model
+ */
+#}
+
+<div class="jcc-self-help-example">
+  {% include '@organisms/global/header.twig' with {
+    header: self_help_example.header
+  } %}
+
+  <div>Content</div>
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: self_help_example.footer
+  } %}
+</div>

@@ -1,0 +1,19 @@
+{#
+/**
+ * Landing Page Demo
+ *   Representing https://www.santacruz.courts.ca.gov/online-services
+ */
+#}
+
+<div class="jcc-landing-example">
+  {% include '@organisms/global/header.twig' with {
+    header: landing_example.header
+  } %}
+
+  <div>Content</div>
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: landing_example.footer
+  } %}
+
+</div>
