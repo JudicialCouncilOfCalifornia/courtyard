@@ -15,3 +15,57 @@
 } %}
 
 {% include '@organisms/global/footer-base/footer-base.twig' %}
+
+<!-- BEGIN SRL -->
+<script>
+  // Button icon
+  var chatBtnSvg = '';
+  chatBtnSvg = chatBtnSvg+'<use xlink:href="#icon-fig-chat">'
+  chatBtnSvg = chatBtnSvg+'<symbol id="icon-fig-chat" viewBox="0 0 512 512">'
+  chatBtnSvg = chatBtnSvg+'<path fill="currentColor" class="cls-1" d="M460.81 0H51.19A51.14 51.14 0 00.24 51.22L0 512l102.41-102.41h358.4A51.32 51.32 0 00512 358.41V51.22A51.35 51.35 0 00460.81 0zM155.43 237.71a27.43 27.43 0 1127.43-27.43 27.43 27.43 0 01-27.43 27.43zm109.71 0a27.43 27.43 0 1127.43-27.43 27.43 27.43 0 01-27.43 27.43zm109.72 0a27.43 27.43 0 1127.43-27.43 27.43 27.43 0 01-27.43 27.43z"></path>'
+  chatBtnSvg = chatBtnSvg+'</symbol>'
+  chatBtnSvg = chatBtnSvg+'</use>'
+  var chatBtnIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  chatBtnIcon.setAttribute('class', 'icon icon-chat');
+  chatBtnIcon.innerHTML = chatBtnSvg;
+
+  // Button label
+  var chatBtnTxt = document.createTextNode('Chat with us');
+
+  // Button
+  var chatBtn = document.createElement('button');
+  chatBtn.setAttribute('class', 'usa-button usa-button--primary usa-button--icon-top');
+  chatBtn.setAttribute('id', 'jcc-freshbot');
+  chatBtn.setAttribute('onclick', 'openFreshBot()');
+  chatBtn.appendChild(chatBtnIcon);
+  chatBtn.appendChild(chatBtnTxt);
+
+  // Button container
+  var chatCont = document.createElement('div');
+  chatCont.setAttribute('class', 'jcc-chat__trigger-container');
+  chatCont.appendChild(chatBtn);
+
+  // Button block
+  var chatBlock = document.createElement('div');
+  chatBlock.setAttribute('class', 'block jcc-chat');
+  chatBlock.appendChild(chatCont);
+
+  // Insert button to drawer
+  var drawer = document.getElementsByClassName('jcc-drawer__inner');
+  if (drawer.length > 0) {
+    drawer[0].appendChild(chatBlock);
+  }
+
+  // FreshBot Embed -- PROD?
+  (function (d, w, c) {if(!d.getElementById("spd-busns-spt")) { var n = d.getElementsByTagName('script')[0], s = d.createElement('script'); var loaded = false; s.id = "spd-busns-spt"; s.async = "async"; s.setAttribute("data-self-init", "false"); s.setAttribute("data-init-type", "opt"); s.src = 'https://cdn.freshbots.ai/assets/share/js/freshbots.min.js'; s.setAttribute("data-client", "38749a38ec9cfcf098305497a7cc4afede430bc9"); s.setAttribute("data-bot-hash", "fdbca3a11a6cb2bd7a1c87f93ca193c9cea019f3"); s.setAttribute("data-env", "prod"); s.setAttribute("data-region", "us"); if (c) { s.onreadystatechange = s.onload = function () { if (!loaded) { c(); } loaded = true; }; } n.parentNode.insertBefore(s, n); } }) (document, window, function () { Freshbots.initiateWidget({ autoInitChat: false, getClientParams: function () { return ; } }, function(successResponse) { }, function(errorResponse) { }); });
+
+  // Ensure feedback button width is not 100% for mobile
+  document.getElementsByClassName('block--single')[0].classList.remove('block--single');
+  document.getElementsByClassName('jcc-feedback')[0].prop('style').removeProperty('width');
+
+  // Button click handler
+  function openFreshBot() {
+    document.getElementById('mobile-chat-container').click(); // Click on the checkbox
+  }
+</script>
+<!-- END -->
