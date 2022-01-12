@@ -42,41 +42,40 @@ $(document).ready(function() {
   $drawer.attr("visible", "visible");
   setTimeout(siblingCheck(), 3000);
 
-  if (isNoPageScroll() == true) {
-    // TEMP: Adjust feedback reveal
-    //$drawer.attr("visible", "visible");
-    $feedback_container.attr("visible", "visible");
-  }
+  // TEMP: Disable since drawer reveals on page load
+  // if (isNoPageScroll() == true) {
+  //   $drawer.attr("visible", "visible");
+  // }
 });
 
+// TEMP: Disable since drawer reveals on page load
 // Scroll.
-if (!isNoPageScroll()) {
-  $window.on("scroll", function() {
-    if ($drawer.length == 0) {
-      return;
-    }
-
-    if ($window.scrollTop() + $window.height() >= $body.scrollHeight * (2 / 3)) {
-      // TEMP: Adjust feedback reveal
-      //$drawer.attr("visible", "visible");
-      $feedback_container.attr("visible", "visible");
-    }
-  });
-
-  $(window).resize(function() {
-    siblingCheck();
-
-    if ($feedback_dialog.attr("open")) {
-      $drawer.attr("visible", "visible");
-    }
-
-    if (window.innerWidth < 1024) {
-      $footer_spacer.attr("style", "padding-bottom: 7rem");
-    } else {
-      $footer_spacer.removeAttr("style");
-    }
-  });
-}
+// if (!isNoPageScroll()) {
+//   $window.on("scroll", function() {
+//     if ($drawer.length == 0) {
+//       return;
+//     }
+//
+//     if ($window.scrollTop() + $window.height() >= $body.scrollHeight * (2 / 3)) {
+//       $drawer.attr("visible", "visible");
+//       $feedback_container.attr("visible", "visible");
+//     }
+//   });
+//
+//   $(window).resize(function() {
+//     siblingCheck();
+//
+//     if ($feedback_dialog.attr("open")) {
+//       $drawer.attr("visible", "visible");
+//     }
+//
+//     if (window.innerWidth < 1024) {
+//       $footer_spacer.attr("style", "padding-bottom: 7rem");
+//     } else {
+//       $footer_spacer.removeAttr("style");
+//     }
+//   });
+// }
 
 // Widget interaction/visibility.
 function toggleChat() {
