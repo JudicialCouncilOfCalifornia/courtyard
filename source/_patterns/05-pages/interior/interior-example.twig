@@ -10,7 +10,37 @@
     header: interior_example.header
   } %}
 
-  <div>Content</div>
+  {% include '@molecules/alert/alert.twig' with {
+    alert: interior_example.alert_info
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: interior_example.alert_warning
+  } %}
+
+  {% include '@molecules/breadcrumb/breadcrumb.twig' with {
+    breadcrumb: interior_example.breadcrumb
+  } %}
+
+  {% include '@molecules/hero/hero.twig' with {
+    hero: interior_example.hero
+  } %}
+
+  {% include '@molecules/body/body.twig' with {
+    body: interior_example.body_main
+  } %}
+
+  {% include '@organisms/steps/steps.twig' with {
+    steps: interior_example.steps
+  } %}
+
+  {% include '@molecules/body/body.twig' with {
+    body: interior_example.body_second
+  } %}
+
+  {% include '@organisms/offcanvas/offcanvas.twig' with {
+    offcanvas: interior_example.offcanvas
+  } %}
 
   {% include '@organisms/global/footer.twig' with {
     footer: interior_example.footer
