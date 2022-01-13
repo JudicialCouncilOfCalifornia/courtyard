@@ -40,7 +40,7 @@ const siblingCheck = () => {
 $(document).ready(function() {
   // TEMP: Reveal drawer on page load
   $drawer.attr("visible", "visible");
-  setTimeout(siblingCheck(), 3000);
+  setTimeout(siblingCheck, 3000);
 
   // TEMP: Disable since drawer reveals on page load
   // if (isNoPageScroll() == true) {
