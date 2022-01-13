@@ -122,6 +122,93 @@ landing_example:
           url: "#"
         - text: "Spanish"
           url: "#"
+  hero:
+    background: alt
+    main:
+      title: "Online Services"
+      lead: "<p>The Superior Court of California County of Santa Cruz offers online resources to assist citizens with their traffic citations, jury duty, research & filing and more.</p>"
+    aside:
+      title: "Pay a Traffic Citation or Criminal Fine"
+      text: "Pay traffic/criminal fines or make a payment on an existing payment plan online with a credit card."
+      link:
+        url: "#"
+        text: "Pay Your Ticket or Fine"
+        is_external: true
+  cards:
+    num_cols: 4
+    items:
+      - style: "cta"
+        title: "Internet Case Inquiry System "
+        body: "<div><p>Case and calendar information relating to: Criminal, Traffic, Civil, Family Law, Probate, Small Claims.&nbsp;<a href='#'>Portal Documentation</a></p></div>"
+        link:
+          url: "#"
+          text: "View Case Information"
+          type: "ext"
+      - style: "cta"
+        title: "Interactive Jury Services"
+        body: "<div><p>Check your jury duty status, request to postpone service</p></div>"
+        link:
+          url: "#"
+          text: "Check Jury Status"
+          type: "ext"
+      - style: "cta"
+        title: "Receive Text Court Reminders"
+        body: "<div><p>This service provides text message reminders for hearing dates and payment due dates. Text case number to 831-208-5170.</p></div>"
+        link:
+          url: "#"
+          text: "More Information"
+      - style: "cta"
+        title: "Remote Appearance"
+        body: "<div><p>Remote appearance information and instructions for virtual courtroom connections.</p></div>"
+        link:
+          url: "#"
+          text: "More Information"
+  action_list:
+    heading:
+      title: "Additional Services"
+    items:
+      - title: "Pay a Traffic Citation or Criminal Fine"
+        body: "Pay traffic/criminal fines or make a payment on an existing payment plan online with a credit card."
+        link:
+          text: "Pay Your Ticket or Fine"
+          url: "#"
+          is_external: true
+      - title: "Tentative Rulings"
+        body: "Prior to the scheduled hearing of a Law and Motion, Complex Civil Litigation or a Discovery matter, the Court may issue a tentative ruling, in the discretion of the judge."
+        link:
+          text: "View Tentative Rulings"
+          url: "#"
+      - title: "California Courts Self-Help Center"
+        body: "The Online Self-Help Center of the California Courts provides information on a wide range of legal matters."
+        link:
+          text: "Visit Self-Help Center"
+          url: "#"
+  # @TODO Ensure Offcanvas shows as expected.
+  offcanvas:
+    id: "feedback-id"
+    button_close:
+      id: "feedback_close"
+    hero:
+      main:
+        icon:
+          name: "like-dislike"
+          set: "fig"
+          width: 55
+          height: 45
+        title: "Was this helpful?"
+        lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        actions:
+          - text: "Yes"
+          - text: "No"
+    embed: "<label class='usa-label' for='input-type-text'>Any Additional Feedback?</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><label class='usa-label' for='input-type-text'>Email (optional)</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><button class='jcc-button--primary margin-top-4' aria_label='Click me to execute action'>Submit</button>"
+    button:
+      id: "feedback_open"
+      text: "Was this helpful?"
+      icon:
+        name: "like-dislike"
+        set: "fig"
+        width: 40
+        height: 22
   footer:
     links:
       - text: Administrative

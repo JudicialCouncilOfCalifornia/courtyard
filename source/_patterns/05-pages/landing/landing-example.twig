@@ -10,7 +10,21 @@
     header: landing_example.header
   } %}
 
-  <div>Content</div>
+  {% include '@molecules/hero/hero.twig' with {
+    hero: landing_example.hero
+  } %}
+
+  {% include '@organisms/cards/cards.twig' with {
+    cards: landing_example.cards
+  } %}
+
+  {% include '@organisms/action-list/action-list.twig' with {
+    action_list: landing_example.action_list
+  } %}
+
+  {% include '@organisms/offcanvas/offcanvas.twig' with {
+    offcanvas: landing_example.offcanvas
+  } %}
 
   {% include '@organisms/global/footer.twig' with {
     footer: landing_example.footer

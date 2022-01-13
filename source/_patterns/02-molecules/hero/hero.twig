@@ -75,7 +75,7 @@
 
           {% if hero.aside.link.url %}
             <div class="jcc-hero__aside-link">
-              <a href="{{ hero.aside.link.url }}">{{ hero.aside.link.text }}</a>
+              <a {{ hero.aside.link.is_external ? 'class="ext"' -}} href="{{ hero.aside.link.url }}">{{ hero.aside.link.text }}</a>
             </div>
           {% endif %}
         </aside>

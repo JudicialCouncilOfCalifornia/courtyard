@@ -33,7 +33,7 @@
 
         {% if item.link %}
           <div class="jcc-action-list__action">
-            <a href="{{ item.link.url }}">{{ item.link.text }}</a>
+            <a {{ item.link.is_external ? 'class="ext"' -}} href="{{ item.link.url }}">{{ item.link.text }}</a>
           </div>
         {% endif %}
       </li>
