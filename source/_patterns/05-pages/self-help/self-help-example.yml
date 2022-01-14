@@ -216,6 +216,7 @@ self_help_example:
     heading:
       title: "Related Resources"
     num_cols: "2-50-50"
+    background: alt
     items:
       - style: "cta"
         title: "Lawyer Referral Services "
