@@ -138,7 +138,7 @@ landing_example:
     num_cols: 4
     items:
       - style: "cta"
-        title: "Internet Case Inquiry System "
+        title: "Internet Case Inquiry System"
         body: "<div><p>Case and calendar information relating to: Criminal, Traffic, Civil, Family Law, Probate, Small Claims.&nbsp;<a href='#'>Portal Documentation</a></p></div>"
         link:
           url: "#"

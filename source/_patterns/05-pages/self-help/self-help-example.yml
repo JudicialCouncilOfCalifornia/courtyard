@@ -116,6 +116,173 @@ self_help_example:
         section_link:
           text: General Information
           url: "#"
+  alert_info:
+    type: "info"
+    size: "slim"
+    width: "centered"
+    heading: "This is a sandbox site"
+    text: <p>The JCC Web &amp; Digital Services teams use this site to prototype content &amp; designs for Superior Court websites. As of September 2021, the Homepage and the Self Help and Forms &amp; Filing sections are actively being worked on - the rest is a clone of an existing site that we'll work on section by section.</p>
+    close: true
+  alert_warning:
+    type: "warning"
+    size: "slim"
+    width: "centered"
+    heading: "COVID-19 changes (model):"
+    text:
+      <p><em>All hearings and trials&nbsp;are currently being held remotely via Zoom. If you need to visit the courthouse for any reason, you must wear a mask.</em></p>
+      <p><strong><a href="/node/52">View COVID-19 Information</a></strong></p>
+    close: true
+  hero:
+    main:
+      title: "Self-Help Resources"
+      lead:
+        <p>The Superior Court of El Condado County&nbsp;offers free help&nbsp;to the public. We help&nbsp;with a variety of basic legal issues and types of cases, including&nbsp;family&nbsp;law and&nbsp;small&nbsp;claims.&nbsp;</p>
+        <p>- Ask us your questions by phone or email</p>
+        <p>- Get help with court forms at a workshop</p>
+        <p>- Find step by step instructions online</p>
+    aside: false
+    background: alt
+  body_main:
+    main:
+      title: "Services we offer"
+      lead:
+        <p>We help people who need legal information but don't have a lawyer. We can&nbsp;answer questions about your case, help you figure out which forms&nbsp;you need and how to fill them out,&nbsp;and explain&nbsp;different&nbsp;legal options.&nbsp;Our staff don't give legal advice (we can tell you <em>how</em> to do something but we can't tell you <em>what</em> choice you should make) and&nbsp;we may refer you to a private attorney or another resource&nbsp;depending on your situation.&nbsp;See more on&nbsp;<a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5f28a3ee-6797-4936-b3eb-811383b9e5ae" href="/self-help/self-help-center" title="At the Self Help Center">what to expect</a>.</p>
+      text:
+        <h3>Call us</h3>
+        <p>We are available Monday through Friday from 9AM to 12PM. You can also&nbsp; leave us a voicemail and we'll return the call within 2 business days.</p>
+        <p><a class="jcc-button--primary" href="#">Call 987-654-3210</a></p>
+        <h3>Email us</h3>
+        <p>We can be reached at <a href="mailto:selfhelp@elcondadocourt.org" class="mailto" data-extlink="">selfhelp@elcondadocourt.org<svg focusable="false" class="mailto" role="img" aria-label="(link sends email)" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 70 20"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link sends email)</title><path d="M56 14H8c-1.1 0-2 0.9-2 2v32c0 1.1 0.9 2 2 2h48c1.1 0 2-0.9 2-2V16C58 14.9 57.1 14 56 14zM50.5 18L32 33.4 13.5 18H50.5zM10 46V20.3l20.7 17.3C31.1 37.8 31.5 38 32 38s0.9-0.2 1.3-0.5L54 20.3V46H10z"></path></svg></a>. Please provide as many details as you can, including your case number if you have one. We answer emails within 2 business days.</p>
+        <h3>Workshops&nbsp;</h3>
+        <p>We offer free workshops to the public, focused on completing a specific legal task. These are group workshops, offered in person or online. See the schedule</p>
+        <h3>Step-by-step instructions&nbsp;online&nbsp;</h3>
+        <p>The State of California provides online information and resources for people representing themselves in a court case. Access&nbsp;these&nbsp;easy-to-read step-by-step instructions for navigating your court case from any device.&nbsp;</p>
+        <p><a class="jcc-button--primary ext" href="#" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">California Self-Help Guide<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a></p>       
+    aside:
+      title: "Locations and Hours"
+      text:
+        '<p><strong>Our centers are closed due to COVID precautions, but we have a drop box for completed forms at:</strong></p>
+        <p>201 Church Street<br>
+        Nevada City, CA 95959</p>
+        <p>Email: <a href="mailto:selfhelp@elcondadocourt.org" class="mailto" data-extlink="">selfhelp@elcondadocourt.org<svg focusable="false" class="mailto" role="img" aria-label="(link sends email)" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 70 20"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link sends email)</title><path d="M56 14H8c-1.1 0-2 0.9-2 2v32c0 1.1 0.9 2 2 2h48c1.1 0 2-0.9 2-2V16C58 14.9 57.1 14 56 14zM50.5 18L32 33.4 13.5 18H50.5zM10 46V20.3l20.7 17.3C31.1 37.8 31.5 38 32 38s0.9-0.2 1.3-0.5L54 20.3V46H10z"></path></svg></a></p>
+        <p><strong>Phone</strong>: (530) 470-2594 (please leave a detailed message)</p>'
+  cards_cases:
+    heading:
+      title: "Types of cases"
+      lead: "<p>We offer help with most non-criminal legal problems. We have detailed resources on these areas:</p>"
+    background: alt
+    num_cols: 3
+    items:
+      - style: "cta"
+        title: "Divorce or Legal Separation"
+        body: "<div><p>Resources to file and finish your divorce in El Condado County including online chat and workshops.</p></div>"
+        link:
+          url: "#"
+          text: "Divorce Resources"
+      - style: "cta"
+        title: "Restraining Orders"
+        body: "<div><p>Protecting yourself from abuse by a family member or other person</p></div>"
+        link:
+          url: "#"
+          text: "Restraining Order Resources"
+      - style: "cta"
+        title: "Small Claims"
+        body: "<div><p>Our Small Claims Advisor can help you prepare for small claims court - a court for small lawsuits with simpler procedures and no lawyers.</p></div>"
+        link:
+          url: "#"
+          text: "Small Claims Resources"
+  body_second:
+    main:
+      title: "Top California Court FAQs"
+      lead:
+        <p>The following are links to the State of California's Self-Help Center frequently asked questions pages. Information is provided in English and Spanish.</p>
+      text:
+        <p>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Divorce &amp; Separation<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a><br>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Custody &amp; Parenting Time<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a><br>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Name Change<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a><br>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Small Claims<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a><br>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Restraining Orders<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a><br>
+          <a href="#" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Evictions &amp; Unlawful Detainer<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+        </p>       
+    aside:
+      title: "Self-Help Forms"
+      text:
+        <p>
+          <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="60e825f1-c43e-4562-8481-4821c3fe1a83" href="/forms-filing-model" title="Forms &amp; Filing (model)">Local Forms</a><br>
+          <a href="http://www.courts.ca.gov/forms.htm" class="ext" data-extlink="" target="_blank" rel="noopener nofollow noreferrer">Judicial Council Forms<svg focusable="false" class="ext" role="img" aria-label="(link is external)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><slicesourcebounds y="-8160" x="-8165" width="16389" height="16384" bottomleftorigin="true"></slicesourcebounds><optimizationsettings><targetsettings targetsettingsid="0" fileformat="PNG24Format"><png24format transparency="true" filtered="false" interlaced="false" nomattecolor="false" mattecolor="#FFFFFF"></png24format></targetsettings></optimizationsettings></sfw></metadata><title>(link is external)</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"></path><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"></path></svg></a>
+        </p>
+  cards_resources:
+    heading:
+      title: "Related Resources"
+    num_cols: "2-50-50"
+    items:
+      - style: "cta"
+        title: "Lawyer Referral Services "
+        body: "<div><p>Lawyer referral services are offered by the California Bar Association.</p></div>"
+        link:
+          url: "#"
+          text: "Go to Referral Services"
+          type: "ext"
+      - style: "cta"
+        title: "Families Change"
+        body: "<div><p>A guide to separation and divorce. Resources are available for all members of the family.</p></div>"
+        link:
+          url: "#"
+          text: "Go to Families Change"
+          type: "ext"
+      - style: "cta"
+        title: "California Courts Self-Help Center"
+        link:
+          url: "#"
+          text: "Go to Self-Help Resources"
+          type: "ext"
+      - style: "cta"
+        title: "Cortes de California Centro de Ayuda"
+        link:
+          url: "#"
+          text: "Acceso al Centro de Ayuda del Estado de California"
+          type: "ext"
+      - style: "cta"
+        title: "Legal Services of Northern California "
+        body: "<div><p>Sierra County has an equal access partnership with Legal Services of Norther California to provide assistance to low-income clients who meet the eligibility requirements.</p></div>"
+        link:
+          url: "#"
+          text: "Go to LSNC"
+          type: "ext"
+      - style: "cta"
+        title: "Sierra County Small Claims"
+        body: "<div><p>Small claims is a court within the Superior Court where disputes are resolved quickly and inexpensively.</p></div>"
+        link:
+          url: "#"
+          text: "Go to Small Claims"
+          type: "ext"
+  # @TODO Ensure Offcanvas shows as expected.
+  offcanvas:
+    id: "feedback-id"
+    button_close:
+      id: "feedback_close"
+    hero:
+      main:
+        icon:
+          name: "like-dislike"
+          set: "fig"
+          width: 55
+          height: 45
+        title: "Was this helpful?"
+        lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        actions:
+          - text: "Yes"
+          - text: "No"
+    embed: "<label class='usa-label' for='input-type-text'>Any Additional Feedback?</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><label class='usa-label' for='input-type-text'>Email (optional)</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><button class='jcc-button--primary margin-top-4' aria_label='Click me to execute action'>Submit</button>"
+    button:
+      id: "feedback_open"
+      text: "Was this helpful?"
+      icon:
+        name: "like-dislike"
+        set: "fig"
+        width: 40
+        height: 22
   footer:
     links:
       - text: Administrative
