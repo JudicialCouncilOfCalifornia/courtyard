@@ -1,0 +1,273 @@
+homepage_example:
+  header:
+    skip:
+      text: "Skip to main content"
+      url: "#"
+    hat:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Supreme Court"
+          url: "#"
+        - text: "Courts of Appeal"
+          url: "#"
+        - text: "Superior Courts"
+          url: "#"
+        - text: "Judicial Council"
+          url: "#"
+    logo:
+      title: "County of Santa Cruz"
+      svg: "logo-example.svg"
+    search_action: "#"
+    links:
+      - text: Home
+        url: "#"
+        is_current: true
+      - text: Online Services
+        id: nav-section-one
+        links:
+          - text: Case Lookup
+            url: "#"
+          - text: Civil Tentative Rulings
+            url: "#"
+          - text: Court Reminder Notifications
+            url: "#"
+        section_link:
+          text: Online Services
+          url: "#"
+      - text: Forms & Filing
+        links:
+          - text: Electronic Filing
+            url: "#"
+          - text: Fees & Bail Schedules
+            url: "#"
+          - text: Local Forms
+            url: "#"
+          - text: Local Rules
+            url: "#"
+        section_link:
+          text: Forms & Filing
+          url: "#"
+      - text: Self-Help
+        url: "#"
+      - text: Divisions
+        links:
+          - text: Collaborative Courts
+            url: "#"
+          - text: Civil Division
+            url: "#"
+          - text: Civil Grand Jury
+            url: "#"
+          - text: Criminal Division
+            url: "#"
+          - text: Family Law Division
+            url: "#"
+          - text: Jury Division
+            url: "#"
+          - text: Juvenile Divison
+            url: "#"
+          - text: Probate Divison
+            url: "#"
+          - text: Records & Information
+            url: "#"
+          - text: Restraining Orders
+            url: "#"
+          - text: Small Claims Division
+            url: "#"
+          - text: Traffic Division
+            url: "#"
+        section_link:
+          text: Divisions
+          url: "#"
+      - text: General Information
+        links:
+          - text: Budget
+            url: "#"
+          - text: COVID-19 Information
+            url: "#"
+          - text: Court Holiday Schedule
+            url: "#"
+          - text: Courtoom Technology
+            url: "#"
+          - text: Disability Accomodation Request
+            url: "#"
+          - text: Employment
+            url: "#"
+          - text: Financial Hardship
+            url: "#"
+          - text: Judicial Assignments
+            url: "#"
+          - text: Language Access
+            url: "#"
+          - text: Locations & Contact Info
+            url: "#"
+          - text: Media
+            url: "#"
+          - text: Public Access to Judicial Administrative Records
+            url: "#"
+          - text: Vendors
+            url: "#"
+          - text: Government Claim Form
+            url: "#"
+          - text: News and Events
+            url: "#"
+        section_link:
+          text: General Information
+          url: "#"
+    translate:
+      text: "Translate"
+      links:
+        - text: "English"
+          url: "#"
+        - text: "Spanish"
+          url: "#"
+  alert:
+    type: "info"
+    size: "slim"
+    width: "centered"
+    heading: "Coronavirus/COVID-19 Response Information"
+    text:
+      <p>&nbsp;</p>
+      <p>For news and announcements concerning COVID-19,&nbsp;Please visit our <a href=\"javascript:void(0);\">COVID-19 information page</a>.</p>
+      <p><strong>Appearing before the Court?&nbsp;</strong> Learn about <a href=\"javascript:void(0);\">Remote Appearances</a><br>
+      <strong>Face Coverings at the Courthouse:</strong>&nbsp;
+      The County Health Officer is re-instituting a face-covering requirement beginning on Monday, November 22.
+      Face masks will be required in all Court facilities regardless of vaccination status.</p>
+    close: true
+  hero_tiles:
+    style: "side-image"
+    title:
+      first: "Welcome to the"
+      second: "Superior Court of Santa Cruz"
+    tiles:
+      - text: "Jury Service"
+        url: "#"
+        icon:
+          name: "jury"
+          set: "line-white"
+          title: "Jury Service"
+      - text: "Traffic Tickts"
+        url: "#"
+        icon:
+          name: "paper-traffic-ticket"
+          set: "line-white"
+          title: "Traffic Tickets"
+      - text: "Case Information"
+        url: "#"
+        icon:
+          name: "website-remote-hearing"
+          set: "line-white"
+          title: "Remote Hearings"
+      - text: "Pay Fines & Fees"
+        url: "#"
+        icon:
+          name: "website-e-file"
+          set: "line-white"
+          title: "E-filing"
+    images:
+      side: "https://placeimg.com/750/500/nature"
+  services_cards:
+    heading:
+      title: "Services"
+    num_cols: 4
+    items:
+      - style: "borderless"
+        title: "California Courts Self-Help"
+        body: "<div><p><a href='#'>Centro de Ayuda (Español)</a></p></div>"
+        link:
+          url: "#"
+      - style: "borderless"
+        title: "Electronic Filing"
+        body: "<div><p>e-Filing is available for all case types and is <strong>mandatory</strong> for attorneys.</p></div>"
+        link:
+          url: "#"
+      - style: "borderless"
+        title: "File @ Home"
+        body: "<div><p>Complete the required paperwork for certain types of legal actions by answering questions in an online interview.</p></div>"
+        link:
+          url: "#"
+      - style: "borderless"
+        title: "Get Text Reminders"
+        body: "<div><p>Text the case number to (831) 208-5170.</p></div>"
+        link:
+          url: "#"
+          text: "Mattis tellus"
+  news_highlights:
+    heading:
+      title: "News, Updates & Notices"
+    primary_items:
+      - title: "New Electronic Calendar Displays"
+        date: "Nov 19, 2021"
+        url: "#"
+      - title: "Evidence Submission Updates"
+        date: "Mar 25, 2021"
+        url: "#"
+    secondary_items:
+      - title: "CA COVID-19 Rent Relief Program"
+        date: "Mar 16, 2021"
+        url: "#"
+      - title: "New Legislation SB 91 extending AB 3088"
+        date: "Feb 01, 2021"
+        url: "#"
+      - title: "Seventh General Order Emergency Relief"
+        date: "Dec 01, 2020"
+        url: "#"
+    link:
+      url: "#"
+      text: "More News"
+  location_map:
+    include():
+      pattern: 'molecules-location-map'
+  body_about:
+    main:
+      title: "About the Court"
+      text:
+        <p>The mission of the Santa Cruz Superior Court is to preserve and protect the rights and ideals of society through the interpretation and enforcement of law, provide equal access to justice through quality service to the community by judicial officers and court staff and treat all participants in the judicial system with dignity and respect.</p>
+    aside:
+      title: "Court Leadership"
+      text:
+        <p><strong>HON. Timothy Volkmann</strong><br>Presiding Judge</p>
+        <p><strong>HON. Syda Cogliati</strong><br>Assistant Presiding Judge</p>
+        <p><strong>Alex Calvo</strong><br>Court Executive Officer</p>
+  footer:
+    links:
+      - text: Administrative
+        links:
+          - text: ADA Policy
+            url: "#"
+          - text: Contact
+            url: "#"
+          - text: Jobs
+            url: "#"
+      - text: Attorney Resources
+        links:
+          - text: Case Search
+            url: "#"
+          - text: Forms & Local Rules
+            url: "#"
+      - text: Media
+        links:
+          - text: Media Inquiries
+            url: "#"
+      - text: Public Resources
+        links:
+          - text: Holiday Calendar
+            url: "#"
+          - text: Language Access Information
+            url: "#"
+    title:
+      first: "Superior Court of California"
+      second: "Santa Cruz"
+    shoe:
+      title:
+        text: 'Judicial Branch of California'
+        url: '#'
+      links:
+        - text: "Contact Us"
+          url: "#"
+        - text: "Privacy"
+          url: "#"
+        - text: "Terms of Use"
+          url: "#"
+        - text: "© 2022"

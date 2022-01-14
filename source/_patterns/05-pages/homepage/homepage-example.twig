@@ -1,0 +1,39 @@
+{#
+/**
+ * Homepage Demo
+ *   Representing https://www.santacruz.courts.ca.gov/
+ */
+#}
+
+<div class="jcc-homepage-example">
+  {% include '@organisms/global/header.twig' with {
+    header: homepage_example.header
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: homepage_example.alert
+  } %}
+
+  {% include '@molecules/hero/hero-tiles.twig' with {
+    hero_tiles: homepage_example.hero_tiles
+  } %}
+
+  {% include '@organisms/cards/cards.twig' with {
+    cards: homepage_example.services_cards
+  } %}
+
+  {% include '@templates/news/news-highlights.twig' with {
+    news_highlights: homepage_example.news_highlights
+  } %}
+
+  {{ homepage_example.location_map }}
+
+  {% include '@molecules/body/body.twig' with {
+    body: homepage_example.body_about
+  } %}
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: homepage_example.footer
+  } %}
+
+</div>

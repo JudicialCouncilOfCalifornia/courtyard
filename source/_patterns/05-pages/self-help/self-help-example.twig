@@ -1,0 +1,48 @@
+{#
+/**
+ * Self-Help Page Demo
+ *   Representing https://live-jcc-elcondado.pantheonsite.io/self-help-model
+ */
+#}
+
+<div class="jcc-self-help-example">
+  {% include '@organisms/global/header.twig' with {
+    header: self_help_example.header
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: self_help_example.alert_info
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: self_help_example.alert_warning
+  } %}
+
+  {% include '@molecules/hero/hero.twig' with {
+    hero: self_help_example.hero
+  } %}
+
+  {% include '@molecules/body/body.twig' with {
+    body: self_help_example.body_main
+  } %}
+
+  {% include '@organisms/cards/cards.twig' with {
+    cards: self_help_example.cards_cases
+  } %}
+
+  {% include '@molecules/body/body.twig' with {
+    body: self_help_example.body_second
+  } %}
+
+  {% include '@organisms/cards/cards.twig' with {
+    cards: self_help_example.cards_resources
+  } %}
+
+  {% include '@organisms/offcanvas/offcanvas.twig' with {
+    offcanvas: self_help_example.offcanvas
+  } %}
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: self_help_example.footer
+  } %}
+</div>
