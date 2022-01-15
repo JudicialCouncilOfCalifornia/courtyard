@@ -2,7 +2,7 @@ name: Trigger artifact build
 
 on:
   push:
-    branches: [ 1.x, 2.x ]
+    branches: [ 1.x, 2.x, 2.x-dev ]
 
 jobs:
   build:
