@@ -1,36 +1,46 @@
 content_stream:
-    heading:
-      title: "Recent Content"
-      lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis. Sagittis diam dignissim risus mattis ad donec urna, non ligula dui viverra rhoncus convallis netus vivamus, platea iaculis consectetur pellentesque litora dolor.</p>"
+  heading:
+    title: "Recent Content"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis. Sagittis diam dignissim risus mattis ad donec urna, non ligula dui viverra rhoncus convallis netus vivamus, platea iaculis consectetur pellentesque litora dolor.</p>"
+  link:
+    text: "See All News"
+    url: "#"
+    align: "left"
+  media_placeholder:
+    src: "../../brand/logo-supremecourt.svg"
+    alt: "Supreme Court logo"
+    bgcolor: "blue"
+  items:
+  - brow: "Aug 17, 2021"
+    title: "Iaculis proin erat porttitor"
+    body: "<p>Pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
     link:
-      text: "See All News"
       url: "#"
-      align: "left"
-    items:
-    - brow: "Aug 17, 2021"
-      title: "Iaculis proin erat porttitor"
-      body: "<p>Pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-      link:
-        url: "#"
-        text: "Ullamcorper elit"
-      media:
-        src: "https://placeimg.com/350/250/nature"
-        alt: "Dolor blandit cum vel tempus volutpat"
-    - brow: "Aug 16, 2021"
-      title: "Consequat nostra vel"
-      body: "<p>Lacus nec laoreet velit augue tellus justo ornare.</p>"
-      link:
-        url: "#"
-        text: "Luctus nunc quam"
-      media:
-        src: "https://placeimg.com/350/250/nature"
-        alt: "Officia deserunt mollit anim id est laborum"
-    - brow: "Aug 15, 2021"
-      title: "Tempor incididunt ut labore et dolore magna aliqua"
-      body: "<p>Ut enim ad minim veniam, quis nostrud exercitation.</p>"
-      link:
-        url: "#"
-        text: "Excepteur sint occaecat"
-      media:
-        src: "https://placeimg.com/350/250/nature"
-        alt: "Cupidatat non proident, sunt in culpa qui"
+      text: "Ullamcorper elit"
+    media:
+      src: "https://placeimg.com/640/480/arch"
+      alt: "Dolor blandit cum vel tempus volutpat"
+  - brow: "Aug 16, 2021"
+    title: "Consequat nostra vel"
+    body: "<p>Lacus nec laoreet velit augue tellus justo ornare.</p>"
+    link:
+      url: "#"
+      text: "Luctus nunc quam"
+    media:
+      src: "https://placeimg.com/640/480/people"
+      alt: "Officia deserunt mollit anim id est laborum"
+  - brow: "Aug 15, 2021"
+    title: "Media Placeholder"
+    body: "<p>If an item does not have an image for the thumbnail and placeholder is in use.</p>"
+    link:
+      url: "#"
+      text: "Placeholder example"
+  - brow: "Aug 14, 2021"
+    title: "Tempor incididunt ut labore et dolore magna aliqua"
+    body: "<p>Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+    link:
+      url: "#"
+      text: "Excepteur sint occaecat"
+    media:
+      src: "https://placeimg.com/640/480/tech"
+      alt: "Cupidatat non proident, sunt in culpa qui"
