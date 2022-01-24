@@ -7,7 +7,7 @@
 
   .jcc-cards {
     @include u-margin-top(0, !important);
-    @include u-padding-left(2, !important);
+    @include u-padding-left(1, !important);
   }
 
   .jcc-cards__item {
@@ -18,9 +18,22 @@
     @include u-padding-bottom(2);
 
     &:first-child {
-      .usa-card--media-left {
-        @include u-position(relative);
-        left: -1rem;
+      .usa-card__media {
+        @include u-margin-right(4);
+        @include u-width(mobile-lg);
+
+        span {
+          @include add-aspect("16x9");
+        }
+      }
+    }
+
+    .usa-card__media {
+      @include u-margin-right(3);
+      width: 8.75rem;
+
+      span {
+        @include add-aspect("1x1");
       }
     }
 
@@ -30,18 +43,16 @@
   }
 
   .usa-card__media {
-    @include u-width(mobile);
-
     span {
       @include u-display(inline-block);
       @include u-position(relative);
-      @include add-aspect("4x3");
       @include u-width(full);
       @include u-overflow(hidden);
 
       img {
         @include u-position(absolute);
         @include u-width(full);
+        @include u-height(full);
         @include u-top(0);
         @include u-left(0);
         object-fit: cover;
@@ -51,5 +62,20 @@
 
   .usa-card__brow + .usa-card__heading {
     @include u-padding-top(0);
+  }
+
+  .usa-card--media-placeholder {
+    .usa-card__media {
+      span {
+        @include u-height(auto);
+        @include u-padding(1);
+        @include u-bg("blue-warm-70v");
+
+        img {
+          @include u-display(block);
+          @include u-position(relative);
+        }
+      }
+    }
   }
 }

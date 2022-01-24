@@ -5,6 +5,9 @@
  *   - heading: optional section title
  *     - title: section title
  *     - lead: section lead
+ *   - media_placeholder: option to display default image if not available
+ *     - src: image file url
+ *     - alt: image description
  *   - items: array of news card items
  *     - title: heading
  *     - body:  summary
@@ -19,10 +22,17 @@
 {% set content = [] %}
 {% for item in content_stream.items %}
   {% set image = null %}
-  {% if loop.first and item.media.src is defined and item.media.src is not null  %}
+  {% if item.media.src or content_stream.media_placeholder.src %}
     {% set card_style = 'borderless usa-card--media-left' %}
+    {% set image_src = item.media.src %}
+    {% set image_alt = item.media.alt %}
+    {% if item.media.src is null and content_stream.media_placeholder %}
+      {% set card_style = 'borderless usa-card--media-left usa-card--media-placeholder' %}
+      {% set image_src = content_stream.media_placeholder.src %}
+      {% set image_alt = content_stream.media_placeholder.alt %}
+    {% endif %}
     {% set image %}
-      <img src="{{ item.media.src }}" alt="{{ item.media.alt }}" />
+      <img src="{{ image_src }}" alt="{{ image_alt }}" />
     {% endset %}
   {% endif %}
 
