@@ -51,4 +51,17 @@
   &__text {
     background-image: url("../images/graphics/text.svg");
   }
+
+  #jcc-share__trigger--text {
+    @include u-display(inline-block);
+
+    @include at-media(desktop) {
+      @include u-display(none);
+    }
+
+    // If tablet viewed in landscape orientation
+    @media only screen and (max-device-width: 1280px) and (orientation: landscape) {
+      @include u-display(inline-block);
+    }
+  }
 }
