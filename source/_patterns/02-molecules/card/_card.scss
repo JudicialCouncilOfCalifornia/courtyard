@@ -107,10 +107,14 @@ $_config_schemes: (
     body-size: 5,
     overlay-bgcolors: (
       none: "transparent",
-      blue: "#005EA2",
+      blue: "#005EA2", // also masthead color but really blue-vivid
+      blue2: "#2378c3", // masthead color
       blue-dark: "#0B4778",
+      blue-warm-vivid: "#1a4480", // masthead color
       cyan: "#2A646D",
       gray: "#5C5C5C",
+      gray-dark: "#757575", // masthead color
+      gray-warm: "#76766a", // masthead color
       green: "#15816E",
       magenta: "#8B4566",
       mint: "#40807E",
@@ -151,17 +155,24 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     &:hover {
       @include u-shadow(none);
 
-      div[class^="jcc-card--overlay-color-"]::after {
-        @include u-position(absolute);
-        @include u-display(inline-block);
-        @include u-top(0);
-        @include u-left(0);
-        @include u-width(full);
-        @include u-height(full);
-        @include u-radius($theme-card-border-radius);
-        @include u-bg("gray-warm-50");
-        opacity: 0.7;
-        content: " ";
+      .jcc-card--overlay-color-none {
+        @each $hover-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
+          @if $hover-bgcolor {
+            &.jcc-card--hover-color-#{$hover-bgcolor} {
+              background-color: #{$color-value};
+              border-radius: map-get($_config, border-radius-img);
+
+              img,
+              picture {
+                opacity: 0.1;
+              }
+            }
+          }
+        }
+      }
+
+      div[class^="jcc-card--overlay-color-"] {
+        opacity: 0.9;
       }
     }
   }
