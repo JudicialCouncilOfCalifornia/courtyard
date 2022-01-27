@@ -14,15 +14,16 @@ cards:
       link:
         url: "#"
         text: "Luctus nunc quam"
-    - style: "media-full-overlay"
+    - style: "media-full-overlay usa-card--hover"
+      is_clickable: TRUE
       bgcolor: "gray"
-      title: "Posuere et ornare"
+      title: "Visual Hover"
       body: "<p>Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat, euismod potenti inceptos nibh mauris posuere scelerisque facilisi. This card has no link url.</p>"
       media:
         src: "https://placeimg.com/350/250/people"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
-        url: null
+        url: "#"
         text: "Erat neque quisque vivamus"
     - style: "media-full-overlay"
       bgcolor: "red"

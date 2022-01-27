@@ -4,8 +4,9 @@ cards:
     lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis. Sagittis diam dignissim risus mattis ad donec urna, non ligula dui viverra rhoncus convallis netus vivamus, platea iaculis consectetur pellentesque litora dolor.</p>"
   num_cols: 4
   items:
-    - style: "media-full"
-      title: "Posuere et ornare"
+    - style: "media-full usa-card--hover"
+      is_clickable: TRUE
+      title: "Visual Hover"
       body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
       media:
         src: "https://placeimg.com/350/250/nature"
@@ -13,14 +14,16 @@ cards:
       link:
         url: "#"
         text: "Luctus nunc quam"
-    - style: "media-full"
-      title: "Posuere et ornare"
+    - style: "media-full usa-card--hover"
+      is_clickable: TRUE
+      bgcolor: "none jcc-card--hover-color-blue"
+      title: "Visual Hover Color"
       body: "<p>Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat, euismod potenti inceptos nibh mauris posuere scelerisque facilisi. This card has no link url.</p>"
       media:
         src: "https://placeimg.com/350/250/people"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
-        url: null
+        url: "#"
         text: "Erat neque quisque vivamus"
     - style: "media-full"
       title: "Posuere et ornare"
