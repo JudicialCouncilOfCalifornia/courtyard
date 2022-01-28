@@ -27,3 +27,14 @@ switchboard:
         body: 'Blandit consequat nostra eleifend egestas leo vestibulum tristique curabitur amet quisque per'
         url: 'link.pages-judgment-pay-in-installments'
         embellishment: 'arrow-right'
+  footer:
+    label: 'Already know what you are looking for?'
+    buttons:
+      - title: 'See Divorce Forms'
+        url: '#'
+        icon:
+          name: 'file'
+      - title: 'See Index: All Divorce Pages'
+        url: '#'
+        icon:
+          name: 'list'

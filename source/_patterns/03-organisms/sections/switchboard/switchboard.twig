@@ -4,6 +4,12 @@
   'jcc-switchboard--' ~ switchboard.layout_variant|default('default'),
 ]|merge(switchboard.classes|default([''])) %}
 
+{% if switchboard.background_variant == 'has-background-color--dark--primary' %}
+    {% set button_color = 'inverted' %}
+{% else %}
+    {% set button_color = 'primary' %}
+{% endif %}
+
 <div class="{{ classes|join(' ')|trim }}" {% if switchboard.id %} id="{{ switchboard.id }}" {% endif %}>
   <div class="jcc-switchboard__container">
     {% if switchboard.breadcrumbs %}
@@ -56,5 +62,22 @@
         </div>
       </div>
     </div>
+      {% if switchboard.footer %}
+          <div class="jcc-switchboard__footer">
+              <div class="jcc-switchboard__footer-label">{{ switchboard.footer.label }}</div>
+              <div class="jcc-switchboard__footer-buttons">
+                  {% for button in switchboard.footer.buttons %}
+                      {% include '@atoms/buttons/index-button.twig' with {
+                          index_button: {
+                              style: button_color|default('primary'),
+                              text: button.title,
+                              url: button.url,
+                              icon: icon
+                          }
+                      } %}
+                {% endfor %}
+              </div>
+          </div>
+      {% endif %}
   </div>
 </div>

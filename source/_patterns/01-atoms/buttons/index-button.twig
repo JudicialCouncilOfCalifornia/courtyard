@@ -1,15 +1,14 @@
 {% set classes = [
   'usa-button',
   'usa-button--index',
-  'usa-button--unstyled'
+  'usa-button--' ~ index_button.style|default('unstyled'),
 ]|merge(index_button.classes|default([''])) %}
 
 <a class="{{ classes|join(' ')|trim }}" href="{{ index_button.url|default('#') }}">
   {% include '@atoms/icons/icon.twig' with {
     icon: {
-      name: 'list',
-      decorative: true,
-      color: 'text-ink'
+      name: button.icon.name|default('list'),
+      decorative: true
     }
   } %}
   {{- index_button.text|default('Click') -}}

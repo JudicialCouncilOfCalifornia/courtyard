@@ -52,6 +52,38 @@
   }
 }
 
+.usa-button--inverted {
+  background-color: white !important;
+  &,
+  & a,
+  & svg {
+    @include u-text(primary, "!important");
+    &:hover,
+    &:hover svg,
+    &.usa-button--hover {
+      @include u-text(ink, "!important");
+    }
+    &:active,
+    &.usa-button--active {
+      @include u-text(gray-90, "!important");
+    }
+    &:visited,
+    &:focus {
+      @include u-text(ink, "!important");
+    }
+  }
+
+  &:hover,
+  &.usa-button--hover {
+    background-color: color(accent-warm) !important;
+  }
+
+  &:active,
+  &.usa-button--active {
+    background-color: color(accent-warm-darker) !important;
+  }
+}
+
 .usa-button--outline {
   @include u-text(ink);
   @include u-text("normal");
@@ -209,6 +241,22 @@
     @include u-float("none");
     @include u-display("block");
     @include u-margin-x("auto");
+  }
+}
+
+.jcc-switchboard__footer {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  @include u-display("flex");
+  @include u-padding-y(4);
+  .jcc-switchboard__footer-label,
+  .jcc-switchboard__footer-buttons {
+    @include u-display("inline-flex");
+  }
+  .jcc-switchboard__footer-label {
+    @include u-padding-x(2);
+    align-items: center;
   }
 }
 
