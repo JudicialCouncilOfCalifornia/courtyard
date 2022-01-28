@@ -40,6 +40,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include at-media(desktop) {
       @include grid-col(12);
     }
+
+    .jcc-body__main-text {
+      @include grid-col(8);
+    }
+
+
   }
 }
 
