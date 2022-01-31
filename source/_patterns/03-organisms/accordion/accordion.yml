@@ -1,4 +1,5 @@
 accordion:
+  style: "full"
   heading:
     title: "Accordion"
   items:
