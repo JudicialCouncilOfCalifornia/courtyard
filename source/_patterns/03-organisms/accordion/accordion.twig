@@ -2,6 +2,7 @@
 /**
  * Available variables:
  * - accordion - primary variable
+ *   - style: general style of accordion [full, condensed]
  *   - collapse_first: boolean - collapse the first item on load?
  *   - heading: the heading (title & lead)
  *   - items: array of accordion items
@@ -14,9 +15,11 @@
 
 {% set tag = accordion.item_tag|default('h3') %}
 {% set collapse_first = accordion.collapse_first|default(false) %}
+{% set style = accordion.style|default('condensed') %}
 
 {% set classes = [
   'usa-accordion',
+  'usa-accordion--' ~ style,
 ]|merge(accordion.classes|default([])) %}
 
 {% set content %}
