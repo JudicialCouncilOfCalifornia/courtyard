@@ -245,18 +245,27 @@
 }
 
 .jcc-switchboard__footer {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  @include u-display("flex");
-  @include u-padding-y(4);
-  .jcc-switchboard__footer-label,
-  .jcc-switchboard__footer-buttons {
-    @include u-display("inline-flex");
+  .usa-button {
+    @include u-margin-y(1);
   }
-  .jcc-switchboard__footer-label {
-    @include u-padding-x(2);
-    align-items: center;
+  @include at-media(desktop) {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    @include u-display("flex");
+    @include u-padding-y(4);
+    .usa-button {
+      @include u-margin-y(0);
+    }
+    .jcc-switchboard__footer-label,
+    .jcc-switchboard__footer-buttons {
+      @include u-display("inline-flex");
+    }
+
+    .jcc-switchboard__footer-label {
+      @include u-padding-x(2);
+      align-items: center;
+    }
   }
 }
 
