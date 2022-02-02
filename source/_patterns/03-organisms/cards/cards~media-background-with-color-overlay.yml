@@ -14,19 +14,8 @@ cards:
       link:
         url: "#"
         text: "Luctus nunc quam"
-    - style: "media-full-overlay usa-card--hover"
-      is_clickable: TRUE
-      bgcolor: "gray"
-      title: "Visual Hover"
-      body: "<p>Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat, euismod potenti inceptos nibh mauris posuere scelerisque facilisi. This card has no link url.</p>"
-      media:
-        src: "https://placeimg.com/350/250/people"
-        alt: "Cupidatat non proident, sunt in culpa qui"
-      link:
-        url: "#"
-        text: "Erat neque quisque vivamus"
     - style: "media-full-overlay"
-      bgcolor: "red"
+      bgcolor: "gray"
       title: "Posuere et ornare"
       body: "<p>In torquent consequat quam vulputate himenaeos semper ut aliquam at, iaculis ac platea laoreet ridiculus mattis sagittis volutpat hendrerit, vehicula orci dictum dictumst nunc scelerisque lacus auctor.</p>"
       media:
@@ -35,6 +24,17 @@ cards:
       link:
         url: "#"
         text: "Aliquet potenti"
+    - style: "media-full-overlay usa-card--hover"
+      is_clickable: TRUE
+      bgcolor: "red"
+      title: "Visual Hover"
+      body: "<p>The selected overlay color will appear 90% opaque on hover. Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat.</p>"
+      media:
+        src: "https://placeimg.com/350/250/people"
+        alt: "Cupidatat non proident, sunt in culpa qui"
+      link:
+        url: "#"
+        text: "Erat neque quisque vivamus"
     - style: "media-full-overlay"
       bgcolor: "green"
       title: "Posuere et ornare"
