@@ -30,6 +30,5 @@ An example workflow:
 - Create a pull request to the `2.x-dev` branch
 - Reviewed by at least one other developer. Once approved, merge this PR.
 - Merging to `2.x-dev` will update the `2.x-dev` Pattern Lab [site](http://patternlab.courts.ca.gov/2.x-dev/public/).
-- The work should be assigned to the responsible QA in Jira. Once they've approved, your original branch should have a pull request opened to the `2.x` branch. As this has been approved by a dev and QA at this point, the PR can be directly merged by you to `2.x`. The PR simply provides an easy fallback in case there are unforseen effects.
+- The work should be assigned to the responsible QA in Jira. Once they’ve approved, create a PR for your original branch to the `2.x` branch. This PR provides a mechanism for release and historical record for troubleshooting. It can be merged on a release schedule or any time after final approval, depending on the project needs.
 - Move your ticket to DONE
-
