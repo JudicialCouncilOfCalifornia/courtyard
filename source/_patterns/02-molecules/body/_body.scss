@@ -41,8 +41,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include grid-col(12);
     }
 
+    .jcc-section-heading__lead,
     .jcc-body__main-text {
-      @include grid-col(8);
+      @include u-measure(6);
     }
 
   }
