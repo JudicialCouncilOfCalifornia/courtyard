@@ -15,6 +15,7 @@ switchboard:
       - brow: 'Bank Levy'
         title: 'Someone tried to take money from my bank account'
         url: 'link.pages-judgment-bank-levy'
+        embellishment: 'icon-bottom-right'
     secondary:
       - brow: 'General Information'
         title: 'I want to find out more about Debt Collection'
