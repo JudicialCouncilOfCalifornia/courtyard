@@ -47,7 +47,6 @@
       @include u-width(5);
       @include u-height(5);
       background-image: url(../images/graphics/switchboard-icon.svg);
-      transform: rotate(90deg);
 
       @include at-media-max(desktop) {
         @include u-top(1.5);
