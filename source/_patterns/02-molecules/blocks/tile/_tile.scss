@@ -47,7 +47,6 @@
       @include u-width(5);
       @include u-height(5);
       background-image: url(../images/graphics/switchboard-icon.svg);
-      transform: rotate(90deg);
 
       @include at-media-max(desktop) {
         @include u-top(1.5);
@@ -90,10 +89,23 @@
 
 .jcc-tile--hover {
   &:hover {
+    @include u-bg("primary-lighter");
     @include u-color(base-darkest);
-    box-shadow: none;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
     transition: all 0.4s;
+
+    h3 {
+      @include u-text-decoration("underline");
+      text-decoration-thickness: 2px;
+    }
+
+    &.jcc-tile--embellishment--icon-bottom-left {
+      .jcc-tile__embellishment {
+        @include u-right(2);
+        left: unset;
+      }
+    }
   }
 }
 
