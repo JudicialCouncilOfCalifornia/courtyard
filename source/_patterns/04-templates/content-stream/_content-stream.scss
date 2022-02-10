@@ -19,11 +19,35 @@
 
     &:first-child {
       .usa-card__media {
+        @include u-width(full);
         @include u-margin-right(4);
-        @include u-width(mobile-lg);
+
+        @include at-media(tablet) {
+          @include u-width(mobile-lg);
+        }
 
         span {
           @include add-aspect("16x9");
+        }
+      }
+
+      .usa-card--media-placeholder {
+        .usa-card__media {
+          img {
+            object-fit: unset;
+            height: 85%;
+            margin: 0.8rem 0;
+          }
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      .usa-card--media-placeholder {
+        .usa-card__media {
+          img {
+            @include u-position(relative);
+          }
         }
       }
     }
@@ -73,7 +97,8 @@
 
         img {
           @include u-display(block);
-          @include u-position(relative);
+          top: unset;
+          left: unset;
         }
       }
     }
