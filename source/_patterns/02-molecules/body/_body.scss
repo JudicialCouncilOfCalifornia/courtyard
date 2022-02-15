@@ -23,7 +23,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-body__main {
   @include at-media(desktop) {
-    @include grid-col(7);
+    @include grid-col(8);
+  }
+
+  .jcc-section-heading__lead,
+  .jcc-body__main-text {
+    @include u-measure(6);
   }
 
   .align-left {
@@ -40,12 +45,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include at-media(desktop) {
       @include grid-col(12);
     }
-
-    .jcc-section-heading__lead,
-    .jcc-body__main-text {
-      @include u-measure(6);
-    }
-
   }
 }
 
@@ -61,7 +60,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 .jcc-body__aside {
   @include at-media(desktop) {
     @include grid-col(4);
-    @include grid-offset(1);
   }
 
   .jcc-body__main + & {
