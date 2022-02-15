@@ -99,6 +99,4 @@ Netlify will also create a preview deployment for each PR created in this repo. 
 
 ## Contributing
 
-### Code Style
-
-We use the automatic code formatter Prettier. If you use an IDE such as Sublime Text, VSCode, or similar, you can likely add a Prettier extension that will autoformat your files using Prettier rules on file save. If you're not using an IDE that integrates with it, you should run `npx prettier --write [filepath]` on all added or changed files before you submit a pull request.
+See Contriuting guidelines [here](./.github/CONTRIBUTING.md).
