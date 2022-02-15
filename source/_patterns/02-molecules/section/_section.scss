@@ -1,12 +1,15 @@
 $_config_schemes: (
   base: (
+    padding-top: 9,
     alt-background: $theme-color-base-lightest,
     alt-background-border: 0,
     alt-background-border-color: "transparent",
     alt-margin-top: 10,
     subsection-section-padding: 4,
   ),
-  local: (),
+  local: (
+    padding-top: 6,
+  ),
   pro: (
     alt-background: "gray-1",
     alt-background-border: 1px,
@@ -19,7 +22,7 @@ $_config_schemes: (
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-section {
-  @include u-padding-top(9);
+  @include u-padding-top(map-get($_config, padding-top));
 
   .jcc-section {
     &:first-of-type {
