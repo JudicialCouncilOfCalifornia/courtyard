@@ -28,7 +28,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-section--container{
+.jcc-section--container {
   .usa-accordion__button {
     @include u-text(map-get($_config, button-font-color));
     @include u-border-bottom("2px", solid, map-get($_config, border-bottom-color));
@@ -59,4 +59,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
+}
+
+// Override the max-width for inner-content.
+.usa-accordion__content {
+  .usa-accordion--condensed & {
+    @include at-media(desktop) {
+      @include u-measure(6);
+    }
+  }
 }
