@@ -192,7 +192,7 @@
         <a href="/" title="Home" aria-label="Home">
           {% if header.logo.svg %}
             <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
-            <div class="jcc_header__lead">{{ header.logo.lead|default(header.logo.title) }}</div>
+            {% if header.logo.lead %}<div class="jcc_header__lead">{{ header.logo.lead }}</div>{% endif %}
           {% endif %}
         </a>
       </div>
