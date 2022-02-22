@@ -27,7 +27,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-text-align(center);
     display: table-caption;
     caption-side: bottom;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 }
 

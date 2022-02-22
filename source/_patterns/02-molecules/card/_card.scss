@@ -2,7 +2,8 @@ $_config_schemes: (
   base: (
     border-width: "05",
     hover-border-width: "05",
-    border-radius-container: "none", // Should be set by $theme-card-border-radius
+    // Should be set by $theme-card-border-radius
+    border-radius-container: "none",
     border-radius-img: 0,
     border-color: "base-lightest",
     hover-border-color: "base-lightest",
@@ -46,7 +47,8 @@ $_config_schemes: (
   local: (
     border-width: "05",
     hover-border-width: "1px",
-    border-radius-container: "none", // Should be set by $theme-card-border-radius
+    // Should be set by $theme-card-border-radius
+    border-radius-container: "none",
     border-radius-img: 0,
     border-color: "base-lighter",
     hover-border-color: "base-light",

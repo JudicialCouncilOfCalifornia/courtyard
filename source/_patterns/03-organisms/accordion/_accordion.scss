@@ -1,21 +1,21 @@
 $_config_schemes: (
-        base: (
-                button-color: "gray-5",
-                button-hover-color: "gray-10",
-                button-font-color: "black",
-                button-font-color-hover: "black",
-                border-bottom-color: "transparent",
-                border-bottom-width: "0px",
-        ),
-        local: (),
-        pro: (
-                button-color: "transparent",
-                button-hover-color: "transparent",
-                button-font-color: "primary-vivid",
-                button-font-color-hover: "primary-dark",
-                border-bottom-color: "primary-vivid",
-                border-bottom-width: "2px",
-        ),
+  base: (
+    button-color: "gray-5",
+    button-hover-color: "gray-10",
+    button-font-color: "black",
+    button-font-color-hover: "black",
+    border-bottom-color: "transparent",
+    border-bottom-width: "0px",
+  ),
+  local: (),
+  pro: (
+    button-color: "transparent",
+    button-hover-color: "transparent",
+    button-font-color: "primary-vivid",
+    button-font-color-hover: "primary-dark",
+    border-bottom-color: "primary-vivid",
+    border-bottom-width: "2px",
+  ),
 );
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
@@ -58,7 +58,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-text(map-get($_config, button-font-color-hover));
     }
   }
-
 }
 
 // Override the max-width for inner-content.
