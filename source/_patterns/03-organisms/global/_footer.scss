@@ -178,7 +178,7 @@ $_shoe: map-get($_config, shoe);
 
 .usa-footer__logo {
   @include at-media(desktop) {
-    @include grid-col(9);
+    @include grid-col(12);
   }
 }
 
