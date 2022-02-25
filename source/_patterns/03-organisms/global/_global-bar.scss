@@ -49,7 +49,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(desktop) {
     @include u-text-align(left);
-    width: 40%;
+    flex: 0 0 auto;
   }
 }
 
@@ -58,7 +58,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(desktop) {
     @include grid-col();
-    width: 60%;
   }
 }
 
