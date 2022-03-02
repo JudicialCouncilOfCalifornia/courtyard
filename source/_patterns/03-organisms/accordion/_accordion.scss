@@ -62,9 +62,19 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 // Override the max-width for inner-content.
 .usa-accordion__content {
-  .usa-accordion--condensed & {
+  p {
     @include at-media(desktop) {
       @include u-measure(6);
     }
+  }
+
+  .align-left {
+    @include u-float(left);
+    @include u-margin-right(3);
+  }
+
+  .align-right {
+    @include u-float(right);
+    @include u-margin-left(3);
   }
 }
