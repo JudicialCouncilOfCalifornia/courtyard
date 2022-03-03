@@ -13,3 +13,9 @@ accordion:
       body: "<p>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</p>"
     - title: "Fifth Amendment"
       body: "<p>No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offence to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.</p>"
+    - title: "Table"
+      body: '<table class="table"><thead><tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th><th scope="col">Title</th></tr></thead><tbody><tr><th scope="row">1</th><td>Lauren</td><td>Ipsum</td><td>Executive Vice President</td></tr><tr><th scope="row">2</th><td>Peter</td><td>Dolar</td><td>Director</td></tr><tr><th scope="row">3</th><td>Gwen</td><td>Sit-Amet</td><td>CTO</td></tr></tbody></table>'
+    - title: "Image"
+      body: '<img src="https://via.placeholder.com/1400x200.png/2378C3/FFFFFF?text=1400x200+Image+Demo">'
+    - title: "Nested Paragraph Image"
+      body: '<p>We expect the content within a paragraph to be constrained. Images should be rendered below 800px for the best experience. <img width="800px" height="200px" src="https://via.placeholder.com/800x200.png/2378C3/FFFFFF?text=800x200+Image+Demo"></p>'
