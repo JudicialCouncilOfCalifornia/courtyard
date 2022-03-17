@@ -17,7 +17,7 @@
 
 <div class="{{ classes|join(' ')|trim }}">
   {% block iframe %}
-    <iframe id="jcc-iframe-content-{{ random(1000) }}" src="{{ iframe.url }}">
+    <iframe id="jcc-iframe-content-{{ random(1000) }}" src="{{ iframe.url }}" frameborder="0">
       {{- 'Your browser does not support inline frames'|t -}}
     </iframe>
   {% endblock iframe %}
