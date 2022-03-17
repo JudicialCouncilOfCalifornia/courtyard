@@ -1,0 +1,24 @@
+{#
+/**
+ * Available variables:
+ * - iframe - primary variable
+ *   - style: general aspect-ratio style of iframe [square, video, standard, classic]
+ *   - url: the url of the iframe to embed
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set style = iframe.style|default('classic') %}
+
+{% set classes = [
+  'jcc-iframe',
+  'jcc-iframe--' ~ style,
+]|merge(iframe.classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {% block iframe %}
+    <iframe id="jcc-iframe-content-{{ random(1000) }}" src="{{ iframe.url }}" frameborder="0">
+      {{- 'Your browser does not support inline frames'|t -}}
+    </iframe>
+  {% endblock iframe %}
+</div>
