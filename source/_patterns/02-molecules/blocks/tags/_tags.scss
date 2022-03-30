@@ -1,0 +1,31 @@
+.jcc-tags {
+  @include u-margin-top(1);
+  @include u-padding-left(0, !important);
+
+  &__item {
+    @include add-list-reset;
+    @include u-display(inline-block);
+    @include u-margin-bottom(0, !important);
+  }
+
+  &__label {
+    @extend .jcc-tags__item;
+    margin-right: 0.3rem;
+
+    .icon {
+      @include u-position(relative);
+      top: 0.6rem;
+    }
+  }
+}
+
+.jcc-tags--pill {
+  .jcc-tag {
+    @extend .radius-pill;
+    @include u-bg(gold-5v);
+    @include u-color(gray-90);
+    margin-right: 0.3rem;
+    font-size: 0.9rem;
+    text-transform: unset;
+  }
+}

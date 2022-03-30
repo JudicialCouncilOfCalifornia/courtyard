@@ -1,0 +1,27 @@
+{% set classes = [
+  'jcc-tags',
+  tags.style ? 'jcc-tags--' ~ tags.style : '',
+]|merge(tags.classes|default([''])) %}
+
+<ul class="{{ classes|join(' ')|trim }}">
+  {% if tags.label or tags.icon %}
+    {% set label = tags.label ~ ':' %}
+    {% if tags.icon %}
+      {% set label %}
+        {% include '@atoms/icons/icon.twig' with {
+          icon: tags.icon
+        } %}
+      {% endset %}
+    {% endif %}
+    <li class="jcc-tags__label">
+      {{ label }}
+    </li>
+  {% endif %}
+  {% for item in tags.items %}
+    <li class="jcc-tags__item">
+      {% include '@atoms/tag/tag.twig' with {
+        tag: item
+      } %}
+    </li>
+  {% endfor %}
+</ul>

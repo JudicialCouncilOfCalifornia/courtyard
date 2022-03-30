@@ -1,0 +1,19 @@
+tags:
+  style: "pill"
+#  label: "Available translated forms"
+  icon:
+    name: "language-translation"
+    title: "Available translated forms"
+    decorative: false
+    width: 'width-4'
+    height: 'height-4'
+    color: 'text-base-dark'
+  items:
+    - text: "漢語"
+      url: "#"
+    - text: "한국어"
+      url: "#"
+    - text: "español"
+      url: "#"
+    - text: "Tiếng Việt"
+      url: "#"

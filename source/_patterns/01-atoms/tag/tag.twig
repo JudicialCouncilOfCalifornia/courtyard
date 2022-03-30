@@ -1,3 +1,10 @@
-<span class="usa-tag jcc-tag">
+{% set classes = [
+  'usa-tag',
+  'jcc-tag'
+]|merge(tag.classes|default([''])) %}
+
+{% if tag.url %}<a href="{{ tag.url }}">{% endif %}
+<span class="{{ classes|join(' ')|trim }}">
   {{- tag.text -}}
 </span>
+{% if tag.url %}</a>{% endif %}

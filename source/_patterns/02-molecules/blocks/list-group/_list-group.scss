@@ -1,5 +1,5 @@
 .jcc-list-group {
-  li {
+  .jcc-list-group__item {
     @include u-margin-bottom(2, "!important");
 
     p {
@@ -11,6 +11,65 @@
 
     strong {
       @include t-intro();
+    }
+  }
+}
+
+.jcc-list-group--rich {
+  @include u-padding-left(0);
+
+  .jcc-list-group__item {
+    @include grid-container;
+    @include add-list-reset;
+    @include u-padding-bottom(2);
+
+    &:not(:last-child) {
+      @include u-border-bottom(1px);
+      @include u-border-color(gray-10);
+    }
+
+    .jcc-list-group__container {
+      @include grid-row;
+
+      .jcc-list-group__item--content {
+        @include grid-col(12);
+        @include at-media(tablet) {
+          @include grid-col(7);
+          @include u-padding-right(4);
+        }
+        @include at-media(desktop) {
+          @include grid-col(8);
+        }
+
+        &__full {
+          @include grid-col(12);
+        }
+      }
+
+      .jcc-list-group__item--actions {
+        @include u-position(relative);
+        @include grid-col(12);
+        @include at-media(tablet) {
+          @include grid-col(5);
+
+          .jcc-list-group__item--actions_container {
+            @include u-position(absolute);
+            @include u-margin(0);
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        @include at-media(desktop) {
+          @include grid-col(4);
+        }
+
+        .usa-button {
+          @include u-margin-bottom(1);
+          @include at-media(tablet) {
+            @include u-margin-bottom(0);
+          }
+        }
+      }
     }
   }
 }

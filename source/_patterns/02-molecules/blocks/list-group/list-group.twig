@@ -1,9 +1,28 @@
-<ul class="jcc-list-group"{% if list_group.id %} id="{{ list_group.id }}"{% endif %}>
+{% set classes = [
+  'jcc-list-group',
+  list_group.display ? 'jcc-list-group--' ~ list_group.display : ''
+]|merge(list_group.classes|default([''])) %}
+
+<ul class="{{ classes|join(' ')|trim }}"{% if list_group.id %} id="{{ list_group.id }}"{% endif %}>
   {% for item in list_group.items %}
     {% if item.title or item.excerpt %}
-      <li>
-        <p><strong>{{ item.title }}</strong></p>
-        <p>{{ item.excerpt }}</p>
+      <li class="jcc-list-group__item">
+        {% if list_group.display %}
+          <div class="jcc-list-group__container">
+            <div class="jcc-list-group__item--content{% if not item.actions %}__full{% endif %}">
+              <div class="jcc-list-group__item--title">{{ item.title }}</div>
+              {{ item.content }}
+            </div>
+            {% if item.actions %}
+              <div class="jcc-list-group__item--actions">
+                <div class="jcc-list-group__item--actions_container">{{ item.actions }}</div>
+              </div>
+            {% endif %}
+          </div>
+        {% else %}
+          <p><strong>{{ item.title }}</strong></p>
+          <p>{{ item.excerpt }}</p>
+        {% endif %}
       </li>
     {% endif %}
   {% endfor %}
