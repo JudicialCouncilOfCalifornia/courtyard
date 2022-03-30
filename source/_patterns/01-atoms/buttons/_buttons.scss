@@ -87,6 +87,7 @@
 .usa-button--outline {
   @include u-text(ink);
   @include u-text("normal");
+  @include u-color(primary);
   background-color: transparent;
   box-shadow: 0 0 0 2px color(primary) inset;
 

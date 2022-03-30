@@ -1,0 +1,29 @@
+list_group:
+  display: rich
+  items:
+    - title: "ADOPT-200"
+      content: "<p>Adoption Request</p>
+                <p>March 28, 2022</p>
+                <ul class='jcc-tags jcc-tags--pill'>
+                  <li class='jcc-tags__label'>
+                    <svg class='icon icon-language-translation width-4 height-4' role='presentation' title='Available translated forms'>
+                      <use class='text-base-dark' xlink:href='#i-language-translation'></use>
+                    </svg>
+                  </li>
+                  <li class='jcc-tags__item'><span class='usa-tag jcc-tag'>漢語</span></li>
+                  <li class='jcc-tags__item'><span class='usa-tag jcc-tag'>한국어</span></li>
+                  <li class='jcc-tags__item'><span class='usa-tag jcc-tag'>español</span></li>
+                  <li class='jcc-tags__item'><span class='usa-tag jcc-tag'>Tiếng Việt</span></li>
+                </ul>"
+      actions: "<a class='usa-button usa-button--outline' href='/jcc-form/ADOPT-205-INFO'>See form info</a>
+                <a class='usa-button usa-button--outline' href='https://www.courts.ca.gov/documents/ADOPT-200.pdf' target='_blank' rel='noopener'>Download</a>"
+    - title: "ADOPT-205"
+      content: "<p>Declaration Confirming Parentage in Stepparent Adoption</p>
+                <p>March 28, 2022</p>"
+      actions: "<a class='usa-button usa-button--outline' href='/jcc-form/ADOPT-205'>See form info</a>
+                <a class='usa-button usa-button--outline' href='https://www.courts.ca.gov/documents/ADOPT-205.pdf' target='_blank' rel='noopener'>Download</a>"
+    - title: "ADOPT-206"
+      content: "<p>Declaration Confirming Parentage in Stepparent Adoption: Gestational Surrogacy</p>
+                <p>March 28, 2022</p>"
+      actions: "<a class='usa-button usa-button--outline' href='/jcc-form/ADOPT-206'>See form info</a>
+                <a class='usa-button usa-button--outline' href='https://www.courts.ca.gov/documents/ADOPT-206.pdf' target='_blank' rel='noopener'>Download</a>"
