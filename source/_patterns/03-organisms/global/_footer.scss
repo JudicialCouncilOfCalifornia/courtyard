@@ -178,7 +178,7 @@ $_shoe: map-get($_config, shoe);
 
 .usa-footer__logo {
   @include at-media(desktop) {
-    @include grid-col(12);
+    @include grid-col(9);
   }
 }
 
@@ -190,7 +190,7 @@ $_shoe: map-get($_config, shoe);
   @include u-color(map-get($_secondary, default-background-text));
   letter-spacing: 1.5px;
 
-  @include at-media(desktop) {
+  @include at-media(desktop-lg) {
     @include u-font-size(heading, md);
   }
 
