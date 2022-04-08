@@ -1,17 +1,25 @@
 {% set classes = [
   'jcc-list-group',
-  list_group.display ? 'jcc-list-group--' ~ list_group.display : ''
+  list_group.display ? 'jcc-list-group--' ~ list_group.display : '',
+  list_group.content_block_cta ? 'jcc-list-group--content_block_cta' : ''
 ]|merge(list_group.classes|default([''])) %}
 
 <ul class="{{ classes|join(' ')|trim }}"{% if list_group.id %} id="{{ list_group.id }}"{% endif %}>
   {% for item in list_group.items %}
     {% if item.title or item.excerpt %}
       <li class="jcc-list-group__item">
-        {% if list_group.display %}
+        {# Simple vs rich content display #}
+        {% if list_group.display == 'rich' %}
           <div class="jcc-list-group__container">
             <div class="jcc-list-group__item--content{% if not item.actions %}__full{% endif %}">
-              <div class="jcc-list-group__item--title">{{ item.title }}</div>
-              {{ item.content }}
+              {% if item.link.url and list_group.content_block_cta %}<a{% if item.link.url_label %} aria-label="{{ item.link.url_label }}"{% endif %} href="{{ item.link.url }}">{% endif %}
+                <div class="jcc-list-group__item--title">
+                  {% if item.link.url and not list_group.content_block_cta %}<a{% if item.link.url_label %} aria-label="{{ item.link.url_label }}"{% endif %} href="{{ item.link.url }}">{% endif %}
+                    {{ item.title }}
+                    {% if item.link.url and not list_group.content_block_cta %}</a>{% endif %}
+                </div>
+                {{ item.content }}
+                {% if item.link.url and list_group.content_block_cta %}</a>{% endif %}
             </div>
             {% if item.actions %}
               <div class="jcc-list-group__item--actions">
