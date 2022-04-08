@@ -73,3 +73,18 @@
     }
   }
 }
+
+.jcc-list-group--content_block_cta {
+  .jcc-list-group__item--content {
+    a {
+      @include u-color("gray-90");
+      @include u-text-decoration(no-underline);
+
+      &:hover {
+        .jcc-list-group__item--title {
+          @include u-text-decoration(underline);
+        }
+      }
+    }
+  }
+}
