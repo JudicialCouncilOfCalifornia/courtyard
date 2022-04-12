@@ -244,6 +244,10 @@
         @include u-padding-x(2);
       }
     }
+
+    .icon-search {
+      @include u-color(primary);
+    }
   }
 
   .jcc-nav-secondary__menu {
@@ -316,26 +320,36 @@
 
     .usa-nav__primary button[aria-expanded="true"] {
       @include at-media(desktop) {
-        @include u-bg(primary);
+        @include u-bg(primary-dark);
+
+        &:hover {
+          @include at-media(desktop) {
+            @include u-bg(primary-vivid);
+            @include u-text("white");
+          }
+        }
       }
     }
 
     .jcc-nav-secondary__group {
       .usa-accordion__button {
-        &[aria-expanded="true"],
+        &[aria-expanded="true"] {
+          @include u-bg(primary-dark);
+          @include u-text("white");
+        }
         &:hover {
           @include at-media(desktop) {
-            @include u-bg(accent-warm);
-            @include u-text(ink);
+            @include u-bg(primary-vivid);
+            @include u-text("white");
           }
         }
       }
 
       .usa-accordion ul .usa-nav__submenu-item a {
-        @include u-bg(accent-warm);
-        @include u-text(ink);
+        @include u-bg(primary-dark);
+        @include u-text("white");
         &:hover {
-          @include u-bg(accent-warm-darker);
+          @include u-bg(primary-vivid);
         }
       }
     }
@@ -360,8 +374,29 @@
       }
     }
 
+    .usa-nav__submenu {
+      .usa-nav__submenu-item {
+        .usa-nav__submenu-list a {
+          @include u-border-left(2, blue-80v);
+        }
+
+        .usa-nav__submenu_label {
+          @include at-media(desktop) {
+            @include u-bg(blue-80v); // theme
+          }
+        }
+      }
+    }
+
     .usa-nav__submenu .usa-nav__submenu-item a {
-      @include u-bg(primary);
+      @include u-bg(primary-dark);
+
+      &:hover {
+        @include at-media(desktop) {
+          @include u-bg(primary-vivid);
+          @include u-text("white");
+        }
+      }
     }
 
     .usa-nav__submenu.usa-megamenu {
