@@ -79,10 +79,6 @@ header_base:
         form_input_name: "keyword"
     accordion_button:
       id: 'extended-nav-section-two'
-      icon:
-        name: "translate"
-        title: "Translate"
-        decorative: true
       label: "Translate"
       links:
         - title: "English"
