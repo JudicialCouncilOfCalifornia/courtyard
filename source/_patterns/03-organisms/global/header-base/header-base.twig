@@ -55,14 +55,21 @@
       <div class="jcc-nav-secondary__group">
         
         {% if header_base.nav_secondary.accordion_button and header_base.nav_secondary.accordion_button.links %}
+        {% set icon = {
+            name: header_base.nav_secondary.accordion_button.icon.name|default('language-translation'),
+            title: header_base.nav_secondary.accordion_button.icon.title|default('Translate'),
+            width: header_base.nav_secondary.accordion_button.icon.width|default('width-4'),
+            height: header_base.nav_secondary.accordion_button.icon.height|default('height-4'),
+            decorative: true,
+          }
+        %}
         <ul class="jcc-translate usa-accordion">
           <li>
-
             {% if header_base.nav_secondary.accordion_button.links|length == 1 %}
               <a href="{{ header_base.nav_secondary.accordion_button.links.0.href }}" class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link">
                 <span class="usa-accordion-button__icon">
                   {% include '@atoms/icons/icon.twig' with {
-                    icon: header_base.nav_secondary.accordion_button.icon
+                    icon: icon
                   } %}
                 </span>
                 <span class="label">{{ header_base.nav_secondary.accordion_button.links.0.title }}</span>
@@ -71,7 +78,7 @@
               <button class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link" aria-expanded="false" aria-controls="extended-nav-section-two">
                 <span class="usa-accordion-button__icon">
                   {% include '@atoms/icons/icon.twig' with {
-                    icon: header_base.nav_secondary.accordion_button.icon
+                    icon: icon
                   } %}
                 </span>
                 <span class="label">{{ header_base.nav_secondary.accordion_button.label }}</span>
