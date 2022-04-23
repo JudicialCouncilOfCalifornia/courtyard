@@ -580,6 +580,14 @@ $_hat: map-get($_config, hat);
       }
     }
 
+    /* Suppresses the ‘X’ icon to clear field for Chrome & Edge */
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+      @include u-display(none);
+    }
+
     .jcc-button--unstyled {
       @include button-unstyled();
       @include u-position(absolute);
@@ -701,6 +709,8 @@ $_hat: map-get($_config, hat);
       }
 
       .usa-nav__secondary {
+        bottom: 4.5rem;
+
         .usa-nav__submenu {
           @include u-border-top(0);
         }
@@ -735,10 +745,12 @@ $_hat: map-get($_config, hat);
           @include u-border-color("transparent");
         }
       }
-    }
 
-    .usa-nav__secondary {
-      bottom: 4.5rem;
+      .usa-search {
+        button {
+          @extend .usa-sr-only;
+        }
+      }
     }
   }
 
