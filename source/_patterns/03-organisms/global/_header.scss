@@ -747,7 +747,7 @@ $_hat: map-get($_config, hat);
       }
 
       .usa-search {
-        button {
+        & > button {
           @extend .usa-sr-only;
         }
       }
