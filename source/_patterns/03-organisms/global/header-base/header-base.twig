@@ -94,7 +94,7 @@
         {% endif %}
 
         {% if header_base.nav_secondary.search %}
-        <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ nav_secondary.search.form_action|default('/search') }}">
+        <form{{ attributes.addClass('usa-form', 'jcc-form')}} action="{{ header_base.nav_secondary.search.form_action|default('/search') }}">
           {% include '@atoms/forms/search-input.twig' with {
             search_input: header_base.nav_secondary.search.search_input
           }%}
