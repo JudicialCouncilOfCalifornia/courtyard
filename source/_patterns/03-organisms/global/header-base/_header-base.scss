@@ -132,6 +132,9 @@
     .usa-nav__link:hover::after {
       height: 0;
     }
+    .usa-nav__submenu .usa-nav__submenu-global-links a {
+      @include u-border-left(2, primary-dark);
+    }
   }
 
   &.usa-header {

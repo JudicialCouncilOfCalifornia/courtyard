@@ -65,7 +65,7 @@
         %}
         <ul class="jcc-translate usa-accordion">
           <li>
-            {% if header_base.nav_secondary.accordion_button.links|length == 1 %}
+            {% if (header_base.nav_secondary.accordion_button.links|length == 1) and (header_base.nav_secondary.accordion_button.global_links|length == 0) %}
               <a href="{{ header_base.nav_secondary.accordion_button.links.0.href }}" class="usa-accordion__button usa-accordion__button--has-icon usa-accordion__button--no-toggle usa-nav__link">
                 <span class="usa-accordion-button__icon">
                   {% include '@atoms/icons/icon.twig' with {
@@ -87,6 +87,17 @@
                 {% for link in header_base.nav_secondary.accordion_button.links %}
                   <li class="usa-nav__submenu-item"><a href="{{ link.href }}">{{ link.title }}</a></li>
                 {% endfor %}
+                {% if header_base.nav_secondary.accordion_button.global_links|length != 0 %}
+                  <li class="usa-nav__submenu-item"><span class="usa-nav__submenu_label">{{ header_base.nav_secondary.accordion_button.global_links_label|t }}</span>
+                    <ul class="usa-nav__submenu-global-links usa-nav__submenu-list">
+                      {% for global_link in header_base.nav_secondary.accordion_button.global_links %}
+                        <li class="usa-nav__submenu-item">
+                            <a href="{{ global_link.href }}">{{ global_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% endif %}
               </ul>
             {% endif %}
           </li>
