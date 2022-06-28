@@ -87,3 +87,11 @@ header_base:
           href: "#"
         - title: "Vietnamese"
           href: "#"
+      global_links:
+        - title: "Arabic"
+          href: "#"
+        - title: "Punjabi"
+          href: "#"
+        - title: "Tagalog"
+          href: "#"
+      global_links_label: "More language resources"
