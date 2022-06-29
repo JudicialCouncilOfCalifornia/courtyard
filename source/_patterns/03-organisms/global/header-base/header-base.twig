@@ -54,7 +54,7 @@
       {% if header_base.nav_secondary.accordion_button or header_base.nav_secondary.search %}
       <div class="jcc-nav-secondary__group">
         
-        {% if header_base.nav_secondary.accordion_button and header_base.nav_secondary.accordion_button.links %}
+        {% if header_base.nav_secondary.accordion_button and (header_base.nav_secondary.accordion_button.links or header_base.nav_secondary.accordion_button.global_links|length != 0) %}
         {% set icon = {
             name: header_base.nav_secondary.accordion_button.icon.name|default('language-translation'),
             title: header_base.nav_secondary.accordion_button.icon.title|default('Translate'),
