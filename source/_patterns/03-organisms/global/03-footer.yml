@@ -12,6 +12,7 @@ footer:
           url: "#"
         - text: A very long navigation link that goes onto two lines
           url: "#"
+      block: #content or feature alternative rather than a simple listing, text title optional
     - text: Nested section 2
       links:
         - text: Navigation link 5

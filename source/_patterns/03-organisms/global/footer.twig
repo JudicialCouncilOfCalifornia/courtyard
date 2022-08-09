@@ -50,6 +50,8 @@
                       </li>
                     {% endfor %}
                   </ul>
+                {% elseif link.block %}
+                  {{ link.block }}
                 {% endif %}
               </section>
             </div>
