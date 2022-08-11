@@ -51,7 +51,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card__brow {
+    @include u-position(relative);
+    @include u-top(0);
     @include u-font(serif, sm);
+  }
+
+  .usa-card__header {
+    @include u-padding-top(0);
   }
 
   .usa-card__heading {
