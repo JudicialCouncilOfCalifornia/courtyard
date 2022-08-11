@@ -9,11 +9,14 @@ $_config_schemes: (
     hover-border-color: "base-lightest",
     hover-shadow: 3,
     hover-link-underline: underline,
+    brow-position: "absolute",
+    brow-top: 3rem,
     brow-color: base-dark,
     brow-size: 6,
     brow-weight: $theme-font-weight-normal,
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-container-top: 7,
     heading-top-space: 0,
     heading-size: 11,
     heading-line-height: $theme-body-line-height,
@@ -52,9 +55,12 @@ $_config_schemes: (
     border-radius-img: 0,
     border-color: "base-lighter",
     hover-border-color: "base-light",
+    brow-position: "absolute",
+    brow-top: 1.3rem,
     brow-color: "white",
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-container-top: 6,
     heading-top-space: 0,
     hover-title-icon-color: secondary,
     title-link: (
@@ -86,11 +92,14 @@ $_config_schemes: (
     hover-border-color: "base-light",
     hover-shadow: none,
     hover-link-underline: no-underline,
+    brow-position: "relative",
+    brow-top: 0,
     brow-color: "white",
     brow-size: 5,
     brow-weight: $theme-font-weight-normal,
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
+    heading-container-top: 0,
     heading-top-space: 6,
     heading-size: $theme-h2-font-size,
     heading-line-height: $theme-body-line-height,
@@ -353,10 +362,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__header {
-  @include u-padding-bottom(0);
-}
-
-.usa-card__header {
+  @include u-padding-top(map-get($_config, heading-container-top));
   @include u-padding-bottom(0);
 }
 
@@ -407,10 +413,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__brow {
+  @include u-position(map-get($_config, brow-position));
   @include u-margin-bottom(1);
   @include u-order(0);
   letter-spacing: 0.09px;
   @include typeset(body, map-get($_config, brow-size), $theme-body-line-height);
+  top: map-get($_config, brow-top);
   font-weight: map-get($_config, brow-weight);
 
   .usa-card__brow-color,
