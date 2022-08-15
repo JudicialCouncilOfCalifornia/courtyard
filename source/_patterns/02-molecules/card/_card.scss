@@ -16,7 +16,7 @@ $_config_schemes: (
     brow-weight: $theme-font-weight-normal,
     brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
-    heading-container-top: 7,
+    heading-container-top: 6,
     heading-top-space: 0,
     heading-size: 11,
     heading-line-height: $theme-body-line-height,
@@ -191,6 +191,16 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-flex(no-wrap);
       @include u-flex-direction(row);
       @include u-padding-x(4);
+    }
+
+    .usa-card__brow {
+      @include u-position(relative);
+      @include u-top(1);
+      @include u-top(1);
+    }
+
+    .usa-card__header {
+      @include u-padding-top(0);
     }
   }
 
