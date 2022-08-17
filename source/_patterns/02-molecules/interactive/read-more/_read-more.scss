@@ -18,7 +18,7 @@
 }
 
 .jcc-read-more__trigger {
-  @include u-display(inline);
+  display: inherit;
   @include jcc-button-unstyled;
   @include u-font-size(sans, md);
   text-decoration: none;
