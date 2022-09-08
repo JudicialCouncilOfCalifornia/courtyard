@@ -29,6 +29,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .jcc-section-heading__lead,
   .jcc-body__main-text {
     @include u-measure(6);
+    @include u-maxw(full);
   }
 
   .align-left {
