@@ -145,3 +145,10 @@ $_alert: map-get($_config, alert);
     @include u-top(2px);
   }
 }
+
+// Drupal Webform exceptions
+.webform-submission-form {
+  .usa-alert {
+    @include u-display(block);
+  }
+}
