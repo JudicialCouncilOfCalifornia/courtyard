@@ -56,6 +56,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .jcc-section__inner {
     @include grid-container(widescreen);
 
+    .jcc-section__inner {
+      @include u-padding-x(0);
+    }
+
     // Adding table trick to avoid overflow in any section
     .usa-table td {
       white-space: normal;
