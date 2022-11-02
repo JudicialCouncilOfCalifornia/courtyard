@@ -80,13 +80,12 @@
 .jcc-alert__body {
   @include u-display("block");
   @include u-position("relative");
-  @include u-maxw("widescreen");
   @include u-margin-y(0);
   @if $trial {
     @include u-margin-x("auto");
   } @else {
     @include u-margin-right("auto");
-    margin-left: 13px;
+    margin: 0 13px;
   }
   @include u-padding-y(1.5);
   @include u-padding-right(4);
@@ -131,10 +130,6 @@
   width: 20px;
   height: 20px;
   margin-top: 3px;
-  @if $trial {
-    background-image: url("../images/icomoon/SVG/close.svg"),
-      -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-  } @else {
-    display: none;
-  }
+  background-image: url("../images/icomoon/SVG/close.svg"),
+    -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
 }
