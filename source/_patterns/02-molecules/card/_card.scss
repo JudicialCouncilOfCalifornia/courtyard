@@ -12,9 +12,9 @@ $_config_schemes: (
     brow-position: "absolute",
     brow-top: 3rem,
     brow-color: base-dark,
+    brow-bgcolor: "transparent",
     brow-size: 6,
     brow-weight: $theme-font-weight-normal,
-    brow-bgcolor: "gray-90",
     brow-icon-color: "gray-80",
     heading-container-top: 6,
     heading-top-space: 0,
@@ -57,8 +57,8 @@ $_config_schemes: (
     hover-border-color: "base-light",
     brow-position: "absolute",
     brow-top: 1.3rem,
-    brow-color: "white",
-    brow-bgcolor: "gray-90",
+    brow-color: "gray-90",
+    brow-bgcolor: "transparent",
     brow-icon-color: "gray-80",
     heading-container-top: 6,
     heading-top-space: 0,
@@ -294,6 +294,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-full &,
   .usa-card--media-full-overlay & {
     @include u-color("white");
+
+    .usa-card__brow-color {
+      @include u-color("white");
+    }
 
     .usa-card__body {
       @include u-color("white");
