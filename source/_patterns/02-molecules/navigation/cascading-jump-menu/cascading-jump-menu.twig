@@ -48,6 +48,6 @@
     </div>
 
     <input type="hidden" name="data" class="cascading-jump-menu__data" value="{{ json|json_encode|e('html') }}"/>
-    <button class="usa-button usa-button--accent-warm {{ cascading_jump_menu.id }}-submit">Go</button>
+    <button class="usa-button usa-button--accent-warm {{ cascading_jump_menu.id }}-submit">{{ 'Go'|t }}</button>
   </div>
 {% endif %}
