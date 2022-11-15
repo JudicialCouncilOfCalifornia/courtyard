@@ -21,7 +21,7 @@
     <div class="usa-navbar">
       
       <div class="usa-logo" id="basic-logo">
-        <a href="/" title="Home" aria-label="Home">
+        <a href="{{ header_base.home_url }}" title="Home" aria-label="Home">
           {% if header_base.logo.mobile %}<span class="usa-logo__graphic--mobile"><img src="{{ header_base.logo.mobile }}" alt="{{ header_base.title }}" /></span>{% endif %}
           {% if header_base.logo.desktop %}<span class="usa-logo__graphic--desktop"><img src="{{ header_base.logo.desktop }}" alt="{{ header_base.title }}" /></span>{% endif %}
           <em class="usa-logo__text{% if header_base.logo %} usa-sr-only{% endif %}">{{ header_base.title }}</em>
