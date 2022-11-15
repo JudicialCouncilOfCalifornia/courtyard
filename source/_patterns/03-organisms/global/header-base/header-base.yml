@@ -20,6 +20,7 @@ header_base:
           url: "#"
   title: 'Alameda Superior Court'
   logo: ''
+  home_url: '/'
   menu_icon:
     name: 'menu'
     decorative: false
