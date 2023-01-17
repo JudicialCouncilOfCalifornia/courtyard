@@ -4,31 +4,14 @@
     text_section_aside_secondary.lowercase_titles ? 'jcc-text-section-aside--lowercase-titles'
 ]|merge(text_section_aside_secondary.classes|default([''])) %}
 
-{% if text_section_aside_secondary.content and text_section_aside_secondary.aside %}
-    {% set classes_content = [
-        'jcc-text-section-aside__aside',
-        'jcc-text-section-aside__aside-main',
-        text_section_aside_secondary.no_title_decoration ? 'jcc-text-section-aside__aside-no-title-decoration'
-    ]|merge(text_section_aside_secondary.classes|default([''])) %}
-{% else %}
-    {% set classes_content = [
-        'jcc-text-section-aside__aside',
-        text_section_aside_secondary.no_title_decoration ? 'jcc-text-section-aside__aside-no-title-decoration'
-    ]|merge(text_section_aside_secondary.classes|default([''])) %}
-{% endif %}
+{% set classes_content = [
+    'jcc-text-section-aside__aside',
+    'jcc-text-section-aside__aside-main'
+]|merge(text_section_aside_secondary.classes|default([''])) %}
 
-{% if not text_section_aside_secondary.content and text_section_aside_secondary.aside %}
-    {% set classes_aside = [
-        'jcc-text-section-aside__aside',
-        'jcc-text-section-aside__aside-main',
-        text_section_aside_secondary.no_title_decoration ? 'jcc-text-section-aside__aside-no-title-decoration'
-    ]|merge(text_section_aside_secondary_secondary.classes|default([''])) %}
-{% else %}
-    {% set classes_aside = [
-        'jcc-text-section-aside__aside',
-        text_section_aside_secondary.no_title_decoration ? 'jcc-text-section-aside__aside-no-title-decoration'
-    ]|merge(text_section_aside_secondary.classes|default([''])) %}
-{% endif %}
+{% set classes_aside = [
+    'jcc-text-section-aside__aside'
+]|merge(text_section_aside_secondary.classes|default([''])) %}
 
 
 <div class="jcc-text-section-aside__container jcc-text-section-aside-secondary__container">
