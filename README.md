@@ -4,12 +4,13 @@ Based on the [Pattern Lab Twig Standard Edition for Drupal](https://github.com/p
 
 ## Prerequisites
 
+- PHP 7.4 with `memory_limit` set at least 512M
 - [`composer`](https://getcomposer.org) installed globally
 - Node v12.x.x
 
 ## Getting Started
 
-1. `git clone https://github.com/Exygy/courtyard.git` to create the project directory.
+1. `git clone https://github.com/JudicialCouncilOfCalifornia/courtyard.git` to create the project directory (SSH recommended).
 2. `cd courtyard` to go to the directory.
 3. `composer install` to install Pattern Lab.
 4. `npm install`
