@@ -152,7 +152,9 @@ $_alert: map-get($_config, alert);
     @include u-display(block);
   }
 }
-// Content Blockquote
-.blockquote--alert--info{
+
+// Blockquote
+blockquote {
   @include u-display(flex);
+  @include u-flex-direction(column);
 }
