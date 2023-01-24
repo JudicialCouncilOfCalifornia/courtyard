@@ -154,9 +154,7 @@ $_alert: map-get($_config, alert);
 }
 
 // Blockquote
-blockquote{
+blockquote {
   @include u-display(flex);
-}
-.blockquote--box {
-  display: grid;
+  @include u-flex-direction(column);
 }
