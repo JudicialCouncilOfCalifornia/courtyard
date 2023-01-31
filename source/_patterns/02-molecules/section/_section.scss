@@ -63,6 +63,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     // Adding table trick to avoid overflow in any section
     .usa-table td {
       white-space: normal;
+      vertical-align: top;      
     }
   }
 }
