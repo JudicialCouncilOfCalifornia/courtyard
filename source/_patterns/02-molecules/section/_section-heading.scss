@@ -89,3 +89,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     max-width: unset;
   }
 }
+
+/*Adding css for text cropping from bottom side*/
+.jcc-body__main-text .jcc-section-heading__title {
+  @include u-line-height(ui, 3);
+}
