@@ -24,8 +24,8 @@
       <p class="jcc-tile__brow">{{ tile.brow }}</p>
     {% endif %}
 
-    {% if tile.title %}
-      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+     {% if tile.body %}
+      <p class="jcc-tile__body">{{ tile.body }}</p>
     {% endif %}
 
     {% if tile.link_label %}
@@ -34,6 +34,10 @@
 
     {% if tile.body %}
       <p class="jcc-tile__body">{{ tile.body }}</p>
+    {% endif %}
+
+    {% if tile.title %}
+      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
     {% endif %}
   </div>
 
