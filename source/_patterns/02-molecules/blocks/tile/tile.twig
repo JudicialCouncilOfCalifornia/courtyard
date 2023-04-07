@@ -23,8 +23,9 @@
     {% if tile.brow %}
       <p class="jcc-tile__brow">{{ tile.brow }}</p>
     {% endif %}
-      {% if tile.title %}
+    {% if tile.title %}
       <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+    {% endif %}
     {% if tile.link_label %}
       {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
     {% endif %}
