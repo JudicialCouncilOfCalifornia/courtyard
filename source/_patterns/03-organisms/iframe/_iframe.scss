@@ -3,6 +3,7 @@
   iframe {
     width: 100%;
     outline: none;    
+    min-height: 700px;
   }
 }
 
@@ -31,10 +32,4 @@
   iframe {
     aspect-ratio: 3 / 4;
   }
-}
-
-.jcc-iframe--mobile {
-  iframe {
-      aspect-ratio: 1 / 2.4;
-    }  
 }
