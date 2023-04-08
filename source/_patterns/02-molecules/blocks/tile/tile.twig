@@ -23,16 +23,30 @@
     {% if tile.brow %}
       <p class="jcc-tile__brow">{{ tile.brow }}</p>
     {% endif %}
-    {% if tile.title %}
-      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+
+    {% if tile.showImageOnTop != null and tile.showImageOnTop == true %}
+      {% if tile.body %}
+        <p class="jcc-tile__body">{{ tile.body }}</p>
+      {% endif %}
+
+      {% if tile.title %}
+        <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+      {% endif %}
+    {% else %}
+      {% if tile.title %}
+        <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+      {% endif %}
+
+      {% if tile.body %}
+        <p class="jcc-tile__body">{{ tile.body }}</p>
+      {% endif %}
     {% endif %}
+
+
     {% if tile.link_label %}
       {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
     {% endif %}
 
-    {% if tile.body %}
-      <p class="jcc-tile__body">{{ tile.body }}</p>
-    {% endif %}
 
   </div>
 
