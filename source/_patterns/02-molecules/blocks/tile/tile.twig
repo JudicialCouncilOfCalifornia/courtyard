@@ -24,31 +24,21 @@
       <p class="jcc-tile__brow">{{ tile.brow }}</p>
     {% endif %}
 
-    {% if tile.showImageOnTop != null and tile.showImageOnTop == true %}
-      {% if tile.body %}
-        <p class="jcc-tile__body">{{ tile.body }}</p>
-      {% endif %}
+    {% if tile.image %}
+      <div class="jcc-tile__image">{% include '@atoms/image/image.twig' with { image: tile.image } %}</div>
+    {% endif %}
 
-      {% if tile.title %}
-        <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
-      {% endif %}
+    {% if tile.title %}
+      <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
+    {% endif %}
 
-      {% if tile.link_label %}
-        {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
-      {% endif %}
+    {% if tile.link_label %}
+      {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
+    {% endif %}
 
-    {% else %}
-      {% if tile.title %}
-        <{{ tag }} class="jcc-tile__title">{{ tile.title }}</{{ tag }}>
-      {% endif %}
 
-      {% if tile.link_label %}
-        {% include '@atoms/buttons/button.twig' with { button: { text: tile.link_label } } %}
-      {% endif %}
-
-      {% if tile.body %}
-        <p class="jcc-tile__body">{{ tile.body }}</p>
-      {% endif %}
+    {% if tile.body %}
+      <p class="jcc-tile__body">{{ tile.body }}</p>
     {% endif %}
   </div>
 
