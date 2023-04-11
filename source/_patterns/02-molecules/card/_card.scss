@@ -407,12 +407,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__brow {
-  @include u-position(map-get($_config, brow-position));
   @include u-margin-bottom(1);
   @include u-order(0);
   letter-spacing: 0.09px;
   @include typeset(body, map-get($_config, brow-size), $theme-body-line-height);
-  top: map-get($_config, brow-top);
   font-weight: map-get($_config, brow-weight);
 
   .usa-card__brow-color,
