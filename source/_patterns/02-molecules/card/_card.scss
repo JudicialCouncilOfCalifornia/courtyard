@@ -426,7 +426,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__brow + .usa-card__heading {
-  @include u-padding-top(map-get($_config, heading-container-top));
+  @include u-padding-top(map-get($_config, heading-top-space));
 }
 
 .usa-card__icon {
