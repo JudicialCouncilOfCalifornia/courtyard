@@ -122,7 +122,7 @@
                       {{ _self.sub_menu(link.links|slice(first, second)) }}
                       {{ _self.sub_menu(link.links|slice(first + second, third), link.section_link) }}
 
-                    {% elseif count > 7 %}
+                    {% elseif count > 10 %}
                       {# 2 columns #}
                       {% if count is odd %}
                         {% set first = (count / 2)|round(0, 'ceil') %}
