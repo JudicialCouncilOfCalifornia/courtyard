@@ -105,7 +105,7 @@
                   } %}
                 </button>
                 {% set count = link.links|length %}
-                <div id="{{ id }}" class="usa-nav__submenu {{ count > 10 ? 'megamenu' }}">
+                <div id="{{ id }}" class="usa-nav__submenu {{ count > 9 ? 'megamenu' }}">
                   <div class="usa-nav__submenu-inner">
                     {% if count > 15 %}
                       {# 3 columns #}
@@ -122,7 +122,7 @@
                       {{ _self.sub_menu(link.links|slice(first, second)) }}
                       {{ _self.sub_menu(link.links|slice(first + second, third), link.section_link) }}
 
-                    {% elseif count > 10 %}
+                    {% elseif count > 9 %}
                       {# 2 columns #}
                       {% if count is odd %}
                         {% set first = (count / 2)|round(0, 'ceil') %}
