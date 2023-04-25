@@ -96,4 +96,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-font-size(body, sm);
     }
   }
+  
+  h4 {
+    @extend .jcc-body__aside-title;
+  }
 }
+
