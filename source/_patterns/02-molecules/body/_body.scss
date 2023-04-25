@@ -96,10 +96,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-font-size(body, sm);
     }
   }
-}
-/* Added css for Aside editor h4 in body accordion */
-.jcc-body__aside-text {
+  
   h4 {
     @extend .jcc-body__aside-title;
   }
 }
+
