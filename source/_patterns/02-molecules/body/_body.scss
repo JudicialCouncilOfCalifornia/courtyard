@@ -91,10 +91,20 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   p {
     @include typeset(body, xs, 6);
-
     @include at-media(desktop) {
       @include u-font-size(body, sm);
     }
+    @include u-margin-bottom(3);
+    @include u-margin-top(2);
+  }
+  
+  h4 {
+    @extend .jcc-body__aside-title;
+    @include u-margin-bottom(1);
+  }
+
+  ul li{
+    @include u-margin-top(1);
   }
   
   h4 {
