@@ -1,8 +1,7 @@
 // Base Class
 .jcc-iframe {
   iframe {
-    width: 100%;
-    outline: none;    
+    outline: none;
     min-height: 700px;
   }
 }
@@ -12,19 +11,19 @@
 // height: calc(100vw * ratio_value, e.g., 9/16 = 0.5625)
 .jcc-iframe--square {
   iframe {
-    aspect-ratio: 1 / 1;    
+    aspect-ratio: 1 / 1;
   }
 }
 
 .jcc-iframe--video {
   iframe {
-    aspect-ratio: 16 / 9;    
+    aspect-ratio: 16 / 9;
   }
 }
 
 .jcc-iframe--standard {
   iframe {
-    aspect-ratio: 4 / 3; 
+    aspect-ratio: 4 / 3;
   }
 }
 
