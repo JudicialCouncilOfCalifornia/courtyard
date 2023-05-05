@@ -1,5 +1,7 @@
 iframe {
   @include u-maxw(full);
+  @include u-width(full);
+  @include u-border(0);
 }
 
 .embed-responsive {
@@ -14,7 +16,6 @@ iframe {
   object,
   video {
     @include u-pin(top, left);
-    @include u-width(full);
     @include u-height(full);
     @include u-border(0);
     z-index: 1;
