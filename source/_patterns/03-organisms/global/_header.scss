@@ -810,9 +810,7 @@ $_hat: map-get($_config, hat);
     }
 
     iframe {
-      @include u-width(full);
       @include u-height(9);
-      @include u-border(0);
     }
   }
 
