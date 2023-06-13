@@ -28,6 +28,7 @@
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
 {% set icon_set = card.icon.set|default('fa') %}
+{% set card_title_readmore =  card.brow ? card.brow : card.title %}
 
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
   {% if card.link.url %}
@@ -109,7 +110,7 @@
       {% if ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
         {% if card.link.text %}
           <div class="usa-card__footer">
-            <a class="{{ card.link.type }}" href="{{ card.link.url }}">{{ card.link.text }}</a>
+            <a class="{{ card.link.type }}" href="{{ card.link.url }}" aria-label="{{ card.link.text ~ '  about ' ~ card_title_readmore}}">{{ card.link.text }}</a>
           </div>
         {% endif %}
       {% endif %}
