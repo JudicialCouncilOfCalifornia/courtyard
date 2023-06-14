@@ -109,7 +109,7 @@
       {% if ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
         {% if card.link.text %}
           <div class="usa-card__footer">
-            <a class="{{ card.link.type }}" href="{{ card.link.url }}" aria-label="{{ 'Read' ~ '  about ' ~ card.title}}">{{ card.link.text }}</a>
+            <a class="{{ card.link.type }}" href="{{ card.link.url }}" aria-label="{{ 'Read about ' ~ card.title}}">{{ card.link.text }}</a>
           </div>
         {% endif %}
       {% endif %}
