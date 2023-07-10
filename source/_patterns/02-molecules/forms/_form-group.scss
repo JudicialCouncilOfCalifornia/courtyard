@@ -35,3 +35,8 @@
   @include u-text(normal);
   @include u-margin-bottom(2);
 }
+
+/* Css added only webform select box label */
+.usa-legend.jcc-form-group__title {
+  font-size: 1.06rem;
+}
