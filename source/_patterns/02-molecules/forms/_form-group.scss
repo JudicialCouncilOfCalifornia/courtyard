@@ -37,6 +37,12 @@
 }
 
 /* Css added only webform select box label */
-.usa-legend.jcc-form-group__title {
-  @include u-font-size("heading", "md");
+.webform-submission-form {
+  .jcc-dropdown__Label {
+    @include u-font-size("heading", "md");
+  }
+  .usa-legend.jcc-form-group__title {
+    @include u-font-size("heading", "md");
+    @include u-margin-bottom(0);
+  }
 }
