@@ -39,10 +39,14 @@
 /* Css added only webform select box label */
 .webform-submission-form {
   .jcc-dropdown__Label {
+    @include u-font-family(sans);
     @include u-font-size("heading", "md");
+    @include u-padding-top(0);
+    @include u-padding-bottom(0);
+    font-style: normal;
   }
+
   .usa-legend.jcc-form-group__title {
     @include u-font-size("heading", "md");
-    @include u-margin-bottom(0);
   }
 }
