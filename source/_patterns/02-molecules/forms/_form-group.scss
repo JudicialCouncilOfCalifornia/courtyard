@@ -49,4 +49,10 @@
   .usa-legend.jcc-form-group__title {
     @include u-font-size("heading", "md");
   }
+
+  .close-btn {
+    @include u-text-align("right");
+    @include u-float("right");
+    @include u-margin-top(2);
+  }
 }
