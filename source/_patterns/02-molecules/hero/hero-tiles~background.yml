@@ -2,3 +2,4 @@ hero_tiles:
   style: "background-image"
   images:
     banner: "https://placeimg.com/1000/350/nature"
+    signature_title: "Photo: Jane Klause"
