@@ -198,3 +198,25 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 }
+
+// CSS for background signature title
+.jcc-signature-bottom-right{
+  @include u-position(absolute);
+  color: #F3F3F3;
+  font-size: 9px;
+  line-height: 22px;
+  font-family: Lato;
+}
+
+.jcc-hero-tiles__background .jcc-signature-bottom-right {
+  bottom: 8px;
+  right: 0;
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
+  transform: scale(-1, -1);
+}
+
+.jcc-hero-tiles__side .jcc-signature-bottom-right {
+  bottom: 0;
+  right: 95px;
+}
