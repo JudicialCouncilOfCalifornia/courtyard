@@ -200,9 +200,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 // CSS for background signature title
-.jcc-signature-bottom-right{
+.jcc-signature-bottom-right {
   @include u-position(absolute);
-  color: #F3F3F3;
+  color: #f3f3f3;
   font-size: 9px;
   line-height: 22px;
   font-family: Lato, Helvetica, sans-serif;
@@ -216,13 +216,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   transform: scale(-1, -1);
 }
 
-<<<<<<< HEAD
 .jcc-hero-tiles__background::before {
-  z-index : 0 !important;
+  z-index: 0 !important;
 }
 
-=======
->>>>>>> 2.x
 .jcc-hero-tiles__side .jcc-signature-bottom-right {
   bottom: 0;
   right: 95px;
