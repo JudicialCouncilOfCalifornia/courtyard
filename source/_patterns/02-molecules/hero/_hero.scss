@@ -216,10 +216,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   transform: scale(-1, -1);
 }
 
+<<<<<<< HEAD
 .jcc-hero-tiles__background::before {
   z-index : 0 !important;
 }
 
+=======
+>>>>>>> 2.x
 .jcc-hero-tiles__side .jcc-signature-bottom-right {
   bottom: 0;
   right: 95px;
