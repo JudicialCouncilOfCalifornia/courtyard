@@ -217,7 +217,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .jcc-hero-tiles__background::before {
-  z-index: 0 !important;
+  z-index : 0 !important;
 }
 
 .jcc-hero-tiles__side .jcc-signature-bottom-right {
