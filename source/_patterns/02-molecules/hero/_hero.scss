@@ -205,7 +205,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   color: #F3F3F3;
   font-size: 9px;
   line-height: 22px;
-  font-family: Lato;
+  font-family: Lato, Helvetica, sans-serif;
 }
 
 .jcc-hero-tiles__background .jcc-signature-bottom-right {
@@ -214,6 +214,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   text-orientation: mixed;
   writing-mode: vertical-lr;
   transform: scale(-1, -1);
+}
+
+.jcc-hero-tiles__background::before {
+  z-index : 0 !important;
 }
 
 .jcc-hero-tiles__side .jcc-signature-bottom-right {
