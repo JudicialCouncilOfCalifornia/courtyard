@@ -46,7 +46,8 @@
     font-style: normal;
   }
 
-  .usa-legend.jcc-form-group__title, .usa-legend.jcc-form-group__title span {
+  .usa-legend.jcc-form-group__title,
+  .usa-legend.jcc-form-group__title span {
     @include u-font-size("heading", "md");
     @include u-font-family(sans);
   }
