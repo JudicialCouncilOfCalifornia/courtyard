@@ -2,7 +2,7 @@ name: Trigger artifact build
 
 on:
   push:
-    branches: [ 1.x, 2.x, 2.x-dev ]
+    branches: [ 1.x ]
 
 jobs:
   build:
@@ -13,4 +13,4 @@ jobs:
           curl -X POST https://api.github.com/repos/JudicialCouncilOfCalifornia/courtyard-artifact/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.CourtyardArtifactToken }} \
-          --data '{"event_type": "trigger-build", "client_payload": {}}'
+          --data '{"event_type": "trigger-build-1x", "client_payload": {}}'
