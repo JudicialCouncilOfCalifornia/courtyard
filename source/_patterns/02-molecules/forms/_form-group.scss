@@ -50,12 +50,7 @@
   .usa-legend.jcc-form-group__title span {
     @include u-font-size("heading", "md");
     @include u-font-family(sans);
-  }
-
-  .close-btn {
-    @include u-text-align("right");
-    @include u-float("right");
-    @include u-margin-top(2);
+    @include u-margin-bottom(0);
   }
 
   .close-btn {
