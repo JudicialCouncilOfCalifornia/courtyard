@@ -220,7 +220,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   z-index : 0 !important;
 }
 
+.jcc-hero-tiles__side{
+  position: relative;
+}
+
 .jcc-hero-tiles__side .jcc-signature-bottom-right {
   bottom: 0;
-  right: 95px;
+  right: 0;
+  background: rgba(0, 94, 162, 0.7);
+  padding: 0 8px;
 }
