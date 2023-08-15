@@ -70,9 +70,17 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   %jcc-button {
     @include u-height(auto);
+    @include u-margin-right(0);
   }
 
   &__trigger-container {
+    @include u-display(flex);
+
+    .block {
+      @include u-display(inline);
+      @include u-margin-right(1);
+    }
+
     %jcc-button {
       @include u-padding-x(1);
       width: 11rem;
