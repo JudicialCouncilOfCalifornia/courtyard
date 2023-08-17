@@ -1,6 +1,7 @@
 // Elements.
 const $offcanvas_trigger = $('[data-offcanvas^="trigger"]');
 const $offcanvas_trigger_show = $('[data-offcanvas="trigger"]');
+const offcanvas_triggers = '.jcc-offcanvas__trigger-container .block';
 const $offcanvas_container = $('[data-offcanvas="container"]');
 const $offcanvas_dialog = $('[data-offcanvas="dialog"]');
 const $offcanvas_confirmation = $('[data-offcanvas="container"] .webform-confirmation');
@@ -9,7 +10,7 @@ const min_desktop_width = 800;
 
 // Functions.
 const offcanvasOpen = () => {
-  $offcanvas_trigger_show.hide();
+  $(offcanvas_triggers).hide();
   $offcanvas_container.attr("open", "open");
   $offcanvas_dialog.attr("open", "open");
   $offcanvas_dialog.focus();
@@ -58,7 +59,7 @@ $offcanvas_trigger.on("click", function (e) {
       $offcanvas_container.css("transition", "all .2s");
       $offcanvas_dialog.removeAttr("open");
       $offcanvas_container.removeAttr("open");
-      $offcanvas_trigger_show.show();
+      $(offcanvas_triggers).show();
       if ($(window).width() < min_desktop_width) {
         $("body").removeAttr("style");
       }
@@ -100,3 +101,23 @@ $(drupalWebForm).on("keydown", ":input:not(textarea):not(:submit)", function (e)
 $(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function () {
   $(this).removeClass("ui-visual-focus");
 });
+
+// BEGIN: JCC Chat integration via chatbot.js molecule.
+// Hide feeback widget when chatbot opens.
+window.addEventListener(
+  "chat-open",
+  function(e) {
+    $offcanvas_trigger_show.hide();
+  },
+  false
+);
+
+// Show feedback widget when chatbot closes.
+window.addEventListener(
+  "chat-close",
+  function(e) {
+    $offcanvas_trigger_show.show();
+  },
+  false
+);
+// END
