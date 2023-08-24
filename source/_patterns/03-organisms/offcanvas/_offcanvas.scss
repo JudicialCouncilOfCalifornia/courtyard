@@ -84,6 +84,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-margin-bottom(4);
     }
 
+    &.mobile {
+      .block {
+        width: 50%;
+        &:only-child {
+          @include u-width(full);
+        }
+      }
+    }
+
     &.open {
       @include u-display(block);
       @include u-margin-bottom(0);
@@ -103,13 +112,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
       a, iframe {
         @include u-width(full, !important);
-      }
-
-      &--mobile {
-        width: 50%;
-        &:only-child {
-          @include u-width(full);
-        }
       }
     }
 
