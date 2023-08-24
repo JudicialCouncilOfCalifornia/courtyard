@@ -37,10 +37,10 @@ const autoDesktopDialogHeight = () => {
 const triggersAdjust = (state) => {
   if (state) {
     $(triggerContainer).attr("style", "width: " + $(window).width() + "px");
-    $(offcanvas_triggers).addClass("block--mobile");
+    $(triggerContainer).addClass("mobile");
   } else {
     $(triggerContainer).removeAttr("style");
-    $(offcanvas_triggers).removeClass("block--mobile");
+    $(triggerContainer).removeClass("mobile");
   }
 }
 
