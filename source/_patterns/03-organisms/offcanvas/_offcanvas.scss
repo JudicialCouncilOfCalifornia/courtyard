@@ -11,7 +11,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   @include u-position(fixed);
   @include u-z(top);
   @include u-bottom(0);
-  @include at-media("tablet") {
+  @include at-media(tablet) {
     @include u-right(0);
   }
 
@@ -80,7 +80,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-display(flex);
     @include u-justify-content(justify-center);
     @include u-margin-bottom(0);
-    @include at-media("tablet") {
+    @include at-media(tablet) {
       @include u-margin-bottom(4);
     }
 
@@ -95,7 +95,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
     .block {
       @include u-display(inline);
-      @include at-media("tablet") {
+      @include at-media(tablet) {
         @include u-display(block);
         @include u-margin-right(1);
       }
