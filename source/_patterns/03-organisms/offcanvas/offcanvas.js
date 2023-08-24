@@ -6,7 +6,7 @@ const $offcanvas_container = $('[data-offcanvas="container"]');
 const $offcanvas_dialog = $('[data-offcanvas="dialog"]');
 const $offcanvas_confirmation = $('[data-offcanvas="container"] .webform-confirmation');
 const drupalWebForm = ".jcc-offcanvas__dialog-body .webform-ajax-form-wrapper";
-const min_tablet_width = 800;
+const min_tablet_width = 640;
 const triggerContainer = ".jcc-offcanvas__trigger-container";
 
 // Functions.
