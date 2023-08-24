@@ -274,6 +274,31 @@
   }
 }
 
+// Css for new Translate header css
+.usa-header--basic.jcc-header--inverted {
+  #extended-nav-section-two {
+    width: 16rem;
+    .usa-nav__submenu-item {
+      a,
+      .usa-nav__submenu_label {
+        @include u-bg(primary-dark);
+      }
+      a.usa-current,
+      a:hover {
+        @include u-bg(primary-vivid);
+      }
+
+      .usa-nav__submenu-list a {
+        @include u-border-left(2, primary);
+      }
+    }
+  }
+
+  .jcc-nav-secondary__group .usa-accordion__button[aria-expanded="true"] {
+    @include u-bg(primary-dark);
+  }
+}
+
 // close button override
 .usa-js-mobile-nav--active {
   .jcc-header-base .usa-nav__close {
