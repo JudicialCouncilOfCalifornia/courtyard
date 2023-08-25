@@ -67,3 +67,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 }
+
+.jcc-action-list__item-title {
+  font-size: 1.125rem;
+}
