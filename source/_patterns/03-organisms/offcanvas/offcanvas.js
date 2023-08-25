@@ -69,11 +69,9 @@ $offcanvas_trigger.on("click", function (e) {
       $(offcanvas_triggers).show();
     }
     $(triggerContainer).removeClass("open");
-    $("body").removeAttr("style");
     return false;
   } else {
     offcanvasOpen();
-    $("body").css("overflow", "hidden");
   }
 });
 
@@ -113,7 +111,6 @@ window.addEventListener(
   function(e) {
     $offcanvas_trigger_show.hide();
     $(triggerContainer).addClass("open");
-    $("body").css("overflow", "hidden");
   },
   false
 );
@@ -123,7 +120,6 @@ window.addEventListener(
   function(e) {
     $(triggerContainer).removeClass("open");
     $offcanvas_trigger_show.show();
-    $("body").removeAttr("style");
   },
   false
 );
