@@ -9,8 +9,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-offcanvas {
   @include u-position(fixed);
-  @include u-right(0);
   @include u-z(top);
+  @include u-bottom(0);
+  @include at-media(tablet) {
+    @include u-right(0);
+  }
 
   &__dialog {
     @include u-display(none);
@@ -57,7 +60,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     &-body {
-      @include u-overflow(auto);
+      @include u-overflow(scroll);
       @include u-margin(2);
       flex: 1 1 auto;
       height: 90%;
@@ -75,10 +78,41 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   &__trigger-container {
     @include u-display(flex);
+    @include u-justify-content(justify-center);
+    @include u-margin-bottom(0);
+    @include at-media(tablet) {
+      @include u-margin-bottom(4);
+    }
+
+    &.mobile {
+      .block {
+        width: 50%;
+        &:only-child {
+          @include u-width(full);
+        }
+      }
+    }
+
+    &.open {
+      @include u-display(block);
+      @include u-margin-bottom(0);
+
+      .block {
+        @include u-margin-right(0);
+      }
+    }
 
     .block {
       @include u-display(inline);
-      @include u-margin-right(1);
+      @include at-media(tablet) {
+        @include u-display(block);
+        @include u-margin-right(1);
+      }
+      width: 11rem;
+
+      a, iframe {
+        @include u-width(full, !important);
+      }
     }
 
     %jcc-button {

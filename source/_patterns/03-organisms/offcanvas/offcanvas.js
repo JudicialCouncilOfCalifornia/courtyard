@@ -6,17 +6,16 @@ const $offcanvas_container = $('[data-offcanvas="container"]');
 const $offcanvas_dialog = $('[data-offcanvas="dialog"]');
 const $offcanvas_confirmation = $('[data-offcanvas="container"] .webform-confirmation');
 const drupalWebForm = ".jcc-offcanvas__dialog-body .webform-ajax-form-wrapper";
-const min_desktop_width = 800;
+const min_tablet_width = 640;
+const triggerContainer = ".jcc-offcanvas__trigger-container";
 
 // Functions.
 const offcanvasOpen = () => {
   $(offcanvas_triggers).hide();
+  $(triggerContainer).addClass("open");
   $offcanvas_container.attr("open", "open");
   $offcanvas_dialog.attr("open", "open");
   $offcanvas_dialog.focus();
-  if ($(window).width() < min_desktop_width && $offcanvas_dialog.attr("open")) {
-    $("body").css("overflow", "hidden");
-  }
 };
 
 const offcanvasDismiss = () => {
@@ -32,8 +31,18 @@ const offcanvasConfirmed = () => {
 };
 
 const autoDesktopDialogHeight = () => {
-  $('[data-offcanvas="dialog"]').css("height", $(window).height() - 100);
+  $('[data-offcanvas="dialog"]').css("height", $(window).height());
 };
+
+const triggersAdjust = (state) => {
+  if (state) {
+    $(triggerContainer).attr("style", "width: " + $(window).width() + "px");
+    $(triggerContainer).addClass("mobile");
+  } else {
+    $(triggerContainer).removeAttr("style");
+    $(triggerContainer).removeClass("mobile");
+  }
+}
 
 // Allow user to dismiss completely if confirmation is visible.
 if (offcanvasConfirmed() == true) {
@@ -41,7 +50,6 @@ if (offcanvasConfirmed() == true) {
     offcanvasDismiss();
   } else {
     window.scrollTo(0, document.body.scrollHeight);
-    $offcanvas_dialog.removeAttr("style");
     offcanvasOpen();
   }
 }
@@ -58,35 +66,32 @@ $offcanvas_trigger.on("click", function (e) {
     } else {
       $offcanvas_container.css("transition", "all .2s");
       $offcanvas_dialog.removeAttr("open");
-      $offcanvas_container.removeAttr("open");
       $(offcanvas_triggers).show();
-      if ($(window).width() < min_desktop_width) {
-        $("body").removeAttr("style");
-      }
     }
+    $(triggerContainer).removeClass("open");
+    $("body").removeAttr("style");
     return false;
   } else {
     offcanvasOpen();
+    $("body").css("overflow", "hidden");
   }
 });
 
-// Auto adjust dialog height on larger screens.
+// Auto adjusts on page load.
 $(document).ready(function () {
-  if ($(window).width() > min_desktop_width) {
-    autoDesktopDialogHeight();
+  autoDesktopDialogHeight();
+  if ($(window).width() < min_tablet_width) {
+    triggersAdjust(true);
   }
 });
 
-// Auto adjust dialog if able to toggle between screen sizes.
+// Auto adjusts when screen orientation changes.
 $(window).resize(function () {
-  if ($(window).width() > min_desktop_width) {
-    autoDesktopDialogHeight();
-    $("body").removeAttr("style");
+  autoDesktopDialogHeight();
+  if ($(window).width() > min_tablet_width) {
+    triggersAdjust(false);
   } else {
-    $('[data-offcanvas="dialog"]').removeAttr("style");
-    if ($offcanvas_dialog.attr("open")) {
-      $("body").css("overflow", "hidden");
-    }
+    triggersAdjust(true);
   }
 });
 
@@ -103,20 +108,22 @@ $(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function (
 });
 
 // BEGIN: JCC Chat integration via chatbot.js molecule.
-// Hide feeback widget when chatbot opens.
 window.addEventListener(
   "chat-open",
   function(e) {
     $offcanvas_trigger_show.hide();
+    $(triggerContainer).addClass("open");
+    $("body").css("overflow", "hidden");
   },
   false
 );
 
-// Show feedback widget when chatbot closes.
 window.addEventListener(
   "chat-close",
   function(e) {
+    $(triggerContainer).removeClass("open");
     $offcanvas_trigger_show.show();
+    $("body").removeAttr("style");
   },
   false
 );
