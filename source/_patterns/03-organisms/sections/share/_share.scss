@@ -35,7 +35,7 @@
       width: 4.1rem;
       background-repeat: no-repeat;
       background-position: top center;
-      padding: 50px 0 0 0;
+      padding: 50px 0 0 10px;
       font-color: #2e2e2e;
       @include u-font(sans, 6);
       letter-spacing: 0.1rem;
@@ -46,18 +46,16 @@
   }
 
   &__print {
-    background-image: url("../images/graphics/print-new.svg");
+    background-image: url("../images/graphics/print.svg");
     margin-left: 10px;
   }
 
   &__email {
-    //position: relative;
-    //top: 2px;
-    background-image: url("../images/graphics/email-new.svg");
+    background-image: url("../images/graphics/email.svg");
   }
 
   &__text {
-    background-image: url("../images/graphics/text-new.svg");
+    background-image: url("../images/graphics/text.svg");
   }
 
   #jcc-share__trigger--text {
