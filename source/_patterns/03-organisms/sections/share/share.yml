@@ -1,5 +1,8 @@
 share:
   email_modal: "Email link to me"
   text_modal: "Text link to me"
+  email: "EMAIL"
+  text: "TEXT"
+  print: "PRINT"
   #custom:
   #  - link: '<button class="jcc-share__button jcc-modal__trigger" aria-label="Share this page by email" data-a11y-dialog-show="email"><span class="jcc-share__text"></span></button>'

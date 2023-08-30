@@ -35,21 +35,29 @@
       width: 4.1rem;
       background-repeat: no-repeat;
       background-position: top center;
+      padding: 50px 0 0 0;
+      font-color: #2e2e2e;
+      @include u-font(sans, 6);
+      letter-spacing: 0.1rem;
+      font-size: 1.06rem;
+      text-align: center;
+      color: buttonText;
     }
   }
 
   &__print {
-    background-image: url("../images/graphics/print.svg");
+    background-image: url("../images/graphics/print-new.svg");
+    margin-left: 10px;
   }
 
   &__email {
-    position: relative;
-    top: 2px;
-    background-image: url("../images/graphics/email.svg");
+    //position: relative;
+    //top: 2px;
+    background-image: url("../images/graphics/email-new.svg");
   }
 
   &__text {
-    background-image: url("../images/graphics/text.svg");
+    background-image: url("../images/graphics/text-new.svg");
   }
 
   #jcc-share__trigger--text {
