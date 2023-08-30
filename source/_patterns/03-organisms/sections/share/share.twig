@@ -4,7 +4,7 @@
 
 <div class="{{ classes|join(' ')|trim }}">
   <button id="jcc-share__trigger--print" class="jcc-share__button" aria-label="Print current page">
-    <span class="jcc-share__print"></span>
+    <span class="jcc-share__print">{{ share.print }}</span>
   </button>
   {% if share.email_modal %}
     {% set email_id = "email" %}
@@ -15,7 +15,7 @@
               aria-label="{{ email_label }}"
               {% if share.email_modal %}data-a11y-dialog-show="jcc-share--{{ email_id }}"{% endif %}
       >
-        <span class="jcc-share__email"></span>
+        <span class="jcc-share__email">{{ share.email }}</span>
       </button>
     {% endset %}
     {% include '@organisms/sections/modal/modal.twig' with {
@@ -39,7 +39,7 @@
               aria-label="{{ text_label }}"
               {% if share.text_modal %}data-a11y-dialog-show="jcc-share--{{ text_id }}"{% endif %}
       >
-        <span class="jcc-share__text"></span>
+        <span class="jcc-share__text">{{ share.text }}</span>
       </button>
     {% endset %}
     {% include '@organisms/sections/modal/modal.twig' with {
