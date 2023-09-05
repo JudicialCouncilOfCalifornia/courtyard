@@ -1,0 +1,21 @@
+{#
+/**
+ * Available variables:
+ * - heading:
+ * - content: Text on top of the title
+ */
+#}
+
+{% set classes = [
+  'read-more',
+] %}
+
+<div class="{{ classes|join(' ') }}">
+  <h3 class="read-more__heading">
+    {{ readmore.heading }}
+    <button class="read-more__action">More</button>
+  </h3>
+  <div class="read-more__content">
+    {{ readmore.content }}
+  </div>
+</div>
