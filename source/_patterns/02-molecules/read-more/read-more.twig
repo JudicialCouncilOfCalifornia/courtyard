@@ -8,6 +8,7 @@
 
 {% set classes = [
   'read-more',
+  readmore.variant ? 'read-more--' ~ readmore.variant : 'read-more--default'
 ] %}
 
 <div class="{{ classes|join(' ') }}">

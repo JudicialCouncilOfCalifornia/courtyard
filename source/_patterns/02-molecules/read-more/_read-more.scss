@@ -13,6 +13,10 @@ $_config_schemes: (
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .read-more {
+  @include u-display(flex);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   max-inline-size: 75ch;
 }
 
@@ -30,12 +34,14 @@ h3.read-more__heading {
 
 .read-more__action {
   @include u-display(flex);
+  @include u-margin-left(2);
   @include u-padding(2);
   @include u-padding-right(3);
   @include u-border(0);
   @include u-border-left(map-get($_config, rm-border-size), map-get($_config, rm-border));
   @include u-bg("white");
   @include u-color(primary);
+  @include u-font-weight(bold);
   width: 10ch;
   justify-content: center;
   border-top-right-radius: map-get($_config, rm-border-radius);
@@ -52,7 +58,6 @@ h3.read-more__heading {
   line-height: 0.3;
   content: "\231F";
   transform: rotate(45deg);
-  //transition: all 0.2s ease 0s;
 }
 
 .read-more__heading[expanded] > .read-more__action::after {
@@ -95,4 +100,23 @@ h3.read-more__heading {
 
 .read-more__heading[expanded] + .read-more__content {
   @include u-display(block);
+}
+
+.read-more--text .read-more__heading {
+  @include u-border(0);
+  @include u-radius(0);
+  @include u-bg("transparent");
+  padding-inline-start: unset;
+}
+
+.read-more--text .read-more__action {
+  @include u-border(0);
+  @include u-radius(0);
+  @include u-bg("transparent");
+  @include u-margin-left(0);
+  padding-block: unset;
+}
+
+.read-more--text .read-more__action::after {
+  @include u-border(0);
 }
