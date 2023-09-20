@@ -1,25 +1,26 @@
 offcanvas:
   id: "feedback-id"
-  button_close:
-    id: "feedback_close"
-  hero:
-    main:
-      icon:
-        name: "like-dislike"
-        set: "fig"
-        width: 55
-        height: 45
-      title: "Was this helpful?"
-      lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      actions:
-        - text: "Yes"
-        - text: "No"
-  embed: "<label class='usa-label' for='input-type-text'>Any Additional Feedback?</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><label class='usa-label' for='input-type-text'>Email (optional)</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><button class='jcc-button--primary margin-top-4' aria_label='Click me to execute action'>Submit</button>"
-  button:
-    id: "feedback_open"
-    text: "Was this helpful?"
-    icon:
-      name: "like-dislike"
-      set: "fig"
-      width: 40
-      height: 22
+#  dialog:
+#    button_close:
+#      id: "feedback_close"
+#    hero:
+#      main:
+#        icon:
+#          name: "like-dislike"
+#          set: "fig"
+#          width: 55
+#          height: 45
+#        title: "Was this helpful?"
+#        lead: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+#        actions:
+#          - text: "Yes"
+#          - text: "No"
+#    embed: "<label class='usa-label' for='input-type-text'>Any Additional Feedback?</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><label class='usa-label' for='input-type-text'>Email (optional)</label><input class='usa-input' id='input-type-text' name='input-type-text' type='text'><button class='jcc-button--primary margin-top-4' aria_label='Click me to execute action'>Submit</button>"
+#  button:
+#    id: "feedback_open"
+#    text: "Was this helpful?"
+#    icon:
+#      name: "like-dislike"
+#      set: "fig"
+#      width: 40
+#      height: 22

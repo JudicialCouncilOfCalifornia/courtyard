@@ -1,58 +1,62 @@
 {# TODO: Possibly refactor later as a "drawer" component since diverging from offcanvas intent ... https://getbootstrap.com/docs/5.0/components/offcanvas/ #}
 
 <div class="jcc-offcanvas" id="{{ offcanvas.id }}" data-offcanvas="container" visible="visible">
-  <dialog class="jcc-offcanvas__dialog" role="dialog" data-offcanvas="dialog" tabindex="-1">
-    <div class="jcc-offcanvas__dialog-header">
-      <div class="jcc-offcanvas__dialog-close">
-        {% include '@atoms/button/button.twig' with {
-          button: {
-            id: offcanvas.button_close.id|default('offcanvas_close'),
-            style: 'unstyled',
-            aria_label: offcanvas.button_close.aria_label|default('Close this dialog window'),
-            other_attributes: 'tabindex=-1 data-offcanvas=trigger-close',
-            icon: {
-              name: 'close',
-              set: 'fa',
-            },
-            url: '#',
+  {% if offcanvas.dialog %}
+    <dialog class="jcc-offcanvas__dialog" role="dialog" data-offcanvas="dialog" tabindex="-1">
+      <div class="jcc-offcanvas__dialog-header">
+        <div class="jcc-offcanvas__dialog-close">
+          {% include '@atoms/button/button.twig' with {
+            button: {
+              id: offcanvas.dialog.button_close.id|default('offcanvas_close'),
+              style: 'unstyled',
+              aria_label: offcanvas.dialog.button_close.aria_label|default('Close this dialog window'),
+              other_attributes: 'tabindex=-1 data-offcanvas=trigger-close',
+              icon: {
+                name: 'close',
+                set: 'fa',
+              },
+              url: '#',
+            }
+          } %}
+        </div>
+
+        {% include '@molecules/hero/hero.twig' with {
+          hero: {
+            layout: offcanvas.dialog.hero.layout|default('full-main'),
+            background: offcanvas.dialog.hero.background|default('alt'),
+            main: {
+              icon: offcanvas.dialog.hero.main.icon,
+              title: offcanvas.dialog.hero.main.title,
+              title_tag: 'h2',
+              lead: offcanvas.dialog.hero.main.lead,
+              actions: offcanvas.dialog.hero.main.actions,
+            }
           }
         } %}
       </div>
 
-      {% include '@molecules/hero/hero.twig' with {
-        hero: {
-          layout: offcanvas.hero.layout|default('full-main'),
-          background: offcanvas.hero.background|default('alt'),
-          main: {
-            icon: offcanvas.hero.main.icon,
-            title: offcanvas.hero.main.title,
-            title_tag: 'h2',
-            lead: offcanvas.hero.main.lead,
-            actions: offcanvas.hero.main.actions,
-          }
-        }
-      } %}
-    </div>
-
-    {% if offcanvas.embed %}
-    <div class="jcc-offcanvas__dialog-body">
-      {{ offcanvas.embed }}
-    </div>
-    {% endif %}
-  </dialog>
+      {% if offcanvas.dialog.embed %}
+      <div class="jcc-offcanvas__dialog-body">
+        {{ offcanvas.dialog.embed }}
+      </div>
+      {% endif %}
+    </dialog>
+  {% endif %}
 
   <div class="jcc-offcanvas__trigger-container">
-    <div class="block{{ offcanvas.button.id ? ' ' ~ offcanvas.button.id ~ '__trigger' }}">
-      {% include '@atoms/button/button.twig' with {
-        button: {
-          id: offcanvas.button.id|default('offcanvas_open'),
-          text: offcanvas.button.text,
-          other_attributes: 'data-offcanvas=trigger',
-          icon: offcanvas.button.icon,
-          icon_layout: offcanvas.button.icon_layout|default('top'),
-          url: '#',
-        }
-      } %}
-    </div>
+    {% if offcanvas.button %}
+      <div class="block{{ offcanvas.button.id ? ' ' ~ offcanvas.button.id ~ '__trigger' }}">
+        {% include '@atoms/button/button.twig' with {
+          button: {
+            id: offcanvas.button.id|default('offcanvas_open'),
+            text: offcanvas.button.text,
+            other_attributes: 'data-offcanvas=trigger',
+            icon: offcanvas.button.icon,
+            icon_layout: offcanvas.button.icon_layout|default('top'),
+            url: '#',
+          }
+        } %}
+      </div>
+    {% endif %}
   </div>
 </div>

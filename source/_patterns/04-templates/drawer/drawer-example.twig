@@ -12,9 +12,11 @@
   {% include '@organisms/offcanvas/offcanvas.twig' with {
     offcanvas: {
       id: drawer_example.offcanvas.id,
-      button_close: drawer_example.offcanvas.button_close,
-      hero: drawer_example.offcanvas.hero,
-      embed: chat,
+      dialog: {
+        button_close: drawer_example.dialog.offcanvas.button_close,
+        hero: drawer_example.offcanvas.dialog.hero,
+        embed: chat,
+      },
       button: drawer_example.offcanvas.button,
     }
   } %}
