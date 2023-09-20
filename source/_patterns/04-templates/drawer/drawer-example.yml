@@ -73,19 +73,20 @@ drawer_example:
           url: "#"
   offcanvas:
     id: "chat_modal_id"
-    button_close:
-      id: "chat_close"
-    hero:
-      main:
-        icon:
-          name: "chat"
-          set: "fig"
-          width: 35
-          height: 50
+    dialog:
+      button_close:
+        id: "chat_close"
+      hero:
+        main:
+          icon:
+            name: "chat"
+            set: "fig"
+            width: 35
+            height: 50
+            title: "Chat Now"
           title: "Chat Now"
-        title: "Chat Now"
-        lead: "Duis autem vel eum iure reprehenderit qui in volup tate velit esse quam."
-        actions: false
+          lead: "Duis autem vel eum iure reprehenderit qui in volup tate velit esse quam."
+          actions: false
     button:
       id: "chat_open"
       text: "Chat Now"
