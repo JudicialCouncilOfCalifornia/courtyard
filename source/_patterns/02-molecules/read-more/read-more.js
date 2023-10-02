@@ -24,11 +24,9 @@ docReady(function () {
 
         if (readmoreheading.hasAttribute("expanded")) {
           readmoreheading.removeAttribute("expanded");
-          readmorebtn.setAttribute("aria-label", "Show more");
           readmorebtntext.innerHTML = "More";
         } else {
           readmoreheading.setAttribute("expanded", "true");
-          readmorebtn.setAttribute("aria-label", "Show less");
           readmorebtntext.innerHTML = "Less";
         }
       });
