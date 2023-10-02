@@ -14,6 +14,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .read-more {
   @include u-display(flex);
+  @include u-margin-bottom(4);
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
@@ -42,41 +43,22 @@ h3.read-more__heading {
   @include u-bg("white");
   @include u-color(primary);
   @include u-font-weight(bold);
+  align-items: center;
   width: 10ch;
   justify-content: center;
   border-top-right-radius: map-get($_config, rm-border-radius);
   border-bottom-right-radius: map-get($_config, rm-border-radius);
+  text-decoration: none;
 }
 
-.read-more__action::after {
+.read-more__action .icon {
   @include u-position(relative);
   @include u-left(1);
-  @include u-font-size(body, 10);
   @include u-font-weight(bold);
-  border-top-right-radius: map-get($_config, rm-border-radius);
-  border-bottom-right-radius: map-get($_config, rm-border-radius);
-  line-height: 0.3;
-  content: "\231F";
-  transform: rotate(45deg);
 }
 
-.read-more__heading[expanded] > .read-more__action::after {
-  top: 0.788rem;
-  left: 0.1rem;
-  transform: rotate(225deg);
-}
-
-// Temp Firefox adjustments until revisit.
-@-moz-document url-prefix() {
-  .read-more__action::after {
-    top: -0.1rem;
-    line-height: 0;
-  }
-
-  .read-more__heading[expanded] > .read-more__action::after {
-    top: 0.2rem;
-    left: 0.8rem;
-  }
+.read-more__heading[expanded] > .read-more__action .icon {
+  transform: rotate(180deg);
 }
 
 .read-more__action:hover {
@@ -92,6 +74,7 @@ h3.read-more__heading {
     map-get($_config, rm-border-content)
   );
   @include u-font-size(body, 3);
+  flex: 0 0 100%;
 
   p:not(:first-child) {
     @include u-padding-top(2);

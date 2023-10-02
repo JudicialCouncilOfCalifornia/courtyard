@@ -15,19 +15,21 @@ docReady(function () {
     if (!readmorebtn.classList.contains("js-readmore")) {
       readmorebtn.classList.add("js-readmore");
 
+      // Mouse interaction.
       readmorebtn.addEventListener("click", (e) => {
         e.preventDefault();
 
         let readmoreheading = readmorebtn.closest(".read-more__heading");
+        let readmorebtntext = readmorebtn.children[0];
 
         if (readmoreheading.hasAttribute("expanded")) {
           readmoreheading.removeAttribute("expanded");
-          readmorebtn.setAttribute("aria-pressed", "false");
-          readmorebtn.innerHTML = "More";
+          readmorebtn.setAttribute("aria-label", "Show more");
+          readmorebtntext.innerHTML = "More";
         } else {
           readmoreheading.setAttribute("expanded", "true");
-          readmorebtn.setAttribute("aria-pressed", "true");
-          readmorebtn.innerHTML = "Less";
+          readmorebtn.setAttribute("aria-label", "Show less");
+          readmorebtntext.innerHTML = "Less";
         }
       });
     }
