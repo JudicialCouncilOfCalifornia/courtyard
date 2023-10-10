@@ -445,7 +445,7 @@ a.mailto {
 
 a.jcc-button--cta-link {
   @extend %jcc-button;
-  @include u-display(flex);
+  @include u-display(inline-flex);
   @include u-flex(justify);
   @include u-align-items(align-center);
   @include u-margin-right(0);
