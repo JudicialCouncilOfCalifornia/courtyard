@@ -21,7 +21,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   max-inline-size: 75ch;
 }
 
-h3.read-more__heading {
+.read-more__heading {
   @include u-display(flex);
   @include u-border(map-get($_config, rm-border-size), map-get($_config, rm-border));
   @include u-bg(map-get($_config, rm-background));
@@ -31,12 +31,13 @@ h3.read-more__heading {
   align-items: center;
   justify-content: space-between;
   border-radius: map-get($_config, rm-border-radius);
+  line-height: normal;
 }
 
 .read-more__action {
   @include u-display(flex);
-  @include u-margin-left(2);
-  @include u-padding(2);
+  @include u-margin-left(3);
+  @include u-padding(3);
   @include u-padding-right(3);
   @include u-border(0);
   @include u-border-left(map-get($_config, rm-border-size), map-get($_config, rm-border));
@@ -44,7 +45,7 @@ h3.read-more__heading {
   @include u-color(primary);
   @include u-font-weight(bold);
   align-items: center;
-  width: 10ch;
+  min-width: 11ch;
   justify-content: center;
   border-top-right-radius: map-get($_config, rm-border-radius);
   border-bottom-right-radius: map-get($_config, rm-border-radius);
@@ -73,7 +74,7 @@ h3.read-more__heading {
     map-get($_config, rm-border-size-thick),
     map-get($_config, rm-border-content)
   );
-  @include u-font-size(body, 3);
+  @include u-font-size(body, 4);
   flex: 0 0 100%;
 
   p:not(:first-child) {
