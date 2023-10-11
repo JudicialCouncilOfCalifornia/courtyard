@@ -6,12 +6,12 @@
   @include u-shadow(3);
 
   .usa-sidenav,
-  .usa-sidenavbase{
+  .usa-sidenavbase {
     @include u-border-bottom(0);
   }
 
   .usa-sidenav__item,
-  .usa-sidenavbase__item{
+  .usa-sidenavbase__item {
     &:last-of-type {
       @include u-border-bottom(0);
 
@@ -29,4 +29,10 @@
   @include u-font(body, 2xs);
   @include u-margin-left(2);
   @include u-margin-y(1);
+}
+
+// Css for share container at right side
+.srl-onramp .jcc-share__container {
+  @include u-position(relative);
+  @include u-width(full);
 }
