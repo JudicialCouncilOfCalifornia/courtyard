@@ -24,28 +24,31 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 h3.read-more__heading {
   @include u-display(flex);
   @include u-border(map-get($_config, rm-border-size), map-get($_config, rm-border));
-  @include u-bg(map-get($_config, rm-background));
-  @include u-padding-left(2);
   @include u-font-size(body, map-get($_config, rm-text-size));
   @include u-color(ink);
   @include u-line-height(ui, 3);
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   border-radius: map-get($_config, rm-border-radius);
 }
 
+.read-more__heading_text {
+  @include u-padding(2);
+  @include u-bg(map-get($_config, rm-background));
+  @include u-border-right(map-get($_config, rm-border-size), map-get($_config, rm-border));
+  border-top-left-radius: map-get($_config, rm-border-radius);
+  border-bottom-left-radius: map-get($_config, rm-border-radius);
+}
+
 .read-more__action {
   @include u-display(flex);
-  @include u-margin-left(3);
-  @include u-padding(4);
   @include u-border(0);
-  @include u-border-left(map-get($_config, rm-border-size), map-get($_config, rm-border));
   @include u-bg("white");
   @include u-color(primary);
   @include u-font-weight(bold);
   align-items: center;
-  min-width: 13ch;
   justify-content: center;
+  min-width: 11ch;
   border-top-right-radius: map-get($_config, rm-border-radius);
   border-bottom-right-radius: map-get($_config, rm-border-radius);
   text-decoration: none;
@@ -89,15 +92,25 @@ h3.read-more__heading {
   @include u-border(0);
   @include u-radius(0);
   @include u-bg("transparent");
+  align-items: center;
   padding-inline-start: unset;
+}
+
+.read-more--text .read-more__heading_text,
+.read-more--text .read-more__action {
+  padding: unset
+}
+
+.read-more--text .read-more__heading_text {
+  @include u-border(0);
+  @include u-radius(0);
+  @include u-bg("transparent");
 }
 
 .read-more--text .read-more__action {
   @include u-border(0);
   @include u-radius(0);
   @include u-bg("transparent");
-  @include u-margin-left(0);
-  padding-block: unset;
 }
 
 .read-more--text .read-more__action::after {
