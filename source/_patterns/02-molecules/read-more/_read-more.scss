@@ -21,7 +21,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   max-inline-size: 75ch;
 }
 
-.read-more__heading {
+h3.read-more__heading {
   @include u-display(flex);
   @include u-border(map-get($_config, rm-border-size), map-get($_config, rm-border));
   @include u-bg(map-get($_config, rm-background));
