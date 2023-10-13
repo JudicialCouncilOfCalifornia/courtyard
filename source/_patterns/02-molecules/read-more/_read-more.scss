@@ -26,7 +26,7 @@ h3.read-more__heading {
   @include u-border(map-get($_config, rm-border-size), map-get($_config, rm-border));
   @include u-font-size(body, map-get($_config, rm-text-size));
   @include u-color(ink);
-  @include u-line-height(ui, 3);
+  @include u-line-height(ui, 4);
   align-items: stretch;
   justify-content: space-between;
   border-radius: map-get($_config, rm-border-radius);
