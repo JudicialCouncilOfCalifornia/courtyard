@@ -489,16 +489,11 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.usa-card--cta .usa-card__media {
-  @include u-margin-right(0);
-  @include border-box-sizing;
-  @include u-height(0);
-  @include u-overflow(hidden);
-  padding: 0 0 56.25%;
-
-  .usa-card__media img {
-    //max-width: none;
-    @include u-maxw(none);
-    @include u-width(100%);
+.media-top-split {
+  .usa-card__header {
+    height: calc(20rem - 28px);
+    .usa-card__heading{
+      @include u-color(#1f303e);
+    }
   }
 }
