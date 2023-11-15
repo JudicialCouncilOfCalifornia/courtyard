@@ -195,7 +195,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-color("white");
 
       .usa-card__heading {
-        @include u-color("white");
+        @include u-color(map-get($_config, title-color));
       }
     }
 
@@ -222,7 +222,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card--media-full-overlay &,
-  .usa-card--media-top-overlay & {
+  .usa-card--media-top-overlay &,
+  .usa-card--media-top &{
     .usa-card__media {
       @each $overlay-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
         @if $overlay-bgcolor {
@@ -342,6 +343,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
     }
   }
+  .usa-card--media-top &{
+    .usa-card__header {
+      height: calc(18rem - 28px);
+    }
+  }
+
 }
 
 .usa-card:not(.usa-card--flag) .usa-card__container > :only-child {
@@ -486,14 +493,5 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .usa-card--hover & {
     @include u-color(ink);
-  }
-}
-
-.media-top-split {
-  .usa-card__header {
-    height: calc(20rem - 28px);
-    .usa-card__heading{
-      @include u-color(#1f303e);
-    }
   }
 }
