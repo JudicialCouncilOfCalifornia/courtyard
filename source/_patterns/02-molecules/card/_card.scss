@@ -195,7 +195,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-color("white");
 
       .usa-card__heading {
-        @include u-color(map-get($_config, title-color));
+        @include u-color("white");
       }
     }
 
@@ -346,6 +346,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-top &{
     .usa-card__header {
       height: calc(18rem - 28px);
+      .usa-card__heading {
+        @include u-color(map-get($_config, title-color));
+      }
     }
   }
 
