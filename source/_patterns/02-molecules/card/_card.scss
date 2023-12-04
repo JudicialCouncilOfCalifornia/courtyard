@@ -345,7 +345,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
   .usa-card--media-top &{
     .usa-card__header {
-      height: calc(18rem - 28px);
+      height: calc(18rem - 15px);
       .usa-card__heading {
         @include u-color(map-get($_config, title-color));
       }
@@ -496,5 +496,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .usa-card--hover & {
     @include u-color(ink);
+  }
+}
+
+.usa-card__container.type-image {
+  @include u-padding-left(0);
+  @include u-padding-top(0);
+  @include u-padding-bottom(0);
+  .usa-card__media{
+    line-height: 0;
   }
 }
