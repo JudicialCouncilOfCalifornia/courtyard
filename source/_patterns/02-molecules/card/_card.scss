@@ -511,8 +511,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       overflow: hidden;
       border-radius: initial;
     }
-
   }
+
   .usa-card__content{
     @include u-padding(3);
   }
