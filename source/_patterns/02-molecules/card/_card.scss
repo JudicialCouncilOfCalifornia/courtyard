@@ -500,10 +500,20 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__container.type-image {
-  @include u-padding-left(0);
-  @include u-padding-top(0);
-  @include u-padding-bottom(0);
+  @include u-padding(0);
+
   .usa-card__media{
     line-height: 0;
+    @include u-margin-right(2);
+
+    .jcc-card--overlay-color-none {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: initial;
+    }
+  }
+
+  .usa-card__content{
+    @include u-padding(3);
   }
 }
