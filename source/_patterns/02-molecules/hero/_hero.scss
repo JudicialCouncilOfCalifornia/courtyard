@@ -199,6 +199,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+// Preserve inverse style for embedded buttons.
+.jcc-button--primary,
+.jcc-button--inverse {
+  .jcc-hero--background-alt & {
+    @extend .jcc-button--inverse;
+    @include u-color("primary", !important);
+  }
+}
+
 // CSS for background signature title
 .jcc-signature-bottom-right {
   @include u-position(absolute);
