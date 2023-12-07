@@ -506,17 +506,22 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     line-height: 0;
     @include u-margin-right(2);
 
+    img{
+      object-fit: fill;
+      }
+    }
+
+  .usa-card__content{
+    @include u-padding(3);
+  }
+}
+
+.jcc-cards--1-cols {
+  .usa-card__container.type-image {
     .jcc-card--overlay-color-none {
       aspect-ratio: 16/9;
       overflow: hidden;
       border-radius: initial;
-      img{
-        object-fit: fill;
-      }
     }
-  }
-
-  .usa-card__content{
-    @include u-padding(3);
   }
 }
