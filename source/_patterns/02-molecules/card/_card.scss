@@ -510,6 +510,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       aspect-ratio: 16/9;
       overflow: hidden;
       border-radius: initial;
+      img{
+        object-fit: fill;
+      }
     }
   }
 
