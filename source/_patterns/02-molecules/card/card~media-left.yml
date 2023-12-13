@@ -2,7 +2,9 @@ card:
   style: "media-left"
   title: "Posuere et ornare"
   body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-  media: "<svg class='icon icon-laptop' width='35' height='35' role='img' aria-label='Laptop'><use xlink:href='#icon-fa-laptop'></use></svg>"
+  #media: "<svg class='icon icon-laptop' width='35' height='35' role='img' aria-label='Laptop'><use xlink:href='#icon-fa-laptop'></use></svg>"
+  media:
+    src: "https://develop-jcc-inyo.pantheonsite.io/sites/default/files/inyo/default/styles/crop_16x9/public/2021-04/257533.jpg?itok=ubEppXoU"
   link:
     url: "#"
     text: "Luctus nunc quam"

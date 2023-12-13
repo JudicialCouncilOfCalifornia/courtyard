@@ -498,32 +498,50 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.usa-card__container.type-image {
-  @include u-padding(0);
-
-  .usa-card__media {
-    line-height: 0;
-    @include u-margin-right(2);
-
-    img {
-      object-fit: fill;
+.usa-card--media-left, .usa-card--media-top {
+  .usa-card__container.type-image {
+    @include u-padding(0);
+    .usa-card__body {
+      @include u-padding-left(0);
+      @include u-padding-right(0);
     }
   }
-
-  .usa-card__content {
-    @include u-padding(3);
-  }
 }
+
+.usa-card--media-top {
+  .usa-card__container.type-image {
+    .usa-card__header {
+      height: unset;
+      margin-top: 21rem;
+      .usa-card__heading {
+        @include u-color(map-get($_config, title-color));
+        position: unset;
+        white-space: normal;
+      }
+    }
+    .usa-card__media{
+      line-height: 0;
+      @include u-margin-right(1);
+      img{
+        object-fit: cover;
+        height: 20rem;
+        display: flex;
+        }
+      }
+    }
+    .usa-card__content{
+      @include u-padding(3);
+    }
+}
+
 
 .jcc-cards--1-cols {
   .usa-card__container.type-image {
     .jcc-card--overlay-color-none {
-      aspect-ratio: 16/9;
+      aspect-ratio: var(--frame-h,16)/var(--frame-v,9);
       overflow: hidden;
       border-radius: initial;
-      img {
-        object-fit: fill;
-      }
     }
   }
 }
+
