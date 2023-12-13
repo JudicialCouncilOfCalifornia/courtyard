@@ -27,6 +27,7 @@
 {% set heading_tag = card.card_title_tag|default('h3') %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
+{% set type = card.type|default('icon') %}
 {% set icon_set = card.icon.set|default('fa') %}
 
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
@@ -45,7 +46,7 @@
 ]|merge(card.classes|default([''])) %}
 
 <{{ tag }} {{ attributes.addClass(classes) }}>
-  <div class="usa-card__container">
+  <div class="usa-card__container{% if card.media.src is not null and card.media.src is not empty %} type-image{% endif %}">
     <div class="usa-card__content">
       <header class="usa-card__header">
         {% if card.brow %}
