@@ -534,13 +534,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 }
 
-
 .jcc-cards--1-cols {
-  .usa-card__container.type-image {
-    .jcc-card--overlay-color-none {
-      aspect-ratio: var(--frame-h,16)/var(--frame-v,9);
-      overflow: hidden;
-      border-radius: initial;
+  .usa-card--media-left{
+    .usa-card__container.type-image {
+      .jcc-card--overlay-color-none {
+        aspect-ratio: var(--frame-h,16)/var(--frame-v,9);
+        overflow: hidden;
+        border-radius: initial;
+      }
     }
   }
 }
