@@ -1,0 +1,25 @@
+cards:
+  heading:
+    title: "Cards"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+  num_cols: "2-60-40"
+  items:
+    - style: "media-top"
+      title: "Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare Posuere et ornare "
+      body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+      media:
+        src: "https://newsroom.courts.ca.gov/sites/default/files/newsroom/2020-08/supreme%20court%20mural%20%28SF%29.jpg"
+        alt: "green"
+      link:
+        url: "#"
+        text: "Luctus nunc quam"
+    - style: "media-top"
+      title: "Posuere et ornare"
+      body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+      media:
+        src: "https://newsroom.courts.ca.gov/sites/default/files/newsroom/2020-08/supreme%20court%20mural%20%28SF%29.jpg"
+        alt: "green"
+      link:
+        url: "#"
+        text: "Luctus nunc quam"
+
