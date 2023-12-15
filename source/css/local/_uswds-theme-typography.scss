@@ -272,9 +272,9 @@ $theme-font-sans-custom-src: (
     400: "Lato-Regular",
     500: false,
     600: false,
-    700: false,
+    700: "Lato-SemiBold",
     800: false,
-    900: "Lato-SemiBold"
+    900: "Lato-Black",
   ),
   italic: (
     100: false,
@@ -373,7 +373,7 @@ $theme-font-weight-normal: 400;
 $theme-font-weight-medium: false;
 $theme-font-weight-semibold: false;
 $theme-font-weight-bold: 700;
-$theme-font-weight-heavy: false;
+$theme-font-weight-heavy: 900;
 
 // If USWDS is generating your @font-face rules,
 // should we generate all available weights
