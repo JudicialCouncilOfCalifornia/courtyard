@@ -1,0 +1,8 @@
+card:
+  style: "media-left"
+  title: "SVG Icon Media Source"
+  body: "<p>Earlier use of icons from complete SVG HTML source rather than as an icon subcomponent.</p>"
+  media: "<svg class='icon icon-laptop margin-4 margin-right-0' width='35' height='35' role='img' aria-label='Laptop'><use xlink:href='#icon-fa-laptop'></use></svg>"
+  link:
+    url: "#"
+    text: "Luctus nunc quam"

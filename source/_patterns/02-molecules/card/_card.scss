@@ -186,11 +186,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-display(flex);
       min-height: auto;
 
-      // Addressing SVG icons for now
-      svg {
-        @include u-margin(3);
-      }
-
       .jcc-card--overlay-color-none {
         flex-grow: 1;
 
@@ -208,7 +203,9 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .usa-card--media-left & {
-    @include at-media(tablet) {
+    @include u-flex(wrap);
+
+    @include at-media(desktop) {
       @include grid-row();
       @include u-flex(no-wrap);
       @include u-flex-direction(row);
@@ -216,6 +213,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     .usa-card__media {
+      @include u-maxw(full);
+
+      @include at-media(desktop) {
+        @include u-maxw(mobile-lg);
+      }
+
       .jcc-card--overlay-color-none {
         @include u-display(flex);
       }
@@ -229,7 +232,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-top-overlay & {
     .usa-card__media {
       @include u-z(bottom);
-      @include u-width(full);
 
       img,
       picture {
@@ -238,6 +240,15 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
         object-position: 50% 50%;
         object-fit: cover;
       }
+    }
+  }
+
+  .usa-card--media-full &,
+  .usa-card--media-top &,
+  .usa-card--media-full-overlay &,
+  .usa-card--media-top-overlay & {
+    .usa-card__media {
+      @include u-width(full);
     }
   }
 
@@ -533,4 +544,3 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-color(ink);
   }
 }
-
