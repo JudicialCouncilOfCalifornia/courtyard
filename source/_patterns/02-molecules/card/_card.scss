@@ -176,6 +176,37 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
+  .usa-card--media-top &,
+  .usa-card--media-left & {
+    .usa-card__content {
+      @include u-padding(4);
+    }
+
+    .usa-card__media {
+      @include u-display(flex);
+      min-height: auto;
+
+      // Addressing SVG icons for now
+      svg {
+        @include u-margin(3);
+      }
+
+      .jcc-card--overlay-color-none {
+        flex-grow: 1;
+
+        img {
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+  }
+
+  .usa-card--media-top & {
+    .usa-card__content {
+      @include u-padding-top(2);
+    }
+  }
+
   .usa-card--media-left & {
     @include at-media(tablet) {
       @include grid-row();
@@ -183,30 +214,19 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-flex-direction(row);
       @include u-padding-x(4);
     }
+
+    .usa-card__media {
+      .jcc-card--overlay-color-none {
+        @include u-display(flex);
+      }
+    }
   }
 
   .usa-card--media-full &,
   .usa-card--media-top &,
+  .usa-card--media-left &,
   .usa-card--media-full-overlay &,
   .usa-card--media-top-overlay & {
-    min-height: 250px;
-
-    .usa-card__header {
-      @include u-color("white");
-
-      .usa-card__heading {
-        @include u-color("white");
-      }
-    }
-
-    .usa-card__icon-no-brow {
-      @include u-color("white");
-    }
-
-    .usa-card__icon {
-      @include u-color("white");
-    }
-
     .usa-card__media {
       @include u-z(bottom);
       @include u-width(full);
@@ -221,9 +241,28 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
+  .usa-card--media-full &,
   .usa-card--media-full-overlay &,
-  .usa-card--media-top-overlay &,
-  .usa-card--media-top & {
+  .usa-card--media-top-overlay & {
+    min-height: 250px;
+
+    .usa-card__header {
+      @include u-color("white");
+
+      .usa-card__heading {
+        @include u-color("white");
+      }
+    }
+
+    .usa-card__brow-color,
+    .usa-card__icon-no-brow,
+    .usa-card__icon {
+      @include u-color("white");
+    }
+  }
+
+  .usa-card--media-full-overlay &,
+  .usa-card--media-top-overlay & {
     .usa-card__media {
       @each $overlay-bgcolor, $color-value in map-get($_config, overlay-bgcolors) {
         @if $overlay-bgcolor {
@@ -310,7 +349,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
   }
 
-  .usa-card--media-top &,
   .usa-card--media-top-overlay & {
     .usa-card__header {
       @include u-position(relative);
@@ -343,13 +381,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
     }
   }
-  .usa-card--media-top & {
-    .usa-card__header {
-      height: calc(18rem - 15px);
-      .usa-card__heading {
-        @include u-color(map-get($_config, title-color));
-      }
-    }
+}
+
+.usa-card--media-top,
+.usa-card--media-left {
+  .usa-card__container {
+    @include u-padding(0);
   }
 }
 
@@ -477,7 +514,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card__media {
-  @include u-margin-right(5);
   @include u-color(map-get($_config, icon-color));
   .icon {
     width: 80px;
@@ -495,54 +531,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   .usa-card--hover & {
     @include u-color(ink);
-  }
-}
-
-.usa-card--media-left, .usa-card--media-top {
-  .usa-card__container.type-image {
-    @include u-padding(0);
-    .usa-card__body {
-      @include u-padding-left(0);
-      @include u-padding-right(0);
-    }
-  }
-}
-
-.usa-card--media-top {
-  .usa-card__container.type-image {
-    .usa-card__header {
-      height: unset;
-      margin-top: 21rem;
-      .usa-card__heading {
-        @include u-color(map-get($_config, title-color));
-        position: unset;
-        white-space: normal;
-      }
-    }
-    .usa-card__media{
-      line-height: 0;
-      @include u-margin-right(1);
-      img{
-        object-fit: cover;
-        height: 20rem;
-        display: flex;
-        }
-      }
-    }
-    .usa-card__content{
-      @include u-padding(3);
-    }
-}
-
-.jcc-cards--1-cols {
-  .usa-card--media-left{
-    .usa-card__container.type-image {
-      .jcc-card--overlay-color-none {
-        aspect-ratio: var(--frame-h,16)/var(--frame-v,9);
-        overflow: hidden;
-        border-radius: initial;
-      }
-    }
   }
 }
 

@@ -13,7 +13,7 @@
  *     - url: card link/button url
  *     - text: card link/button text
  *     - type: card link/button type (n/a or external or file) [ext, file]
- *   - media: icon as embeded svg code
+ *   - media: icon as embedded svg code
  *     - src: image source file or URL for use as background image
  *     - alt: image alt description
  *   - bgcolor: overlay color [none or see overlay-bgcolors options in _card.scss theme scheme]
@@ -27,7 +27,6 @@
 {% set heading_tag = card.card_title_tag|default('h3') %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
-{% set type = card.type|default('icon') %}
 {% set icon_set = card.icon.set|default('fa') %}
 
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
@@ -46,7 +45,7 @@
 ]|merge(card.classes|default([''])) %}
 
 <{{ tag }} {{ attributes.addClass(classes) }}>
-  <div class="usa-card__container{% if card.media.src is not null and card.media.src is not empty %} type-image{% endif %}">
+  <div class="usa-card__container">
     <div class="usa-card__content">
       <header class="usa-card__header">
         {% if card.brow %}
@@ -57,17 +56,16 @@
               {{ card.brow }}
             {% endif %}
 
-          {% if card.icon %}
-            <div class="usa-card__icon">
-              {% include "@atoms/icon/icon.twig" with {
-                icon: {
-                  name: card.icon.name,
-                  set: icon_set
-                }
-              } %}
-            </div>
-          {% endif %}
-
+            {% if card.icon %}
+              <div class="usa-card__icon">
+                {% include "@atoms/icon/icon.twig" with {
+                  icon: {
+                    name: card.icon.name,
+                    set: icon_set
+                  }
+                } %}
+              </div>
+            {% endif %}
           </div>
         {% else %}
           {% if card.icon %}
