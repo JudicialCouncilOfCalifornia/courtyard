@@ -1,0 +1,25 @@
+cards:
+  heading:
+    title: "Cards"
+    lead: "<p>Ipsum velit bibendum class id sit justo, at fermentum suscipit rhoncus hac sociis blandit, ante tincidunt imperdiet himenaeos felis.</p>"
+  num_cols: "2-75-25"
+  items:
+    - style: "media-top"
+      title: "Posuere et ornare"
+      body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+      media:
+        src: "https://source.unsplash.com/random/350x250/?people"
+        alt: "green"
+      link:
+        url: "#"
+        text: "Luctus nunc quam"
+    - style: "media-top"
+      title: "Posuere et ornare"
+      body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+      media:
+        src: "https://source.unsplash.com/random/350x250/?face"
+        alt: "green"
+      link:
+        url: "#"
+        text: "Luctus nunc quam"
+

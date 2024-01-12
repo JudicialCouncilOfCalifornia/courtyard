@@ -9,7 +9,7 @@ cards:
       title: "Posuere et ornare"
       body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
       media:
-        src: "https://placeimg.com/350/250/nature"
+        src: "https://source.unsplash.com/random/350x250/?nature"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
         url: "#"
@@ -19,7 +19,7 @@ cards:
       title: "Posuere et ornare"
       body: "<p>In torquent consequat quam vulputate himenaeos semper ut aliquam at, iaculis ac platea laoreet ridiculus mattis sagittis volutpat hendrerit, vehicula orci dictum dictumst nunc scelerisque lacus auctor.</p>"
       media:
-        src: "https://placeimg.com/350/250/animals"
+        src: "https://source.unsplash.com/random/350x250/?animals"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
         url: "#"
@@ -30,7 +30,7 @@ cards:
       title: "Visual Hover"
       body: "<p>The selected overlay color will appear 90% opaque on hover. Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat.</p>"
       media:
-        src: "https://placeimg.com/350/250/people"
+        src: "https://source.unsplash.com/random/350x250/?people"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
         url: "#"
@@ -40,7 +40,7 @@ cards:
       title: "Posuere et ornare"
       body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
       media:
-        src: "https://placeimg.com/350/250/tech"
+        src: "https://source.unsplash.com/random/350x250/?tech"
         alt: "Cupidatat non proident, sunt in culpa qui"
       link:
         url: "#"
