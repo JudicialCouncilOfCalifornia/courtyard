@@ -1,25 +1,49 @@
 /*
-* Consistent image height for mixed card widths.
-*/
-const cards = Array.from(document.querySelectorAll('.jcc-cards--2-60-40-cols, .jcc-cards--2-75-25-cols'));
-
-cards.forEach(function (cardset) {
-  // If media containers exist.
-  let medias = Array.from(cardset.getElementsByClassName('usa-card__media'));
-
+ * Consistent image height for mixed card widths.
+ */
+function adjustMixedWidthMediaHeight(medias) {
   if (medias.length > 0) {
-    // Determine max height from smallest image.
+    // Reset media height to default.
+    medias.forEach(function (media) {
+      let image = media.getElementsByTagName("img");
+      media.removeAttribute("style");
+      image[0].removeAttribute("style");
+    });
+
+    // Determine max height from smallest media found.
     let maxHeight = medias[0].offsetHeight;
-    medias.forEach(function(media) {
+    medias.forEach(function (media) {
       maxHeight = Math.min(maxHeight, media.offsetHeight);
-    })
+    });
 
     // Adjust all container and image heights to max allowed.
     medias.forEach(function (media) {
-      let image = media.getElementsByTagName('img');
-      let imageHeight = maxHeight/16 + 'rem';
-      image[0].setAttribute('style', 'height: ' + imageHeight + ';');
-      media.style.height = imageHeight;
+      let mediaHeight = maxHeight / 16 + "rem";
+      let image = media.getElementsByTagName("img");
+      media.style.height = mediaHeight;
+      image[0].setAttribute("style", "height: " + mediaHeight + ";");
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Detect any mixed card widths.
+  const cards = Array.from(
+    document.querySelectorAll(".jcc-cards--2-60-40-cols, .jcc-cards--2-75-25-cols")
+  );
+
+  if (cards) {
+    cards.forEach(function (cardset) {
+      // If media exist.
+      let medias = Array.from(cardset.getElementsByClassName("usa-card__media"));
+
+      if (medias) {
+        adjustMixedWidthMediaHeight(medias);
+
+        window.onresize = function () {
+          adjustMixedWidthMediaHeight(medias);
+        };
+      }
     });
   }
 });

@@ -116,15 +116,15 @@
 
     {% if card.media %}
       <div class="usa-card__media">
-      {# check if an media item on the left exists as embeded into card.media rather than card.media.src
+        {# check if an media item on the left exists as embeded into card.media rather than card.media.src
          so that we do not break existing local theme usage #}
-      {% if not card.media.src %}
-        <span>{{ card.media }}</span>
-      {% else %}
         <div class="jcc-card--overlay-color-{{ card.bgcolor|default('none') }}">
-          <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+          {% if not card.media.src %}
+            {{ card.media }}
+          {% else %}
+            <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+          {% endif %}
         </div>
-      {% endif %}
       </div>
     {% endif %}
   </div>
