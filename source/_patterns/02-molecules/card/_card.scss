@@ -179,7 +179,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .usa-card--media-top &,
   .usa-card--media-left & {
     .usa-card__content {
-      @include u-padding(4);
+      @include u-padding(4, !important);
     }
 
     .usa-card__media {
@@ -213,10 +213,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     .usa-card__media {
-      @include u-maxw(full);
+      @include u-width(full);
 
       @include at-media(desktop) {
-        @include u-maxw(mobile-lg);
+        min-width: 30rem;
       }
 
       .jcc-card--overlay-color-none {
