@@ -7,28 +7,28 @@ cards:
     - style: "media-left"
       title: "Posuere et ornare"
       body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-      media: "<img src='https://source.unsplash.com/random/350x250'>"
+      media: "<svg class='icon icon-laptop margin-4 margin-right-0' width='35' height='35' role='img' aria-label='Laptop'><use xlink:href='#icon-fa-laptop'></use></svg>"
       link:
         url: "#"
         text: "Luctus nunc quam"
     - style: "media-left"
       title: "Posuere et ornare"
       body: "<p>Habitasse nec dui adipiscing massa magna mollis morbi netus malesuada, odio varius id eu integer felis tellus at feugiat, euismod potenti inceptos nibh mauris posuere scelerisque facilisi. This card has no link url.</p>"
-#      media: "<img src='https://source.unsplash.com/random/350x250'>"
+      media: "<svg class='icon icon-landmark margin-4 margin-right-0' width='35' height='35' role='img' aria-label='Landmark'><use xlink:href='#icon-fa-landmark'></use></svg>"
       link:
         url: null
         text: "Erat neque quisque vivamus"
     - style: "media-left"
       title: "Posuere et ornare"
       body: "<p>In torquent consequat quam vulputate himenaeos semper ut aliquam at, iaculis ac platea laoreet ridiculus mattis sagittis volutpat hendrerit, vehicula orci dictum dictumst nunc scelerisque lacus auctor.</p>"
-      media: "<img src='https://source.unsplash.com/random/350x250'>"
+      media: "<svg class='icon icon-comment-alt margin-4 margin-right-0' width='35' height='35' role='img' aria-label='Comment'><use xlink:href='#icon-fa-comment-alt'></use></svg>"
       link:
         url: "#"
         text: "Aliquet potenti"
     - style: "media-left"
       title: "Posuere et ornare"
       body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
-      media: "<img src='https://source.unsplash.com/random/350x250'>"
+      media: "<svg class='icon icon-money-bill-wave margin-4 margin-right-0' width='35' height='35' role='img' aria-label='Money bill'><use xlink:href='#icon-fa-money-bill-wave'></use></svg>"
       link:
         url: "#"
         text: "Luctus nunc quam"
