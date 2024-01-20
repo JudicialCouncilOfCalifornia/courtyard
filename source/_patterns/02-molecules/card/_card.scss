@@ -170,14 +170,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     }
 
     .usa-card__media {
-      span {
+      div {
         border-radius: map-get($_config, border-radius-img);
       }
     }
   }
 
   .usa-card--media-top &,
-  .usa-card--media-left & {
+  .usa-card--media-left.medium & {
     .usa-card__content {
       @include u-padding(4, !important);
     }
@@ -188,17 +188,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
       .jcc-card--overlay-color-none {
         flex-grow: 1;
-
-        img {
-          aspect-ratio: 16/9;
-        }
+        @include add-aspect("16x9");
       }
     }
   }
 
   .usa-card--media-top & {
     .usa-card__content {
-      @include u-padding-top(2);
+      @include u-padding-top(2, !important);
     }
   }
 
@@ -211,16 +208,14 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-flex-direction(row);
       @include u-padding-x(4);
     }
+  }
 
+  .usa-card--media-left.medium & {
     .usa-card__media {
       @include u-width(full);
 
       @include at-media(desktop) {
         min-width: 30rem;
-      }
-
-      .jcc-card--overlay-color-none {
-        @include u-display(flex);
       }
     }
   }
@@ -395,7 +390,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 .usa-card--media-top,
-.usa-card--media-left {
+.usa-card--media-left.medium {
   .usa-card__container {
     @include u-padding(0);
   }

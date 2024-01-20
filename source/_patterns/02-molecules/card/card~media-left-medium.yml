@@ -1,0 +1,10 @@
+card:
+  style: "media-left medium"
+  title: "Posuere et ornare"
+  body: "<p>Tellus justo ornare, ipsum pulvinar praesent viverra luctus sociosqu eu, dolor blandit cum vel tempus volutpat.</p>"
+  media:
+    src: "https://source.unsplash.com/random/350x250"
+    alt: "Image media test"
+  link:
+    url: "#"
+    text: "Luctus nunc quam"
