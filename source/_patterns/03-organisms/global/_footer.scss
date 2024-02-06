@@ -188,10 +188,10 @@ $_shoe: map-get($_config, shoe);
   @include u-font-weight(normal);
   @include u-text(uppercase);
   @include u-color(map-get($_secondary, default-background-text));
-  letter-spacing: 1.5px;
+  letter-spacing: 1.35px;
 
-  @include at-media(desktop-lg) {
-    @include u-font-size(heading, md);
+  @include at-media(desktop-lg) {   
+    font-size: 1.35rem;   
   }
 
   @include at-media(widescreen) {
