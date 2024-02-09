@@ -190,8 +190,8 @@ $_shoe: map-get($_config, shoe);
   @include u-color(map-get($_secondary, default-background-text));
   letter-spacing: 1.35px;
 
-  @include at-media(tablet) {    
-    font-size: 1.25rem;       
+  @include at-media(tablet-lg) {    
+    font-size: 1.2rem;     
   }
 
   @include at-media(desktop-lg) {   
