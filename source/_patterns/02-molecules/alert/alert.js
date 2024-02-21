@@ -1,32 +1,41 @@
 $(document).ready(function () {
   setTimeout(function () {
+    //Check for alerts that haven't been processed yet.
     var alerts = $(".usa-alert:not(.cookie-processed)");
 
     if (alerts) {
+      // Process each alert.
       $(alerts).each(function (idx, alert) {
         let messageContentObject = alert.getElementsByClassName("usa-alert__text"),
           cookieId;
         if (messageContentObject[0]) {
+          // Generate a unique Id for cthe cookie based on alert's content.
           cookieId = "patternlab-alert-hide-" + stringToHash(messageContentObject[0].innerText);
         }
 
         // Message loads hidden to avoid flash if cookie is found.
         if (!getCookie(cookieId)) {
+          // If the cookie doesn't exist , display the alert. 
           alert.classList.add("active");
         }
+
+        //Attach an onclick handler to the close button of the alert.
         var alert_close = alert.getElementsByClassName("usa-alert__close");
         if (alert_close[0]) {
           alert_close[0].onclick = function alertClose() {
             if (alert.classList.contains("active")) {
+              // Set a cookie to remember that alert has been dismissed.
               setCookie(cookieId, true, 7);
+              // Hide the alert.
               alert.classList.remove("active");
             }
           };
         }
+        // Mark the alert as procssed to avoid re-processing.
         alert.classList.add("cookie-processed");
       });
     }
-  }, 10);
+  }, 200);
 
   // Helper functions
   function setCookie(name, value, days) {
