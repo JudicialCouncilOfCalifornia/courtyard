@@ -58,8 +58,10 @@
 {# if in ckeditor #}
 {% if "media/body/preview" in video.path %}
  {% set added_class = "video-container-editor" %}
+ {% set style_value = "10px" %}
 {% else %}
  {% set added_class = "video-container embed-responsive" %}
+ {% set style_value = ratio * 100 ~ "%;" %}
 {% endif %}
 
 {% set classes = [
@@ -68,7 +70,7 @@
   added_class 
 ]|merge(video.classes|default([])) %}
 
-<div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">
+<div class="{{ classes|join(' ') }}" style= "padding-bottom: {{style_value}}"  >
   <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
     width="{{ video.width }}" height="{{ video.height }}"
     src="{{ url }}" data-src="{{ data_url }}"
