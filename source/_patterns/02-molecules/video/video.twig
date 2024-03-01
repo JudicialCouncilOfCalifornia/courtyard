@@ -49,23 +49,15 @@
 {% endif %}
 
 {# Video layout classes #}
-{% if video_classes %}
-  {% set video_classes= video.video_classes %}
-{% else %}
-  {% set video_classes= "" %}
-{% endif %}
+{% set video_classes =  video_classes ? video.video_classes : ""%}
 
-{# if in ckeditor #}
-{% if "media/body/preview" in video.path %}
- {% set added_class = "video-container-editor" %}
-{% else %}
- {% set added_class = "video-container embed-responsive" %}
-{% endif %}
+{# set classes accrdoing to page : in ckeditor or  display page #}
+{% set added_class =  "media/body/preview" in video.path ? "jcc-video__video-container-editor" : "jcc-video__video-container embed-responsive" %}
 
 {% set classes = [
   'jcc-video',
   video_classes,
-  added_class 
+  added_class
 ]|merge(video.classes|default([])) %}
 
 <div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">
