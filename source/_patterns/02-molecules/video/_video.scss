@@ -64,16 +64,17 @@
   @include u-height(0);
 }
 
-.jcc-video__video-container-editor{
+.jcc-video__video-container-editor {
   @include u-display(flex);
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  height:auto;
-  padding-bottom:10px !important;
+  height: auto;
+  padding-bottom: 10px !important;
+  padding-top: 10px;
 }
 
-.jcc-video__video-container-editor  > .embed-responsive-item{
+.jcc-video__video-container-editor  > .embed-responsive-item {
   position: relative;
   left: 0;
   right: 0;
@@ -83,10 +84,18 @@
   height: 100%;
 }
 
-.jcc-video__video-container > .embed-responsive-item{
+.jcc-video__video-container > .embed-responsive-item {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.jcc-video__video-container-editor  > .jcc-video__embed_items{
+  position:relative;
+}
+
+.jcc-video__video-container > button.media-library-item__edit{
+  margin-top:10px;
 }

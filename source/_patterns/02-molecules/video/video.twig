@@ -62,13 +62,14 @@
 ]|merge(video.classes|default([])) %}
 
 <div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">
-  <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
-    width="{{ video.width }}" height="{{ video.height }}"
-    src="{{ url }}" data-src="{{ data_url }}"
-    frameborder="0" allow="autoplay">
-  </iframe>
-
-  {% if video.cover %}
-    <button class="jcc-video__cover" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
-  {% endif %}
+  <div class = "jcc-video__embed_items">
+    <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
+      width="{{ video.width }}" height="{{ video.height }}"
+      src="{{ url }}" data-src="{{ data_url }}"
+      frameborder="0" allow="autoplay">
+    </iframe>
+    {% if video.cover %}
+      <button class="jcc-video__cover" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
+    {% endif %}
+  </div>
 </div>
