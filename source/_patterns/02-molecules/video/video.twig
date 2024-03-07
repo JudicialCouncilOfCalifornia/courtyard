@@ -41,6 +41,15 @@
 #}
 {% set ratio = video.height / video.width %}
 
+{# custom padding for different display width.#}
+{% set ratio_mapping = {
+  'video__container-25-percent' : '.144',
+  'video__container-50-percent' : '.285',
+  'video__container-75-percent' : '.425',
+  'video__container-100-percent' : ratio,
+  'video__default': ratio,
+ } %}
+
 {# Store the url so the video doesn't autoplay, #}
 {# and use javascript to start it when the cover is clicked #}
 {% if video.cover %}
@@ -69,7 +78,7 @@
       frameborder="0" allow="autoplay">
     </iframe>
     {% if video.cover %}
-      <button class="jcc-video__cover" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
+      <button class="jcc-video__cover" id= "{{ video.video_id}}" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
     {% endif %}
   </div>
 </div>
