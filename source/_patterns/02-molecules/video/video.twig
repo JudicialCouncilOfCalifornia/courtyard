@@ -33,13 +33,15 @@
 {% endif %}
 
 {#
+  TO-DO: Breaks presentation for both view and edit
   Common aspect ratios:
     - Cinemascope 21:9 (.428571429)
     - HD video 16:9 (.5625)
     - Classic film 3:2 (.666666667)
     - Standard monitor 4:3 (.75)
+
+  {% set ratio = video.height / video.width %}
 #}
-{% set ratio = video.height / video.width %}
 
 {# Store the url so the video doesn't autoplay, #}
 {# and use javascript to start it when the cover is clicked #}
@@ -51,21 +53,18 @@
 {# Video layout classes #}
 {% set video_classes =  video_classes ? video.video_classes : ""%}
 
-{# set classes accrdoing to page : in ckeditor or  display page #}
-{% set added_class =  "media/body/preview" in video.path ? "jcc-video__video-container-editor" : "jcc-video__video-container embed-responsive" %}
-
 {% set classes = [
   'jcc-video',
+  'embed-responsive',
   video_classes,
-  added_class
 ]|merge(video.classes|default([])) %}
 
-<div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">
+{#<div class="{{ classes|join(' ') }}" style="padding-bottom: {{ ratio * 100 }}%;">#}
+<div class="{{ classes|join(' ') }}">
   <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
     width="{{ video.width }}" height="{{ video.height }}"
     src="{{ url }}" data-src="{{ data_url }}"
-    frameborder="0" allow="autoplay">
-  </iframe>
+    frameborder="0" allow="autoplay"></iframe>
 
   {% if video.cover %}
     <button class="jcc-video__cover" style="background-image: url({{ video.cover }});">{{ "Play video"|t }}</button>
