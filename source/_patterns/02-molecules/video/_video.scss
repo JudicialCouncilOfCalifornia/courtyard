@@ -70,3 +70,13 @@ button.media-library-item__edit{
   margin-top:10px;
   margin-bottom:10px;
 }
+
+// To show video stacked up with image media.
+.jcc-video__video-container{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  float: left;
+  margin-top: 20px;
+}
