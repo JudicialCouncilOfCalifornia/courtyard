@@ -58,21 +58,21 @@
   }
 }
 
-// rules to ensure that multiple video edit items are 
+// rules to ensure that multiple video edit items are
 // not overlapping or hiding media button.
-.jcc-video__embed_items{
+.jcc-video__embed_items {
   position: relative;
-  padding-bottom:10px;
+  padding-bottom: 10px;
   height: 100%;
 }
 
-button.media-library-item__edit{
-  margin-top:10px;
-  margin-bottom:10px;
+button.media-library-item__edit {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 // To show video stacked up with image media.
-.jcc-video__video-container{
+.jcc-video__video-container {
   position: relative;
   display: block;
   width: 100%;

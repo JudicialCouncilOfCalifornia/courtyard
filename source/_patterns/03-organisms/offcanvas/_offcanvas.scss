@@ -110,7 +110,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       }
       width: 11rem;
 
-      a, iframe {
+      a,
+      iframe {
         @include u-width(full, !important);
       }
     }
