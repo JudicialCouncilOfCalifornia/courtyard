@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         // Message loads hidden to avoid flash if cookie is found.
         if (!getCookie(cookieId)) {
-          // If the cookie doesn't exist , display the alert. 
+          // If the cookie doesn't exist , display the alert.
           alert.classList.add("active");
         }
 

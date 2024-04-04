@@ -10,21 +10,21 @@
  * of language switching in the CMS should trigger language change in the bot.
  */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Custom events dispatch on open/close so elements outside of iframe
   // can react.
   const eventChatOpen = new CustomEvent("chat-open", {
-    bubbles: true
+    bubbles: true,
   });
   const eventChatClose = new CustomEvent("chat-close", {
-    bubbles: true
+    bubbles: true,
   });
 
   var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
   var eventer = window[eventMethod];
   var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
-  eventer(messageEvent, function(e) {
+  eventer(messageEvent, function (e) {
     if (e.data === "open" || e.message === "open") {
       // Allow event listener to react to open.
       window.dispatchEvent(eventChatOpen);

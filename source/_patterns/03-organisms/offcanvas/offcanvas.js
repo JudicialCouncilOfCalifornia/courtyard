@@ -1,7 +1,7 @@
 // Elements.
 const $offcanvas_trigger = $('[data-offcanvas^="trigger"]');
 const $offcanvas_trigger_show = $('[data-offcanvas="trigger"]');
-const offcanvas_triggers = '.jcc-offcanvas__trigger-container .block';
+const offcanvas_triggers = ".jcc-offcanvas__trigger-container .block";
 const $offcanvas_container = $('[data-offcanvas="container"]');
 const $offcanvas_dialog = $('[data-offcanvas="dialog"]');
 const $offcanvas_confirmation = $('[data-offcanvas="container"] .webform-confirmation');
@@ -42,7 +42,7 @@ const triggersAdjust = (state) => {
     $(triggerContainer).removeAttr("style");
     $(triggerContainer).removeClass("mobile");
   }
-}
+};
 
 // Allow user to dismiss completely if confirmation is visible.
 if (offcanvasConfirmed() == true) {
@@ -108,7 +108,7 @@ $(drupalWebForm + " .js-webform-webform-buttons .ui-button").focusout(function (
 // BEGIN: JCC Chat integration via chatbot.js molecule.
 window.addEventListener(
   "chat-open",
-  function(e) {
+  function (e) {
     $offcanvas_trigger_show.hide();
     $(triggerContainer).addClass("open");
   },
@@ -117,7 +117,7 @@ window.addEventListener(
 
 window.addEventListener(
   "chat-close",
-  function(e) {
+  function (e) {
     $(triggerContainer).removeClass("open");
     $offcanvas_trigger_show.show();
   },

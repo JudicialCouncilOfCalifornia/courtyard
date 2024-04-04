@@ -38,12 +38,15 @@ When making changes to components in the pattern library use sass variables refe
 When adding graphic assets to the project use the appropriate directory
 
 ### Utility Icons (might no longer apply)
+
 Simple one color icons are implemented and managed via icomoon.io. To add additional icons you can import _selection.json_ back to the IcoMoon app using the _Import Icons_ button (or via Main Menu → Manage Projects) to retrieve your icon selection. See `images/icomoon`
 
-### Graphics, Photos and Logos 
+### Graphics, Photos and Logos
+
 For more complex multicolor icons, branding elements or photography, add files to `images/graphics` `images/logos` or `images/photos`
 
 #### USWDS
+
 Icons bundled with the USWDS 2.0 are available at `/img`
 
 ## Composer Install Wizard
