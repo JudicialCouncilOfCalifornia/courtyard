@@ -13,8 +13,26 @@ social_links:
       title: "Facebook social media channel"
       url: "#"
     - icon:
+        name: "flickr"
+        title: "Flickr"
+        decorative: false
+      title: "Flickr social media channel"
+      url: "#"
+    - icon:
+        name: "instagram"
+        title: "Instagram"
+        decorative: false
+      title: "Instagram social media channel"
+      url: "#"
+    - icon:
         name: "twitter"
         title: "Twitter"
         decorative: false
       title: "Twitter social media channel"
+      url: "#"
+    - icon:
+        name: "youtube"
+        title: "Youtube"
+        decorative: false
+      title: "Youtube social media channel"
       url: "#"
