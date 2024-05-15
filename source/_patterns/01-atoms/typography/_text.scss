@@ -172,6 +172,12 @@ a.usa-link,
   @include u-margin-bottom(3);
 }
 
+html[dir="rtl"] .jcc-title {
+  &:after {
+    right: 0 !important;
+  }
+}
+
 .jcc-lead {
   @include responsive-lead();
   @include u-margin-bottom(2);
