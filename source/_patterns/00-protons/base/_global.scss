@@ -533,3 +533,69 @@ $aspect-width: 16;
   @include button-unstyled;
   @include u-text("blue-cool-60v");
 }
+
+// Custom ordered list elements
+@mixin custom-counter-rtl() {
+  counter-increment: step-counter;
+  position: relative;
+
+  &::before {
+    @include u-font(heading, 11);
+    padding: 0.625rem;
+    background-color: color("white");
+    border: 3px solid color("gold-30v");
+    border-radius: 50%;
+    color: color("primary");
+    content: counter(step-counter);
+    height: 3.5rem;
+    line-height: 1.25;
+    text-align: center;
+    width: 3.5rem;
+    display: block;
+    z-index: 2;
+
+    @include at-media(desktop) {
+      @include u-font(heading, 14);
+      position: absolute;
+      top: -7px;
+      right: 0;
+      bottom: 0;
+      right: -7px;
+      height: 4.6875rem;
+      width: 4.6875rem;
+    }
+  }
+}
+
+@mixin custom-counter-line-rtl() {
+  &:after {
+    content: "";
+    display: block;
+    width: 88%;
+    position: absolute;
+    z-index: 1;
+    height: 3px;
+    top: 1.625rem;
+    right: 3.5rem;
+    background-color: color(accent-warm-dark);
+
+    @include at-media(tablet) {
+      width: 92%;
+    }
+
+    @include at-media(desktop) {
+      top: 2.5rem;
+      right: 1.875rem;
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  &:last-of-type {
+    @include at-media(desktop) {
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}

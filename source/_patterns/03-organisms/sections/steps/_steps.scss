@@ -71,3 +71,35 @@
     }
   }
 }
+// Custom ordered list elements
+html[dir="rtl"] .jcc-steps {
+  @include unstyled-list();
+
+  .jcc-step__item {
+    @include custom-counter-rtl();
+    @include custom-counter-line-rtl();
+    @include add-list-reset;
+
+    @include at-media(desktop) {
+      padding-right: 6rem;
+    }
+  }
+}
+
+html[dir="rtl"] .jcc-steps-section {
+  @include section-wrapper;
+
+  .jcc-header-group {
+    @include u-padding-bottom(6);
+  }
+
+  .jcc-header-group__title {
+    @extend .jcc-title;
+  }
+  .jcc-header-group__title:after {
+    right: 0;
+  }
+  @include at-media(desktop) {
+    right: 0;
+  }
+}
