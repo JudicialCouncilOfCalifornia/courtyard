@@ -31,7 +31,7 @@
 
   .jcc-read-more__content {
     @include dark-background();
-    @include u-border-left("white");
+    @include u-border-right("white");
   }
 }
 
@@ -102,4 +102,12 @@ html[dir="rtl"] .jcc-steps-section {
   @include at-media(desktop) {
     right: 0;
   }
+}
+
+html[dir="rtl"] .jcc-read-more__content {
+  border-right-style: solid;
+  border-right-width: 0.25rem;
+  border-left-style: none;
+  @include u-border-left("white");
+  @include u-border-right("secondary");
 }
