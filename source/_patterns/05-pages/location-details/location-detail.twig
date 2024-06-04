@@ -1,0 +1,36 @@
+{#
+/**
+ * Interior Page Demo
+ *   Representing https://live-jcc-elcondado.pantheonsite.io/general-information/interpreter-language-services
+ */
+#}
+
+<div class="jcc-interior-example">
+  {% include '@organisms/global/header.twig' with {
+    header: location_detail_node.header
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: location_detail_node.alert_info
+  } %}
+
+  {% include '@molecules/alert/alert.twig' with {
+    alert: location_detail_node.alert_warning
+  } %}
+
+  {% include '@molecules/breadcrumb/breadcrumb.twig' with {
+    breadcrumb: location_detail_node.breadcrumb
+  } %}
+
+  {% include '@molecules/hero/hero.twig' with {
+    hero: location_detail_node.hero
+  } %}
+
+  {% include '@organisms/offcanvas/offcanvas.twig' with {
+    offcanvas: location_detail_node.offcanvas
+  } %}
+
+  {% include '@organisms/global/footer.twig' with {
+    footer: location_detail_node.footer
+  } %}
+</div>
