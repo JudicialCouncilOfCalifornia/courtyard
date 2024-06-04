@@ -1,0 +1,30 @@
+{#   
+/**
+* Available variables:
+* - additional_content:
+*    - type: 'hero-Location'
+*    - contact_details:
+*       - address: Address field
+*       - phone: Phone Number 
+*/
+#}
+
+ {% if additional_content.type == "hero-Location" and additional_content.contact_details%}
+    {% set  contact_details = additional_content.contact_details %}
+    <div class="jcc-location__location jcc-small">
+        {% if contact_details.address %}
+            {% set address = contact_details.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
+            {% set address_url = 'https://maps.google.com/?q=' ~ address %}
+                <div class="jcc-location__address jcc-location-hero-link">
+                    <a href="{{ address_url}}">{{ address }}</a>
+                </div>
+        {% endif %}
+        {% if contact_details.phone %}
+            {% set phone = contact_details.phone %}
+            {% set phone_url = "tel:" ~ contact_details.phone %}
+            <div class="jcc-location-hero-link">
+            <a href="{{ phone_url}}">{{ phone }}</a>
+            </div>
+        {% endif %}
+    </div>
+ {% endif %} 
