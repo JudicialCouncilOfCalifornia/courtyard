@@ -314,8 +314,22 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   padding: 0 8px;
 }
 
-
-
 .jcc-hero--layout-location-details{
   margin-bottom:2rem;
 }
+
+.jcc-location-hero-link {
+	color:  #5c5c5c;
+	line-height: 2.0;
+	a {
+		color:  #5c5c5c;
+		text-decoration: underline;
+    text-underline-offset: .25em ;
+	}
+	>a {
+		&::after {
+			display: none;
+		}
+	}
+}
+
