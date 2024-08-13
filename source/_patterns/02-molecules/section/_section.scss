@@ -31,6 +31,12 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+@media(max-width:30em){
+  .jcc-section.location_details{
+    padding-top:0px !important;
+  }
+}
+
 .jcc-section--background-alt {
   @include u-margin-top(map-get($_config, alt-margin-top));
   @include u-padding-bottom(8);

@@ -19,29 +19,56 @@
 {% endif %}
 
 {% set tag = section.tag|default('section') %}
-
 {% set classes = [
-  'jcc-section',
+  'jcc-section', section.name,
   'jcc-section--' ~ section.container|default('container'),
   section.layout ? 'jcc-section--layout-' ~ section.layout : '',
   'jcc-section--spacing-' ~ section.spacing|default('default'),
   'jcc-section--background-' ~ section.background|default('default'),
 ]|merge(section.classes|default([])) %}
-
 <{{ tag }} {{attributes.addClass(classes) }}>
   <div class="jcc-section__inner">
+      {% if section.heading and section.width %}
+        {% include "@molecules/section/section-heading.twig" with {
+            section_heading:{
+              title: section.heading,
+              width:section.width
+          } 
+        } %}
+    {% endif %}
     {% if section.heading %}
       {% include "@molecules/section/section-heading.twig" with {
         section_heading: section.heading
       } %}
     {% endif %}
+    {% if section.location %}
+      {% include "@molecules/location/location-detail.twig" with {
+        location: section.location
+      } %}
+    {% endif %}
+
+    {% if section.services %}
+      {%  include '@organisms/cards/cards.twig' with {
+        cards: section.services
+      } %}
+    {% endif %}
 
     {% if section.sub_sections %}
       {% set col_width = 12/section.num_cols|default(1) %}
+       {{ section.content |raw }}
       <div class="jcc-section__subsections">
         {% for sub_section in section.sub_sections %}
           {% if sub_section.width %}
             {% set col_width = sub_section.width %}
+          {% endif %}
+          {% if sub_section.tags %}
+            <div class="jcc-location__location-tags">
+                  <div class="jcc-location__tags-list">
+                    {% for tag in sub_section.tags %}
+                      {% include '@atoms/tag/tag.twig' with { tag: tag } %}
+                    {% endfor %}
+                  </div>
+            </div>
           {% endif %}
           <div class="jcc-section__subsection jcc-section__subsection--col-{{ col_width }}">{{ sub_section.content }}</div>
         {% endfor %}
