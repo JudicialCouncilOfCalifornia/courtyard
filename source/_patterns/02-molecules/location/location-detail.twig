@@ -1,0 +1,99 @@
+{#
+/**
+ * Available variables:
+ * - location - primary variable
+ *   - container: container to constrain content [container, no-container]
+ *   - id: identifier of this location
+ *   - title: the title of this location
+ *   - brow: small brow text
+ *   - address: the street address (use <br> to separate lines)
+ *   - map: a map image or map html
+ *     - image: full image
+ *     - html: geocoded map html
+ *   - directions_text: the directions button text
+ *   - phone: the phone number, as a link
+ *     - text: the display text
+ *     - url: the phone number using the 'tel:' protocol
+ *   - tags_label: the tags label
+ *   - tags: a list tags
+ *   - additional: additional html content
+ *   - hours_label: the hours label
+ *   - hours: a list of hours items
+ *     - label: the label
+ *     - details: hours data
+ *   - classes: array of classes to add to component
+ */
+#}
+
+{% set classes = ['jcc-location'] %}
+
+{% set location_id = location.id ? 'id=' ~ location.id : '' %}
+<div class="{{ classes|join(' ')|trim }}" {{ location_id }}>
+      {% if location.map.image %}
+        <div class="jcc-location__map jcc-location__map--image">{{ location.map.image }}</div>
+      {% elseif location.map.html %}
+        <div class="jcc-location__map jcc-location__map--html">{{ location.map.html }}</div>
+      {% endif %}
+      {% if location.address %}
+        <div class="jcc-location__directions">
+          {% set address = location.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
+          {% include '@atoms/button/button.twig' with {
+            button: {
+              style: 'primary',
+              is_external: true,
+              text: location.directions_text|default('Get Directions'),
+              url: 'https://maps.google.com/?q=' ~ address,
+            }
+          } only %}
+        </div>
+      {% endif %}
+
+      {% if direction %}
+        <div class="jcc-location__directions">
+            {{ "<b>" ~ direction.label ~ "</b>" ~ "<br />"}}
+            <div class= "jcc-button-{{direction.width}}">
+              {% set address = location.directons.address|replace({'<br>': ' ', '<br />': ' '})|trim %}
+              {% include '@atoms/button/button.twig' with {
+                button: {
+                  style: 'primary',
+                  is_external: true,
+                  text: location.directions_text|default('Get Directions'),
+                  url: 'https://maps.google.com/?q=' ~ address,
+                }
+              } only %}
+            </div>
+        </div>
+      {% endif %}
+
+      <div class="jcc-location__location-tags">
+        <div class="jcc-location__tags">
+          {% if location.tags %}
+            <div class="jcc-location__tags-list">
+              {% for tag in location.tags %}
+                {% include '@atoms/tag/tag.twig' with { tag: tag } %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if location.hours %}
+        <div class="jcc-location__hours">
+          <p class="jcc-location__hours-label">
+            {{ location.hours_label|default('Hours') }}:
+          </p>
+          <div class="jcc-location__hours-items" data-quantity="{{ location.hours|length }}">
+            {% for item in location.hours %}
+              <div class="jcc-location__hours-item">
+                <div class="jcc-location__hours-item-label">
+                  {{ item.label }}
+                </div>
+                <div class="jcc-location__hours-item-details">
+                  {{ item.details }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+</div>
