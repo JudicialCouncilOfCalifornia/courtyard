@@ -15,8 +15,7 @@
 
 {% set classes = [
   'jcc-body',
-]|merge(location_detail.classes|default([''])) %}
-
+]|merge(location_details.classes|default([''])) %}
 {% set content %}
   <div class="{{ classes|join(' ')|trim }}">
     <div class="jcc-body__content jcc-location-page">
@@ -30,7 +29,8 @@
             }
           } %}
         {% endif %}
-        {% if location_details.main.enteries %}
+        
+        {% if location_details.main.entries %}
         {% set sections = location_details.main %}
           {% include '@organisms/sections/sections.twig' with {
               sections: sections
@@ -38,14 +38,15 @@
         {% endif %}
       </div>
 
-      {% if location_details.aside.title or location_details.aside.text or location_details.aside.enteries %}
+      {% if location_details.aside.title or location_details.aside.text or location_details.aside.entries %}
         <aside class="jcc-body__aside">
           <div class="jcc-body__aside-bar jcc-location-page"></div>
           {% if location_details.aside.title %}
             <h4 class="jcc-body_detail__aside-title">{{ location_details.aside.title }}</h4>
           {% endif %}
 
-          {% if location_details.aside.enteries %}
+
+          {% if location_details.aside.entries %}
                 {% include "@organisms/sections/sections.twig" with {
                   sections: location_details.aside
               } %}

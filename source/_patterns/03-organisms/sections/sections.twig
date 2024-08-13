@@ -1,6 +1,4 @@
-
-{% for entry in sections.enteries %}
- 
+{% for entry in sections.entries %}
   {% if entry.type == 'section' %}
     {% include '@molecules/section/section.twig' with {
       section: entry
