@@ -52,10 +52,52 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+.jcc-hero--layout-location-details .jcc-hero__container{
+  padding-right:0rem !important;
+  padding-top:0rem !important;
+  padding-bottom:0rem !important;
+
+  @include at-media(tablet) {
+    @include u-padding-top(2);
+    @include u-padding-bottom(2);
+  }
+
+  @include at-media(tablet-lg) {
+    @include u-padding-top(0);
+    @include u-padding-bottom(0);
+    @include u-padding-right(0);
+  }
+
+  @include at-media(mobile) {
+    @include u-padding-top(2);
+    @include u-padding-bottom(2);
+    @include u-padding-right(2);
+  }
+}
+
 .jcc-hero__content {
   @include at-media(tablet-lg) {
     @include grid-row();
     @include grid-gap(6);
+  }
+}
+
+.jcc-hero--layout-location-details .jcc-hero__main {
+  @include u-position(relative);
+  @include at-media-max(tablet-lg) {
+    padding-top:2rem; 
+    padding-bottom:2rem;
+  }
+
+  @include at-media(tablet-lg) {
+    @include grid-col(8);
+    padding-top:2rem; 
+    padding-bottom:2rem; 
+  }
+
+  .icon {
+    @include u-position(relative);
+    @include u-top(1);
   }
 }
 
@@ -64,6 +106,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
   @include at-media(tablet-lg) {
     @include grid-col(8);
+
+    .jcc-hero--layout-full-main & {
+      @include grid-col(12);
+    }
 
     .jcc-hero--layout-full-main & {
       @include grid-col(12);
@@ -143,6 +189,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
+
 .jcc-hero__aside {
   @include at-media-max(tablet-lg) {
     @include u-margin-top(2);
@@ -154,6 +201,31 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 
   .jcc-hero--layout-full-main & {
+    @include u-display(none);
+  }
+}
+.jcc-hero--layout-location-details .jcc-hero__aside {
+  padding-right: 0 ;
+  padding-top: 0;
+  img{
+    object-fit:cover;
+    object-position:center;
+    height:100%;
+  }
+
+  @include at-media-max(tablet-lg) {
+    @include u-margin-top(2);
+    @include u-padding-top(0);
+    @include u-padding-right(0);
+    @include u-display(none);
+  }
+
+  @include at-media(tablet-lg) {
+    @include grid-col(4);
+    @include u-padding-right(0);
+  }
+
+  @include at-media-max(mobile-lg) {
     @include u-display(none);
   }
 }
@@ -241,3 +313,23 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   background: rgba(45, 45, 45, 0.7);
   padding: 0 8px;
 }
+
+.jcc-hero--layout-location-details{
+  margin-bottom:2rem;
+}
+
+.jcc-location-hero-link {
+	color:  #5c5c5c;
+	line-height: 2.0;
+	a {
+		color:  #5c5c5c;
+		text-decoration: underline;
+    text-underline-offset: .25em ;
+	}
+	>a {
+		&::after {
+			display: none;
+		}
+	}
+}
+

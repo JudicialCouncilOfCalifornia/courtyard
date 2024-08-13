@@ -63,7 +63,8 @@
         {% endif %}
       </div>
 
-      {% if hero.aside.title or hero.aside.text or hero.aside.link.url %}
+
+      {% if hero.aside.title or hero.aside.text or hero.aside.link.url or hero.aside.media %}
         <aside class="jcc-hero__aside">
           {% if hero.aside.title %}
             <h4 class="jcc-hero__aside-title">{{ hero.aside.title }}</h4>
@@ -78,6 +79,11 @@
               <a {{ hero.aside.link.is_external ? 'class="ext"' -}} href="{{ hero.aside.link.url }}">{{ hero.aside.link.text }}</a>
             </div>
           {% endif %}
+
+          {% if hero.aside.media %}
+              <img src="{{ hero.aside.media.src }}" alt="{{ hero.aside.media.alt }}">
+          {% endif %}
+
         </aside>
       {% endif %}
     </div>

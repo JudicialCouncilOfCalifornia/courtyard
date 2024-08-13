@@ -14,44 +14,28 @@ $_config_schemes: (
 
 $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
-.jcc-body__content {
+.jcc-body__content.jcc-location-page{
+  @include at-media(desktop) {
+    @include u-display(none);
+   
+  }
+}
+
+
+.jcc-location_detail__content {
   @include at-media(desktop) {
     @include grid-row();
     @include grid-gap(4);
   }
- 
 }
 
-@media(max-width:30em){
-  .jcc-body__content.jcc-location-page{
-    display:flex;
-    flex-direction: column-reverse;
-  }
-  .jcc-body__content.jcc-location-page .jcc-location__map{
-    display:none;
-  }
-  .jcc-section-heading__title--partial::before,.jcc-body__aside-bar::before{
-    height:0px !important;
-  }
-  .jcc-section-heading__title--partial::after{
-    height:0px !important;
-  }
-  aside.jcc-body__aside.jcc-location-page .jcc-body__aside-bar {
-    display:none;
-  }
-  .jcc-location-page .jcc-body__main + .jcc-body__aside {
-    margin-top: 0rem !important;
-}
-}
-
-
-.jcc-body__main {
+.jcc-location_detail__main {
   @include at-media(desktop) {
     @include grid-col(8);
   }
 
   .jcc-section-heading__lead,
-  .jcc-body__main-text {
+  .jcc-location_detail__main-text {
     @include u-measure(6);
     @include u-maxw(full);
   }
@@ -73,7 +57,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-body__main-text {
+.jcc-location_detail__main-text {
   @include u-padding-bottom(1);
 
   .jcc-section-heading__title {
@@ -82,47 +66,47 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   }
 }
 
-.jcc-body__aside {
+.jcc-location_detail__aside {
   @include at-media(desktop) {
     @include grid-col(4);
   }
 
-  .jcc-body__main + & {
+  .jcc-location_detail__main + & {
     @include at-media-max(desktop) {
       @include u-margin-top(10);
     }
   }
 }
 
-.jcc-body__aside-bar {
+.jcc-location_detail__aside-bar {
   @include u-display($dash-color: map-get($_config, aside-dash-visibility));
   @include add-dash($dash-position: "above-center", $dash-width: 100%);
   @include u-padding-top(4);
   @include u-text-align(left);
 }
 
-.jcc-body__aside-title {
+.jcc-location_detail__aside-title {
   @include u-margin-top(map-get($_config, aside-title-margin-top));
   @include u-color(map-get($_config, aside-title));
-  @include u-font-size(body, sm);
+  @include u-font-size(location_detail, sm);
   @include u-text(uppercase);
   letter-spacing: 3.84615px;
 }
 
-.jcc-body__aside-text {
+.jcc-location_detail__aside-text {
   @include u-color(base-dark);
 
   p {
-    @include typeset(body, xs, 6);
+    @include typeset(location_detail, xs, 6);
     @include at-media(desktop) {
-      @include u-font-size(body, sm);
+      @include u-font-size(location_detail, sm);
     }
     @include u-margin-bottom(3);
     @include u-margin-top(2);
   }
 
   h4 {
-    @extend .jcc-body__aside-title;
+    @extend .jcc-location_detail__aside-title;
     @include u-margin-bottom(1);
     @include u-margin-top(3);
   }
