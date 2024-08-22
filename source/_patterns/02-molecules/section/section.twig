@@ -46,16 +46,16 @@
         location: section.location
       } %}
     {% endif %}
-
+    {% if section.content %}
+      {{ section.content }}
+    {% endif %}
     {% if section.services %}
       {%  include '@organisms/cards/cards.twig' with {
         cards: section.services
       } %}
     {% endif %}
-
     {% if section.sub_sections %}
       {% set col_width = 12/section.num_cols|default(1) %}
-       {{ section.content |raw }}
       <div class="jcc-section__subsections">
         {% for sub_section in section.sub_sections %}
           {% if sub_section.width %}
@@ -73,8 +73,6 @@
           <div class="jcc-section__subsection jcc-section__subsection--col-{{ col_width }}">{{ sub_section.content }}</div>
         {% endfor %}
       </div>
-    {% else %}
-      {{ section.content }}
     {% endif %}
   </div>
 </{{ tag }}>
