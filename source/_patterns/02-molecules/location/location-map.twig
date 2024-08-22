@@ -48,7 +48,7 @@
             {% for item in location_map.locations %}
               <li class="jcc-location-map__locations-item">
                 <h3 class="jcc-location-map__location-title">
-                  {{ item.title }}
+                  <a href="{{ item.title_url }}"> {{ item.title }}</a>
                 </h3>
                 <div class="jcc-location-map__location-address">
                   {{ item.address }}
