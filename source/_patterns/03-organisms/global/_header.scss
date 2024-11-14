@@ -799,6 +799,7 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__body {
+    @include u-maxh(9);
     @include u-margin-x(auto);
     @include u-padding-x(2);
     @include at-media(desktop) {
