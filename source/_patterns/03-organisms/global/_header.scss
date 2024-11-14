@@ -778,7 +778,7 @@ $_hat: map-get($_config, hat);
 
         svg {
           height: 1.7rem;
-          @include at-media(mobile-lg) {
+          @include at-media(tablet) {
             @include u-height(6);
           }
           @include u-width(auto);
@@ -799,14 +799,14 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__body {
-    @include u-position(absolute);
-    @include u-left(0);
-    @include u-right(0);
-    @include u-maxh(9);
     @include u-margin-x(auto);
-    @include u-padding-x(4);
+    @include u-padding-x(2);
     @include at-media(desktop) {
       @include u-width(widescreen);
+      @include u-position(absolute);
+      @include u-left(0);
+      @include u-right(0);
+      @include u-padding-x(4);
     }
 
     iframe {
