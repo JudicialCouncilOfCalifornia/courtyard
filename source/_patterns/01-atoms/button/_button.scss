@@ -194,7 +194,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   svg.mailto,
   span[class^="fa"],
   span[class*="fa"] {
-    display: none;
+    position: absolute !important;
+    left: -999em !important;
+    right: auto;
+    transform: unset !important;
   }
 }
 
@@ -224,7 +227,10 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   svg.mailto,
   span[class^="fa"],
   span[class*="fa"] {
-    display: none;
+    position: absolute !important;
+    left: -999em !important;
+    right: auto;
+    transform: unset !important;
   }
 }
 
@@ -410,7 +416,10 @@ a.ext {
   svg.ext,
   span[class^="fa"],
   span[class*="fa"] {
-    display: none;
+    position: absolute !important;
+    left: -999em !important;
+    right: auto;
+    transform: unset !important;
   }
 }
 
@@ -521,7 +530,10 @@ a.jcc-button--cta-link {
   svg.mailto,
   span[class^="fa"],
   span[class*="fa"] {
-    display: none;
+    position: absolute !important;
+    left: -999em !important;
+    right: auto;
+    transform: unset !important;
   }
 }
 
