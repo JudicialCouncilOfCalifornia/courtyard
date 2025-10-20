@@ -92,4 +92,4 @@ Icons bundled with the USWDS 2.0 are available at `/img`
 
 ## Deployment
 
-You can view a public deployment of the pattern library at http://patternlab.courts.ca.gov/1.x/public/. This is hosted on an Exygy Netlify account. A GitHub artifact project auto-deploys the master branch. Each time a commit is pushed to the master branch, GitHub will run the `npm run build` command to build the pattern library, and it will then deploy that new build from the `public` directory.
+You can view a public deployment of the pattern library at http://patternlab.courts.ca.gov/1.x/public/. A GitHub artifact project auto-deploys the master branch. Each time a commit is pushed to the master branch, GitHub will run the `npm run build` command to build the pattern library, and it will then deploy that new build from the `public` directory.
