@@ -1,6 +1,6 @@
 {
   "name": "courtyard",
-  "repository": "https://github.com/Exygy/courtyard.git",
+  "repository": "https://github.com/JudicialCouncilOfCalifornia/courtyard",
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
