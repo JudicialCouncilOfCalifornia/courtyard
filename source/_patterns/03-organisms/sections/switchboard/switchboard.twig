@@ -18,19 +18,40 @@
             } %}
         {% endif %}
         <div class="jcc-switchboard__columns">
-            <div class="jcc-switchboard__column-left">
+            <div class="jcc-switchboard__column-left" style="position:relative; z-index:2;">
                 {% if switchboard.headergroup %}
                     {% include '@molecules/text/header-group/header-group.twig' with {
                         headergroup: switchboard.headergroup
                     } %}
                 {% endif %}
                 {% if switchboard.body %}
-                    <div class="jcc-switchboard__body">
+                    <div class="jcc-switchboard__body"
+                         style="display:block !important; position:relative; z-index:2; overflow:visible;">
                         {{ switchboard.body }}
                     </div>
+                    <script>
+                        (function() {
+                          try {
+                            var bodyEl = document.currentScript && document.currentScript.previousElementSibling;
+                            if (!bodyEl || !bodyEl.classList.contains('jcc-switchboard__body')) {
+                              bodyEl = document.querySelector('.jcc-switchboard__body');
+                            }
+                            if (!bodyEl) return;
+                            var img = bodyEl.querySelector('img');
+                            if (img) {
+                              img.loading = 'eager';
+                              img.style.maxWidth = '100%';
+                              img.style.height = 'auto';
+                              img.style.display = 'block';
+                              img.style.position = 'relative';
+                              img.style.zIndex = '2';
+                            }
+                          } catch (e) {}
+                        })();
+                    </script>
                 {% endif %}
             </div>
-            <div class="jcc-switchboard__column-right">
+            <div class="jcc-switchboard__column-right" style="position:relative; z-index:1;">
                 <div class="jcc-switchboard__content">
                     {% if switchboard.items.primary %}
                         <ul class="jcc-switchboard__tiles">
