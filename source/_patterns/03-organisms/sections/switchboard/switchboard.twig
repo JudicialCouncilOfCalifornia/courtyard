@@ -40,14 +40,16 @@
                             var img = bodyEl.querySelector('img');
                             if (img) {
                               img.loading = 'eager';
-                              img.style.maxWidth = '120px'; 
-                              img.style.height = 'auto'; 
+                              img.style.maxHeight = '115px';
+                              img.style.width = 'auto';
+                              img.style.height = '100%';
                               img.style.display = 'block';
                               img.style.position = 'relative';
                               img.style.zIndex = '2';
-                              img.style.margin = '0';
-                              img.style.float = 'left'; 
+                              img.style.margin = '5';
+                              img.style.float = 'left';
                               img.style.marginTop = "12px";
+                              img.style.marginBottom = "8px";
                             }
                           } catch (e) {}
                         })();
