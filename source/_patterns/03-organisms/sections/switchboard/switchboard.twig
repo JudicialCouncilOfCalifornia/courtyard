@@ -1,109 +1,44 @@
 {% set classes = [
     'jcc-switchboard',
     'jcc-switchboard--' ~ switchboard.background_variant|default('has-background-color--transparent'),
-    'jcc-switchboard--' ~ switchboard.layout_variant|default('default'),
 ]|merge(switchboard.classes|default([''])) %}
 
-{% if (switchboard.background_variant == 'has-background-color--dark--primary') or (switchboard.background_variant == 'has-background-color--dark')%}
-    {% set button_color = 'inverted' %}
-{% else %}
-    {% set button_color = 'primary' %}
-{% endif %}
-
-<div class="{{ classes|join(' ')|trim }}" {% if switchboard.id %} id="{{ switchboard.id }}" {% endif %}>
+<div class="{{ classes|join(' ')|trim }}"{% if switchboard.id %} id="{{ switchboard.id }}"{% endif %}>
     <div class="jcc-switchboard__container">
-        {% if switchboard.breadcrumbs %}
-            {% include '@molecules/navigation/breadcrumbs/breadcrumbs.twig' with {
-                breadcrumb: switchboard.breadcrumbs
-            } %}
-        {% endif %}
-        <div class="jcc-switchboard__columns">
-            <div class="jcc-switchboard__column-left jcc-switchboard__tile_position_z2">
-                {% if switchboard.headergroup %}
-                    {% include '@molecules/text/header-group/header-group.twig' with {
-                        headergroup: switchboard.headergroup
-                    } %}
-                {% endif %}
-                {% if switchboard.body %}
-                    <div class="jcc-switchboard__body jcc-switchboard__body_extra">
-                        {{ switchboard.body }}
-                    </div>
+        {% include '@molecules/text/header-group/header-group.twig' with {
+            headergroup: switchboard.headergroup
+        } %}
 
-                    <script>
-                        (function() {
-                          try {
-                            var bodyEl = document.currentScript && document.currentScript.previousElementSibling;
-                            if (!bodyEl || !bodyEl.classList.contains('jcc-switchboard__body')) {
-                              bodyEl = document.querySelector('.jcc-switchboard__body');
-                            }
-                            if (!bodyEl) return;
-                            var img = bodyEl.querySelector('img');
-                            if (img) {
-                              img.loading = 'eager';
-                              img.style.maxHeight = '115px';
-                              img.style.width = 'auto';
-                              img.style.height = '100%';
-                              img.style.display = 'block';
-                              img.style.position = 'relative';
-                              img.style.zIndex = '2';
-                              img.style.margin = '5';
-                              img.style.float = 'left';
-                              img.style.marginTop = "12px";
-                              img.style.marginBottom = "8px";
-                            }
-                          } catch (e) {}
-                        })();
-                    </script>
-                {% endif %}
-            </div>
-            <div class="jcc-switchboard__column-right jcc-switchboard__tile_position_z1">
-                <div class="jcc-switchboard__content">
-                    {% if switchboard.items.primary %}
-                        <ul class="jcc-switchboard__tiles">
-                            {% for tile in switchboard.items.primary %}
-                                {% if tile.title %}
-                                    <li class="jcc-switchboard__tile">
-                                        {% include '@molecules/blocks/tile/tile.twig' with {
-                                            tile : tile
-                                        } %}
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
+        <div class="jcc-switchboard__content">
 
-                    {% if switchboard.items.secondary %}
-                        <ul class="jcc-switchboard__tiles jcc-switchboard__tiles-secondary">
-                            {% for tile in switchboard.items.secondary %}
-                                {% if tile.title %}
-                                    <li class="jcc-switchboard__tile">
-                                        {% include '@molecules/blocks/tile/tile.twig' with {
-                                            tile : tile
-                                        } %}
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        {% if switchboard.footer %}
-            <div class="jcc-switchboard__footer">
-                <div class="jcc-switchboard__footer-label">{{ switchboard.footer.label }}</div>
-                <div class="jcc-switchboard__footer-buttons">
-                    {% for button in switchboard.footer.buttons %}
-                        {% include '@atoms/buttons/index-button.twig' with {
-                            index_button: {
-                                style: button_color|default('primary'),
-                                text: button.title,
-                                url: button.url,
-                                icon: icon
-                            }
-                        } %}
+            {# Hide images on small screens #}
+            <style>
+                @media (max-width: 768px) {
+                    .jcc-switchboard__content img {
+                        display: none !important;
+                    }
+                }
+            </style>
+
+            {% if switchboard.items.primary %}
+                <ul class="jcc-switchboard__tiles">
+                    {% for tile in switchboard.items.primary %}
+                        <li class="jcc-switchboard__tile">
+                            {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+                        </li>
                     {% endfor %}
-                </div>
-            </div>
-        {% endif %}
+                </ul>
+            {% endif %}
+
+            {% if switchboard.items.secondary %}
+                <ul class="jcc-switchboard__tiles jcc-switchboard__tiles-secondary">
+                    {% for tile in switchboard.items.secondary %}
+                        <li class="jcc-switchboard__tile">
+                            {% include '@molecules/blocks/tile/tile.twig' with { tile: tile } %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
     </div>
 </div>

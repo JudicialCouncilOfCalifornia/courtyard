@@ -157,20 +157,8 @@
   @include add-list-reset;
 }
 
-.jcc-switchboard__tile_position_z1 {
-  position:relative;
-  z-index:1;
-}
-
-.jcc-switchboard__tile_position_z2 {
-  position:relative;
-  z-index:2;
-}
-
-.jcc-switchboard__body_extra {
-  display:block !important;
-  position:relative;
-  z-index:2;
-  overflow:visible;
-  text-align:left;
+@media (max-width: 768px) {
+  .hide-on-mobile img {
+    display: none !important;
+  }
 }
