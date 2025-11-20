@@ -78,3 +78,9 @@ a {
 strong {
   @include u-font-weight(heavy);
 }
+
+a.mailto svg.mailto,
+a.mailto span[class^="fa"],
+a.mailto span[class*="fa"] {
+  display: none;
+}
