@@ -302,3 +302,10 @@
     }
   }
 }
+
+//Fix for broken icon
+a.mailto svg.mailto,
+a.mailto span[class^="fa"],
+a.mailto span[class*="fa"] {
+  display: none;
+}
