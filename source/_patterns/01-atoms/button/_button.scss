@@ -423,14 +423,6 @@ a.ext {
   }
 }
 
-a.mailto {
-  svg.mailto,
-  span[class^="fa"],
-  span[class*="fa"] {
-    display: none;
-  }
-}
-
 // This is a plain-text link
 .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
