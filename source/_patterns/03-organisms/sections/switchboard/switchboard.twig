@@ -81,3 +81,12 @@
         {% endif %}
     </div>
 </div>
+
+{# SRL-859 inline CSS to hide the body if viewable window is narrow #}
+<style>
+    @media (max-width: 800px) {
+        .jcc-switchboard .jcc-switchboard__body {
+            display: none !important;
+        }
+    }
+</style>
