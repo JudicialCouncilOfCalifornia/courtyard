@@ -189,16 +189,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     mask-repeat: no-repeat;
     @include u-bg("white");
   }
-
-  svg.ext,
-  svg.mailto,
-  span[class^="fa"],
-  span[class*="fa"] {
-    position: absolute !important;
-    left: -999em !important;
-    right: auto;
-    transform: unset !important;
-  }
 }
 
 %jcc-inline-icon-link {
@@ -221,16 +211,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     content: "";
     mask-size: contain;
     mask-repeat: no-repeat;
-  }
-
-  svg.ext,
-  svg.mailto,
-  span[class^="fa"],
-  span[class*="fa"] {
-    position: absolute !important;
-    left: -999em !important;
-    right: auto;
-    transform: unset !important;
   }
 }
 
@@ -412,25 +392,6 @@ a[data-entity-type="media"] {
   }
 }
 
-a.ext {
-  svg.ext,
-  span[class^="fa"],
-  span[class*="fa"] {
-    position: absolute !important;
-    left: -999em !important;
-    right: auto;
-    transform: unset !important;
-  }
-}
-
-a.mailto {
-  svg.mailto,
-  span[class^="fa"],
-  span[class*="fa"] {
-    display: none;
-  }
-}
-
 // This is a plain-text link
 .usa-prose a.ext:not(.jcc-button--primary):not(.jcc-button--cta-link),
 .jcc-button--external-link {
@@ -524,16 +485,6 @@ a.jcc-button--cta-link {
       @include u-top(-1px);
       mask-image: url("../icons/fa/file.svg");
     }
-  }
-
-  svg.ext,
-  svg.mailto,
-  span[class^="fa"],
-  span[class*="fa"] {
-    position: absolute !important;
-    left: -999em !important;
-    right: auto;
-    transform: unset !important;
   }
 }
 
