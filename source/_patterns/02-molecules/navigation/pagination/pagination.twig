@@ -53,7 +53,9 @@
     {% if pagination.ellipses_next %}
       <li class="jcc-pagination__ellipsis pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
       <li class="jcc-pagination__total-pages pager__item pager__item--ellipsis">
-        <a href="{{ pagination.last.href }}" {{ pagination.last.attributes|without('href', 'title') }}>
+        {% set title_prefix = 'There are '|t %}
+        {% set title_suffix = ' pages of results. Go to last page now?'|t %}
+        <a href="{{ pagination.last.href }}" aria-label="{{ title_prefix }} {{- total_pages -}} {{ title_suffix }}" {{ pagination.last.attributes|without('href', 'title') }}>
           {{- total_pages -}}
         </a>
       </li>
