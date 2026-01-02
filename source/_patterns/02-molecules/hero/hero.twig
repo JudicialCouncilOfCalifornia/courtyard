@@ -75,8 +75,11 @@
           {% endif %}
 
           {% if hero.aside.link.url %}
+            {% if hero.aside.link.aria_label %}
+              {% set attributes = attributes.setAttribute('aria-label', hero.aside.link.aria_label) %}
+            {% endif %}
             <div class="jcc-hero__aside-link">
-              <a {{ hero.aside.link.is_external ? 'class="ext"' -}} href="{{ hero.aside.link.url }}">{{ hero.aside.link.text }}</a>
+              <a {{ hero.aside.link.is_external ? 'class="ext"' -}} href="{{ hero.aside.link.url }}" {{ attributes }}>{{ hero.aside.link.text }}</a>
             </div>
           {% endif %}
 

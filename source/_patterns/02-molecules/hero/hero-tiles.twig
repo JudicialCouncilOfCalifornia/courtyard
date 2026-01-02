@@ -52,7 +52,10 @@
     <ul class="jcc-hero-tiles__tiles">
       {% for tile in hero_tiles.tiles %}
         <li class="jcc-hero-tiles__tile" data-index="{{ loop.index }}">
-          <a href="{{ tile.url }}">
+          {% if tile.aria_label %}
+            {% set attributes = attributes.setAttribute('aria-label', tile.aria_label) %}
+          {% endif %}
+          <a href="{{ tile.url }}" {{ attributes }}>
             <h2 class="jcc-hero-tiles__tile-title">{{ tile.text }}</h2>
             <span class="jcc-hero-tiles__tile-icon">
               {% include "@atoms/icon/icon.twig" with {
