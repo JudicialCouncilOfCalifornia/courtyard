@@ -43,6 +43,7 @@
               is_external: true,
               text: location.directions_text|default('Get Directions'),
               url: 'https://maps.google.com/?q=' ~ address,
+              aria_label: location.directions_action_aria_label,
             }
           } only %}
         </div>
@@ -59,6 +60,7 @@
                   is_external: true,
                   text: location.directions_text|default('Get Directions'),
                   url: 'https://maps.google.com/?q=' ~ address,
+                  aria_label: location.directions_action_aria_label,
                 }
               } only %}
             </div>
