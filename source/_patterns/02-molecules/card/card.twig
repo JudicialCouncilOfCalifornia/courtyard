@@ -39,12 +39,17 @@
   {% endif %}
 {% endif %}
 
+{% if card.link.aria_label %}
+  {% set attributes = attributes.setAttribute('aria-label', card.link.aria_label) %}
+{% endif %}
+
 {% set classes = [
   'usa-card',
   'usa-card--' ~ style,
 ]|merge(card.classes|default([''])) %}
+{% set attributes = attributes.addClass(classes) %}
 
-<{{ tag }} {{ attributes.addClass(classes) }}>
+<{{ tag }} {{ attributes }}>
   <div class="usa-card__container">
     <div class="usa-card__content">
       <header class="usa-card__header">
@@ -107,9 +112,6 @@
 
       {% if ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
         {% if card.link.text %}
-          {% if card.link.aria_label %}
-            {% set attributes = attributes.setAttribute('aria-label', card.link.aria_label) %}
-          {% endif %}
           <div class="usa-card__footer">
             <a class="{{ card.link.type }}" href="{{ card.link.url }}" {{ attributes }}>{{ card.link.text }}</a>
           </div>
