@@ -35,8 +35,13 @@
   </ul>
 
   {% if cards.link.url %}
+    {% if cards.link.aria_label %}
+      {% set attributes %}
+        aria-label="{{ cards.link.aria_label }}"
+      {% endset %}
+    {% endif %}
     <div class="jcc-cards__link{{ cards.link.align == 'left' ? ' jcc-cards__link-left' : '' }}">
-      <a href="{{ cards.link.url }}">{{ cards.link.text }}</a>
+      <a href="{{ cards.link.url }}" {{ attributes }}>{{ cards.link.text }}</a>
     </div>
   {% endif %}
 {% endmacro %}
