@@ -21,7 +21,7 @@
 
 <div class="{{ card_classes|join(' ')|trim }}">
   {% if card.action.style == 'card' %}
-    <a href="{{ card.action.url }}" class="jcc-card--action-card" aria_label="{{aria_label|spaceless}}">
+    <a href="{{ card.action.url }}" class="jcc-card--action-card" aria-label="{{aria_label|spaceless}}">
   {% endif %}
   <div class="usa-card__container {{ container_classes|join(' ')|trim }}">
     {% if card.title %}
@@ -31,7 +31,7 @@
         {% endif %}
         <{{ tag }} class="usa-card__heading {{ card.heading_style ? 'jcc-card__heading--' ~ card.heading_style : '' }}">
           {% if card.action.style == 'title' or card.action.style == 'media' %}
-            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
+            <a href="{{ card.action.url }}" aria-label="{{aria_label|spaceless}}">
           {% endif %}
             {{ card.title }}
           {% if card.action.style == 'title' or card.action.style == 'media' %}
@@ -44,7 +44,7 @@
       <div class="usa-card__media">
         <div class="usa-card__img {{ card.media_style ? 'jcc-image--media-' ~ card.media_style : '' }}">
           {% if card.action.style == 'media' %}
-            <a href="{{ card.action.url }}" aria_label="{{aria_label|spaceless}}">
+            <a href="{{ card.action.url }}" aria-label="{{aria_label|spaceless}}">
           {% endif %}
             {% include '@atoms/image/image.twig' with { image: card.media } %}
           {% if card.action.style == 'media' %}

@@ -5,6 +5,14 @@
   'usa-button--' ~ link_button.style|default('primary'),
 ]|merge(classes|default([''])) %}
 
-<a{{ attributes.addClass(classes) }} href="{{ link_button.url }}">
+{% set link_attributes %}
+  {{ attributes.addClass(classes) }}
+  href="{{ link_button.url }}"
+  {% if link_button.aria_label %}
+    aria-label="{{ link_button.aria_label }}"
+  {% endif %}
+{% endset %}
+
+<a {{ link_attributes }}>
   {{- link_button.text -}}
 </a>
