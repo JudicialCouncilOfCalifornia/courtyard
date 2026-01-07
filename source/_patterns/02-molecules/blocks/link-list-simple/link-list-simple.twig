@@ -25,7 +25,14 @@
           </span>
         {% endif %}
 
-        <a href="{{ item.url }}">{{ item.url_title }}</a>
+        {% set link_attributes %}
+          href="{{ item.url }}"
+          {% if item.aria_label %}
+            aria-label="{{ item.aria_label }}"
+          {% endif %}
+        {% endset %}
+
+        <a {{ link_attributes }}>{{ item.url_title }}</a>
 
         {# When we merge with the original/SRL link-list as a single base
         {% if item.name %}
