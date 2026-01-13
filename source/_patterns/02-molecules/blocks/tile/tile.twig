@@ -8,7 +8,10 @@
 ]|merge(tile.classes|default([''])) %}
 
 {% if tile.url %}
-  <a class="{{ classes|join(' ')|trim }}" href="{{ tile.url }}">
+  {% if tile.aria_label %}
+    {% set url_attributes = url_attributes.setAttribute('aria-label', tile.aria_label) %}
+  {% endif %}
+  <a class="{{ classes|join(' ')|trim }}" href="{{ tile.url }}" {{ url_attributes }} >
 {% else %}
   <div class="{{ classes|join(' ')|trim }}">
 {% endif %}
