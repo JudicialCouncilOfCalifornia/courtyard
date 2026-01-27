@@ -104,6 +104,9 @@
     @include at-media-max(desktop) {
       @include u-width(full);
       @include u-padding(0);
+      align-self: start;
+      max-height: 100%;
+      overflow: scroll;
     }
 
     &.is-visible {
