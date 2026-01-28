@@ -34,7 +34,7 @@
     },
     {
       "label": "primary-lighter",
-      "color": "#EFF6FB"
+      "color": "#005EA2"
     },
     {
       "label": "primary-light",
@@ -86,7 +86,7 @@
     },
     {
       "label": "accent-warm-dark",
-      "color": "#E5A000"
+      "color": "#BF4A00"
     },
     {
       "label": "accent-warm-darker",
