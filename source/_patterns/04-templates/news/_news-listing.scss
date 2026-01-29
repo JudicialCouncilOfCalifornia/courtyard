@@ -150,7 +150,7 @@ $_news-listing-form: px-to-rem(300px) + units($theme-column-gap-desktop);
       @include u-bg(primary);
       width: 22px;
       height: 22px;
-      top: 17px;
+      top: 34px;
       right: 15px;
       content: "";
       mask-image: url("../icons/fa/search.svg");
