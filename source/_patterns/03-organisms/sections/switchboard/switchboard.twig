@@ -26,7 +26,14 @@
                 {% endif %}
                 {% if switchboard.body %}
                     <div class="jcc-switchboard__body">
-                        {{ switchboard.body }}
+                        {% if switchboard.body.field_image is defined and switchboard.body.field_image|render %}
+                            <div class="jcc-switchboard__image-container">
+                                {{ switchboard.body.field_image }}
+                            </div>
+                        {% endif %}
+                        <div class="jcc-switchboard__text-content">
+                            {{ switchboard.body }}
+                        </div>
                     </div>
                 {% endif %}
             </div>
