@@ -152,7 +152,7 @@
   // Thin/dark bar
   &::after {
     @include u-position("absolute");
-    @include u-bg(accent-warm-dark);
+    @include u-bg(orange-50v);
     right: 0;
     content: "";
 
@@ -289,13 +289,13 @@
   }
 
   .jcc-timeline-dual-item__bottom & {
-    @include u-bg(accent-warm-dark);
+    @include u-bg(orange-50v);
 
     @include at-media-max(tablet-lg) {
       margin-left: 20px;
 
       &::before {
-        @include u-bg(accent-warm-dark);
+        @include u-bg(orange-50v);
         right: -24px;
       }
     }
@@ -346,7 +346,7 @@
   }
 
   .jcc-timeline-dual-item__bottom & {
-    @include u-bg(accent-warm-dark);
+    @include u-bg(orange-50v);
 
     @include at-media-max(tablet-lg) {
       margin-left: auto;

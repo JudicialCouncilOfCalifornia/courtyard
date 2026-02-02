@@ -139,7 +139,7 @@
 }
 
 .jcc-timeline-dual__bottom-title {
-  @include u-color(accent-warm-dark);
+  @include u-color(orange-50v);
   @include u-font(body, 7);
   line-height: 1.3;
   text-align: right;
