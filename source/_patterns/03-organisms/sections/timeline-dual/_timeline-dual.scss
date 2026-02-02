@@ -181,7 +181,7 @@
   // Thin/dark bar
   &::after {
     @include u-position("absolute");
-    @include u-bg(accent-warm-dark);
+    @include u-bg(orange-50v);
     right: 0;
     content: "";
 

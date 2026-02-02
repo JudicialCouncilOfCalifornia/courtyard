@@ -117,7 +117,7 @@
 .jcc-tile__title {
   @include u-font-size("heading", 9);
   @include u-line-height("heading", 3);
-  @include u-color(primary-dark);
+  @include u-color(blue-60v);
   @include u-font-weight(normal);
 }
 
