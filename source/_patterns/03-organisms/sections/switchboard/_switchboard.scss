@@ -21,6 +21,32 @@
     @include u-font-family(serif);
     @include u-font-size("heading", 10);
   }
+
+  // srl-859
+  .jcc-switchboard__body {
+    @include u-margin-bottom(4);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .jcc-switchboard__image-container {
+    flex: 0 0 auto;
+    max-width: 100%;
+    margin-right: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .jcc-switchboard__text-content {
+    flex: 1 1 auto;
+  }
 }
 
 .jcc-switchboard--has-background-color--light,
