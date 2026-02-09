@@ -32,7 +32,6 @@
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
   {% if card.link.url %}
     {% set attributes = attributes.setAttribute('href', card.link.url) %}
-    {% set attributes = attributes.setAttribute('aria-labelledby', unique_id) %}
     {% set tag = 'a' %}
   {% else %}
     {% set style = 'cta' %}
