@@ -46,7 +46,7 @@
       {% for key, item in pager.items.pages %}
         <li class="jcc-pager__item{{ pager.current == key ? ' is-active' : '' }}" data-page="{{ (pager.current - key)|abs }}">
           {% if pager.current == key %}
-            {% set title = 'Current page'|t %}
+            {% set title = 'Current page @key'|t({'@key': key}) %}
           {% else %}
             {% set title = 'Go to page @key'|t({'@key': key}) %}
           {% endif %}
