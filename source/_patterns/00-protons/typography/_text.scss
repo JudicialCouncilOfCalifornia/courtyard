@@ -70,7 +70,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 
 .jcc-metadata {
   @extend .jcc-text-5;
-  @include u-color(gray-40);
+  @include u-color(gray-60);
   @include u-text(uppercase);
   line-height: 3.5;
 }
