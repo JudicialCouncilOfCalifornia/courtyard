@@ -1,5 +1,6 @@
 hero_tiles:
   style: "background-image"
   images:
-    banner: "https://placeimg.com/1000/350/nature"
+    banner: "https://picsum.photos/id/41/900/500"
     signature_title: "Photo: Jane Klause"
+    alt: "Description of what the image portrays"

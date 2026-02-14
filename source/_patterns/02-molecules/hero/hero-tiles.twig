@@ -36,7 +36,7 @@
 <div class="{{ classes|join(' ') }}">
   {% if style == 'background-image' %}
     <div class="jcc-hero-tiles__background">
-      <img src="{{ hero_tiles.images.banner }}" alt="Hero image">
+      <img src="{{ hero_tiles.images.banner }}" alt="{{ hero_tiles.images.alt }}">
       {% if signature_title is not empty %}
         <div class="jcc-signature-bottom-right">{{ hero_tiles.images.signature_title }}</div>
       {% endif %}
