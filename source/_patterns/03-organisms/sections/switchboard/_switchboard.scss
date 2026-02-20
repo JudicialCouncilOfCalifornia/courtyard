@@ -156,3 +156,8 @@
 .jcc-switchboard__tiles {
   @include add-list-reset;
 }
+
+@media screen and (max-width: 1000px) {
+  .jcc-switchboard .jcc-switchboard__column-left { display:none !important; }
+  .jcc-switchboard .jcc-switchboard__column-right { width:100% !important; max-width:100% !important; flex:1 1 100% !important; }
+}
