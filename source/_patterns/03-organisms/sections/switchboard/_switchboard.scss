@@ -159,7 +159,5 @@
 
 // srl-859
 @media screen and (max-width: 1000px) {
-  .jcc-switchboard .jcc-switchboard__body img[src*="coa_horizontal.png"] {
-    display: none !important;
-  }
+  .jcc-switchboard .jcc-switchboard__body .media-library--image { display: none; }
 }
