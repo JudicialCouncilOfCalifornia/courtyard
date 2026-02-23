@@ -156,3 +156,8 @@
 .jcc-switchboard__tiles {
   @include add-list-reset;
 }
+
+// srl-859
+@media screen and (max-width: 1000px) {
+  .jcc-switchboard .jcc-switchboard__body .media-library--image { display: none; }
+}
