@@ -189,7 +189,7 @@
   {% if 'masthead' in header.variant %}
     <div class="jcc-header__logo-container--alt-position" aria-hidden="true">
       <div class="usa-logo" id="extended-logo--alternate-position">
-        <a href="/" title="Home" aria-label="Home">
+        <a href="/" title="Home" aria-label="Home" tabindex="-1">
           {% if header.logo.svg %}
             <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
             {% if header.logo.lead %}<div class="jcc_header__lead">{{ header.logo.lead }}</div>{% endif %}
