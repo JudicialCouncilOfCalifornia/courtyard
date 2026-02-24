@@ -59,43 +59,47 @@
     </div>
 
     <div class="jcc-location__content-second">
-      {% if location.brow %}
-        <div class="jcc-location__brow">{{ location.brow }}</div>
+      {% if location.title %}
+        {% if location.brow %}
+          <div class="jcc-location__brow">{{ location.brow }}</div>
+        {% endif %}
+
+        <h2 class="jcc-location__title">
+          {{ location.title }}
+        </h2>
       {% endif %}
 
-      <h2 class="jcc-location__title">
-        {{ location.title }}
-      </h2>
+      {% if location.address or location.phone or location.tags %}
+        <div class="jcc-location__location-tags">
+          <div class="jcc-location__location">
+            {% if location.address %}
+              <div class="jcc-location__address">
+                {{ location.address }}
+              </div>
+            {% endif %}
 
-      <div class="jcc-location__location-tags">
-        <div class="jcc-location__location">
-          {% if location.address %}
-            <div class="jcc-location__address">
-              {{ location.address }}
-            </div>
-          {% endif %}
+            {% if location.phone %}
+              <div class="jcc-location__phone">
+                <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.text }}</a>
+              </div>
+            {% endif %}
+          </div>
 
-          {% if location.phone %}
-            <div class="jcc-location__phone">
-              <a class="usa-link" href="{{ location.phone.url }}">{{ location.phone.text }}</a>
-            </div>
-          {% endif %}
+          <div class="jcc-location__tags">
+            {% if location.tags %}
+              <div class="jcc-location__tags-list">
+                <p class="jcc-location__tags-label">
+                  {{ location.tags_label|default('Matters Served') }}:
+                </p>
+
+                {% for tag in location.tags %}
+                  {% include '@atoms/tag/tag.twig' with { tag: tag } %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
         </div>
-
-        <div class="jcc-location__tags">
-          {% if location.tags %}
-            <div class="jcc-location__tags-list">
-              <p class="jcc-location__tags-label">
-                {{ location.tags_label|default('Matters Served') }}:
-              </p>
-
-              {% for tag in location.tags %}
-                {% include '@atoms/tag/tag.twig' with { tag: tag } %}
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-      </div>
+      {% endif %}
 
       {% if location.additional %}
         <div class="jcc-location__additional usa-prose">
