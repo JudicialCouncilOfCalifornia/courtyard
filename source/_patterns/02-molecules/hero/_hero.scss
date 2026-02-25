@@ -236,6 +236,13 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
   .jcc-hero--background-alt & {
     @include u-color(map-get($_config, alt-background-text));
   }
+
+  font-family: Lato, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  @include u-color("gray-90");
+  font-weight: 700;
+  letter-spacing: 0.4px;
 }
 
 .jcc-hero__aside-text {
