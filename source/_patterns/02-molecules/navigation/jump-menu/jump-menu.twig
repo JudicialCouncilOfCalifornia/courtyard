@@ -7,9 +7,7 @@
 
 {% if jump_menu.items|length > 0 %}
   <div class="{{ classes|join(' ')|trim }}">
-    {% if jump_menu.label %}
-      <label class="usa-label sr-only" for="{{ jump_menu.id }}-options">{{ jump_menu.label }}</label>
-    {% endif %}
+      <label class="usa-label sr-only" for="{{ jump_menu.id }}-options">{{ jump_menu.label is not empty ? jump_menu.label : 'County where you received the ticket'}}</label>
 
     <select class="usa-select" name="{{ jump_menu.id }}-options" id="{{ jump_menu.id }}-options">
       <option value>{{ default_option }}</option>
