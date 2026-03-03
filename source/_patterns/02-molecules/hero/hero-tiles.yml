@@ -9,7 +9,7 @@ hero_tiles:
         name: "jury"
         set: "line-white"
         title: "Jury Service"
-    - text: "Traffic Tickts"
+    - text: "Traffic Tickets"
       url: "#"
       icon:
         name: "paper-traffic-ticket"
