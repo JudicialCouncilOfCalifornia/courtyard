@@ -38,6 +38,9 @@
   @extend .usa-prose;
   a {
     @include u-text("blue-cool-60v");
+    svg {
+      fill: currentColor;
+    }
 
     &:visited {
       @include u-text("violet-warm-vivid");
