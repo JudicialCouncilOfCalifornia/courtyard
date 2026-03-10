@@ -11,9 +11,9 @@ $_config_schemes: (
   local: (),
   pro: (
     link: (
-      default: "blue-50v",
-      hover: "blue-60v",
-      active: "blue-70v",
+      default: $theme-link-color,
+      hover: $theme-link-hover-color,
+      active: $theme-link-active-color,
     ),
     current-background: "blue-50v",
   ),
