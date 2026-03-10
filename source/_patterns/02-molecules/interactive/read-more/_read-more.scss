@@ -34,24 +34,6 @@
   @include u-margin-top(2);
 }
 
-.jcc-read-more__content {
-  @extend .usa-prose;
-  a {
-    @include u-text("blue-cool-60v");
-    svg {
-      fill: currentColor;
-    }
-
-    &:visited {
-      @include u-text("violet-warm-vivid");
-    }
-
-    &:hover {
-      @include u-text("cyan-60v");
-    }
-  }
-}
-
 .jcc-read-more__content[aria-hidden="true"] {
   @include u-display(none);
 }
