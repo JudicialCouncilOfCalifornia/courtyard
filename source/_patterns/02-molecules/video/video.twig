@@ -53,6 +53,12 @@
 {# Video layout classes #}
 {% set video_classes =  video_classes ? video.video_classes : ""%}
 
+{% if video.video_title %}
+  {% set title = video.provider ~ ' ' ~ video.video_title %}
+{% else %}
+  {% set title = video.provider ~ ' ' ~ 'video player'|t %}
+{% endif %}
+
 {% set classes = [
   'jcc-video',
   'embed-responsive',
@@ -63,7 +69,7 @@
 <div class = "jcc-video__video-container">
   <div class="{{ classes|join(' ') }}">
     <div class = "jcc-video__embed_items">
-      <iframe class="embed-responsive-item" title="{{ video.provider ~ ' ' ~ 'video player'|t }}"
+      <iframe class="embed-responsive-item" title="{{ title }}"
         width="{{ video.width }}" height="{{ video.height }}"
         src="{{ url }}" data-src="{{ data_url }}"
         frameborder="0" allow="autoplay"></iframe>
