@@ -40,7 +40,7 @@
           </div>
         {% endif %}
       </li>
-      {% if cards_with_button.highlight_first and loop.first %}
+      {% if cards_with_button.highlight_first and cards_with_button.cards|length > 1 and loop.first %}
         </ul><ul class="jcc-cards-with-button">
       {% endif %}
     {% endfor %}
