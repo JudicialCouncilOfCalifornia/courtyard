@@ -118,6 +118,7 @@ $_hat: map-get($_config, hat);
 .jcc-header {
   @include u-position(relative);
   @include u-z(500);
+  display: grid;
 }
 
 .jcc-header__navbar {
@@ -755,9 +756,14 @@ $_hat: map-get($_config, hat);
   }
 
   .jcc-header__logo-container--alt-position {
-    @include u-margin-x(auto);
+    order: 2;
     @include at-media(desktop) {
+      @include u-margin-x(auto);
       @include u-width(widescreen);
+    }
+
+    ~ .jcc-header__nav {
+      order: 1;
     }
 
     .usa-logo {
@@ -793,9 +799,7 @@ $_hat: map-get($_config, hat);
   }
 
   .usa-logo {
-    &[aria-hidden="false"] {
-      @include sr-only();
-    }
+    @include u-display(none);
   }
 
   .jcc-header__body {

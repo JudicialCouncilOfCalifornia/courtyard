@@ -57,9 +57,32 @@
     } %}
   </div>
 
+  {% if 'masthead' in header.variant %}
+    <div class="jcc-header__logo-container--alt-position">
+      <div class="usa-logo" id="extended-logo--alternate-position">
+        <a href="/" title="Home" aria-label="Home">
+          {% if header.logo.svg %}
+            <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
+            {% if header.logo.lead %}<div class="jcc_header__lead">{{ header.logo.lead }}</div>{% endif %}
+          {% endif %}
+        </a>
+      </div>
+    </div>
+
+    {% if header.variant == 'masthead mega' and header.body %}
+      <div class="jcc-header__body">{{ header.body }}</div>
+    {% endif %}
+
+    {% if header.media %}
+      <div class="jcc-header__media">
+        <img src="{{ header.media.src }}" alt="{{ header.media.alt }}">
+      </div>
+    {% endif %}
+  {% endif %}
+
   <div class="jcc-header__navbar">
     <div class="usa-navbar">
-      <div class="usa-logo" id="extended-logo"{{ 'masthead' in header.variant ? ' aria-hidden="false"' : '' }}>
+      <div class="usa-logo" id="extended-logo">
         <a href="/" title="Home" aria-label="Home">
           {% if header.logo.svg %}
             <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
@@ -185,29 +208,6 @@
       </div>
     </nav>
   </div>
-
-  {% if 'masthead' in header.variant %}
-    <div class="jcc-header__logo-container--alt-position" aria-hidden="true">
-      <div class="usa-logo" id="extended-logo--alternate-position">
-        <a href="/" title="Home" aria-label="Home" tabindex="-1">
-          {% if header.logo.svg %}
-            <span class="jcc-header__logo">{{ source(header.logo.svg) }}</span>
-            {% if header.logo.lead %}<div class="jcc_header__lead">{{ header.logo.lead }}</div>{% endif %}
-          {% endif %}
-        </a>
-      </div>
-    </div>
-
-    {% if header.variant == 'masthead mega' and header.body %}
-      <div class="jcc-header__body">{{ header.body }}</div>
-    {% endif %}
-
-    {% if header.media %}
-      <div class="jcc-header__media">
-        <img src="{{ header.media.src }}" alt="{{ header.media.alt }}">
-      </div>
-    {% endif %}
-  {% endif %}
 </header>
 
 {% macro sub_menu(menu_links, section_link) %}
