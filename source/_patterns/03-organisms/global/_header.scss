@@ -796,6 +796,11 @@ $_hat: map-get($_config, hat);
         @include u-text(uppercase, ls-1);
       }
     }
+
+    +.jcc-header__body {
+      order: 2;
+      @include u-position(relative);
+    }
   }
 
   .usa-logo {
