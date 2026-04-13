@@ -136,11 +136,6 @@ $_news-listing-form: px-to-rem(300px) + units($theme-column-gap-desktop);
     @include u-font(sans, 2xs);
   }
 
-  .usa-hint {
-    @include u-color(base);
-    @include u-font(sans, 2xs);
-  }
-
   .form-item-search {
     @include u-position(relative);
 

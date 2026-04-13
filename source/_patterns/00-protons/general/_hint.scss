@@ -1,0 +1,15 @@
+$_config_schemes: (
+  base: (
+    hint-color: base,
+  ),
+  pro: (
+    hint-color: gray-60,
+  ),
+);
+
+$_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
+
+.usa-hint {
+  @include u-color(map-get($_config, hint-color));
+  @include u-font(sans, 2xs);
+}

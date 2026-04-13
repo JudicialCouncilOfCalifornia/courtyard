@@ -139,11 +139,6 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
     @include u-font(sans, 2xs);
   }
 
-  .usa-hint {
-    @include u-color(base);
-    @include u-font(sans, 2xs);
-  }
-
   .form-item-search {
     @include u-position(relative);
 
