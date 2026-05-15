@@ -2,16 +2,7 @@
 
 {% if renderer == 'patternlab' %}
   {% if image.src %}
-    {# Expect ALT else hide image from screen readers #}
-    {% set image_alt %}
-      {% if image.alt %}
-        alt="{{ image.alt|raw }}"
-      {% else %}
-        aria-hidden="true"
-      {% endif %}
-    {% endset %}
-
-    <img src="{{- image.src -}}"{{ image_alt }} />
+    <img src="{{- image.src -}}"{% if image.alt %} alt="{{ image.alt }}"{% endif %} />
   {% endif %}
 {% else %}
   {{ image }}
