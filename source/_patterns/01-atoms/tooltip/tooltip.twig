@@ -1,7 +1,8 @@
 {% if tooltip %}
+{% set tooltip_description_id = 'tooltip-description-' ~ random() %}
 <span class='jcc-tooltip jcc-tooltip-primary tooltip'>
-  {{ tooltip.highlight }}
-  <span class='top'>
+  <span class='tooltip__trigger' role="button" tabindex="0" aria-describedby="{{ tooltip_description_id }}">{{ tooltip.highlight }}</span>
+  <span class='top' id="{{ tooltip_description_id }}" role="tooltip">
     <span>{{ tooltip.tool_text }}</span>
     <i></i>
   </span>

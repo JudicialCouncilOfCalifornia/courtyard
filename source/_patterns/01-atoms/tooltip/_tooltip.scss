@@ -33,6 +33,19 @@
   display: block;
 }
 
+.tooltip:focus-within .top {
+  display: block;
+}
+
+.tooltip.tooltip--open .top {
+  display: block;
+}
+
+.tooltip .tooltip__trigger:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .tooltip .top i {
   position: absolute;
   top: 100%;
