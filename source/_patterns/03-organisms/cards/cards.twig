@@ -23,6 +23,7 @@
 {% import _self as sections %}
 
 {% macro section(classes, cards) %}
+  {% if cards.items is not empty %}
   <ul class="{{ classes|join(' ')|trim }}">
     {% for item in cards.items %}
       {% set item = item|merge({ title_tag: tag }) %}
@@ -33,6 +34,7 @@
       </li>
     {% endfor %}
   </ul>
+  {% endif %}
 
   {% if cards.link.url %}
     {% if cards.link.aria_label %}
