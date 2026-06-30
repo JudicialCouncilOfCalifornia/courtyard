@@ -19,18 +19,17 @@
   <nav class="{{ classes|join(' ')|trim }}" aria-label="Breadcrumbs">
     <ol class="usa-breadcrumb__list">
       {% for crumb in breadcrumb.items %}
-        {% if crumb.url %}
+        {% if crumb.url and not loop.last %}
           <li class="usa-breadcrumb__list-item">
             <a href="{{ crumb.url }}" class="usa-breadcrumb__link">
               <span>{{ crumb.label }}</span>
             </a>
           </li>
         {% else %}
-          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+          <li class="usa-breadcrumb__list-item{% if loop.last %} usa-current{% endif %}"{% if loop.last %} aria-current="page"{% endif %}>
             <span>{{ crumb.label }}</span>
           </li>
         {% endif %}
-
       {% endfor %}
     </ol>
   </nav>
