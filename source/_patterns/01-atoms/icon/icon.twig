@@ -40,8 +40,15 @@
 {% set attributes = attributes.setAttribute('height', height) %}
 
 {% if icon.decorative %}
-  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
-  {% set attributes = attributes.setAttribute('focusable', 'false') %}
+  {% set attributes = attributes
+    .setAttribute('aria-hidden', 'true')
+    .setAttribute('focusable', 'false')
+  %}
+{% else %}
+  {% set attributes = attributes
+    .setAttribute('role', 'img')
+    .setAttribute('aria-label', icon.title ?? icon.name|title)
+  %}
 {% endif %}
 
 {% if icon.name %}
