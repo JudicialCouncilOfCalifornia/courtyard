@@ -65,11 +65,13 @@
                 {% include "@atoms/icon/icon.twig" with {
                   icon: {
                     name: card.icon.name,
-                    set: icon_set
+                    set: icon_set,
+                    decorative: true
                   }
                 } %}
               </div>
             {% endif %}
+
           </div>
         {% else %}
           {% if card.icon %}
@@ -78,7 +80,8 @@
                 {% include "@atoms/icon/icon.twig" with {
                   icon: {
                     name: card.icon.name,
-                    set: icon_set
+                    set: icon_set,
+                    decorative: true
                   }
                 } %}
               </div>

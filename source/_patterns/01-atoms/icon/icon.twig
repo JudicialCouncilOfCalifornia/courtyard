@@ -20,19 +20,31 @@
 {% set width = icon.width|default('35') %}
 {% set height = icon.height|default('35') %}
 
+{# Preserve attributes supplied by the caller, or create a new Attribute object. #}
 {% set attributes = icon.attributes ?? create_attribute() %}
 
-{% set attributes = attributes.setAttribute('width', width) %}
-{% set attributes = attributes.setAttribute('height', height) %}
+{# Merge the component's standard classes and dimensions. #}
+{% set attributes = attributes
+  .addClass(classes)
+  .setAttribute('width', width)
+  .setAttribute('height', height)
+%}
 
-{% if icon.decorative %}
-  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
-  {% set attributes = attributes.setAttribute('focusable', 'false') %}
+{% if icon.decorative|default(false) %}
+  {% set attributes = attributes
+    .setAttribute('aria-hidden', 'true')
+    .setAttribute('focusable', 'false')
+  %}
+{% else %}
+  {% set attributes = attributes
+    .setAttribute('role', 'img')
+    .setAttribute('aria-label', icon.title ?? icon.name|title)
+  %}
 {% endif %}
 
 {% if icon.name %}
   {% spaceless %}
-    <svg class="{{ classes|join(' ') }}" width="{{ width }}" height="{{ height }}" role="img" aria-label="{{ icon.title ?? icon.name|title }}">
+    <svg {{ attributes }}>
       <use xlink:href="{{ icon.file }}#icon-{{ icon.set ~ '-' ~ icon.name }}"></use>
     </svg>
   {% endspaceless %}
