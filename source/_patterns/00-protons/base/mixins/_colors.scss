@@ -18,19 +18,28 @@
 }
 
 @mixin dark-background-link(
+  // Hover/focus must not drop below the resting contrast ratio, so they default
+  // to the same light token as the resting state (accent-warm-light = gold-5v,
+  // 5.93:1 on primary/#005ea2). The interaction cue is the underline, not a
+  // contrast-reducing color shift.
   $dark-background-link-color: accent-warm-light,
-  $dark-background-link-color-hover: accent-warm,
-  $dark-background-link-color-active: accent-warm
+  $dark-background-link-color-hover: accent-warm-light,
+  $dark-background-link-color-active: accent-warm-light
 ) {
   @include u-text($dark-background-link-color);
 
   &:hover {
     @include u-text($dark-background-link-color-hover);
+    text-decoration: underline;
   }
 
   &:active,
   &:focus {
     @include u-text($dark-background-link-color-active);
+    text-decoration: underline;
+    // Visible, non-color-only focus indicator (WCAG 2.4.7 / 2.4.13 / 1.4.11).
+    outline: 0.25rem solid currentColor;
+    outline-offset: 2px;
   }
 
   &:visited {
