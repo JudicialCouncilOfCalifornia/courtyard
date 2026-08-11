@@ -129,7 +129,10 @@
           {% if not card.media.src %}
             {{ card.media }}
           {% else %}
-            <img src="{{ card.media.src }}" alt="{{ card.media.alt }}"/>
+            <img
+              src="{{ card.media.src }}"
+              alt="{{ ('media-full' in style or 'media-full-overlay' in style or 'media-top-overlay' in style) ? '' : card.media.alt|default('') }}"
+            />
           {% endif %}
         </div>
       </div>
