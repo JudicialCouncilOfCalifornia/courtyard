@@ -159,6 +159,10 @@
   .jcc-hero__title {
     @include dark-background-text();
   }
+
+  .social-sharing-buttons {
+    --color6: #fff;
+  }
 }
 
 .jcc-hero--has-background-image {
