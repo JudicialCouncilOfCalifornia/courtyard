@@ -15,8 +15,12 @@
     <ul class="jcc-cards">
       {% for card in card_section.cards %}
         <li class="jcc-cards__item">
+          {% set card_with_overrides = card %}
+          {% if card_section.card_tag and not card_with_overrides.tag %}
+            {% set card_with_overrides = card_with_overrides|merge({ tag: card_section.card_tag }) %}
+          {% endif %}
           {% include '@molecules/blocks/card/card.twig' with {
-            card: card
+            card: card_with_overrides
           } %}
         </li>
       {% endfor %}
