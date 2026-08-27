@@ -1,4 +1,4 @@
-{#
+o{#
 /**
  * Available variables:
  * - cards - primary variable
@@ -22,11 +22,13 @@
 
 {% import _self as sections %}
 
-{% macro section(classes, cards) %}
+{% macro section(classes, cards, default_heading_tag) %}
   {% if cards.items is not empty %}
   <ul class="{{ classes|join(' ')|trim }}">
     {% for item in cards.items %}
-      {% set item = item|merge({ title_tag: tag }) %}
+      {# Prefer explicit item tag; otherwise use section default. #}
+      {% set item_heading_tag = item.card_title_tag|default(item.title_tag|default(default_heading_tag)) %}
+      {% set item = item|merge({ card_title_tag: item_heading_tag, title_tag: item_heading_tag }) %}
       <li class="jcc-cards__item">
         {% include "@molecules/card/card.twig" with {
           card: item
@@ -49,10 +51,10 @@
 {% endmacro %}
 
 {% if cards.no_container %}
-  {{ sections.section(classes, cards) }}
+  {{ sections.section(classes, cards, tag) }}
 {% else %}
   {% set content %}
-    {{ sections.section(classes, cards) }}
+    {{ sections.section(classes, cards, tag) }}
   {% endset %}
 
   {% include "@molecules/section/section.twig" with {

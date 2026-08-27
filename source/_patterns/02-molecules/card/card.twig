@@ -5,7 +5,8 @@
  *   - style: general style of card [hover, cta, cta-color, borderless, media-left, media-full,
  *        media-full-overlay, media-top, media-top-overlay]
  *   - title: title of card
- *   - title_tag: tag/size of card title
+ *   - card_title_tag: tag/size of card title (canonical)
+ *   - title_tag: legacy alias for card title tag
  *   - brow: text in upper left
  *   - icon: icon in brow
  *   - body: main text content
@@ -24,7 +25,7 @@
 {% set attributes = card.attributes ?? create_attribute() %}
 
 {% set tag = 'div' %}
-{% set heading_tag = card.card_title_tag|default('h3') %}
+{% set heading_tag = card.card_title_tag|default(card.title_tag|default('h3')) %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
 {% set icon_set = card.icon.set|default('fa') %}
