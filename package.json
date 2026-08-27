@@ -13,7 +13,7 @@
     "a11y-dialog": "^5.4.2",
     "a11y-toggle": "^2.1.0",
     "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "easydropdown": "^4.2.0",
