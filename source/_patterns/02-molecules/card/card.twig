@@ -27,6 +27,7 @@
 {% set heading_tag = card.card_title_tag|default('h3') %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
+{% set style_tokens = style|split(' ') %}
 {% set icon_set = card.icon.set|default('fa') %}
 
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
@@ -131,7 +132,7 @@
           {% else %}
             <img
               src="{{ card.media.src }}"
-              alt="{{ ('media-full' in style or 'media-full-overlay' in style or 'media-top-overlay' in style) ? '' : card.media.alt|default('') }}"
+              alt="{{ ('media-full' in style_tokens or 'media-full-overlay' in style_tokens or 'media-top-overlay' in style_tokens) ? '' : card.media.alt|default('') }}"
             />
           {% endif %}
         </div>
