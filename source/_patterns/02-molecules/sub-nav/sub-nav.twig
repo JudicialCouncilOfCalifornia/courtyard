@@ -51,7 +51,11 @@
 
     {% for item in items %}
       <li class="jcc-sub-nav__item">
-        <a class="{{ item.is_current ? 'usa-current' }}" href="{{ item.url }}"{% if item.is_current %} aria-current="page"{% endif %}>{{ item.text }}</a>
+        {% set itemclasses = [
+          item.in_active_trail ? 'in-active-trail',
+          item.is_current ? 'is-current',
+        ] %}
+        <a class="{{ itemclasses|join(' ')|trim }}" href="{{ item.url }}"{% if item.is_current %} aria-current="page"{% endif %}>{{ item.text }}</a>
         {# If sidenav variant, optionally display subpages #}
         {% if (config == 'sidenav') and item.below %}
           {{ subnav.subnav_links(config, item.below, NULL, TRUE) }}

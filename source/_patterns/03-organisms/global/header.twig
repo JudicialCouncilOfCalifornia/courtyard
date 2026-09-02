@@ -116,9 +116,15 @@
         <ul class="usa-nav__primary usa-accordion">
           {% for link in header.links %}
             <li class="usa-nav__primary-item">
+              {% set linkclasses = [
+                link.links ? 'usa-accordion__button',
+                'usa-nav__link',
+                link.in_active_trail ? 'in-active-trail',
+                link.is_current ? 'is-current',
+              ] %}
               {% if link.links %}
                 {% set id = link.id ?? random() %}
-                <button class="usa-accordion__button usa-nav__link {{ link.is_current ? 'usa-current' }}" aria-expanded="false" aria-controls="{{ id }}">
+                <button class="{{ linkclasses|join(' ') }}" aria-expanded="false" aria-controls="{{ id }}">
                   <span>{{ link.text }}</span>
                   {% include "@atoms/icon/icon.twig" with {
                     icon: {
@@ -162,7 +168,7 @@
                   </div>
                 </div>
               {% else %}
-                <a class="usa-nav__link {{ link.is_current ? 'usa-current' }}" href="{{ link.url }}"><span>{{ link.text }}</span></a>
+                <a class="{{ linkclasses|join(' ') }}" href="{{ link.url }}"{% if link.is_current %} aria-current="page"{% endif %}><span>{{ link.text }}</span></a>
               {% endif %}
             </li>
           {% endfor %}
@@ -214,12 +220,20 @@
   <ul class="usa-nav__submenu-items">
     {% for child in menu_links %}
       <li class="usa-nav__submenu-item {{ child.links ? 'has-children' }}">
-        <a class="{{ child.is_current ? 'usa-current' }}" href="{{ child.url }}">{{ child.text }}</a>
+        {% set childclasses = [
+          child.in_active_trail ? 'in-active-trail',
+          child.is_current ? 'is-current',
+        ] %}
+        <a class="{{ childclasses|join(' ') }}" href="{{ child.url }}"{% if child.is_current %} aria-current="page"{% endif %}>{{ child.text }}</a>
         {% if child.links %}
           <ul class="usa-nav__submenu">
             {% for grandchild in child.links %}
               <li class="usa-nav__submenu-item">
-                <a class="{{ grandchild.is_current ? 'usa-current' }}" href="{{ grandchild.url }}">{{ grandchild.text }}</a>
+                {% set grandchildclasses = [
+                  grandchild.in_active_trail ? 'in-active-trail',
+                  grandchild.is_current ? 'is-current',
+                ] %}
+                <a class="{{ grandchildclasses|join(' ') }}" href="{{ grandchild.url }}"{% if grandchild.is_current %} aria-current="page"{% endif %}>{{ grandchild.text }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -229,7 +243,11 @@
 
     {% if section_link %}
       <li class="usa-nav__submenu-item jcc-header__submenu-section-item">
-        <a href="{{ section_link.url }}">
+        {% set sectionlinkclasses = [
+          section_link.in_active_trail ? 'in-active-trail',
+          section_link.is_current ? 'is-current',
+        ] %}
+        <a class="{{ sectionlinkclasses|join(' ') }}" href="{{ section_link.url }}"{% if section_link.is_current %} aria-current="page"{% endif %}>
           <span>{{ section_link.text }}</span>
           {% include "@atoms/icon/icon.twig" with {
             icon: {

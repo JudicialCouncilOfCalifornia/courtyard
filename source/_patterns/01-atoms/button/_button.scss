@@ -146,6 +146,7 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
 }
 
 %jcc-button-external {
+  @include u-color("white", !important);
   &,
   &:visited {
     @include u-display(inline-flex);
