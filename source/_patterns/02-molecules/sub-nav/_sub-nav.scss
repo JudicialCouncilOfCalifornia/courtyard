@@ -127,7 +127,8 @@ $_config: map-merge-by-keys($_config_schemes, base, $_config_schemes, $scheme);
       @include u-color(map-get($_config, hover-text));
     }
 
-    &.usa-current {
+    &.in-active-trail,
+    &.is-current {
       @include u-bg(map-get($_config, current-background));
       @include u-color(map-get($_config, current-text));
     }

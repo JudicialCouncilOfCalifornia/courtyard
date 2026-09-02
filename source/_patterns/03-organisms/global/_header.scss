@@ -245,6 +245,7 @@ $_hat: map-get($_config, hat);
     }
 
     .usa-nav__primary-item {
+      @include u-position(relative);
       @include at-media-max(tablet-lg) {
         @include hc(border-top-color, $_nav, top-border);
       }
@@ -310,9 +311,17 @@ $_hat: map-get($_config, hat);
         }
       }
 
-      &.usa-current {
+      &.in-active-trail,
+      &.is-current {
         &::after {
-          @include hc(background-color, $_nav, top-current-bar);
+          @include u-display(block);
+          @include u-position(absolute);
+          @include u-left(2);
+          @include u-right(2);
+          @include u-bottom(0);
+          @include u-bg(blue-70v);
+          @include u-height('05');
+          content: "";
 
           @include at-media-max(tablet-lg) {
             @include u-top(0);
@@ -406,7 +415,8 @@ $_hat: map-get($_config, hat);
         @include hc(color, $_nav, sub-text);
         min-height: 50px;
 
-        &.usa-current {
+        &.in-active-trail,
+        &.is-current {
           @include hc(background-color, $_nav, sub-sub-background);
         }
 
@@ -425,7 +435,9 @@ $_hat: map-get($_config, hat);
     .jcc-header__submenu-section-item {
       &,
       .jcc-header--alt & {
-        a {
+        a,
+        a.in-active-trail,
+        a.is-current {
           @include u-bg(map-get($_nav, section-link-background));
           @include u-color(map-get($_nav, section-link-text));
           @include u-justify-content(justify-end);
