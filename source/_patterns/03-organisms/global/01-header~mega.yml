@@ -19,13 +19,14 @@ header:
   search_action: "#"
   links:
     - text: Two column 1
-      is_current: true
+      in_active_trail: true
       id: nav-section-one
       links:
         - text: Navigation link 1
           url: "#"
         - text: Navigation link 2
           url: "#"
+          in_active_trail: true
           is_current: true
         - text: Navigation link 3
           url: "#"
@@ -34,7 +35,6 @@ header:
             url: "#"
           - text: Navigation link 3.2
             url: "#"
-            is_current: true
           - text: Navigation link 3.3
             url: "#"
         - text: Navigation link 4
