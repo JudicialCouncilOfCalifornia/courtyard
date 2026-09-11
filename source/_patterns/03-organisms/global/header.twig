@@ -124,15 +124,17 @@
               ] %}
               {% if link.links %}
                 {% set id = link.id ?? random() %}
-                <button class="{{ linkclasses|join(' ') }}" aria-expanded="false" aria-controls="{{ id }}">
-                  <span>{{ link.text }}</span>
-                  {% include "@atoms/icon/icon.twig" with {
-                    icon: {
-                      name: header.nav_children.indicator|default('chevron-down'),
-                      set: header.nav_children.icon_family|default('fa'),
-                    }
-                  } %}
-                </button>
+                <div class="usa-nav__primary-item-btn">
+                  <button class="{{ linkclasses|join(' ') }}" aria-expanded="false" aria-controls="{{ id }}">
+                    <span>{{ link.text }}</span>
+                    {% include "@atoms/icon/icon.twig" with {
+                      icon: {
+                        name: header.nav_children.indicator|default('chevron-down'),
+                        set: header.nav_children.icon_family|default('fa'),
+                      }
+                    } %}
+                  </button>
+                </div>
                 {% set count = link.links|length %}
                 <div id="{{ id }}" class="usa-nav__submenu {{ count > 9 ? 'megamenu' }}">
                   <div class="usa-nav__submenu-inner">
@@ -168,7 +170,9 @@
                   </div>
                 </div>
               {% else %}
-                <a class="{{ linkclasses|join(' ') }}" href="{{ link.url }}"{% if link.is_current %} aria-current="page"{% endif %}><span>{{ link.text }}</span></a>
+                <div class="usa-nav__primary-item-btn">
+                  <a class="{{ linkclasses|join(' ') }}" href="{{ link.url }}"{% if link.is_current %} aria-current="page"{% endif %}><span>{{ link.text }}</span></a>
+                </div>
               {% endif %}
             </li>
           {% endfor %}
