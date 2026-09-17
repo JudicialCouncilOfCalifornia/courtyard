@@ -22,3 +22,50 @@
     }
   }
 }
+
+// Disclosure styling is opt-in; legacy side navigation is unchanged.
+[data-side-nav-collapsible] {
+  .jcc-sidenav__link-row {
+    position: relative;
+    min-height: 2.75rem;
+
+    > a {
+      padding-right: 3.25rem;
+    }
+  }
+
+  .jcc-sidenav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.75rem;
+    height: 100%;
+    min-height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+
+    &:focus {
+      outline: 2px solid currentColor;
+      outline-offset: -2px;
+    }
+
+    .icon {
+      position: static;
+      float: none;
+    }
+
+    &[aria-expanded="true"] .jcc-sidenav__toggle-expand,
+    &[aria-expanded="false"] .jcc-sidenav__toggle-collapse {
+      display: none;
+    }
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
