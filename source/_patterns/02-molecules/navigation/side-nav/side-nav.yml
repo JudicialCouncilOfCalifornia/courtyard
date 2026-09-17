@@ -38,10 +38,16 @@ side_nav:
           url: "#"
           original_link:
             has_children: true
+          below:
+            - title: "Page 2.1 (child)"
+              url: "#"
         - title: "Page 3"
           url: "#"
           original_link:
             has_children: true
+          below:
+            - title: "Page 3.1 (child)"
+              url: "#"
         - title: "Page 4"
           url: "#"
         - title: "Page 5"
