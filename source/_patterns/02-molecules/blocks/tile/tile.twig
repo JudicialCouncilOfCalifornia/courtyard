@@ -1,4 +1,5 @@
-{% set tag = tile.tag|default('h3') %}
+{# Label-only tiles do not introduce a section of content. #}
+{% set tag = tile.body|default('')|trim ? tile.tag|default('h3') : 'p' %}
 {% set url_attributes = tile.url_attributes ? tile.url_attributes : create_attribute() %}
 {% set classes = [
   'jcc-tile',

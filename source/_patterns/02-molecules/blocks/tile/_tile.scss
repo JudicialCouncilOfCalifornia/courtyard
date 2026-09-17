@@ -95,7 +95,7 @@
     cursor: pointer;
     transition: all 0.4s;
 
-    h3 {
+    .jcc-tile__title {
       @include u-text-decoration("underline");
       text-decoration-thickness: 2px;
     }
