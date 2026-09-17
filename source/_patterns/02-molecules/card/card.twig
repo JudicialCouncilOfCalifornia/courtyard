@@ -5,7 +5,7 @@
  *   - style: general style of card [hover, cta, cta-color, borderless, media-left, media-full,
  *        media-full-overlay, media-top, media-top-overlay]
  *   - title: title of card
- *   - title_tag: tag/size of card title
+ *   - title_tag: tag/size of card title. See heading_tag below for tag handling details.
  *   - brow: text in upper left
  *   - icon: icon in brow
  *   - body: main text content
@@ -24,7 +24,9 @@
 {% set attributes = card.attributes ?? create_attribute() %}
 
 {% set tag = 'div' %}
-{% set heading_tag = card.card_title_tag|default('h3') %}
+{% set has_body_content = card.body is not empty %}
+{# ADA-387: cards without body text should render labels as non-headings. #}
+{% set heading_tag = has_body_content ? card.title_tag|default('h3') : 'p' %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
 {% set icon_set = card.icon.set|default('fa') %}
