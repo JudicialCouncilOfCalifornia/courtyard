@@ -43,9 +43,9 @@
 {% endif %}
 
 {% if icon.name %}
-  {% spaceless %}
+  {% apply spaceless %}
     <svg {{ attributes }}>
       <use xlink:href="{{ icon.file }}#icon-{{ icon.set ~ '-' ~ icon.name }}"></use>
     </svg>
-  {% endspaceless %}
+  {% endapply %}
 {% endif %}
