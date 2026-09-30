@@ -22,14 +22,15 @@
 #}
 
 {% set attributes = card.attributes ?? create_attribute() %}
-
 {% set tag = 'div' %}
-{% set has_body_content = card.body is not empty %}
-{# ADA-387: cards without body text should render labels as non-headings. #}
-{% set heading_tag = has_body_content ? card.title_tag|default('h3') : 'p' %}
 {% set unique_id = 'card-' ~ random() %}
 {% set style = card.style|default('cta') %}
 {% set icon_set = card.icon.set|default('fa') %}
+{# BEGIN ADA-387: cards without content should render labels as non-headings. #}
+{% set has_footer_link = ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
+{% set has_content = card.body is not empty or has_footer_link %}
+{% set heading_tag = has_content ? card.title_tag|default('h3') : 'p' %}
+{# END ADA-387 #}
 
 {% if (style == 'hover') or (card.is_clickable == TRUE) %}
   {% if card.link.url %}
@@ -114,7 +115,7 @@
         </div>
       {% endif %}
 
-      {% if ('cta' in style or 'media' in style) and card.link.url and (card.is_clickable != TRUE) %}
+      {% if has_footer_link %}
         {% if card.link.text %}
           <div class="usa-card__footer">
             <a class="{{ card.link.type }}" href="{{ card.link.url }}" {{ attributes }}>{{ card.link.text }}</a>
