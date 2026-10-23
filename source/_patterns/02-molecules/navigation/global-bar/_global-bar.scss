@@ -76,3 +76,8 @@
   @include u-text("white", no-italic);
   @include u-font-family(serif);
 }
+.jcc-global-bar {
+  [href]:focus {
+    outline-color: color("yellow-20v");
+  }
+}
