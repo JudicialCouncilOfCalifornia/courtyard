@@ -86,3 +86,7 @@
     }
   }
 }
+.usa-checkbox__input:focus + .usa-checkbox__label::before,
+input[type="checkbox"]:focus {
+  outline-offset: 2px;
+}
