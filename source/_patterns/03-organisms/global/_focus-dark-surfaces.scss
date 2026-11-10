@@ -1,0 +1,38 @@
+// ADA-319: Keep the yellow focus indicator on dark surfaces.
+//
+// The sitewide indicator is blue-60 (00-protons/trial/_uswds-theme-general.scss),
+// which lacks contrast on dark (primary / primary-dark / primary-darker)
+// surfaces. CSS cannot detect background color, so the dark surfaces are
+// enumerated here in one place. Rings are flush (outline-offset: 0) so
+// they stay inside menus and bands. To cover a new dark component, add
+// its selector here. Surfaces already styled by the dark-background-link
+// mixin are not duplicated.
+
+// Submenu/megamenu panels, and accordion buttons (nav sections and
+// Translate), which get a dark background when expanded.
+.usa-nav__submenu a:focus,
+.usa-nav__primary .usa-accordion__button[aria-expanded="true"]:focus,
+.jcc-translate .usa-accordion__button[aria-expanded="true"]:focus,
+// Inverted header: the whole band is dark (light headers keep blue).
+.jcc-header--inverted .usa-nav a:focus,
+.jcc-header--inverted .usa-nav button:focus,
+.jcc-header--inverted .usa-nav input:focus,
+.jcc-header--inverted .usa-navbar a:focus,
+.jcc-header--inverted .usa-navbar button:focus,
+// Switchboard dark variants: footer-row buttons sit on the dark band.
+.jcc-switchboard--has-background-color--dark .jcc-switchboard__footer .usa-button:focus,
+.jcc-switchboard--has-background-color--dark--primary .jcc-switchboard__footer .usa-button:focus,
+// Timeline dark variants: scrollable strip and scroller buttons.
+.jcc-timeline-section--has-background-color--dark .jcc-timeline:focus,
+.jcc-timeline-section--has-background-color--dark .jcc-timeline__scroller--left:focus,
+.jcc-timeline-section--has-background-color--dark .jcc-timeline__scroller--right:focus,
+.jcc-timeline-section--has-background-color--dark--primary .jcc-timeline:focus,
+.jcc-timeline-section--has-background-color--dark--primary .jcc-timeline__scroller--left:focus,
+.jcc-timeline-section--has-background-color--dark--primary .jcc-timeline__scroller--right:focus,
+// Dark footers: simple, tall, and inverted footer-base.
+.jcc-footer a:focus,
+.jcc-footer-tall__container a:focus,
+.jcc-footer-base.jcc-footer--inverted a:focus {
+  outline-color: color("yellow-20v");
+  outline-offset: 0;
+}
