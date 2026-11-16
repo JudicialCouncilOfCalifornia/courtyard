@@ -28,7 +28,12 @@
 <div class="usa-alert__wrapper usa-alert__wrapper--{{ type }}">
   <div class="{{ classes|join(' ')|trim }}">
     <div class="usa-alert__body">
-      <h3 class="usa-alert__heading">{{ alert.heading }}</h3>
+      <h3 class="usa-alert__heading">
+        <span class="usa-sr-only">
+          {{ type|capitalize }} alert:
+        </span>
+        {{ alert.heading }}
+      </h3>
       <div class="usa-alert__text usa-prose">{{ alert.text }}</div>
 
       {% if alert.close %}
