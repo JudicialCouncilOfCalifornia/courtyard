@@ -15,6 +15,7 @@
 #}
 
 {% set type = alert.type|default('info') %}
+{% set type_tag = alert.heading ? 'span' : 'p' %}
 {% set size = alert.size|default('tall') %}
 {% set width = alert.width|default('full') %}
 
@@ -28,12 +29,16 @@
 <div class="usa-alert__wrapper usa-alert__wrapper--{{ type }}">
   <div class="{{ classes|join(' ')|trim }}">
     <div class="usa-alert__body">
-      <h3 class="usa-alert__heading">
-        <span class="usa-sr-only">
-          {{ type|capitalize }} alert:
-        </span>
-        {{ alert.heading }}
-      </h3>
+      {% if alert.heading %}
+        <h3 class="usa-alert__heading">
+      {% endif %}
+      <{{ type_tag }} class="usa-sr-only">
+        {{ type|capitalize }} alert:
+      </{{ type_tag }}>
+      {% if alert.heading %}
+          {{ alert.heading }}
+        </h3>
+      {% endif %}
       <div class="usa-alert__text usa-prose">{{ alert.text }}</div>
 
       {% if alert.close %}
