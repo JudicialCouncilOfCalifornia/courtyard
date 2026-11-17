@@ -1,14 +1,21 @@
+{% set type_tag = alert.heading ? 'span' : 'p' %}
 {% set tag = alert.tag|default('h3') %}
 
 <div class="jcc-alert usa-alert usa-alert--{{ alert.type|trim }} usa-alert--no-icon">
   <div class="usa-alert__body jcc-alert__body {% if alert.icon %} {% else %}usa-alert--no-icon{% endif %}">
-    <{{ tag }} class="usa-alert__heading jcc-alert__heading">
-      <span class="usa-sr-only">
-        {{ alert.type|capitalize }} alert:
-      </span>
-      {{ alert.heading|trim }}
-    </{{ tag }}>
+    {% if alert.heading %}
+      <{{ tag }} class="usa-alert__heading jcc-alert__heading">
+    {% endif %}
+    <{{ type_tag }} class="usa-sr-only">
+      {{ alert.type|capitalize }} alert:
+    </{{ type_tag }}>
+    {% if alert.heading %}
+        {{ alert.heading|trim }}
+      </{{ tag }}>
+    {% endif %}
+
     <div class="usa-alert__text jcc-alert__text">{{ alert.text }}</div>
+
     {% if alert.button %}
       <div class="jcc-alert__action">
         {% include "@atoms/buttons/link-button.twig" %}
