@@ -9,8 +9,7 @@
  *  - url: link url
  *  - text: link description
  * - media:
- *   - src: background image url
- *   - alt: background image alt text
+ *   - src: decorative background image URL
  * - classes: array of classes to add to component
  */
 #}
@@ -53,7 +52,7 @@
 
     {% if banner.media %}
       <div class="jcc-banner__media">
-        <img src="{{ banner.media.src }}" alt="{{ banner.media.alt }}">
+        <img src="{{ banner.media.src }}" alt="">
       </div>
     {% endif %}
 </div>
