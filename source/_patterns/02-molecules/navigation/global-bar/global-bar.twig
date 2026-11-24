@@ -1,15 +1,13 @@
 {% set aria__banner_label = 'Official California Judicial Branch website' %}
-{% set aria__logo_label = 'Judicial Branch logo and link to the main website' %}
 {% if is_footer %}
   {% set aria__banner_label = 'Judicial Branch website copyright and relevant privacy information' %}
-  {% set aria__logo_label = 'Judicial Branch logo repeated in the footer' %}
 {% endif %}
 
 <div class="jcc-global-bar" role="region" aria-label="{{ global_bar.aria_label|default(aria__banner_label) }}">
   <div class="jcc-global-bar__container">
     <div class="jcc-global-bar-logo">
-      <a href="{{ global_bar.logo_text.url }}"{% if global_bar.logo %} title="{{ global_bar.logo_text.title }}" aria-label="{{ global_bar.logo_text.aria_label|default(aria__logo_label) }}"{% endif %}>
-        {% if global_bar.logo %}<span class="jcc-global-bar-logo__graphic"><img src="{{ global_bar.logo }}" alt="{{ global_bar.logo_text.title }} branding {{ is_footer ? ' for footer' : '' }}" /></span>{% endif %}
+      <a href="{{ global_bar.logo_text.url }}">
+        {% if global_bar.logo %}<span class="jcc-global-bar-logo__graphic"><img src="{{ global_bar.logo }}" alt="" /></span>{% endif %}
         <em class="jcc-global-bar-logo__text{% if global_bar.logo %} usa-sr-only{% endif %}">{{ global_bar.logo_text.title }}</em>
       </a>
     </div>
