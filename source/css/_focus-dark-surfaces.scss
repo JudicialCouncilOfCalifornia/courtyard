@@ -1,0 +1,49 @@
+// ADA-990: The sitewide focus token is blue-60, which meets 3:1 contrast
+// on light backgrounds but not on dark ones. CSS cannot detect background
+// color, so the dark components (and dark expanded/active states) are
+// enumerated here and keep the gold-20v indicator they had before.
+// Imported last in local.scss and pro.scss; base.scss is untouched.
+// To cover a new dark component, add its selector here.
+
+.usa-nav__submenu a:focus,
+.usa-nav__submenu button:focus,
+.usa-nav__primary button[aria-expanded="true"]:focus,
+.usa-nav__primary a[aria-expanded="true"]:focus,
+.jcc-header__translate-nav button[aria-expanded="true"]:focus,
+.jcc-header--masthead .usa-nav a:focus,
+.jcc-header--masthead .usa-nav button:focus,
+.jcc-header--masthead .usa-nav input:focus,
+.jcc-header--alt a:focus,
+.jcc-header--alt button:focus,
+.jcc-header--alt input:focus,
+.jcc-global-bar a:focus,
+.jcc-footer--alt a:focus,
+.jcc-footer--alt button:focus,
+.jcc-hero--background-alt a:focus,
+.jcc-hero--background-alt .usa-button:focus,
+.jcc-hero-tiles a:focus,
+.usa-card--media-full-overlay a:focus,
+.usa-card--media-top-overlay a:focus,
+.jcc-banner a:focus,
+.jcc-banner button:focus,
+.jcc-location-map a:focus,
+.jcc-location-map button:focus,
+.jcc-button--inverse:focus,
+.jcc-share a:focus,
+.jcc-content-stream-filtering a:focus,
+.jcc-content-stream-filtering button:focus,
+.jcc-content-stream-filtering input:focus,
+.jcc-content-stream-filtering select:focus,
+.jcc-news-listing-form a:focus,
+.jcc-news-listing-form button:focus,
+.jcc-news-listing-form input:focus,
+.jcc-news-listing-form select:focus {
+  outline-color: color("gold-20v");
+}
+
+// Masthead dropdown panels are white (unlike the dark masthead band
+// above them), so links inside revert to the sitewide token.
+.jcc-header--masthead .usa-nav__submenu a:focus,
+.jcc-header--masthead .usa-nav__submenu button:focus {
+  outline-color: color("blue-60");
+}

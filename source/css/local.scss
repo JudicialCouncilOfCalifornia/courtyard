@@ -22,3 +22,8 @@ $scheme: "local";
 // -------------------------------------
 
 @import "pl";
+
+// Focus indicator exceptions for dark surfaces (ADA-990).
+// -------------------------------------
+
+@import "focus-dark-surfaces";
