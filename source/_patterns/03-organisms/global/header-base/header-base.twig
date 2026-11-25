@@ -22,9 +22,15 @@
       
       <div class="usa-logo" id="basic-logo">
         <a href="{{ header_base.home_url }}">
-          {% if header_base.logo.mobile %}<span class="usa-logo__graphic--mobile"><img src="{{ header_base.logo.mobile }}" alt="" /></span>{% endif %}
-          {% if header_base.logo.desktop %}<span class="usa-logo__graphic--desktop"><img src="{{ header_base.logo.desktop }}" alt="" /></span>{% endif %}
-          <em class="usa-logo__text{% if header_base.logo %} usa-sr-only{% endif %}">{{ header_base.title }}</em>
+          {% set mobile_logo = header_base.logo.mobile|default('') %}
+          {% set desktop_logo = header_base.logo.desktop|default('') %}
+          {% set site_title = header_base.title|default('')|trim %}
+          {% set home_label = site_title ? site_title ~ ' homepage' : 'Homepage' %}
+          {% if mobile_logo %}<span class="usa-logo__graphic--mobile"><img src="{{ mobile_logo }}" alt="{{ home_label }}" /></span>{% endif %}
+          {% if desktop_logo %}<span class="usa-logo__graphic--desktop"><img src="{{ desktop_logo }}" alt="{{ home_label }}" /></span>{% endif %}
+          {% if not (mobile_logo and desktop_logo) %}
+            <em class="usa-logo__text{% if mobile_logo %} usa-logo__text--desktop{% elseif desktop_logo %} usa-logo__text--mobile{% endif %}">{{ site_title ?: home_label }}</em>
+          {% endif %}
         </a>
       </div>
 

@@ -7,8 +7,7 @@
   <div class="jcc-global-bar__container">
     <div class="jcc-global-bar-logo">
       <a href="{{ global_bar.logo_text.url }}">
-        {% if global_bar.logo %}<span class="jcc-global-bar-logo__graphic"><img src="{{ global_bar.logo }}" alt="" /></span>{% endif %}
-        <em class="jcc-global-bar-logo__text{% if global_bar.logo %} usa-sr-only{% endif %}">{{ global_bar.logo_text.title }}</em>
+        <em class="jcc-global-bar-logo__text">{{ global_bar.logo_text.title }}</em>
       </a>
     </div>
 
