@@ -19,7 +19,9 @@ header_base:
         - name: "Judicial Council"
           url: "#"
   title: 'Alameda Superior Court'
-  logo: ''
+#  logo:
+#    desktop: ''
+#    mobile: ''
   home_url: '/'
   menu_icon:
     name: 'menu'

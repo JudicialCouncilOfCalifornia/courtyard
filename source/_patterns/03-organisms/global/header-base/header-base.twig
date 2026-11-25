@@ -21,10 +21,17 @@
     <div class="usa-navbar">
       
       <div class="usa-logo" id="basic-logo">
-        <a href="{{ header_base.home_url }}" title="Home" aria-label="Home">
-          {% if header_base.logo.mobile %}<span class="usa-logo__graphic--mobile"><img src="{{ header_base.logo.mobile }}" alt="{{ header_base.title }}" /></span>{% endif %}
-          {% if header_base.logo.desktop %}<span class="usa-logo__graphic--desktop"><img src="{{ header_base.logo.desktop }}" alt="{{ header_base.title }}" /></span>{% endif %}
-          <em class="usa-logo__text{% if header_base.logo %} usa-sr-only{% endif %}">{{ header_base.title }}</em>
+        <a href="{{ header_base.home_url }}">
+          {% set site_title = header_base.title|default('')|trim %}
+          {% set mobile_logo = header_base.logo.mobile|default('') %}
+          {% set desktop_logo = header_base.logo.desktop|default('') %}
+          {% if mobile_logo and desktop_logo %}
+            {% set home_label = (site_title ?: 'Site logo') ~ ' homepage' %}
+            <span class="usa-logo__graphic--mobile"><img src="{{ mobile_logo }}" alt="{{ home_label }}" /></span>
+            <span class="usa-logo__graphic--desktop"><img src="{{ desktop_logo }}" alt="{{ home_label }}" /></span>
+          {% else %}
+            <em class="usa-logo__text">{{ site_title }}</em>
+          {% endif %}
         </a>
       </div>
 
