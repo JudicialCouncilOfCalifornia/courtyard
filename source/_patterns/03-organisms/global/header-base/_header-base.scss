@@ -40,8 +40,7 @@
   }
 
   .usa-logo__graphic--mobile,
-  .usa-logo__graphic--desktop,
-  .usa-logo__text--desktop {
+  .usa-logo__graphic--desktop {
     align-self: center;
 
     img {
@@ -51,8 +50,7 @@
     }
   }
 
-  .usa-logo__graphic--mobile,
-  .usa-logo__text--mobile {
+  .usa-logo__graphic--mobile {
     @include u-display(block);
 
     @include at-media(desktop) {
